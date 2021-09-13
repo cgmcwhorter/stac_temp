@@ -1,0 +1,142 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	enumerate,		% Enumerate Environments
+	etoolbox,			% Use Booleans
+	float,				% Force Table Placement
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	multicol,			% Use Multiple Columns
+	pifont,			% Use Checkmarks
+}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+\usepackage{xcolor}
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+\definecolor{quotegray}{RGB}{58,58,58}
+\definecolor{endquotegray}{RGB}{107,107,107}
+
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks 	= true,
+  	linkcolor  	= stacred,
+  	urlcolor   	= stacred
+}
+\renewcommand\UrlFont{\normalfont}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+
+% -------------------
+% Tikz
+% -------------------
+%\usepackage{tikz}
+%\usetikzlibrary{}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=newest}
+%\usepgfplotslibrary{}
+
+
+% -------------------
+% Answer Hiding
+% -------------------
+\newbool{hideans}
+
+
+% -------------------
+% Title & Problem Commands
+% -------------------
+\newbool{quotetype}
+\newcommand{\homework}[3]{%
+	\ifbool{quotetype}{%
+\noindent\begin{minipage}[t]{0.6\textwidth}
+	\noindent \textbf{Name: }\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}} \\
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{Homework #1}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``#2''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape #3
+\end{minipage} \\[0.5cm]
+}{
+\noindent \textbf{Name: }\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}} \\
+\noindent\begin{minipage}[t]{0.3\textwidth}
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{Homework #1}
+\end{minipage}%
+\begin{minipage}[t]{0.7\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``#2''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape #3
+\end{minipage} \\[0.5cm]
+	}
+}
+\newcommand{\prob}{\noindent\textbf{Problem: }}
+\newcounter{problem}
+\newcommand{\problem}{
+	\stepcounter{problem}%
+	\noindent \textbf{Problem \theproblem: }%
+}
+\newcommand{\sol}{\noindent\textbf{Solution. }}
+
+
+% -------------------
+% Enumerate/Itemize Environments
+% -------------------
+\newenvironment{2enumerate}{%
+	\begin{enumerate}[(a)]
+	\begin{multicols}{2}
+	}{%
+	\end{multicols}
+	\end{enumerate}
+}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\small\thepage \,of \pageref*{LastPage}}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+\setlength{\parskip}{0.0cm}
+\setlength{\parindent}{0.0cm}
+\headheight=14pt
+\footskip=14pt
+
+\pagestyle{pages}
