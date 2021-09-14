@@ -9,15 +9,30 @@
 \begin{document}
 \thispagestyle{title}
 
-\quizsol 
+% Quiz 1
+\quizsol \textit{True/False}: $9/3 + 2(3^2 + 10) - 8 + 4 \cdot 3= 45$
+
+\sol The statement is \textit{false}. To see this, we can simply follow the order of operations---using PEMDAS as a guide:
+	\[
+	\begin{aligned}
+	9/3 + 2(3^2 + 10) - 8 + 4 \cdot 3&\stackrel{?}{=} 55 \\
+	9/3 + 2(9 + 10) - 8 + 4 \cdot 3&\stackrel{?}{=} 55 \\
+	9/3 + 2(19) - 8 + 4 \cdot 3&\stackrel{?}{=} 55 \\
+	3 + 2(19) - 8 + 4 \cdot 3&\stackrel{?}{=} 55 \\ 
+	3 + 38 - 8 + 4 \cdot 3&\stackrel{?}{=} 55 \\ 
+	3 + 38 - 8 + 12&\stackrel{?}{=} 55 \\ 
+	41 - 8 + 12&\stackrel{?}{=} 55 \\
+	33 + 12&\stackrel{?}{=} 55 \\
+	45&\neq 55 \\
+	\end{aligned}
+	\] \pspace
 
 
 
+% Quiz 2
+\quizsol \textit{True/False}: $\gcd(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2^3 \cdot 3^2 \cdot 5 \cdot 7$. \pspace
 
-
-
-
-
+\sol The statement is \textit{false}. Remember given a prime factorization of the numbers, we find the gcd by choosing the \textit{smallest} powers of each prime that appears in the factorizations. So we should have $\gcd(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2 \cdot 3$. Instead, the largest power of each prime that appears in the factorizations was chosen which is how we compute the lcm. Therefore, we have $\lcm(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2^3 \cdot 3^2 \cdot 5 \cdot 7$.
 
 
 
