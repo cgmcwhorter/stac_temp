@@ -73,7 +73,7 @@
 	\noindent \textbf{Name: }\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}} \\
   	\textbf{\course} \par
 	\textbf{\semester} \par
- 	\textbf{Homework #1}
+ 	\textbf{HW #1}
 \end{minipage}%
 \begin{minipage}[t]{0.4\textwidth}
 	\raggedright
@@ -86,7 +86,7 @@
 \noindent\begin{minipage}[t]{0.3\textwidth}
   	\textbf{\course} \par
 	\textbf{\semester} \par
- 	\textbf{Homework #1}
+ 	\textbf{HW #1}
 \end{minipage}%
 \begin{minipage}[t]{0.7\textwidth}
 	\raggedright
@@ -98,16 +98,26 @@
 }
 \newcommand{\prob}{\noindent\textbf{Problem: }}
 \newcounter{problem}
-\newcommand{\problem}{
+\newcounter{totalpoints}
+\newcommand{\problem}[1]{
 	\stepcounter{problem}%
-	\noindent \textbf{Problem \theproblem: }%
+	\mbox{\noindent\textbf{Problem \theproblem.} (#1pt)\addtocounter{totalpoints}{#1}}%
 }
 \newcommand{\sol}{\noindent\textbf{Solution. }}
+\newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
+\newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
 
 
 % -------------------
 % Enumerate/Itemize Environments
 % -------------------
+\usepackage{calc}
+\usepackage[shortlabels]{enumitem}
+\newenvironment{enum}{%
+	\begin{enumerate}[label={(\alph*)},leftmargin=\widthof{(a)}+\labelsep]
+	}{%
+	\end{enumerate}
+}
 \newenvironment{2enumerate}{%
 	\begin{enumerate}[(a)]
 	\begin{multicols}{2}
