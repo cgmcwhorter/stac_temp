@@ -11,7 +11,7 @@
 
 
 % Quiz 1
-\quizsol The following relation represents a function:
+\quizsol \textit{True/False}: The following relation represents a function:
 	\[
 	\begin{tikzpicture}
 	% Ellipses
@@ -48,20 +48,37 @@
 	\end{tikzpicture}
 	\]
 
-\sol The statement is \textit{true}. A relation is a function if for every input, i.e. every value in the domain, there is one output. For each of the values 1, 2, 3, 4, we know the value of the output. It does not matter that several of the values get `sent' to the same value---only that we know what value they go to. \pspace
+\sol The statement is \textit{true}. A relation is a function if for every input, i.e. every value in the domain, there is one output. For each of the values 1, 2, 3, 4, we know the value of the output. It does not matter that several of the values get `sent' to the same value---only that we know what value they go to. \pvspace{1.5cm}
 
 
 
 % Quiz 2
-\quizsol If $C(x)$ is a cost function, then the $y$-intercept of $C(x)$ is the fixed costs. \pspace
+\quizsol \textit{True/False}: If $C(x)$ is a cost function, then the $y$-intercept of $C(x)$ is the fixed costs. \pspace
 
-\sol The statement is \textit{true}. The $y$-intercept of a function is the value where $x= 0$ (which means the function is intersecting the $y$-axis). But then we are looking at the value of $C(0)$, which represents the costs of producing zero items. But any costs associated with producing zero items must be a `baseline' cost for production, i.e. the fixed costs. 
-
-
+\sol The statement is \textit{true}. The $y$-intercept of a function is the value where $x= 0$ (which means the function is intersecting the $y$-axis). But then we are looking at the value of $C(0)$, which represents the costs of producing zero items. But any costs associated with producing zero items must be a `baseline' cost for production, i.e. the fixed costs. \pvspace{1.5cm}
 
 
 
+% Quiz 3
+\quizsol \textit{True/False}: The point $(1, 1)$ is the solution to the system of equations:
+	\[
+	\begin{aligned}
+	2x + y&= 3 \\
+	x - y&= 1
+	\end{aligned}
+	\]
 
+\sol The statement is \textit{false}. The simplest way of seeing this is to check if $(x,y)= (1,1)$ is a solution to the system, i.e. check if $x= 1$ and $y= 1$ satisfies both equations: $2(1) + 1= 3$ but $1 - 1= 0 \neq 1$. Therefore, $(1, 1)$ is not the solution to the system of equations. We can also determine if $(1, 1)$ is a solution to the system of equations by solving the system:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cccc}
+	& $2x + y$ & $=$ & $3$ \\
+	& $x - y$ & $=$ & $1$ \\ \hline
+	& $3x$ & $=$ & $4$ \\
+	& $x$ & $=$ & $4/3$ 
+	\end{tabular}
+	\end{table}
+Then certainly, we cannot have $x= 1$. We then can find that $y= x - 1= 4/3 - 1= 1/3$. Then the correct solution is $(x, y)= (4/3, 1/3)$. 
 
 
 

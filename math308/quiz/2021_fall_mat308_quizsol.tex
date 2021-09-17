@@ -9,6 +9,7 @@
 \begin{document}
 \thispagestyle{title}
 
+% Quiz 1
 \quizsol \textit{True/False}: The following is a truth table for $P \to Q$:
 	\begin{table}[!ht]
 	\centering
@@ -32,11 +33,18 @@
 	F & F & T
 	\end{tabular}
 	\end{table} \par
-One way to think about this is as follows: imagine $P$ is a guarantee. Namely, we promise that if $P$ happens, $Q$ must happen. For instance, $P$ could represent the statement, ``You do not tamper with your hardware,'' and $Q$ could be the statement, ``I will replace your broken computer.'' So $P \to Q$ is then the statement, ``If you do not tamper with your hardware, then I will replace your broken computer.'' If both $P$ and $Q$ are true, then this should be true---because I promised to replace the computer if you left it alone. If $P$ is true and $Q$ is false, then the statement should be false because I broke my promise. However, my promise holds true whenever $P$ is false. Why? Because you broke our agreement by tampering with the hardware. So while I may or may not replace the computer, my promise has not been broken in either case, i.e. it remains true. In an implication $P \to Q$, if $P$ is false, then the statement $P \to Q$ is \textit{always} true. 
+One way to think about this is as follows: imagine $P$ is a guarantee. Namely, we promise that if $P$ happens, $Q$ must happen. For instance, $P$ could represent the statement, ``You do not tamper with your hardware,'' and $Q$ could be the statement, ``I will replace your broken computer.'' So $P \to Q$ is then the statement, ``If you do not tamper with your hardware, then I will replace your broken computer.'' If both $P$ and $Q$ are true, then this should be true---because I promised to replace the computer if you left it alone. If $P$ is true and $Q$ is false, then the statement should be false because I broke my promise. However, my promise holds true whenever $P$ is false. Why? Because you broke our agreement by tampering with the hardware. So while I may or may not replace the computer, my promise has not been broken in either case, i.e. it remains true. In an implication $P \to Q$, if $P$ is false, then the statement $P \to Q$ is \textit{always} true. \pvspace{1.5cm}
 
 
 
+% Quiz 2
+\quizsol \textit{True/False}: $\forall x, \exists y, \, x^2 + y= 4$ \pspace
 
+\sol The statement is \textit{true}. The statement says that for all $x$ there is a $y$ such that $x^2 + y= 4$. If this is true (which it is), we need to prove it. Fix an $x$, say $x_0$. We need to find a $y$ such that $x_0^2 + y = 4$. Define $y_0:= 4 - x_0^2$. But then we have 
+	\[
+	x_0^2 + y_0= x_0^2 + (4 - x_0^2)= 4,
+	\]
+as desired. 
 
 
 
