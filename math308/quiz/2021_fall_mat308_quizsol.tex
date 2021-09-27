@@ -44,13 +44,29 @@ One way to think about this is as follows: imagine $P$ is a guarantee. Namely, w
 	\[
 	x_0^2 + y_0= x_0^2 + (4 - x_0^2)= 4,
 	\]
-as desired. 
+as desired. \pvspace{1.5cm}
 
 
 
+% Quiz 3
+\quizsol \textit{True/False}: $\neg \left( \forall x, \exists y, P(x,y) \vee \neg Q(x,y) \right)= \exists x, \forall y, \neg P(x,y) \wedge Q(x,y)$ \pspace
+
+\sol The statement is \textit{true}. We can simply compute the negation step-by-step:
+	\[
+	\begin{aligned}
+	\neg \left( \forall x, \exists y, P(x,y) \vee \neg Q(x,y) \right)&\equiv \exists x, \neg( \exists y, P(x,y) \vee \neg Q(x,y) ) \\
+	&\equiv \exists x, \forall y, \neg ( P(x,y) \vee \neg Q(x,y) ) \\
+	&\equiv \exists x, \forall y, \neg P(x,y) \wedge \neg (\neg Q(x,y)) \\
+	&\equiv \exists x, \forall y, \neg P(x,y) \wedge Q(x,y)
+	\end{aligned}
+	\]
 
 
 
+% Quiz 4
+\quizsol \textit{True/False}: To prove $P \Rightarrow Q$, you can prove $Q \Rightarrow P$. \pspace
+
+\sol The statement is \textit{false}. The converse of $P \Rightarrow Q$ is $Q \Rightarrow P$. The converse of a logical statement is not necessarily logically equivalent to the original statement. So proving the converse does not necessarily prove the original statement. However, the contrapositive of $P \Rightarrow Q$, which is $\neg Q \Rightarrow \neg P$, is logically equivalent to $P \Rightarrow Q$. Therefore, to prove $P \Rightarrow Q$, one only need prove $\neg Q \Rightarrow \neg P$. This is called proof by contrapositive. \pvspace{1.5cm}
 
 
 

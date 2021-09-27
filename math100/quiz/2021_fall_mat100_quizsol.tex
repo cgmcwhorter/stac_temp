@@ -19,22 +19,28 @@
 % Quiz 2
 \quizsol \textit{True/False}: $\gcd(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2^3 \cdot 3^2 \cdot 5 \cdot 7$. \pspace
 
-\sol The statement is \textit{false}. Remember given a prime factorization of the numbers, we find the gcd by choosing the \textit{smallest} powers of each prime that appears in the factorizations. So we should have $\gcd(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2 \cdot 3$. Instead, the largest power of each prime that appears in the factorizations was chosen which is how we compute the lcm. Therefore, we have $\lcm(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2^3 \cdot 3^2 \cdot 5 \cdot 7$.
+\sol The statement is \textit{false}. Remember given a prime factorization of the numbers, we find the gcd by choosing the \textit{smallest} powers of each prime that appears in the factorizations. So we should have $\gcd(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2 \cdot 3$. Instead, the largest power of each prime that appears in the factorizations was chosen which is how we compute the lcm. Therefore, we have $\lcm(2^3 \cdot 3 \cdot 5, 2 \cdot 3^2 \cdot 7)= 2^3 \cdot 3^2 \cdot 5 \cdot 7$. \pvspace{1.5cm}
 
 
 
 % Quiz 3
+\quizsol \textit{True/False}: $\sqrt[3]{2^8 \cdot 3^3 \cdot 5^1 \cdot 7^5}= 2^2 \cdot 3^1 \cdot 7 \sqrt[3]{2^2 \cdot 5^1 \cdot 7^2}$ \pspace
+
+\sol The statement is \textit{true}. There are two ways to think about this. First, we should write out the numbers and group them into threes and pull out/leave the terms appropriately:
+	\[
+	\sqrt[3]{2^8 \cdot 3^3 \cdot 5^1 \cdot 7^5}= \sqrt[3]{\underline{2 \cdot 2 \cdot 2} \cdot \underline{2 \cdot 2 \cdot 2} \cdot 2 \cdot 2 \cdot \underline{3 \cdot 3 \cdot 3} \cdot 5 \cdot \underline{7 \cdot 7 \cdot 7} \cdot 7 \cdot 7}= 2^2 \cdot 3^1 \cdot 7 \sqrt[3]{2^2 \cdot 5 \cdot 7^2}
+	\]
+Alternatively, we can use division. We know that $8/3$ is 2 with remainder 2, $3/3$ is 1 with remainder 0, $1/3$ is 0 with remainder 1, and $5/3$ is 1 with remainder 2. So we can pull out two 3's with 2 remaining, one 3 with 0 remaining, no 5's with 1 remaining, and two 7's with 2 remaining, which gives:
+	\[
+	\sqrt[3]{2^8 \cdot 3^3 \cdot 5^1 \cdot 7^5}= 2^2 \cdot 3^1 \cdot 7 \sqrt[3]{2^2 \cdot 5^1 \cdot 7^2}
+	\] \pvspace{1.5cm}
 
 
 
+% Quiz 4 
+\quizsol \textit{True/False}: 68 increased by 119\% is $68(1.19)$. \pspace
 
-
-
-
-
-
-
-
+\sol The statement is \textit{false}. To find 119\% of 68, we would multiply 68 by the percent written as a decimal. This would be $68(1.19)$. However, to increase or decrease a number by a percentage, we compute the number $\#(1 \pm \%)$, where we add if we are increasing, subtract if we are decreasing, $\#$ is the number, and \% is the percentage written as a decimal. So to increase 68 by 119\%, we need to compute $68(1 + 1.19)= 68(2.19)$. \pvspace{1.5cm}
 
 
 

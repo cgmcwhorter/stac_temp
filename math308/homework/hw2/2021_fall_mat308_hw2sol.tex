@@ -1,0 +1,342 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{\textit{Caleb McWhorter --- Solutions}}
+
+% Problem 1
+\problem{10} Determine if the following sentences are predicates. If the sentence is a predicate, mark it `T'; otherwise, mark the sentence `F.' [Let the universal set be $\mathbb{R}$.]
+	\begin{enumerate}[(a)]
+	\item \usol{0.65cm}{T}: $x$ is odd.
+	\item \usol{0.65cm}{F}: $x^2 + x + 1$
+	\item \usol{0.65cm}{T}: $P(x) \colon x^2 + 1 < 0$
+	\item \usol{0.65cm}{T}: $Q(x) \colon x \text{ is an integer}$
+	\item \usol{0.65cm}{T}: $R(x, y) \colon x^2 < y^3$
+	\end{enumerate} \pspace
+
+\sol Recall that predicate becomes a proposition when the variables are substituted for their values. 
+\begin{enumerate}[(a)]
+\item Given an $x$, either $x$ is odd or it is not. 
+
+\item Given an $x$, the result is simply an expression and will not hold a true or false value. 
+
+\item Given an $x$, the resulting inequality will either be true or false. 
+
+\item Given an $x$, either $x$ is an integer or not. 
+
+\item Given a $x, y$, either the resulting inequality will either be true or false. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+	
+% Problem 2
+\problem{10} Give an original example of a predicate having more than one variable.
+
+\sol Remember that to be a predicate, once the variables have been substituted, the result should be a proposition, i.e. something which is unambiguously true or false. There are infinitely many examples, e.g. $P(x,y) \colon x = y$, $Q(x,y,z) \colon x^2 + y^2= z^2$, etc. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Let $P(x)$ be the predicate $P(x) \colon 1 \leq 2^x \leq 100$. Suppose that the domain is the nonnegative integers. What is the truth set for $P(x)$? What is the truth set if the domain were instead the set of real numbers? 
+
+\sol Suppose the domain is the nonnegative integers, i.e. $\mathbb{Z}_{\geq 0}= \{ 0, 1, 2, 3, \ldots \}$. We need $1 \leq 2^x \leq 100$. For the left inequality to hold, we need $1 \leq 2^x$, which implies that $0 \leq x$. For the right inequality to hold, we require $2^x \leq 100$. But this implies that $x \leq \log_2 100 \approx 6.644$. Because $x \in \mathbb{Z}$, this implies that $x \leq 6$. Then $x \geq 0$ and $x \leq 6$, i.e. $0 \leq x \leq 6$. Therefore, the truth set is $\{ 0, 1, 2, 3, 4, 5, 6 \}$. 
+
+Suppose now that the domain is the set of real numbers. For the left inequality to hold, we need $1 \leq 2^x$, which implies that $0 \leq x$. For the right inequality to hold, we require $2^x \leq 100$. But this implies that $x \leq \log_2 100 \approx 6.644$. Then $0 \leq x$ and $x \leq \log_2 100$. Therefore, the truth set is $[0, \log_2 100]$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Defining appropriate propositional functions and variables, write the following English sentences using logical symbols and the functions/variables that you defined. 
+        \begin{enumerate}[(a)]
+        \item Every cloud has a silver lining.
+        \item All that glitters is not gold. 
+        \item Every human is guilty of all the good that they did not do.
+        \item None but the brave deserve the fair. 
+        \end{enumerate}
+
+\sol There are many ways to do this\dots
+\begin{enumerate}[(a)]
+\item Let $P(x)$ be the predicate that $x$ is a cloud and $Q(x)$ denote the predicate that $x$ has a silver lining. Then `Every cloud has a silver lining' could be translated as $\forall x, P(x) \to Q(x)$. 
+
+\item Let $P(x)$ be the predicate that $x$ glitters and let $Q(x)$ denote the predicate that $x$ is gold. Then `All that glitters is not gold' could be translated as $\exists x, P(x) \wedge \neg Q(x)$. 
+
+\item Let $P(x, y)$ denote the predicate that $x$ did $y$, $Q(x)$ denote the predicate that $x$ is good, and $R(x,y)$ denote the predicate that $x$ is guilty of $y$. Then `Every human is guilty of all the good that they did not do' could be translated as $(\forall x)(\forall y) [ Q(y) \wedge \neg P(x,y) \to R(x,y)]$.
+
+\item Let $P(x)$ be the predicate that $x$ is brave and let $Q(x)$ denote the predicate that $x$ deserves the fair. Then `None but the brave deserve the fair' could be translated as $\forall x, Q(x) \to P(x)$. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Define the following predicates:
+	\begin{enumerate}[(i)]
+	\item $P(x) \colon x > 0$
+	\item $Q(x) \colon x \text{ is even}$
+	\item $R(x) \colon x \text{ is a perfect square}$
+	\item $S(x) \colon x \text{ is divisible by }4$
+	\item $T(x) \colon x \text{ is divisible by }5$
+	\end{enumerate}
+Write the following in symbolic form:
+	\begin{enumerate}[(a)]
+	\item Any perfect square is positive. 
+	\item If an integer is divisible by 4, then the integer is even. 
+	\item No even integer is divisible by 5. 
+	\end{enumerate}
+Write the following in the form of an English sentence:
+	\begin{enumerate}
+	\item[(d)] $\forall x\, (S(x) \to Q(x))$
+	\item[(e)] $\exists x\, (S(x) \wedge \neg R(x))$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item $\forall x, R(x) \to P(x)$
+
+\item $\forall x, S(x) \to Q(x)$
+
+\item $\forall x, Q(x) \to \neg T(x)$
+
+\item All integers divisible by 4 are even.
+
+\item There exists an integer divisible by four that is not a perfect square. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 6
+\problem{10} Let $P(x)$ be the predicate $x^2= x$. Determine if the following statements are true or false:
+	\begin{enumerate}[(a)]
+	\item \usol{0.65cm}{T}: $P(0)$
+	\item \usol{0.65cm}{F}: $P(-1)$
+	\item \usol{0.65cm}{F}: $\forall x,\, P(x)$
+	\item \usol{0.65cm}{T}: $\exists x,\, P(x)$
+	\item \usol{0.65cm}{F}: $\exists! x,\, P(x)$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item $P(0) \colon 0^2= 0$, which is equivalent to $0= 0$, which is true. 
+
+\item $P(-1) \colon (-1)^2= -1$, which is equivalent to $1= -1$, which is false.
+
+\item From (b), we already know that $-1$ is a counterexample to this statement. 
+
+\item From part (a), we already know that $x= 0$ is such an example. 
+
+\item $P(1) \colon 1^2= 1$, which is equivalent to $1= 1$, which is true. Combining this with (a), we know there are at least two values for $x$, namely $0$ and $1$, for which $P(x)$ is true. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 7
+\problem{12} Let $P(x), Q(x), R(x)$ denote the predicates $1 - 2x= 7$, $x^2= 9$, and $x^2 > 9$, respectively. Determine whether the following propositions are true or false. If the statement is true, explain why. If the statement is false, give a counterexample. 
+        \begin{enumerate}[(a)]
+        \item $(\forall x)(P(x) \wedge Q(x))$
+        \item $(\exists x)(P(x) \wedge Q(x))$
+        \item $(\forall x)(P(x) \to Q(x))$
+        \item $(\forall x)(P(x) \to R(x))$
+        \item $(\exists x)(P(x) \vee R(x))$
+        \item $(\exists! x)(P(x) \wedge Q(x))$ 
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item The statement is \textit{false}. For the statement to be true, we need both $P(x)$ and $Q(x)$ to be true. However, for `most' $x$ in the domain, both $P(x)$ and $Q(x)$ are false. As a counterexample, if $x= 0$ then both $P(x)$ and $Q(x)$ are false so that $P(x) \wedge Q(x)$ are false. Then the truth set is not the entire domain. 
+ 
+\item The statement is \textit{true}. For the statement to be true, there must be an $x$ such that $P(x)$ and $Q(x)$ are true. If $P(x)$ is true, then $1 - 2x= 7$, which implies $x= -3$. But if $x= -3$, then $(-3)^2= 9$ so that $Q(x)$ is true. But then if $x= -3$, both $P(x)$ and $Q(x)$ are true so that $P(x) \wedge Q(x)$ is true. But then the truth set is non-empty. 
+
+\item The statement is \textit{true}. We know that $P(x)$ is true if and only if $1 - 2x= 7$ is true, which is true if and only if $x= -3$. From (b), we know that if $x= -3$ that $Q(x)$ is true. But then for $x= -3$, $P(x) \to Q(x)$ is true. If $x \neq -3$, then $P(x)$ is false so that $P(x) \to Q(x)$ is true. But then the truth set is the entire domain. 
+
+\item The statement is \textit{false}. From (c), we know that if $x= -3$, then $P(x)$ is true. But if $x= -3$, then $R(x) \colon (-3)^2 > 9$ is false. Then $P(x) \to R(x)$ is false. Therefore, $x= -3$ is a counterexample. Then the truth set is not the entire domain. 
+
+\item The statement is \textit{true}. For $P(x) \vee R(x)$ to be true, either $P(x)$ or $R(x)$ is true. From (b), we know that if $x= -3$, then $P(x)$ is true. But then $P(x) \vee R(x)$ is true. Therefore, the truth set is non-empty. 
+
+\item The statement is \textit{true}. For $P(x) \wedge Q(x)$ to be true, $P(x)$ and $Q(x)$ need to be true. From (c), we know the only $x$ in the domain such that $P(x)$ is true is $x= -3$. But from (c), we know that $Q(x)$ is true if $x= -3$. Therefore, if $x= -3$, then $P(x)$ and $Q(x)$ are true so that $P(x) \cap Q(x)$ is true. But if $x \neq -3$, then $P(x)$ is false so that $P(x) \wedge Q(x)$ is false. But then $x= -3$ is the unique value in the truth set. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 8
+\problem{10} What well-known property does the following proposition represent: $\forall x\, \forall y\, \forall z\, [x + (y + z) = (x + y) + z]$.
+
+\sol This is quantified version of the associative property for addition for the real numbers. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 9
+\problem{10} Determine if the following statements are true or false:
+	\begin{enumerate}[(a)]
+	\item \usol{0.65cm}{T}: $\exists x\, \exists y\, (xy = 1)$
+	\item \usol{0.65cm}{F}: $\exists x\, \forall y\, (xy= 1)$
+	\item \usol{0.65cm}{F}: $\forall x\, \exists y\, (xy= 1)$
+	\item \usol{0.65cm}{F}: $\forall x\, \forall y\, (x^2 + y = 1)$
+	\item \usol{0.65cm}{T}: $\forall x\, \exists y\, (x^2 + y= 1)$
+	\end{enumerate}
+
+\sol
+
+\begin{enumerate}[(a)]
+\item If $x= y= 1$, then $xy= 1$. 
+
+\item If $y= 0$, then $xy= 0 \neq 1$ for all $x \in \mathbb{R}$. 
+
+\item If $x= 0$, then $xy= 0 \neq 1$ for all $y \in \mathbb{R}$. Note that if we require $x \neq 0$, the statement is true: if $x \neq 0$, define $y:= 1/x$. But then $xy= x \cdot \frac{1}{x}= 1$. 
+
+\item If $x= y= 0$, then $x^2 + y= 0 \neq 1$. 
+
+\item Given $x \in \mathbb{R}$, define $y:= 1 - x^2$. But then $x^2 + y= x^2 + (1 - x^2)= 1$. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 10
+\problem{10} Negate the following proposition:
+	\[
+	\forall x\, \exists y\, \left( P(x,y) \wedge Q(x,y) \to R(x,y) \right)
+	\]
+
+\sol
+	\[
+	\begin{aligned}
+	\neg [\forall x\, \exists y\, \left( P(x,y) \wedge Q(x,y) \to R(x,y) \right)] \\[0.5cm]
+	\exists x\, \neg[\exists y\, \left( P(x,y) \wedge Q(x,y) \to R(x,y) \right)] \\[0.5cm]
+	\exists x\, \forall y\, \neg\left( P(x,y) \wedge Q(x,y) \to R(x,y) \right) \\[0.5cm]
+	\exists x\, \forall y\, \left( P(x,y) \wedge Q(x,y) \wedge  \neg R(x,y) \right)
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 11
+\problem{10} One way of stating the definition for a function $f(x)$ to have limit $L$ at $x$, i.e. $\displaystyle \lim_{x \to a} f(x)= L$, is as follows:
+	\[
+	(\forall \epsilon > 0)(\exists \delta > 0)(\forall x \in \mathbb{R})[ 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \epsilon]
+	\]
+Give a definition for a function $f(x)$ to not have a limit at $x= a$ by negating the statement above. Your answer should not contain any negations. 
+
+\sol
+	\[
+	\begin{aligned}
+	\neg [(\forall \epsilon > 0)(\exists \delta > 0)(\forall x \in \mathbb{R})[ 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \epsilon]] \\[0.5cm]
+	(\exists \epsilon > 0) \neg[(\exists \delta > 0)(\forall x \in \mathbb{R})[ 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \epsilon]] \\[0.5cm]
+	(\exists \epsilon > 0)(\forall \delta > 0) \neg[(\forall x \in \mathbb{R})[ 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \epsilon]] \\[0.5cm]
+	(\exists \epsilon > 0)(\forall \delta > 0)(\exists x \in \mathbb{R}) \neg[ 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \epsilon] \\[0.5cm]
+	(\exists \epsilon > 0)(\forall \delta > 0)(\exists x \in \mathbb{R}) [ 0 < |x - a| < \delta \wedge \neg (|f(x) - L| < \epsilon) ] \\[0.5cm]
+	(\exists \epsilon > 0)(\forall \delta > 0)(\exists x \in \mathbb{R}) [ 0 < |x - a| < \delta \wedge  (|f(x) - L| \geq \epsilon) ]
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 12
+\problem{10} The universal and existential quantifier do not necessarily `distribute' over $\wedge$ and $\vee$. One of the following `equivalences' is not correct:
+	\[
+	\begin{aligned}
+	\forall x\, (P(x) \wedge Q(x)) &\Longleftrightarrow \forall x\, P(x) \wedge \forall x\, Q(x) \\
+	\forall x\, (P(x) \vee Q(x)) &\Longleftrightarrow \forall x\, P(x) \vee \forall x\, Q(x)
+	\end{aligned}
+	\]
+Determine which one is always true and state it. For the one that is false, give an example to show that it is false. 
+
+\sol The proposition $\forall x\, (P(x) \wedge Q(x)) \Longleftrightarrow \forall x\, P(x) \wedge \forall x\, Q(x)$ is true. If the left side is true, then for all $x$ in the domain, $P(x) \wedge Q(x)$ is true, i.e. $P(x)$ is true and $Q(x)$ is true. But then $\forall x\, P(x)$ is true and $\forall x, Q(x)$ is true. But then $\forall x\, P(x) \wedge \forall x\, Q(x)$ is true. If the left side is false, then there is an $x$ in the domain such that $P(x) \wedge Q(x)$ is false, i.e. either $P(x)$ is false or $Q(x)$ is false. Without loss of generality, assume $P(x)$ is false. But then $\forall x\, P(x)$ is false so that $\forall x\, P(x) \wedge \forall x\, Q(x)$ is false. Now suppose the right hand side is true. Then $\forall x\, P(x) \wedge \forall x\, Q(x)$ is true. But then $\forall x\, P(x)$ is true and $\forall x, Q(x)$ is true. But then $P(x) \wedge Q(x)$ is true for all $x$ in the domain so that $\forall x\, (P(x) \wedge Q(x))$ is true. Suppose that the right hand side is false. Then $\forall x\, P(x) \wedge \forall x\, Q(x)$ is false so that either $\forall x, P(x)$ is false or $\forall x, Q(x)$ is false. Without loss of generality, assume that $\forall x, P(x)$ is false. Then there is an $x$ in the domain such that $P(x)$ is false. But then $P(x) \wedge Q(x)$ is false for this $x$ so that $\forall x\, (P(x) \wedge Q(x))$ is false. 
+
+To see that $\forall x\, (P(x) \vee Q(x))$ and $\forall x\, P(x) \vee \forall x\, Q(x)$ are not equivalent, consider predicates the following example: let the domain be the set of chess pieces and define $P(x)$ to be the predicate that $x$ is black and define $Q(x)$ be the predicate that $x$ is white. It is true that for any $x$ in the domain, that either $x$ is black or $x$ is white, i.e. $\forall x\, (P(x) \vee Q(x))$. However, $\forall x\, P(x) \vee \forall x\, Q(x)$ is false because it is not true that every chess piece is black or that every chess piece is white. However, it is true that $\forall x\, P(x) \vee \forall x\, Q(x) \Rightarrow \forall x\, (P(x) \vee Q(x))$. 
+
+
+
+
+
+\end{document}

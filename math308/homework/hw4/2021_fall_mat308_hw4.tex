@@ -1,0 +1,112 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{}
+
+% Problem 1
+\problem{10} Read Keith Conrad's \href{https://kconrad.math.uconn.edu/blurbs/proofs/writingtips.pdf}{``Advice on Mathematical Writing.''} What are some things that you learned about good mathematical exposition that you may have otherwise thought? \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Watch 3Blue1Brown's \href{https://www.youtube.com/watch?v=M64HUIJFTZM}{``The unexpectedly hard windmill question (2011 IMO, Q2)''} and \href{https://www.youtube.com/watch?v=OkmNXy7er84}{``The hardest problem on the hardest test."} What proof strategies do you believe these videos exhibit? \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Prove that if $n^2 + (n + 1)^2= (n + 2)^2$, then $n= 3$. \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Recall that an integer $n$ is called \textit{even} if there is an integer $k$ such that $n= 2k$ and called odd if there is an integer $k$ such that $n= 2k + 1$. Prove that the product of two odd integers is odd. \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Rewrite the proof below to be shorter using either ``without loss of generality'' or ``mutatis mutandis'': \pspace
+
+\begin{thm*}
+For all $a, b \in \mathbb{R}$, $|ab|= |a| \, |b|$. 
+\end{thm*}
+
+\pf
+
+\textit{Case 1} ($a, b \geq 0$): Here $|a|= a$, $|b|= b$, and $ab \geq 0$. But then $|ab|= ab = |a| \, |b|$. 
+
+\textit{Case 2} ($a < 0, b \geq 0$): Here $|a|= -a$ and $|b|= b$. If $b= 0$, then $|b|= 0$ and $ab= 0$. But then $|ab|= |0|= 0 = -ab= |a| \,|b|$. Otherwise, $b > 0$ and then $ab < 0$. Then $|ab|= -ab= |a| \, |b|$. 
+
+\textit{Case 3} ($a \geq 0, b < 0$): Here $|a|= a$ and $|b|= -b$. If $a= 0$, then $|a|= 0$ and $ab= 0$. But then $|ab|= |0|= 0= -ab= |a| \, |b|$. Otherwise, $a > 0$ and then $ab < 0$. Then $|ab|= -ab= |a| \, |b|$. 
+
+\textit{Case 4} ($a, b < 0$): Here $|a|= -a$, $|b|= -b$, and $ab > 0$. Then $|ab|= ab= (-a)(-b)= |a| \, |b|$. \qed \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 6
+\problem{10} By mimicking the proof that $\sqrt{2}$ is irrational, prove that $\sqrt{p}$ is irrational for any prime $p$. \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 6
+\problem{10} Consider the checkerboard below that has two squares from each corner removed from the board. Prove that this board cannot be covered with the `T-shapes' (or its rotations) shown on the right. \pspace
+
+\drawboard
+
+
+
+
+
+\end{document}

@@ -11,6 +11,7 @@
 	float,				% Force Table Placement
 	graphicx,			% Include Images
 	lastpage,			% Reference Lastpage
+	mathrsfs,			% Use mathscr
 	microtype,			% Improved Appearance
 	multirow,			% Use Multiple Rows/Columns
 	pifont,			% Use Checkmarks
@@ -27,7 +28,7 @@
 % -------------------
 % Colors
 % -------------------
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[usenames,dvipsnames,table,xcdraw]{xcolor}
 \definecolor{stacred}{HTML}{73233c} % 115, 35, 60
 \definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
 \definecolor{quotegray}{RGB}{58,58,58}
@@ -80,7 +81,7 @@
   	{\color{quotegray} \itshape ``\thequote''} \par
   	\raggedleft
   	\color{quotegray}--\,\itshape \quoteby
-\end{minipage} \\[0.5cm]
+\end{minipage} \par\vspace{0.3cm}
 }{
 \noindent\textbf{Name: }\wideunderline{#1} \\
 \noindent\begin{minipage}[t]{0.3\textwidth}
@@ -93,7 +94,7 @@
   	{\color{quotegray} \itshape ``\thequote''} \par
   	\raggedleft
   	\color{quotegray}--\,\itshape \quoteby
-\end{minipage} \\[0.5cm]
+\end{minipage} \par\vspace{0.3cm}
 	}
 }
 \newcommand{\prob}{\noindent\textbf{Problem: }}
@@ -106,12 +107,13 @@
 \newcommand{\sol}{\noindent\textbf{Solution. }}
 \newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
 \newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape#2}\hspace{#1}}}
 
 
 % -------------------
 % Theorem Environments
 % -------------------
-\theoremstyle{theorem}
+\theoremstyle{plain}
 \newtheorem{thm}{Theorem}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{lem}[thm]{Lemma}
@@ -124,7 +126,7 @@
 \newtheorem*{dfn}{Definition}
 \newtheorem{ques}{Question}
 
-%\theoemstyle{remark}
+\theoremstyle{remark}
 \newtheorem*{rem}{Remark} 
 
 
@@ -164,10 +166,15 @@
 	\fancyfoot[R]{\small\thepage \,of \pageref*{LastPage}}
 	\renewcommand{\footrulewidth}{0.0pt}
 }
+
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0.0cm}
+
 \headheight=14pt
 \footskip=14pt
+
+\setlist[itemize]{topsep=0pt}
+\setlist[enumerate]{topsep=0pt}
 
 \pagestyle{pages}
 
@@ -182,6 +189,8 @@
 % -------------------
 % Commands
 % -------------------
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
 \newcommand\ds{\displaystyle}
 \newcommand{\cmark}{\ding{51}} 	% Uses pifont
 \newcommand{\xmark}{\ding{55}}	% Uses pifont
