@@ -1,0 +1,240 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{2: Due 09/28}{Listen, I'm not the nicest guy in the universe, because I’m the smartest, and being nice is something stupid people do to hedge their bets.}{Rick Sanchez, Rick \& Morty}
+
+% Problem 1
+\problem{10} Solve the following system of equations:
+	\[
+	\begin{aligned}
+	2x - y&= 5 \\
+	x + y&= 1
+	\end{aligned}
+	\] \pspace
+
+\sol {\itshape Adding the equations, we have\dots
+	\[
+	\begin{aligned}
+	3x&= 6 \\
+	x&= 2
+	\end{aligned}
+	\]
+But then using $x= 2$ in the second equation, we have
+	\[
+	\begin{aligned}
+	2 + y&= 1 \\
+	y&= -1
+	\end{aligned}
+	\]
+Therefore, the solution is $(x, y)= (2, -1)$, i.e. $x= 2$ and $y= -1$.}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Solve the following system of equations:
+	\[
+	\begin{aligned}
+	4x - 3y&= 10 \\
+	6x + 5y&= -4
+	\end{aligned}
+	\] \pspace
+
+\sol {\itshape First, we multiply the first equation by 3 and the second equation by $-2$ to obtain\dots
+	\[
+	\begin{aligned}
+	12x - 9y&= 30 \\
+	-12x - 10y&= 8
+	\end{aligned}
+	\]
+Adding these equations, we get
+	\[
+	\begin{aligned}
+	-19y&= 38 \\
+	y&= -2
+	\end{aligned}
+	\]
+Using $y= -2$ in the first equation, we have\dots
+	\[
+	\begin{aligned}
+	4x - 3(-2)&= 10 \\
+	4x + 6&= 10 \\
+	4x&= 4 \\
+	x&= 1
+	\end{aligned}
+	\]
+Therefore, the solution is $(x, y)= (1, -2)$, i.e. $x= 1$ and $y= -2$.}
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Solve the following system of equations:
+	\[
+	\begin{aligned}
+	\frac{1}{2}x - \frac{1}{6}y&= -1 \\
+	x - \frac{1}{3}y&= -2 
+	\end{aligned}
+	\] \pspace
+
+\sol {\itshape To make the equations simpler to solve, we clear denominators by multiplying the first equation by 6 and the second by 3. Then we have
+	\[
+	\begin{aligned}
+	3x - y&= -6 \\
+	3x - y&= -6
+	\end{aligned}
+	\]
+But then these are the same line! Therefore, any point satisfying one equation will satisfy the other. So the set of solutions will be the every point on the line $3x - y= -6$, i.e $y= 3x + 6$. So the set of solutions is $(x, y)= (x, 3x + 6)$ for any $x \in \mathbb{R}$.}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Solve the following system of equations:
+	\[
+	\begin{aligned}
+	6x - 5y&= 1 \\
+	3x + 10y&= 3
+	\end{aligned}
+	\] \pspace
+
+\sol {\itshape We multiply the first equation by 2 to obtain\dots
+	\[
+	\begin{aligned}
+	12x - 10y&= 2 \\
+	3x + 10y&= 3
+	\end{aligned}
+	\]
+Adding the equations, we have\dots
+	\[
+	\begin{aligned}
+	15x&= 5 \\
+	x&= \dfrac{1}{3}
+	\end{aligned}
+	\]
+Using $x= 1/3$ in the first equation, we have
+	\[
+	\begin{aligned}
+	6\left(\dfrac{1}{3}\right) - 5y&= 1 \\
+	2 - 5y&= 1 \\
+	5y&= 1 \\
+	y&= \dfrac{1}{5}
+	\end{aligned}
+	\]
+Therefore, the solution is $(x, y)= (\frac{1}{3}, \frac{1}{5})$, i.e. $x= \frac{1}{3}$ and $y= \frac{1}{5}$.}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Plot the solution set to the system of inequalities: 
+	\[
+	\begin{aligned}
+	4x + y&\leq 1 \\
+	x - 2y&\leq -20
+	\end{aligned}
+	\] \pspace
+
+\sol Solving for $y$ in each, we have
+	\[
+	\begin{aligned}
+	y&\leq 1 - 4x \\
+	\frac{1}{2}\, x &+ 10 \leq y
+	\end{aligned}
+	\]
+Notice each line is solid. For the first line, we shade beneath the line. For the second line, we shade above the line. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=2,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -15, xmax=15,
+	ymin= -15, ymax=15,
+	xtick={-14,-12,-10,-8,-6,-4,-2,0,2,4,6,8,10,12,14},
+	ytick={-14,-12,...,12,14},
+	minor tick = {-15,-13,...,15},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\draw[draw=none,pattern=north west lines, pattern color=blue!40,opacity=0.3] (-15,2.5) -- (-15,15) -- (10,15)--cycle;
+	\draw[draw=none,pattern=north east lines, pattern color=red!40,opacity=0.3] (-15,15) -- (-15,-15) -- (4,-15) -- (-7/2,15) --cycle;
+	\draw[draw=none,fill=gray,opacity=0.3] (-15,15) -- (-15,2.5) -- (-2,9) -- (-7/2,15) -- cycle;
+	\addplot[thick, domain= -15:15] {1 - 4*x};
+	\addplot[thick, domain= -15:15] {1/2*x+10};
+	\node at (-9.5,10.5) {$\mathbf{\mathcal{R}}$};
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Plot the solution set to the system of inequalities: 
+	\[
+	\begin{aligned}
+	x&\geq 1 \\
+	-3x + y&\geq -4
+	\end{aligned}
+	\] \pspace
+
+\sol Solving for $y$ in the second, we have
+	\[
+	\begin{aligned}
+	x& \geq 1 \\
+	y&\geq 3x - 4
+	\end{aligned}
+	\]
+Notice each line is solid. For the first line, we shade to the right of the line. For the second line, we shade above the line. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=2,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -10, xmax=10,
+	ymin= -10, ymax=10,
+	xtick={-10,-8,...,10},
+	ytick={-10,-8,...,10},
+	minor tick = {-11,...,11},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\draw[draw=none,pattern=north west lines, pattern color=blue!40,opacity=0.3]  (1,10) -- (10,10) -- (10,-10) -- (1,-10) -- cycle;
+	\draw[draw=none,pattern=north east lines, pattern color=red!40,opacity=0.3] (-10,10) -- (-10,-10) -- (-2,-10) -- (14/3,10) -- cycle;
+	\draw[draw=none,fill=gray,opacity=0.3] (1,10) -- (1,-1) -- (14/3,10) -- cycle;
+	\draw[thick] (1,-10) -- (1,10);
+	\addplot[thick, domain= -10:10] {3*x - 4};
+	\node at (2.4,7.3) {$\mathbf{\mathcal{R}}$};
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\]
+
+
+\end{document}

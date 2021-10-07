@@ -70,6 +70,49 @@ as desired. \pvspace{1.5cm}
 
 
 
+% Quiz 5
+\quizsol \textit{True/False}: Let $A= \{ 1 \}$ and $B= \{ 3, \{ 1 \} \}$. Then $A \subseteq B$. \pspace
+
+\sol The statement is \textit{false}. Recall that $A \subseteq B$ if every element of $A$ is an element of $B$. The only element of $A$ is the element $1$. However, $1 \notin B$, but rather $\{ 1 \} \in B$, i.e. $1$ is not in $B$ but the set consisting of only the element of $1$ is in $B$. However, note that $A \in B$ because $A= \{ 1 \}$ and $\{ 1 \} \in B$. \pvspace{1.5cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: Take the universal set to be the integers. Then the following two sets are equal:
+	\[
+	\begin{aligned}
+	A&= \{ n \colon n \text{ odd} \} \\
+	B&= \{ m \colon m \text{ prime and } m > 2 \}
+	\end{aligned}
+	\]
+
+\sol The statement is \textit{false}. We know that $9 \in A$ because $9$ is odd. But $9 \notin B$ because $9= 3 \cdot 3$ is not prime. Therefore, $A \not\subseteq B$ so that $A \neq B$. \pvspace{1.5cm}
+
+
+
+% Quiz 7
+\quizsol \textit{True/False}: The sets $A \times B \times C$ and $(A \times B) \times C$ are not the same. \pspace
+
+\sol The statement is \textit{true}. Elements in $A \times B \times C$ `look like' $(a, b, c)$, where $a \in A$, $b \in B$, and $c \in C$. Whereas elements in $(A \times B) \times C$ `look like' $((a, b), c)$, where $a \in A$, $b \in B$, and $c \in C$. Because elements in these sets are not of the same form, they cannot be the same. As an explicit example, take $A= \{ 1 \}$, $B= \{ 2, 3 \}$, and $C= \{ 4 \}$. Then 
+	\[
+	\begin{aligned}
+	A \times B \times C&= \{ (1, 2, 4), (1, 3, 4) \} \\
+	(A \times B) \times C&= \{ ((1, 2), 4), ((1, 3), 4) \}
+	\end{aligned}
+	\]
+Then $A \times B \times C \neq (A \times B) \times C$. 
+
+
+
+\newpage
+
+
+
+% Quiz 8
+\quizsol \textit{True/False}: There is a set $S$ such that $\mathcal{P}(S)$ has 3 elements. \pspace
+
+\sol If $S$ is an infinite set, then clearly there is a subset for each element $s \in S$, i.e. the subset $\{ s \}$. Clearly, if there is such a set, it cannot be infinite. Now if $S$ had 3 or more elements---having a subset for each element of $S$---we know that $\mathcal{P}(S)$ would have more than 3 subsets. Therefore, $S$ must have 0, 1, or 2 elements. If $S= \emptyset$, then $\mathcal{P}(S)= \{ \emptyset \}$. If $S= \{ s_1 \}$, then $\mathcal{P}(S)= \{ \emptyset, \{ s_1 \} \}$. Finally, if $S= \{ s_1, s_2 \}$, then $\mathcal{P}(S)= \{ \emptyset, \{ s_1 \}, \{ s_2 \}, S \}$. Therefore, there cannot be such a set $S$. 
+
 
 
 

@@ -1,0 +1,321 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 10/05}{There are three choices in this life: be good, get good, or give up.}{Dr. Gregory House, House}
+
+% Problem 1
+\problem{10} Find the matrix associated with the system of equations below. 
+	\[
+	\begin{aligned}
+	2x_1 - x_2 + 5x_3&= 5 \\
+	x_1 \hspace{1.05cm} + x_3&= -1 \\
+	\phantom{x -} 3x_2 - 6x_3&= 4
+	\end{aligned}
+	\] \pspace
+
+\sol
+	\[
+	\begin{pmatrix}
+	2 & -1 & 5 & 5 \\
+	1 & 0 & 1 & -1 \\
+	0 & 3 & -6 & 4
+	\end{pmatrix}
+	\] \pspace
+	
+	\begin{center} {\bfseries \underline{OR}} \end{center}
+
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	2 & -1 & 5 & 5 \\
+	1 & 0 & 1 & -1 \\
+	0 & 3 & -6 & 4
+	\end{array} 
+	\right)
+	\]
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Write the system of equations associated to the matrix below. 
+	\[
+	\begin{pmatrix}
+	1 & -1 & 3 & 5 & 6 \\
+	0 & 1 & 4 & 9 & -2 \\
+	1 & 2 & 0 & -6 & 3 \\
+	2 & -1 & 4 & 1 & 7 
+	\end{pmatrix}
+	\] \pspace
+
+\sol
+	\[
+	\begin{array}{rcrcrcrcr}
+	x_1 & - & x_2 & + & 3x_3 & + & 5x_4 & = & 6 \\
+	 &  & x_2 & + & 4x_3 & + & 9x_4 & = & -2 \\
+	x_1 & + & 2x_2 &  &  & - & 6x_4 & = & 3 \\
+	2x_1 & - & x_2 & + & 4x_3 & + & x_4 & = & 7 
+	\end{array}
+	\]
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Use matrix methods to solve the system of equations below. Show all your work. 
+	\[
+	\begin{aligned}
+	6x_1 - x_2&= 13 \\
+	2x_1 + 3x_2&= 1
+	\end{aligned}
+	\] \pspace
+
+\sol \pspace
+\begin{minipage}[t]{0.49\textwidth}
+	\[
+	\left(
+	\begin{array}{rr:r}
+	6 & -1 & 13 \\
+	2 & 3 & 1
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	6 & -1 & 13 \\
+	0 & -10 & 10
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	6 & -1 & 13 \\
+	0 & 1 & -1
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	6 & 0 & 12 \\
+	0 & 1 & -1
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	1 & 0 & 2 \\
+	0 & 1 & -1
+	\end{array} 
+	\right)
+	\]
+\end{minipage}%
+\begin{minipage}[t]{0.49\textwidth}
+\pvspace{0.5cm}
+$R_1 + -3R_2 \to R_2$ \pvspace{1.1cm}
+$-\dfrac{1}{10} R_2 \to R_2$ \pvspace{1.1cm}
+$R_2 + R_1 \to R_1$ \pvspace{1.1cm}
+$\dfrac{1}{6} R_1 \to R_1$
+\end{minipage} \pspace
+
+Therefore, the solution is $(x_1, x_2)= (2, -1)$, i.e. $x_1= 2$ and $x_2= -1$:
+	\[
+	\begin{cases}
+	x_1= 2 \\
+	x_2= -1
+	\end{cases}
+	\]
+
+
+
+\newpage
+
+
+
+
+% Problem 4
+\problem{10} Use matrix methods to solve the system of equations below. Show all your work. 
+	\[
+	\begin{aligned}
+	x_1 - x_2 + x_3&= 2 \\
+	2x_1 + 2x_2 - x_3&= 9 \\
+	x_2 - 3x_3&= 8
+	\end{aligned}
+	\]
+
+\sol \par
+\begin{minipage}[t]{0.49\textwidth}
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 1 & 2 \\
+	2 & 2 & -1 & 9 \\
+	0 & 1 & -3 & 8
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 1 & 2 \\
+	0 & 4 & -3 & 5 \\
+	0 & 1 & -3 & 8
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 1 & 2 \\
+	0 & 4 & -3 & 5 \\
+	0 & 0 & 9 & -27
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 1 & 2 \\
+	0 & 4 & -3 & 5 \\
+	0 & 0 & 1 & -3
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 1 & 2 \\
+	0 & 4 & 0 & -4 \\
+	0 & 0 & 1 & -3
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 0 & 5 \\
+	0 & 4 & 0 & -4 \\
+	0 & 0 & 1 & -3
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & -1 & 0 & 5 \\
+	0 & 1 & 0 & -1 \\
+	0 & 0 & 1 & -3
+	\end{array} 
+	\right)
+	\] 
+	\[
+	\left(
+	\begin{array}{rrr:r}
+	1 & 0 & 0 & 4 \\
+	0 & 1 & 0 & -1 \\
+	0 & 0 & 1 & -3
+	\end{array} 
+	\right)
+	\] 
+\end{minipage}%
+\begin{minipage}[t]{0.49\textwidth}
+\pvspace{0.6cm}
+$-2R_1 + R_2 \to R_2$ \pvspace{1.2cm}
+$R_2 - 4R_3 \to R_3$ \pvspace{1.2cm}
+$\dfrac{1}{9}R_3 \to R_3$ \pvspace{1.2cm}
+$3R_3 + R_2 \to R_2$ \pvspace{1.2cm}
+$-R_3 + R_1 \to R_1$ \pvspace{1.2cm}
+$\dfrac{1}{4}R_2 \to R_2$ \pvspace{1.2cm}
+$R_2 + R_1 \to R_1$
+\end{minipage} \pspace
+
+
+Therefore, the solution is $(x_1, x_2, x_3)= (4, -1, -3)$, i.e. $x_1= 4$, $x_2= -1$, and $x_3= -3$,
+	\[
+	\begin{cases}
+	x_1= 4 \\
+	x_2= -1 \\
+	x_3= -3
+	\end{cases}
+	\]
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Use \href{https://www.wolframalpha.com/}{WolframAlpha's} \texttt{RowReduce} to find the solution to the following system of equations: 
+	\[
+	\begin{aligned}
+	-6x_1 - x_2 + 7x_3 - 4x_4 + 3x_5&= 83 \\
+	2x_1 + 5x_2 + 2x_3 + 5x_4 + 7x_5&= \frac{67}{3} \\
+	-8x_1 - x_2 - 9x_3 - 10x_4&= -111 \\
+	7x_1 - 6x_2 + 3x_3 - 5x_4 + 9x_5&= \frac{97}{2} \\
+	12x_1 - 4x_2 - x_3 + 5x_4 + 6x_5&= 0
+	\end{aligned}
+	\] \pspace
+
+\sol The associated matrix is\dots
+	\[
+	\left(
+	\begin{array}{rrrrr:r}
+	-6 & -1 & 7 & -4 & 3 & 83 \\
+	2 & 5 & 2 & 5 & 7 & 67/3 \\
+	-8 & -1 & -9 & -10 & 0 & -111 \\
+	7 & -6 & 3 & -5 & 9 & 97/2 \\
+	12 & -4 & -1 & 5 & 6 & 0 
+	\end{array} 
+	\right)
+	\] 
+Using WolframAlpha's \texttt{RowReduce} function, we obtain\dots
+	\[
+	\left(
+	\begin{array}{rrrrr:r}
+	1 & 0 & 0 & 0 & 0 & 1/2 \\
+	0 & 1 & 0 & 0 & 0 & -1 \\
+	0 & 0 & 1 & 0 & 0 & 12 \\
+	0 & 0 & 0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 1 & 1/3
+	\end{array} 
+	\right)
+	\] 
+Therefore, the solution is $(x_1, x_2, x_3, x_4, x_5)= (1/2, -1, 12, 0, 1/3)$, i.e. $x_1= \frac{1}{2}$, $x_2= -1$, $x_3= 12$, $x_4= 0$, and $x_5= \frac{1}{3}$:
+	\[
+	\begin{cases}
+	x_1= \frac{1}{2} \\
+	x_2= -1 \\
+	x_3= 12 \\
+	x_4= 0 \\
+	x_5= \frac{1}{3}
+	\end{cases}
+	\]
+
+
+\end{document}

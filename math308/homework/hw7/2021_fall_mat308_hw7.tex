@@ -1,0 +1,87 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{}
+
+% Problem 1
+\problem{20} Consider the following `proof' by induction: \pspace
+
+\begin{prop}
+All groups of horses have the same color.
+\end{prop}
+
+\pf Let $n$ be number of horses in the group. If $n= 1$, then the group consists of a single horse. Clearly, every horse in this group has the same color. Now assume the result is true for $n= 1, 2, \ldots, k$. Now consider a group of horses of size $n= k + 1$. Number the horses in any way. Consider the horses numbered $1, 2, \ldots, k$. By the induction hypothesis, these $k$ horses have the same color. Now consider the horses numbered $2, 3, \ldots, k + 1$.  Again by the induction hypothesis, these $k$ horses have the same color. It only remains to show that horse one and horse $k + 1$ have the same color. Choose any horse numbered inclusively from 2 to $k$. Both horse one and horse $k + 1$ have the same color as this horse. Therefore, horse one and horse $k + 1$ have the same color. Therefore by induction, all groups of horses have the same color. \qed \pspace
+
+Explain the flaw in this `proof.' [Hint: Consider the `$\ldots$' part of the argument and see where this may break down.] 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{20} We took the \textit{Well Ordering Property of $\mathbb{N}$} in class as an axiom and then proved weak/strong induction. Show that the \textit{Well Ordering Property of $\mathbb{N}$} is logically equivalent to induction by proving that taking induction (weak or strong) as an axiom that then the \textit{Well Ordering Property of $\mathbb{N}$} follows, i.e. prove that if the Principle of Induction is true, that the \textit{Well Ordering Property of $\mathbb{N}$} is true. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{20} We proved in class that $\displaystyle \sum_{i=1}^n i= \dfrac{n(n + 1)}{2}$. Prove this equality ``\`a la Gauss'' by writing the sum out forwards and backwards. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{20} A famous riddle, though there are many versions, goes as follows: a tyrant rules over an island and keeps all citizens captive in an island prison. All 1,000~citizens have lived there since their birth. However, the island has a peculiar rule---any citizen may approach a guard at night and ask to leave. If they have blue eyes, they are released. If they do not have blue eyes, they are executed at dawn. Strangely enough, all citizens on the island do have blue eyes. 
+
+However, the tyrant has made certain that there are no reflective surfaces in the prison and no citizen is allowed to discuss their eye color. However, the citizens can see each other. No citizen would dare approach the guard and ask to leave without being certain that they would not be executed. 
+
+One day, a visitor is allowed in the kingdom. The visitor is allowed a single statement to the citizens of the island. However, you may not communicate any citizen's eye color directly or the entire population will be executed. But having been imprisoned with little to do their entire lives, you know the citizens are excellent at logical deductions. 
+
+What statement can you make that will ensure that every citizen on the island will go free? Explain. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{20} Prove that for integers $n, m \geq 1$, $(m + 1)^n > mn$. 
+
+
+
+
+
+
+
+
+\end{document}

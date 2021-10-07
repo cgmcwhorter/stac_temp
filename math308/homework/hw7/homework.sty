@@ -2,14 +2,18 @@
 % Packages
 % -------------------
 \usepackage{
+	amsfonts,			% Math Fonts
 	amsmath,			% Math Environments
 	amssymb,			% Extended Symbols
+	amsthm,			% Use Theorems
 	enumerate,		% Enumerate Environments
 	etoolbox,			% Use Booleans
 	float,				% Force Table Placement
 	graphicx,			% Include Images
 	lastpage,			% Reference Lastpage
-	multicol,			% Use Multiple Columns
+	mathrsfs,			% Use mathscr
+	microtype,			% Improved Appearance
+	multirow,			% Use Multiple Rows/Columns
 	pifont,			% Use Checkmarks
 }
 
@@ -24,7 +28,7 @@
 % -------------------
 % Colors
 % -------------------
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames,table,xcdraw]{xcolor}
 \definecolor{stacred}{HTML}{73233c} % 115, 35, 60
 \definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
 \definecolor{quotegray}{RGB}{58,58,58}
@@ -50,55 +54,47 @@
 % -------------------
 % Tikz
 % -------------------
-\usepackage{tikz}
+%\usepackage{tikz}
 %\usetikzlibrary{}
-\usepackage{pgfplots}
-\pgfplotsset{compat=newest}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=newest}
 %\usepgfplotslibrary{}
-
-
-% -------------------
-% Answer Hiding
-% -------------------
-\newbool{hideans}
-\newcommand{\ansname}{
-\ifbool{hideans}{\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}}{\underline{\hspace{1.21cm}\itshape Caleb McWhorter --- Solutions \hspace{1.21cm}}}
-}
-%\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}
-%\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}
 
 
 % -------------------
 % Title & Problem Commands
 % -------------------
+\newcommand{\wideunderline}[2][7.55cm]{%
+  \underline{\makebox[\ifdim\width>#1\width\else#1\fi]{\;#2\hfill}}%
+}
 \newbool{quotetype}
-\newcommand{\homework}[3]{%
+\newcommand{\homework}[1]{%
 	\ifbool{quotetype}{%
 \noindent\begin{minipage}[t]{0.6\textwidth}
-	\noindent \textbf{Name:} \ansname \\
+	\noindent\textbf{Name: }\wideunderline{#1} \\
   	\textbf{\course} \par
 	\textbf{\semester} \par
- 	\textbf{HW #1}
+ 	\textbf{HW \hwnumdue}
 \end{minipage}%
 \begin{minipage}[t]{0.4\textwidth}
 	\raggedright
-  	{\color{quotegray} \itshape ``#2''} \par
+  	{\color{quotegray} \itshape ``\thequote''} \par
   	\raggedleft
-  	\color{quotegray}--\,\itshape #3
-\end{minipage} \\[0.5cm]
+  	\color{quotegray}--\,\itshape \quoteby
+\end{minipage} \par\vspace{0.3cm}
 }{
-\noindent \textbf{Name:} \ansname \\
+\noindent\textbf{Name: }\wideunderline{#1} \\
 \noindent\begin{minipage}[t]{0.3\textwidth}
   	\textbf{\course} \par
 	\textbf{\semester} \par
- 	\textbf{HW #1}
+ 	\textbf{HW \hwnumdue}
 \end{minipage}%
 \begin{minipage}[t]{0.7\textwidth}
 	\raggedright
-  	{\color{quotegray} \itshape ``#2''} \par
+  	{\color{quotegray} \itshape ``\thequote''} \par
   	\raggedleft
-  	\color{quotegray}--\,\itshape #3
-\end{minipage} \\[0.5cm]
+  	\color{quotegray}--\,\itshape \quoteby
+\end{minipage} \par\vspace{0.3cm}
 	}
 }
 \newcommand{\prob}{\noindent\textbf{Problem: }}
@@ -111,7 +107,27 @@
 \newcommand{\sol}{\noindent\textbf{Solution. }}
 \newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
 \newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
-\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape #2}\hspace{#1}}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape#2}\hspace{#1}}}
+
+
+% -------------------
+% Theorem Environments
+% -------------------
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+\newtheorem{nex}{Non-Example}
+\newtheorem*{dfn}{Definition}
+\newtheorem{ques}{Question}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark} 
 
 
 % -------------------
@@ -150,9 +166,44 @@
 	\fancyfoot[R]{\small\thepage \,of \pageref*{LastPage}}
 	\renewcommand{\footrulewidth}{0.0pt}
 }
-\setlength{\parskip}{0.0cm}
+
+\setlength{\parskip}{1em}
 \setlength{\parindent}{0.0cm}
+
 \headheight=14pt
 \footskip=14pt
 
+\setlist[itemize]{topsep=0pt}
+\setlist[enumerate]{topsep=0pt}
+
 \pagestyle{pages}
+
+
+% -------------------
+% Course Information
+% -------------------
+\newcommand{\course}{MATH 308}
+\newcommand{\semester}{Fall 2021}
+
+
+% -------------------
+% Commands
+% -------------------
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\newcommand\ds{\displaystyle}
+\newcommand{\cmark}{\ding{51}} 	% Uses pifont
+\newcommand{\xmark}{\ding{55}}	% Uses pifont
+\newcommand{\uans}[1]{\underline{\hspace{#1}}}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup}
+\newcommand{\pf}{\noindent\textit{Proof. }}
+
+
+% -------------------
+% Quote & Due Date
+% -------------------
+\newcommand{\hwnumdue}{7: Due 10/13}
+\newcommand{\thequote}{I'm good at everything except the things that I can't do.}
+\newcommand{\quoteby}{Han Mi-nyeo, Squid Game}
+\setbool{quotetype}{false} % True: Side; False: Under

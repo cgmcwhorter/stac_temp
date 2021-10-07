@@ -1,0 +1,341 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 10/05}{I go. You stay. No following.}{Iron Giant, Iron Giant}
+
+% Problem 1
+\problem{10} Watch the following three videos by 3Blue1Brown (Grant Sanderson):
+	\begin{enumerate}[(i)]
+	\item \href{https://www.youtube.com/watch?v=kYB8IZa5AuE&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=4&ab_channel=3Blue1Brown}{Linear transformations and matrices}
+	\item \href{https://www.youtube.com/watch?v=XkY2DOUCWMU&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=5&ab_channel=3Blue1Brown}{Matrix multiplication as composition}
+	\item \href{https://www.youtube.com/watch?v=Ip3X9LOh2dk&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=7&ab_channel=3Blue1Brown}{The determinant}
+	\end{enumerate}
+What did you learn from these videos? \vfill
+
+
+\begin{center} Answers will vary. \end{center} \vfill
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Suppose the reduced-row echelon form for an augmented matrix is the following:
+	\[
+	\begin{pmatrix}
+	1 & -4 & 0 & 1 & 0 & 5 \\
+	0 & 0 & 1 & 0 & 0 & -1 \\
+	0 & 0 & 0 & 0 & 1 & 3
+	\end{pmatrix}
+	\]
+Using this, find all the solutions to the system of equations. \pspace
+
+\sol The last row of the matrix tells us that $x_5= 3$. The second row of the matrix tells us that $x_3= -1$. The first row of the matrix tells us that $x_1 - 4x_2 + x_4= 5$. Fixing any two of $x_1, x_2, x_4$, we can solve for the third. Therefore, we have two free variables. For instance, choosing $x_2$ and $x_4$ to be free, we have solutions
+	\[
+	\begin{cases}
+	x_1= 4x_2 - x_4 + 5 \\
+	x_2: \text{free} \\
+	x_3= -1 \\
+	x_4: \text{free} \\
+	x_5= 3
+	\end{cases}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Can you compute the following product of matrices? If you can, compute the product. If you can not, explain why. 
+	\[
+	\begin{pmatrix}
+	1 & -1 & 8 \\
+	2 & 3 & 5 
+	\end{pmatrix}
+	\begin{pmatrix}
+	1 & 4 \\
+	0 & -6 \\
+	7 & 7 \\
+	-8 & 0
+	\end{pmatrix}
+	\] \pspace
+
+\sol The first matrix is $2 \times 3$. The second matrix is $4 \times 2$. For matrix multiplication to be defined, we need the number of columns of the first to equal the number of rows of the second. But $3 \neq 4$ so that this matrix multiplication is not defined, i.e. we cannot compute this product. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Showing all your work, compute the following:
+	\[
+	\begin{pmatrix}
+	5 & 0 & 1 \\
+	-2 & -3 & 4 \\
+	1 & -1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+	2 \\
+	-1 \\
+	1
+	\end{pmatrix}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	\begin{pmatrix}
+	5 & 0 & 1 \\
+	-2 & -3 & 4 \\
+	1 & -1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+	2 \\
+	-1 \\
+	1
+	\end{pmatrix}&=
+	\begin{pmatrix}
+	5(2) + 0(-1) + 1(1) \\
+	-2(2) + (-3)(-1) + 4(1) \\
+	1(2) + (-1)(-1) + 1(1) 
+	\end{pmatrix} \\[0.3cm]
+	&= 
+	\begin{pmatrix}
+	10 + 0 + 1 \\
+	-4 + 3 + 4 \\
+	2 + 1 + 1 
+	\end{pmatrix} \\[0.3cm]
+	&=
+	\begin{pmatrix}
+	11 \\
+	3 \\
+	4
+	\end{pmatrix}
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Showing all your work, compute the following:
+	\[
+	\begin{pmatrix}
+	1 & -1 & 2 \\
+	-3 & 6 & 0
+	\end{pmatrix}
+	\begin{pmatrix}
+	0 & 4 \\
+	-2 & 3 \\
+	3 & -2
+	\end{pmatrix}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\begin{pmatrix}
+	1 & -1 & 2 \\
+	-3 & 6 & 0
+	\end{pmatrix}
+	\begin{pmatrix}
+	0 & 4 \\
+	-2 & 3 \\
+	3 & -2
+	\end{pmatrix}&= 
+	\begin{pmatrix}
+	1(0) + (-1)(-2) + 2(3) & 1(4) + (-1)3 + 2(-2) \\
+	-3(0) + 6(-2) + 0(3) & -3(4) + 6(3) + 0(-2) 
+	\end{pmatrix} \\[0.3cm]
+	&= 	
+	\begin{pmatrix}
+	0 + 2 + 6 & 4 - 3 - 4 \\
+	0 - 12 + 0 & -12 + 18 + 0 
+	\end{pmatrix} \\[0.3cm]
+	&= 
+	\begin{pmatrix}
+	8 & -3 \\
+	-12 & 6
+	\end{pmatrix}	
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 6
+\problem{10} Compute the determinant of the following matrix:
+	\[
+	\begin{pmatrix}
+	2 & 1 & 5 \\
+	-3 & 0 & 3 \\
+	7 & 2 & 7 
+	\end{pmatrix}
+	\]
+Is this matrix invertible? Explain. \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\det 	\begin{pmatrix}
+	2 & 1 & 5 \\
+	-3 & 0 & 3 \\
+	7 & 2 & 7 
+	\end{pmatrix}&= -(-3) \begin{vmatrix} 1 & 5 \\ 2 & 7 \end{vmatrix} + 0 \begin{vmatrix} 2 & 5 \\ 7 & 7 \end{vmatrix} - 3 \begin{vmatrix} 2 & 1 \\ 7 & 2 \end{vmatrix} \\[0.3cm]
+	&= 3 \big(1(7) - 2(5) \big) + 0 - 3 \big( 2(2) - 7(1) \big) \\[0.3cm]
+	&= 3 \big( 7 - 10 \big) - 3 \big( 4 - 7 \big) \\[0.3cm]
+	&= 3(-3) - 3(-3) \\[0.3cm]
+	&= -9 - (-9) \\[0.3cm]
+	&= -9 + 9 \\[0.3cm]
+	&= 0 
+	\end{aligned}
+	\] \pspace
+
+Because the determinant of the matrix is 0, the matrix cannot be invertible. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 7
+\problem{10} Find the inverse of the following matrix:
+	\[
+	\begin{pmatrix}
+	2 & -1 \\
+	-3 & 4
+	\end{pmatrix}
+	\] \pspace
+
+\sol \par
+\begin{minipage}[t]{0.49\textwidth}
+	\[
+	\left(
+	\begin{array}{rr:rr}
+	2 & -1 & 1 & 0 \\
+	-3 & 4 & 0 & 1 
+	\end{array} 
+	\right)
+	\]
+	\[
+	\left(
+	\begin{array}{rr:rr}
+	2 & -1 & 1 & 0 \\
+	0 & 5 & 3 & 2 
+	\end{array} 
+	\right)
+	\]
+	\[
+	\left(
+	\begin{array}{rr:rr}
+	2 & -1 & 1 & 0 \\
+	0 & 1 & \frac{3}{5} & \frac{2}{5}
+	\end{array} 
+	\right)
+	\]
+	\[
+	\left(
+	\begin{array}{rr:rr}
+	2 & 0 & \frac{8}{5} & \frac{2}{5} \\
+	0 & 1 & \frac{3}{5} & \frac{2}{5}
+	\end{array} 
+	\right)
+	\]
+	\[
+	\left(
+	\begin{array}{rr:rr}
+	1 & 0 & \frac{4}{5} & \frac{1}{5} \\
+	0 & 1 & \frac{3}{5} & \frac{2}{5}
+	\end{array} 
+	\right)
+	\]
+\end{minipage}%
+\begin{minipage}[t]{0.49\textwidth}
+\pvspace{0.3cm}
+$3R_1 + 2R_2 \to R_2$ \pvspace{0.6cm}
+$\dfrac{1}{5}R_2 \to R_2$ \pvspace{0.7cm}
+$R_2 + R_1 \to R_1$ \pvspace{0.6cm}
+$\dfrac{1}{2}R_1 \to R_1$
+\end{minipage} \pspace
+
+Therefore, the inverse is\dots
+	\[
+	\begin{pmatrix}
+	\frac{4}{5} & \frac{1}{5} \\[0.2cm]
+	\frac{3}{5} & \frac{2}{5}
+	\end{pmatrix}
+	\]
+Alternatively, because the matrix is $2 \times 2$, we can use the shortcut method:
+	\[
+	\det 	
+	\begin{pmatrix}
+	2 & -1 \\
+	-3 & 4
+	\end{pmatrix}
+	= 2(4) - (-3)(-1)= 8 - 3= 5
+	\]
+Then we have
+	\[
+	\begin{pmatrix}
+	2 & -1 \\
+	-3 & 4
+	\end{pmatrix}^{-1}=
+	\dfrac{1}{5}
+	\begin{pmatrix}
+	4 & 1 \\
+	3 & 2 
+	\end{pmatrix}=
+	\begin{pmatrix}
+	\frac{4}{5} & \frac{1}{5} \\[0.2cm]
+	\frac{3}{5} & \frac{2}{5}
+	\end{pmatrix}	
+	\]
+
+
+\end{document}
