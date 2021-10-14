@@ -1,0 +1,146 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	arydshln,			% Matrix Lines
+	cancel,			% Use Cancellations
+	empheq,			% Boxed Multiline Equation
+	enumerate,		% Enumerate Environments
+	etoolbox,			% Define Boolean
+	float,				% Force Figure/Table Placement
+	graphicx,			% Include Images
+	mathtools,			% Matrix Lines
+	multicol,			% Use Multi-columns
+	tabularx,			% Special Tabular Environment
+	tikz,				% Create Tikz Diagrams
+	tkz-euclide		% Automate Graph Plots
+}
+
+
+% -------------------
+% Tikz
+% -------------------
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*},
+		holdot/.style={color=black,fill=white,only marks,mark=*},
+		compat=1.12
+}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc,intersections}%,matrix,arrows,shapes.geometric,positioning,decorations.pathmorphing,patterns}
+\usepgfplotslibrary{fillbetween}
+
+
+% -------------------
+% Answer Hiding
+% -------------------
+\newbool{hideans}
+\usetikzlibrary{tikzmark}
+\usepackage{tikzpagenodes}
+\newcounter{tikzmarklines}\setcounter{tikzmarklines}{0} % 
+\tikzset{
+  tikzmark prefix=prefix-,
+  tikzmark suffix=-suffix
+}
+
+\newcommand{\hidestart}{%
+  \stepcounter{tikzmarklines}%
+  \tikzmark{a\thetikzmarklines}%
+  \iftikzmarkoncurrentpage{b\thetikzmarklines}%
+  \else
+  \begin{tikzpicture}[remember picture,overlay,next page=below]%
+  \path (pic cs:a\thetikzmarklines) coordinate (start-\thetikzmarklines)
+  ([yshift=-0.2ex]pic cs:b\thetikzmarklines) coordinate (end-\thetikzmarklines);
+  \ifbool{hideans}{\fill[white] (current page.west|-start-\thetikzmarklines)-- ++(0,1.2em) -|
+  (current page.east|-end-\thetikzmarklines) -| cycle;}{}
+  \end{tikzpicture}%
+  \fi
+}
+\newcommand{\hidefinish}{%
+  \tikzmark{b\thetikzmarklines}%
+  \begin{tikzpicture}[remember picture,overlay,next page=below]%
+  \path (pic cs:a\thetikzmarklines) coordinate (start-\thetikzmarklines)
+  ([yshift=-1.5ex]pic cs:b\thetikzmarklines) coordinate (end-\thetikzmarklines);
+  \ifbool{hideans}{\fill[white] (current page.west|-start-\thetikzmarklines)-- ++(0,1.2em) -|
+  (current page.east|-end-\thetikzmarklines) -| cycle;}{}
+  \end{tikzpicture}%
+  }
+\newcommand{\ans}[1]{\hidestart \par {\itshape #1 } \hidefinish}
+\newcommand{\wans}[1]{\ifbool{hideans}{\textcolor{white}{#1}}{{\itshape #1}}}
+
+\newcommand{\uans}[1]{\underline{\hspace{#1}}}
+\newcommand{\pvspace}[1]{\par\vspace{#1}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}#2\hspace{#1}}}
+
+
+\newcommand{\ansfig}[1]{\ifbool{hideans}{\phantom{x}}{{\itshape #1}}}
+\newcommand{\hans}[1]{\ifbool{hideans}{}{{#1}}}
+\newcommand{\either}[2]{\ifbool{hideans}{\phantom{#1}}{#1}}
+\newcommand{\tans}[1]{\ifbool{hideans}{\underline{\phantom{$#1$}}}{\underline{$#1$}}}
+\newcommand{\spaceans}[2]{\ifbool{hideans}{\par\vspace{#1}}{{\itshape #2}}}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Commands
+% -------------------
+\newcommand{\examtitle}{\noindent \textbf{\course} \hfill \textbf{Name: } \underline{\hspace{1.25cm}\wans{  Caleb M\textsuperscript{c}Whorter --- Solutions  }\hspace{1.25cm}} \\ \textbf{\term} \\ \textbf{\examdate} \\ \textbf{\timelimit} \\[0.2cm] \rule[2ex]{\textwidth}{2pt}}
+\newcommand{\instructions}[1]{%
+	\begin{center}
+	\fbox{\fbox{\parbox{6in}{\centering #1}}}
+	\end{center} \vspace{0.1cm}
+}
+\newcommand{\scores}{
+	\begin{center}
+	\addpoints
+	\gradetable[v][questions] % v: vertical scores; h: horizontal scores
+	\end{center}
+}
+\newcommand{\bottomline}{\vfill\noindent \rule[2ex]{\textwidth}{2pt}}
+\newenvironment{2enumerate}{%
+	\begin{enumerate}[(a)]
+	\begin{multicols}{2}
+	}{%
+	\end{multicols}
+	\end{enumerate}
+}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\tfq}[1] % #1 = question
+{\stepcounter{abc}(\alph{abc}) & #1 & \answerbox & \answerbox}
+\newcounter{abc}
+\renewcommand{\theabc}{\stepcounter{abc}\alph{abc}}
+\newcommand{\answerbox}{\fbox{\phantom{M}}}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\culine}[2]{\underline{\hspace{#1}\wans{#2}\hspace{#1}}}
+
+% Check Marks
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+
+\newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup}
+\newcommand{\squiggle}{\rightsquigarrow}
+\newcommand{\bline}{\begin{center} \rule{0.4\textwidth}{0.8pt} \hspace{0.2cm} {\large $_\mathbf{X}$ } \hspace{0.0cm} \rule{0.4\textwidth}{0.8pt} \end{center} \vspace{0.5cm}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\lh}{\stackrel{\text{L.H.}}{=}}
+
+
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\course}{}{\thepage\ of \numpages}
+\runningheadrule
