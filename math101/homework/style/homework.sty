@@ -9,6 +9,7 @@
 	float,				% Force Table Placement
 	graphicx,			% Include Images
 	lastpage,			% Reference Lastpage
+	longdivision,		% Use Long Division
 	multicol,			% Use Multiple Columns
 	pifont,			% Use Checkmarks
 }
@@ -53,10 +54,10 @@
 \usepackage{tikz}
 %\usetikzlibrary{}
 \usepackage{pgfplots}
-%\pgfplotsset{soldot/.style={color=black,only marks,mark=*},
-%		holdot/.style={color=black,fill=white,only marks,mark=*},
-%		compat=1.12
-%}
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*},
+		holdot/.style={color=black,fill=white,only marks,mark=*},
+		compat=1.12
+}
 \pgfplotsset{compat=newest}
 %\usepgfplotslibrary{}
 
@@ -65,6 +66,11 @@
 % Answer Hiding
 % -------------------
 \newbool{hideans}
+\newcommand{\ansname}{
+\ifbool{hideans}{\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}}{\underline{\hspace{1.21cm}\itshape Caleb McWhorter --- Solutions \hspace{1.21cm}}}
+}
+%\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}
+%\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}
 
 
 % -------------------
@@ -74,7 +80,7 @@
 \newcommand{\homework}[3]{%
 	\ifbool{quotetype}{%
 \noindent\begin{minipage}[t]{0.6\textwidth}
-	\noindent \textbf{Name: }\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}} \\
+	\noindent \textbf{Name:} \ansname \\
   	\textbf{\course} \par
 	\textbf{\semester} \par
  	\textbf{HW #1}
@@ -86,7 +92,7 @@
   	\color{quotegray}--\,\itshape #3
 \end{minipage} \\[0.5cm]
 }{
-\noindent \textbf{Name: }\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}} \\
+\noindent \textbf{Name:} \ansname \\
 \noindent\begin{minipage}[t]{0.3\textwidth}
   	\textbf{\course} \par
 	\textbf{\semester} \par
@@ -110,6 +116,7 @@
 \newcommand{\sol}{\noindent\textbf{Solution. }}
 \newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
 \newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape #2}\hspace{#1}}}
 
 
 % -------------------
