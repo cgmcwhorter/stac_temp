@@ -11,6 +11,8 @@
 % Problem 1
 \problem{10} Read Keith Conrad's \href{https://kconrad.math.uconn.edu/blurbs/proofs/writingtips.pdf}{``Advice on Mathematical Writing.''} What are some things that you learned about good mathematical exposition that you may have otherwise thought? \pspace
 
+\sol {\itshape Solutions will vary.}
+
 
 
 
@@ -23,6 +25,8 @@
 
 % Problem 2
 \problem{10} Watch 3Blue1Brown's \href{https://www.youtube.com/watch?v=M64HUIJFTZM}{``The unexpectedly hard windmill question (2011 IMO, Q2)''} and \href{https://www.youtube.com/watch?v=OkmNXy7er84}{``The hardest problem on the hardest test."} What proof strategies do you believe these videos exhibit? \pspace
+
+\sol {\itshape Solutions will vary.}
 
 
 
@@ -37,6 +41,18 @@
 % Problem 3
 \problem{10} Prove that for $n \in \mathbb{N}$, if $n^2 + (n + 1)^2= (n + 2)^2$, then $n= 3$. \pspace
 
+\sol Let $n \in \mathbb{N}$ and assume that $n^2 + (n + 1)^2= (n + 2)^2$. But then
+	\[
+	\begin{aligned}
+	n^2 + (n + 1)^2&= (n + 2)^2 \\
+	n^2 + (n^2 + 2n + 1)&= n^2 + 4n + 4 \\
+	2n^2 + 2n + 1&= n^2 + 4n + 4 \\
+	n^2 - 2n - 3&= 0 \\
+	(n - 3)(n + 1)&= 0.
+	\end{aligned}
+	\]
+But then $n - 3= 0$ or $n + 1= 0$. This implies that $n= 3$ or $n= -1$. But because $n \in \mathbb{N}$, it must be that $n= 3$. 
+
 
 
 
@@ -49,6 +65,12 @@
 
 % Problem 4
 \problem{10} Recall that an integer $n$ is called \textit{even} if there is an integer $k$ such that $n= 2k$ and called odd if there is an integer $k$ such that $n= 2k + 1$. Prove that the product of two odd integers is odd. \pspace
+
+\sol Let $n, m \in \mathbb{Z}$ be odd. But then there exist $k_1, k_2 \in \mathbb{Z}$ such that $n= 2k_1 + 1$ and $m= 2k_2 + 1$, respectively. Then
+	\[
+	nm= (2k_1 + 1)(2k_2 + 1)= 4k_1k_2 + 2k_1 + 2k_2 + 1= 2 (2k_1k_2 + k_1 + k_2) + 1.
+	\]
+Because $2, k_1, k_2 \in \mathbb{Z}$, we know that $2k_1k_2 + k_1 + k_2 \in \mathbb{Z}$. Therefore, $nm= 2 (2k_1k_2 + k_1 + k_2) + 1$ is odd. 
 
 
 
@@ -77,6 +99,28 @@ For all $a, b \in \mathbb{R}$, $|ab|= |a| \, |b|$.
 
 \textit{Case 4} ($a, b < 0$): Here $|a|= -a$, $|b|= -b$, and $ab > 0$. Then $|ab|= ab= (-a)(-b)= |a| \, |b|$. \qed \pspace
 
+\sol There are several approaches. For instance, \dots
+
+\pf
+
+\textit{Case 1} (Both Nonnegative): Assume that $a, b \geq 0$. Here $|a|= a$, $|b|= b$, and $ab \geq 0$. But then $|ab|= ab = |a| \, |b|$. 
+
+\textit{Case 2} (Negative \& Nonnegative): By possibly interchanging the roles of $a$ and $b$, without loss of generality, we may assume that $a< 0$ and $b \geq 0$. Here $|a|= -a$ and $|b|= b$. If $b= 0$, then $|b|= 0$ and $ab= 0$. But then $|ab|= |0|= 0 = -ab= |a| \,|b|$. Otherwise, $b > 0$ and then $ab < 0$. Then $|ab|= -ab= |a| \, |b|$. 
+
+\textit{Case 3} (Both Negative): Assume that $a, b < 0$. Here $|a|= -a$, $|b|= -b$, and $ab > 0$. Then $|ab|= ab= (-a)(-b)= |a| \, |b|$. \qed \pspace
+
+\begin{center} {\bfseries OR} \end{center}
+
+\pf
+
+\textit{Case 1} ($a, b \geq 0$): Here $|a|= a$, $|b|= b$, and $ab \geq 0$. But then $|ab|= ab = |a| \, |b|$. 
+
+\textit{Case 2} ($a < 0, b \geq 0$): Here $|a|= -a$ and $|b|= b$. If $b= 0$, then $|b|= 0$ and $ab= 0$. But then $|ab|= |0|= 0 = -ab= |a| \,|b|$. Otherwise, $b > 0$ and then $ab < 0$. Then $|ab|= -ab= |a| \, |b|$. 
+
+\textit{Case 3} ($a \geq 0, b < 0$): This is proved as in Case~2, mutatis mutandis.  
+
+\textit{Case 4} ($a, b < 0$): Here $|a|= -a$, $|b|= -b$, and $ab > 0$. Then $|ab|= ab= (-a)(-b)= |a| \, |b|$. \qed \pspace
+
 
 
 
@@ -90,7 +134,38 @@ For all $a, b \in \mathbb{R}$, $|ab|= |a| \, |b|$.
 % Problem 6
 \problem{10} By mimicking the proof that $\sqrt{2}$ is irrational, prove that $\sqrt{p}$ is irrational for any prime $p$. \pspace
 
+\sol Suppose that $\sqrt{p}$ were rational. Then there exist $a, b \in \mathbb{Z}$ such that $\sqrt{p}= \frac{a}{b}$. Without loss of generality, we may assume that $\gcd(a, b)= 1$. But then
+	\[
+	\begin{aligned}
+	\sqrt{p}&= \dfrac{a}{b} \\
+	p&= \dfrac{a^2}{b^2} \\
+	pb^2&= a^2.
+	\end{aligned}
+	\]
+Because $p$ divides the left side of the equality, we know that $p$ divides $a^2$. But then $p$ divides $a$. Therefore, $a= kp$ for some $k \in \mathbb{Z}$. But then
+	\[
+	\begin{aligned}
+	pb^2&= a^2 \\
+	pb^2&= (kp)^2 \\
+	pb^2&= k^2p^2 \\
+	b^2&= k^2p.
+	\end{aligned}
+	\]
+As $p$ divides the right side of the equality, we know that $p$ divides $b^2$. But then $p$ divides $b$. Therefore, $\gcd(a, b) \geq p > 1$, a contradiction. Therefore, $\sqrt{p}$ is irrational. 
 
+\begin{center} {\bfseries OR} \end{center}
+
+Suppose that $\sqrt{p}$ were rational. Then there exist $a, b \in \mathbb{Z}$ such that $\sqrt{p}= \frac{a}{b}$. But then
+	\[
+	\begin{aligned}
+	\sqrt{p}&= \dfrac{a}{b} \\
+	p&= \dfrac{a^2}{b^2} \\
+	pb^2&= a^2.
+	\end{aligned}
+	\]
+Because $a^2, b^2$ are squares, each prime in the prime factorizations of $a^2$ and $b^2$ occurs an even number of times. But then $p$ occurs in the prime factorization of the left side of the equality an odd number of times. However, $p$ occurs in the prime factorization of the right side of the equality an even number of times. This contradicts the uniqueness of the factorization for $pb^2$ and $a^2$. Therefore, it must be that $\sqrt{p}$ is irrational. 
+
+ 
 
 
 
@@ -104,6 +179,30 @@ For all $a, b \in \mathbb{R}$, $|ab|= |a| \, |b|$.
 \problem{10} Consider the checkerboard below that has two squares from each corner removed from the board. Prove that this board cannot be covered with the `T-shapes' (or its rotations) shown on the right. \pspace
 
 \drawboard
+
+\sol A normal chessboard consists of 64 squares---32 white and 32 black. However, we have removed 4 squares: a white and black square from each corner. Therefore, this chessboard consists of 60 squares---30 white and 30 black. Each `T-shape' covers 4 squares. Therefore, we must use 15 `T-shapes' to cover the board. 
+
+Now consider the `center' of the `T-shape' piece, i.e. the square adjacent to 3 squares in the `T-shape.' When placed on the board, this `center' square either covers a white or black square. If the `center' square covers a white square, the `T-shape' covers 3 black squares and 1 white square. If the `center' square covers a black square, the `T-shape' covers 3 white squares and 1 black square. Therefore, each `T-shape' placed on the board reduces the number of uncovered white and black squares by an odd number. 
+
+As there are 30 white squares and 30 black squares needing to be covered, an even number of `T-shape' pieces must be used. It is impossible to use both 15 `T-shapes' and an even number of `T-shapes' to cover the board. Therefore, it is impossible to tile this board only using `T-shapes.' 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

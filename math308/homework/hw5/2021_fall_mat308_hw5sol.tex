@@ -16,7 +16,35 @@
         \item $\{ m \in \mathbb{N} \colon \sqrt[3]{m} \in \mathbb{N} \}$
         \item $\{ q \in \mathbb{Q} \colon 4q + 1 \in \mathbb{N} \}$
         \item $\{ a \in \mathbb{N} \colon \exists b\, \exists c,\, b, c \in \mathbb{N}, a^2 + b^2= c^2 \}$
-        \end{enumerate}
+        \end{enumerate} 
+
+\sol
+\begin{enumerate}[(a)]
+\item Clearly, if $N \in \{ n \in \mathbb{N} \colon \exists k \in \mathbb{N}, n= 6k \}$, then $N= 6k$ for some $k \in \mathbb{N}$, i.e. $N$ is a positive multiple of 6. Furthermore, $6K \in \{ n \in \mathbb{N} \colon \exists k \in \mathbb{N}, n= 6k \}$ for all $K \in \mathbb{N}$, i.e. choosing $k= K$. But then $\{ n \in \mathbb{N} \colon \exists k \in \mathbb{N}, n= 6k \}$ consists of all the positive multiples of 6. Then, for instance, we have\dots
+	\[
+	6, 12, 18, 24, 30, 36, 42, 48 \in \{ n \in \mathbb{N} \colon \exists k \in \mathbb{N}, n= 6k \}
+	\]
+
+\item Clearly, if $w \in \{ x \in \mathbb{R} \colon \exists y \in \mathbb{R}, x= y^2 \}$, then $w \geq 0$ is a perfect square because $w= y^2 $ for some $y \in \mathbb{R}$. Conversely, if $w^2 \in \{ x \in \mathbb{R} \colon \exists y \in \mathbb{R}, x= y^2 \}$ for all $w \in \mathbb{R}$, i.e. choose $y= w$. Therefore, $\{ x \in \mathbb{R} \colon \exists y \in \mathbb{R}, x= y^2 \}$ is the set of perfect squares in $\mathbb{R}$. Then, for instance, we have\dots
+	\[
+	0, 1, 4, 9, \sqrt{2}, \sqrt{12.9845}, \sqrt{\dfrac{1}{3}}, \sqrt{\pi} \in \{ x \in \mathbb{R} \colon \exists y \in \mathbb{R}, x= y^2 \}
+	\]
+
+\item Clearly, if $N \in \{ m \in \mathbb{N} \colon \sqrt[3]{m} \in \mathbb{N} \}$, then there exists $m \in \mathbb{N}$ such that $m= \sqrt[3]{N}$. But then $N= m^3$. Conversely, $N^3 \in \{ m \in \mathbb{N} \colon \sqrt[3]{m} \in \mathbb{N} \}$ for all $N \in \mathbb{N}$ because $\sqrt[3]{N^3}= N$. Therefore, $\{ m \in \mathbb{N} \colon \sqrt[3]{m} \in \mathbb{N} \}$ is the set of positive perfect cubes. Then, for instance, we have\dots
+	\[
+	1, 8, 27, 64, 125, 216, 343 \in \{ m \in \mathbb{N} \colon \sqrt[3]{m} \in \mathbb{N} \}
+	\]
+
+\item Observe $Q \in \{ q \in \mathbb{Q} \colon 4q + 1 \in \mathbb{N} \}$ if and only if $4Q + 1 \in \mathbb{N}$ if and only if $4Q \in \mathbb{N} \cup \{ 0 \}$. Therefore, $\{ q \in \mathbb{Q} \colon 4q + 1 \in \mathbb{N} \}$ is the set of rational numbers $q$ such that $4q \in \mathbb{Z}_{\geq 0}$. Then, for instance,
+	\[
+	0, \pm 1, \pm 2, \pm 3, \pm\frac{1}{2}, \pm\frac{3}{2}, \pm\frac{5}{2}, \pm\frac{1}{4}, \pm\dfrac{3}{4}, \pm\frac{5}{4} \in \{ q \in \mathbb{Q} \colon 4q + 1 \in \mathbb{N} \}
+	\]
+
+\item Clearly, $A \in \{ a \in \mathbb{N} \colon \exists b\, \exists c,\, b, c \in \mathbb{N}, a^2 + b^2= c^2 \}$ if and only if $A^2 + b^2= c^2$ for some $b, c$, where $A, b, c \in \mathbb{N}$, if and only if $A$ and $b$ are legs of a right triangle with integer legs. Then, for instance,
+	\[
+	3, 4, 5, 7, 8, 9, 11, 12, 13, 15, 16, 17, 20, 21, 24, 28, 33, 35 \in \{ a \in \mathbb{N} \colon \exists b\, \exists c,\, b, c \in \mathbb{N}, a^2 + b^2= c^2 \}
+	\]
+\end{enumerate}
 
 
 
@@ -36,7 +64,45 @@
         \item The set of rational numbers between 0 and 1.  
         \item The set of functions passing through the point $(6, 5)$. 
         \item The set of differentiable functions with a horizontal tangent line at $x= 1$.
-        \end{enumerate}
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item There are many possibilities. For instance, \dots
+	\[
+	\begin{aligned}
+	\{ 1, 4, 9, 16, 25, 36, 49, 64, \ldots \}&= \{ n^2 \colon n \in \mathbb{N} \} \\
+	&= \{ n \colon \exists k \in \mathbb{N}, n= k^2 \} \\
+	&= \{ n \colon \exists k \in \mathbb{Z}, n= k^2 \} \\
+	&= \{ n^2 \colon n \in \mathbb{Z} \setminus \{0\} \}
+	\end{aligned}
+	\]
+
+\item There are many possibilities. For instance, \dots
+	\[
+	\begin{aligned}
+	\{ 0, \pm 3, \pm 6, \pm 9, \pm 12, \pm 15, \ldots \}&= \{ 3k \colon k \in \mathbb{Z} \} \\
+	&= \{ z \in \mathbb{Z} \colon \exists k \in \mathbb{Z}, z= 3k \} \\
+	&= \{ n \in \mathbb{Z} \colon 3 \mid n \} \\
+	&= \left\{ n \in \mathbb{Z} \colon \frac{n}{3} \in \mathbb{Z} \right\}
+	\end{aligned}
+	\]
+
+\item There are a few possibilities. For instance, 
+	\[
+	\{ q \in \mathbb{Q} \colon 0 < q < 1 \}= (0, 1) \cap \mathbb{Q}
+	\]
+
+\item This is the set\dots
+	\[
+	\{ f: \mathbb{R} \to \mathbb{R} \;|\; f(6)= 5 \}
+	\]
+
+\item This is the set\dots
+	\[
+	\{ f: \mathbb{R} \to \mathbb{R} \;|\; f'(1)= 0 \}
+	\]
+\end{enumerate}
 
 
 
@@ -55,7 +121,18 @@
 	\item Is $A \subseteq \mathscr{U}$? Explain.
 	\item Is $B \in \mathscr{U}$? Explain. 
 	\item Is $B \subseteq \mathscr{U}$? Explain. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know $A= \{ 2, 1, 2 \}= \{ 1, 2 \}$. But $\{ 1, 2 \} \in \mathscr{U}$. But then $A \in \mathscr{U}$. 
+
+\item We know $A= \{ 2, 1, 2 \}= \{ 1, 2 \}$. Then the only elements of $A$ are 1 and 2. But $1 \in \mathscr{U}$ and $2 \in \mathscr{U}$. Therefore, $A \subseteq \mathscr{U}$. 
+
+\item We know $B= \{ 1 \}$. But $\{ 1 \} \in \mathscr{U}$. Therefore, $B \in \mathscr{U}$. 
+
+\item We know $B= \{ 1 \}$. Then the only element of $B$ is 1. But $1 \in \mathscr{U}$. Therefore, $B \subseteq \mathscr{U}$. 
+\end{enumerate}
 
 
 
@@ -94,7 +171,21 @@ In addition, answer the following:
 	\item[(h)] Is $F \subseteq A$? Explain. 
 	\item[(i)] Is $B \cap F= \{ 1, 3 \}$? Explain. 
 	\item[(j)] Is $A$ a universal set for $B, C, D, E, F$? If it is, compute $D^c$. If not, explain why. 
-	\end{enumerate}
+	\end{enumerate} 
+
+\sol
+\begin{enumerate}[(a)]
+\item $A \cap B= \{ 1, 3, 5, 7, 9 \}$
+\item $C \cup D= \{ 2, 3, 4, 5, 6, 7, 8, 10 \}$
+\item $D \cap E= \emptyset$
+\item $D \setminus B= \{ 2 \}$
+\item $B \setminus A= \emptyset$
+\item $B \times C= \{ (1, 2), (1, 4), (1, 6), (1, 8), (1, 10), (3, 2), (3, 4), (3, 6), (3, 8), (3, 10), (5, 2), (5, 4), (5, 6), (5, 8),$ $(5, 10), (7, 2), (7, 4), (7, 6), (7, 8), (7, 10), (9, 2), (9, 4), (9, 6), (9, 8), (9, 10) \}$. 
+\item $(D \cap F) \cup (B \cap E)= \{ 2, 9 \}$
+\item No, because $\{ 3 \} \in F$ but $\{ 3 \} \notin A$. 
+\item No, because $3 \in B$ but $3 \notin F$.
+\item No, because from part (h), we know that $F \not\subseteq A$. 
+\end{enumerate}
 
 
 
@@ -113,7 +204,18 @@ In addition, answer the following:
         \item $\mathscr{P}(\{ 1, \{ 1 \} \})$
         \item $\mathscr{P}(\{ 1, e, \pi \})$
         \item $\mathscr{P}( \{ 1 \} \times \{ a, b \})$
-        \end{enumerate}
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item $\mathscr{P}(\emptyset)= \{ \emptyset \}$.
+
+\item $\mathscr{P}(\{ 1, \{ 1 \} \})= \{\, \emptyset, \{ 1 \}, \{ \{1 \} \}, \{ 1, \{ 1 \} \} \,\}$ 
+
+\item $\mathscr{P}(\{ 1, e, \pi \})= \{\, \emptyset, \{ 1 \}, \{ e \}, \{ \pi \}, \{ 1, e \}, \{ 1, \pi \}, \{ e, \pi \}, \{ 1, e, \pi \} \,\}$
+
+\item $\mathscr{P}( \{ 1 \} \times \{ a, b \})= \mathscr{P}( \{ (1, a), (1, b) \})= \{\, \emptyset, \{ (1, a) \}, \{ (1, b) \}, \{ (1, a), (1, b) \} \,\}$
+\end{enumerate}
 
 
 
@@ -131,7 +233,26 @@ In addition, answer the following:
 	\item $A \cap B^c$
 	\item $(A \cup B)^c$
 	\item $(A \cup B) \setminus (A \cap B)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.}\par
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillOnlyA
+	\end{venndiagram2sets}
+
+\item \phantom{.}\par
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillNotAorB
+	\end{venndiagram2sets}
+
+\item \phantom{.}\par
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillOnlyA
+	\fillOnlyB
+	\end{venndiagram2sets}
+\end{enumerate}
 
 
 
@@ -149,7 +270,16 @@ In addition, answer the following:
 	\item \diagramOne
 	\item \diagramTwo
 	\item \diagramThree
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item There are several possibilities. For instance, $A \cap (B \cup C)^c= A \cap (B^c \cap C^c)= A \setminus (B \cup C)$
+
+\item There are several possibilities. For instance, $[(B \cup C) \cap A^c] \cup (A \cap B)= (B \cup C) \setminus [ (A \cap C) \setminus B]= B \cup (C \cap (A \cap C)^c)= B \cup (C \cap (A^c \cup C^c))= B \cup (A^c \cap C)$. 
+
+\item There are several possibilities. For instance, $[(A \cap B) \cup (B \cup C) \cup (A \cap C)] \cap (A \cap B \cap C)^c= [(A \cap B) \cup (B \cup C) \cup (A \cap C)] \setminus (A \cap B \cap C)$. 
+\end{enumerate}
 
 
 
@@ -164,8 +294,9 @@ In addition, answer the following:
 % Problem 8
 \problem{10} Let $A= \{ b, c \}$. Suppose that $A \cup B= \{ a, b, c, e \}$ and $B \cup C= \{ a, c, d, e, f \}$. From this information can we determine the sets $A, B, C$? Explain. If not, what is the minimal additional information (in terms of unions and intersections of the sets alone) would uniquely determine the three sets? \pspace
 
+\sol Observe that if $A= \{ b, c \}, B= \{ a, b, c, e \}, C= \{ a, c, d, e, f \}$, then $A \cup B= \{ a, b, c, e \}$ and $B \cup C= \{ a, c, d, e, f \}$. Furthermore, if $A= \{ b, c \}, B= \{ a, e \}, C= \{ c, d, f \}$, then $A \cup B= \{ a, b, c, e \}$ and $B \cup C= \{ a, c, d, e, f \}$. Therefore, the given information does not uniquely determine $B$ and $C$. 
 
-
+Observe that $B= (A \cap B) \cup (B \setminus A)$ and $(A \cup B) \setminus A= B \setminus A$. The sets $A$ and $A \cup B$ are known. Therefore, if one knew $A \cap B$, one could uniquely determine $B$. Similarly, $C= (B \cap C) \cup (C \setminus B)$ and $(B \cup C) \setminus B= C \setminus B$. Given $A \cap B$, the set $B$ is known and by assumption we know the set $B \cup C$. But then if one knew $B \cap C$, one could uniquely determine the set $C$. The examples above show that knowing any one of $A \cap B, B \cap C, A \cap C, A \cup C, A \cap B \cap C, A \cup B \cup C$ does not uniquely determine $A, B, C$. Therefore, knowing $A \cap B$ and $B \cap C$ is a minimal set of information (in terms of unions and intersections) to determine $A, B, C$. 
 
 
 \end{document}

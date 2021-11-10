@@ -1,0 +1,340 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 11/04}{I like long walks, especially when they are taken by people that annoy me.}{Fred Allen}
+
+% Problem 1
+\problem{10} Write down the tableau associated to the following linear programming problem:
+	\[
+	\begin{aligned}
+	\text{max }  z= 3x_1 &+ x_2 \\
+	2x_1 + 3x_2&\leq 6 \\
+	4x_1 + 2x_2&\leq 8 \\
+	-3x_1 + 4x_2&\geq 2 \\
+	x_1, x_2&\geq 0
+	\end{aligned}
+	\] \pspace
+
+\sol Before creating the tableau, we want to be sure the linear programming problem is in standard form (or as close as possible). Because this is a maximization problem, we require all the inequalities to be `$\leq$.' [This is excluding the final inequality $x_1, x_2 \geq 0$, because we require the variables to be nonnegative.] So we multiply both sides of the third inequality by $-1$ to obtain $3x_1 - 4x_2 \leq - 2$. Then our system is
+	\[
+	\begin{aligned}
+	\text{max }  z= 3x_1 &+ x_2 \\
+	2x_1 + 3x_2&\leq 6 \\
+	4x_1 + 2x_2&\leq 8 \\
+	3x_1 - 4x_2&\leq -2 \\
+	x_1, x_2&\geq 0
+	\end{aligned}
+	\] 
+We introduce slack variables $s_1, s_2, s_3$ so that\dots
+	\[
+	\begin{aligned}	
+	2x_1 + 3x_2 + s_1 \phantom{+ s_2 + s_3}&= 6 \\
+	4x_1 + 2x_2 \phantom{+ s_1} + s_2 \phantom{+ s_3}&= 8 \\
+	3x_1 - 4x_2 \phantom{+ s_1 + s_2} + s _3&= -2
+	\end{aligned}
+	\] 
+Moving everything to the left side in $z= 3x_1 + x_2$, we have $z - 3x_1 - x_2= 0$. Then the associated tableau is\dots
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr r}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} & {\small $s_3$} \\
+	$2$ & $3$ & $1$ & $0$ & \multicolumn{1}{r|}{$0$} & $6$ & {\small $s_1$} \\
+	$4$ & $2$ & $0$ & $1$ & \multicolumn{1}{r|}{$0$} & $8$ & {\small $s_2$} \\
+	$3$ & $-4$ & $0$ & $0$ & \multicolumn{1}{r|}{$1$} & $-2$ & {\small $s_3$}\\ \cline{1-6}
+	$-3$ & $-2$ & $0$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Assume the following is a tableau associated to a standard maximization problem. Write down the function being maximization and the system of constraints. 
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr|r}
+	$1$ & $2$ & $1$ & $1$ & $0$ & $0$ & $100$ \\
+	$2$ & $8$ & $2$ & $0$ & $1$ & $0$ & $150$ \\
+	$1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $200$ \\ \hline
+	$-5$ & $-4$ & $-5$ & $0$ & $0$ & $0$ & $0$
+	\end{tabular}
+	\end{table} \pspace
+
+\sol It is clear that we had three inequalities. Therefore, we had three slack variables, $s_1, s_2, s_3$. Because there are seven columns, one of which must correspond to the $b$'s, there must be three variables, $x_1, x_2, x_3$. Looking at the last row and assuming we are trying to maximize a variable $z$, we must have $z - 5x_1 - 4x_2 - 5_x3= 0$. But then $z= 5x_1 + 4x_2 + 5x_3$. Therefore, the standard maximization problem was\dots
+	\[
+	\begin{aligned}
+	\text{max }  z= 5x_1 + &4x_2 + 5x_3 \\
+	x_1 + 2x_2 + x_3&\leq 100 \\
+	2x_1 + 8x_2 + 2x_3&\leq 150 \\
+	x_1 + x_2 + x_3&\leq 200 \\
+	x_1, x_2, x_3&\geq 0
+	\end{aligned}
+	\] 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Solve the following linear programming problem:
+	\[
+	\begin{aligned}
+	\text{max } z= x_1 + 6x_2& + 3x_3 \\
+	x_1 + x_2 + 2x_3&\leq 4 \\
+	x_1 + 2x_2 + x_3&\leq 4 \\
+	x_1, x_2, x_3&\geq 0 
+	\end{aligned}
+	\] \pspace
+
+\sol This linear programming problem is already in standard form for a maximization. We introduce slack variables $s_1$ and $s_2$ so that\dots
+	\[
+	\begin{aligned}	
+	x_1 + x_2 + 2x_3 + s_1 \phantom{+ s_2}&= 4 \\
+	x_1 + 2x_2 + x_3 \phantom{+ s_1} + s_2 &= 4 
+	\end{aligned}
+	\] 
+Moving everything to the left side in $z= x_1 + 6x_2 + 3x_3$, we have $z - x_1 - 6x_2 - 3x_3= 0$. Then the associated tableau is\dots
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr r}
+	{\small $x_1$} & {\small $x_2$} & {\small $x_3$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $1$ & $2$ & $1$ & \multicolumn{1}{r|}{$0$} & $4$ & {\small $s_1$} \\
+	$1$ & $2$ & $1$ & $0$ & \multicolumn{1}{r|}{$1$} & $4$ & {\small $s_2$} \\ \cline{1-6}
+	$-1$ & $-6$ & $-3$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table}
+
+We find our first pivot position: 
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr rr}
+	{\small $x_1$} & {\small $x_2$} & {\small $x_3$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $1$ & $2$ & $1$ & \multicolumn{1}{r|}{$0$} & $4$ & {\small $s_1$} & {\small $4/1= 4$}\\
+	$1$ & \fbox{$2$} & $1$ & $0$ & \multicolumn{1}{r|}{$1$} & $4$ & {\small $s_2$} & {\small $4/2= 2$}\\ \cline{1-6}
+	$-1$ & \underline{$-6$} & $-3$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table}
+
+So $x_x$ is the entering variable and $s_2$ is the exiting variable. We make this pivot entry 1 by $\frac{1}{2}R_2 \to R_2$. 
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr r}
+	{\small $x_1$} & {\small $x_2$} & {\small $x_3$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $1$ & $2$ & $1$ & \multicolumn{1}{r|}{$0$} & $4$ & {\small $s_1$} \\
+	$\frac{1}{2}$ & $1$ & $\frac{1}{2}$ & $0$ & \multicolumn{1}{r|}{$\frac{1}{2}$} & $2$ & {\small $x_2$} \\ \cline{1-6}
+	$-1$ & $-6$ & $-3$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table}
+
+Now we perform the first step of the simplex method: $-R_2 + R_1 \to R_1$ and $6R_2 + R_3 \to R_3$. 
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr r}
+	{\small $x_1$} & {\small $x_2$} & {\small $x_3$} & {\small $s_1$} & {\small $s_2$} \\
+	$\frac{1}{2}$ & $0$ & $\frac{3}{2}$ & $1$ & \multicolumn{1}{r|}{$-\frac{1}{2}$} & $2$ & {\small $s_1$} \\
+	$\frac{1}{2}$ & $1$ & $\frac{1}{2}$ & $0$ & \multicolumn{1}{r|}{$\frac{1}{2}$} & $2$ & {\small $x_2$} \\ \cline{1-6}
+	$2$ & $0$ & $0$ & $0$ & \multicolumn{1}{r|}{$3$} & $12$ 
+	\end{tabular}
+	\end{table}
+
+Because there are no negatives in the bottom row, the simplex method is complete. We see that the maximum value for $z$ is $12$ (the bottom-rightmost entry) and occurs at $(x_1, x_2, x_3, s_1, s_2)= (0, 2, 0, 2, 0)$, i.e. $x_1= 0, x_2= 2, x_3= 0, s_1= 2, s_2= 0$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Find the dual problem to\dots
+	\[
+	\begin{aligned}
+	\text{min } z= 5x_1 &+ 4x_2 \\
+	x_1 + 7x_2&\geq 7 \\
+	x_1 + 3x_2&\geq 9 \\
+	x_1, x_2&\geq 0 
+	\end{aligned}
+	\] \pspace
+
+\sol First, observe that this linear programming problem is a minimization and is already in standard form. Therefore, the associated matrix is\dots
+	\[
+	\begin{pmatrix}
+	1 & 7 & 7 \\
+	1 & 3 & 9 \\
+	5 & 4 & 0 
+	\end{pmatrix}
+	\]
+Taking the transpose, we find\dots
+	\[
+	\begin{pmatrix}
+	1 & 1 & 5 \\
+	7 & 3 & 4 \\
+	7 & 9 & 0 
+	\end{pmatrix}
+	\]
+Therefore, the dual problem is\dots
+	\[
+	\begin{aligned}
+	\text{max }  z= 7x_1 &+ 9x_2 \\
+	x_1 + x_2&\leq 5 \\
+	7x_1 + 3x_2&\leq 4 \\
+	x_1, x_2&\geq 0
+	\end{aligned}
+	\] 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Solve the following linear programming problem:
+	\[
+	\begin{aligned}
+	\text{min } z= 2x_1 &+ 3x_2 \\
+	2x_1 + x_2&\geq 1 \\
+	x_1 + 3x_2&\geq 1 \\
+	x_1, x_2&\geq 0 
+	\end{aligned}
+	\] \pspace
+
+\sol This is linear programming problem is a minimization and it is already in standard form. Therefore, the associated matrix is\dots
+	\[
+	\begin{pmatrix}
+	2 & 1 & 1 \\
+	1 & 3 & 1 \\
+	2 & 3 & 0 
+	\end{pmatrix}
+	\]
+The transpose is then\dots
+	\[
+	\begin{pmatrix}
+	2 & 1 & 2 \\
+	1 & 3 & 3 \\
+	1 & 1 & 0 
+	\end{pmatrix}
+	\]
+Therefore, the associated maximization problem (the dual problem) is\dots
+	\[
+	\begin{aligned}
+	\text{max }  z= x_1 &+ x_2 \\
+	2x_1 + x_2&\leq 2 \\
+	x_1 + 3x_2&\leq 3 \\
+	x_1, x_2&\geq 0
+	\end{aligned}
+	\] 
+Because $z= x_1 + x_2$, we know that $z - x_1 - x_2= 0$. We introduce slack variables $s_1, s_2$ so that\dots
+	\[
+	\begin{aligned}	
+	2x_1 + x_2 + s_1 \phantom{+ s_2}&= 2 \\
+	x_1 + 3x_2 \phantom{+ s_1} + s_2&= 3
+	\end{aligned}
+	\] 
+Therefore, the associated tableau is\dots
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	$2$ & $1$ & $1$ & \multicolumn{1}{r|}{$0$} & $2$ & {\small $s_1$} \\
+	$1$ & $3$ & $0$ & \multicolumn{1}{r|}{$1$} & $3$ & {\small $s_2$} \\ \cline{1-5}
+	$-1$ & $-1$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table}
+
+We find our first pivot position: 
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr r}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	\fbox{$2$} & $1$ & $1$ & \multicolumn{1}{r|}{$0$} & $2$ & {\small $s_1$} & {\small $2/2= 1$} \\
+	$1$ & $3$ & $0$ & \multicolumn{1}{r|}{$1$} & $3$ & {\small $s_2$} &  {\small $3/1= 3$} \\ \cline{1-5}
+	\underline{$-1$} & $-1$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table}
+
+So $x_1$ is the entering variable and $s_1$ is the exiting variable. We make this pivot entry 1 by $\frac{1}{2}R_1 \to R_1$. \newpage
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $\frac{1}{2}$ & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$ & {\small $x_1$} \\
+	$1$ & $3$ & $0$ & \multicolumn{1}{r|}{$1$} & $3$ & {\small $s_2$} \\ \cline{1-5}
+	$-1$ & $-1$ & $0$ & \multicolumn{1}{r|}{$0$} & $0$ 
+	\end{tabular}
+	\end{table} \par
+
+Now we perform the first step of the simplex method: $-R_1 + R_2 \to R_2$ and $R_1 + R_3 \to R_3$. 
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $\frac{1}{2}$ & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$ & {\small $x_1$} \\
+	$0$ & $\frac{5}{2}$ & $-\frac{1}{2}$ & \multicolumn{1}{r|}{$1$} & $2$ & {\small $s_2$} \\ \cline{1-5}
+	$0$ & $-\frac{1}{2}$ & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$ 
+	\end{tabular}
+	\end{table}
+
+There are still negatives in the last row. So we proceed with the next step of the simplex method. We find our pivot position: 
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr r}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $\frac{1}{2}$ & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$ & {\small $x_1$} & {\small $1/(1/2)= 2$} \\
+	$0$ &  \fbox{$\frac{5}{2}$} & $-\frac{1}{2}$ & \multicolumn{1}{r|}{$1$} & $2$ & {\small $s_2$} & {\small $2/(5/2)= 4/5$} \\ \cline{1-5}
+	$0$ & \underline{$-\frac{1}{2}$} & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$
+	\end{tabular}
+	\end{table}
+
+So $x_2$ is the entering variable and $s_2$ is the exiting variable. We make the pivot position 1 by $\frac{2}{5}R_2 \to R_2$.
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $\frac{1}{2}$ & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$ & {\small $x_1$} \\
+	$0$ & $1$ & $-\frac{1}{5}$ & \multicolumn{1}{r|}{$\frac{2}{5}$} & $\frac{4}{5}$ & {\small $s_2$} \\ \cline{1-5}
+	$0$ & $-\frac{1}{2}$ & $\frac{1}{2}$ & \multicolumn{1}{r|}{$0$} & $1$ 
+	\end{tabular}
+	\end{table}
+
+ Now we perform the next step of the simplex method: $-\frac{1}{2}R_2 + R_1 \to R_1$ and $\frac{1}{2}R_2 + R_3 \to R_3$:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	{\small $x_1$} & {\small $x_2$} & {\small $s_1$} & {\small $s_2$} \\
+	$1$ & $0$ & $\frac{3}{5}$ & \multicolumn{1}{r|}{$-\frac{1}{5}$} & $\frac{3}{5}$ & {\small $x_1$} \\
+	$0$ & $1$ & $-\frac{1}{5}$ & \multicolumn{1}{r|}{$\frac{2}{5}$} & $\frac{4}{5}$ & {\small $x_2$} \\ \cline{1-5}
+	$0$ & $0$ & $\frac{2}{5}$ & \multicolumn{1}{r|}{$\frac{1}{5}$} & $\frac{7}{5}$ 
+	\end{tabular}
+	\end{table}
+
+Because there are no remaining negative entries in the bottom row, the simplex method is complete. We have maximum value $z= \frac{7}{5}= 1.4$ (the bottom-rightmost entry) occurring at $(x_1, x_2, s_1, s_2)= (\frac{3}{5}, \frac{4}{5}, 0, 0)= (0.6, 0.8, 0, 0)$, i.e. $x_1= \frac{3}{5}= 0.6, x_2= \frac{4}{5}= 0.8, s_1= 0, s_2= 0$. \pspace
+
+But this maximum value (and its location) as the minimum value for our original minimization problem (the dual problem). Therefore, the minimum value is $z= \frac{7}{5}= 1.4$ occuring at $(x_1, x_2, s_1, s_2)= (\frac{3}{5}, \frac{4}{5}, 0, 0)= (0.6, 0.8, 0, 0)$, i.e. $x_1= \frac{3}{5}= 0.6, x_2= \frac{4}{5}= 0.8, s_1= 0, s_2= 0$
+
+
+\end{document}
