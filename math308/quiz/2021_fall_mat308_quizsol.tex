@@ -122,56 +122,58 @@ Then $A \times B \times C \neq (A \times B) \times C$.
 
 
 
-%% Quiz 10
-%\quizsol \textit{True/False}: If $P(n)$ is a proposition for each $n \in \mathbb{N}$ and $P(1), P(2), P(3), \ldots, P(k)$ are all true, then $P(n)$ is true for all $n \geq 1$. \pspace
-%
-%\sol The statement is \textit{false}. These are only base cases. For induction to imply that $P(n)$ is true for all $n \in \mathbb{N}$, we need $P(k)$ being true to imply $P(k+1)$ is true. A statement can be true for \textit{many} $n$ and not be true for all $n$. For instance, the polynomial $p(n)= n^2 - n + 41$ is prime for $n= 1, 2, \ldots, 40$ but not for $n= 41$. In fact, a statement can be true for all but one $n$!  \pvspace{1.5cm}
-%
-%
-%
-%% Quiz 11
-%\quizsol \textit{True/False}: If $f: A \to \mathbb{R}$ is positive and $g: A \to \mathbb{R}$ is nonnegative, then $fg: A \to \mathbb{R}$ is positive. \pspace
-%
-%\sol The statement is \textit{false}. It is possible. For instance, $f: \mathbb{R} \to \mathbb{R}$ given by $f(x):= x^2 + 1$ and $g: \mathbb{R} \to \mathbb{R}$ given by $g(x)= |x| + 1$ so that $fg= (x^2 + 1)(|x| + 1)$. However, because $g$ is only nonnegative, it can take on the value zero. But then for these values, $fg$ is zero and hence not positive. For instance, let $f: \mathbb{R} \to \mathbb{R}$ be defined by $f(x):= x^2 + 1$ and $g: \mathbb{R} \to \mathbb{R}$ be given by $g(x):= |x|$. Then $(fg)(0)= (0^2 + 1)(|0|)= 0 \not> 0$ so that $fg$ is not positive. \pvspace{1.5cm}
-%
-%
-%
-%% Quiz 12
-%\quizsol \textit{True/False}: The sets $\mathbb{Z}$ and $\mathbb{Q}$ have the same cardinality. \pspace
-%
-%\sol The statement is \textit{true}. We say this via the diagonalization argument given in class. To prove this more concretely, one need show that there is a bijection between $\mathbb{Z}$ and $\mathbb{Q}$. By the Cantor-Schr\"oder-Bernstein Theorem, it suffices to prove there are injections $f: \mathbb{Z} \to \mathbb{Q}$ and $g: \mathbb{Q} \to \mathbb{Z}$. Let $f: \mathbb{Z} \to \mathbb{Q}$ be given by $f(x):= x$, i.e. taking advantage of the fact that $\mathbb{Z} \subseteq \mathbb{Q}$. Clearly, $f$ is injective: if $x= f(x) = f(y) = y$, then $x= y$. Now define $g: \mathbb{Q} \to \mathbb{Z}$ be given as follows: if $q \in \mathbb{Q}$, write $q= a/b$ for some $a, b \in \mathbb{Z}$. Without loss of generality, assume that $\gcd(a, b)= 1$ and either $a, b \geq 0$ or $a < 0$ and $b \geq 0$; that is, assume $a, b$ are relatively prime and that if $q \geq 0$, then $a_1, b_1$ are chosen to be nonnegative and if $q < 0$, then $a$ is chosen to be negative while $b$ is chosen to be nonnegative. Then define $g: \mathbb{Q} \to \mathbb{Z}$ via
-%	\[
-%	g(q)= 
-%	\begin{cases}
-%	2^a 3^b, & q \geq 0 \\
-%	-2^{-a} 3^b, & q < 0 \\
-%	\end{cases}
-%	\]
-%It is clear that if $q \geq 0$, then $g(q) \in \mathbb{Z}$. If $q= a/b < 0$, then $a < 0$ so that $-a > 0$. But then $-2^{-a} 3^b \in \mathbb{Z}$ so that $g(q) \in \mathbb{Z}$. Note that $g(q) \notin \{ \pm 1 \}$ because this would require $a= b= 0$, but because $q= a/b$, we know $b \neq 0$. \pspace
-%
-%We claim that $g$ is injective. Suppose that $g(q_1)= g(q_2)$, where $q_1, q_2 \in \mathbb{Q}$ with $q_1= a_1/b_1$, $q_2= a_2/b_2$ and $a_1, b_1, a_2, b_2 \in \mathbb{Z}$ are chosen as above. Obviously, $g(q_1)$ and $g(q_2)$ must have the same sign. By cancelling negatives, we may assume without loss of generality that $q_1, q_2 \geq 0$. But then $g(q_1)= 2^{a_1} 3^{b_1} = 2^{a_2} 3^{b_2}= g(q_2)$. By the uniqueness of factorization for integers, the number of factors of 2 and 3 on the left and right side of the equality must be the same, respectively. But then $a_1= a_2$ and $b_1= b_2$. But then $q_1= a_1/b_1= a_2/b_2= q_2$ so that $g$ is injective. \pvspace{1.5cm}
-%
-%
-%
-%% Quiz 13
-%\quizsol \textit{True/False}: 
-%The relation on $\mathbb{N}$ given by $x \sim y$ if and only if $xy$ is even is an equivalence relation. \pspace
-%
-%\sol The statement is \textit{false}. For $\sim$ to be an equivalence relation, $\sim$ must be reflexive, i.e. $n \sim n$ for all $n \in \mathbb{N}$. Take $n= 1$. Then $1(1)= 1$ is odd so that $1 \not\sim 1$. But then $\sim$ is not reflexive. \pvspace{1.5cm}
-%
-%
-%% Quiz  14
-%\quizsol \textit{True/False}: Suppose that $X$ is a set of natural numbers and $\sim$ is an equivalence relation on $X$ . If $[2] \cap [5]= \{ 1, 2, 3, 4, 5, 7 \}$, then $[2]= \{ 1, 2, 3, 4, 5, 7 \}$. \pspace
-%
-%\sol If $(X, \sim)$ is an equivalence relation, then all equivalence classes are either disjoint or equal, i.e. if $[a], [b]$ are equivalence classes, then either $[a] \cap [b]= \emptyset$ or $[a]= [b]$. Observe that $[2] \cap [5] \neq \emptyset$. But then $[2]= [5]$. Therefore, 
-%	\[
-%	[2]= [2] \cap [2]= [2] \cap [5]= \{ 1, 2, 3, 4, 5, 7 \}
-%	\] \pvspace{1.5cm}
+% Quiz 10
+\quizsol \textit{True/False}: If $P(n)$ is a proposition for each $n \in \mathbb{N}$ and $P(1), P(2), P(3), \ldots, P(k)$ are all true, then $P(n)$ is true for all $n \geq 1$. \pspace
+
+\sol The statement is \textit{false}. These are only base cases. For induction to imply that $P(n)$ is true for all $n \in \mathbb{N}$, we need $P(k)$ being true to imply $P(k+1)$ is true. A statement can be true for \textit{many} $n$ and not be true for all $n$. For instance, the polynomial $p(n)= n^2 - n + 41$ is prime for $n= 1, 2, \ldots, 40$ but not for $n= 41$. In fact, a statement can be true for all but one $n$!  \pvspace{1.5cm}
 
 
 
+% Quiz 11
+\quizsol \textit{True/False}: If $f: A \to \mathbb{R}$ is positive and $g: A \to \mathbb{R}$ is nonnegative, then $fg: A \to \mathbb{R}$ is positive. \pspace
+
+\sol The statement is \textit{false}. It is possible. For instance, $f: \mathbb{R} \to \mathbb{R}$ given by $f(x):= x^2 + 1$ and $g: \mathbb{R} \to \mathbb{R}$ given by $g(x)= |x| + 1$ so that $fg= (x^2 + 1)(|x| + 1)$. However, because $g$ is only nonnegative, it can take on the value zero. But then for these values, $fg$ is zero and hence not positive. For instance, let $f: \mathbb{R} \to \mathbb{R}$ be defined by $f(x):= x^2 + 1$ and $g: \mathbb{R} \to \mathbb{R}$ be given by $g(x):= |x|$. Then $(fg)(0)= (0^2 + 1)(|0|)= 0 \not> 0$ so that $fg$ is not positive. \pvspace{1.5cm}
 
 
+
+% Quiz 12
+\quizsol \textit{True/False}: The sets $\mathbb{Z}$ and $\mathbb{Q}$ have the same cardinality. \pspace
+
+\sol The statement is \textit{true}. We saw this via the diagonalization argument given in class. Alternatively, we know that $\mathbb{Z}$ and $\mathbb{Q}$ are both countably infinite; therefore, there must be a bijection between $\mathbb{Z}$ and $\mathbb{Q}$ so that they must have the same cardinality. We could also use the following approach: the set $\mathbb{Z}$ is countably infinite, so there exists a bijection $f: \mathbb{N} \to \mathbb{Z}$. The set $\mathbb{Q}$ is countably infinite, so there exists a bijection $g: \mathbb{N} \to \mathbb{Q}$. Because $f, g$ are bijections, $f^{-1}, g^{-1}$ and are bijections (because they too have inverses, namely $f, g$, respectively). But as the composition of bijective functions are bijective, we know that $g \circ f^{-1}: \mathbb{Z} \to \mathbb{Q}$ is a bijection. Therefore, $\mathbb{Z}$ and $\mathbb{Q}$ have the same cardinality. \pspace
+
+As another proof, by the Cantor-Schr\"oder-Bernstein Theorem to prove there exists a bijection from $\mathbb{Z}$ to $\mathbb{Q}$, it suffices to prove there are injections $f: \mathbb{Z} \to \mathbb{Q}$ and $g: \mathbb{Q} \to \mathbb{Z}$. Let $f: \mathbb{Z} \to \mathbb{Q}$ be given by $f(x):= x$, i.e. taking advantage of the fact that $\mathbb{Z} \subseteq \mathbb{Q}$. Clearly, $f$ is injective: if $x= f(x) = f(y) = y$, then $x= y$. Now define $g: \mathbb{Q} \to \mathbb{Z}$ be given as follows: if $q \in \mathbb{Q}$, write $q= a/b$ for some $a, b \in \mathbb{Z}$. Without loss of generality, assume that $\gcd(a, b)= 1$ and either $a, b \geq 0$ or $a < 0$ and $b \geq 0$; that is, assume $a, b$ are relatively prime and that if $q \geq 0$, then $a_1, b_1$ are chosen to be nonnegative and if $q < 0$, then $a$ is chosen to be negative while $b$ is chosen to be nonnegative. Then define $g: \mathbb{Q} \to \mathbb{Z}$ via
+	\[
+	g(q)= 
+	\begin{cases}
+	2^a 3^b, & q \geq 0 \\
+	-2^{-a} 3^b, & q < 0 \\
+	\end{cases}
+	\]
+It is clear that if $q \geq 0$, then $g(q) \in \mathbb{Z}$. If $q= a/b < 0$, then $a < 0$ so that $-a > 0$. But then $-2^{-a} 3^b \in \mathbb{Z}$ so that $g(q) \in \mathbb{Z}$. Note that $g(q) \notin \{ \pm 1 \}$ because this would require $a= b= 0$, but because $q= a/b$, we know $b \neq 0$. \pspace
+
+We claim that $g$ is injective. Suppose that $g(q_1)= g(q_2)$, where $q_1, q_2 \in \mathbb{Q}$ with $q_1= a_1/b_1$, $q_2= a_2/b_2$ and $a_1, b_1, a_2, b_2 \in \mathbb{Z}$ are chosen as above. Obviously, $g(q_1)$ and $g(q_2)$ must have the same sign. By cancelling negatives, we may assume without loss of generality that $q_1, q_2 \geq 0$. But then $g(q_1)= 2^{a_1} 3^{b_1} = 2^{a_2} 3^{b_2}= g(q_2)$. By the uniqueness of factorization for integers, the number of factors of 2 and 3 on the left and right side of the equality must be the same, respectively. But then $a_1= a_2$ and $b_1= b_2$. But then $q_1= a_1/b_1= a_2/b_2= q_2$ so that $g$ is injective. \pvspace{1.5cm}
+
+
+
+% Quiz 13
+\quizsol \textit{True/False}: 
+The relation on $\mathbb{N}$ given by $x \sim y$ if and only if $xy$ is even is an equivalence relation. \pspace
+
+\sol The statement is \textit{false}. For $\sim$ to be an equivalence relation, $\sim$ must be reflexive, i.e. $n \sim n$ for all $n \in \mathbb{N}$. Take $n= 1$. Then $1(1)= 1$ is odd so that $1 \not\sim 1$. But then $\sim$ is not reflexive. \pvspace{1.5cm}
+
+
+% Quiz  14
+\quizsol \textit{True/False}: Suppose that $X$ is a set of natural numbers and $\sim$ is an equivalence relation on $X$ . If $[2] \cap [5]= \{ 1, 2, 3, 4, 5, 7 \}$, then $[2]= \{ 1, 2, 3, 4, 5, 7 \}$. \pspace
+
+\sol If $(X, \sim)$ is an equivalence relation, then all equivalence classes are either disjoint or equal, i.e. if $[a], [b]$ are equivalence classes, then either $[a] \cap [b]= \emptyset$ or $[a]= [b]$. Observe that $[2] \cap [5] \neq \emptyset$. But then $[2]= [5]$. Therefore, 
+	\[
+	[2]= [2] \cap [2]= [2] \cap [5]= \{ 1, 2, 3, 4, 5, 7 \}
+	\] \pvspace{1.5cm}
+
+
+% Quiz 15
+% There exists integers x, y such that 6x + 8y= 5
+% 
 
 
 \end{document}
