@@ -1,0 +1,165 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{11: Due 11/05}{Every brilliant experiment, like every great work of art, starts with an act of imagination.}{Jonah Lehrer}
+
+% Problem 1
+\problem{10} Solve the equation $x^2 + 4x= 32$ by completing the square. Show all your work. \pspace
+
+\sol We have\dots \pspace
+	\[
+	\begin{aligned}
+	x^2 + 4x&= 32 \\[0.3cm]
+	x^2 + 4x - 32&= 0 \\[0.3cm]
+	x^2 + 4x + (4 - 4) - 32&= 0 \\[0.3cm]
+	(x^2 + 4x + 4) - 4 - 32&= 0 \\[0.3cm]
+	(x + 2)^2 - 36&= 0 \\[0.3cm]
+	(x + 2)^2&= 36 \\[0.3cm]
+	\sqrt{(x + 2)^2}&= \pm \sqrt{36} \\[0.3cm]
+	x + 2&= \pm 6 \\[0.3cm]
+	x&= -2 \pm 6
+	\end{aligned}
+	\] \pspace
+Therefore, we have $x= -2 + 6= 4$ or $x= -2 - 6= -8$, i.e. $x= -8, 4$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Solve the equation $3 - 2x^2= 5x$ by completing the square. Show all your work. \pspace
+
+\sol We have\dots \pspace
+	\[
+	\begin{aligned}
+	3 - 2x^2&= 5x \\[0.3cm]
+	2x^2 + 5x - 3&= 0 \\[0.3cm]
+	2 \left( x^2 + \frac{5}{2}x - \frac{3}{2} \right)&= 0 \\[0.3cm]
+	2 \left( x^2 + \frac{5}{2}x + \frac{25}{16} - \frac{25}{16} - \frac{3}{2} \right)&= 0 \\[0.3cm]
+	2 \left( \left(x + \frac{5}{4} \right)^2 -  \frac{49}{16} \right)&= 0 \\[0.3cm]
+	2 \left(x + \frac{5}{2} \right)^2- \frac{49}{8}&= 0 \\[0.3cm]
+	2 \left(x + \frac{5}{2} \right)^2&= \frac{49}{8} \\[0.3cm]
+	\left(x + \frac{5}{2} \right)^2&= \frac{49}{16} \\[0.3cm]
+	\sqrt{\left(x + \frac{5}{2} \right)^2}&= \pm \sqrt{\frac{49}{16}} \\[0.3cm]
+	x + \frac{5}{2}&= \pm \frac{7}{4} \\[0.3cm]
+	x&= -\frac{5}{2} \pm \frac{7}{4}
+	\end{aligned}
+	\] \pspace
+Therefore, $x= -\frac{5}{2} + \frac{7}{4}= \frac{2}{4}= \frac{1}{2}$ or $x= -\frac{5}{2} - \frac{7}{4}= \frac{-12}{4}= -3$, i.e. $x= -3, \frac{1}{2}$
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Solve the equation $x^2 + 4x= 5$ by factoring. Show all your work. \pspace
+
+\sol We have\dots \pspace
+	\[
+	\begin{aligned}
+	x^2 + 4x&= 5 \\[0.3cm]
+	x^2 + 4x - 5&= 0 \\[0.3cm]
+	(x + 5)(x - 1)&= 0
+	\end{aligned}
+	\] \pspace
+Then either $x + 5= 0$, i.e. $x= -5$, or $x - 1=0$, i.e. $x= 1$. Therefore, $x= -5, 1$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Solve the equation $x^2 + 16= 8x$ by factoring. Show all your work. \pspace
+
+\sol We have\dots \pspace
+	\[
+	\begin{aligned}
+	x^2 + 16&= 8x \\[0.3cm]
+	x^2 - 8x + 16&= 0 \\[0.3cm]
+	(x - 2)(x - 8)&= 0
+	\end{aligned}
+	\] \pspace
+Then either $x - 2= 0$, i.e. $x= 2$, or $x - 8= 0$, i.e. $x= 8$. Therefore, $x= 2, 8$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Solve the equation $x^2= x + 72$ by using the quadratic formula. Show all your work. \pspace
+
+\sol First, we move everything to the left side: $x^2 - x - 72= 0$. Then\dots \pspace
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	x&= \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4(1)(-72)}}{2(1)} \\[0.3cm]
+	x&= \dfrac{1 \pm \sqrt{1 + 288}}{2} \\[0.3cm]
+	x&= \dfrac{1 \pm \sqrt{289}}{2} \\[0.3cm] 
+	x&= \dfrac{1 \pm 17}{2} \\[0.3cm]
+	\end{aligned}
+	\] \pspace
+Then either $x= \frac{1 + 17}{2}= \frac{18}{2}= 9$ or $x= \frac{1 - 17}{2}= \frac{-16}{2}= -8$. Therefore, $x= -8, 9$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 6
+\problem{10} Solve the equation $x^2 - 4x + 1= 0$ by using the quadratic formula. Show all your work. \pspace
+
+\sol We have\dots \pspace
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	x&= \dfrac{-(-4) \pm \sqrt{(-4)^2 - 4(1)(1)}}{2(1)} \\[0.3cm]
+	x&= \dfrac{4 \pm \sqrt{16 - 4)}}{2} \\[0.3cm]
+	x&= \dfrac{4 \pm \sqrt{12)}}{2} \\[0.3cm]
+	x&= \dfrac{4 \pm \sqrt{4 \cdot 3)}}{2} \\[0.3cm]
+	x&= \dfrac{4 \pm 2 \sqrt{3}}{2} \\[0.3cm]
+	x&= 2 \pm \sqrt{3}
+	\end{aligned}
+	\] \pspace
+Then either $x= 2 + \sqrt{3}$ or $x= 2 - \sqrt{3}$. Therefore, $x= 2 - \sqrt{3}, 2 + \sqrt{3}$. 
+
+
+%\printpoints
+\end{document}

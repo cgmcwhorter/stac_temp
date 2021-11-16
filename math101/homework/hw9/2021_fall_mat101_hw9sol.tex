@@ -1,0 +1,169 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{9: Due 10/29}{Laziness is nothing more than the habit of resting before you get tired.}{Jules Renard}
+
+% Problem 1
+\problem{10} Find the vertex form of the quadratic function $y= x^2 + 6x + 4$. \pspace
+
+\sol The $x$-coefficient is $6$. We have $(\frac{1}{2} \cdot 6)^2= 3^2= 9$. Then we have\dots
+	\[
+	\begin{aligned}
+	y&= x^2 + 6x + 4 \\[0.3cm]
+	y&= x^2 + 6x + (9 - 9) + 4 \\[0.3cm]
+	y&= (x^2 + 6x + 9) - 9 + 4 \\[0.3cm]
+	y&= (x + 3)^2 - 5 
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Find the vertex form of the quadratic function $y= x^2 - 6x - 7$. \pspace
+
+\sol The $x$-coefficient is $-6$. We have $(\frac{1}{2} \cdot -6)^2= (-3)^2= 9$. Then we have\dots
+	\[
+	\begin{aligned}
+	y&= x^2 - 6x - 7 \\[0.3cm]
+	y&= x^2 - 6x + (9 - 9) - 7 \\[0.3cm]
+	y&= (x^2 - 6x + 9) - 9 - 7 \\[0.3cm]
+	y&= (x - 3)^2 - 16
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Find the vertex form of the quadratic function $y= 4x^2 - 4x + 7$. \pspace
+
+\sol We factor out the 4. This gives us $y= 4(x^2 - x + 7/4)$. The $x$-coefficient is $-1$. We have $(\frac{1}{2} \cdot -1)^2= (-1/2)^2= 1/4$. Then we have\dots
+	\[
+	\begin{aligned}
+	y&= 4 \left( x^2 - x + \frac{7}{4} \right) \\[0.3cm]
+	y&= 4 \left( x^2 - x + \left( \frac{1}{4} - \frac{1}{4} \right) + \frac{7}{4} \right) \\[0.3cm]
+	y&= 4 \left( \left( x^2 - x + \frac{1}{4} \right) - \frac{1}{4} + \frac{7}{4} \right) \\[0.3cm]
+	y&= 4 \left( \left( x - \frac{1}{2} \right)^2 + \frac{6}{4} \right) \\[0.3cm]
+	y&= 4 \left( x - \frac{1}{2} \right)^2 + 6
+	\end{aligned}
+	\]
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Consider the quadratic function $f(x)= x^2 + 14 x - 9$.
+\begin{enumerate}[(a)]
+\item Determine if the parabola opens upwards or downwards.
+\item Is the parabola convex or concave?
+\item Does the parabola have a maximum or minimum? 
+\item Find the vertex and axis of symmetry. 
+\item Find the maximum/minimum value of $f(x)$. 
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item Because $a= 1 > 0$, the parabola opens upwards, i.e. the parabola is convex. \pspace
+
+\item Because the parabola opens upwards, it is convex. \pspace
+
+\item Because the parabola opens upwards, the vertex is a minimum. \pspace
+
+\item The vertex occurs when $x= -\frac{b}{2a}= -\frac{14}{2(1)}= -7$. But then the axis of symmetry is $x= -7$. We have
+	\[
+	y(-7)= (-7)^2 + 14(-7) - 9= 49 - 98 - 9= -58
+	\]
+Therefore, the vertex is $(-7, -58)$. Alternatively, putting the parabola in vertex form:
+	\[
+	\begin{aligned}
+	y&= x^2 + 14x - 9 \\[0.3cm]
+	y&= x^2 + 14x + 49 - 49 - 9 \\[0.3cm]
+	y&= (x - 7)^2 - 58
+	\end{aligned}
+	\]
+we can easily see that the vertex is $(-7, -58)$ and that the axis of symmetry is $x= -7$. \pspace
+
+\item Because the parabola opens upwards, the parabola has a minimum. The minimum occurs at the vertex. The vertex is $(-7, -58)$. Therefore, the maximum value is $-58$. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Consider the quadratic function $f(x)= -2x^2 + 3x + 1$.
+\begin{enumerate}[(a)]
+\item Determine if the parabola opens upwards or downwards.
+\item Is the parabola convex or concave?
+\item Does the parabola have a maximum or minimum? 
+\item Find the vertex and axis of symmetry. 
+\item Find the maximum/minimum value of $f(x)$. 
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item Because $a= -2 < 0$, the parabola opens downwards, i.e. the parabola is concave. \pspace
+
+\item Because the parabola opens downwards, it is concave. \pspace
+
+\item Because the parabola opens downwards, the vertex is a maximum. \pspace
+
+\item The vertex occurs when $x= -\frac{b}{2a}= -\frac{3}{2(-2)}= \frac{3}{4}$. But then the axis of symmetry is $x= \frac{3}{4}$. We have
+	\[
+	y\left( \frac{3}{4} \right)= -2\left( \frac{3}{4} \right)^2 + 3 \left( \frac{3}{4} \right) + 1= -2 \cdot \frac{9}{16} + \frac{9}{4} + 1= -\frac{18}{16} + \frac{36}{4} + \frac{16}{16}= \frac{-18 + 36 + 16}{16}= \frac{34}{16}= \frac{17}{8}
+	\]
+Therefore, the vertex is $(\frac{3}{4}, \frac{17}{8})$. Alternatively, putting the parabola in vertex form:
+	\[
+	\begin{aligned}
+	y&= -2x^2 + 3x + 1 \\[0.3cm]
+	y&= -2( x^2 - \frac{3}{2}x - \frac{1}{2} \\[0.3cm]
+	y&= -2 \left( x^2 - \frac{3}{2}x + \frac{9}{16} - \frac{9}{16} \right) \\[0.3cm]
+	y&= -2 \left( \left(x - \frac{3}{4} \right)^2 - \frac{17}{16} \right) \\[0.3cm]
+	y&= -2 \left(x - \frac{3}{4} \right)^2 + \frac{17}{4}
+	\end{aligned}
+	\]
+we can easily see that the vertex is $(\frac{3}{4}, \frac{17}{8})$ and that the axis of symmetry is $x= \frac{3}{4}$. \pspace
+
+\item Because the parabola opens downwards, the parabola has a maximum. The maximum occurs at the vertex. The vertex is $(\frac{3}{4}, \frac{17}{8})$. Therefore, the maximum value is $\frac{17}{8}$. 
+\end{enumerate}
+
+
+%\printpoints
+\end{document}

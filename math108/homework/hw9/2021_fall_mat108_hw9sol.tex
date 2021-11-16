@@ -1,0 +1,260 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{9: Due 11/16}{What I hear when I'm being yelled at is people caring loudly at me.}{Leslie Knopp, Parks and Recreation}
+
+% Problem 1
+\problem{10} Otto Graf borrows \$8,000 from a neighbor to help fund his startup. He promises to pay back the neighbor, plus 15\% interest per year on the borrowed amount. 
+\begin{enumerate}[(a)]
+\item What is the interest owed at the end of 9~months?
+\item How much does Otto owe the neighbor if he pays them back after a year and a half? How much of this payment was interest?
+\item Suppose Otto wants to be sure he does not owe the neighbor more than \$10,000. If he plans on repaying them in 2~years, what is the largest sum of money that he can borrow from them? 
+\end{enumerate} \pspace
+
+\sol This is a simple interest problem.
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	I&= Prt \\
+	I&= 8000(0.15)(9/12) \\
+	I&= \$900
+	\end{aligned}
+	\]
+Therefore, Otto owes \$900 in interest after 9~months. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	I&= Prt \\
+	I&= 8000(0.15)(18/12) \\
+	I&= \$1800
+	\end{aligned}
+	\]
+Therefore, Otto owes them $\$8000 + \$1800= \$9800$. Clearly, $\$1800$ of this is interest. Alternatively, we can find the future value\dots
+	\[
+	\begin{aligned}
+	F&= P(1 + rt) \\
+	F&= 8000(1 + 0.15 \cdot 18/12) \\
+	F&= \$9800
+	\end{aligned}
+	\]
+The interest was calculated above. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P&= \dfrac{F}{1 + rt} \\
+	P&= \dfrac{10000}{1 + 0.15 \cdot 2} \\
+	P&= \$7692.31
+	\end{aligned}
+	\]
+Therefore, the most Otto can borrow is \$7692.31. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Mary A. Richman takes out a \$600 loan from the bank. Because of her credit history, she is charged a 6\% discount on a six month note. 
+\begin{enumerate}[(a)]
+\item What are the nominal and effective interest rates for this loan?
+\item What is the discount of this loan?
+\item How much money does Mary receive from the bank?
+\item How much does Mary owe the bank after six months?
+\end{enumerate} \pspace
+
+\sol This is a simple discount note problem.
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	r_{\text{eff}}&= \dfrac{r}{1 - rt} \\
+	r_{\text{eff}}&= \dfrac{0.06}{1 - 0.06 \cdot 6/12} \\
+	r_{\text{eff}}&= 0.062
+	\end{aligned}
+	\]
+Therefore, the effective interest rate is 6.2\%. The nominal rate is the advertised rate of 6\%. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	D&= Mrt \\
+	D&= 600(0.06)(6/12) \\
+	D&= \$18
+	\end{aligned}
+	\]
+Therefore, the discount is \$18. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P&= M - D \\
+	P&= 600 - 18 \\
+	P&= \$582
+	\end{aligned}
+	\]
+Therefore, the proceeds are \$582, i.e. Mary receives \$582. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= P(1 + rt) \\
+	F&= 600(1 + 0.06 \cdot 6/12) \\
+	F&= \$618
+	\end{aligned}
+	\]
+Alternatively, 
+	\[
+	\begin{aligned}
+	I&= Prt \\
+	I&= 600(0.06)(6/12) \\
+	I&= \$18
+	\end{aligned}
+	\]
+Mary then owes the bank the original \$600 plus the \$18 in interest. Therefore, at the end of the six months, Mary owes the bank \$618. 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Paige Turner invests \$3,500 in a social media marketing company that promises a 4.1\% annual return on the investment, with interest paid to the investors semiannually. 
+\begin{enumerate}[(a)]
+\item What is the nominal and effective interest rate for this investment?
+\item How much money will the investment be worth after 2~years?
+\item How long until the investment is worth \$5,000?
+\item How much should Paige have placed in the company if she wanted \$5,000 at the end of 2 years? 
+\end{enumerate} \pspace
+
+\sol This is a discrete compound interest problem.
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	r_{\text{eff}}&= \left(1 + \dfrac{r}{k} \right)^k - 1 \\
+	r_{\text{eff}}&= \left(1 + \dfrac{0.041}{2} \right)^2 - 1 \\
+	r_{\text{eff}}&= 0.0414
+	\end{aligned}
+	\]
+Therefore, the effective interest rate is 4.14\%. The nominal rate is the advertised rate of 4.1\%.
+
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\
+	F&= 3500 \left(1 + \dfrac{0.041}{2} \right)^{2 \cdot 2} \\
+	F&= \$3795.95
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	n&= \dfrac{\log(F/P)}{\log\left(1 + \dfrac{r}{k} \right)} \\
+	n&= \dfrac{\log(5000/3500)}{\log(1 + 0.041/2)} \\
+	n&= 17.5765
+	\end{aligned}
+	\]
+The investment will grow to \$5000 after 17.5765 compoundings. Therefore, the investment will grow to \$5000 after $17.5765/2= 8.79$ years, i.e. 8 years and 9.5 months. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P&= \dfrac{F}{\left(1 + \dfrac{r}{k} \right)^{kt}} \\
+	P&= \dfrac{5000}{\left(1 + \dfrac{0.041}{2} \right)^{2 \cdot 2}} \\
+	P&= \$4610.18
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Adam Baum deposits \$18,500 into a savings account that pays 2.2\% annual interest, compounded continuously. 
+\begin{enumerate}[(a)]
+\item What is the nominal and effective interest rate for this account?
+\item How much money will be in the account after 10~years?
+\item How long until the account has \$20,000? 
+\item How much should Mr. Baum have placed in the account if he wanted \$20,000 at the end of 5 years? 
+\end{enumerate} \pspace
+
+\sol This is a continuous compounding interest problem.
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	r_{\text{eff}}&= e^r - 1 \\
+	r_{\text{eff}}&= e^{0.022} - 1 \\
+	r_{\text{eff}}&= 0.0222
+	\end{aligned}
+	\]
+Therefore, the effective interest rate is 2.22\%. The nominal interest rate is the advertised 2.2\%. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	F&= 18500 e^{0.022 \cdot 10} \\
+	F&= \$23052.40
+	\end{aligned}
+	\]
+Therefore, the account will have \$23052.40 after 10~years. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	20000&= 18500 e^{0.022 t} \\
+	e^{0.022t}&= 1.08108 \\
+	0.022t&= \ln(1.08108) \\
+	t&= \dfrac{\ln(1.08108}{0.022} \\
+	t&= 3.54
+	\end{aligned}
+	\]
+Therefore, there will be \$20000 in the account after 3.54~years, i.e. 3 years and 6~months. \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P&= Fe^{-rt} \\
+	P&= 20000 e^{-0.022 \cdot 5} \\
+	P&= \$17916.70
+	\end{aligned}
+	\]
+Therefore, Mr. Baum should put \$17916.70 in the account. 
+\end{enumerate}
+
+
+\end{document}
