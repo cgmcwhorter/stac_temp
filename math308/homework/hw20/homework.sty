@@ -1,0 +1,209 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsfonts,			% Math Fonts
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	amsthm,			% Use Theorems
+	enumerate,		% Enumerate Environments
+	etoolbox,			% Use Booleans
+	float,				% Force Table Placement
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	mathrsfs,			% Use mathscr
+	microtype,			% Improved Appearance
+	multirow,			% Use Multiple Rows/Columns
+	pifont,			% Use Checkmarks
+}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+\usepackage[usenames,dvipsnames,table,xcdraw]{xcolor}
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+\definecolor{quotegray}{RGB}{58,58,58}
+\definecolor{endquotegray}{RGB}{107,107,107}
+
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks 	= true,
+  	linkcolor  	= stacred,
+  	urlcolor   	= stacred
+}
+\renewcommand\UrlFont{\normalfont}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+
+% -------------------
+% Tikz
+% -------------------
+%\usepackage{tikz}
+%\usetikzlibrary{}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=newest}
+%\usepgfplotslibrary{}
+
+
+% -------------------
+% Title & Problem Commands
+% -------------------
+\newcommand{\wideunderline}[2][7.55cm]{%
+  \underline{\makebox[\ifdim\width>#1\width\else#1\fi]{\;#2\hfill}}%
+}
+\newbool{quotetype}
+\newcommand{\homework}[1]{%
+	\ifbool{quotetype}{%
+\noindent\begin{minipage}[t]{0.6\textwidth}
+	\noindent\textbf{Name: }\wideunderline{#1} \\
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW \hwnumdue}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``\thequote''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape \quoteby
+\end{minipage} \par\vspace{0.3cm}
+}{
+\noindent\textbf{Name: }\wideunderline{#1} \\
+\noindent\begin{minipage}[t]{0.3\textwidth}
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW \hwnumdue}
+\end{minipage}%
+\begin{minipage}[t]{0.7\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``\thequote''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape \quoteby
+\end{minipage} \par\vspace{0.3cm}
+	}
+}
+\newcommand{\prob}{\noindent\textbf{Problem: }}
+\newcounter{problem}
+\newcounter{totalpoints}
+\newcommand{\problem}[1]{
+	\stepcounter{problem}%
+	\mbox{\noindent\textbf{Problem \theproblem.} (#1pt)\addtocounter{totalpoints}{#1}}%
+}
+\newcommand{\sol}{\noindent\textbf{Solution. }}
+\newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
+\newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape#2}\hspace{#1}}}
+
+
+% -------------------
+% Theorem Environments
+% -------------------
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+\newtheorem{nex}{Non-Example}
+\newtheorem*{dfn}{Definition}
+\newtheorem{ques}{Question}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark} 
+
+
+% -------------------
+% Enumerate/Itemize Environments
+% -------------------
+\usepackage{calc}
+\usepackage[shortlabels]{enumitem}
+\newenvironment{enum}{%
+	\begin{enumerate}[label={(\alph*)},leftmargin=\widthof{(a)}+\labelsep]
+	}{%
+	\end{enumerate}
+}
+\newenvironment{2enumerate}{%
+	\begin{enumerate}[(a)]
+	\begin{multicols}{2}
+	}{%
+	\end{multicols}
+	\end{enumerate}
+}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\small\thepage \,of \pageref*{LastPage}}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0.0cm}
+
+\headheight=14pt
+\footskip=14pt
+
+\setlist[itemize]{topsep=0pt}
+\setlist[enumerate]{topsep=0pt}
+
+\pagestyle{pages}
+
+
+% -------------------
+% Course Information
+% -------------------
+\newcommand{\course}{MATH 308}
+\newcommand{\semester}{Fall 2021}
+
+
+% -------------------
+% Commands
+% -------------------
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\newcommand\ds{\displaystyle}
+\newcommand{\cmark}{\ding{51}} 	% Uses pifont
+\newcommand{\xmark}{\ding{55}}	% Uses pifont
+\newcommand{\uans}[1]{\underline{\hspace{#1}}}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup}
+\DeclareMathOperator{\lcm}{lcm}
+
+
+% -------------------
+% Quote & Due Date
+% -------------------
+\newcommand{\hwnumdue}{19: Due 12/15}
+\newcommand{\thequote}{
+\newcommand{\quoteby}{
+\setbool{quotetype}{false} % True: Side; False: Under

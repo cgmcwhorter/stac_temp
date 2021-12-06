@@ -1,0 +1,334 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsfonts,			% Math Fonts
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	amsthm,			% Use Theorems
+	enumerate,		% Enumerate Environments
+	etoolbox,			% Use Booleans
+	float,				% Force Table Placement
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	mathrsfs,			% Use mathscr
+	microtype,			% Improved Appearance
+	multirow,			% Use Multiple Rows/Columns
+	pifont,			% Use Checkmarks
+}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+\usepackage[usenames,dvipsnames,table,xcdraw]{xcolor}
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+\definecolor{quotegray}{RGB}{58,58,58}
+\definecolor{endquotegray}{RGB}{107,107,107}
+
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks 	= true,
+  	linkcolor  	= stacred,
+  	urlcolor   	= stacred
+}
+\renewcommand\UrlFont{\normalfont}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+
+% -------------------
+% Tikz
+% -------------------
+\usepackage{tikz}
+%\usetikzlibrary{}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=newest}
+%\usepgfplotslibrary{}
+
+
+% -------------------
+% Title & Problem Commands
+% -------------------
+\newcommand{\wideunderline}[2][7.55cm]{%
+  \underline{\makebox[\ifdim\width>#1\width\else#1\fi]{\;#2\hfill}}%
+}
+\newbool{quotetype}
+\newcommand{\homework}[1]{%
+	\ifbool{quotetype}{%
+\noindent\begin{minipage}[t]{0.6\textwidth}
+	\noindent\textbf{Name: }\wideunderline{#1} \\
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW \hwnumdue}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``\thequote''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape \quoteby
+\end{minipage} \par\vspace{0.3cm}
+}{
+\noindent\textbf{Name: }\wideunderline{#1} \\
+\noindent\begin{minipage}[t]{0.3\textwidth}
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW \hwnumdue}
+\end{minipage}%
+\begin{minipage}[t]{0.7\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``\thequote''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape \quoteby
+\end{minipage} \par\vspace{0.3cm}
+	}
+}
+\newcommand{\prob}{\noindent\textbf{Problem: }}
+\newcounter{problem}
+\newcounter{totalpoints}
+\newcommand{\problem}[1]{
+	\stepcounter{problem}%
+	\mbox{\noindent\textbf{Problem \theproblem.} (#1pt)\addtocounter{totalpoints}{#1}}%
+}
+\newcommand{\sol}{\noindent\textbf{Solution. }}
+\newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
+\newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape#2}\hspace{#1}}}
+
+
+% -------------------
+% Theorem Environments
+% -------------------
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{ex}{Example}
+\newtheorem{nex}{Non-Example}
+\newtheorem*{dfn}{Definition}
+\newtheorem{ques}{Question}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark} 
+
+
+% -------------------
+% Enumerate/Itemize Environments
+% -------------------
+\usepackage{calc}
+\usepackage[shortlabels]{enumitem}
+\newenvironment{enum}{%
+	\begin{enumerate}[label={(\alph*)},leftmargin=\widthof{(a)}+\labelsep]
+	}{%
+	\end{enumerate}
+}
+\newenvironment{2enumerate}{%
+	\begin{enumerate}[(a)]
+	\begin{multicols}{2}
+	}{%
+	\end{multicols}
+	\end{enumerate}
+}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\small\thepage \,of \pageref*{LastPage}}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0.0cm}
+
+\headheight=14pt
+\footskip=14pt
+
+\setlist[itemize]{topsep=0pt}
+\setlist[enumerate]{topsep=0pt}
+
+\pagestyle{pages}
+
+
+% -------------------
+% Course Information
+% -------------------
+\newcommand{\course}{MATH 308}
+\newcommand{\semester}{Fall 2021}
+
+
+% -------------------
+% Commands
+% -------------------
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\newcommand\ds{\displaystyle}
+\newcommand{\cmark}{\ding{51}} 	% Uses pifont
+\newcommand{\xmark}{\ding{55}}	% Uses pifont
+\newcommand{\uans}[1]{\underline{\hspace{#1}}}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup}
+\DeclareMathOperator{\lcm}{lcm}
+
+\newcommand{\graphOne}{%
+	\begin{tikzpicture}[scale=1.3]
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (b) {\footnotesize$v_2$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (3.5, 2)   (c) {\footnotesize$v_3$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (5, 0)   (d) {\footnotesize$v_4$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (7, 0)   (e) {\footnotesize$v_5$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (3.5, 0.75)   (f) {\footnotesize$v_6$};
+	
+	\path[line width=0.03cm] (a) edge node[below] {\footnotesize$e_2$} (b);
+	\path[line width=0.03cm] (a) edge node[above] {\footnotesize$e_1$} (c);
+	\path[line width=0.03cm,bend left=10] (b) edge node[left] {\footnotesize$e_3$} (c);
+	\path[line width=0.03cm,bend right=10] (b) edge node[right] {\footnotesize$e_4$} (c);
+	\path[line width=0.03cm] (b) edge node[below] {\footnotesize$e_5$} (d);
+	\path[line width=0.03cm] (c) edge node[left] {\footnotesize$e_6$} (d);
+	\path[line width=0.03cm] (c) edge node[right] {\footnotesize$e_7$} (e);
+	\path[line width=0.03cm] (d) edge node[below] {\footnotesize$e_8$} (e);
+	\end{tikzpicture}
+}
+\newcommand{\graphTwo}{%
+	\begin{tikzpicture}[scale=1.3]
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (-2, 0)  (a) {\footnotesize$v_1$};	
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (b) {\footnotesize$v_2$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (c) {\footnotesize$v_3$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (-1, 1)   (d) {\footnotesize$v_4$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1)   (e) {\footnotesize$v_5$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 2)   (f) {\footnotesize$v_6$};
+
+
+	
+	\path[line width=0.03cm,->] (a) edge node[below] {$e_1$} (b);
+	\path[line width=0.03cm,->] (c) edge node[below] {$e_2$} (b);
+	\path[line width=0.03cm,->] (b) edge node[left] {$e_4$} (d);
+	\path[line width=0.03cm,->] (b) edge node[right] {$e_5$} (e);
+	\path[line width=0.03cm,->] (d) edge node[left] {$e_7$} (f);
+	\path[line width=0.03cm,->] (e) edge node[right] {$e_8$} (f);
+	\path[line width=0.03cm,->] (d) edge node[left] {$e_3$} (a);
+	\path[line width=0.03cm,->] (c) edge node[right] {$e_6$} (e);
+	\end{tikzpicture}
+}
+\newcommand{\graphThree}{%
+	\begin{tikzpicture}[scale=1.3]
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 0)   (a) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 3)   (b) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1)   (c) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-0.7, 2)   (d) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0.7, 2)   (e) {.};
+	
+	\path[line width=0.03cm,bend right=45,looseness=2.2] (a) edge node[below] {} (b);
+	\path[line width=0.03cm,bend left=45,looseness=2.2] (a) edge node[below] {} (b);
+	\path[line width=0.03cm] (a) edge node[below] {} (c);
+	\path[line width=0.03cm] (c) edge node[below] {} (d);
+	\path[line width=0.03cm] (c) edge node[below] {} (e);
+	\path[line width=0.03cm] (d) edge node[below] {} (e);
+	\end{tikzpicture}
+}
+\newcommand{\graphFour}{%
+	\begin{tikzpicture}[scale=1.3]
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-1.5, 0)   (a) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (1.5, 0)   (b) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1.5)   (c) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 0.5)   (d) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 2.75)   (e) {.};
+	
+	\path[line width=0.03cm] (a) edge node[below] {} (b);
+	\path[line width=0.03cm] (a) edge node[below] {} (c);
+	\path[line width=0.03cm] (b) edge node[below] {} (c);
+	\path[line width=0.03cm,bend left=30] (c) edge node[below] {} (d);
+	\path[line width=0.03cm,bend right=30] (c) edge node[below] {} (d);
+	\path[line width=0.03cm] (c) edge node[below] {} (e);
+	\end{tikzpicture}
+}
+\newcommand{\graphFive}{%
+	\begin{tikzpicture}[scale=1.3]
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-1, 0)   (a) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (1, 0)   (b) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1)   (c) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 2)   (d) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 3)   (e) {.};
+	
+	\path[line width=0.03cm] (a) edge node[below] {} (b);
+	\path[line width=0.03cm] (a) edge node[below] {} (c);
+	\path[line width=0.03cm] (b) edge node[below] {} (c);
+	\path[line width=0.03cm] (c) edge node[below] {} (d);
+	\path[line width=0.03cm,bend left=50] (d) edge node[below] {} (e);
+	\path[line width=0.03cm,bend right=50] (d) edge node[below] {} (e);
+	\end{tikzpicture}
+}
+\newcommand{\graphSix}{%
+	\begin{tikzpicture}
+	% Outside Edges
+	\draw[line width=0.03cm] (0.5,0) -- (0,0) -- (0,0.5);
+	\draw[line width=0.03cm] (0,1) -- (0,1.5);
+	\draw[line width=0.03cm] (0,2) -- (0,3) -- (1,3);
+	\draw[line width=0.03cm] (1.5,3) -- (5,3);
+	\draw[line width=0.03cm] (5.5,3) -- (7,3);
+	\draw[line width=0.03cm] (7,3) -- (7,2);
+	\draw[line width=0.03cm] (7,1.5) -- (7,1);
+	\draw[line width=0.03cm] (7,0.5) -- (7,0) -- (6.5,0);
+	\draw[line width=0.03cm] (6,0) -- (4,0);
+	\draw[line width=0.03cm] (3.5,0) -- (1,0);
+	% Inside Edges
+	\draw[line width=0.03cm] (0,1.25) -- (2,1.25) -- (2,1);
+	\draw[line width=0.03cm] (2,0) -- (2,0.5);
+	\draw[line width=0.03cm] (3,3) -- (3,2.5);
+	\draw[line width=0.03cm] (3,2) -- (3,1.25);
+	\draw[line width=0.03cm] (2.5,1.25) -- (4.25,1.25);
+	\draw[line width=0.03cm] (4.75,1.25) -- (5.75,1.25) -- (5.75,0);
+	\draw[line width=0.03cm] (5.75,1.25) -- (6,1.25);
+	\draw[line width=0.03cm] (6.5,1.25) -- (7,1.25);
+	\end{tikzpicture}
+}
+\newcommand{\graphSeven}{%
+	\begin{tikzpicture}[scale=1.3]
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1)   (c) {\footnotesize$v_3$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (b) {\footnotesize$v_2$};
+	
+	\path[line width=0.03cm,bend left=20] (a) edge node[below] {} (c);
+	\path[line width=0.03cm,bend right=20] (a) edge node[below] {} (c);
+	\path[line width=0.03cm] (a) edge node[below] {} (b);
+	\path[line width=0.03cm] (b) edge node[below] {} (c);
+	\end{tikzpicture}
+}
+
+
+% -------------------
+% Quote & Due Date
+% -------------------
+\newcommand{\hwnumdue}{19: Due 12/15}
+\newcommand{\thequote}{The origins of graph theory are humble, even frivolous.}
+\newcommand{\quoteby}{Norman Biggs}
+\setbool{quotetype}{true} % True: Side; False: Under
