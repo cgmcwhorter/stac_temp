@@ -8,7 +8,73 @@
 \begin{document}
 \homework{}
 
-% Problem 
-\problem{10} 
+% Problem 1
+\problem{10} Prove that if $g(x)$ is $O(f(x))$, then $f(x)$ is $\Omega(g(x))$. \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Prove that if $f(x)$ is $O(g(x))$ and $c \in \mathbb{R} \setminus \{ 0 \}$, then $cf(x)$ is $O(g(x))$. \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Finding appropriate constants, show that $f(x)= 3x^4 + x^3 - 2x^2 + 6$ is $O(x^4)$. \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Let $n \in \mathbb{Z}_{\geq 0}$. Find the number of operations (additions, subtractions, multiplications, and divisions) the following algorithm requires. What is the time complexity of the algorithm?
+	\begin{verbatim}
+	                              for i = 1 to n
+	                                for j = 1 to i
+	                                print(2n - i^2 j); 
+	\end{verbatim} \pspace
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 5
+\problem{10} Let $f(x)= a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1x + a_0$, where $a_i \in \mathbb{R}$, be a polynomial. 
+\begin{enumerate}[(a)]
+\item Compute the number of operations (additions, subtractions, multiplications, and divisions) required to compute $f(x_0)$ for some $x_0 \in \mathbb{R}$ the `traditional way.' 
+\item Horner's Method says to write $f(x)$ as\dots
+	\[
+	a_0 + x \bigg(a_1 + x \big( a_2 + x \big( a_3 + \cdots + x (a_{n-1} + a_n x ) \big) \big) \bigg) 
+	\]
+Writing $f(x)$ as above, compute the number of operations required to compute $f(x_0)$. 
+\end{enumerate}
+
 
 \end{document}
