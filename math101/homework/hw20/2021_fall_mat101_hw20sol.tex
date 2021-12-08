@@ -1,0 +1,226 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{20: Due 12/10}{Give me some of your tots!}{Napoleon Dynamite, \par Napoleon Dynamite}
+
+% Problem 1
+\problem{10} Determine if the system of equations below has a solution. If it does, find it; if not, explain why. \pspace
+	\[
+	\begin{aligned}
+	x + y&= 5 \\
+	x - y&= 9
+	\end{aligned}
+	\] \pspace
+
+\sol This a system of linear equations. The system will have a solution if and only if the lines intersect. But this will only happen if they are not parallel. So we find the slopes of each line.
+	\[
+	\begin{aligned}
+	x + y&= 5 &\quad\quad x - y&= 9 \\
+	y&= -x + 5 & y&= x - 9
+	\end{aligned}
+	\]
+The slope of the first line is $m_1= -1$ while the slope of the second line is $m_2= 1$. Because $m_1 \neq m_2$, the lines are not parallel. But then the lines intersect so that there is a solution to the system of equations. Now we find the solution by using both substitution and elimination. 
+
+If we use substitution, we can solve for $y$ in the first equation. This yields $y= 5 - x$. Using this in the second equation, we have\dots
+	\[
+	\begin{aligned}
+	x - y&= 9 \\
+	x - (5 - x)&= 9 \\
+	x - 5 + x&= 9 \\
+	2x - 5&= 9 \\
+	2x&= 14 \\
+	x&= 7
+	\end{aligned}
+	\]
+But then we have $y= 5 - 7= -2$. Therefore, the solution is $(7, -2)$. \pspace
+
+Using elimination, suppose we eliminate $y$. Adding the equations, we find\dots
+	\[
+	\begin{aligned}
+	x + y&= 5 \\
+	x - y&= 9 \\ \hline
+	2x&= 14 \\
+	x&= 7
+	\end{aligned}
+	\] 
+Using this in the first equation, we find
+	\[
+	\begin{aligned}
+	x + y&= 5 \\
+	7 + y&= 5 \\
+	y&= -2
+	\end{aligned}
+	\]
+Therefore, the solution is $(7, -2)$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Determine if the system of equations below has a solution. If it does, find it; if not, explain why. \pspace
+	\[
+	\begin{aligned}
+	15x - 6y&= 10 \\
+	-5x + 2y&= -8
+	\end{aligned}
+	\] \pspace
+
+\sol This a system of linear equations. The system will have a solution if and only if the lines intersect. But this will only happen if they are not parallel. So we find the slopes of each line.
+	\[
+	\begin{aligned}
+	15x - 6y&= 10 &\quad\quad -5x + 2y&= -8 \\
+	-6y&= -15x + 10 & 2y&= 5x - 8 \\
+	y&= \frac{5}{2}\,x + \frac{5}{3} & y&= \frac{5}{2}\,x - 4
+	\end{aligned}
+	\]
+The slope of the first line is $m_1= \frac{5}{2}$ while the slope of the second line is $m_2= \frac{5}{2}$. Because $m_1= m_2$, the lines are parallel. But then the lines do not intersect so that there is no solution to the system of equations. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Determine if the system of equations below has a solution. If it does, find it; if not, explain why. 
+	\[
+	\begin{aligned}
+	5x + 3y&= 7 \\
+	3x - 2y&= -11
+	\end{aligned}
+	\] 
+
+\sol This a system of linear equations. The system will have a solution if and only if the lines intersect. But this will only happen if they are not parallel. So we find the slopes of each line.
+	\[
+	\begin{aligned}
+	5x + 3y&= 7 &\quad\quad 3x - 2y&= -11 \\
+	3y&= -5x + 7 & -2y&= -3x - 11 \\
+	y&= -\frac{5}{3}\,x + \frac{7}{3} & y&= \frac{3}{2}\,x + \frac{11}{2}
+	\end{aligned}
+	\]
+The slope of the first line is $m_1= -\frac{5}{3}$ while the slope of the second line is $m_2= \frac{3}{2}$. Because $m_1 \neq m_2$, the lines are not parallel. But then the lines intersect so that there is a solution to the system of equations. Now we find the solution by using both substitution and elimination. 
+
+If we use substitution, we can solve for $y$ in the first equation. This yields $y= -\frac{5}{3}\,x + \frac{7}{3}$. Using this in the second equation, we have\dots
+	\[
+	\begin{aligned}
+	3x - 2y&= -11 \\
+	3x - 2 \left( -\frac{5}{3}\,x + \frac{7}{3} \right)&= -11 \\
+	3x + \frac{10}{3}\, x - \frac{14}{3}&= -11 \\
+	3 \left( 3x + \frac{10}{3}\, x - \frac{14}{3} \right)&= -11 \cdot 3 \\
+	9x + 10x - 14&= -33 \\
+	19x - 14&= -33 \\
+	19x&= -19 \\
+	x&= -1
+	\end{aligned}
+	\]
+But then we have $y= -\frac{5}{3} \cdot -1 + \frac{7}{3}= \frac{5}{3} + \frac{7}{3}= \frac{12}{3}= 4$. Therefore, the solution is $(-1, 4)$. \pspace
+
+Using elimination, suppose we eliminate $y$. Multiplying the first equation by $2$ and the second equation by $3$ and adding, we find
+	\[
+	\begin{aligned}
+	10x + 6y&= 14 \\
+	9x - 6y&= -33 \\ \hline
+	19x&= -19 \\
+	x&= -1
+	\end{aligned}
+	\] 
+Using this in the first equation, we find
+	\[
+	\begin{aligned}
+	5x + 3y&= 7 \\
+	5(-1) + 3y&= 7 \\
+	3y - 5&= 7 \\
+	3y&= 12 \\
+	y&= 4
+	\end{aligned}
+	\]
+Therefore, the solution is $(-1, 4)$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Determine if the system of equations below has a solution. If it does, find it; if not, explain why. 
+	\[
+	\begin{aligned}
+	5x - 6y&= 3 \\
+	2x + 3y&= 3
+	\end{aligned}
+	\] 
+
+\sol This a system of linear equations. The system will have a solution if and only if the lines intersect. But this will only happen if they are not parallel. So we find the slopes of each line.
+	\[
+	\begin{aligned}
+	5x - 6y&= 3 &\quad\quad 2x + 3y&= 3 \\
+	-6y&= -5x + 3 & 3y&= -2x + 3 \\
+	y&= \frac{5}{6}\,x - \frac{1}{2} & y&= -\frac{2}{3}\,x + 1
+	\end{aligned}
+	\]
+The slope of the first line is $m_1= \frac{5}{6}$ while the slope of the second line is $m_2= \frac{2}{3}$. Because $m_1 \neq m_2$, the lines are not parallel. But then the lines intersect so that there is a solution to the system of equations. Now we find the solution by using both substitution and elimination. 
+
+If we use substitution, we can solve for $y$ in the first equation. This yields $y= \frac{5}{6}\,x - \frac{1}{2}$. Using this in the second equation, we have\dots
+	\[
+	\begin{aligned}
+	2x + 3y&= 3 \\
+	2x + 3 \left( \frac{5}{6}\,x - \frac{1}{2} \right)&= 3 \\
+	2x + \frac{5}{2}\,x - \frac{3}{2}&= 3 \\
+	2 \left( 2x + \frac{5}{2}\,x - \frac{3}{2} \right)&= 3 \cdot 2 \\
+	4x + 5x - 3&= 6 \\
+	9x - 3&= 6 \\
+	9x&= 9 \\
+	x&= 1
+	\end{aligned}
+	\]
+But then we have $y= \frac{5}{6} \cdot 1 - \frac{1}{2}= \frac{5}{6} - \frac{1}{2}= \frac{5}{6} - \frac{3}{6}= \frac{2}{6}= \frac{1}{3}$. Therefore, the solution is $(1, \frac{1}{3})$. \pspace
+
+Using elimination, suppose we eliminate $y$. Multiplying the second equation by $2$ and adding, we find
+	\[
+	\begin{aligned}
+	5x - 6y&= 3 \\
+	4x + 6y&= 6 \\ \hline
+	9x&= 9 \\
+	x&= 1
+	\end{aligned}
+	\] 
+Using this in the first equation, we find
+	\[
+	\begin{aligned}
+	5x - 6y&= 3 \\
+	5(1) - 6y&= 3 \\
+	5 - 6y&= 3 \\
+	-6y&= -2 \\
+	y&= \frac{1}{3}
+	\end{aligned}
+	\]
+Therefore, the solution is $(1, \frac{1}{3})$. 
+
+
+%\printpoints
+\end{document}

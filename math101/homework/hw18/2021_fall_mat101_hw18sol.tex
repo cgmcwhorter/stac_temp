@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -14,6 +14,17 @@
 
 % Problem 1
 \problem{10} Solve the equation $2(4^{2x})= 8$ using logarithms. \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	2(4^{2x})&= 8 \\[0.3cm]
+	4^{2x}&= 4 \\[0.3cm] 
+	\log_4 4^{2x}&= \log_4 4 \\[0.3cm]
+	2x&= 1 \\[0.3cm]
+	x&= \dfrac{1}{2}
+	\end{aligned}
+	\]
 
 
 
@@ -28,6 +39,17 @@
 % Problem 2
 \problem{10} Solve the equation $6(9^{x-1})= 5$ using logarithms. \pspace
 
+\sol
+	\[
+	\begin{aligned}
+	6(9^{x-1})&= 5 \\[0.3cm]
+	9^{x - 1}&= \dfrac{5}{6} \\[0.3cm]
+	\log_9 9^{x - 1}&= \log_9 \left( \dfrac{5}{6} \right) \\[0.3cm]
+	x - 1&= \log_9 \left( \dfrac{5}{6} \right) \\[0.3cm]
+	x&= \log_9 \left( \dfrac{5}{6} \right) + 1 \approx 0.917022
+	\end{aligned}
+	\]
+
 
 
 
@@ -41,6 +63,16 @@
 % Problem 3
 \problem{10} Solve the equation $\log_2(x + 5)= 4$. \pspace
 
+\sol
+	\[
+	\begin{aligned}
+	\log_2(x + 5)&= 4 \\[0.3cm]
+	2^{\log_2(x + 5)}&= 2^4 \\[0.3cm]
+	x + 5&= 16 \\[0.3cm]
+	x&= 11
+	\end{aligned}
+	\]
+
 
 
 
@@ -52,7 +84,29 @@
 
 
 % Problem 4
-\problem{10} Solve the equation $\log(x + 2) + \log(x + 5)= 1$. Be sure to check that all your solutions are valid. \pspace
+\problem{10} Solve the equation $\log_{10}(x + 2) + \log_{10}(x + 5)= 1$. Be sure to check that all your solutions are valid. \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\log_{10}(x + 2) + \log_{10}(x + 5)&= 1 \\[0.3cm]
+	\log_{10}\big( (x + 2)(x + 5) \big)&= 1 \\[0.3cm]
+	10^{\log_{10}\big( (x + 2)(x + 5) \big)}&= 10^1 \\[0.3cm]
+	(x + 2)(x + 5)&= 10 \\[0.3cm]
+	x^2 + 5x + 2x + 10&= 10 \\[0.3cm]
+	x^2 + 7x + 10&= 10 \\[0.3cm]
+	x^2 + 7x&= 0 \\[0.3cm]
+	x(x + 7)&= 0 
+	\end{aligned}
+	\] \space
+But then either $x= 0$ or $x + 7= 0$, i.e. $x= -7$. However, observe that\dots
+	\[
+	\begin{aligned}
+	\log_{10}(x + 2) + \log_{10}(x + 5)\bigg|_{x= 0}&= \log_{10}(2) + \log_{10}(5)= \log_{10}(2 \cdot 5)= \log_{10}(10)= 1 \\
+	\log_{10}(x + 2) + \log_{10}(x + 5) \bigg|_{x= -7}&= \log_{10}(-5) + \log_{10}(-2) \Longleftarrow \text{undefined!}
+	\end{aligned}
+	\] \pspace
+Therefore, the only solution is $x= 0$. 
 
 
 %\printpoints

@@ -1,0 +1,227 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{19: Due 12/10}{It's about time somebody stood up to Auntie Eleanor. But you, not me. Oh, god! She can't ever know I was here.}{Oliver T'sien, Crazy Rich Asians}
+
+% Problem 1
+\problem{10} Suppose you invest \$1500 in an account which gains 6\% annual interest compounded monthly. 
+        \begin{enumerate}[(a)]
+        \item Determine the amount of money in the account after 8~years.
+        \item How long until the account has \$4000?
+        \item How much should you place in the account if you want to have \$2000 saved after 3~years?
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\
+	F&= 1500 \left( 1 + \dfrac{0.06}{12} \right)^{12 \cdot 8} \\
+	F&= 1500 (1.005)^{96} \\
+	F&= \$2,421.21
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\
+	4000&= 1500 \left( 1 + \dfrac{0.06}{12} \right)^{12 \cdot t} \\
+	4000&= 1500 (1.005)^{12t} \\
+	2.6667&= (1.005)^{12t} \\
+	\ln(2.6667)&= \ln(1.005)^{12t} \\
+	12t \ln(1.005)&= \ln(2.6667) \\
+	t&= \dfrac{\ln(2.6667)}{12 \ln(1.005)} \approx 16.3882 \text{ years}
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\
+	2000&= P \left( 1 + \dfrac{0.06}{12} \right)^{12 \cdot 3} \\
+	4000&= P (1.005)^{36} \\
+	1.19668P&= 4000 \\
+	P&= \$3,342.58
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Suppose you invest \$430 in an account which gains 4\% annual interest compounded semiannually. 
+        \begin{enumerate}[(a)]
+        \item Determine the amount of money in the account after 2~years.
+        \item How long until the account has \$1000?
+        \item How much should you place in the account if you want to have \$600 saved after 5~years?
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\
+	F&= 430 \left( 1 + \dfrac{0.04}{2} \right)^{2 \cdot 2} \\
+	F&= 430 (1.02)^4 \\
+	F&= \$465.45
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\
+	1000&= 450 \left( 1 + \dfrac{0.04}{2} \right)^{2 \cdot t} \\
+	1000&= 450 (1.02)^{2t} \\
+	2.2222&= (1.02)^{2t} \\
+	\ln(2.2222)&= \ln(1.02)^{2t} \\
+	2t \ln(1.02)&= \ln(2.2222) \\
+	t&= \dfrac{\ln(2.2222)}{2 \ln(1.02)} \approx 20.1614 \text{ years}
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\
+	600&= P \left( 1 + \dfrac{0.04}{2} \right)^{2 \cdot 5} \\
+	600&= P (1.02)^{10} \\
+	1.21899P&= 600 \\
+	P&= \$492.21
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Suppose you invest \$600 in an account which gains 5\% annual interest compounded continuously. 
+        \begin{enumerate}[(a)]
+        \item Determine the amount of money in the account after 3~years.
+        \item How long until the account has \$800?
+        \item How much should you place in the account if you want to have \$900 saved after 10~years?
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	F&= 600 e^{0.05 \cdot 3} \\
+	F&= 600 e^{0.15} \\
+	F&= 600(1.16183) \\
+	F&= \$697.10
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	800&= 600 e^{0.05 t} \\
+	1.3333&= e^{0.05t} \\
+	\ln(1.3333)&= \ln e^{0.05t} \\
+	0.05t&= \ln(1.3333) \\
+	t&= \dfrac{\ln(1.3333)}{0.05} \approx 5.753 \text{ years}
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	900&= P e^{0.05 \cdot 10} \\
+	900&= P e^{0.5} \\
+	1.64872P&= 900 \\
+	P&= \$545.88
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Suppose you invest \$3000 in an account which gains 2\% annual interest compounded continuously. 
+        \begin{enumerate}[(a)]
+        \item Determine the amount of money in the account after 7~years.
+        \item How long until the account has \$3500?
+        \item How much should you place in the account if you want to have \$3700 saved after 4~years?
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	F&= 3000 e^{0.02 \cdot 7} \\
+	F&= 3000 e^{0.14} \\
+	F&= 3000(1.15027) \\
+	F&= \$3,450.82
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	3500&= 3000 e^{0.02 t} \\
+	1.1667&= e^{0.02t} \\
+	\ln(1.1667)&= \ln e^{0.02t} \\
+	0.02t&= \ln(1.1667) \\
+	t&= \dfrac{\ln(1.1667)}{0.02} \approx 7.709 \text{ years}
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\
+	3700&= P e^{0.02 \cdot 4} \\
+	3700&= P e^{0.08} \\
+	1.08329P&= 900 \\
+	P&= \$830.81
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+%\printpoints
+\end{document}

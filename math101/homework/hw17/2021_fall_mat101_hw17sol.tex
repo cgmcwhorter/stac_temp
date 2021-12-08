@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -28,6 +28,8 @@
 	minor tick = {-10,-9,...,10},
 	xlabel=\(x\),ylabel=\(y\),
 	]
+	\addplot[thick, domain= 0.0001:10,samples=150] {log2(x)};
+	\draw[fill=black] (-2,1/64) circle (0.1);
 	\end{axis}
 	\end{tikzpicture}
 	}
@@ -53,6 +55,34 @@
 \item $\ln e^{2/3}$
 \end{enumerate} \pspace
 
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\log_4 4 - \log_6 1= 1 - 0= 1
+	\] \pspace
+
+\item 
+	\[
+	\log_5 25= \log_5 5^2= 2
+	\] \pspace
+
+\item 
+	\[
+	\log_3 \dfrac{1}{81}= \log_3(81^{-1})= \log_3\big( (3^4)^{-1} \big)= \log_3(3^{-4})= -4
+	\] \pspace
+
+\item 
+	\[
+	\log_9 \sqrt{3}= \log_9(3^{1/2})= \log_9\big( (9^{1/2})^{1/2} \big)= \log_9(9^{1/4})= \dfrac{1}{4}
+	\] \pspace
+
+\item 
+	\[
+	\ln e^{2/3}= \log_e e^{2/3}= \dfrac{2}{3}
+	\]
+\end{enumerate}
+
 
 
 
@@ -69,6 +99,15 @@
 	\log_3 \left(\dfrac{\sqrt[6]{x}}{3y^4}\right)
 	\] \pspace
 
+\sol
+	\[
+	\begin{aligned}
+	\log_3 \left(\dfrac{\sqrt[6]{x}}{3y^4}\right)&= \log_3 \sqrt[6]{x} - \log_3(3y^4) \\[0.3cm]
+	&= \log_3 x^{1/6} - \log_3 y^4 - \log_3 3 \\[0.3cm]
+	&= \frac{1}{6}\, \log_3 x - 4 \log_3 y - 1
+	\end{aligned}
+	\]
+
 
 
 
@@ -84,6 +123,15 @@
 	\[
 	\frac{1}{2} \ln x - \ln 1 + 3\ln(x+2) - \ln(1 - x)
 	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\frac{1}{2} \ln x - \ln 1 + 3\ln(x+2) - \ln(1 - x)&= \ln x^{1/2} - 0 + \ln(x + 2)^3 - \ln(1 - x) \\[0.3cm]
+	&= \ln \sqrt{x} + \ln\left( \dfrac{(x + 2)^3}{1 - x} \right) \\[0.3cm]
+	&= \ln\left( \dfrac{\sqrt{x} (x + 2)^3}{1 - x} \right)
+	\end{aligned}
+	\]
 
 
 %\printpoints

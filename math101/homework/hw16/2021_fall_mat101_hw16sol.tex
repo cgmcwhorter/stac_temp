@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -14,6 +14,12 @@
 
 % Problem 1
 \problem{10} Write the function $f(x)= -5(2^{x-1})$ in the form $y= Ab^x$ for some $A$ and $b$. Show all your work. \pspace
+
+\sol 
+	\[
+	f(x)= -5(2^{x-1})= -5(2^{-1} \cdot 2^x)= -5 \cdot \dfrac{1}{2} \cdot 2^x= -\frac{5}{2}\; (2^x)
+	\] \pspace
+Therefore, $f(x)= -\frac{5}{2} (2^x)$, where here $A= -\frac{5}{2}$ and $b= 2$. 
 
 
 
@@ -28,6 +34,12 @@
 % Problem 2
 \problem{10} Write the function $f(x)= 6(3^{2x+1})$ in the form $y= Ab^x$ for some $A$ and $b$. Show all your work. \pspace
 
+\sol 
+	\[
+	f(x)= 6(3^{2x+1})= 6(3^1 \cdot 3^{2x})= 6 \cdot 3 \cdot 3^{2x}= 18 (3^2)^x= 18(9^x)
+	\] \pspace
+Therefore, $f(x)= 18(9^x)$, where here $A= 18$ and $b= 9$. 
+
 
 
 
@@ -41,6 +53,16 @@
 % Problem 3
 \problem{10} Solve the equation $4^{x+1}= \dfrac{1}{16}$. Show all your work. \pspace
 
+\sol
+	\[
+	\begin{aligned}
+	4^{x + 1}&= \dfrac{1}{16} \\[0.3cm]
+	4^{x + 1}&= \dfrac{1}{4^2} \\[0.3cm] 
+	4^{x + 1}&= 4^{-2}
+	\end{aligned}
+	\] \pspace
+Because the bases on both sides are equal, we must have $x + 1= -2$. But then $x= -3$. 
+
 
 
 
@@ -53,6 +75,16 @@
 
 % Problem 4
 \problem{10} Solve the equation $25^{1-x} + 3= 4$. Show all your work. \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	25^{1-x} + 3&= 4 \\[0.3cm]
+	25^{1 - x}&= 1 \\[0.3cm]
+	25^{1 - x}&= 25^0
+	\end{aligned}
+	\] \pspace
+Because the bases on both sides are equal, we must have $1 - x= 0$. But then $x= 1$. 
 
 
 %\printpoints

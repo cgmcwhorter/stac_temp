@@ -1,0 +1,166 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 12/08}{One morning I shot an elephant in my pajamas. How he got into my pajamas I'll never know.}{Groucho Marx}
+
+% Problem 1
+\problem{10} Solve the following system of equations using substitution:
+	\[
+	\begin{aligned}
+	y= 2x - 3 \\
+	3x - y= 4
+	\end{aligned}
+	\] \pspace
+
+\sol The first equation is already expressed in terms of $y$. Using this expression for $y$ in the second equation, we have\dots
+	\[
+	\begin{aligned}
+	3x - y&= 4 \\[0.3cm]
+	3x - (2x - 3)&= 4 \\[0.3cm]
+	3x - 2x + 3&= 4 \\[0.3cm]
+	x + 3&= 4 \\[0.3cm]
+	x&= 1
+	\end{aligned}
+	\] 
+But then we know that $y= 2(1) - 3= 2 - 3= -1$. Therefore, the solution is $(1, -1)$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 2
+\problem{10} Solve the following system of equations using substitution: 
+	\[
+	\begin{aligned}
+	2x - 3y&= -12 \\
+	3x + 5y&= 1
+	\end{aligned}
+	\] \pspace
+
+\sol We solve for $y$ in the first equation:
+	\[
+	\begin{aligned}
+	2x - 3y&= -12 \\[0.3cm]
+	-3y&= -2x - 12 \\[0.3cm]
+	y&= \frac{2}{3}\,x + 4
+	\end{aligned}
+	\]
+Using this expression in the second equation, we have\dots
+	\[
+	\begin{aligned}
+	3x + 5y&= 1 \\[0.3cm]
+	3x + 5\left(\frac{2}{3}\,x + 4 \right)&= 1 \\[0.3cm]
+	3x + \frac{10}{3}\, x + 20&= 1 \\[0.3cm]
+	3 \left( 3x + \frac{10}{3}\, x + 20 \right)&= 1 \cdot 3 \\[0.3cm]
+	9x + 10x + 60&= 3 \\[0.3cm]
+	19x + 60&= 3 \\[0.3cm]
+	19x&= -57 \\[0.3cm]
+	x&= -3
+	\end{aligned}
+	\]
+But then $y= \frac{2}{3} \cdot -3 + 4= -2 + 4= 2$. Therefore, the solution is $(-3, 2)$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 3
+\problem{10} Solving the following system of equations using elimination: 
+	\[
+	\begin{aligned}
+	x - 3y&= 5 \\ 
+	-x + 5y&= 7
+	\end{aligned}
+	\] \pspace
+
+\sol We add the equations to immediately eliminate the $x$-term:
+	\[
+	\begin{aligned}
+	x - 3y&= 5 \\ 
+	-x + 5y&= 7 \\ \hline
+	2y&= 12 \\
+	y&= 6
+	\end{aligned}
+	\] 
+But then we know that\dots
+	\[
+	\begin{aligned}
+	x - 3y&= 5 \\[0.3cm]
+	x - 3(6)&= 5 \\[0.3cm]
+	x - 18&= 5 \\[0.3cm]
+	x&= 23
+	\end{aligned}
+	\] 
+Therefore, the solution is $(23, 6)$. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Problem 4
+\problem{10} Solving the following system of equations using elimination:  
+	\[
+	\begin{aligned}
+	2x - 3y&= 17 \\
+	3x + 2y&= 6
+	\end{aligned}
+	\] \pspace
+
+\sol We eliminate the $y$ terms. Multiplying the first equation by 2 and the second equation by 3, we have\dots
+	\[
+	\begin{aligned}
+	4x - 6y&= 34 \\
+	9x + 6y&= 18
+	\end{aligned}
+	\] 
+Then we add these equations to find\dots
+	\[
+	\begin{aligned}
+	4x - 6y&= 34 \\
+	9x + 6y&= 18 \\ \hline
+	13x&= 52 \\
+	x&= 4
+	\end{aligned}
+	\] 
+But then we have\dots
+	\[
+	\begin{aligned}
+	4x - 6y&= 34 \\[0.3cm]
+	4(4) - 6y&= 34 \\[0.3cm]
+	16 - 6y&= 34 \\[0.3cm]
+	-6y&= 18 \\[0.3cm]
+	y&= -3
+	\end{aligned}
+	\] 
+Therefore, the solution is $(4, -3)$. 
+
+
+%\printpoints
+\end{document}
