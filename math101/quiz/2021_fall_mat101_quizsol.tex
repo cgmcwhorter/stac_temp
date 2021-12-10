@@ -242,14 +242,125 @@ Then we have roots $r_1= 1 + \sqrt{2}$ and $r_2= 1 - \sqrt{2}$. Therefore, the f
 	&= \dfrac{5 \pm 3}{8} 
 	\end{aligned}
 	\]
-But then either $x= (5 + 3)/8= 8/8= 1$ or $x= (5 - 3)/8= 2/8= 1/4$. 
+But then either $x= (5 + 3)/8= 8/8= 1$ or $x= (5 - 3)/8= 2/8= 1/4$. \pvspace{1.3cm}
 
 
-% 21: the vert. asym of f= (x-3)(x+2)/ (x+1)(x-3) are X= -1 and x=3. 
-% 22: the function y= -5(1/3)^{-x}$ is increasing.
-% 23: if 4^{-x}= 16, then x= 2
-% 24: If $2^{x^2}= 16$, then $x= \pm 2$. 
 
+% Quiz 21
+\quizsol \textit{True/False}: The vertical asymptotes of $f(x)= \dfrac{(x - 3)(x + 2)}{(x + 1)(x - 3)}$ are $x= -1$ and $x= 3$. \pspace 
+
+\sol The statement is \textit{false}. We first find the domain. The domain of a rational function is where the denominator is not 0. The denominator is 0 if $(x + 1)(x - 3)= 0$. But then $x + 1= 0$, i.e. $x= -1$, or $x - 3= 0$, i.e. $x= 3$. Therefore, the domain is all real numbers such that $x \neq -1, 3$. We can then cancel any common factors in the numerator and denominator. Then
+	\[
+	\dfrac{(x - 3)(x + 2)}{(x + 1)(x - 3)}= \dfrac{\cancel{(x - 3)}(x + 2)}{(x + 1)\cancel{(x - 3)}}= \dfrac{x + 2}{x + 1}
+	\]
+The vertical asymptotes are then the values where the denominator vanishes in this reduced function. But then $x + 1= 0$, i.e. $x= -1$. Therefore, the only vertical asymptote is $x= -1$. \pvspace{1.3cm}
+
+
+
+% Quiz 22
+\quizsol \textit{True/False}: The function $y= -5(1/3)^{-x}$ is increasing.
+
+\sol The statement is \textit{false}. We write the function in the form $y= Ab^x$. We have\dots
+	\[
+	y= -5 \left( \dfrac{1}{3} \right)^{-x}= -5 \left( \left( \dfrac{1}{3} \right)^{-1} \right)^x= - 5(3^x)
+	\]
+But then because we have $b= 3 > 1$ and $A= -5 < 0$, the function is decreasing. \pvspace{1.3cm}
+
+
+
+% Quiz 23
+\quizsol \textit{True/False}: If $4^{-x}= 16$, then $x= 2$. \pspace
+
+\sol The statement is \textit{false}. We have\dots
+	\[
+	\begin{aligned}
+	4^{-x}&= 16 \\
+	4^{-x}&= 4^2
+	\end{aligned}
+	\]
+Because the bases are the same on both sides, we must have $-x= 2$, i.e. $x= -2$. \pvspace{1.3cm}
+
+
+
+% Quiz 24
+\quizsol \textit{True/False}: If $2^{x^2}= 16$, then $x= \pm 2$. \pspace
+
+\sol The statement is \textit{true}. We have\dots
+	\[
+	\begin{aligned}
+	2^{x^2}&= 16 \\
+	2^{x^2}&= 2^4
+	\end{aligned}
+	\]
+Because the bases are the same on both sides, we must have $x^2= 4$. But then $x= \pm \sqrt{4}= \pm 2$. \pvspace{1.3cm}
+
+
+
+% Quiz 25
+\quizsol \textit{True/False}: If you invest \$500 in an account receiving 5\% annual interest compounded quarterly, then the amount in the account after 3~years is $500(1 + 0.05)^3$. \pspace
+
+\sol The statement is \textit{false}. Recall that the formula for the future value of an investment in a principal that is accruing interest that is being compounded discretely is\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}
+	\]
+where $F$ is the future value, $P$ is the principal, $r$ is the annual interest rate (as a decimal), $k$ is the rate of compounding, and $t$ is the time (in years). Here, we have $P= 500$, $r= 0.05$, $k= 4$, and $t= 3$. But then we have 
+	\[
+	F= 500 \left(1 + \dfrac{0.05}{4} \right)^{4 \cdot 3}
+	\] \pvspace{1.3cm}
+
+
+
+% Quiz 26
+\quizsol \textit{True/False}: The greater the rate of compounding, the greater the amount of interest earned. \pspace
+
+\sol The statement is \textit{true}. The intuitive reason is that the greater the rate of compounding, the more frequently interest is being added to the account. But then at the next compounding, the interest is being applied to a large total of money, thus accruing more interest. \pspace
+
+To prove this rigorously is more difficult: suppose that you have compounding rates $K, k$ with $K > k$, fixed interest rate $r$, fixed principal $P$, and that $t > 0$. Because $K > k$, we know that $K/k > 1$. By the Bernoulli Inequality, we know that $(1 + x)^y \geq 1 + yx$ for $y \geq 1$ and $x \geq  -1$. [Note that this inequality is strict if $x \neq 0$ and $y \neq 0, 1$.] But then we have\dots
+	\[
+	\left(1 + \dfrac{r}{K} \right)^{K/k} > 1 + \dfrac{K}{k} \cdot \dfrac{r}{K}= 1 + \dfrac{r}{k}
+	\]
+But using the fact that $1 + r/K > 1$ and $K/k > 1$, we have\dots
+	\[
+	\begin{aligned}
+	\left(1 + \dfrac{r}{K} \right)^{K/k} &> 1 + \dfrac{r}{k} \\
+	\left(1 + \dfrac{r}{K} \right)^K &> \left(1 + \dfrac{r}{k} \right)^k \\
+	\left(1 + \dfrac{r}{K} \right)^{K t} &> \left(1 + \dfrac{r}{k} \right)^{k t} \\
+	P \left(1 + \dfrac{r}{K} \right)^{K t} &> P \left(1 + \dfrac{r}{k} \right)^{k t} \\
+	F_K &> F_k
+	\end{aligned}
+	\]
+But then the amount of money after time $t$ compounding at rate $K$, $F_K$, is greater than the amount of money after time $t$ compounding at rate $k$, $F_k$. \pvspace{1.3cm}
+
+
+
+% Quiz 27
+\quizsol \textit{True/False}: The point $(-2, 1)$ is the intersection point of\dots
+	\[
+	\begin{aligned}
+	3x - y&= -7 \\
+	x + 2y&= 4
+	\end{aligned}
+	\]
+
+\sol The statement is \textit{false}. For a point to be an intersection point for a system of equations, it must satisfy all of the equations. We check the first equation:
+	\[
+	\begin{aligned}
+	3x - y&\stackrel{?}{=} -7 \\
+	3(-2) - 1&\stackrel{?}{=} -7 \\
+	-6 - 1&\stackrel{?}{=} -7 \\
+	-7&= -7
+	\end{aligned}
+	\]
+Therefore, $(-2, 1)$ satisfies the first equation. However, $(-2, 1)$ need also satisfy the second equation also. 
+	\[
+	\begin{aligned}
+	x + 2y&\stackrel{?}{=} 4 \\
+	-2 - 2(1)&\stackrel{?}{=} 4 \\
+	-2 - 2&\stackrel{?}{=} 4 \\
+	-4&\neq 4
+	\end{aligned}
+	\]
+Therefore, $(-2, 1)$ is not an intersection point for the system of equations. 
 
 
 \end{document}

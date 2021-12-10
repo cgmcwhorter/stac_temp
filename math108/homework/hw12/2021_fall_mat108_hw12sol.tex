@@ -15,6 +15,15 @@
 % Problem 1
 \problem{10} Suppose that two exams are normally distributed. The first exam has an average score of 81 with standard deviation 9. The second exam has an average score of 71 with standard deviation 4. If Alice received a 95 on the first exam and Bob received a 82 on the second exam, who performed better? Explain. \pspace
 
+\sol
+	\[
+	\begin{aligned}
+	z_{\text{Alice}}&= \dfrac{95 - 81}{9}= \dfrac{14}{9}= 1.56 \\
+	z_{\text{Bob}}&= \dfrac{82 - 71}{4}= \dfrac{11}{4}= 2.75
+	\end{aligned}
+	\]
+Because $z_{\text{Bob}} > z_{\text{Alice}}$, Bob performed better than Alice relative to his exam. 
+
 
 
 
@@ -34,6 +43,40 @@
         \item How much would one's salary at the company need to be in order to be in the top 10\% of earners at the company?
         \end{enumerate} \pspace
 
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	z_{\text{98 K}}= \dfrac{98000 - 72000}{12000}= \dfrac{26000}{12000}= 2.17 \squiggle 0.9850
+	\]
+Because $P(X \leq 98000)= 0.9850$, we have $P(X > 98000)= 1 - P(X \leq 98000)= 1 - 0.9850= 0.0150$. 
+
+\item 
+	\[
+	z_{\text{56 K}}= \dfrac{56000 - 72000}{12000}= -\dfrac{16000}{12000}= -1.33 \squiggle 0.0918
+	\]
+Therefore, $P(X < 56000)= 0.0918$. 
+
+\item 
+	\[
+	\begin{aligned}
+	P(X < 98000)&= 0.9850 \\
+	P(X < 56000)&= 0.0918
+	\end{aligned}
+	\]
+Therefore, $P(56000 < X < 98000)= 0.9850 - 0.0918= 0.8932$.
+
+\item Being in the top 10\% means that 90\% of works have a salary less than you. This salary would then have a $z$-score that corresponds to $0.9000$. The closest such $z$-score is $1.28$. But then
+	\[
+	\begin{aligned}
+	z&= \dfrac{x - \mu}{\sigma} \\
+	1.28&= \dfrac{x - 72000}{12000} \\
+	x - 72000&= 15360 \\
+	x&= \$87,360
+	\end{aligned}
+	\]
+\end{enumerate}
+
 
 
 
@@ -52,6 +95,15 @@
 	\item What is the probability that at least one of the people approval of the policy? 
 	\end{enumerate} \pspace
 
+\sol
+\begin{enumerate}[(a)]
+\item We have $n= 8$ and $p= 0.40$. Using the binomial table with $k= 5$, we have $P(X= 5)= 0.1239$.
+
+\item At least three people corresponds to $k$-values of $k= 3, 4, 5, 6, 7, 8$. Using the binomial table, we find this is $P(X \geq 3)= 0.2787 + 0.2322 + 0.1239 + 0.0413 + 0.0079 + 0.0007= 0.6847$. Alternatively, the complement of this event is having at most 2 people approval of the policy. This corresponds to $k$-values of $k= 0, 1, 2$. This gives $P(X \leq 2)= 0.0168 + 0.0896 + 0.2090= 0.3154$. But then $P(X \geq 3)= 1 - P(X \leq 2)= 1 - 0.3154= 0.6846$. 
+
+\item At least one person corresponds to $k$-values of $k= 1, 2, 3, \ldots, 8$. Then we have $P(X \geq 1)= 0.0896 + 0.2090 + 0.2787 + 0.2322 + 0.1239 + 0.0413 + 0.0079 + 0.0007= 0.9833$. Alternatively, the complement of this event is that no people approval of the policy. This corresponds to $k$-value of $k= 0$. But then $P(X= 0)= 0.0168$. Then $P(X \geq 1)= 1 - P(X= 0)= 1 - 0.0168= 0.9832$. 
+\end{enumerate}
+
 
 
 
@@ -63,7 +115,18 @@
 
 
 % Problem 4
-\problem{10} A phone company claims that their new phone has an average battery life of 13~hours. You collect a random sample of 26 phones and test how long the battery lasts. You find an average battery life of 11~hours. Given that most phones are have a battery life standard deviation of 3.5~hours, construct a 95\% confidence interval for the battery life for this phone. Is the company's claim compatible with this data? Explain. \pspace
+\problem{10} A phone company claims that their new phone has an average battery life of 13~hours. You collect a random sample of 37 phones and test how long the battery lasts. You find an average battery life of 11~hours. Given that most phones are have a battery life standard deviation of 3.5~hours, construct a 95\% confidence interval for the battery life for this phone. Is the company's claim compatible with this data? Explain. \pspace
+
+\sol A 95\% confidence interval corresponds to 5\% being outside this `center'---leaving only 2.5\% for each end. Then on the upper end, $95\% + 2.5\%= 97.5\%$ of values are less than this value. This corresponds to $z$-value of $1.96$, i.e. $z^*= 1.96$. But then\dots
+	\[
+	\begin{aligned}
+	\overline{x} \pm z^*\, \dfrac{\sigma}{\sqrt{n}} \\
+	11 \pm 1.96 \cdot \dfrac{3.5}{\sqrt{37}} \\
+	11 \pm 1.96 \cdot 0.5754 \\
+	11 \pm 1.13
+	\end{aligned}
+	\]
+Therefore, the 95\% confidence interval is $(9.87, 12.13)$. Because $13 \notin (9.87, 12.13)$, this data is not compatible with the company's claim that the phone's average battery life is 13~hours. 
 
 
 \end{document}

@@ -194,16 +194,29 @@ Therefore,
 	\] \pvspace{1.3cm}
 
 
-% 14: the vertical asympotes of f= (x-1)(x+3) / (x-1)(x+5) are x= 1 and x=-5
-% 15 To add $\dfrac{5}{x + 1}$ and $\dfrac{x}{(x + 1)^2}$, one would use the common denominator of $x + 1$.
-% 16: there is no function with domain all reals and a vertical asymptote at $x= 1$. 
+
+% Quiz 14
+\quizsol \textit{True/False}: The vertical asymptotes of $f(x)= \dfrac{(x - 1)(x + 3)}{(x - 1)(x + 5)}$ are $x= 1$ and $x= -5$. \pspace
+
+\sol The statement is \textit{false}. We first find the domain. The domain of a rational function is where the denominator is not 0. The denominator is 0 if $(x - 1)(x + 5)= 0$. But then $x - 1= 0$, i.e. $x= 1$, or $x + 5= 0$, i.e. $x= -5$. Therefore, the domain is all real numbers such that $x \neq -5, 1$. We can then cancel any common factors in the numerator and denominator. Then
+	\[
+	\dfrac{(x - 1)(x + 3)}{(x - 1)(x + 5)}= \dfrac{\cancel{(x - 1)}(x + 3)}{\cancel{(x - 1)}(x + 5)}= \dfrac{x + 3}{x + 5}
+	\]
+The vertical asymptotes are then the values where the denominator vanishes in this reduced function. But then $x + 5= 0$, i.e. $x= -5$. Therefore, the only vertical asymptote is $x= -5$. \pvspace{1.5cm}
 
 
 
+% Quiz 15
+\quizsol \textit{True/False}: To add $\dfrac{5}{x + 1}$ and $\dfrac{x}{(x + 1)^2}$, one would use the common denominator of $x + 1$. \pspace
+
+\sol The statement is \textit{false}. The common denominator should be the least common multiple of the two denominators. The first expression has a single factor of $x + 1$, whereas the second expression has two factors of $x + 1$. Therefore, the least common denominator would be $(x + 1)^2$. 
 
 
 
+% Quiz 16
+\quizsol \textit{True/False}: There is no function with domain all reals and a vertical asymptote at $x= 1$. \pspace
 
+\sol The statement is \textit{true}. Any $x$-value which corresponds to a vertical asymptote cannot be in the domain of the function. So if $x= 1$ were a vertical asymptote, then $x= 1$ is not in the domain for the function. But then the domain cannot be all real numbers. 
 
 
 \end{document}

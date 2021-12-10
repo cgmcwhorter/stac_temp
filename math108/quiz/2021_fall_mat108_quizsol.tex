@@ -266,14 +266,50 @@ Therefore, the circled entry is the pivot position. \pvspace{1cm}
 \sol The statement is \textit{true}. The formula for the future value of an amount accruing interest compounded at discrete time intervals is $F= P (1 + r/n)^{nt}$, where $P$ is the principal amount, $r$ is the interest rate (as a decimal), $n$ is the number of compounding per interest period, and $t$ is the time. Here, $P= 13000$, $r= 0.053$, $n= 2$ (because it is semiannually), and $t= 6$, which gives us\dots
 	\[
 	F= 13000 \left(1 + \dfrac{0.053}{2} \right)^{2 \cdot 6}
+	\] \pvspace{1.5cm}
+
+
+
+% Quiz 16 
+\quizsol \textit{True/False}: Disjoint events can be independent. \pspace
+
+\sol The statement is \textit{false}. If events are disjoint, then the events cannot happen at the same time. But then if one of the events occurs, the other cannot. If the other event is not impossible, then the occurrence or non-occurrence of one event affects the probability of the other occurring, which cannot for independent events. \pvspace{1.5cm}
+
+
+
+% Quiz 17 
+\quizsol \textit{True/False}: If $P(A)= 0.40$ and $P(B)= 0.30$, then $P(A \text{ and }B)= P(A) \cdot P(B)= 0.40 \cdot 0.30= 0.12$. \pspace
+
+\sol The statement is \textit{false}. The formula $P(A \text{ and }B)= P(A) \cdot P(B)$ is only valid if $A$ and $B$ are independent events, which we are not told here. Generally, we have $P(A \text{ and }B)= P(A) P(B \;|\;A)= P(B) P(A \;|\; B)$. \pvspace{1.5cm}
+
+
+
+% Quiz 19 
+\quizsol \textit{True/False}: From a normal distribution, the more `extreme' the value, the greater the magnitude of the $z$-score. \pspace
+
+\sol The statement is \textit{true}. Recall that
+	\[
+	z= \dfrac{x - \mu}{\sigma}
 	\]
+But then the $z$-score measures the number of standard deviations above/below the mean a particular value is. But the greater this measure, the more extreme the value must be. 
 
 
 
+\newpage
 
 
 
+% Quiz 19 
+\quizsol \textit{True/False}: Groups vary less than individuals. \pspace
 
+\sol The statement is \textit{true}. The Central Theorem Limit states that if you randomly sample from a population with mean $\mu$ and finite standard deviation $\sigma$, then the group means are distributed as $N(\mu, \sigma/\sqrt{n})$ if the original distribution is normally distributed (which we do not know here) or if $n$ is sufficiently large ($n \geq 30$ is a common standard). Notice that this distribution has smaller standard deviation than the original population, i.e. less variation. Therefore, on average, groups vary less than individuals. \pvspace{1cm}
+
+
+
+% Quiz 20 
+\quizsol \textit{True/False}: If you randomly sample from a population with mean $\mu$ and finite standard deviation $\sigma$ using group size of $n= 17$, then the distribution of the group mean values is $N(\mu, \sigma/\sqrt{n})$. \pspace
+
+\sol The statement is \textit{false}. This is close to the Central Limit Theorem. The Central Theorem Limit states that if you randomly sample from a population with mean $\mu$ and finite standard deviation $\sigma$, then the group means are distributed as $N(\mu, \sigma/\sqrt{n})$ if the original distribution is normally distributed (which we do not know here) or if $n$ is sufficiently large ($n \geq 30$ is a common standard). However, here the group size is too small. 
 
 
 \end{document}

@@ -162,6 +162,7 @@ The relation on $\mathbb{N}$ given by $x \sim y$ if and only if $xy$ is even is 
 \sol The statement is \textit{false}. For $\sim$ to be an equivalence relation, $\sim$ must be reflexive, i.e. $n \sim n$ for all $n \in \mathbb{N}$. Take $n= 1$. Then $1(1)= 1$ is odd so that $1 \not\sim 1$. But then $\sim$ is not reflexive. \pvspace{1.5cm}
 
 
+
 % Quiz  14
 \quizsol \textit{True/False}: Suppose that $X$ is a set of natural numbers and $\sim$ is an equivalence relation on $X$ . If $[2] \cap [5]= \{ 1, 2, 3, 4, 5, 7 \}$, then $[2]= \{ 1, 2, 3, 4, 5, 7 \}$. \pspace
 
@@ -171,12 +172,36 @@ The relation on $\mathbb{N}$ given by $x \sim y$ if and only if $xy$ is even is 
 	\] \pvspace{1.5cm}
 
 
+
+\newpage
+
+
+
 % Quiz 15
-% There exists integers x, y such that 6x + 8y= 5
+\quizsol \textit{True/False}: There exists integers $x, y$ such that $6x + 8y= 5$. \pspace
+
+\sol The statement is \textit{false}. Recall that given integers $A$ and $B$, there exist integers $x, y$ such that $Ax + By= D$ if and only if $\gcd(A, B)$ divides $D$. But we know $\gcd(6, 8)= 2$, which does not divide 5. \pvspace{1.5cm}
+
+
+
 % Quiz 16
-% The last digit of $11^{2021}$ is 1. 
+\quizsol \textit{True/False}: The last digit of $11^{2021}$ is 1. \pspace
+
+\sol The statement is \textit{true}. To find the last digit of $11^{2021}$, we compute the remainder upon division by 10, i.e. we compute $11^{2021}$ modulo 10. Observe that $11 \equiv 1 \mod 10$. But then we have $11^{2021} \equiv 1^{2021}= 1 \mod 10$. Therefore, the last digit of $11^{2021}$ is 1. \pvspace{1.5cm}
+
+
+
 % Quiz 17
-% 7 is invertible modulo 63. 
+\quizsol \textit{True/False}: 7 is invertible modulo 63. \pspace
+
+\sol The statement is \textit{false}. Recall that $a$ is invertible modulo $n$ if and only if $\gcd(a, n)= 1$. To see this, if $a$ is invertible modulo $n$, then there exists an integer $x$ such that $ax \equiv 1 \mod n$. But then $ax - 1$ is divisible by $n$, i.e. there exists an integer $y$ such that $ax - 1= ny$. But then $ax + ny= 1$. But this is possible if and only if $\gcd(a, n)$ divides 1, i.e. $\gcd(a, n)= 1$. Conversely, if $\gcd(a, n)= 1$, then there exists integers $x, y$ such that $ax + ny= 1$. Taking this equation modulo $n$, we immediately see that $ax \equiv 1 \mod n$. But then $x$ is the inverse of $a$ modulo $n$, i.e. $a$ is invertible. Now observe $\gcd(7, 63)= 7$. Therefore, 7 is not invertible modulo 63. \pvspace{1.5cm}
+
+
+
+% Quiz 18
+\quizsol \textit{True/False}: If $P(A \cap B)= 0$, then $A$ and $B$ are independent. \pspace
+
+\sol The statement is \textit{false}. If $P(A \cap B)= 0$, then $A$ and $B$ are disjoint events. But disjoint events can never be independent. If events are disjoint, then the events cannot happen at the same time. But then if one of the events occurs, the other cannot. If the other event is not impossible, then the occurrence or non-occurrence of one event affects the probability of the other occurring, which cannot for independent events.
 
 
 \end{document}
