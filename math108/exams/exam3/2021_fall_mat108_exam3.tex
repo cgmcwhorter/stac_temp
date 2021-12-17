@@ -1,0 +1,163 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 3}
+\newcommand{\term}{Fall -- 2021}
+\newcommand{\examdate}{12/16/2021}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question The probabilities of several events in a finite probability space are given below:
+	\[
+	\begin{aligned}
+	P(A)&= 0.60 & P(C)&= 0.35 \\
+	P(B)&= 0.45 & P(D)&= 0.80 \\
+	P(B \text{ and }D)&= 0.50 & P(D \;|\;C)&= 0.70
+	\end{aligned}
+	\]
+
+\begin{parts}
+\part[3] Assuming $A$ and $B$ are independent events, find $P(A \text{ or } B)$.
+\part[1] Assume $A$ and $C$ are disjoint events. Find $P(A \text{ or }C)$.
+\part[3] Can $A$ and $C$ be independent events? Explain.
+\part[2] Find $P(C \text{ and } D)$. 
+\part[3] Find $P(B \;|\; D)$. Can $B$ and $D$ be independent? Explain. 
+\part[3] Can $A$ and $D$ be disjoint events? Explain. 
+\end{parts} 
+
+
+
+
+
+% Question 2
+\newpage
+\question In a post-apocalyptic world, Santa is making a list and checking it twice. Of course, the list consists of all the types of people in the world: naughty, nice, and Jeff Goldblum. A breakdown of the people across the populated continents is given below:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c||c|} \hline
+	& North America & South America & Europe & Asia & Africa & Total \\ \hline
+	Naughty & $955$ & $857$ & $778$ & $3250$ & $1350$ & $7190$ \\ \hline
+	Nice & $623$ & $706$ & $795$ & $5201$ & $1066$ & $8391$ \\ \hline
+	Jeff Goldblum & $1$ & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline \hline
+	Total & $1579$ & $1563$ & $1573$ & $8451$ & $2416$ & $15582$ \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{parts}
+\part[2] Find the probability that a randomly selected person is from Asia. 
+\part[2] Find the probability that a randomly selected person was naughty.
+\part[2] Find the probability that a randomly selected person was a nice person from Europe.
+\part[2] Find the probability that a randomly selected person from North America was Jeff Goldblum. 
+\part[2] Find the probability that a randomly selected person from South America or Africa was nice. 
+\end{parts}
+
+
+
+
+
+% Question 3
+\newpage
+\question A class was polled on whether they liked dogs, cats, or neither. Of the 16 students in the room, eight (correctly) preferred dogs, three (incorrectly) preferred cats, and one student (partially correctly) could not decide between the two and said that they preferred both. Find the probability that a randomly selected student\dots
+        \begin{parts}
+        \part[3] \dots preferred either dogs or cats.
+        \part[3] \dots preferred neither dogs nor cats.
+        \part[3] \dots preferred only dogs.
+        \part[3] \dots did not prefer cats.
+        \part[3] \dots that preferred dogs also enjoyed cats. 
+        \end{parts}
+
+
+
+
+
+% Question 4
+\newpage
+\question It is the holiday season and a popular topic of conversation are the actors and actresses of Hollywood. Of mothers across the country, only 40\% know the actor Benedict Cumberbatch. Mothers that know the actor pronounce his name correctly only 50\% of the time---the rest referring to him as `Bernadette Kamberbench.' For mothers that do not know the actor, only 30\% pronounce his name correctly---the rest calling him `Barnacle Clampersnatch.' Find the probability that a randomly selected mother\dots
+
+\begin{parts}
+\part[3] \dots will know Benedict Cumberbatch.
+\part[3] \dots will know Benedict Cumberbatch and correctly pronounce his name.
+\part[3] \dots will correctly pronounce Benedict Cumberbatch's name.
+\part[3] \dots will know Benedict Cumberbatch or pronounce his name correctly.
+\part[3] \dots that mispronounces Benedict Cumberbatch's name will refer to him as `Barnacle Clampersnatch.'
+\end{parts}
+
+
+
+
+
+% Question 5
+\newpage
+\question Rather than grade final exams, a professor instead gives out final exam grades using a `Squid Game' system. The proportion of students that made it to a given round before being `removed' is given below. 
+	\begin{table}[!ht]
+	\centering 
+	\begin{tabular}{|c||c|c|c|c|c|} \hline 
+	$n$ & $1$ & $2$ & $3$ & $4$ & $5$ \\ \hline 
+	$P(n)$ & $\dfrac{7\rule{0pt}{2.9ex}}{18\rule[-1.3ex]{0pt}{0pt}}$ & $\dfrac{5}{18}$ & $\dfrac{3}{18}$ & $\dfrac{2}{18}$ & \phantom{$\dfrac{00}{00}$} \\ \hline 
+	\end{tabular}
+	\end{table} \par
+If a student makes it to round five, four, three, two, or one, they receive a 100, 80, 70, 65, and 50 on the final exam, respectively. 
+
+\begin{parts}
+\part[4] Find the probability that a student made it to round five. 
+\part[3] What is the probability that a student makes it to at most round three?
+\part[3] Assuming student performance is independent, what is the probability that two randomly selected students both only made it to round one?
+\part[5] Given this grading scheme, find the average final exam grade. 
+\end{parts}
+
+
+
+
+
+% Question 6
+\newpage
+\question Most people would walk 500~miles for you. But when asked how many more miles that they would walk for you, the results were normally distributed with mean 500~miles and standard deviation 80~miles. 
+\begin{parts}
+\part[3] Find the probability that a randomly selected person would walk less than an additional 415~miles for you. 
+\part[3] Find the probability that a randomly selected person would walk more than an additional 600~miles for you.
+\part[3] Find the probability that a randomly selected person would walk between an additional 415~miles and 600~miles for you. 
+\part[3] How many additional miles would you have to walk to be in the top 7\% of people that would walk additional miles for you?
+\part[3] If you randomly selected a group of 8 people, what is the probability that the average amount of additional miles that they would walk for you is less than 415~miles?
+\end{parts}
+
+
+
+
+
+% Question 7
+\newpage
+\question A certain Sunrise Bay star is creating a commercial for a small, unpretentious winery---one that pampers its fruit like its own babies, bringing a musk melon goodness to their oak Chardonnay and dazzling peach cral-bapple to their Riesling Rioja. The probability that the actress---who shall remain unnamed---pronounces the owner's name correctly during a given take is only 15\%. Assume the commercial is shot using 11 takes. 
+\begin{parts}
+\part[3] Find the probability that the actress says the name correctly in exactly 4 of the takes.
+\part[3] Find the probability that the actress says the name correctly in at least 3 of the takes.
+\part[3] Find the probability that the access says the name correctly in at least 1 of the takes.
+\part[3] Find the probability that the access says the name correctly in less than 6 of the takes.
+\part[3] Find the probability that the access says the name correctly in all the takes. 
+\end{parts}
+
+
+\end{questions}
+\end{document}
