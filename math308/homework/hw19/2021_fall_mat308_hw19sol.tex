@@ -6,7 +6,7 @@
 % Content
 % -------------------
 \begin{document}
-\homework{}
+\homework{\textit{Caleb McWhorter --- Solutions}}
 
 % Problem 1
 \problem{10} Consider the following graph:
@@ -26,6 +26,58 @@
 \item Does the graph $G \setminus \{ v_6 \}$ have an Eulerian circuit? Find one or explain why none exists.  
 \item Does the graph $G \setminus \{ v_6 \}$ have an Hamiltonian circuit? Find one or explain why none exists.  
 \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item This graph is undirected. 
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	V(G)&= \{ v_1, v_2, v_3, v_4, v_5, v_6 \} \\[0.3cm]
+	E(G)&= \{ e_1, e_2, e_3, e_4, e_5, e_6, e_7, e_8 \} \\
+	&= \{ \{v_1, v_3\}, \{v_1, v_2\}, \{v_2, v_3\}, \{v_2, v_3\}, \{v_2, v_4\}, \{v_3, v_4\}, \{v_3, v_5\}, \{v_4, v_5\} \}
+	\end{aligned}
+	\]
+
+\item 
+	\[
+	A= 
+	\begin{pmatrix}
+	0 & 1 & 1 & 0 & 0 & 0 \\
+	1 & 0 & 2 & 1 & 0 & 0 \\
+	1 & 2 & 0 & 1 & 1 & 0 \\
+	0 & 1 & 1 & 0 & 1 & 0 \\
+	0 & 0 & 1 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 & 0 
+	\end{pmatrix}
+	\]
+
+\item There are multiple edges as there are two edges between $v_2$ and $v_3$. Therefore, the graph is not simple. 
+
+\item The vertex $v_6$ is isolated. 
+
+\item The only pair of parallel edges are $e_3$ and $e_4$. 
+
+\item For each $i$, we compute the degree of vertex $v_i$, denoted $\deg_i$. 
+	\[
+	\begin{aligned}
+	v_1&= 2 & v_4&= 3 \\
+	v_2&= 4 & v_5&= 2 \\
+	v_3&= 5 & v_6&= 0
+	\end{aligned}
+	\]
+Then the degree of $G$ is\dots
+	\[
+	\deg G= \sum \deg_i= 2 + 4 + 5 + 3 + 2 + 0= 16
+	\]
+
+\item There is no walk from $v_1$ to $v_6$; therefore, $v_1$ and $v_6$ are not connected. However, there is a walk from $v_1$ to $v_4$, e.g. $e_2, e_5$ or $e_1, e_3, e_2, e_1, e_7, e_8$; therefore, $v_1$ and $v_4$ are connected. 
+
+\item Recall that if a graph $G$ is connected and the degree of every vertex of $G$ is a positive even integer, then $G$ has an Euler circuit. Therefore, if $G$ does not have an Eulerian circuit then either $G$ is not connected or not every vertex of $G$ has positive even degree.  The graph $G \setminus \{ v_6 \}$ is connected but not every vertex has positive even degree. For instance, the vertex $v_4$ has degree 3. Therefore, $G$ does not have an Eulerian circuit. 
+
+\item The graph $G \setminus \{ v_6 \}$ has a Hamiltonian circuit. For instance, beginning at $v_1$, the walk $e_1, e_7, e_8, e_5, e_2$ forms a Hamiltonian circuit. 
+\end{enumerate}
 
 
 
@@ -55,6 +107,42 @@
 \item Does the graph have an Eulerian circuit? Find one or explain why none exists.  
 \item Does the graph have an Hamiltonian circuit? Find one or explain why none exists.  
 \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item This graph is directed. 
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	V(G)&= \{ v_1, v_2, v_3, v_4, v_5, v_6 \} \\[0.3cm]
+	E(G)&= \{ e_1, e_2, e_3, e_4, e_5, e_6, e_7, e_8 \} \\
+	&= \{ (v_1, v_2), (v_3, v_2), (v_4, v_1), (v_2, v_4), (v_2, v_5), (v_3, v_5), (v_4, v_6), (v_5, v_8) \}
+	\end{aligned}
+	\]
+
+\item 
+	\[
+	A=
+	\begin{pmatrix}
+	0 & 1 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 1 & 1 & 0 \\
+	0 & 1 & 0 & 0 & 1 & 0 \\
+	1 & 0 & 0 & 0 & 0 & 1 \\
+	0 & 0 & 0 & 0 & 0 & 1 \\
+	0 & 0 & 0 & 0 & 0 & 0 \\
+	\end{pmatrix}
+	\]
+
+\item There are no multiple edges or loops in $G$. Therefore, $G$ is a simple graph. 
+
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
 
 
 
@@ -204,6 +292,16 @@ For each of the following operations, either compute the given expression or exp
 \item $CA$
 \end{enumerate} \pspace
 
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\item 
+\item  
+\end{enumerate}
+
 
 
 
@@ -226,6 +324,14 @@ For each of the following operations, either compute the given expression or exp
 \item Compute the number of walks from $v_1$ to $v_3$ of lengths one, two, three, and four, respectively. 
 \item Compare your answers from (b) and (c). Make a conjecture on what the $a_{ij}$ entry of $A^k$ represents. 
 \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
 
 
 
