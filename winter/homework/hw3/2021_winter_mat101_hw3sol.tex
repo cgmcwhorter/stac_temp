@@ -1,0 +1,455 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 01/06}{Who's the one who didn't bring lice into the office? Meredith. Sure, I gave everybody pink eye once, and my ex keyed a few of their cars, and yeah, I BM'ed in the shredder on New Years. But I didn't bring the lice in. That was all Pam.}{Meredith Palmer, The Office}
+
+% Problem 1
+\problem{10} Compute the following:
+\begin{enumerate}[(a)]
+\item 60\% of 77
+\item 32\% of 1230
+\item 89\% of 151
+\item 140\% of 290
+\item 225\% of 45
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	77(0.60)= 46.2
+	\] \pspace
+
+\item 
+	\[
+	1230(0.32)= 393.6
+	\] \pspace
+
+\item 
+	\[
+	151(0.89)= 134.39
+	\] \pspace
+
+\item 
+	\[
+	290(1.40)= 406
+	\] \pspace
+
+\item 
+	\[
+	45(2.25)= 101.25
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Compute the following:
+\begin{enumerate}[(a)]
+\item 57 increased by 15\%
+\item 630 decreased by 40\%
+\item 485 decreased by 96\%
+\item 110 increased by 120\%
+\item 78 increased by 230\%
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	57(1 + 0.15)= 57(1.15)= 65.55
+	\] \pspace
+
+\item 
+	\[
+	630(1 - 0.40)= 630(0.60)= 378
+	\] \pspace
+
+\item 
+	\[
+	485(1 - 0.96)= 485(0.04)= 19.4
+	\] \pspace
+
+\item 
+	\[
+	110(1 + 1.20)= 110(2.20)= 242
+	\] \pspace
+
+\item 
+	\[
+	78(1 + 2.30)= 78(3.30)= 257.4
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose you invest \$5,600 in an account that earns 6\% annual interest compounded quarterly. 
+\begin{enumerate}[(a)]
+\item Write a function which gives the amount of money in the account after $t$ years.
+\item Find the amount of money in the account after 7 years. 
+\item Find the amount of money in the account after 27~months. 
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item Let $M(t)$ be the amount of money in the account after $t$ years. Because the interest is compounded discretely, we know that $M(t)= P(1 + \frac{r}{k})^{kt}$, where $P$ is the principal, $r$ is the yearly interest (as a decimal), and $k$ is the compounding rate per year. We know also that $P= 5600$, $r= 0.06$, and $k= 4$ (because the compounding is quarterly, i.e. 4 times per year). Therefore, 
+	\[
+	M(t)= P \left(1 + \dfrac{r}{k} \right)^{kt}= 5600 \left( 1 + \dfrac{0.06}{4} \right)^{4t}= 5600(1.015)^{4t}
+	\] \pspace
+
+\item Because we are looking for the amount of money after 7~years, we know that $t= 7$.
+	\[
+	M(7)= 5600(1.015)^{4 \cdot 7}= 5600(1.015)^{28}= 5600(1.51722)= \$8496.44
+	\] \pspace
+
+\item We need the time, $t$, to be in years. We know that 27~months is $\frac{27}{12}= 2.25$~years. But then we have\dots
+	\[
+	M(2.25)= 5600(1.015)^{4 \cdot 2.25}= 5600(1.015)^9= 5600(1.14339)= \$6402.98
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose you invested money in an account which compounds interest discretely. The amount of money in the account after $t$ years is given by $M(t)= 683(1.0175)^{2t}$.
+\begin{enumerate}[(a)]
+\item How much was initially invested in the account?
+\item How often is the interest compounded?
+\item What is the interest rate on the account?
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item Because the interest is compounded discretely, we know that $M(t)= P(1 + \frac{r}{k})^{kt}$, where $P$ is the principal, $r$ is the yearly interest (as a decimal), and $k$ is the compounding rate per year. Because we know that $M(t)= 683(1.0175)^{2t}$, we must have\dots
+	\[
+	\begin{aligned}
+	M(t)= P \left( 1 + \frac{r}{k} \right)^{kt}&= 683(1.0175)^{2t} \\
+	P&= 683 \\
+	1 + \dfrac{r}{k}&= 1.0175 \\
+	kt&= 2t
+	\end{aligned}
+	\]
+So we immediately know that $P= 683$, i.e. the initial amount invested in the account was \$683. From the last equation, we know that $kt= 2t$ for all $t$, i.e. $k= 2$. Therefore, the interest is being compounded twice per year, i.e. semiannually. But then we have\dots
+	\[
+	\begin{aligned}
+	1 + \dfrac{r}{k}&= 1.0175 \\[0.3cm]
+	1 + \dfrac{r}{2}&= 1.0175 \\[0.3cm]
+	\dfrac{r}{2}&= 0.0175 \\[0.3cm]
+	r&= 0.0175 \cdot 2 \\[0.3cm]
+	r&= 0.035
+	\end{aligned}
+	\]
+Therefore, the yearly interest rate is 3.5\%. \pspace
+
+\item From the work in part (a), we found that the interest is compounded twice per year, i.e. semiannually. \pspace
+
+\item From the work in part (a), we know that the interest rate is 3.5\%. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} A carton containing a dozen eggs costs \$3.26.
+\begin{enumerate}[(a)]
+\item What is the cost per egg?
+\item Approximately how much should 75 eggs cost?
+\item How many eggs could one purchase for \$27.30?
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{\$3.26}{12 \text{ eggs}}= \dfrac{3.26}{12} \text{ \$/egg}= 0.271667 \text{ \$/egg}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\dfrac{0.271667\; \$}{1 \text{ egg}}&= \dfrac{x}{75 \text{ eggs}} \\[0.3cm]
+	x&= 75 \text{ eggs} \cdot (0.271667 \text{ \$/egg }) \\[0.3cm]
+	x&= \$20.375 \approx \$20.38
+	\end{aligned}
+	\]
+	
+	\begin{center} {\bfseries OR} \end{center}
+	\[
+	\begin{aligned}
+	0.271667 \text{ \$/egg} \cdot 75 \text{ eggs}= \$20.375 \approx \$20.38
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\dfrac{0.271667\; \$}{1 \text{ egg}}&= \dfrac{\$27.30}{x \text{ eggs}} \\[0.3cm]
+	0.271667 \text{ \$/egg } x&= \$27.30 \\[0.3cm]
+	x&= \dfrac{\$27.30}{0.271667 \text{ \$/egg}} \\[0.3cm]
+	x&= 100.491 \text{ eggs} \approx 100 \text{ eggs}
+	\end{aligned}
+	\]
+	
+	\begin{center} {\bfseries OR} \end{center}
+	\[
+	\begin{aligned}
+	\dfrac{\$27.30}{0.271667 \text{ \$/egg}}= 100.491 \text{ eggs} \approx 100 \text{ eggs}
+	\end{aligned}
+	\] \pspace
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Assume you have been driving on a highway for 3~hours and have traveled 191~miles.
+\begin{enumerate}[(a)]
+\item What is your average rate of speed?
+\item Assuming you continue at this rate of speed, how far will you have traveled 4.5~hours from now?
+\item Continuing at this speed, how long would it take to travel an additional 500~miles?
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{191 \text{ miles}}{3 \text{ hours}}= \dfrac{191}{3} \text{ mph}= 63.67 \text{ mph}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	d&= vt \\[0.3cm]
+	d&= 63.67 \text{ mph} \cdot 4.5 \text{ hours} \\[0.3cm]
+	d&= 286.515 \text{ miles}
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	d&= vt \\[0.3cm]
+	500 \text{ miles}&= 63.67 \text{ mph} \cdot t \\[0.3cm]
+	t&= \dfrac{500 \text{ miles}}{63.67 \text{ mph}} \\[0.3cm]
+	t&= 7.85 \text{ hours}
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} The bones on a certain species of bird are approximately proportional to its wingspan. For one of its subspecies, a bird with a wing bone length of 1.5~ft has a wing span of 8.3~ft. 
+\begin{enumerate}[(a)]
+\item If you find the remains of another bird of this subspecies with a bone length of 2.2~ft, how much would you estimate its wingspan was?
+\item If a bird of this subspecies has a wingspan of 7.9~ft, how long would you estimate the bone in its wing to be?
+\item Suppose you find a different species of bird with a wingspan of 3.8~ft and bone length of 0.79~ft. Do these two species of birds have approximately the same proportion of wingspan to bone length?
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	\dfrac{1.5 \text{ ft}}{8.3 \text{ ft}}&= \dfrac{2.2 \text{ ft}}{x} \\[0.3cm]
+	1.5x&= 8.3 \cdot 2.2 \\[0.3cm]
+	1.5x&= 18.26 \\[0.3cm]
+	x&= 12.1733 \text{ ft}
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\dfrac{1.5 \text{ ft}}{8.3 \text{ ft}}&= \dfrac{x}{7.9 \text{ ft}} \\[0.3cm]
+	x&= 7.9 \cdot \dfrac{1.5}{8.3} \\[0.3cm]
+	x&= 7.9 \cdot 0.180723 \\[0.3cm]
+	x&= 1.42771 \text{ ft}
+	\end{aligned}
+	\] \pspace
+ 
+\item 
+	\[
+	\begin{aligned}
+	\dfrac{1.5 \text{ ft}}{8.3 \text{ ft}} &\stackrel{?}{\approx} \dfrac{0.79 \text{ ft}}{3.8 \text{ ft}} \\[0.3cm]
+	0.180723 &\stackrel{?}{\approx} 0.207895
+	\end{aligned}
+	\] 
+Because these are not `approximately' equal (0.207895 is an approximately 15\% increase from the 0.180723), these birds to not have `approximately' the same proportions. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Convert the following:
+\begin{enumerate}[(a)]
+\item 15~ft to m [1~ft $= 0.3048$~m]
+\item 15~ft to km [1000~m $=$ 1~km]
+\item 6400~ft to km
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	15~ft & 0.3048~m \\ \hline
+		 & 1~ft  
+	\end{tabular}
+	= 4.572~m
+	\end{table}
+ 
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	15~ft & 0.3048~m & 1~km \\ \hline
+		& 1~ft 	   & 1000~m
+	\end{tabular}
+	= 0.004572~km
+	\end{table} 
+
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	6400~ft & 0.3048~m & 1~km \\ \hline
+		     & 1~ft 	     & 1000~m
+	\end{tabular}
+	= 1.95072~km
+	\end{table} 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 9
+\problem{10} Convert the following:
+\begin{enumerate}[(a)]
+\item 17~hours to days [24~hours $=$ 1~day]
+\item 27~oz to tons [16~oz $=$ 1~lb; 2000~lb $=$ 1~ton]
+\item 2.3~mi to in [1~mi $=$ 5280~ft; 1~ft $=$ 12~in]
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	17~hours & 1~day \\ \hline
+		        & 24~hours 
+	\end{tabular}
+	= 0.708333~days
+	\end{table}
+
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	27~oz & 1~lb & 1~ton \\ \hline
+		   & 16~oz & 2000~lb
+	\end{tabular}
+	= 0.00084375~tons= $8.4375 \cdot 10^{-4}$~tons
+	\end{table}
+
+\item  \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	2.3~mi & 5280~ft & 12~in \\ \hline
+		    & 1~mi     & 1~ft
+	\end{tabular}
+	= 145728~in
+	\end{table}
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 10
+\problem{10} Convert the following:
+\begin{enumerate}[(a)]
+\item 400~ft$^2$ to in$^2$ [12~in $=$ 1~ft]
+\item 60~mph to ft per second [1~mi $=$ 5280~ft; 1~hr $=$ 3600~s]
+\item 9.8~m/s$^2$ to ft/hr$^2$ [1~m $=$ 3.28084~ft; 3600~s $=$ 1~hr]
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	400~ft$^2$ & 12~in & 12~in \\ \hline
+			  & 1~ft    & 1~ft
+	\end{tabular}
+	= 57600~in$^2$
+	\end{table}
+
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	60~mi     & 5280~ft & 1~hr \\ \hline
+	1~hr	       & 1~mi     & 3600~s
+	\end{tabular}
+	= 88~ft/s
+	\end{table}
+
+\item \phantom{.} \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	9.8~m     & 3.28084~ft & 3600~s & 3600~s \\ \hline
+	1~s$^2$ & 1~m		   & 1~hr      & 1~hr
+	\end{tabular}
+	= 416692926.72~ft/s$^2 \approx$ $4.16693 \cdot 10^8$~ft/s$^2$
+	\end{table}
+\end{enumerate}
+
+
+\end{document}

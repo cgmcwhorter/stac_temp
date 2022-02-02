@@ -1,0 +1,111 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	%amsmath,
+	enumerate,
+	%float,
+	graphicx,
+	%hyperref,
+	lastpage,
+	%titling
+}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+% New Stuff
+\usepackage{xcolor}
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks 	= true,
+  	linkcolor  	= stacred,
+  	urlcolor   	= stacred
+}
+\renewcommand\UrlFont{\normalfont}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\setlength{\parindent}{0pt}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{}
+\renewcommand{\footrulewidth}{0.0pt}
+}
+\headheight=14pt
+\footskip=14pt
+
+\pagestyle{pages}
+
+
+% -------------------
+% Section Headers
+% -------------------
+
+% Title
+\newcommand{\mytitle}[1]{%
+\begin{center}
+\thispagestyle{empty}
+\includegraphics[width=\textwidth]{college_title.png} \par\vspace{-0.2cm}
+\huge\color{stacred} \coursenumber: \coursetitle \par
+\color{stacred} \semester\ \courseyear\
+\end{center} \par\vspace{\baselineskip}%
+}
+
+% Section
+\newcommand{\mysection}[2]{%
+\begin{minipage}{\textwidth}
+\phantomsection
+	{%
+\large\bfseries\color{stacred}
+#2 \par\vspace{-0.62\baselineskip}
+\noindent\rule{#1\textwidth}{1.5pt} \par
+\vspace{-0.3cm}\noindent\rule{0.13\textwidth}{5.1pt}%
+	}%
+\end{minipage}\par\vspace{4\lineskip}%
+}
+
+% Header
+\newcommand{\lefthead}[1]{\noindent{\large\bfseries\color{stacred}#1}\par}
+
+% Large Header
+\newcommand{\largeheader}[2]{\noindent{\LARGE\bfseries\color{stacred}#2}\par\vspace{#1}}
+
+
+% -------------------
+% Commands
+% -------------------
+\newcommand{\sectionbreak}{\par\vspace{2\baselineskip}}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\pvspace}[1]{\par\vspace{#1}}

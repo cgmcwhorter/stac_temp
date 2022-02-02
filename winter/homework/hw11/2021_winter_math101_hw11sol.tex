@@ -1,0 +1,284 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{11: Due 01/21}{Yeah, I'm not a temp anymore. I got Jim's old job. Which means at my 10-year high school reunion, it will not say `Ryan Howard is a temp.' It will say, `Ryan Howard is a junior sales associate at a mid-range paper supply firm.' That’ll show 'em.}{Ryan Howard, The Office}
+
+% Problem 1
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $\log_3(27) - \log_3(3) + \log_3(1)$
+	\item $\log_6 \left(\dfrac{1}{36} \right)$
+	\item $\log_{12}(12^{1/5})$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\log_3(27) - \log_3(3) + \log_3(1)= \log_3(3^3) - \log_3(3^1) + \log_3(3^0)= 3 - 1 + 0= 2
+	\] \pspace
+
+\item 
+	\[
+	\log_6 \left(\dfrac{1}{36}\right)= \log_6(36^{-1})= \log_6\left((6^2)^{-1}\right)= \log_6(6^{-2})= -2
+	\] \pspace
+
+\item 
+	\[
+	\log_{12}(12^{1/5})= \dfrac{1}{5}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $\ln(e^2) + 3 \ln(1)$
+	\item $\ln(\sqrt[3]{e})$
+	\item $\ln(e^{4/3})$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\ln(e^2) + 3 \ln(1)= \ln(e^2) + 3 \ln(e^0)= 2 + 3(0)= 2 + 0= 2
+	\] \pspace
+
+\item 
+	\[
+	\ln(\sqrt[3]{e})= \ln(e^{1/3})= \dfrac{1}{3}
+	\] \pspace
+
+\item 
+	\[
+	\ln(e^{4/3})= \dfrac{4}{3}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, write the following in terms of $\log x$ and $\log y$.
+	\[
+	\log_6\left( \dfrac{36x^5}{\sqrt{y}} \right)
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\log_6\left( \dfrac{36x^5}{\sqrt{y}} \right)&= \log_6(36x^5) - \log_6(\sqrt{y}) \\[0.3cm]
+	&= \log_6(36) + \log_6(x^5) - \log_6(\sqrt{y}) \\[0.3cm]
+	&= \log_6(6^2) + \log_6(x^5) - \log_6(y^{1/2}) \\[0.3cm]
+	&= 2 + 5\log_6(x) - \dfrac{1}{2}\,\log_6(y) \\[0.3cm]
+	&= 5\log_6(x) - \dfrac{1}{2}\,\log_6(y) + 2 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, write the following in terms of $\log x$, $\log y$, and $\log z$. 
+	\[
+	\ln\left( \dfrac{z^6 \sqrt[3]{x^2}}{y^5} \right)
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\ln\left( \dfrac{z^6 \sqrt[3]{x^2}}{y^5} \right)&= \ln(z^6 \sqrt[3]{x^2}) - \ln(y^5) \\[0.3cm]
+	&= \ln(z^6) + \ln(\sqrt[3]{x^2}) - \ln(y^5) \\[0.3cm]
+	&= \ln(z^6) + \ln(x^{2/3}) - \ln(y^5) \\[0.3cm]
+	&= 6\ln(z) + \dfrac{2}{3}\, \ln(x) - 5\ln(y) 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Without using negative powers, write the following as a single logarithm: 
+	\[
+	-6\log_2(x) + \frac{3}{2}\, \log_2(y) - 8
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	-6\log_2(x) + \frac{3}{2}\, \log_2(y) - 8&= -6\log_2(x) + \frac{3}{2}\, \log_2(y) - \log_2(2^8) \\[0.3cm]
+	&= \log_2(x^{-6}) + \log_2(y^{3/2}) - \log_2(2^8) \\[0.3cm]
+	&= \log_2(x^{-6} y^{3/2}) - \log_2(2^8) \\[0.3cm]
+	&= \log_2 \left( \dfrac{x^{-6} y^{3/2}}{2^8} \right) \\[0.3cm]
+	&= \log_2 \left( \dfrac{y^{3/2}}{2^8x^6} \right) \\[0.3cm]
+	&= \log_2 \left( \dfrac{\sqrt{y^3}}{256x^6} \right) 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Without using negative powers, write the following as a single logarithm: 
+	\[
+	\dfrac{6\ln x - 2\ln y + \ln z}{2}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\dfrac{6\ln x - 2\ln y + \ln z}{2}&= 3\ln(x) - \ln(y) + \dfrac{1}{2}\,\ln(z) \\[0.3cm]
+	&= \ln(x^3) - \ln(y) + \ln(z^{1/2}) \\[0.3cm]
+	&= \ln \left( \dfrac{x^3}{y} \right) + \ln(z^{1/2}) \\[0.3cm]
+	&= \ln \left( \dfrac{x^3z^{1/2}}{y} \right) \\[0.3cm]
+	&= \ln \left( \dfrac{x^3 \sqrt{z}}{y} \right) 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Showing all your work, solve the following equation: 
+	\[
+	\log_5(2x - 3) + 8= 10
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\log_5(2x - 3) + 8&= 10 \\[0.3cm]
+	\log_5(2x - 3)&= 2 \\[0.3cm]
+	5^{\log_5(2x - 3)}&= 5^2 \\[0.3cm]
+	2x - 3&= 25 \\[0.3cm]
+	2x&= 28 \\[0.3cm]
+	x&= 14 \\[0.3cm]
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Showing all your work, solve the following equation: 
+	\[
+	\ln(1 - x)= \dfrac{2}{3}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\ln(1 - x)&= \dfrac{2}{3} \\[0.3cm]
+	e^{\ln(1 - x)}&= e^{2/3} \\[0.3cm]
+	1 - x&= e^{2/3} \\[0.3cm]
+	x&= 1 - e^{2/3}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 9
+\problem{10} Showing all your work, solve the following equation: 
+	\[
+	11^{-x} - 12= 20
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	11^{-x} - 12&= 20 \\[0.3cm]
+	11^{-x}&= 32 \\[0.3cm]
+	\log_{11}(11^{-x})&= \log_{11}(32) \\[0.3cm]
+	-x&= \log_{11}(32) \\[0.3cm]
+	x&= -\log_{11}(32) \\[0.3cm]
+	\end{aligned}
+	\] 
+Note: We can also write this as $x= -\log_{11}(32)= \log_{11}(32^{-1}= \log_{11} \left( \dfrac{1}{32} \right)$. 
+
+\begin{center} {\bfseries OR} \end{center}
+	\[
+	\begin{aligned}
+	11^{-x} - 12&= 20 \\[0.3cm]
+	11^{-x}&= 32 \\[0.3cm]
+	\ln(11^{-x})&= \ln(32) \\[0.3cm]
+	-x \ln(11)&= \ln(32) \\[0.3cm]
+	x&= -\dfrac{\ln(32)}{\ln(11)}
+	\end{aligned}
+	\] 
+Note: By the change of base equation, we know that $-\dfrac{\ln(32)}{\ln(11)}= -\log_{11}(32)$. 
+
+
+
+\newpage
+
+
+
+% Problem 10
+\problem{10} Showing all your work, solve the following equation: 
+	\[
+	2\ln(x) - 4= 6 - \ln(x)
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	2\ln(x) - 4&= 6 - \ln(x) \\[0.3cm]
+	3\ln(x)&= 10 \\[0.3cm]
+	\ln(x)&= \dfrac{10}{3} \\[0.3cm]
+	e^{\ln(x)}&= e^{10/3} \\[0.3cm]
+	x&= \sqrt[3]{e^{10}}
+	\end{aligned}
+	\] 
+
+\begin{center} {\bfseries OR} \end{center}
+
+	\[
+	\begin{aligned}
+	2\ln(x) - 4&= 6 - \ln(x) \\[0.3cm]
+	3\ln(x)&= 10 \\[0.3cm]
+	\ln(x^3)&= 10 \\[0.3cm]
+	e^{\ln(x^3)}&= e^{10} \\[0.3cm]
+	x^3&= e^{10} \\[0.3cm]
+	x&= e^{10/3}
+	\end{aligned}
+	\] 
+
+
+\end{document}

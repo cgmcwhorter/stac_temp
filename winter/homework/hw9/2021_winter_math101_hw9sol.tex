@@ -1,0 +1,363 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{9: Due 01/19}{When Pam gets Michael's old chair, I get Pam's old chair. Then I'll have two chairs. Only one to go.}{Creed Bratton, The Office}
+
+% Problem 1
+\problem{10} Explain why the following system of equations does or does not have a solution:
+	\[
+	\left\{\begin{aligned}
+	-2x + 3y&= -15 \\
+	4x + 6y&= 6
+	\end{aligned}\right.
+	\] \pspace
+
+\sol We solve for $y$ in each of the equations:
+	\[
+	\begin{aligned}
+	-2x + 3y&= -15 &\hspace{1.5cm} 4x + 6y&= 6 \\
+	3y= 2x &- 15 & 6y= -4x &+ 6 \\
+	y= \frac{2}{3}\,x &- 5 & y= -\frac{2}{3}\,x &+ 1
+	\end{aligned}
+	\]
+The slope of the first line is $m_1= \frac{2}{3}$ and the slope of the second line is $m_2= -\frac{2}{3}$. Because $m_1 \neq m_2$, the lines are not parallel. Therefore, the lines must intersect. [Notice that the $y$-intercepts are different, so that the lines are distinct.] But then the system of equations has a solution. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Determine if the point $(-2, -3)$ is a solution to the following system of equations:
+	\[
+	\begin{aligned}
+	-5x + 3y&= 1 \\
+	6x - 7y&= -33
+	\end{aligned}
+	\] \pspace
+
+\sol If $(-2, -3)$ is a solution to the system of equations, it lies on both the given lines. But then the point satisfies both of the given equations. We check this:
+	\[
+	\begin{aligned}
+	-5x + 3y&= 1 \\
+	-5(-2) + 3(-3)&\stackrel{?}{=} 1 \\
+	10 - 9&\stackrel{?}{=} 1 \\
+	1&\stackrel{\text{\cmark}}{=} 1
+	\end{aligned}
+	\]
+so that $(-2, -3)$ lies along the first line but\dots
+	\[
+	\begin{aligned}
+	6x - 7y&= -33 \\
+	6(-2) - 7(-3)&\stackrel{?}{=} -33 \\
+	-12 + 21&\stackrel{?}{=} -33 \\
+	9&\stackrel{\text{\xmark}}{=} -33
+	\end{aligned}
+	\]
+so that $(-2, -3)$ does not lie along the second line. Therefore, $(-2, -3)$ is not a solution to the system of equations. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, solve the following system of equations:
+	\[
+	\begin{aligned}
+	4x - y&= -11 \\
+	x + 5y&= 13
+	\end{aligned}
+	\] \pspace
+
+\sol Using substitution, we solve for $y$ in the first equation:
+	\[
+	\begin{aligned}
+	4x - y&= -11 \\
+	-y&= -4x - 11 \\
+	y&= 4x + 11
+	\end{aligned}
+	\] 
+Using this in the second equation, we find\dots
+	\[
+	\begin{aligned}
+	x + 5y&= 13 \\
+	x + 5(4x + 11)&= 13 \\
+	x + 20x + 55&= 13 \\
+	21x + 55&= 13 \\
+	21x&= -42 \\
+	x&= -2
+	\end{aligned}
+	\] 
+But then we know that $y= 4x + 11= 4(-2) + 11= -8 + 11= 3$. Therefore, the solution is $(x, y)= (-2, 3)$. 
+	
+\begin{center} {\bfseries OR} \end{center}
+
+Using elimination, we eliminate $x$ by multiplying the second equation by $-4$ and adding the equations:
+	\[
+	\begin{aligned}
+	4x - y&= -11 \\
+	-4x - 20y&= -52 \\ \hline
+	-21y&= -63 \\
+	y&= 3
+	\end{aligned}
+	\] 
+Using the first equation, we have\dots
+	\[
+	\begin{aligned}
+	4x - y&= -11 \\
+	4x - 3&= -11 \\
+	4x&= -8 \\
+	x&= -2
+	\end{aligned}
+	\] 
+Therefore, the solution to the system of equations is $(x, y)= (-2, 3)$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, solve the following system of equations:
+	\[
+	\begin{aligned}
+	4x - 5y&= -6 \\
+	6x + 3y&= 12
+	\end{aligned}
+	\] \pspace
+
+\sol Using substitution, we solve for $y$ in the first equation:
+	\[
+	\begin{aligned}
+	4x - 5y&= -6 \\
+	-5y&= -4x - 6 \\
+	y&= \frac{4}{5}\,x + \frac{6}{5}
+	\end{aligned}
+	\] 
+Using this in the second equation, we find\dots
+	\[
+	\begin{aligned}
+	6x + 3y&= 12 \\
+	6x + 3 \left( \frac{4}{5}\,x + \frac{6}{5} \right)&= 12 \\
+	6x + \frac{12}{5}\,x + \frac{18}{5}&= 12 \\
+	5 \left( 6x + \frac{12}{5}\,x + \frac{18}{5} \right)&= 12 \cdot 5 \\
+	30x + 12 x + 18&= 60 \\
+	42x + 18&= 60 \\
+	42x&= 42 \\
+	x&= 1
+	\end{aligned}
+	\] 
+But then we know that $y= \frac{4}{5} \cdot 1 + \frac{6}{5}= \frac{4}{5} + \frac{6}{5}= \frac{10}{5}= 2$. Therefore, the solution is $(x, y)= (1, 2)$. 
+	
+\begin{center} {\bfseries OR} \end{center}
+
+Using elimination, we eliminate $x$ by multiplying the first equation by 3 and the second equation by $-2$ and adding the equations:
+	\[
+	\begin{aligned}
+	12x - 15y&= -18 \\
+	-12x - 6y&= -24 \\ \hline
+	-21y&= -42 \\
+	y&= 2
+	\end{aligned}
+	\] 
+Using the first equation, we have\dots
+	\[
+	\begin{aligned}
+	4x - 5y&= -6 \\
+	4x - 10&= -6 \\
+	4x&= 4 \\
+	x&= 1
+	\end{aligned}
+	\] 
+Therefore, the solution to the system of equations is $(x, y)= (1, 2)$. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Showing all your work, solve the following system of equations:
+	\[
+	\begin{aligned}
+	3x - 2y&= 7 \\
+	-6x + 3y&= -11
+	\end{aligned}
+	\] \pspace
+
+\sol Using substitution, we solve for $y$ in the first equation:
+	\[
+	\begin{aligned}
+	3x - 2y&= 7 \\
+	-2y&= -3x + 7 \\
+	y&= \frac{3}{2}\,x - \frac{7}{2}
+	\end{aligned}
+	\] 
+Using this in the second equation, we find\dots
+	\[
+	\begin{aligned}
+	-6x + 3y&= -11 \\
+	-6x + 3 \left( \frac{3}{2}\,x - \frac{7}{2} \right)&= -11 \\
+	-6x + \frac{9}{2}\,x - \frac{21}{2}&= -11 \\
+	2 \left( -6x + \frac{9}{2}\,x - \frac{21}{2} \right)&= -11 \cdot 2 \\
+	-12x + 9x - 21&= -22 \\
+	-3x - 21&= -22 \\
+	-3x&= -1 \\
+	x&= \frac{1}{3}
+	\end{aligned}
+	\] 
+But then we know that $y= \frac{3}{2} \cdot \frac{1}{3} - \frac{7}{2}= \frac{1}{2} - \frac{-6}{2}= -3$. Therefore, the solution is $(x, y)= (\frac{1}{3}, -3)$. 
+	
+\begin{center} {\bfseries OR} \end{center}
+
+Using elimination, we eliminate $x$ by multiplying the first equation by 2 and adding the equations:
+	\[
+	\begin{aligned}
+	6x - 4y&= 14 \\
+	-6x + 3y&= -11 \\ \hline
+	-y&= 3 \\
+	y&= -3
+	\end{aligned}
+	\] 
+Using the first equation, we have\dots
+	\[
+	\begin{aligned}
+	3x - 2y&= 7 \\
+	3x + 6&= 7 \\
+	3x&= 1 \\
+	x&= \frac{1}{3}
+	\end{aligned}
+	\] 
+Therefore, the solution to the system of equations is $(x, y)= (\frac{1}{3}, -3)$. 
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Compute the following, simplifying as much as possible:
+	\[
+	\dfrac{x}{x - 1} + \dfrac{x + 1}{x^2 + 4x - 5}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\dfrac{x}{x - 1} + \dfrac{x + 1}{x^2 + 4x - 5}&= \dfrac{x}{x - 1} + \dfrac{x + 1}{(x - 1)(x + 5)} \\[0.3cm]
+	&= \dfrac{x(x + 5)}{(x - 1)(x + 5)} + \dfrac{x + 1}{(x - 1)(x + 5)} \\[0.3cm]
+	&= \dfrac{x^2 + 5x}{(x - 1)(x + 5)} + \dfrac{x + 1}{(x - 1)(x + 5)} \\[0.3cm]
+	&= \dfrac{x^2 + 6x + 1}{(x - 1)(x + 5)} 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Compute the following, simplifying as much as possible:
+	\[
+	\dfrac{3 - x}{x^2 - 4} - \dfrac{5x}{x^2 + 5x -14}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\dfrac{3 - x}{x^2 - 4} - \dfrac{5x}{x^2 + 5x -14}&= \dfrac{3 - x}{(x - 2)(x + 2)} - \dfrac{5x}{(x - 2)(x + 7)} \\[0.3cm]
+	&= \dfrac{(3 - x)(x + 7)}{(x - 2)(x + 2)(x + 7)} - \dfrac{5x(x + 2)}{(x - 2)(x + 2)(x + 7)} \\[0.3cm]
+	&= \dfrac{3x + 21 - x^2 - 7x}{(x - 2)(x + 2)(x + 7)} - \dfrac{5x^2 + 10x}{(x - 2)(x + 2)(x + 7)} \\[0.3cm]
+	&= \dfrac{-x^2 - 4x + 21}{(x - 2)(x + 2)(x + 7)} - \dfrac{5x^2 + 10x}{(x - 2)(x + 2)(x + 7)} \\[0.3cm]
+	&= \dfrac{(-x^2 - 4x + 21) - (5x^2 + 10x)}{(x - 2)(x + 2)(x + 7)} \\[0.3cm]
+	&= \dfrac{-x^2 - 4x + 21 - 5x^2 - 10x}{(x - 2)(x + 2)(x + 7)} \\[0.3cm]
+	&= \dfrac{-6x^2 - 14x + 21}{(x - 2)(x + 2)(x + 7)} 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Compute the following, simplifying as much as possible:
+	\[
+	\dfrac{x^2 + 5x - 6}{x^2 -5x + 24} \cdot \dfrac{x^2 - 9}{x^2 + 8x - 9}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\dfrac{x^2 + 5x - 6}{x^2 -5x + 24} \cdot \dfrac{x^2 - 9}{x^2 + 8x - 9}&= \dfrac{(x - 1)(x + 6)}{(x - 8)(x + 3)} \cdot \dfrac{(x - 3)(x + 3)}{(x - 1)(x + 9)} \\[0.3cm]
+	&= \dfrac{\cancel{(x - 1)}(x + 6)}{(x - 8)\cancel{(x + 3)}} \cdot \dfrac{(x - 3)\cancel{(x + 3)}}{\cancel{(x - 1)}(x + 9)} \\[0.3cm]
+	&= \dfrac{(x - 3)(x + 6)}{(x - 8)(x + 9)}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 9
+\problem{10} Compute the following, simplifying as much as possible:
+	\[
+	\dfrac{\phantom{.}\;\;\;\dfrac{4x^2 - 9}{x^2 + 5x + 4}\;\;\;\phantom{.}}{\dfrac{2x^2 - x - 6}{x^2 - 4x - 32}}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\dfrac{\phantom{.}\;\;\;\dfrac{4x^2 - 9}{x^2 + 5x + 4}\;\;\;\phantom{.}}{\dfrac{2x^2 - x - 6}{x^2 - 4x - 32}}&= \dfrac{4x^2 - 9}{x^2 + 5x + 4} \cdot \dfrac{x^2 - 4x - 32}{2x^2 - x - 6} \\[0.3cm]
+	&= \dfrac{(2x - 3)(2x + 3)}{(x + 1)(x + 4)} \cdot \dfrac{(x - 8)(x + 4)}{(x - 2)(2x + 3)} \\[0.3cm]
+	&= \dfrac{(2x - 3)\cancel{(2x + 3)}}{(x + 1)\cancel{(x + 4)}} \cdot \dfrac{(x - 8)\cancel{(x + 4)}}{(x - 2)\cancel{(2x + 3)}} \\[0.3cm]
+	&= \dfrac{(x - 8)(2x - 3)}{(x - 2)(x + 1)} 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 10
+\problem{10} Compute the following, simplifying as much as possible:
+	\[
+	\dfrac{4x + 3}{x - 10} - \dfrac{\phantom{.}\;\;\;\dfrac{x + 6}{x - 7}\;\;\;\phantom{.}}{\dfrac{x^2 - 4x - 60}{x^2 - 6x - 7}}
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\dfrac{4x + 3}{x - 10} - \dfrac{\phantom{.}\;\;\;\dfrac{x + 6}{x - 7}\;\;\;\phantom{.}}{\dfrac{x^2 - 4x - 60}{x^2 - 6x - 7}}&= \dfrac{4x + 3}{x - 10} - \dfrac{x + 6}{x - 7} \cdot \dfrac{x^2 - 6x - 7}{x^2 - 4x - 60} \\[0.3cm]
+	&= \dfrac{4x + 3}{x - 10} - \dfrac{x + 6}{x - 7} \cdot \dfrac{(x - 7)(x + 1)}{(x - 10)(x + 6)} \\[0.3cm]
+	&= \dfrac{4x + 3}{x - 10} - \dfrac{\cancel{x + 6}}{\cancel{x - 7}} \cdot \dfrac{\cancel{(x - 7)}(x + 1)}{(x - 10)\cancel{(x + 6)}} \\[0.3cm] 
+	&= \dfrac{4x + 3}{x - 10} - \dfrac{x + 1}{x - 10} \\[0.3cm]
+	&= \dfrac{4x + 3 - (x + 1)}{x - 10} \\[0.3cm]
+	&= \dfrac{4x + 3 - x - 1}{x - 10} \\[0.3cm]
+	&= \dfrac{3x - 2}{x - 10}
+	\end{aligned}
+	\]
+
+
+\end{document}
