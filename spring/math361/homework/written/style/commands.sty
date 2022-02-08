@@ -17,3 +17,19 @@
 \newcommand{\pvspace}[1]{\par\vspace{#1}}
 \newcommand{\spaceans}[2]{\ifbool{hideans}{\vspace{#1}}{#2}}
 \newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand\smallO{
+  \mathchoice
+    {{\scriptstyle\mathcal{O}}}% \displaystyle
+    {{\scriptstyle\mathcal{O}}}% \textstyle
+    {{\scriptscriptstyle\mathcal{O}}}% \scriptstyle
+    {\scalebox{.7}{$\scriptscriptstyle\mathcal{O}$}}%\scriptscriptstyle
+  }
+  
+\DeclareMathOperator{\fl}{fl}

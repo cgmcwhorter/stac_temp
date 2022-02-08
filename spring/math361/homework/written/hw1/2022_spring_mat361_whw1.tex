@@ -2,7 +2,7 @@
 \usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
 \usepackage{../style/homework}
 \usepackage{../style/commands}
-\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{quotetype}{false} % True: Side; False: Under
 \setbool{hideans}{true} % Student: True; Instructor: False
 
 % -------------------
@@ -10,160 +10,52 @@
 % -------------------
 \begin{document}
 
-\homework{1: Due 09/28}{Clark Kent is Superman's critique on the whole human race.}{Bill, Kill Bill}
+\homework{1: Due 02/15}{Well, that's no reason to cry. One cries because one is sad. For example, I cry because others are stupid and it makes me sad.}{Sheldon Cooper, The Big Bang Theory}
 
-% Problem 1
-\problem{10} Two relations, $F$ and $G$, are represented below. Are either $F$ or $G$ functions? Explain. 
-	\[
-	\begin{tikzpicture}
-	\node at (2.5,2) {$F$};
-	% Ellipses
-	\draw[line width=0.03cm] (0,0) circle (1 and 2);
-	\draw[line width=0.03cm] (5,0) circle (1 and 2);
-	
-	% Nodes
-	\draw[fill=black] (0,1) circle (0.07);
-	\draw[fill=black] (0,0) circle (0.07);
-	\draw[fill=black] (0,-1) circle (0.07);
-	
-	\draw[fill=black] (5,1) circle (0.07);
-	\draw[fill=black] (5,0) circle (0.07);
-	\draw[fill=black] (5,-1) circle (0.07);
-	
-	% Arrow
-	\draw[line width=0.04cm,->] (0,1) -- (4.9,-1);
-	\draw[line width=0.04cm,->] (0,0) -- (4.9,0);
-	\draw[line width=0.04cm,->] (0,-1) -- (4.9,1);
-	
-	% Labels
-	\node at (-0.3,1) {$1$};
-	\node at (-0.3,0) {$4$};
-	\node at (-0.3,-1) {$6$};
-	
-	\node at (5.4,1) {$-6$};
-	\node at (5.4,0) {$0$};
-	\node at (5.4,-1) {$9$};
-	
-	\tikzset{shift={(8,0)}}
-	%
-	\node at (2.5,2) {$G$};
-	% Ellipses
-	\draw[line width=0.03cm] (0,0) circle (1 and 2);
-	\draw[line width=0.03cm] (5,0) circle (1 and 2);
-	
-	% Nodes
-	\draw[fill=black] (0,1) circle (0.07);
-	\draw[fill=black] (0,0) circle (0.07);
-	\draw[fill=black] (0,-1) circle (0.07);
-	
-	\draw[fill=black] (5,1) circle (0.07);
-	\draw[fill=black] (5,0) circle (0.07);
-	\draw[fill=black] (5,-1) circle (0.07);
-	
-	% Arrow
-	\draw[line width=0.04cm,->] (0,1) -- (4.9,1);
-	\draw[line width=0.04cm,->] (0,0) -- (4.9,1);
-	\draw[line width=0.04cm,->] (0,0) -- (4.9,-1);
-	\draw[line width=0.04cm,->] (0,-1) -- (4.9,-1);
-	
-	% Labels
-	\node at (-0.3,1) {$1$};
-	\node at (-0.3,0) {$4$};
-	\node at (-0.3,-1) {$6$};
-	
-	\node at (5.4,1) {$-6$};
-	\node at (5.4,0) {$0$};
-	\node at (5.4,-1) {$9$};
-	\end{tikzpicture}
-	\]
-
-
-
-
-
-\newpage
-
-
-
-
-
-% Problem 2
-\problem{10} Given the following tables, do $f(x)$ and $g(x)$ represent functions? Explain. 
-	\begin{table}[!ht]
-	\centering \setlength\arrayrulewidth{0.02cm}
-	\begin{tabular}{c|ccc|c} 
-	$x$ & $f(x)$ & \hspace{2cm} & $x$ & $g(x)$ \\ \cline{1-2} \cline{4-5}
-	$1$ & $3$ && $1$ & $4$ \\
-	$2$ & $6$ && $2$ & $1$ \\
-	$3$ & $9$ && $3$ & $4$ \\
-	$4$ & $2$ && $4$ & $5$ \\
-	$5$ & $5$ && $1$ & $3$  
-	\end{tabular}
-	\end{table}
-	
-
-
-\vfill
-\newpage
-
-
-
-% Problem 3
-\problem{10} Does the formula $f(x):= 2.31x + 9.55$ give a function? Explain. If it is a function, describe its graph. 
-
-
-
-
-\vfill 
-
-
-
-% Problem 4
-\problem{10} For each of the following, indicate whether the equation is a linear equation (T), or not (F). 
+% Problem 1. Big Oh
+\problem{Big $\cO$} The following problem will explore $\cO$, $\smallO$, and their relationship. It will also explore the relationship between $\cO$ and Taylor series. 
 	\begin{enumerate}[(a)]
-	\item \uans{1.6cm}: $2x - 3y= 9$
-	\item \uans{1.6cm}: $2x^2 + 5y^2= 7$
-	\item \uans{1.6cm}: $x= 5$
-	\item \uans{1.6cm}: $x= 6- y$
-	\item \uans{1.6cm}: $y= x^2 + x + 1$
+	\item For each of the following sequences $\{ x_n \}$, determine if $x_n= \cO(f_n)$ and $x_n = \smallO(f_n)$ as $x \to \infty$:
+		\begin{enumerate}[(i)]
+		\item $x_n= 5n + 7$, $f_n= n$
+		\item $x_n= 2n^2 + 3n + 1$, $f_n= n^3$
+		\item $x_n= \sqrt{n + 5}$, $f_n= n$
+		\end{enumerate}
+	\item Show that if $x_n= \cO(y_n)$, then $cx_n= \cO(cy_n)$, where $c \in \R$. Is the same true for $\smallO$?
+	\item Determine the `best' integer $k$ such that $e^{2x}= 1 + 2x + \cO(x^k)$ as $x \to 0$. 
+	\item Explain why every smooth function can be approximated on an interval of length $h$ by a polynomial of degree $n$ with an error that is $\cO(h^{n+1})$ as $h \to 0$. [Hint: Appeal to Taylor's Theorem.]
 	\end{enumerate}
 
 
 
-\vfill
+\newpage
 
 
 
-% Problem 5
-\problem{10} For each of the following, indicate whether the function is linear (T), or not (F). 
+% Problem 2. IEEE Floating Point Numbers
+\problem{IEEE Floating Point Numbers} This problem will work through an explicit example of how IEEE floating point numbers work with a `nice' real number. Define $n:= 2^5 + 2^{-17} + 2^{-21}$.
 	\begin{enumerate}[(a)]
-	\item \uans{1.6cm}: $y= 2x + 1$
-	\item \uans{1.6cm}: $f(x)= 1 - 6x$
-	\item \uans{1.6cm}: $y= x ( 2x + 1)$
-	\item \uans{1.6cm}: $y= 2(x - 1)$
-	\item \uans{1.6cm}: $f(x)= \frac{1}{3}x - 9$
+	\item Write $n$ in binary. 
+	\item Express $n$ as a IEEE single precision number.
+	\item Determine $\fl(n)$. 
+	\item Determine the absolute error $|n - \fl(n)|$ and relative error $\dfrac{|n - \fl(n)|}{|n|}$. 
+	\item What must the relative error be bounded by? Does your answer in (d) agree with this bound?
 	\end{enumerate}
 
 
 
-\vfill
 \newpage
 
 
 
-% Problem 6
-\problem{10} Given the data in the table below, is it reasonable to say that the data is linear? Explain. 
-	\begin{table}[!ht]
-	\centering
-	\begin{tabular}{c|c}
-	$x$ & $f(x)$ \\ \hline
-	$1$ & $4$ \\
-	$2$ & $6$ \\
-	$3$ & $8$ \\
-	$4$ & $10$ \\
-	$6$ & $12$ 
-	\end{tabular}
-	\end{table}
+% Problem 3. Numerical Stability
+\problem{Numerical Stability} The following problem will help develop `hands-on' experience recognizing and avoiding loss of significance. For each of the following functions, describe when a loss of significance may occur and suggest---with justification---ways to avoid the loss. 
+	\begin{enumerate}[(a)]
+	\item $\sqrt{x + 4} - 2$
+	\item $\ln x - 1$ [Do \textit{not} use Taylor Series]
+	\item $e^x - e^{-2x}$ [Hint: Taylor Series]
+	\item $2\cos^2 x - 1$
+	\end{enumerate}
 
 
 
@@ -171,12 +63,37 @@
 
 
 
-% Problem 7
-\problem{10} Complete the following parts: 
+% Problem 4 Condition Number
+\problem{Condition Number} The following problem will help develop `hands-on' computing condition numbers and recognizing where a computation might be `unstable.' For the following functions, compute the condition number and describe the $x$ values where the condition number is large:
+	\begin{enumerate}[(a)]
+	\item $x^5$
+	\item $(x + 2)^3$
+	\item $\ln x$
+	\item $\sin x$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4 Algorithm
+\problem{Algorithm Analysis} The following problem will help develop `hands-on' experience reading and improving algorithms. Consider the following pseudocode that takes as an input an integer $n$:
+	\begin{verbatim}
+	                              for i = 1 to n:
+	                                sum = 0;
+	                                  for j = 1 to i:
+	                                  sum += j
+	                                print(sum)
+	\end{verbatim}
+
 \begin{enumerate}[(a)]
-\item Find the equation of the line through the points $(1, -5)$ and $(-2, 13)$. \vfill
-\item What is the slope and $y$-intercept of the line from (a)? \vfill
-\item Sketch the line from (a) as accurately as possible. \vfill
+\item Describe what this algorithm is computing. 
+\item How many flops are used in this algorithm? Find $x_n$ such that this algorithm is $\cO(x_n)$. 
+\item Explain why this algorithm is computationally inefficient. 
+\item Rewrite this pseudocode so that it is computationally less expensive. For your algorithm, count the number of flops required. 
+\item Is there an even shorter way avoiding loops entirely?
 \end{enumerate}
 
 
@@ -185,14 +102,37 @@
 
 
 
-% Problem 8
-\problem{10} Consider the line given by $f(x)= 6x + 5$.
-        \begin{enumerate}[(a)]
-        \item Find the $y$-intercept for this line. \vfill
-        \item Find the $x$-intercept for this line. \vfill
-        \item Is the point $(0, 1)$ on the line? Explain. \vfill
-        \item Is the point $(-1, -1)$ on the line? Explain. \vfill
-        \end{enumerate}
+% Evaluation
+\noindent{\bfseries Evaluation.} \pvspace{0.3cm}
 
+Complete the following survey by rating each problem. Each area will be rated on a scale of 1 to 5. For interest, 1 is ``mind-numbing'' while a 5 is ``mind-blowing.'' For difficulty, 1 is ``trivial/routine'' while 5 is ``brutal.'' For learning, 1 means ``nothing new'' while 5 means ''profound awakening.'' Then you to estimate the amount of time you spent on each problem (in minutes). 
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+ & Interest & Difficulty & Learning & Time Spent \\ \hline \hline
+Problem 1 &  &  &  &  \\ \hline
+Problem 2 &  &  &  &  \\ \hline
+Problem 3 &  &  &  &  \\ \hline
+Problem 4 &  &  &  &  \\ \hline
+Problem 5 &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+\vspace{0.25cm}
+
+Finally, indicate whether you believe lectures were useful in completing this assignment and whether you believe the problems were useful enough/interesting enough to assign again to future students by checking the appropriate space.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+  & \multicolumn{2}{c|}{Lectures} &  \multicolumn{2}{c|}{Assign Again} \\ \cline{2-5}
+   & Yes & No & Yes & No \\ \hline \hline
+  Problem 1 &  &  &  &  \\ \hline 
+  Problem 2 &  &  &  &  \\ \hline 
+  Problem 3 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  &  \\ \hline 
+  Problem 5 &  &  &  &  \\ \hline 
+\end{tabular}
+\end{center}
 
 \end{document}

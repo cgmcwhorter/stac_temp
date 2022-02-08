@@ -1,0 +1,315 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10487,        307]
+NotebookOptionsPosition[      8981,        271]
+NotebookOutlinePosition[      9377,        287]
+CellTagsIndexPosition[      9334,        284]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name: 
+Mathematica HW 1\
+\>", "Section",
+ CellChangeTimes->{{3.8533147188117313`*^9, 
+  3.853314724415444*^9}},ExpressionUUID->"dac9c1e0-92bc-4bff-b539-\
+ead080b0bdc5"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subsection",
+ CellChangeTimes->{{3.853314730134881*^9, 
+  3.853314736069254*^9}},ExpressionUUID->"aa255ad9-3176-4bc1-bfde-\
+28e8dd4f4b40"],
+
+Cell["\<\
+Let\[CloseCurlyQuote]s see how to use Mathematica to (quickly) compute \
+numbers in different bases. Use Mathematica\[CloseCurlyQuote]s \
+\[OpenCurlyQuote]BaseForm\[CloseCurlyQuote] to perform the following:
+\ta) Convert 1473 to base 2.
+\tb) Convert 14.5 to base 2.
+\tc) Convert 645 to base 3.
+\td) Convert 1000 to base 7.\
+\>", "Text",
+ CellChangeTimes->{{3.8533147401582193`*^9, 3.853314742976654*^9}, {
+  3.853314775838336*^9, 3.8533148362709417`*^9}, {3.853317280104796*^9, 
+  3.853317302157608*^9}},ExpressionUUID->"1a714c4a-dab7-489b-b422-\
+44f1e8235869"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2.", "Subsection",
+ CellChangeTimes->{{3.853314843171562*^9, 
+  3.853314847608822*^9}},ExpressionUUID->"8a965d04-f411-41b7-beb4-\
+7f216c461a48"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s visually explore ",
+ Cell[BoxData[
+  FormBox["O", TraditionalForm]],ExpressionUUID->
+  "bce03e59-b210-465f-99a8-87be36415f30"],
+ " and ",
+ Cell[BoxData[
+  FormBox["o", TraditionalForm]],ExpressionUUID->
+  "1158a21d-51a0-44cb-a515-82c3892d45fe"],
+ ". Plot the sequences ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "n"], "=", 
+    RowBox[{
+     RowBox[{"2", 
+      SuperscriptBox["n", "2"]}], "+", 
+     RowBox[{"5", "n"}], " ", "+", " ", "7", " "}]}], TraditionalForm]],
+  ExpressionUUID->"1fec23e4-55a9-42c0-9de1-9e146f62e44a"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "n"], "=", 
+    SuperscriptBox["n", "2"], " "}], TraditionalForm]],ExpressionUUID->
+  "e549ac1b-fedf-459a-bfb6-5710b209d4d1"],
+ " on the same graph. Explain how you can \[OpenCurlyQuote]see\
+\[CloseCurlyQuote] from the graph that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "n"], "=", 
+    RowBox[{"O", "(", 
+     SubscriptBox["y", "n"], ")"}], "  "}], TraditionalForm]],ExpressionUUID->
+  "139a4a24-f421-45ca-92dc-24ce016bee48"],
+ ". Also,  plot the functions ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{"100", 
+      SuperscriptBox["x", "2"]}], "+", 
+     RowBox[{"17", "x"}], "+", "523"}]}], TraditionalForm]],ExpressionUUID->
+  "0cda2823-6f53-46af-be4a-68b1ff8ce4ac"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    SuperscriptBox["x", "3"]}], TraditionalForm]],ExpressionUUID->
+  "08748c0c-11e6-4349-9d92-5b113838e6fe"],
+ " on the same graph. Explain how you can \[OpenCurlyQuote]see\
+\[CloseCurlyQuote] from the graph that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{"o", "(", 
+     SuperscriptBox["x", "3"], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "562f9caa-22d5-4ae1-a28b-e105f0454c9f"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.853314862025235*^9, 3.853314915957769*^9}, {
+  3.853314992089802*^9, 3.853315240635264*^9}, {3.8533152709117403`*^9, 
+  3.8533154828500643`*^9}, {3.853317308134696*^9, 
+  3.853317364219365*^9}},ExpressionUUID->"e90bc765-a699-42a6-b971-\
+0472d84b44d1"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3.", "Subsubsection",
+ CellChangeTimes->{{3.85331548769205*^9, 
+  3.853315492725869*^9}},ExpressionUUID->"202d031c-8d33-4db8-9c29-\
+ca1af8910bc4"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s use Mathematica to compute condition numbers and see \
+how to use these to recognize where a computation might go \
+\[OpenCurlyQuote]awry.\[CloseCurlyQuote]  Use Mathematica to create a table \
+of condition numbers for the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{"1", "-", 
+      RowBox[{"cos", "(", "x", ")"}]}], 
+     SuperscriptBox["x", "2"]]}], TraditionalForm]],ExpressionUUID->
+  "146a3d03-3011-43c1-9730-bd1cc54ae24e"],
+ " using the values 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001. Using course \
+concepts, interpret the table values and explain how you might improve these \
+condition numbers.  "
+}], "Text",
+ CellChangeTimes->{{3.85331555736975*^9, 3.853315720749873*^9}, {
+  3.8533173670858107`*^9, 
+  3.85331741300172*^9}},ExpressionUUID->"bb66ffc9-c41f-472b-ba08-\
+b2e4209d7f37"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4.", "Subsection",
+ CellChangeTimes->{{3.8533157259009*^9, 
+  3.853315727080803*^9}},ExpressionUUID->"cb79561e-ad5f-434a-973b-\
+a6ccbf0119c3"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s see how we can use Mathematica to quickly find \
+polynomial approximations to avoid loss of significance. Use Mathematica\
+\[CloseCurlyQuote]s \[OpenCurlyQuote]Series\[CloseCurlyQuote] function to \
+create a polynomial which approximates the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", "12"}]], "-", "4"}]}], 
+   TraditionalForm]],ExpressionUUID->"002c2e3b-8428-47d6-9df5-6e076a33ccf3"],
+ " near a positive value where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "ec2ae271-9201-4c03-93f6-9d8d6449c216"],
+ " might experience a loss of significance. What is the order of the error \
+for this approximation?"
+}], "Text",
+ CellChangeTimes->{{3.8533165266191893`*^9, 3.853316563883952*^9}, {
+  3.853316653694221*^9, 3.8533167606149817`*^9}, {3.853317420017365*^9, 
+  3.853317435171001*^9}},ExpressionUUID->"8d9a7452-3e9d-453a-b11d-\
+c16d9af29563"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 5.", "Subsection",
+ CellChangeTimes->{{3.853315730473665*^9, 
+  3.853315731629678*^9}},ExpressionUUID->"3cde486f-649f-4fb3-9aef-\
+e43f0a2fa2bb"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s explore how numerical approaches to problems can \
+avoid computation issues that a \[OpenCurlyQuote]direct\[CloseCurlyQuote] \
+approach would create. Construct a recursive sequence to construct the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["n", "th"], TraditionalForm]],ExpressionUUID->
+  "17954d77-909c-412b-b680-c334f5640be5"],
+ " Fibonacci number. Use this recursive definition to compute the  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["30", "th"], TraditionalForm]],ExpressionUUID->
+  "5f013104-02a8-4967-a76a-729ac3057126"],
+ " Fibonacci number. Does your recursion allow you to easily compute the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["50", "th"], TraditionalForm]],ExpressionUUID->
+  "6f068fb2-8efd-4f27-a6cd-274efecebb07"],
+ " Fibonacci number? [Note: Mathematica has a built-in \
+\[OpenCurlyQuote]Fibonacci\[CloseCurlyQuote] function.] Define a numerical \
+sequence ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["F", "n"], "=", 
+    RowBox[{
+     FractionBox["1", 
+      SqrtBox["5"]], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"1", " ", "+", 
+           SqrtBox["5"]}], "2"], ")"}], "n"], "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"1", " ", "-", 
+           SqrtBox["5"]}], "2"], ")"}], "n"]}], ")"}]}]}], TraditionalForm]],
+  ExpressionUUID->"e8723fe9-a2f7-414f-91c2-ade729675e23"],
+ ". Create a table of values for ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["F", "n"], TraditionalForm]],ExpressionUUID->
+  "65e66aca-161c-4748-939a-d2e81b164afd"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"n", "=", " ", "1"}], ",", " ", "2", ",", " ", "...", " ", ",", 
+    "30", " "}], TraditionalForm]],ExpressionUUID->
+  "3478acf0-328a-4ff0-bac8-75aab72aaf17"],
+ ". Predict what ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["F", "n"], TraditionalForm]],ExpressionUUID->
+  "bd16873c-7aed-44b3-a0e1-4a7d2d116409"],
+ " is computing and how this might improve your computation from earlier."
+}], "Text",
+ CellChangeTimes->{{3.853315758123824*^9, 3.853315811243807*^9}, {
+  3.85331603610929*^9, 3.85331607674575*^9}, {3.8533161179513197`*^9, 
+  3.853316162312921*^9}, {3.853316218430539*^9, 3.8533164357757177`*^9}, {
+  3.853317446623088*^9, 
+  3.8533174820354853`*^9}},ExpressionUUID->"fb31a4af-9e1b-492e-a772-\
+f80da2f39d85"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{Automatic, 280}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2f95c529-a066-4e46-a894-a6d95fad4329"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 178, 6, 105, "Section",ExpressionUUID->"dac9c1e0-92bc-4bff-b539-ead080b0bdc5"],
+Cell[CellGroupData[{
+Cell[783, 32, 158, 3, 54, "Subsection",ExpressionUUID->"aa255ad9-3176-4bc1-bfde-28e8dd4f4b40"],
+Cell[944, 37, 571, 12, 150, "Text",ExpressionUUID->"1a714c4a-dab7-489b-b422-44f1e8235869"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1552, 54, 158, 3, 54, "Subsection",ExpressionUUID->"8a965d04-f411-41b7-beb4-7f216c461a48"],
+Cell[1713, 59, 2227, 67, 83, "Text",ExpressionUUID->"e90bc765-a699-42a6-b971-0472d84b44d1"],
+Cell[CellGroupData[{
+Cell[3965, 130, 160, 3, 45, "Subsubsection",ExpressionUUID->"202d031c-8d33-4db8-9c29-ca1af8910bc4"],
+Cell[4128, 135, 915, 21, 111, "Text",ExpressionUUID->"bb66ffc9-c41f-472b-ba08-b2e4209d7f37"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5092, 162, 156, 3, 54, "Subsection",ExpressionUUID->"cb79561e-ad5f-434a-973b-a6ccbf0119c3"],
+Cell[5251, 167, 1064, 25, 107, "Text",ExpressionUUID->"8d9a7452-3e9d-453a-b11d-c16d9af29563"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6352, 197, 158, 3, 54, "Subsection",ExpressionUUID->"3cde486f-649f-4fb3-9aef-e43f0a2fa2bb"],
+Cell[6513, 202, 2440, 65, 162, "Text",ExpressionUUID->"fb31a4af-9e1b-492e-a772-f80da2f39d85"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
