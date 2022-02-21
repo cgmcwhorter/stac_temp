@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -13,13 +13,33 @@
 \homework{3: Due 02/16}{This is not a dictatorship. This is America. Give me liberty, or give me meth.}{Frank Gallagher, Shameless}
 
 % Problem 1
-\problem{10} Determine if the point $(x_1, x_2)= (-1, 3)$ is a solution to the system of equations below. Be sure to fully justify your answer.
+\problem{10} Determine if the point $(x, y)= (-1, 3)$ is a solution to the system of equations below. Be sure to fully justify your answer.
 	\[
 	\begin{aligned}
 	x^2 + xy + y&= 1 \\
 	x^3 - y^3&= -26
 	\end{aligned}
+	\] \pspace
+
+\sol If $(x, y)= (-1, 3)$ is a solution to the system of equations, then $x= -1$ and $y= 3$ satisfy both of the given equations---which we check:
+	\[
+	\begin{aligned}
+	x^2 + xy + y&= 1 \\
+	(-1)^2 + (-1)3 + 3&\stackrel{?}{=} 1 \\
+	1 - 3 + 3&\stackrel{?}{=} 1 \\
+	1&= 1
+	\end{aligned}
+	\] \pspace
+and \pspace
+	\[
+	\begin{aligned}
+	x^3 - y^3&= -26 \\
+	(-1)^3 - 3^3&\stackrel{?}{=} -26 \\
+	-1 - 27&\stackrel{?}{=} -26 \\
+	-28&\neq -26
+	\end{aligned}
 	\]
+Because $(x, y)= (-1, 3)$ does \textit{not} satisfy both of the equations, $(x, y)= (-1, 3)$ is not a solution to the given system of equations. 
 
 
 
@@ -34,7 +54,25 @@
 	2x - y&= -2 \\
 	3x + 5y&= 10
 	\end{aligned}
-	\]
+	\] \pspace
+
+\sol Observe that both of the systems are linear equations. Therefore, it suffices to determine if the given pair of lines are the same, parallel, or intersection. We solve for $y$ in both equations:
+	\[
+	\begin{aligned}
+	2x - y&= -2 \\
+	-y&= -2x - 2 \\
+	y&= 2x + 2
+	\end{aligned}
+	\] \pspace
+and \pspace
+	\[
+	\begin{aligned}
+	3x + 5y&= 10 \\
+	5y&= -3x + 10 \\
+	y&= -\frac{3}{5}\,x + 2
+	\end{aligned}
+	\] 
+Clearly, these lines are distinct. The first line has slope $m_1= 2$ and the second line has slope $m_2= -\frac{3}{5}$. Because $m_1 \neq m_2$, we know that the lines are not parallel; therefore, the lines intersect. But then there must be a solution to the given system of equations. In fact, one can verify that $(x, y)= (0, 2)$ is a solution to the system of equations. 
 
 
 
@@ -49,6 +87,22 @@
 	5x_1 + x_2 - 6x_3&= 19 \\
 	3x_2 - 2x_3&= -6 \\
 	9x_1 + 8x_3&= 5
+	\end{aligned}
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	\text{Coefficient Matrix:}& \begin{pmatrix} 5 & 1 & -6 \\ 0 & 3 & -2 \\ 9 & 0 & 8 \end{pmatrix} \\[0.3cm]
+	\text{Solution Vector:}& \begin{pmatrix} 19 \\ -6 \\ 5 \end{pmatrix} \\[0.3cm]
+	\text{Augmented Matrix:}&	
+	\left(
+	\begin{array}{rrr:r}
+	5 & 1 & -6 & 19 \\
+	0 & 3 & -2 & -6 \\
+	9 & 0 & 8 & 5
+	\end{array} 
+	\right)
 	\end{aligned}
 	\]
 
@@ -66,6 +120,27 @@
 	4 & 0 & -1 & 9 \\
 	1 & 1 & 1 & 4 \\
 	\end{pmatrix}
+	\] \pspace
+
+\sol The last column corresponds to the solutions. The remaining columns---three columns---must correspond to the three variables. Using variables $x, y, z$, we have\dots \pspace
+	\[
+	\begin{aligned}
+	\begin{array}{rrrrrrr}
+	6x & + & y & - & 5z & = & -7 \\
+	4x &  &  & - & z & = & 9 \\
+	x & + & y & + & z & = & 4
+	\end{array} 
+	\end{aligned}
+	\] \pspace
+Using variables $x_1, x_2, x_3$, we have\dots \pspace
+	\[
+	\begin{aligned}
+	\begin{array}{rrrrrrr}
+	6x_1 & + & x_2 & - & 5x_3 & = & -7 \\
+	4x_1 &  &  & - & x_3 & = & 9 \\
+	x_! & + & x_2 & + & x_3 & = & 4
+	\end{array} 
+	\end{aligned}
 	\]
 
 
@@ -80,13 +155,36 @@
 	\begin{aligned}
 	\begin{pmatrix}
 	1 & 4 & 6 & -2 & 5 \\
-	
 	0 & 0 & -1 & 7 & 12 \\
 	0 & 0 & 0 & -9 & 5 \\
-	0 & 0 & 0 & 0 & 1 \\
+	0 & 0 & 0 & 0 & 1 
 	\end{pmatrix}
 	\end{aligned}
-	\]
+	\] \pspace
+
+\sol We circle the pivot positions in the augmented matrix above:
+	\[
+	\begin{aligned}
+	\begin{pmatrix}
+	{\Large \textcircled{\normalsize $1$}} & 4 & 6 & -2 & 5 \\
+	0 & 0 & {\Large \textcircled{\small \!\!$-1$}} & 7 & 12 \\
+	0 & 0 & 0 & {\Large \textcircled{\small \!\!$-9$}} & 5 \\
+	0 & 0 & 0 & 0 &  {\Large \textcircled{\small $1$}}
+	\end{pmatrix}
+	\end{aligned}
+	\] \pspace
+Finally, observe that the original matrix is in RREF: \pspace
+	\[
+	\begin{aligned}
+	\begin{pmatrix}
+	1 & 4 & 6 & -2 & 5 \\
+	0 & 0 & -1 & 7 & 12 \\
+	0 & 0 & 0 & -9 & 5 \\
+	0 & 0 & 0 & 0 & 1 
+	\end{pmatrix}
+	\end{aligned}
+	\] \pspace
+Because this is an augmented matrix, the last row corresponds to the equation $0= 1$, which is impossible. Therefore, the original system of equations is inconsistent, i.e. there are no solutions to the system of equations. 
 
 
 
@@ -104,6 +202,23 @@
 	0 & 0 & 1 & 4
 	\end{pmatrix}
 	\end{aligned}
+	\] \pspace
+
+\sol Using variables $x, y, z$, we see from the equations corresponding to the rows of this matrix that\dots \pspace
+	\[
+	\begin{cases}
+	x= -5 \\
+	y= 3 \\
+	z= 4
+	\end{cases}
+	\] \pspace
+Using variables $x_1, x_2, x_3$, we see that\dots \pspace
+	\[
+	\begin{cases}
+	x_1= -5 \\
+	x_2= 3 \\
+	x_3= 4
+	\end{cases}
 	\]
 
 
@@ -119,6 +234,80 @@
 	x - 3y&= -9 \\
 	-2x + y&= 8
 	\end{aligned}
+	\] \pspace
+
+\sol Using ordinary elimination, we first add twice the first row to the second row, this gives us\dots
+	\[
+	\begin{aligned}
+	x - 3y&= -9 \\
+	0x - 5y&= -10
+	\end{aligned}
+	\]
+Now we divide the second equation by $-5$ and obtain\dots
+	\[
+	\begin{aligned}
+	x - 3y&= -9 \\
+	0x + y&= 2
+	\end{aligned}
+	\]
+Now we add three times the third row to the first row to obtain:
+	\[
+	\begin{aligned}
+	x - 0y&= -3 \\
+	0x + y&= 2
+	\end{aligned}
+	\]
+Therefore, the solution to the system of equations is $(x, y)= (-3, 2)$. Using an augmented matrix to solve the system of equations, we have\dots
+
+\begin{minipage}[t]{0.49\textwidth}
+	\[
+	\left(
+	\begin{array}{rr:r}
+	1 & -3 & -9 \\
+	-2 & 1 & 8
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	1 & -3 & -9 \\
+	0 & -5 & -10
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	1 & -3 & -9 \\
+	0 & 1 & 2
+	\end{array} 
+	\right)
+	\] \pspace
+	\[
+	\left(
+	\begin{array}{rr:r}
+	1 & 0 & -3 \\
+	0 & 1 & 2
+	\end{array} 
+	\right)
+	\]
+\end{minipage}%
+\begin{minipage}[t]{0.49\textwidth}
+\pvspace{0.5cm}
+$2R_1 + R_2 \to R_2$ \pvspace{1.1cm}
+$-\dfrac{1}{5} R_2 \to R_2$ \pvspace{1.1cm}
+$3R_2 + R_1 \to R_1$ \pvspace{1.1cm}
+\end{minipage} \pspace
+
+Therefore, the solution is $(x, y)= (-3, 2)$, i.e. $x= -3$ and $y= 2$:
+	\[
+	\left\{
+	\begin{aligned}
+	x&= -3 \\
+	y&= 2 
+	\end{aligned}
+	\right.
 	\]
 
 
@@ -136,6 +325,42 @@
 	10x_1 + 3x_2 - 5x_3 - 2x_4&= 3 \\
 	-2x_1 - 4x_2 + 6x_3 + 8x_4&= 4
 	\end{aligned}
+	\] \pspace
+
+\sol The associated matrix is\dots
+	\[
+	\left(
+	\begin{array}{rrrr:r}
+	1 & 1 & 1 & 1 & 1 \\
+	1 & -2 & 3 & -4 & 2 \\
+	10 & 3 & -5 & -2 & 3 \\
+	-2 & -4 & 6 & 8 & 4
+	\end{array} 
+	\right)
+	\] 
+Using WolframAlpha's \texttt{RowReduce} function, we obtain\dots
+	\[
+	\left(
+	\begin{array}{rrrr:r}
+	1 & 0 & 0 & 0 & 128/195 \\
+	0 & 1 & 0 & 0 & -19/65 \\
+	0 & 0 & 1 & 0 & 92/195 \\
+	0 & 0 & 0 & 1 & 32/195 \\
+	\end{array} 
+	\right)
+	\] 
+Therefore, the solution is\dots
+	\[
+	(x_1, x_2, x_3, x_4)= (128/195, -19/65, 92/195, 32/195) \approx (0.65641, -0.292308, 0.471795, 0.164103)
+	\] 
+i.e. $x_1\approx 0.65641$, $x_2 \approx -0.292308$, $x_3 \approx 0.471795$, and $x_4 \approx 0.164103$:
+	\[
+	\begin{cases}
+	x_1= \frac{128}{195} \\
+	x_2= -\frac{19}{65} \\
+	x_3= \frac{92}{195} \\
+	x_4= \frac{32}{195} \\
+	\end{cases}
 	\]
 
 

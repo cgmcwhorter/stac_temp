@@ -1,0 +1,316 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 02/21}{You are braver than you believe, stronger than you seem, and smarter than you think.}{Christopher Robin, Winnie the Pooh}
+
+% Problem 1
+\problem{10} The following augmented matrix is in reduced-row echelon form. Determine the solutions (if any). 
+	\[
+	\begin{pmatrix}
+	1 & 0 & -1 & 2 & 5 \\
+	0 & 1 & 0 & 0 & -4 
+	\end{pmatrix}
+	\] \pspace
+
+\sol Using variables $x_1, x_2, x_3, x_4$, the rows of the matrix correspond to the equations:
+	\[
+	\begin{aligned}
+	x_1 - x_3 + 2x_4&= 5 \\
+	x_2&= -4
+	\end{aligned}
+	\]
+From the last equation, we see that $x_2= -4$. Examining the matrix, we see that $x_1$ is `fixed' (because it has a pivot entry), while $x_3, x_4$ are free (because they do not have pivot positions). Solving for $x_1$ in terms of $x_3$ and $x_4$ in the first equation, we find $x_1= x_3 - 2x_4 + 5$. Therefore, the solutions are\dots
+	\[
+	\left\{
+	\begin{aligned}
+	x_1&= x_3 - 2x_4 + 5 \\
+	x_2&= -4 \\
+	x_3&: \text{ free} \\
+	x_4&: \text{ free}
+	\end{aligned} \right.
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} The following augmented matrix is in reduced-row echelon form. Determine the solutions (if any). 
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & -5 \\
+	0 & 1 & 0 & 6 \\
+	0 & 0 & 1 & -3 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}
+	\] \pspace
+
+\sol Examining the equation corresponding to the last row, we see that $0= 1$, which is impossible. Therefore, the original system of equations was inconsistent. But then there cannot be a solution to the original system of equations. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} The following augmented matrix is in reduced-row echelon form. Determine the solutions (if any). 
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 0 & 4 \\
+	0 & 1 & 0 & 0 & -5 \\
+	0 & 0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 & 1
+	\end{pmatrix}
+	\] \pspace
+
+\sol Using variables $x_1, x_2, x_3, x_4$, we write the equations corresponding to the rows of the matrix: 
+	\[
+	\begin{aligned}
+	x_1&= 4 \\
+	x_2&= -5 \\
+	x_3&= 0 \\
+	x_4&= 1
+	\end{aligned}
+	\]
+Therefore, the solution to the original system of equations is\dots
+	\[
+	\left\{
+	\begin{aligned}
+	x_1&= 4 \\
+	x_2&= -5 \\
+	x_3&= 0 \\
+	x_4&= 1
+	\end{aligned} \right.
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Compute the following determinant:
+	\[
+	\det \begin{pmatrix}
+	1 & -1 & 1 & 4 \\
+	2 & 1 & 0 & 2 \\
+	3 & 0 & 0 & -1 \\
+	4 & 2 & -3 & 0 
+	\end{pmatrix}
+	\] \pspace
+
+\sol Because the third row has the greatest number of zero entries, we expand along this row (also, at each stage, we expand along the first row/column with the greatest number of zero entries):
+	\[
+	\begin{aligned}
+	\det \begin{pmatrix}
+	1 & -1 & 1 & 4 \\
+	2 & 1 & 0 & 2 \\
+	3 & 0 & 0 & -1 \\
+	4 & 2 & -3 & 0 
+	\end{pmatrix}&= 
+	3 \begin{vmatrix} -1 & 1 & 4 \\ 1 & 0 & 2 \\ 2 & -3 & 0 \end{vmatrix} 
+	- 0 \begin{vmatrix} 1 & 1 & 4 \\ 2 & 0 & 2 \\ 4 & -3 & 0 \end{vmatrix} 
+	+ 0 \begin{vmatrix} 1 & -1 & 4 \\ 2 & 1 & 2 \\ 4 & 2 & 0 \end{vmatrix} 
+	-(-1) \begin{vmatrix} 1 & -1 & 4 \\ 2 & 1 & 0 \\ 4 & 2 & -3 \end{vmatrix} \\[0.3cm]
+	= 3 \bigg( -1 \begin{vmatrix} 1 & 4 \\ -3 & 0 \end{vmatrix}& + 0 \begin{vmatrix} -1 & 4 \\ 2 & 0 \end{vmatrix} - 2 \begin{vmatrix} -1 & 1 \\ 2 & -3 \end{vmatrix} \bigg)
+	+ 0 
+	+ 0 
+	+ 1 \left( -2 \begin{vmatrix} -1 & 4 \\ 2 & -3 \end{vmatrix} + 1 \begin{vmatrix} 1 & 4 \\ 4 & -3 \end{vmatrix} + 0 \begin{vmatrix} 1 & -1 \\ 4 & 2 \end{vmatrix} \right) \\[0.3cm]
+	&= 3 \left( -1 (0 - (-12)) + 0 - 2(3 - 2) \right) + 1 \left( -2(3 - 8) + 1(-3 - 16) + 0 \right) \\[0.3cm]
+	&= 3 \left( -1(12) + 0 - 2(1) \right) + 1 \left( -2(-5) + 1(-19) + 0 \right) \\[0.3cm]
+	&= 3 (-12 + 0 - 2) + 1( 10 - 19 + 0) \\[0.3cm]
+	&= 3(-14) + 1(-9) \\[0.3cm]
+	&= -42 - 9 \\[0.3cm]
+	&= -51
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Consider the following system of equations:
+	\[
+	\begin{cases}
+	2x + 3y= 0 \\
+	-x - 2y= 1
+	\end{cases}
+	\]
+
+\begin{enumerate}[(a)]
+\item Show that the coefficient matrix has an inverse.
+\item Find the inverse of the coefficient matrix.
+\item Use the coefficient to solve the system of equations. 
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item The coefficient matrix is\dots
+	\[
+	\begin{pmatrix}
+	2 & 3 \\
+	-1 & -2
+	\end{pmatrix}
+	\]
+The determinant of this matrix is\dots
+	\[
+	\det \begin{pmatrix}
+	2 & 3 \\
+	-1 & -2
+	\end{pmatrix}= 2(-2) - 3(-1)= -4 - (-3)= -4 + 3= -1 \neq 0
+	\]
+Because the determinant is \textit{not} zero, we know that the matrix is invertible, i.e. has an inverse. \pspace
+
+\item If a $2 \times 2$ matrix has an inverse, we know that
+	\[
+	\begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1}= \dfrac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+	\]
+Using\dots
+	\[
+	A= \begin{pmatrix} 2 & 3 \\ -1 & -2 \end{pmatrix}
+	\]
+We know that\dots
+	\[
+	A^{-1}= \dfrac{1}{\det A} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}= \dfrac{1}{-1} \begin{pmatrix} -2 & -3 \\ 1 & 2 \end{pmatrix}= \begin{pmatrix} 2 & 3 \\ -1 & -2 \end{pmatrix}
+	\]
+
+\item Writing the matrix in vector form, we have\dots
+	\[
+	\begin{aligned}
+	\begin{pmatrix}
+	2 & 3 \\
+	-1 & -2
+	\end{pmatrix}
+	\begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+	\begin{pmatrix} 2 & 3 \\ -1 & -2 \end{pmatrix}
+	\begin{pmatrix}
+	2 & 3 \\
+	-1 & -2
+	\end{pmatrix}
+	\begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\begin{pmatrix} 2 & 3 \\ -1 & -2 \end{pmatrix}
+	\begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+	\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\begin{pmatrix} 2(0) + 3(1) \\ -1(0) - 2(1) \end{pmatrix} \\
+	\begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\begin{pmatrix} 3 \\ -2 \end{pmatrix}
+	\end{aligned}
+	\]
+Therefore, the solution is $(x, y)= (3, -2)$, i.e. $x= 3$ and $y= -2$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Show that the matrix $B$ is the inverse to $A$:
+	\[
+	\begin{aligned}
+	A&= \begin{pmatrix} 1 & 0 & 1 \\ -1 & 0 & 1 \\ 2 & 2 & 0 \end{pmatrix} \\[0.3cm]
+	B&= \frac{1}{2} \begin{pmatrix} 1 & -1 & 0 \\ -1 & 1 & 1 \\ 1 & 1 & 0 \end{pmatrix}
+	\end{aligned}
+	\] 
+
+\sol Recall that a square $n \times n$ matrix $B$ is an inverse to a square $n \times n$ matrix $A$ if and only if $AB= I$ and $BA= I_n$, where $I_n$ is the $n \times n$ identity matrix. If so, we write $B= A^{-1}$, i.e. $B$ is the inverse of $A$. We simply check this for the matrix $B$:
+	\[
+	\begin{aligned}
+	AB&= \dfrac{1}{2} \begin{pmatrix} 1 & 0 & 1 \\ -1 & 0 & 1 \\ 2 & 2 & 0 \end{pmatrix} \begin{pmatrix} 1 & -1 & 0 \\ -1 & 1 & 1 \\ 1 & 1 & 0 \end{pmatrix} \\
+	&= \dfrac{1}{2} \begin{pmatrix} 1(1) + 0(-1) + 1(1) & 1(-1) + 0(1) + 1(1) & 1(0) + 0(1) + 1(0) \\
+	-1(1) + 0(-1) + 1(1) & -1(-1) + 0(1) + 1(1) & -1(0) + 0(1) + 1(0) \\
+	2(1) + 2(-1) + 0(1) & 2(-1) + 2(1) + 0 (1) & 2(0) + 2(1) + 0(0) 
+	\end{pmatrix} \\
+	&= \dfrac{1}{2} \begin{pmatrix} 1 + 0 + 1 & -1 + 0 + 1 & 0 + 0 + 0 \\
+	-1 + 0 + 1 & 1 + 0 + 1 & 0 + 0 + 0 \\
+	2 - 2 + 0 & -2 + 2 + 0 & 0 + 2 + 0 
+	\end{pmatrix} \\
+	&= \dfrac{1}{2} \begin{pmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 2 \end{pmatrix} \\
+	&= \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}
+	\end{aligned}
+	\]
+	\[
+	\begin{aligned}
+	BA&= \frac{1}{2} \begin{pmatrix} 1 & -1 & 0 \\ -1 & 1 & 1 \\ 1 & 1 & 0 \end{pmatrix} \begin{pmatrix} 1 & 0 & 1 \\ -1 & 0 & 1 \\ 2 & 2 & 0 \end{pmatrix} \\
+	&= \dfrac{1}{2} \begin{pmatrix} 1(1) + (-1)(-1) + 0(2) & 1(0) + (-1)0 + 0(2) & 1(1) + (-1)1 + 0(0) \\
+	-1(1) + 1(-1) + 1(2) & -1(0) + 1(0) + 1(2) & -1(1) + 1(1) + 1(0) \\
+	1(1) + 1(-1) + 0(2) & 1(0) + 1(0) + 0(2) & 1(1) + 1(1) + 0(0) 
+	\end{pmatrix} \\
+	&= \dfrac{1}{2} \begin{pmatrix} 1 + 1 + 0 & 0 + 0 + 0 & 1 - 1 + 0 \\
+	-1 - 1 + 2 & 0 + 0 + 2 & -1 + 1 + 0 \\
+	1 - 1 + 0 & 0 + 0 + 0 & 1 + 1 + 0 
+	\end{pmatrix} \\
+	&= \dfrac{1}{2} \begin{pmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 2 \end{pmatrix} \\
+	&= \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}
+	\end{aligned}
+	\]
+Therefore, $B$ is the inverse of $A$. 
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Compute the following:
+	\begin{enumerate}[(a)]
+	\item $-3 \begin{pmatrix} 1 & -1 \\ 0 & 3 \end{pmatrix}$
+	\item $\begin{pmatrix} 1 & -1 & 5 \\ 3 & 0 & 4 \end{pmatrix} - \begin{pmatrix} 0 & 5 & -6 \\ 1 & 1 & -2 \end{pmatrix}$
+	\item $\begin{pmatrix} 1 & 0 \\ -1 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} -1 & 4 \\ 0 & 1 \end{pmatrix}$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	-3 \begin{pmatrix} 1 & -1 \\ 0 & 3 \end{pmatrix}= \begin{pmatrix} -3 & 3 \\ 0 & -9 \end{pmatrix}
+	\] \pspace
+
+\item 
+	\[
+	\begin{pmatrix} 1 & -1 & 5 \\ 3 & 0 & 4 \end{pmatrix} - \begin{pmatrix} 0 & 5 & -6 \\ 1 & 1 & -2 \end{pmatrix}= \begin{pmatrix} 1 - 0 & -1 - 5 & 5 - (-6) \\ 3 - 1 & 0 - 1 & 4 - (-2) \end{pmatrix}= \begin{pmatrix} 1 & -6 & 11 \\ 2 & -1 & 6 \end{pmatrix}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\begin{pmatrix} 1 & 0 \\ -1 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} -1 & 4 \\ 0 & 1 \end{pmatrix}&= \begin{pmatrix}
+	1(-1) + 0(0) & 1(4) + 0(1) \\
+	-1(-1) + 2(0) & -1(4) + 2(1) \\
+	1(-1) + 3(0) & 1(4) + 3(1)
+	\end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix}
+	-1 + 0 & 4 + 0 \\
+	1 + 0 & -4 + 2 \\
+	-1 + 0 & 4 + 3 
+	\end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix}
+	-1 & 4 \\
+	1 & -2 \\
+	-1 & 7
+	\end{pmatrix}
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+\end{document}
