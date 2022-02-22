@@ -1,0 +1,294 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 02/15}{Stop touching things.}{Mandalorian, The Mandalorian}
+
+% Problem 1
+\problem{10} Is the following statement true or false, explain: \textit{Any} number to the zero power is 1, i.e. $x^0= 1$ for all real numbers $x$. \pspace
+
+\sol The statement is false. We know that if $x \neq 0$, then $x^0= 1$, e.g. $1^0= 1$, $\pi^0= 1$, $(\frac{2}{3})^0= 1$, etc. However, $0^0$ is undefined. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Is the following statement true or false, explain: $\dfrac{1}{x^{-3}}= \dfrac{1}{x \cdot x \cdot x}$ \pspace
+
+\sol The statement is false. We have\dots
+	\[
+	\dfrac{1}{x^{-3}}= \dfrac{\;\;\;1\;\;\;}{\dfrac{1}{x^3}}= x^3
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Is the following statement true or false, explain using words and a calculator computation: $\sqrt[3]{2}$ is the number that when cubed yields 2. \pspace
+
+\sol The statement is true. Recall that $\sqrt[n]{r}$ stands for the number that when we multiply it by itself $n$ times, we obtain $r$. Therefore, $\sqrt[3]{2}$ stands for the number that when we cube it, we obtain 2. We have
+	\[
+	(\sqrt[3]{2})^3= (2^{1/3})^3= 2^1= 2
+	\]
+Numerically, we have
+	\[
+	\begin{aligned}
+	(\sqrt[3]{2})^3&= \sqrt[3]{2} \cdot \sqrt[3]{2} \cdot \sqrt[3]{2} \\
+	&\approx 1.25992104989487 \cdot 1.25992104989487 \cdot 1.25992104989487 \\
+	&\approx 1.587401051968192 \cdot 1.25992104989487 \\
+	&\approx 2
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, simplify the following as much as possible:
+        \begin{enumerate}[(a)]
+        \item $(x^{-2} y^5)^3$
+        \item $\dfrac{x^{-3}y^4}{x^3y^5}$
+        \item $x(x^5y)^2y^{-6}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(x^{-2} y^5)^3= x^{-6} y^{15}= \dfrac{y^{15}}{x^6}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{x^{-3}y^4}{x^3y^5}= \dfrac{y^4}{x^3x^3y^5}= \dfrac{1}{x^6 y}
+	\] \pspace
+
+\item 
+	\[
+	x(x^5y)^2y^{-6}= x x^{10} y^2 y^{-6}= \dfrac{xx^{10}y^2}{y^6}= \dfrac{x^{11}}{y^4}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Showing all your work, simplify the following as much as possible:
+        \begin{enumerate}[(a)]
+        \item $\left( \dfrac{x^3}{y^{-1}} \right)^{-1}$
+        \item $\dfrac{(x^2y)^0 x^4}{(y^3)^2}$
+        \item $\dfrac{(x^{-3} y^4)^{-5} x^2y}{x^{-2} y^0}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\left( \dfrac{x^3}{y^{-1}} \right)^{-1}= \dfrac{y^{-1}}{x^3}= \dfrac{1}{x^3y}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{(x^2y)^0 x^4}{(y^3)^2}= \dfrac{1 \cdot x^4}{y^6}= \dfrac{x^4}{y^6}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{(x^{-3} y^4)^{-5} x^2y}{x^{-2} y^0}= \dfrac{x^{15} y^{-20} x^2 y}{x^{-2} y^0}= \dfrac{x^{15} x^2 y}{y^{20} y^0}= \dfrac{x^{17}y}{y^{20}}= \dfrac{x^{17}}{y^{19}}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Showing all your work, simplify the following as much as possible:
+        \begin{enumerate}[(a)]
+        \item $(x^7 y^8)^{1/2}$
+        \item $\left( \dfrac{\sqrt{x^5}}{\sqrt[3]{y^2}} \right)^4$
+        \item $\dfrac{x(x^{3/2}y^{2/3})^2}{(x^6 y)^{1/3}}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(x^7 y^8)^{1/2}= x^{7/2} y^4
+	\] \pspace
+
+\item 
+	\[
+	\left( \dfrac{\sqrt{x^5}}{\sqrt[3]{y^2}} \right)^4= \left( \dfrac{x^{5/2}}{y^{2/3}} \right)^4= \dfrac{x^{10}}{y^{8/3}}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{x(x^{3/2}y^{2/3})^2}{(x^6 y)^{1/3}}= \dfrac{x x^3 y^{4/3}}{x^2 y^{1/3}}= \dfrac{x^4 y^{4/3}}{x^2 y^{1/3}}= x^2 y
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Showing all your work, simplify the following as much as possible:
+        \begin{enumerate}[(a)]
+        \item $\dfrac{(y \sqrt{x})^4}{\sqrt{y}\, x^{-3/2}}$
+        \item $(\sqrt[3]{y x^2})^2 (yx^2)^{1/3}$
+        \item $\left( \dfrac{x^4}{y^7} \right)^{-2/3}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{(y \sqrt{x})^4}{\sqrt{y}\, x^{-3/2}}= \dfrac{(y x^{1/2})^4}{y^{1/2}\, x^{-3/2}}= \dfrac{y^4 x^2}{y^{1/2} x^{-3/2}}= \dfrac{y^4 x^2 x^{3/2}}{y^{1/2}}= x^{7/2} y^{7/2}
+	\] \pspace
+
+\item 
+	\[
+	(\sqrt[3]{y x^2})^2 (yx^2)^{1/3}= (y^{1/3} x^{2/3})^2 (yx^2)^{1/3}= y^{2/3} x^{4/3} \cdot y^{1/3} x^{2/3}= x^2y
+	\] \pspace
+
+\item 
+	\[
+	\left( \dfrac{x^4}{y^7} \right)^{-2/3}= \left( \dfrac{y^7}{x^4} \right)^{2/3}= \dfrac{y^{14/3}}{x^{8/3}}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Showing all your work, simplify the following as much as possible:
+        \begin{enumerate}[(a)]
+        \item $\sqrt{72}$
+        \item $\sqrt{180}$
+        \item $\sqrt{500}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\sqrt{72}= \sqrt{2 \cdot 2 \cdot 2 \cdot 3 \cdot 3}= 2 \cdot 3 \sqrt{2}= 6 \sqrt{2}
+	\] \pspace
+
+\item 
+	\[
+	\sqrt{180}= \sqrt{2 \cdot 2 \cdot 3 \cdot 3 \cdot 5}= 2 \cdot 3 \sqrt{5}= 6 \sqrt{5}
+	\] \pspace
+
+\item 
+	\[
+	\sqrt{500}= \sqrt{2 \cdot 2 \cdot 5 \cdot 5 \cdot 5}= 2 \cdot 5 \sqrt{5}= 10 \sqrt{5}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 9
+\problem{10} Showing all your work, simplify the following as much as possible:
+        \begin{enumerate}[(a)]
+        \item $\dfrac{\sqrt{60}}{3}$
+        \item $\sqrt[3]{80}$
+        \item $\sqrt[4]{2^{12} \cdot 3^3 \cdot 5^9 \cdot 7^4}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{\sqrt{60}}{3}= \dfrac{\sqrt{2 \cdot 2 \cdot 3 \cdot 5}}{3}= \dfrac{2 \sqrt{3 \cdot 5}}{3}= \dfrac{2 \sqrt{15}}{3}
+	\] \pspace
+
+\item 
+	\[
+	\sqrt[3]{80}= \sqrt[3]{2 \cdot 2 \cdot 2 \cdot 2 \cdot 5}= 2 \sqrt[3]{2 \cdot 5}= 2 \sqrt[3]{10}
+	\] \pspace
+
+\item 
+	\[
+	\sqrt[4]{2^{12} \cdot 3^3 \cdot 5^9 \cdot 7^4}= 2^3 \cdot 5^2 \cdot 7 \sqrt[4]{3^3 \cdot 5}= 1400 \sqrt[4]{135}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 10
+\problem{10} Rationalize the following fractions:
+        \begin{enumerate}[(a)]
+        \item $\dfrac{1}{\sqrt{5}}$
+        \item $\dfrac{2}{\sqrt{3}}$
+        \item $\dfrac{4}{1 - \sqrt{2}}$
+        \item $\dfrac{6}{3 + \sqrt{6}}$
+        \item $\dfrac{1}{\sqrt[3]{4}}$
+        \end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{1}{\sqrt{5}}= \dfrac{1}{\sqrt{5}} \cdot \dfrac{\sqrt{5}}{\sqrt{5}}= \dfrac{\sqrt{5}}{5}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{2}{\sqrt{3}}= \dfrac{2}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}}= \dfrac{2\sqrt{3}}{3}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{4}{1 - \sqrt{2}}= \dfrac{4}{1 - \sqrt{2}} \cdot \dfrac{1 + \sqrt{2}}{1 + \sqrt{2}}= \dfrac{4(1 + \sqrt{2})}{1 + \sqrt{2} - \sqrt{2} - 2}= \dfrac{4(1 + \sqrt{2})}{-1}= -4(1 + \sqrt{2})
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{6}{3 + \sqrt{6}}= \dfrac{6}{3 + \sqrt{6}} \cdot \dfrac{3 - \sqrt{6}}{3 - \sqrt{6}}= \dfrac{6(3 - \sqrt{6})}{9 - 3\sqrt{6} + 3\sqrt{6} - 6}= \dfrac{6(3 - \sqrt{6})}{3}= 2(3 - \sqrt{6})
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{1}{\sqrt[3]{4}}= \dfrac{1}{4^{1/3}}= \dfrac{1}{4^{1/3}} \cdot \dfrac{4^{2/3}}{4^{2/3}}= \dfrac{4^{2/3}}{4^1}= \dfrac{\sqrt[3]{4^2}}{4}= \dfrac{\sqrt[3]{16}}{4}
+	\]
+\end{enumerate}
+
+
+\end{document}

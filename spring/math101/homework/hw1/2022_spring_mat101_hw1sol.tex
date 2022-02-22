@@ -160,11 +160,15 @@
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item We know that an integer is divisible by 2 if and only if the integer is even. Because 2346 is even, we know that it is divisible by 3. In fact, $2346= 1173(2)$. 
+
+\item We know that an integer is divisible by 3 if and only if the sum of the digits is divisible by 3. Because $5 + 9 + 6 + 0 + 1 + 2= 23$, which is not divisible by 3, the integer 569012 is not divisible by 3. In fact, $596012/3 \approx 198670.667$. 
+ 
+\item We know that an integer is divisible by 4 if and only if the last two digits of the integer is divisible by 4. Because 40  is divisibly by 4, we know that 990140 is divisible by 4. In fact, $990140= 247535(4)$. 
+
+\item We know that an integer is divisible by 5 if and only if the integer ends in a 0 or a 5. Because 1431 ends in a 1, we know that 1431 is not divisible by 5. In fact, $1431/5= 286.2$.
+
+\item We know that an integer is divisible by 9 if and only if the sum of the digits is divisible by 9. Because $7 + 0 + 1 + 5 + 5= 18$, which is divisible by 9, the integer 70155 is divisible by 9. In fact, $70155= 7795(9)$. 
 \end{enumerate}
 
 
@@ -174,7 +178,17 @@
 
 
 % Problem 5
-\problem{10} Using the `square root method,' show that 157 is prime. 
+\problem{10} Using the `square root method,' show that 157 is prime. \pspace
+
+\sol We know that if a positive integer $N$ is composite that it has a factor at most $\sqrt{N}$. Observe that $\sqrt{157} \approx 12.53$. Therefore, if 157 is composite, i.e. not prime, then it must have a prime divisor between 2 and 12. We check to see if any of the prime numbers between 2 and 12, i.e. 2, 3, 5, 7, and 11, divide 157: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|rrrrr}
+	Prime & 2 & 3 & 5 & 7 & 11 \\ \hline
+	Divisible & \xmark & \xmark & \xmark & \xmark & \xmark
+	\end{tabular}
+	\end{table} \par
+But then 157 does not have a prime divisor $\leq 12$. Therefore, 157 cannot be composite, i.e. 157 is prime. 
 
 
 
@@ -189,7 +203,50 @@
 	\item $\gcd(20, 22)$
 	\item $\gcd(36, 60)$
 	\item $\gcd(20, 100)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	12: & 1, 2, \textbf{3}, 4, 6, 12 \\
+	15: & 1, \textbf{3}, 5, 15
+	\end{tabular}
+	\end{table} \par
+Therefore, $\gcd(12, 15)= 3$. \pspace
+
+\item \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	20: & 1, \textbf{2}, 4, 5, 10, 20 \\
+	22: & 1, \textbf{2}, 11, 22
+	\end{tabular}
+	\end{table} \par
+Therefore, $\gcd(20, 22)= 2$. \pspace
+
+\item \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	36: & 1, 2, 3, 4, 6, 9, \textbf{12}, 18, 36 \\
+	60: & 1, 2, 3, 4, 5, 6, 10, \textbf{12}, 15, 20, 30, 60 
+	\end{tabular}
+	\end{table} \par
+ Therefore, $\gcd(36, 60)= 12$. \pspace
+ 
+\item \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	20: & 1, 2, 4, 5, 10, \textbf{20} \\
+	100: & 1, 2, 4, 5, 10, \textbf{20}, 25, 50, 100
+	\end{tabular}
+	\end{table} \par 
+Therefore, $\gcd(20, 100)= 20$. 
+\end{enumerate}
 
 
 
@@ -204,7 +261,50 @@
 	\item $\lcm(12, 15)$
 	\item $\lcm(12, 18)$
 	\item $\lcm(36, 48)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item  \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	24: & 24, 48, \textbf{72}, 96, 120, 144, 168, 192 \ldots \\
+	36: & 36, \textbf{72}, 108, 144, 180, 216, 252, 288, \ldots
+	\end{tabular}
+	\end{table} \par 
+Therefore, $\lcm(24, 36)= 72$. \pspace
+
+\item  \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	12: & 12, 24, 36, 48, \textbf{60}, 72, 84, 96, \ldots \\
+	15: & 15, 30, 45, \textbf{60}, 75, 90, 105, 120, \ldots
+	\end{tabular}
+	\end{table} \par 
+Therefore, $\lcm(12, 15)= 60$. \pspace
+ 
+\item  \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	12: & 12, 24, \textbf{36}, 48, 60, 72, 84, 96, \ldots \\
+	18: & 18, \textbf{36}, 54, 72, 90, 108, 126, 144, \ldots
+	\end{tabular}
+	\end{table} \par 
+Therefore, $\lcm(12, 18)= 36$. \pspace
+ 
+\item  \phantom{.}\par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	36: & 36, 72, 108, \textbf{144}, 180, 216, 252, 288, \ldots \\
+	48: & 48, 96, \textbf{144}, 192, 240, 288, 336, 384, \ldots
+	\end{tabular}
+	\end{table} \par  
+Therefore, $\lcm(36, 48)= 144$. \pspace
+\end{enumerate}
 
 
 
@@ -219,7 +319,30 @@
 	\item $\gcd(20, 22)$
 	\item $\gcd(36, 60)$
 	\item $\gcd(20, 100)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\gcd(12, 15)= \gcd(2^2 \cdot 3, 3 \cdot 5)= 3^1= 3
+	\] \pspace
+
+\item 
+	\[
+	\gcd(20, 22)= \gcd(2^2 \cdot 5, 2 \cdot 11)= 2^1= 2
+	\] \pspace
+
+\item 
+	\[
+	\gcd(36, 60)= \gcd(2^2 \cdot 3^2, 2^2 \cdot 3 \cdot 5)= 2^2 \cdot 3= 12
+	\] \pspace
+
+\item 
+	\[
+	\gcd(20, 100)= \gcd(2^2 \cdot 5, 2^2 \cdot 5^2)= 2^2 \cdot 5= 20
+	\]
+\end{enumerate}
 
 
 
@@ -234,7 +357,30 @@
 	\item $\lcm(12, 15)$
 	\item $\lcm(12, 18)$
 	\item $\lcm(36, 48)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\lcm(24, 36)= \lcm(2^3 \cdot 3, 2^2 \cdot 3^2)= 2^3 \cdot 3^2= 72
+	\] \pspace
+
+\item 
+	\[
+	\lcm(12, 15)= \lcm(2^2 \cdot 3, 3 \cdot 5)= 2^2 \cdot 3 \cdot 5= 60 
+	\] \pspace
+
+\item 
+	\[
+	\lcm(12, 18)= \lcm(2^2 \cdot 3, 2 \cdot 3^2)= 2^2 \cdot 3^2= 36
+	\] \pspace
+
+\item 
+	\[
+	\lcm(36, 48)= \lcm(2^2 \cdot 3^2, 2^4 \cdot 3^1)= 2^4 \cdot 3^2= 144
+	\]
+\end{enumerate}
 
 
 
@@ -249,7 +395,30 @@
 	\item $\lcm(2^3 \cdot 3^1 \cdot 5^3 \cdot 11^5, 2^2 \cdot 3^3 \cdot 5 \cdot 7)$
 	\item $\gcd(2^{10} \cdot 5^5 \cdot 13, 3^5 \cdot 5^1 \cdot 11^2)$
 	\item $\lcm(2^{10} \cdot 5^5 \cdot 13, 3^5 \cdot 5^1 \cdot 11^2)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\gcd(2^3 \cdot 3^1 \cdot 5^3 \cdot 11^5, 2^2 \cdot 3^3 \cdot 5 \cdot 7)= 2^2 \cdot 3 \cdot 5= 60
+	\] \pspace
+
+\item 
+	\[
+	\lcm(2^3 \cdot 3^1 \cdot 5^3 \cdot 11^5, 2^2 \cdot 3^3 \cdot 5 \cdot 7)= 2^3 \cdot 3^3 \cdot 5^3 \cdot 7 \cdot 11^5= 30\ 438\ 639\ 000
+	\] \pspace
+
+\item 
+	\[
+	\gcd(2^{10} \cdot 5^5 \cdot 13, 3^5 \cdot 5^1 \cdot 11^2)= 5
+	\] \pspace
+
+\item 
+	\[
+	\lcm(2^{10} \cdot 5^5 \cdot 13, 3^5 \cdot 5^1 \cdot 11^2)= 2^{10} \cdot 3^5 \cdot 5^5 \cdot 11^2 \cdot 13= 1\ 223\ 164\ 800\ 000
+	\]
+\end{enumerate}
 
 
 \end{document}
