@@ -9,41 +9,57 @@
 \begin{document}
 \thispagestyle{title}
 
-%% Quiz 1
-%\quizsol \textit{True/False}: A real number is `any' number expressible as a decimal. \pspace
-%
-%\sol 
-%
-%
-%
-%% Quiz 2
-%\quizsol \textit{True/False}: $\gcd(2^3 \cdot 3^1, 2 \cdot 3^2 \cdot 5^2)= 2^3 \cdot 3^2 \cdot 5^2$ and $\lcm(2^3 \cdot 3^1, 2 \cdot 3^2 \cdot 5^2)= 2 \cdot 3$. \pspace
-%
-%\sol 
-%
-%
-%% Quiz 3
-%\quizsol \textit{True/False}: $\dfrac{7}{5}$ divided by $\dfrac{21}{10}$ is $\dfrac{2}{3}$. \pspace
-%
-%\sol 
-%
-%
-%% Quiz 4
-%\quizsol \textit{True/False}: $\left( \dfrac{x^8}{y^3} \right)^{-1/2}= \dfrac{\sqrt{y^3}}{x^4}$ \pspace
-%
-%\sol 
-%
-%% Quiz 5
-%\quizsol \textit{True/False}: The decimal number 14.7 in scientific notation is $1.47 \cdot 10^{-1}$. \pspace
-%
-%\sol 
-%
-%
-%% Quiz 6
-%\quizsol \textit{True/False}: To increase 45.6 by 162\%, you compute $45.6(1.62)$. \pspace
-%
+% Quiz 1
+\quizsol \textit{True/False}: A real number is `any' number expressible as a decimal. \pspace
+
+\sol The statement is \textit{true}. A real number is `any' number that can be expressed as a decimal---even if it is not immediately given as such, e.g. $1= 1.0$, $-5= -5.0$, $\frac{1}{2}= 0.5$, $\sqrt{2} \approx 1.41421\ldots$, $\pi \approx 3.14159\ldots$, etc. \pvspace{1.5cm}
 
 
+
+% Quiz 2
+\quizsol \textit{True/False}: $\gcd(2^3 \cdot 3^1, 2 \cdot 3^2 \cdot 5^2)= 2^3 \cdot 3^2 \cdot 5^2$ and $\lcm(2^3 \cdot 3^1, 2 \cdot 3^2 \cdot 5^2)= 2 \cdot 3$. \pspace
+
+\sol The statement is \textit{false}. It is `obvious' that these cannot be correct because the gcd is greater than the given integers and the lcm is smaller than the given integers---both of which is impossible as we know that $\gcd(a, b) \leq \min\{a, b\}$ and $\lcm(a, b) \geq \max\{a, b\}$. Remember given a prime factorization of the numbers, we find the gcd by choosing the \textit{smallest} powers of each prime that appears in \textit{both} of the factorizations. We find the lcm by choosing the \textit{largest} powers of each prime that appears in the factorizations. Here, the gcd and lcm were computed reversing these rules. We should have $\gcd(2^3 \cdot 3^1, 2 \cdot 3^2 \cdot 5^2)= 2 \cdot 3$ and $\lcm(2^3 \cdot 3^1, 2 \cdot 3^2 \cdot 5^2)= 2^3 \cdot 3^2 \cdot 5^2$. \pvspace{1.5cm}
+
+
+
+% Quiz 3
+\quizsol \textit{True/False}: $\dfrac{7}{5}$ divided by $\dfrac{21}{10}$ is $\dfrac{2}{3}$. \pspace
+
+\sol The statement is \textit{true}. Note that division by a nonzero number is the same as multiplying by its reciprocal. So we have
+	\[
+	\dfrac{\phantom{-}\dfrac{3}{10}\phantom{-}}{\dfrac{12}{5}}= \dfrac{3}{10} \cdot \dfrac{5}{12}= \dfrac{\cancel{3}^1}{\cancel{10}^{\,2}} \cdot \dfrac{\cancel{5}^1}{\cancel{12}^{\,4}}= \dfrac{1}{8}
+	\]
+One can also rewrite the problem as\dots 
+	\[
+	\dfrac{\phantom{-}\dfrac{3}{10}\phantom{-}}{\dfrac{12}{5}}= \dfrac{3}{10} \div \dfrac{12}{5}
+	\]
+But then to divide, we multiply by the reciprocal and proceed as in the solution above. 
+
+
+% Quiz 4
+\quizsol \textit{True/False}: $\left( \dfrac{x^8}{y^3} \right)^{-1/2}= \dfrac{\sqrt{y^3}}{x^4}$ \pspace
+
+\sol The statement is \textit{true}. 
+
+% Quiz 5
+\quizsol \textit{True/False}: The decimal number 14.7 in scientific notation is $1.47 \cdot 10^{-1}$. \pspace
+
+\sol The statement is \textit{true}. 
+
+
+% Quiz 6
+\quizsol \textit{True/False}: To increase 45.6 by 162\%, you compute $45.6(1.62)$. \pspace
+
+\sol The statement is \textit{true}. 
+
+
+The statement is \textit{false}. To find 119\% of 68, we would multiply 68 by the percent written as a decimal. This would be $68(1.19)$. However, to increase or decrease a number by a percentage, we compute the number $\#(1 \pm \%)$, where we add if we are increasing, subtract if we are decreasing, $\#$ is the number, and \% is the percentage written as a decimal. So to increase 68 by 119\%, we need to compute $68(1 + 1.19)= 68(2.19)$. 
+
+
+
+
+% If $f(x)= 2x + 3$ and $g(x)= 1 - x$, then $(f \circ g)(1)= 0$. 
 
 
 

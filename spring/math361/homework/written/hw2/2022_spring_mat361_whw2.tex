@@ -1,0 +1,116 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{2: Due 03/04}{Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.}{William (Bill) Paul Thurston}
+
+
+% Problem 1. Horner's Method
+\problem{Horner's Method} We have seen that Horner's Method is an extremely efficient method for evaluating polynomials. Here, we will compare the efficiency of several methods of evaluating polynomials. Let $x_0 \in \mathbb{R}$, $f(x)= x^4 - 5x^3 + 20x - 16$, and $g(x)= a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$
+	\begin{enumerate}[(a)]
+	\item Evaluate $f(2)$ using the traditional `by-hand way.' How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using the traditional `by-hand way'?
+	\item Evaluate $f(2)$ by computing the powers of 2 using fast exponentiation. How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using fast exponentiation to compute the powers of $x_0$ require?
+	\item Evaluate $f(2)$ using Horner's Method. How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using Horner's Method require?
+	\item Using the fact that $f(x)$ has roots $x= -2, 1, 2, 4$ and leading coefficient 1, we can write $f(x)= 1 \cdot (x - 4)(x - 2)(x - 1)(x + 2)$. Compute $f(2)$ as written. How many flops does this require? If $g(x)$ has roots $r_1, r_2, \ldots, r_n$, we can write
+		\[
+		g(x)= a_n \prod_{i=1}^n (x - r_i)
+		\]
+	How many flops does evaluating $g(x)$ written as above require? Comment on any possible issues evaluating $g(x)$ in this fashion and how one might resolve them. 
+	\item Of all the methods used above, which requires the least amount of flops to evaluate $g(x_0)$?
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2. Bisection Method
+\problem{Bisection Method} If $f(x)$ is continuous and $f(a)f(b) < 0$, we have seen that the bisection method always converges to a solution of $f(x)= 0$ on $[a, b]$. Let's examine the bisection method a bit more closely:
+	\begin{enumerate}[(a)]
+	\item Practice implementing the bisection method by using three steps of the bisection method to find a solution to $x^3= x^2 + 5$ using an initial interval of $[0, 3]$. Be sure to verify that the bisection method will converge to a solution.
+	\item How many steps of the bisection method would one have to perform using the initial interval in (a) to approximate the solution to five decimal digits of accuracy?
+	\item Show that the polynomial $p(x)= x^2 - 2x + 1$ has a root on the interval $[-2, 2]$. Will the bisection method find this root? Explain. What if the interval were $[0, 2]$?
+	\item Consider the polynomial $p(x)= (x - 1)(x - 2)(x - 3)$. How many roots does $p(x)$ have on the interval $[0, 5]$? Does the bisection method apply to this function on this interval? What root will the bisection method find? Can the bisection method be used to find all the roots? Explain. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3. Newton's Method
+\problem{Newton's Method} Recall that if $f \in C^2[a, b]$ and $r$ is a simple root of $f(x)$, i.e. $f(r)= 0$ and $f'(r) \neq 0$, there exists $\delta > 0$ such that for $x_0 \in [r - \delta, r + \delta]$, Newton's Method with initial value $x_0$ will converge to $r$. We have seen that Newton's method is a powerful technique for finding solutions to the equation $f(x)= 0$ when $f(x)$ is differentiable because the algorithm has quadratic convergence. However, Newton's Method does have some issues which we will explore here.
+	\begin{enumerate}[(a)]
+	\item Use Newton's Method `by hand' to approximate $\sqrt[3]{5}$ to at least two decimal digits of accuracy using an appropriate initial value. 
+	\item Consider the function $f(x)= \sqrt[3]{x}$. Does $f(x)$ have a root? Can Newton's Method be applied to find the root using any initial value $x_0 \neq 0$? Your explanation should include a computational justification. Does this violate the theorem in the problem statement? 
+	\item Consider the polynomial $p(x)= -3x^3 + 5x^2 + x - 1$. Give a sketch of the function.  Using this sketch, approximately what are the roots of $p(x)$? Apply Newton's Method `by hand' using an initial input of $x_0= 1$. Explain what happens (including a sketch of the method for visualization) and reconcile this with the theorem in the problem statement. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4. Newton's Method for Repeated Roots
+\problem{Newton's Method for Repeated Roots} We say that a function has a root of multiplicity $n$ at $x_0$ if $f(x_0)= f'(x_0)= \cdots= f^{(n)}(x_0)= 0$ and $f^{(n+1)}(x_0) \neq 0$. A root of multiplicity one is called a simple root. We have seen that for simple roots of a function, given `appropriate' initial values, Newton's Method converges quadratically. However, if a function has a repeated root, Newton's Method will only converge linearly. However, this convergence rate can be improved.
+	\begin{enumerate}[(a)]
+	\item Using Taylor series, explain why a sufficiently smooth function $f(x)$ with a root $r$ of multiplicity $n$ can be written as $(x - r)^n q(x)$, where $q(r) \neq 0$, for values of $x$ `close to $r$
+	\item Show that the function $h(x):= f(x)/f'(x)$ has a simple root at $r$. 
+	\item Show that applying Newton's Method to $h(x)$ yields
+		\[
+		x_{n+1}= x_n - \dfrac{f(x_n) f'(x_n)}{(f'(x_n))^2 - f(x_n) f''(x_n)}
+		\]
+	\item Explain why for `appropriate' values for $x_0$, the sequence $\{ x_n \}$ from (c) converges quadratically to $r$. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Evaluation
+\noindent{\bfseries Evaluation.} \pvspace{0.3cm}
+
+Complete the following survey by rating each problem. Each area will be rated on a scale of 1 to 5. For interest, 1 is ``mind-numbing'' while a 5 is ``mind-blowing.'' For difficulty, 1 is ``trivial/routine'' while 5 is ``brutal.'' For learning, 1 means ``nothing new'' while 5 means ''profound awakening.'' Then you to estimate the amount of time you spent on each problem (in minutes). 
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+ & Interest & Difficulty & Learning & Time Spent \\ \hline \hline
+Problem 1 &  &  &  &  \\ \hline
+Problem 2 &  &  &  &  \\ \hline
+Problem 3 &  &  &  &  \\ \hline
+Problem 4 &  &  &  &  \\ \hline
+%Problem 5 &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+\vspace{0.25cm}
+
+Finally, indicate whether you believe lectures were useful in completing this assignment and whether you believe the problems were useful enough/interesting enough to assign again to future students by checking the appropriate space.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+  & \multicolumn{2}{c|}{Lectures} &  \multicolumn{2}{c|}{Assign Again} \\ \cline{2-5}
+   & Yes & No & Yes & No \\ \hline \hline
+  Problem 1 &  &  &  &  \\ \hline 
+  Problem 2 &  &  &  &  \\ \hline 
+  Problem 3 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  &  \\ \hline 
+%  Problem 5 &  &  &  &  \\ \hline 
+\end{tabular}
+\end{center}
+
+\end{document}

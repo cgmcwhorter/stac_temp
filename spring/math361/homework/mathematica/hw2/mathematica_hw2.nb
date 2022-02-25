@@ -1,0 +1,657 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23798,        649]
+NotebookOptionsPosition[     22282,        613]
+NotebookOutlinePosition[     22676,        629]
+CellTagsIndexPosition[     22633,        626]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name : 
+Mathematica HW 2\
+\>", "Section",
+ CellChangeTimes->{{3.854671612789234*^9, 3.8546716251415997`*^9}, {
+  3.8547658901951427`*^9, 
+  3.8547658902744417`*^9}},ExpressionUUID->"341367ee-335c-4065-aadc-\
+43a2f16db76b"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1. Comparing Rates of Convergence", "Subsection",
+ CellChangeTimes->{{3.854765913681972*^9, 
+  3.854765933480136*^9}},ExpressionUUID->"fa62230b-0a84-488a-a502-\
+7c041fb1d87b"],
+
+Cell[TextData[{
+ "We have seen several types of algorithms to approximate roots for \
+functions, i.e. to approximate solutions to the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "da97b897-61a7-4557-9fcd-20f66c705b38"],
+ ". Of course, different approaches will yield different rates of \
+convergence. Let ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", " ", 
+    RowBox[{
+     SuperscriptBox["x", "3"], "(", 
+     RowBox[{"x", " ", "-", " ", "2"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "775e7db8-58c6-415b-8176-c289bbb5e363"],
+ ". \n\ta) Apply the bisection method to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2c9d8d02-cb1e-4078-bde0-ad50ee05779e"],
+ " on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", "2"}], ",", " ", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8efb0e93-ed1b-4e3b-a998-b3dd28b9044b"],
+ " to approximate a solution to this equation to five decimal digits of \
+accuracy. How many iterations did this take? What rate of convergence do you \
+expect for this algorithm? Does the data support this rate of convergence?\n\t\
+b) Apply Newton\[CloseCurlyQuote]s method to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d03f9de5-08e9-4f5b-b195-9d4bbfa96961"],
+ " using an initial value of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "1.0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "98816c2e-1929-4d4d-871b-4bbc5c33eb94"],
+ " to determine a root of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d34de8ad-b96a-4e15-aef1-24eb11c81ddc"],
+ " to five decimal digits of accuracy. How many iterations did this take? \
+What rate of convergence do you expect for this algorithm? Does the data \
+support this rate of convergence? \n\tc) Redo part (b) using an initial value \
+of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "3.0"}], TraditionalForm]],ExpressionUUID->
+  "1676bc0a-3aad-4ea6-8825-7ec21dcf63b4"],
+ ".\n\td) Redo part (b) using an initial value of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "1.0"}], TraditionalForm]],ExpressionUUID->
+  "57db538d-77c7-43fb-a5c5-d2665e545c9f"],
+ " but modifying Newton\[CloseCurlyQuote]s method by instead using the \
+recursion ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", 
+     RowBox[{"n", "+", "1"}]], "=", " ", 
+    RowBox[{
+     SubscriptBox["x", "n"], "-", " ", 
+     RowBox[{"3", 
+      FractionBox[
+       RowBox[{"f", "(", 
+        SubscriptBox["x", "n"], ")"}], 
+       RowBox[{
+        RowBox[{"f", "'"}], 
+        RowBox[{"(", 
+         SubscriptBox["x", "n"], ")"}]}]]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c3e55de2-b4a3-4724-bb21-638de91214d3"],
+ ". What does the rate of convergence appear to be? Justify your answer. \
+Predict what the rate of convergence is for this modified Newton\
+\[CloseCurlyQuote]s method ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", 
+     RowBox[{"n", "+", "1"}]], "=", " ", 
+    RowBox[{
+     SubscriptBox["x", "n"], "-", " ", 
+     RowBox[{"m", 
+      FractionBox[
+       RowBox[{"f", "(", 
+        SubscriptBox["x", "n"], ")"}], 
+       RowBox[{
+        RowBox[{"f", "'"}], 
+        RowBox[{"(", 
+         SubscriptBox["x", "n"], ")"}]}]]}]}]}], TraditionalForm]],
+  ExpressionUUID->"a35ee5f1-ec89-49c5-b024-9182ed123058"],
+ " applied to an \[OpenCurlyQuote]appropriate\[CloseCurlyQuote] initial value \
+",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "93717942-493e-4408-97be-c5a48c2bb16c"],
+ " to a function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e3b9bb6d-6437-419e-b1fc-c854636d3dcf"],
+ " with a root ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9c318152-81fa-4510-9d1e-fcddf13db62e"],
+ " with multiplicity ",
+ Cell[BoxData[
+  FormBox["m", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d9f343b5-0812-4809-b06d-a1ee539b2784"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.854766906989469*^9, 3.854766960008481*^9}, {
+  3.854767000277342*^9, 3.854767009958181*^9}, {3.8547670981350727`*^9, 
+  3.854767220928259*^9}, {3.854767306388001*^9, 3.854767417798061*^9}, {
+  3.854767448030076*^9, 3.854767550985428*^9}, {3.854767770126624*^9, 
+  3.854768096245264*^9}, {3.854768232198423*^9, 
+  3.854768236740185*^9}},ExpressionUUID->"c47814c7-7871-48c9-b112-\
+2b3ec9f173a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. A Problem of Leonardo Bonacci", "Subsection",
+ CellChangeTimes->{{3.8546716331614313`*^9, 3.8546716351427927`*^9}, {
+  3.854672479690837*^9, 3.8546725199112587`*^9}, {3.8547659194588127`*^9, 
+  3.854765919807899*^9}, {3.854765951810958*^9, 
+  3.854765951884584*^9}},ExpressionUUID->"488d27f6-cfc4-4948-933f-\
+7a89855aed6c"],
+
+Cell[TextData[{
+ "Johannes of Palermo was a scholar in Frederick II\[CloseCurlyQuote]s court. \
+Palermo posed a challenge in 1224 to Leonardo of Pisa (known better as \
+Fibonacci): find a solution to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "3"], "+", 
+     RowBox[{"2", 
+      SuperscriptBox["x", "2"]}], "+", 
+     RowBox[{"10", "x"}]}], "=", "20"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dbfc01da-e719-4fc7-9e92-0cf217bfc759"],
+ ". Fibonacci showed that the equation had no rational root and no Euclidean \
+rational roots, i.e. no roots of the form  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "\[PlusMinus]", 
+    SqrtBox["b"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c9c33bc3-a86b-4d87-a3b9-6f25a97d61fc"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SqrtBox["a"], "\[PlusMinus]", 
+    SqrtBox["b"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5e11f9f1-7e5a-4281-a762-b851a70ab325"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox[
+    RowBox[{"a", "\[PlusMinus]", 
+     SqrtBox["b"]}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "42f7160a-0020-45d0-a8b1-0a1d6c80e63b"],
+ ", or ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox[
+    RowBox[{
+     SqrtBox["a"], "\[PlusMinus]", 
+     SqrtBox["b"]}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1d072ca2-446a-4360-98d0-9b59c224aee4"],
+ ", where ",
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dac5d5ec-065a-4283-9c8d-6a84d7e6a0d0"],
+ " and ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1ac9f006-c45d-4d2f-b437-62e4fd23c9c1"],
+ " are rational numbers. Using a technique of Omar Khayyan involving the \
+intersection of a parabola and a circle, Fibonacci then gave an approximation \
+to the only real valued solution to the equation: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "+", 
+    RowBox[{"22", 
+     RowBox[{"(", 
+      FractionBox["1", "60"], ")"}]}], "+", 
+    RowBox[{"7", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "60"], ")"}], "2"]}], "+", 
+    RowBox[{"42", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "60"], ")"}], "3"]}], "+", 
+    RowBox[{"33", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "60"], ")"}], "4"]}], "+", 
+    RowBox[{"4", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "60"], ")"}], "5"]}], "+", 
+    RowBox[{"40", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "60"], ")"}], "6"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0a42123b-64a2-4206-9cd0-f7c4493427ef"],
+ ".\n\ta) Use Mathematica\[CloseCurlyQuote]s NSolve to determine the only \
+real solution to the problem.\n\tb) Determine the accuracy of Fibonacci\
+\[CloseCurlyQuote]s approximation to the real solution.\n\tc) Using an \
+appropriate interval, use the bisection method to approximate the only real \
+solution to the problem. How many iterations did the method require to \
+achieve Fibonacci\[CloseCurlyQuote]s level of accuracy?\n\td) Using an \
+appropriate initial value, use Newton\[CloseCurlyQuote]s method to \
+approximate the only real solution to the problem. How many iterations did \
+the method require to achieve Fibonacci\[CloseCurlyQuote]s level of \
+accuracy?"
+}], "Text",
+ CellChangeTimes->{{3.8546717639948797`*^9, 3.854671908830062*^9}, {
+  3.854671951304831*^9, 
+  3.8546724548540277`*^9}},ExpressionUUID->"bbc419fa-c02c-4245-87b8-\
+9fcc0323c3d7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Population Growth", "Subsection",
+ CellChangeTimes->{{3.854765970129714*^9, 3.854766009473548*^9}, {
+  3.8547702870651073`*^9, 
+  3.854770289240999*^9}},ExpressionUUID->"7aaf1b5b-0512-4c7c-b4e4-\
+082caed9b13e"],
+
+Cell[TextData[{
+ "A simple model for population growths (over short periods of time) can by \
+given by assuming that the population grows continuously at a rate \
+proportional to the population at that given time, i.e. the birth rate. \
+Suppose we denote the population at time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e43864c5-1116-43db-a134-457302582898"],
+ " by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "(", "t", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6b95bdd6-120d-484d-be0f-71f365052c1b"],
+ ". Then the model states that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"dP", "(", "t", ")"}], "dt"], "=", 
+    RowBox[{"\[Mu]", " ", 
+     RowBox[{"P", "(", "t", ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a5880268-4d4c-4393-a69a-54c5d939b8ae"],
+ ", where ",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8f9e91d9-f37f-4198-a763-a6823fa61a1f"],
+ " is the proportionality growth constant for this population. One can easily \
+solve this to find that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"P", "(", "t", ")"}], "=", 
+    RowBox[{
+     SubscriptBox["P", "0"], 
+     SuperscriptBox["e", 
+      RowBox[{"\[Mu]", " ", "t"}]]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "36cb1c2d-175e-468b-877c-a902662e7378"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["P", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "cf4118c2-c498-44c3-8718-e4c933cd2e80"],
+ " is the initial population. However, this model would fail if there was \
+influx in or out of the population. For instance, the model would fail for a \
+population having immigration/emigration. We could alter the model by then \
+saying the net flow in/out of the population is a constant ",
+ Cell[BoxData[
+  FormBox["C", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f295b6ec-0910-42b2-9db7-3a67f4456df8"],
+ ". Then the model states that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"dP", "(", "t", ")"}], "dt"], "=", 
+    RowBox[{
+     RowBox[{"\[Mu]", " ", 
+      RowBox[{"P", "(", "t", ")"}]}], " ", "+", " ", "C"}]}], 
+   TraditionalForm]],ExpressionUUID->"098cbd10-875f-43b5-a5cf-e3fe4ba3cc2c"],
+ ". This can be solved to find ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"P", "(", "t", ")"}], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["P", "0"], 
+      SuperscriptBox["e", 
+       RowBox[{"\[Mu]", " ", "t"}]]}], "+", 
+     RowBox[{
+      FractionBox["C", "\[Mu]"], 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["e", 
+         RowBox[{"\[Mu]", " ", "t"}]], " ", "-", " ", "1"}], ")"}]}]}]}], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e0bd0881-a8bc-4c87-a27c-249dabcd5659"],
+ ". According to the 2010 US Census, the US population was 309.3 million \
+persons, and according to the 2020 US Census, the US population was 329.5 \
+million persons. Approximating the number of immigrants in the 2010 - 2019 \
+decade by the 2010 - 2019 amount of 1,063,300, approximate the US birth rate. \
+Answer this question by using an \[OpenCurlyQuote]appropriate\
+\[CloseCurlyQuote] numerical algorithm to find a root of an \
+\[OpenCurlyQuote]appropriate function.\[CloseCurlyQuote]"
+}], "Text",
+ CellChangeTimes->{{3.854770293177184*^9, 3.854770585602315*^9}, {
+  3.854770651249648*^9, 3.854770806229095*^9}, {3.854770843830449*^9, 
+  3.854770848383148*^9}, {3.854771005039052*^9, 3.854771073011142*^9}, {
+  3.854771125883276*^9, 
+  3.854771193423744*^9}},ExpressionUUID->"1ca6d74e-83a9-48af-a386-\
+84d42d02ac9d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Annuity", "Subsection",
+ CellChangeTimes->{{3.8547659750281887`*^9, 3.8547660120355988`*^9}, {
+  3.854769077071422*^9, 
+  3.8547690782857933`*^9}},ExpressionUUID->"a95ffefa-b500-4556-84bc-\
+59b2d6efff3c"],
+
+Cell[TextData[{
+ "An annuity is a financial investment that earns interest and provides a \
+guaranteed income payments over a preset amount of time. These are most often \
+used for retirees  to continue to have income after retiring so to as \
+minimize outliving their capital. One makes (typically) regular payments, ",
+ Cell[BoxData[
+  FormBox["P", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c533afb5-f1df-47b7-9146-dfd7319d99e5"],
+ ", into an account that earns monthly interest rate ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "27a84b19-6d77-4c93-90c8-1618665e45fd"],
+ ". If you make monthly deposits for ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "afe29f3f-3a62-4495-b1e2-697589676d82"],
+ " years, the annuity due equation computes the total amount of money, ",
+ Cell[BoxData[
+  FormBox["F", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5e94ce34-1a7c-475b-b990-b907293b9b6b"],
+ ", that will be in this account in the future:\n\t\t\t\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"A", " ", "=", " ", 
+    RowBox[{
+     FractionBox["P", "i"], 
+     RowBox[{"(", " ", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "+", "i"}], ")"}], "n"], " ", "-", " ", "1"}], 
+      ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fef23d39-6a9b-4c59-8790-800dbedbb91b"],
+ "\nSuppose that you wanted to have $820,000 saved after 30 years of work, \
+depositing $500 monthly into your retirement fund. When shopping for \
+retirement annuity interest rates, what is the minimal rate you need to \
+achieve this goal? Answer this question by using an \
+\[OpenCurlyQuote]appropriate\[CloseCurlyQuote] numerical algorithm to find a \
+root of an \[OpenCurlyQuote]appropriate function.\[CloseCurlyQuote]"
+}], "Text",
+ CellChangeTimes->{{3.854769079411866*^9, 3.854769414551044*^9}, {
+  3.854770076565102*^9, 3.854770182773651*^9}, {3.8547702248920927`*^9, 
+  3.854770246785429*^9}},ExpressionUUID->"ac8b830d-b8d9-4f7d-84a0-\
+eb7ab27d4015"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 5. Complex Newton\[CloseCurlyQuote]s Method", "Subsection",
+ CellChangeTimes->{{3.854765988205262*^9, 3.854765999322403*^9}, {
+  3.854771523067279*^9, 
+  3.854771537034614*^9}},ExpressionUUID->"32a69970-aa08-4511-a0fe-\
+ada3684cb54d"],
+
+Cell[TextData[{
+ "Newton\[CloseCurlyQuote]s method works perfectly well for functions whose \
+inputs are allowed to be complex numbers instead of real numbers. In fact, \
+the algorithm works the exam same way. However, the behavior of Newton\
+\[CloseCurlyQuote]s method when the function inputs are allowed to be complex \
+is rather extraordinary. Consider the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", " ", 
+    RowBox[{
+     SuperscriptBox["x", "3"], " ", "-", " ", "1"}]}], TraditionalForm]],
+  ExpressionUUID->"93c04843-e616-408d-80dc-504e8c4ee49f"],
+ ".\n\ta) Use Mathematica\[CloseCurlyQuote]s Solve and NSolve to find ",
+ StyleBox["all",
+  FontSlant->"Italic"],
+ " the solutions to the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"11f11d3a-0af4-44b4-a35f-2a95b6beef38"],
+ ". What are these roots? [You may want to look up \[OpenCurlyQuote]roots of \
+unity.\[CloseCurlyQuote]] Use Mathematica\[CloseCurlyQuote]s Re and Im to \
+express these roots in the traditional ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", " ", "+", " ", 
+    RowBox[{"b", " ", "i"}]}], TraditionalForm]],ExpressionUUID->
+  "87a993f7-3e1f-4a1b-ba0b-c8b5f6ae767f"],
+ " complex number format. \n\tb) We can visualize complex numbers as points \
+or vectors in the plane by thinking of the complex number ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", " ", "+", " ", 
+    RowBox[{"b", " ", "i"}]}], TraditionalForm]],ExpressionUUID->
+  "8bc14a85-9fc2-4a35-b50c-001f225cca9c"],
+ " as \[OpenCurlyQuote]existing\[CloseCurlyQuote] at the point ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"a", ",", " ", "b"}], ")"}], TraditionalForm]],ExpressionUUID->
+  "9a0f7f6d-c9d6-4ff1-bff0-75a789e8f289"],
+ " in the plane and then drawing the line/vector from the origin to the point \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"a", ",", " ", "b"}], ")"}], TraditionalForm]],ExpressionUUID->
+  "90f1767c-cf23-45e9-8ea6-de46785974a5"],
+ ". This line segment/vector then makes an angle ",
+ Cell[BoxData[
+  FormBox["\[Theta]", TraditionalForm]],ExpressionUUID->
+  "0e2bb8b2-67d5-4728-8a7a-c8eae8e32f69"],
+ " with the positive ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "d88802e5-2195-4656-9f84-74528c247559"],
+ "-axis. Use Mathematica\[CloseCurlyQuote]s Arg function to find this angle \
+for the roots of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
+  "cdb31d3b-d1f3-4df3-994c-da72c59e301b"],
+ ".\n\tc) Repeat the previous part for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "0"], "=", " ", 
+     RowBox[{"0.3", " ", "+", " ", 
+      RowBox[{"0.3", " ", "i"}]}]}], ",", " ", 
+    RowBox[{"0.4", " ", "+", " ", 
+     RowBox[{"0.3", " ", "i"}]}], ",", " ", 
+    RowBox[{"0.5", " ", "+", " ", 
+     RowBox[{"0.3", " ", "i"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "33922e1b-d36f-4c7d-9100-a8ac18a7869e"],
+ ". Is this surprising?\n\td) Assign each of the three roots of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9a667d13-e554-4443-9033-52310dab5e43"],
+ " a color. Suppose we apply Newton\[CloseCurlyQuote]s method using an \
+initial value of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], " "}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f76b0bbf-042b-42a7-bf68-5fa860411f35"],
+ "until the outputs sufficiently stabilized. We  then determine to which root \
+of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c2c4bc6e-4414-41fc-9860-a8ad4c7bb5b0"],
+ " the algorithm has converged and color the point accordingly. We can create \
+a plot of the resulting plane using the Mathematica code \n\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"DensityPlot", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Arg", "[", 
+      RowBox[{"FixedPoint", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "-", 
+          RowBox[{
+           RowBox[{"f", "[", "#", "]"}], "/", 
+           RowBox[{
+            RowBox[{"f", "'"}], "[", "#", "]"}]}]}], "&"}], ",", 
+        RowBox[{"N", "[", 
+         RowBox[{"a", "+", 
+          RowBox[{"b", " ", "I"}]}], "]"}]}], "]"}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "200"}], ",", 
+     RowBox[{"ColorFunction", "\[Rule]", "\"\<DeepSeaColors\>\""}]}], 
+    "\[IndentingNewLine]", "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "bc9c5adc-0620-4001-b0dd-ba4e42e3adce"],
+ "\n\tRun this code and comment on the resulting image. \n\te) Watch the \
+video at https://www.youtube.com/watch?v=-RdOwhmqP5s and explain how this \
+connects to the previous parts. "
+}], "Text",
+ CellChangeTimes->{{3.85477160732495*^9, 3.854771618599671*^9}, {
+  3.854771823000689*^9, 3.8547722383241053`*^9}, {3.854772931556859*^9, 
+  3.85477313967511*^9}, {3.854773521095025*^9, 3.854773533257661*^9}, {
+  3.8547735744796553`*^9, 
+  3.854773715180962*^9}},ExpressionUUID->"691fa907-76da-462c-9712-\
+08c3e4affc5a"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{712, 747},
+WindowMargins->{{Automatic, 2}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8b16125e-822e-4346-a88b-2a36d45765de"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 232, 7, 105, "Section",ExpressionUUID->"341367ee-335c-4065-aadc-43a2f16db76b"],
+Cell[CellGroupData[{
+Cell[837, 33, 189, 3, 54, "Subsection",ExpressionUUID->"fa62230b-0a84-488a-a502-7c041fb1d87b"],
+Cell[1029, 38, 5020, 140, 377, "Text",ExpressionUUID->"c47814c7-7871-48c9-b112-2b3ec9f173a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6086, 183, 340, 5, 54, "Subsection",ExpressionUUID->"488d27f6-cfc4-4948-933f-7a89855aed6c"],
+Cell[6429, 190, 3626, 102, 374, "Text",ExpressionUUID->"bbc419fa-c02c-4245-87b8-9fcc0323c3d7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10092, 297, 227, 4, 54, "Subsection",ExpressionUUID->"7aaf1b5b-0512-4c7c-b4e4-082caed9b13e"],
+Cell[10322, 303, 3765, 98, 355, "Text",ExpressionUUID->"1ca6d74e-83a9-48af-a386-84d42d02ac9d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14124, 406, 221, 4, 54, "Subsection",ExpressionUUID->"a95ffefa-b500-4556-84bc-59b2d6efff3c"],
+Cell[14348, 412, 2147, 48, 270, "Text",ExpressionUUID->"ac8b830d-b8d9-4f7d-84a0-eb7ab27d4015"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16532, 465, 248, 4, 54, "Subsection",ExpressionUUID->"32a69970-aa08-4511-a0fe-ada3684cb54d"],
+Cell[16783, 471, 5471, 138, 544, "Text",ExpressionUUID->"691fa907-76da-462c-9712-08c3e4affc5a"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
