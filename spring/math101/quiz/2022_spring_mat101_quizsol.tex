@@ -34,33 +34,45 @@ One can also rewrite the problem as\dots
 	\[
 	\dfrac{\phantom{-}\dfrac{3}{10}\phantom{-}}{\dfrac{12}{5}}= \dfrac{3}{10} \div \dfrac{12}{5}
 	\]
-But then to divide, we multiply by the reciprocal and proceed as in the solution above. 
+But then to divide, we multiply by the reciprocal and proceed as in the solution above. \pvspace{1.5cm}
+
 
 
 % Quiz 4
 \quizsol \textit{True/False}: $\left( \dfrac{x^8}{y^3} \right)^{-1/2}= \dfrac{\sqrt{y^3}}{x^4}$ \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. Observe that\dots
+	\[
+	\left( \dfrac{x^8}{y^3} \right)^{-1/2}= \left( \dfrac{y^3}{x^8} \right)^{1/2}= \dfrac{y^{3/2}}{x^{8/2}}= \dfrac{\sqrt{y^3}}{x^4}
+	\]
+
+
+
+\newpage
+
+
 
 % Quiz 5
 \quizsol \textit{True/False}: The decimal number 14.7 in scientific notation is $1.47 \cdot 10^{-1}$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. We can simply compute $1.47 \cdot 10^{-1}$: $1.47 \cdot 10^{-1}= 1.47 \cdot \frac{1}{10}= 0.147 \neq 14.7$. Alternatively, to write 14.7 in scientific notation, we need to place the decimal between the 1 and 4. This would result in 1.47. To shift the decimal back to its proper place, we would have to move the decimal place one spot to the right, i.e. multiply by 10. Therefore, 14.7 in scientific notation is $1.47 \cdot 10^1$. \pvspace{1.5cm}
+
 
 
 % Quiz 6
 \quizsol \textit{True/False}: To increase 45.6 by 162\%, you compute $45.6(1.62)$. \pspace
 
-\sol The statement is \textit{true}. 
-
-
-The statement is \textit{false}. To find 119\% of 68, we would multiply 68 by the percent written as a decimal. This would be $68(1.19)$. However, to increase or decrease a number by a percentage, we compute the number $\#(1 \pm \%)$, where we add if we are increasing, subtract if we are decreasing, $\#$ is the number, and \% is the percentage written as a decimal. So to increase 68 by 119\%, we need to compute $68(1 + 1.19)= 68(2.19)$. 
+\sol The statement is \textit{false}. The statement is \textit{false}. To find 162\% of 45.6, we would multiply 45.6 by the percent written as a decimal. This would be $45.6(1.62)$. However, to increase or decrease a number by a percentage, we compute the number $\#(1 \pm \%)$, where we add if we are increasing, subtract if we are decreasing, $\#$ is the number, and \% is the percentage written as a decimal. So to increase 45.6 by 162\%, we need to compute $45.6(1 + 1.62)= 45.6(2.62)$. \pvspace{1.5cm}
 
 
 
+% Quiz 7
+\quizsol \textit{True/False}: If $f(x)= 2x + 3$ and $g(x)= 1 - x$, then $(f \circ g)(1)= 0$. \pspace
 
-% If $f(x)= 2x + 3$ and $g(x)= 1 - x$, then $(f \circ g)(1)= 0$. 
-
+\sol The statement is \textit{false}. We know that $(f \circ g)(1)= f(g(1))$. First, we need to compute $g(1)$: $g(1)= 1 - 1= 0$. But then we have $f(g(1))= f(0)$. So now we compute $f(0)$: $f(0)= 2(0) + 3= 0 + 3= 3$. Therefore, $(f \circ g)(1)= 3$. All together:
+	\[
+	(f \circ g)(1)= f(g(1))= f(0)= 3
+	\]
 
 
 \end{document}
