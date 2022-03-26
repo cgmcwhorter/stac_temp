@@ -10,21 +10,15 @@
 % -------------------
 \begin{document}
 
-\homework{1: Due 02/15}{Well, that's no reason to cry. One cries because one is sad. For example, I cry because others are stupid and it makes me sad.}{Sheldon Cooper, The Big Bang Theory}
+\homework{3: Due 04/08}{One of the endlessly alluring aspects of mathematics is that its thorniest paradoxes have a way of blooming into beautiful theories.}{Philip J. Davis}
 
 
 % Problem 1.
-\problem{Horner's Method} We have seen that Horner's Method is an extremely efficient method for evaluating polynomials. Here, we will compare the efficiency of several methods of evaluating polynomials. Let $x_0 \in \mathbb{R}$, $f(x)= x^4 - 9x^2 - 4x + 12$, and $g(x)= a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$
+\problem{Identifying Fixed Points} To avoid using fixed point iteration to solve an equation, one might be able to find the fixed points exactly. Moreover, to test the general theory, especially error calculations, it is essential to know the fixed points exactly. In either case, one would like to be able to compute fixed points exactly---whenever possible. For the following functions, compute the fixed points. Be sure to show that these are fixed points.
 	\begin{enumerate}[(a)]
-	\item Evaluate $f(2)$ using the traditional `by-hand way.' How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using the traditional `by-hand way'?
-	\item Evaluate $f(2)$ by computing the powers of 2 using fast exponentiation. How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using fast exponentiation to compute the powers of $x_0$ require?
-	\item Evaluate $f(2)$ using Horner's Method. How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using Horner's Method require?
-	\item Using the fact that $f(x)$ has roots $x= -2, -2, 1, 3$ and leading coefficient 1, we can write $f(x)= 1 \cdot (x + 2)^2 (x - 1)(x - 3)$. Compute $f(2)$ as written. How many flops does this require? If $g(x)$ has roots $r_1, r_2, \ldots, r_n$, we can write
-		\[
-		g(x)= a_n \prod_{i=1}^n (x - r_i)
-		\]
-	How many flops does evaluating $g(x)$ written as above require? Comment on any possible issues evaluating $g(x)$ in this fashion and how one might resolve them. 
-	\item Of all the methods used above, which requires the least amount of flops to evaluate $g(x_0)$?
+	\item $f(x)= \frac{1}{2}(x^2 - 1)$
+	\item $g(x)= x \cos x$
+	\item $h(x)= \sqrt{x + 6}$
 	\end{enumerate}
 
 
@@ -33,47 +27,83 @@
 
 
 
-% Problem 2. 
-\problem{Bisection Method} We have seen that the bisection method always converges to a solution of $f(x)= 0$ on $[a, b]$ if $f(x)$ is continuous and $f(a)f(b) < 0$. Let's examine the bisection method a bit more closely:
+% Problem 2.
+\problem{Fixed Point Iteration Existence \& Uniqueness} It would make no sense to try to solve an equation using fixed point iteration without first knowing that the function actually has a fixed point. Even in this case, it would be useful to know if the iteration will converge to a unique fixed point (and hence a unique solution) when this actually occurs. Of course, even if a function has a fixed point (even a unique fixed point), we should check that fixed point iteration will actually converge to the solution.  
 	\begin{enumerate}[(a)]
-	\item Practice implementing the bisection method by using three steps of the bisection method to find a solution to $x^3= x^2 + 5$ using an initial interval of $[0, 3]$. Be sure to verify that the bisection method will converge to a solution.
-	\item How many steps of the bisection method would one have to perform using the initial interval in (a) to approximate the solution to five digits of accuracy?
-	\item 
-	\item 
+	\item Let $f(x)= 3 - \dfrac{2}{x^5}$. Show that finding a fixed point for $f(x)$ is equivalent to finding a solution to the equation $3x^5= x^6 + 2$. 
+	\item Show that $f(x)$ has a fixed point on the interval $[2, 3]$.
+	\item Show that the fixed point in (b) is unique. 
+	\item Perform three steps of the fixed point iteration to approximate the fixed point for $f(x)$ on $[2, 3]$. 
+	\item Give an upper bound for the error in approximating the solution to the equation $3x^5= x^6 + 2$. 
 	\end{enumerate}
 
+
+
+\newpage
+
+
+
 % Problem 3.
-\problem{} 
-bisection by hand
-fail (x-1)^2
-can you get all the roots?
+\problem{Fixed Point Iteration---Technical Aspects} When using the Fixed Point Iteration Theorem, there were a number of conditions which needed to be met to guarantee convergence to a (unique) fixed point. One must always be sure that all these criterion are met before applying fixed point iteration. Moreover, when solving an equation using fixed point iteration, one must first choose an `appropriate' function. 
+	\begin{enumerate}[(a)]
+	\item Show that solving the equation $2x^2(2x - 1)= 3 - 2x$ is equivalent to finding the fixed points of the function $f(x)= \dfrac{2x^2 + 3}{2(2x^2 + 1)}$.
+	\item The function $f(x)$ has a fixed point on the interval $[0, 1]$. Does the Fixed Point Iteration Theorem guarantee the convergence of the algorithm to a unique fixed point on this interval? Explain. 
+	
+	\item Use the Intermediate Value Theorem to show that there is a solution to the equation $x + e^{x/2}= 3$ on the interval $[0, 1]$. Furthermore, show that this solution is unique. 
+	\item One could rearrange the equation $x + e^{x/2}= 3$ to obtain $x= 3 - e^{x/2}$. Therefore, finding the unique solution to $x + e^{x/2}= 3$ on $[0, 1]$ is equivalent to finding the unique fixed point for $g(x)= 3 - e^{x/2}$ on $[0, 1]$. Does the Fixed Point Theorem guarantee convergence to the unique fixed point on $[0, 1]$? Explain. 
+	\item The equation $x^3 - 2x= 5$ has a unique solution on the interval $[1, 3]$. Find a function $h(x)$ such that the Fixed Point Iteration Theorem applied to $h(x)$ on $[1, 3]$ guarantees the convergence to the unique solution of $x^3 - 2x= 5$ on $[1, 3]$. 
+	\end{enumerate}
+
+
+
+\newpage
+
 
 
 % Problem 4.
-\problem{}
-newton method by hand
-newton fail
-(0 problem)
-diverge problem
-loop problem
-not quadratic
+\problem{Generalizing the Fixed Point Iteration Theorem} The Fixed Point Iteration Theorem required that the function,  $f(x)$, be differentiable on $[a, b]$ and that $|'f(x)| \leq \lambda < 1$ on $[a, b]$, where $\lambda$ is some fixed constant. This was essential to force the convergence of the fixed point iteration on $[a, b]$. However, a weaker condition will do. A map (function) $f(x)$ is called a contraction map if there exists $\lambda$, $0 < \lambda < 1$, such that $|f(x) - f(y)| \leq \lambda |x - y|$ for all $x, y$ in the domain. [Do not confuse this with a \textit{contractive map}, where $|f(x) - f(y)| < |x - y|$. The concepts are the same for compact metric spaces.] We then have a more general result, which we shall prove: \pspace
+
+\noindent{\bfseries Theorem. (Contraction Mapping)} {\itshape Let $C$ be a closed subset of the real line. If $f: C \to C$ is a contraction map, then $F$ has a unique fixed point. Moreover, the fixed point is the limit of every sequence of fixed point iteration with starting point $x_0 \in C$.} \pspace
+
+\noindent Let $f: [a, b] \to [a, b]$ be a contraction map with constant $0 < \lambda < 1$ and let the fixed point iteration be $\{ x_n \}_{n \geq 0}$ with $x_0 \in [a, b]$.
+
+        \begin{enumerate}[(a)]
+        \item  Show that $|x_{n+1} - x_n| \leq \lambda |x_n - x_{n-1}|$.
+        \item Show that $|x_{n+1} - x_n| \leq \lambda^n |x_1 - x_0|$.
+        \item Show that the sequence $\{ x_n \}_{n \geq 0}$ converges if and only if the series $\displaystyle \sum_{n=0}^\infty (x_{n+1} - x_n)$ converges. 
+        \item Explain why it is enough to show that the series $\displaystyle \sum_{n=0}^\infty |x_{n+1} - x_n|$ converges.
+        \item Show that $\displaystyle \sum_{n=0}^\infty |x_{n+1} - x_n| \leq \dfrac{|x_1 - x_0|}{1 - \lambda}$. [Hint: Use (b) and geometric series.]
+        \item Noting that contraction mappings are continuous, show that the fixed point iteration $\{ x_n \}_{n \geq 0}$ converges.
+        \item Explain why this theorem is more general than the Fixed Point Iteration Theorem.
+        \item Use the Contraction Mapping Theorem to show that the sequence $x_0= 5$, $x_{n+1}= 10 - \dfrac{x_n}{2}$ converges and find the fixed point. 
+        \end{enumerate}
+
+
+
+\newpage
+
+
 
 % Problem 5.
-\problem{} 
-fixed point
+\problem{A Rediscovery via Convergence Acceleration} Fixed point iteration can be used to solve certain types of equations. However, the fixed point iteration, $\{ p_n \}_{n \geq 0}$, will often not converge to the fixed point, $p$, after a finite number of steps. We will then want an error estimate for the fixed point iteration. We have seen that $|p_n - p| \leq \lambda^n |p_0 - p|$, where $\lambda$ is as in the Fixed Point Iteration Theorem. However, this requires knowledge of $p$. Because $p \in [a, b]$, we know that $|p_n - p| \leq \lambda^n \max\{ p_0 - a, b - p_0 \}$. This allows us to bound the error at the $n$th iteration---allowing us to find the number of iterations required to estimate $p$ to the desired accuracy. However, we would still like to minimize the number of iterations required to reach this desired accuracy.  
+	\begin{enumerate}[(a)]
+	\item Assume that the Fixed Point Iteration Theorem applies to $f(x)$ on the interval $[a, b]$. Explain why $p_{n+1} - p= f'(c_n)(p_n - p)$ for some $c_n \in (a, b)$ between $p_n$ and $p$. 
+	\item Justifying all your steps, show $\displaystyle \lim_{n \to \infty} f'(c_n)= f'(p)$.
+	\item Use (a) and (b) to show,
+		\[
+		\lim_{n \to \infty} \dfrac{|p_{n+1} - p|}{|p_n - p|}= |g'(p)|
+		\]
+	\item Using part (c), explain why if $g'(p) \neq 0$, that the fixed point iteration $\{ p_n \}_{n \geq 0}$ converges linearly. What does $g'(p)= 0$ imply? 
+	\end{enumerate}
+It is known that if $f(x) \in C^2[a, b]$ and $p \in (a, b)$ is a fixed point of $f(x)$ with $f'(p)= 0$, then the fixed point iteration $\{ p_n \}_{n \geq 0}$ converges at least quadratically to $p$ for some $p_0$ sufficiently close to $p$. 
+	\begin{enumerate}
+	\item[(e)] Explain why finding a root of the function $f(x)$ is equivalent to finding a fixed point of the function $h(x):=  x - f(x)$. 
+	\item[(f)] From the information above, the fastest convergence for fixed point iteration will occur when the derivative vanishes at the fixed point. Explain why to find a root of $f(x)$, we should find a fixed point of the function $g(x):= x - \alpha(x) f(x)$, where $\alpha(x)$ is some differential function, rather than find a fixed point of $h(x)$. 
+	\item[(g)] Find a choice of $\alpha$, in terms of $f(x)$, such that $g(x)$ will have quadratic convergence sufficiently close to a fixed point $p$. 
+	\item[(h)] Given your answer in (g), what is $g(x)$? What is the fixed point iteration in this case?
+	\end{enumerate}
 
 
-pn= harmonic
-show diverges 
-show error tends to 0
-
-taylor series to show
-e_{k+1} approx |f''(x_k)/(2f'(x_k)) e_k| |e_k|
-so if close to enough to make term < 1 conv fast
-
-prob 23 matlab book
-prob 18 matlab book
-prob 22 matlab book
 
 \newpage
 
