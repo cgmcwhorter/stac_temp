@@ -1,0 +1,534 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 1}
+\newcommand{\term}{Spring -- 2021}
+\newcommand{\examdate}{02/23/2022}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question Showing all your work, answer the following: \pspace
+\begin{parts}
+\part[5] A. Pearson goes to a restaurant with her friends for her 26th birthday. Her portion of the bill comes to \$27.60. She plans on leaving a 26\% tip (in honor of her birthday). What is her total bill? \pvspace{2cm}
+
+	\[
+	\$27.60(1 + 0.26)= \$27.60(1.26)= \$34.776 \approx \$34.78
+	\] \pvspace{5.9cm}
+
+\part[5] Count Dyss offers tours of his historic landmark castle for \$76.50 per person. For the Halloween weekend, he plans on offering a 25\% discount on tours. What is the amount he will charge per person for the Halloween weekend? \pvspace{2cm}
+
+	\[
+	\$76.50(1 - 0.25)= \$76.50(0.75)= \$57.375 \approx \$57.38
+	\]
+\end{parts}
+
+
+
+% Question 2
+\newpage
+\question Professor Oak is a dendrologist---a scientist who studies woody plants, i.e. trees. He finds that for a certain type of tree, the age of the tree can be closely modeled by the number of rings, $r$, the tree has. He determines that the age of the tree, $A(r)$, in years is approximately given by $A(r)= 15.3r - 6.0$. \pspace
+	\begin{parts}
+	\part[2] Is $A(r)$ linear? Explain. \pvspace{0.9cm} 
+	
+	{\itshape Yes, $A(r)$ is linear. It is a function of the form $y= mx + b$ with $y= A(r)$, $x= r$, $m= 15.3$, and $b= -6.0$.} \pvspace{0.9cm}
+	
+	\part[3] Determine the slope of $A(r)$. Interpret the slope in context. \pvspace{1.55cm}
+	
+	{\itshape The slope of the linear function $A(r)$ is $m= 15.3$. We write $15.3= \frac{15.3}{1}$ and interpret this slope as $\frac{\Delta \text{Output}}{\Delta \text{Input}}= \frac{\Delta \text{years}}{\Delta \text{rings}}$. Therefore, the model predicts that every additional ring the tree has suggests that the tree is 15.3~years older.} \pvspace{1.55cm}
+	
+	\part[3] Determine the $y$-intercept of $A(r)$. Does the $y$-intercept have an interpretation in context? Explain why or why not. \pvspace{1cm}
+	
+	{\itshape The $y$-intercept of the linear function $A(r)$ occurs when $r= 0$. But we have $A(0)= 15.3(0) - 6.0= 0 - 6.0= -6.0$. Therefore, the $y$-intercept is $-6.0$---or more precisely $(0, -6.0)$, i.e. $r= 0$ and $A= -6.0$. This would suggest that a tree with zero rings is predicted to be approximately $-6.0$~years old, which is nonsense. Therefore, it is likely $y$-intercept has no interpretation in context.} \pvspace{1cm}
+	
+	\part[2] For this species of tree, approximate the age of a tree with 11~rings. \pspace
+	
+	{\itshape
+		\[
+		A(11)= 15.3(11) - 6.0= 168.3 - 6.0= 162.3
+		\] \pspace
+	Therefore, a tree of this species with 11~rings is predicted to be approximately 162.3~years old.
+	}
+	\end{parts}
+
+
+
+% Question 3
+\newpage
+\question Florist Gump is a floral shop famous for its bouquets. The shop purchases white roses in bulk from their distributor at a price of \$1.42 per rose. The delivery fee for the roses is \$52.50. The shop sells the roses for \$4.32 per rose. \pspace
+	\begin{parts}
+	\part[2] Find the revenue function. \pvspace{0.6cm}
+	
+	{\itshape The shop sells the roses for \$4.32 per rose. Therefore, if the shop sells $x$ roses, the revenue function for white roses will be\dots
+		\[
+		R(x)= 4.32x
+		\]
+	} \pvspace{0.6cm}
+	
+	\part[2] Find the cost function.
+	
+	{\itshape We know the cost for `producing' $x$ white roses is $C(x)= \text{VC} + \text{FC}$, where VC are the variable costs, i.e. the cost per rose, and FC are the fixed costs, i.e. the costs regardless of the level of production. The fixed cost here is the delivery fee for the white roses, which is \$52.50. Therefore, $\text{FC}= 52.50$. If the shop `produces', i.e. purchases, $x$ white roses at a cost of \$1.42 per rose, they spend $1.42x$. Therefore, $\text{VC}= 1.42x$. But then we have\dots
+		\[
+		C(x)= 1.42x + 52.50
+		\]
+	} 
+	
+	\part[3] Find the profit function. \pvspace{0.2cm}
+	
+	{\itshape We know that profit, $P(x)$, is the revenue minus the costs, i.e. $P(x):= R(x) - C(x)$. Therefore, we have\dots
+		\[
+		\begin{aligned}
+		P(x)&:= R(x) - C(x)= 4.32x - (1.42x + 52.50)= 4.32x - 1.42x - 52.50= 2.9x - 52.50
+		\end{aligned}
+		\]
+	}
+	
+	\part[3] Determine minimal number of white roses the store needs to sell in order to make a profit on their white rose bouquets. \pvspace{0.1cm}
+	
+	{\itshape Because the profit function, $P(x)$, is linear. The floral shop will begin to make a profit at the breakeven point, i.e. when $P(x)= 0$:
+		\[
+		\begin{aligned}
+		P(x)&= 0 \\
+		2.9x - 52.50&= 0 \\
+		2.9x&= 52.50 \\
+		x&= 18.1034
+		\end{aligned}
+		\]
+	Therefore, the shop needs to sell at least 19 white roses to make a profit on their sale.
+	}
+	\end{parts}
+
+
+
+% Question 4
+\newpage
+\question A company sells a certain product with associated revenue function $R(x)= 0.14x^2$ and cost function $C(x)= 16x + 530$. \pspace
+	\begin{parts}
+	\part[3] Find the fixed costs for this product. \pvspace{1.7cm}
+	
+	{\itshape The fixed costs are the costs that are incurred regardless of the level of production. But then we must have $C(0)= \text{FC}$ (Fixed Costs). Therefore,
+		\[
+		\textit{FC}= C(0)= 16(0) + 530= 0 + 530= \$530
+		\]
+	} \pvspace{1.7cm}
+	
+	\part[4] Find revenue and cost associated to selling and producing 100~units. Is the company making a profit at this level of sales/production? Explain. \pvspace{0.5cm}
+	
+	{\itshape We have\dots \pvspace{0.2cm}
+		\[
+		\begin{aligned}
+		R(100)&= 0.14(100^2)= 0.14(10000)= \$1400 \\[0.2cm]
+		C(100)&= 16(100) + 530= 1600 + 530= \$2130
+		\end{aligned}
+		\] \pvspace{0.2cm}
+	Because $R(100) < C(100)$, i.e. the revenue is less than the cost, the company experiences a loss at a production level of 100~units. Alternatively, the profit is $P(100):= R(100) - C(100)= \$1400 - \$2130= -\$730 < 0$. Because the profit is negative, the company must be experiencing a loss at a production level of 100~units. 
+	} \pvspace{0.5cm}
+	
+	
+	\part[3] Find the marginal revenue at a production level of 100~units. \pvspace{0.2cm}
+	
+	{\itshape
+		\[
+		\begin{aligned}
+		R(100)&= 0.14(100^2)= 0.14(10000)= \$1400 \\
+		R(101)&= 0.14(101^2)= 0.14(10201)= \$1428.14
+		\end{aligned}
+		\] \pvspace{0.2cm}
+	Therefore, the marginal revenue at a production level of 100~units is\dots \pvspace{0.2cm}
+		\[
+		\textit{Marg. Rev.}(100)= R(101) - R(100)= \$1428.14 - \$1400= \$28.14
+		\] \pvspace{0.2cm}
+	Therefore, the company gains \$28.14 by producing one additional unit at a production level of 100~units. 
+	}
+	\end{parts}
+
+
+
+% Question 5
+\newpage
+\question[10] Consider the following system of equations:
+	\[
+	\begin{aligned}
+	2x - y + 2z&= 23 \\
+	-x + 5y + 4z&= -4 \\
+	x + 6y + 4z&= 3 \\
+	7x + 2y - 2z&= -1
+	\end{aligned}
+	\]
+When the augmented matrix for this system of equations is placed in `reduced-row echelon form', we obtain the following matrix:
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 3 \\
+	0 & 1 & 0 & -5 \\
+	0 & 0 & 1 & 6 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}	
+	\]
+Are there any solutions to the given system of equations? If there are no solutions, explain why. If there are solutions, determine all the solutions and if there is more than one solution, give at least one explicit solution to the system of equations. \pvspace{1cm}
+
+{\itshape The last row of the reduced-row echelon form of the augmented matrix for this system of equation corresponds to the equation\dots
+	\[
+	\begin{aligned}
+	0x + 0y &+ 0z= 1 \\
+	0&= 1
+	\end{aligned}
+	\]
+which is obviously ridiculous. Therefore, the system of equations is inconsistent, i.e. there are no solutions to this system of equations.}
+
+
+
+% Question 6
+\newpage
+\question[10] Consider the following system of equations:
+	\[
+	\begin{aligned}
+	3x_1 + 2x_2 - 5x_3 + 2x_4&= -17 \\
+	x_1 - 2x_2 + 3x_3 + 2x_4&= 27 \\
+	3x_1 - 2x_2 + x_3 + 8x_4&= 36 \\
+	-5x_1 + 4x_2 + 2x_3 + 4x_4&= 5
+	\end{aligned}
+	\]
+When the augmented matrix for this system of equations is placed in reduced-row echelon form, we obtain the following matrix:
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 0 & 3 \\
+	0 & 1 & 0 & 0 & -\frac{1}{2} \\
+	0 & 0 & 1 & 0 & 6 \\
+	0 & 0 & 0 & 1 & \frac{5}{2}
+	\end{pmatrix}	
+	\]
+Are there any solutions to the given system of equations? If there are no solutions, explain why. If there are solutions, determine all the solutions and if there is more than one solution, give at least one explicit solution to the system of equations. \pvspace{1cm}
+
+{\itshape Writing out the equation corresponding to each row of the reduced-row echelon form of the augmented matrix for this system of equations yields\dots
+	\[
+	\begin{aligned}
+	1x_1 + 0x_2 + 0x_3 + 0x_4&= 3 \\
+	0x_1 + 1x_2 + 0x_3 + 0x_4&= -\frac{1}{2} \\
+	0x_1 + 0x_2 + 1x_3 + 0x_4&= 6 \\
+	0x_1 + 0x_2 + 0x_3 + 1x_4&= \frac{5}{2}
+	\end{aligned}
+	\]
+Therefore, the solution to the system of equations is $(x_1, x_2, x_3, x_4)= (3, -\frac{1}{2}, 6, \frac{5}{2})$, or equivalently
+	\[
+	\left\{
+	\begin{aligned}
+	x_1&= 3 \\
+	x_2&= -\frac{1}{2} \\
+	x_3&= 6 \\
+	x_4&= \frac{5}{2}
+	\end{aligned} \right.
+	\] 
+}
+
+
+
+% Question 7
+\newpage
+\question[10] Consider the following system of equations:
+	\[
+	\begin{aligned}
+	4x - 8y - 5z + 12w&= 15 \\
+	x - 2y - z + 3w&= 5 \\
+	2x - 4y - z + 6w&= 15
+	\end{aligned}
+	\]
+When the augmented matrix for this system of equations is placed in reduced-row echelon form, we obtain the following matrix:
+	\[
+	\begin{pmatrix}
+	1 & -2 & 0 & 3 & 10 \\
+	0 & 0 & 1 & 0 & 5 \\
+	0 & 0 & 0 & 0 & 0 
+	\end{pmatrix}
+	\]
+Are there any solutions to the given system of equations? If there are no solutions, explain why. If there are solutions, determine all the solutions and if there is more than one solution, give at least one explicit solution to the system of equations. \pvspace{0.5cm}
+
+{\itshape The zero row of the reduced-row echelon form of the augmented matrix for this system of equations indicates there is at least one free variable. In fact, because the columns corresponding to the variables $y$ and $w$ do not have a pivot position, these can be used as free variables for this system. Therefore, there are two free variables: $y$ and $w$. The `fixed' variables are the variables whose corresponding columns have pivot positions. For this RREF augmented matrix, these are columns one and three corresponding to the variables $x$ and $z$, respectively. The second row of this RREF augmented matrix corresponds to\dots
+	\[
+	\begin{aligned}
+	0x + 0y &+ 1z + 0w= 5 \\
+	z&= 5
+	\end{aligned}
+	\]
+Finally, we solve for the final `fixed' variable in terms of the free variable. 
+
+
+Now the first row of this RREF augmented matrix corresponds to the equation\dots
+	\[
+	\begin{aligned}
+	x - 2y + 3w&= 10 \\
+	x= 2y - 3w& + 10
+	\end{aligned}
+	\]
+Therefore, the solution to this system of equations is $(x, y, z, w)= (2y - 3w + 10, y, 5, w)$, where $y$ and $w$ are free, i.e.
+	\[
+	\left\{
+	\begin{aligned}
+	x&= 2y - 3w + 10 \\
+	y&: \text{free} \\
+	z&= 5 \\
+	w&: \text{free}
+	\end{aligned} \right.
+	\]
+To find an explicit solution to this system, we choose any values for the free variables $y$ and $w$. For instance, choosing $y= 0$ and $w= 0$, we obtain the solution $(x, y, z, w)= (10, 0, 5, 0)$. Choosing $y= 3$ and $w= -5$, we would obtain the solution $(x, y, z, w)= (31, 3, 5, -5)$, etc. 
+}
+
+
+
+% Question 8
+\newpage
+\question[10] G. Jordan is studying for his MATH~108 exam. He is putting an augmented matrix in reduced-row echelon form. He is one step away from putting the matrix in row-echelon form. Currently, he has the following matrix:
+	\[
+	\begin{pmatrix}
+	1 & -2 & 1 & 0 \\
+	0 & 1 & 3 & -2 \\
+	0 & 3 & 10 & -7
+	\end{pmatrix}
+	\]
+Put the augmented matrix in row-echelon form by performing the next step in placing the matrix in reduced-row echelon form. Then show Jordan a faster way of getting to the solution by using the `shortcut method' of determining the solution from the row-echelon form. \pvspace{0.3cm}
+
+{\itshape Labeling the matrix as $A$, the current pivot position is in the entry $a_{22}= 1$. We `kill' the entry beneath it, i.e. entry $a_{32}$. 
+\begin{minipage}[t]{0.1\textwidth}
+	\[
+	\begin{pmatrix}
+	1 & -2 & 1 & 0 \\
+	0 & 1 & 3 & -2 \\
+	0 & 3 & 10 & -7
+	\end{pmatrix}
+	\]
+	\[
+	\begin{pmatrix}
+	1 & -2 & 1 & 0 \\
+	0 & 1 & 3 & -2 \\
+	0 & 0 & 1 & -1
+	\end{pmatrix}
+	\]
+\end{minipage}\begin{minipage}[t]{0.8\textwidth}
+\pvspace{1.8cm}\hspace{3cm} $-3R_2 + R_3 \to R_3$
+\end{minipage} \pspace
+The augmented matrix is now in row-echelon form (REF). From the last row of this REF augmented matrix corresponds to (using the variables $x, y, z$) the equation 
+	\[
+	\begin{aligned}
+	0x + 0y &+ 1z= -1 \\
+	z&= -1
+	\end{aligned}
+	\]
+The second row of this REF augmented matrix corresponds to the equation\dots
+	\[
+	\begin{aligned}
+	0x + 1y + 3z&= -2 \\
+	y + 3(-1)&= -2 \\
+	y - 3&= -2 \\
+	y&= 1
+	\end{aligned}
+	\]
+Finally, the first row of this REF augmented matrix corresponds to the equation\dots
+	\[
+	\begin{aligned}
+	1x - 2y + z&= 0 \\
+	x - 2(1) - 1&= 0 \\
+	x - 3&= 0 \\
+	x&= 3
+	\end{aligned}
+	\]
+Therefore, we have the solution $(x, y, z)= (3, 1, -1)$, or equivalently
+	\[
+	\left\{
+	\begin{aligned}
+	x&= 3 \\
+	y&= 1 \\
+	z&= -1
+	\end{aligned} \right.
+	\]
+}
+
+
+
+% Question 9
+\newpage
+\question Compute the following:
+	\begin{parts}
+	\part[5]
+		\[
+		\begin{pmatrix} 2 & -3 \\ 5 & 1 \end{pmatrix} - 2 \begin{pmatrix} -2 & 0 \\ 1 & -3 \end{pmatrix}
+		\] \pvspace{1cm}
+		
+		\[
+		\begin{aligned}
+		\begin{pmatrix} 2 & -3 \\ 5 & 1 \end{pmatrix} &- 2 \begin{pmatrix} -2 & 0 \\ 1 & -3 \end{pmatrix} \\[0.2cm]
+		\begin{pmatrix} 2 & -3 \\ 5 & 1 \end{pmatrix} &+ \begin{pmatrix} 4 & 0 \\ -2 & 6 \end{pmatrix} \\[0.2cm]
+		\end{aligned}
+		\]
+		\[
+		\begin{pmatrix} 6 & -3 \\ 3 & 7 \end{pmatrix} \phantom{--}
+		\] \pvspace{1.9cm}
+	
+	\part[5]
+		\[
+		\begin{pmatrix}
+		1 & 0 \\
+		0 & -1 \\
+		2 & 2 \\
+		0 & 3
+		\end{pmatrix}
+		\begin{pmatrix}
+		5 & 1 & 2 \\
+		-1 & 0 & 1 
+		\end{pmatrix}
+		\] \pvspace{1cm}
+		
+		\[
+		\begin{aligned}
+		\begin{pmatrix}
+		1 & 0 \\
+		0 & -1 \\
+		2 & 2 \\
+		0 & 3
+		\end{pmatrix}
+		\begin{pmatrix}
+		5 & 1 & 2 \\
+		-1 & 0 & 1 
+		\end{pmatrix}&= 
+		\begin{pmatrix}
+		1(5) + 0(-1) & 1(1) + 0(0) & 1(2) + 0(1) \\
+		0(5) + (-1)(-1) & 0(1) + (-1)0 & 0(2) + (-1)1 \\
+		2(5) + 2(-1) & 2(1) + 0(2) & 2(2) + 2(1) \\
+		0(5) + 3(-1) & 0(1) + 3(0) & 0(2) + 1(3)
+		\end{pmatrix} \\[0.2cm]
+		&= \begin{pmatrix}
+		5 + 0 & 1 + 0 & 2 + 0 \\
+		0 + 1 & 0 + 0 & 0 - 1 \\
+		10 - 2 & 2 + 0 & 4 + 2 \\
+		0 - 3 & 0 + 0 & 0 + 3 
+		\end{pmatrix} \\[0.2cm]
+		&= \begin{pmatrix}
+		5 & 1 & 2 \\
+		1 & 0 & -1 \\
+		8 & 2 & 6 \\
+		-3 & 0 & 3
+		\end{pmatrix}
+		\end{aligned}
+		\]
+	\end{parts}
+
+
+
+% Question 10
+\newpage
+\question Consider the following system of equations:
+	\[
+	\begin{aligned}
+	2x - 7y&= 3 \\
+	x + 3y&= 1
+	\end{aligned}
+	\]
+
+\begin{parts}
+\part[1] Find the coefficient matrix. \pvspace{0.65cm}
+	\[
+	A:= 
+	\begin{pmatrix}
+	2 & -7 \\
+	1 & 3
+	\end{pmatrix}
+	\] \pvspace{0.65cm}
+
+\part[3] Show that the coefficient matrix is invertible, i.e. has an inverse. \pvspace{0.65cm}
+
+{\itshape
+	\[
+	\det A=
+	\det
+	\begin{pmatrix}
+	2 & -7 \\
+	1 & 3
+	\end{pmatrix}=
+	2(3) - 1(-7)= 6 + 7= 13
+	\]
+Because the determinant of the coefficient matrix is nonzero, the coefficient matrix is invertible, i.e. has an inverse.
+} \pvspace{0.65cm}
+
+\part[3] Find the inverse of the coefficient matrix. \pvspace{0.5cm}
+
+	\[
+	A^{-1}= 
+	\begin{pmatrix}
+	2 & -7 \\
+	1 & 3
+	\end{pmatrix}^{-1}=
+	\dfrac{1}{13}
+	\begin{pmatrix}
+	3 & 7 \\
+	-1 & 2
+	\end{pmatrix}
+	\] \pvspace{1.5cm}
+
+\part[3] Writing the system of equations in vector form, find the solution to the given system of equations using the inverse matrix from (b). \pvspace{0.2cm}
+
+{ \itshape
+	\[
+	\begin{aligned}
+	\begin{pmatrix}
+	2 & -7 \\
+	1 & 3
+	\end{pmatrix}
+	\begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\begin{pmatrix} 3 \\ 1 \end{pmatrix} \\[0.2cm]
+	%
+	\dfrac{1}{13}
+	\begin{pmatrix}
+	3 & 7 \\
+	-1 & 2
+	\end{pmatrix}
+	\begin{pmatrix}
+	2 & -7 \\
+	1 & 3
+	\end{pmatrix}
+	\begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\dfrac{1}{13}
+	\begin{pmatrix}
+	3 & 7 \\
+	-1 & 2
+	\end{pmatrix}
+	\begin{pmatrix} 3 \\ 1 \end{pmatrix}  \\[0.2cm]
+	%
+	\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+	\begin{pmatrix} x \\ y \end{pmatrix}&= 
+	\dfrac{1}{13}
+	\begin{pmatrix}
+	9 + 7 \\
+	-3 + 2
+	\end{pmatrix} \\[0.2cm]
+	%
+	\begin{pmatrix} x \\ y \end{pmatrix}&=
+	\begin{pmatrix} 16/13 \\ -1/13 \end{pmatrix}
+	\end{aligned}
+	\]
+Therefore, the solution to the system is $(x, y)= (\frac{16}{13}, -\frac{1}{13}) \approx (1.23077, -0.076923)$. 
+}
+\end{parts}
+
+
+\end{questions}
+\end{document}

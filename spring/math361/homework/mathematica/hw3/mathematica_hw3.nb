@@ -1,0 +1,531 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18894,        523]
+NotebookOptionsPosition[     17380,        487]
+NotebookOutlinePosition[     17775,        503]
+CellTagsIndexPosition[     17732,        500]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name : 
+Mathematica HW 3\
+\>", "Section",
+ CellChangeTimes->{{3.854671612789234*^9, 3.8546716251415997`*^9}, {
+  3.8547658901951427`*^9, 3.8547658902744417`*^9}, {3.857236752113958*^9, 
+  3.857236752227686*^9}},ExpressionUUID->"0ba12bb1-0caa-4a24-b703-\
+eaefcf065eea"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1. A Simple Introduction", "Subsection",
+ CellChangeTimes->{{3.8572376756305933`*^9, 3.857237677033822*^9}, {
+  3.857237786079093*^9, 
+  3.857237791220975*^9}},ExpressionUUID->"d3a52ad4-10e8-4635-8457-\
+7d50920ec7ab"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s practice some of the basic theory, implementation, \
+and interpretations of fixed point iteration using a computer algebra system. \
+Consider the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{"Cos", "(", 
+     RowBox[{"Cos", "(", "x", ")"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2abb9088-2642-4ee7-8cec-cfeae6e91fcd"],
+ ".\na) Plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9e2f8530-8632-4c87-bcf3-65abe38f4a5c"],
+ " on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3baeb849-0c95-4efa-b93c-7248d29b1b0f"],
+ " and explain why this plot shows that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e8b7e11a-8c26-4af8-9fde-dd90f2d8b694"],
+ " has a fixed point on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1b5d79e6-af52-488a-9fc0-01edf3b3e572"],
+ ".\nb) Is the fixed point in (a) unique? Explain.\nc) Use Mathematica to \
+check that the Fixed Point Iteration Theorem applies to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f0317d71-a742-4301-91ca-a69f0ff79c58"],
+ " on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1e1404eb-861b-479e-b2b9-83379483cbb3"],
+ ".\nd) Using your own code, implement fixed point iteration to find the \
+fixed point of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3066ea76-ee45-4928-bb21-4f2aaad2c99d"],
+ " on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2b203bac-feed-4af3-b686-d8b003d9f0dd"],
+ ".\ne) Use Mathematica\[CloseCurlyQuote]s \[OpenCurlyQuote]FixedPoint\
+\[CloseCurlyQuote] function to validate your approximation in (d)."
+}], "Text",
+ CellChangeTimes->{{3.857237809776572*^9, 
+  3.857238075844653*^9}},ExpressionUUID->"e109e1bc-60e9-44ce-bf66-\
+17a6cafe3985"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. A Golden Fixed Point", "Subsection",
+ CellChangeTimes->{{3.8572368045595293`*^9, 3.857236819658214*^9}, {
+  3.857236999977315*^9, 3.857237003367437*^9}, {3.857237680135229*^9, 
+  3.8572376802345037`*^9}},ExpressionUUID->"3f461a44-5c6d-45ad-993b-\
+95ebe91d2e26"],
+
+Cell[TextData[{
+ "We have seen that fixed point iteration can be used to solve equations. \n\
+a) Plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", " ", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "-", "x", "-", "1"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6099e235-3a2f-4c96-b238-199ea2cf9ff2"],
+ " to show that it has a unique root on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"1", ",", "2"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1ba375ba-efdb-40f2-b382-cac23cf6ca8b"],
+ ".\nb) Choosing an appropriate function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e49b9df7-b8dd-4782-985a-b919f053b867"],
+ ", interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"a", ",", "b"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "65ebfd61-9a11-4f8b-baa1-a7779512e0ac"],
+ ", and initial point ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["p", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b9e65561-df5b-47b6-9825-77811c110812"],
+ ", find the root of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4baeab36-9576-4e0e-b7c6-9eba2082bda6"],
+ " on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"1", ",", "2"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c0808fb3-b71d-4d26-9b36-f969c38839ba"],
+ " using fixed point iteration. Be sure to use Mathematica to check the \
+conditions of the Fixed Point Iteration Theorem for your choice of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b1d9b64b-c90c-4ed1-9a6f-189c021e2599"],
+ ".\nc) Use Mathematica\[CloseCurlyQuote]s \[OpenCurlyQuote]NSolve\
+\[CloseCurlyQuote] to check that your solution in (b) is plausible. \nd) What \
+is the exact value for the fixed point? How do you know?\ne) What ",
+ StyleBox["is ",
+  FontSlant->"Italic"],
+ "the fixed point for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3a82b30a-7110-4a82-89a8-5656ea66d607"],
+ ", i.e. what is its name?"
+}], "Text",
+ CellChangeTimes->{{3.857237013848958*^9, 3.857237029451605*^9}, {
+  3.8572370677997923`*^9, 
+  3.857237479103153*^9}},ExpressionUUID->"1e6115d8-6bbc-412c-a84d-\
+406aa6c08efd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Convergence Rates", "Subsection",
+ CellChangeTimes->{{3.857236822165696*^9, 3.857236825050939*^9}, {
+  3.857237534336383*^9, 3.857237538777501*^9}, {3.857237681972033*^9, 
+  3.857237682084434*^9}, {3.857238113129097*^9, 
+  3.857238115046384*^9}},ExpressionUUID->"7f69ed47-e980-4e88-be37-\
+a32b029e27f2"],
+
+Cell[TextData[{
+ "In class, we discussed the ways to solve ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "3"], "=", 
+    RowBox[{"sin", "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8b845ece-9d06-44f8-bb7c-b24eb1d2369e"],
+ " using fixed point iteration. However, depending on the choice of function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "88873013-86c1-446c-a665-2b97cfaed2a9"],
+ ", the rate of convergence to the fixed point (and hence solution to the \
+equation) will vary.\na) Use a plot to show that the equation has a solution \
+on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c97936f9-bc6e-48d0-95b6-5489c64b6e6f"],
+ ". How many solutions are there?\nb) Give one \[OpenCurlyQuote]easy\
+\[CloseCurlyQuote] solution to the equation. \nc) Use Mathematica\
+\[CloseCurlyQuote]s \[OpenCurlyQuote]FindRoot\[CloseCurlyQuote] using initial \
+values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "0.1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d1c3c9ae-30a1-4e0f-ac5e-8ed3b108e11e"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "83c204a3-52c4-4be4-a3c8-8a1ce8896cdc"],
+ " to find approximate solutions to the equation. What happens if you try to \
+use \[OpenCurlyQuote]NSolve\[CloseCurlyQuote]?\nd) Apply fixed point \
+iteration for using the initial \[OpenCurlyQuote]obvious\[CloseCurlyQuote] \
+choices of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    RadicalBox[
+     RowBox[{"sin", " ", "x"}], "3"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9e780177-afad-48c0-9b6c-2d03bad27ebb"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["x", "3"], "-", 
+     RowBox[{"sin", "(", "x", ")"}], "+", "x"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "de6df437-089e-47da-986d-8ce3f0389a47"],
+ " and \[OpenCurlyQuote]non-obvious\[CloseCurlyQuote] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"2", 
+       SuperscriptBox["x", "3"]}], "-", " ", 
+      RowBox[{"x", " ", 
+       RowBox[{"cos", "(", "x", ")"}]}], " ", "+", " ", 
+      RowBox[{"sin", "(", "x", ")"}]}], 
+     RowBox[{
+      RowBox[{"3", 
+       SuperscriptBox["x", "2"]}], "-", " ", 
+      RowBox[{"cos", "(", "x", ")"}]}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e0205927-9e98-4248-bc1f-7f8c3e63f0be"],
+ " with initial value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "0.2"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3ba66c7a-7fe0-4fe7-a46d-5565899783c1"],
+ ". Which of these converge? For those that converge, what do they converge \
+to? Do the rates of convergence appear to be the same?\ne) Re-do (d) with \
+initial value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "1.1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e7ce08a0-19bb-4173-b892-08fdf8a7c8a3"],
+ ". Which of these converge? For those that converge, what do they converge \
+to? Do the rates of convergence appear to be the same?"
+}], "Text",
+ CellChangeTimes->{{3.8572381196506433`*^9, 3.8572381244877167`*^9}, {
+  3.85723816019025*^9, 3.857238287624012*^9}, {3.857238345586525*^9, 
+  3.857238380018489*^9}, {3.8572384651967583`*^9, 3.857238511621601*^9}, {
+  3.85723854358955*^9, 3.857238630183921*^9}, {3.8572386917398443`*^9, 
+  3.857238754402276*^9}, {3.8572389473777857`*^9, 3.857238987461276*^9}, {
+  3.8572397406638002`*^9, 
+  3.857239893321857*^9}},ExpressionUUID->"925109ee-b10e-41a6-ab06-\
+ddcf265b4f36"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Fixed Point Iteration Graphically", "Subsection",
+ CellChangeTimes->{{3.857236831696843*^9, 3.857236834230468*^9}, {
+  3.8572375531500473`*^9, 3.857237553707077*^9}, {3.857241233268762*^9, 
+  3.8572412445755367`*^9}},ExpressionUUID->"ed631482-6a56-4b1b-b046-\
+696f8e6d43fa"],
+
+Cell[TextData[{
+ "We have seen some of the graphical interpretation of fixed point iteration. \
+However, one can also easily \[OpenCurlyQuote]visually\[CloseCurlyQuote] see \
+the convergence or divergence of fixed point iteration.\na) Suppose a \
+function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "bf4b418b-fe82-4f50-a279-3e2b67c8d8ae"],
+ ", interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"a", ",", "b"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e31234ed-8f05-408c-92a5-d0d0c71f8c1a"],
+ ", initial value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "\[Element]", " ", 
+    RowBox[{"[", 
+     RowBox[{"a", ",", "b"}], "]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f32e0157-d448-45e8-ae9b-9a6087dcd1a6"],
+ ", and number of iterations ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "03fa8cb6-db79-4e8f-b29a-ae2fbff5601f"],
+ " is given. Explain what the following code does:\n\tFPIGraph[x0_, n_, \
+{a_,b_}] := Module[{points, xval, yval, listplot, lineplot},\n\t\txval = x0;\n\
+\t\tyval = f[x0];\n\t\tpoints = { {xval, 0}, {xval, yval} };\n\t\tDo[\n\t\t\t\
+xval = points[[-1, 2];\n\t\t\tyval = f[xval];\n\t\t\tAppendTo[points, {xval, \
+yval}];\n\t\t\tAppendTo[points, {yval, yval}];\n\t\t, {k, 1, n}];\n\t\t\
+listplot = ListLinePlot[points, PlotRange -> { {a, b}, {a, b} }, PlotStyle -> \
+Black];\n\t\tlineplot = Plot[{x, f[x]}, {x, a, b}, PlotRange -> { {a, b}, {a, \
+b} }, PlotStyle -> {Red, Blue}];\n\t\tShow[lineplot, listplot]\n\t]\nb) Use \
+(a) to explain why ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    RowBox[{"2", 
+     RowBox[{"x", "(", 
+      RowBox[{"1", "-", "x"}], ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2713d305-313b-40c9-ac9b-3c5d05881580"],
+ " has a unique fixed point on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ff85bc74-5585-4653-9f21-9f22583c262a"],
+ " and why fixed point iteration on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1a55ab76-62ae-40f7-bf75-df4789860ace"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "0.1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f16d7c34-d4d3-4e76-90b2-9f7d57e99100"],
+ " converges. Is the fixed point an attracting or repelling fixed point?\nc) \
+Use (a) to explain why ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "2"], 
+      SuperscriptBox["x", "2"]}], "+", "x", "-", "3"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d98f41ab-2fad-4727-affc-149d9052e67e"],
+ " has a unique fixed point on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"2", ",", "3"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fc5bc066-58e0-47ce-ba77-2148d1c8ec49"],
+ " and why fixed point iteration on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"2", ",", "3"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ef2d7a14-d4e6-4cd0-9430-fb104e4dbbbf"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", "2.45"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a3687373-a125-462a-bb33-4424b4c76241"],
+ " diverges. Is the fixed point an attracting or repelling fixed point?"
+}], "Text",
+ CellChangeTimes->{{3.857241250863175*^9, 3.857241344127392*^9}, {
+  3.857241378893577*^9, 3.857241463923094*^9}, {3.857241536033004*^9, 
+  3.857241807457405*^9}, {3.857241843655151*^9, 3.857241845520575*^9}, {
+  3.857242056039487*^9, 3.857242059069602*^9}, {3.85724221357651*^9, 
+  3.857242238145171*^9}, {3.857242288174747*^9, 3.857242358931285*^9}, {
+  3.8572424628945417`*^9, 3.8572425033340273`*^9}, {3.857242636646821*^9, 
+  3.857242715756205*^9}, {3.8572432421756687`*^9, 3.85724337245228*^9}, {
+  3.8572441193106833`*^9, 
+  3.8572441585439796`*^9}},ExpressionUUID->"22495c78-00de-48ed-8ea8-\
+61d576c4a725"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 5. Comparing Root Finding Algorithms", "Subsection",
+ CellChangeTimes->{{3.857236835975552*^9, 3.8572368376636047`*^9}, {
+  3.857237523067053*^9, 3.857237523795087*^9}, {3.857240208573393*^9, 
+  3.857240218090602*^9}},ExpressionUUID->"3c8643a6-8aa5-4041-b4ae-\
+abb7d84df7ce"],
+
+Cell[TextData[{
+ "We have seen a variety of ways of computing solutions to equations by \
+finding roots. Consider the case of finding solutions to the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "2"], "=", "n"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "99d20abf-408e-4e86-9637-bf78a4d53024"],
+ ", i.e. finding ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox["n"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "461ddc9f-5e25-4842-a596-034dd3f12164"],
+ ". More specifically, consider the case of finding solutions to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "2"], "=", "5"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a758592e-c59e-4371-b6ac-9ece4f26e2d4"],
+ ". Using appropriate choices for each algorithm, implement the bisection \
+method, Newton\[CloseCurlyQuote]s method, and fixed point iteration to find \
+",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox["5"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "104033a8-3fb7-4235-87d8-095a622dce28"],
+ ". Compare the solutions, error, and rate of convergence for these \
+algorithms."
+}], "Text",
+ CellChangeTimes->{{3.8572402210268717`*^9, 3.857240314538576*^9}, {
+  3.857240348580008*^9, 
+  3.857240491787023*^9}},ExpressionUUID->"cc9ea312-4979-4b3c-8eb9-\
+9f3cfb65c9e6"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{Automatic, 12}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f1353a65-faef-4fcd-8d62-1140ae9c3918"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 278, 7, 105, "Section",ExpressionUUID->"0ba12bb1-0caa-4a24-b703-eaefcf065eea"],
+Cell[CellGroupData[{
+Cell[883, 33, 231, 4, 54, "Subsection",ExpressionUUID->"d3a52ad4-10e8-4635-8457-7d50920ec7ab"],
+Cell[1117, 39, 2512, 71, 173, "Text",ExpressionUUID->"e109e1bc-60e9-44ce-bf66-17a6cafe3985"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3666, 115, 278, 4, 54, "Subsection",ExpressionUUID->"3f461a44-5c6d-45ad-993b-95ebe91d2e26"],
+Cell[3947, 121, 2580, 73, 196, "Text",ExpressionUUID->"1e6115d8-6bbc-412c-a84d-406aa6c08efd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6564, 199, 320, 5, 54, "Subsection",ExpressionUUID->"7f69ed47-e980-4e88-be37-a32b029e27f2"],
+Cell[6887, 206, 4022, 105, 303, "Text",ExpressionUUID->"925109ee-b10e-41a6-ab06-ddcf265b4f36"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10946, 316, 291, 4, 54, "Subsection",ExpressionUUID->"ed631482-6a56-4b1b-b046-696f8e6d43fa"],
+Cell[11240, 322, 4422, 114, 523, "Text",ExpressionUUID->"22495c78-00de-48ed-8ea8-61d576c4a725"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15699, 441, 289, 4, 54, "Subsection",ExpressionUUID->"3c8643a6-8aa5-4041-b4ae-abb7d84df7ce"],
+Cell[15991, 447, 1361, 36, 131, "Text",ExpressionUUID->"cc9ea312-4979-4b3c-8eb9-9f3cfb65c9e6"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
