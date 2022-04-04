@@ -89,7 +89,43 @@ But then to divide, we multiply by the reciprocal and proceed as in the solution
 \sol The statement is \textit{true}. Suppose the rate of change were 5 and the current value is 2. After one step in time, the value is $2 + 1(5)= 2 + 5= 7$. After another step in time, the value is $7 + 5= 12$, or $2 + 2(5)= 2 + 10= 12$. Generally, after $n$ steps, the value is $2 + n \cdot 5= 5n + 2$, which is a linear function. Generally, if we start with initial value $y_0$ and have a constant rate of change $m$, after $x$ steps, we have $y= y_0 + x \cdot m= mx + y_0$. This is a linear function with $y= y$, $x= x$, $m= m$, and $b= y_0$. But then we see that `any' function which changes at a constant rate is a linear function. We know that a linear function $y= mx + b$ has a constant rate of change---the slope $m$. Therefore, a function is linear if and only if it has a constant rate of change. 
 
 
-Suppose Lolita's bank account currently has \$5576.28. If she makes \$22.50 per hour, works 40~hours per week, and deposits her paycheck to her bank account each week, then the amount of money in her account, $A(t)$, in $t$ weeks is given by $A(t)= 22.50t + 5576.28$. 
 
-The parabola $y= 17 - (x + 2)^2$ has vertex $(2, 17)$. 
+\newpage
+
+
+
+% Quiz 10
+\quizsol \textit{True/False}: Suppose Lolita's bank account currently has \$5576.28. If she makes \$22.50 per hour, works 40~hours per week, and deposits her paycheck to her bank account each week, then the amount of money in her account, $A(t)$, in $t$ weeks is given by $A(t)= 22.50t + 5576.28$. \pspace
+
+\sol The statement is \textit{false}. This is an issue of units. Because money is flowing into the account at a constant rate, we know that $A(t)$ is linear. Therefore, $A(t)= mt + b$ for some $m, b$. Because the account has \$5576.28 at the start, we know that $A(0)= 5576.28$ so that $5576.28= A(0)= m(0) + b= b$. We then know that $A(t)= mt + 5576.28$. Furthermore, $m$ is the rate of change of the total money in the account. Because $t$ is in weeks, this is Lolita's weekly income. This is $22.50 \cdot 40= 900$. Therefore, $A(t)= 900t + 5576.28$. The given would be $A(t)$ if $t$ was given in days---not weeks. \pvspace{1.3cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: The parabola $y= 17 - (x + 2)^2$ has vertex $(2, 17)$. \pspace
+
+\sol The statement is \textit{false}. The vertex form of a quadratic function is $f(x)= a(x - p)^2 + q$, where $(p, q)$ is the location of the vertex. We have $y= 17 - (x + 2)^2= -(x + 2)^2 + 17= -(x - (-2))^2 + 17$ so that $a= -1$, $p= -2$, and $q= 17$. Therefore, the vertex of the quadratic function is the point $(p, q)$. Generally, suppose a quadratic function is written in the form $y= a(x \pm p)^2 + q$. The $y$-coordinate of the vertex is the constant term and the $x$-coordinate of the vertex is the $x$-value for which the quadratic term vanishes. So for $y= 17 - (x+ 2)^2$, the constant term is 17 and the $x$-value that makes the quadratic term vanish, i.e. equal 0, is $x= -2$. Therefore, the vertex is $(-2, 17)$. \pvspace{1.3cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: To solve $x^2= 48 - 2x$, we write $x^2 + 2x - 48= 0$ and factor the left side as $(x + 8)(x - 6)$ so that $x= -8, 6$. \pspace
+
+\sol The statement is \textit{true}. We have\dots
+	\[
+	\begin{aligned}
+	x^2&= 48 - 2x \\
+	x^2 + 2x - 48&= 0 \\
+	(x + 8)(x - 6)&= 0 
+	\end{aligned}
+	\]
+But then either $x + 8= 0$, so that $x= -8$, or $x - 6=0$, so that $x= 6$. Therefore, the solutions are $x= -8, 6$. 
+
+
+
+
+
+
+
+
 \end{document}
