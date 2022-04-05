@@ -138,7 +138,31 @@ Because $(1, -3)$ does not satisfy all the inequalities, $(1, -3)$ does not sati
 
 % Quiz 8
 \quizsol \textit{True/False}:
-To maximize $z= 5x + 6y$ subject to $2x + 3y \leq 6$, $-6x + y \leq 20$, and $x, y \leq 0$, the initial simplex tableau is\dots
+To maximize $z= 5x + 6y$ subject to $2x + 3y \leq 6$, $-6x + y \leq 20$, and $x, y \geq 0$, the initial simplex tableau is\dots
+	\begin{center}
+	\begin{tabular}{rrrr|r}
+	$2$ & $3$ & $1$ & $0$ & $6$ \\
+	$-6$ & $1$ & $0$ & $1$ & $20$ \\ \hline
+	$-5$ & $-6$ & $0$ & $0$ & $0$
+	\end{tabular}
+	\end{center} \pspace
+
+\sol The statement is \textit{true}. First, note that the problem is in standard form. For each inequality, we introduce a slack variable so that we have\dots
+	\[
+	\begin{aligned}
+	2x + 3y + s_1 \phantom{+ s_2}&= 6 \\
+	-6x + y \phantom{+ s_1} + s_2&= 20
+	\end{aligned}
+	\]
+Moving all the variables to the left side in $z= 5x + 6y$, we have $z - 5x - 6y= 0$. Aligning the equations, we have\dots
+	\[
+	\begin{aligned}
+	\phantom{z -} 2x + 3y + s_1 \phantom{+ s_2}&= 6 \\
+	\phantom{z } -6x + y \phantom{+ s_1} + s_2&= 20 \\
+	z - 5x -6y \phantom{+ s_1 + s_2}&= 0
+	\end{aligned}
+	\]
+This gives us the initial simplex tableau\dots
 	\begin{center}
 	\begin{tabular}{rrrr|r}
 	$2$ & $3$ & $1$ & $0$ & $6$ \\
@@ -147,15 +171,21 @@ To maximize $z= 5x + 6y$ subject to $2x + 3y \leq 6$, $-6x + y \leq 20$, and $x,
 	\end{tabular}
 	\end{center}
 
+
+
+\newpage
+
+
+
 % Quiz 9
 \quizsol \textit{True/False}:
 Given the following minimization problem:
 	\[
 	\begin{aligned}
-	\min w= x_1 + 2x_2 + 3x_3 \\
-	x_1 + x_2 + x_3 \geq 4 \\
-	x_1 - x_2 + x_3 \geq 6 \\
-	-x_1 + x_2 - x_3 \geq 8
+	\min w&= x_1 + 2x_2 + 3x_3 \\
+	x_1 &+ x_2 + x_3 \geq 4 \\
+	x_1 &- x_2 + x_3 \geq 6 \\
+	-x_1 &+ x_2 - x_3 \geq 8
 	\end{aligned}
 	\]
 the dual problem is\dots
@@ -166,16 +196,99 @@ the dual problem is\dots
 	1 & 1 & -1 & 3 \\
 	4 & 6 & 8 & 0 
 	\end{pmatrix}
+	\] \pspace
+
+\sol The statement is \textit{false}. First, observe that the problem is in standard form. Given a minimization problem in standard form, we first align all the inequalities with the function as the bottom equation:
+	\[
+	\begin{aligned}
+	x_1 + x_2 + x_3&\geq 4 \\
+	x_1 - x_2 + x_3&\geq 6 \\
+	-x_1 + x_2 - x_3&\geq 8 \\
+	x_1 + 2x_3 + 3x_3&= 0 
+	\end{aligned}
 	\]
+From this, we form the matrix\dots
+	\[
+	\begin{pmatrix}
+	1 & 1 & 1 & 4 \\
+	1 & -1 & 1 & 6 \\
+	-1 & 1 & -1 & 8 \\
+	1 & 2 & 3 & 0 
+	\end{pmatrix}
+	\]
+We then take the transpose of this matrix\dots
+	\[
+	\begin{pmatrix}
+	1 & 1 & 1 & 4 \\
+	1 & -1 & 1 & 6 \\
+	-1 & 1 & -1 & 8 \\
+	1 & 2 & 3 & 0 
+	\end{pmatrix}^T= 
+	\begin{pmatrix}
+	1 & 1 & -1 & 1 \\
+	1 & -1 & 1 & 2 \\
+	1 & 1 & -1 & 3 \\
+	4 & 6 & 8 & 0 
+	\end{pmatrix}
+	\]
+But then the corresponding maximization problem (the dual problem) is\dots
+	\[
+	\begin{aligned}
+	\max z&= 4y_1 + 6y_2 + 8y_3 \\
+	y_1 &+ y_2 - y_3 \leq 1 \\
+	y_1 &- y_2 + y_3 \leq 2 \\
+	y_1 &+ y_2 - y_3 \leq 3
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
 
 % Quiz 10
 \quizsol \textit{True/False}:
 If \$4,000 is placed into an account that earns 5\% interest, compounded quarterly, then the amount of money in the account after 8~years is\dots
 	\[
-	4000 \left(1 + \dfrac{0.05}{4} \right)^8
+	4000 \left(1 + \dfrac{0.05}{4} \right)^{32}
 	\]
 
+\sol The statement is \textit{true}. We know that if $P$ dollars is placed into an account earning an annual interest rate $r$, compounded $k$ times per year, then the amount of money in the account after $t$ years, $F$, is given by\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}
+	\]
+We have $P= 4000$, $r= 0.05$, $k= 4$, and $t= 8$ so that we have\dots
+	\[
+	F= 4000 \left(1 + \dfrac{0.05}{4} \right)^{4 \cdot 8}= 4000 \left(1 + \dfrac{0.05}{4} \right)^{32}
+	\] \pvspace{1.3cm}
+
+
+
 % Quiz 11
-\quizsol \textit{True/False}: An ordinary annuity is a series of equal payments, paid at equal intervals of time with payments occurring at the start of the payment period.
+\quizsol \textit{True/False}: An ordinary annuity is a series of equal payments, paid at equal intervals of time with payments occurring at the start of the payment period. \pspace
+
+\sol The statement is \textit{false}. In an ordinary (simple) annuity, payments are made at the \textit{end} of each payment period and the payment periods are the same as the interest periods (otherwise, it is a general ordinary annuity). If the payments are made at the \textit{start} of each payment period and the payment periods are the same as the interest periods, then it is a (simple) annuity due (otherwise, it is a general annuity due). We can summarize this in the following chart:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{lcc}
+	 & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Payment at \\ Start of Period\end{tabular}} & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Payment at\\ End of Period\end{tabular}} \\ \cline{2-3} 
+	\multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Payment Period $=$\\ Compounding Period\end{tabular}} & \multicolumn{1}{c|}{Ordinary Annuity Due} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Ordinary (Simple)\\ Annuity\end{tabular}} \\ \cline{2-3} 
+	\multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Payment Period $\neq$\\ Compounding Period\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}General Annuity\\ Due\end{tabular}} & \multicolumn{1}{c|}{General Annuity} \\ \cline{2-3} 
+	\end{tabular}
+	\end{table} \pvspace{1.3cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: If you have a \$5,000 loan at 5.4\% annual interest, compounded monthly, that you pay over 5~years using a series of monthly payments of \$95.28, then the amount you still owe on the loan after 2~years is\dots
+	\[
+	P= 5000\, a_{\actuarialangle{36}0.0045}= 3160.11
+	\] \pspace
+
+\sol The statement is \textit{false}. We know that the amount due on an (ordinary) amortized loan is given by $P= R\, a_{\actuarialangle{n - m}i}$. We have $R= 95.28$, $i_p= r/k= 0.054/12= 0.0045$, $n= kt= 12 \cdot 5= 60$, and $m= kt_0= 12 \cdot 2= 24$. Then we have\dots
+	\[
+	P= 95.28\, a_{\actuarialangle{36}0.0045}= 3160.11
+	\]
 
 \end{document}
