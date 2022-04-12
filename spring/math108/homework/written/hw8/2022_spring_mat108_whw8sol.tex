@@ -1,0 +1,135 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{8: Due 04/11}{Surplus wealth is a sacred trust which its possessor is bound to administer in his lifetime for the good of the community.}{Andrew Carnegie}
+
+% Problem 1
+\problem{10} Anne Morale takes out a loan for \$2,300 for 10~months that is discounted at 9.5\% annual simple interest.
+	\begin{enumerate}[(a)]
+	\item What is the discount for this loan?
+	\item What is the maturity? What are the proceeds?
+	\item How much interest is paid on this loan? How much is paid in total?
+	\item Find the effective annual interest rate for this loan.
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We know that\dots
+	\[
+	D= Mrt= 2300 \cdot 0.095 \cdot \dfrac{10}{12}= \$182.083 \approx \$182.08
+	\] \pspace
+
+\item The maturity is the original full loan amount, which is \$2,300. The proceeds are the loan amount discounted by the interest, which is \$182.08. Therefore, the proceeds are $2300 - 182.08= \$2,117.92$. \pspace
+
+\item The interest is the discount, which we know from (a) is \$182.08. After 10~months, the original loan amount of \$2,300 must be paid. One has already paid the interest of \$182.08 up-front. Therefore, the total amount paid is $2300 + 182.08= \$2,482.08$. \pspace
+
+\item We know that\dots
+	\[
+	r_{\text{eff}}= \dfrac{r}{1 - rt}= \dfrac{0.095}{1 - 0.095 \cdot \dfrac{10}{12}}= 0.103167 \approx 10.32\%
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Joe King invests \$6,000 in a savings account that earns 3.7\% annual interest, compounded semiannually. 
+	\begin{enumerate}[(a)]
+	\item How much is in the account after 5~years?
+	\item How long until the account has \$8,000?
+	\item What is the effective annual interest for the account?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We know that\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= 6000 \left(1 + \dfrac{0.037}{2} \right)^{2 \cdot 5}= 6000 (1.201186)= 7207.1172 \approx \$7,207.12
+	\] \pspace
+
+\item We know that\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln \left( 1 + \dfrac{r}{k} \right)}= \dfrac{\ln(8000/6000)}{2 \ln \left( 1 + \dfrac{0.037}{2} \right)}= \dfrac{0.287682}{0.0366619}= 7.84689 \approx 7.85 \text{ years}
+	\] \pspace
+
+\item We know that\dots
+	\[
+	r_{\text{eff}}= \left( 1 + \dfrac{r}{k} \right)^k - 1= \left( 1 + \dfrac{0.037}{2} \right)^2 - 1= 0.03734 \approx 3.73\%
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Amanda Lynn takes out a loan for \$18,000 at an annual interest rate of 6.1\%, compounded continuously. 
+	\begin{enumerate}[(a)]
+	\item How much is owed after 3~years?
+	\item How long until the loan amount is \$20,000?
+	\item If she was going to receive \$25,000 in 3~years, what is the maximum amount she could have taken out for the loan?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We know that\dots
+	\[
+	F= P e^{rt}= 18000 e^{0.061 \cdot 3}= 18000 (1.2008144)= 21614.6593 \approx \$21,614.66
+	\] \pspace
+
+\item We know that\dots
+	\[
+	t= \dfrac{\ln(F/P)}{r}= \dfrac{\ln(20000/18000)}{0.061}= \dfrac{0.105361}{0.061}= 1.7272 \approx 1.72 \text{ years}
+	\] \pspace
+
+\item We know that\dots
+	\[
+	P= \dfrac{F}{e^{rt}}= \dfrac{25000}{e^{0.061 \cdot 3}}= \dfrac{25000}{1.200814}= 20819.2038 \approx \$20,819.20
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Barry D. Hatchett is going to set up a savings account for his daughter. He has two option: one account earns 4.2\% annual interest, compounded monthly. The other account earns 3.8\% annual interest, compounded continuously. Which account should he take? Justify your answer. \pspace
+
+\sol Suppose we compare using doubling time. For the first account, we know that\dots
+	\[
+	t_D= \dfrac{\ln(2)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(2)}{12 \ln \left(1 + \dfrac{0.042}{12} \right)}= \dfrac{0.693147}{0.0419267}= 16.5324 \approx 16.53 \text{ years}
+	\]
+For the second account, we have\dots
+	\[
+	t_D= \dfrac{\ln(2)}{r}= \dfrac{0.693147}{0.038}= 18.2407 \approx 18.24 \text{ years}
+	\]
+Because the first account doubles the savings in less time, the first account is better. \pspace
+
+Suppose we compare using effective interest. For the first account, we know that\dots
+	\[
+	r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.042}{12} \right)^{12} - 1= 0.042818 \approx 4.28\%
+	\]
+For the second account, we have\dots
+	\[
+	r_{\text{eff}}= e^r - 1= e^{0.038} - 1= 0.03873 \approx 3.87\%
+	\]
+Because the first account has a higher effective interest rate, it is the better account. 
+
+
+\end{document}

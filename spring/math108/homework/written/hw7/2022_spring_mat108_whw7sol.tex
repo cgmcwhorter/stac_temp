@@ -1,0 +1,170 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 03/28}{There's no such thing as a free lunch.}{Milton Friedman}
+
+% Problem 1
+\problem{10} Ms. Currant invests a principal of \$3,500 in an account with 8.5\% per year simple interest.
+	\begin{enumerate}[(a)]
+	\item How much interest has accumulated after 20~months?
+	\item How much is the investment worth after 20~months?
+	\item How long until the investment is worth \$4,200?
+	\item How long until the investment has doubled in value?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We know that $I= Prt$, where $P= 3500$ is the principal, $r= 0.085$ is the annual interest rate, and $t= 20/12$ is the time. Then we have\dots
+	\[
+	I= Prt= 3500 \cdot 0.085 \cdot \dfrac{20}{12}= \$495.8333 \approx \$495.83
+	\] \pspace
+
+\item This is the future value. We know that $F= P(1 + rt)$, where $P= 3500$ is the principal, $r= 0.085$ is the annual interest rate, and $t= 20/12$ is the time. Then we have\dots
+	\[
+	F= P(1 + rt)= 3500 \left(1 + 0.085 \dfrac{20}{12} \right)= \$3995.8333 \approx \$3,995.83
+	\]
+Alternatively, the total value of the investment will be its initial value (the principal) plus the interest accumulated in the 20~months. We know the interest accumulated from (a). Therefore, $F= 3500 + 495.833= 3995.833 \approx \$3,995.83$. \pspace
+
+\item We know that $F= P(1 + rt)$. We want to know the time $t$ such that $F= \$4200$. But then we have\dots
+	\[
+	\begin{aligned}
+	F&= P(1 + rt) \\
+	4200&= 3500(1 + 0.085t) \\
+	1.20&= 1 + 0.085t \\
+	0.20&= 0 0.085t \\
+	t&= 2.35294 \text{ years}
+	\end{aligned}
+	\] \pspace
+
+\item This is the doubling time. We know that $t_D= \dfrac{1}{r}$. But then we have\dots
+	\[
+	t_D= \dfrac{1}{r}= \dfrac{1}{0.085}= 11.7647
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Colonel Tumeric takes out a short-term loan of \$680. The bank issues a 9\% discount loan for 90~days.
+	\begin{enumerate}[(a)]
+	\item What is the maturity?
+	\item What are the discount and proceeds?
+	\item How much is owed after 90~days and how much is paid in total?
+	\item What are the nominal and effective interest rates?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item The maturity would be the original loan amount, which is \$680. \pspace
+
+\item We know that $D= Mrt$, where $M= 680$ is the maturity, $r= 0.09$ is the annual interest rate, and $t= \dfrac{90}{365}$ is the time. But then\dots
+	\[
+	D= Mrt= 680 \cdot 0.09 \cdot \dfrac{90}{365}= 15.0904 \approx \$15.09
+	\]
+The proceeds are then loan amount, i.e. the maturity, lessened by the discount:
+	\[
+	P= M - D= 680 - 15.09= \$664.91 
+	\] \pspace
+
+\item After 90~days, the full amount of the loan---the \$680---is due. One has already paid the interest up-front. In total, one has paid the loan amount, which is \$680, and the interest, which is \$15.09, for a total of $\$680 + \$15.09= \$695.09$. Alternatively, the total amount paid on the loan is\dots
+	\[
+	F= P(1 + rt)= 680 \left(1 + 0.09 \cdot \dfrac{90}{365} \right)= 695.0904 \approx \$695.09
+	\] \pspace
+
+\item The nominal interest rate is the advertised 9\%. The effective interest rate is\dots
+	\[
+	r_{\text{eff}}= \dfrac{r}{1 - rt}= \dfrac{0.09}{1 - 0.09 \cdot \dfrac{90}{365}}= 0.09204 \approx 9.2\%
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Professor Mauve invests her money with an investment startup that promises interest returns of 3.5\% per year, compounded semiannually. Suppose she initially invests \$8,000.  
+	\begin{enumerate}[(a)]
+	\item How much is the investment worth in 3~years?
+	\item How long until the investment is worth \$10,000?
+	\item How much should she have invested to have \$10,000 after 3~years?
+	\item Find the effective interest rate.
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item This is the future value. We know that $F= P \left(1 + \dfrac{r}{k} \right)^{kt}$, where $P= 8000$ is the principal, $r= 0.035$ is the annual interest rate, $k= 2$ is the number of compounds per year, and $t= 3$ is the number of years. Then we have\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= 8000 \left(1 + \dfrac{0.035}{2} \right)^{2 \cdot 3}= 8000(1.109702)= 8877.6188 \approx \$8,877.62
+	\] \pspace
+
+\item We know that\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln\left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(10000/8000)}{2 \ln \left(1 + \dfrac{0.035}{2} \right)}= \dfrac{0.223144}{0.0346973}= 6.43115 \approx 6.43 \text{ years}
+	\] \pspace
+
+\item We know that\dots
+	\[
+	P= \dfrac{F}{\left(1 + \dfrac{r}{k} \right)^{kt}}= \dfrac{10000}{\left(1 + \dfrac{0.035}{2} \right)^{2 \cdot 3}}= \dfrac{10000}{1.109702}= 9011.4254 \approx \$9,011.43
+	\] \pspace
+
+\item We know that\dots
+	\[
+	r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^2 - 1= \left(1 + \dfrac{0.032}{2} \right)^2 - 1= 0.03531 \approx 3.53\%
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Mrs. Cobalt takes out a loan of \$400,000 at a yearly interest rate of 1.5\%, compounded continuously. 
+	\begin{enumerate}[(a)]
+	\item How much is owed on the loan after 3~years?
+	\item How long until \$500,000 is owed on the loan?
+	\item How much should the loan have been for if she planned on paying \$600,000 after 5~years?
+	\item Find the effective interest rate.
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We know that\dots
+	\[
+	F= Pe^{rt}= 400000 e^{0.015 \cdot 3}= 400000 (1.046028)= \$418,411.14
+	\] \pspace
+
+\item We know that\dots
+	\[
+	t= \dfrac{\ln(F/P)}{r}= \dfrac{\ln(500000/400000)}{0.015}= \dfrac{0.223144}{0.015}= 14.8762 \approx 14.88 \text{ years}
+	\] \pspace
+
+\item We know that\dots
+	\[
+	P= \dfrac{F}{e^{rt}}= \dfrac{600000}{e^{0.015 \cdot 5}}= \dfrac{600000}{1.07788}= 556646.0918 \approx \$556,646.09
+	\] \pspace
+
+\item We know that\dots
+	\[
+	r_{\text{eff}}= e^r - 1= e^{0.015} - 1= 0.0151131 \approx 1.51\%
+	\]
+\end{enumerate}
+
+
+\end{document}

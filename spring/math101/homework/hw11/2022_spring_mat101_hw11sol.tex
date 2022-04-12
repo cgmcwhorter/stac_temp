@@ -1,0 +1,156 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{11: Due 04/12}{When you are dissatisfied and would like to go back to youth, think of Algebra}{Will Rogers}
+
+% Problem 1
+\problem{10} Determine whether $(x, y)= (5, -2)$ is a solution to the following system of equations:
+	\[
+	\begin{aligned}
+	2x + 6y&= -2 \\
+	3x - 2y&= 11
+	\end{aligned}
+	\] \pspace
+
+\sol The point $(5, -2)$ is a solution to the system of equations if and only if it satisfies both of the equations. We check this:
+	\[
+	\begin{aligned}
+	2x + 6y&= -2 \\
+	2(5) + 6(-2)&\stackrel{?}{=} -2 \\
+	10 - 12&\stackrel{?}{=} -2 \\
+	-2&= -2 \\
+	&\;\text{\cmark}
+	\end{aligned}
+	\]
+and
+	\[
+	\begin{aligned}
+	3x - 2y&= 11 \\
+	3(5) - 2(-2)&\stackrel{?}{=} 11 \\
+	15 + 4&\stackrel{?}{=} 11 \\
+	19&= 11 \\
+	&\;\text{\xmark}
+	\end{aligned}
+	\]
+Therefore, $(5, -2)$ is \textit{not} a solution to the system of equations. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use substitution to solve the following system of equations:
+	\[
+	\begin{aligned}
+	3x - 5y&= -29 \\
+	2x - y&= -10
+	\end{aligned}
+	\] \pspace
+
+\sol We solve for $y$ in the second equation:
+	\[
+	\begin{aligned}
+	2x - y&= -10 \\[0.3cm]
+	-y&= -2x - 10 \\[0.3cm]
+	y&= 2x + 10
+	\end{aligned}
+	\]
+Using this in the first equation, we have\dots
+	\[
+	\begin{aligned}
+	3x - 5y&= -29 \\[0.3cm]
+	3x - 5(2x + 10)&= -29 \\[0.3cm]
+	3x - 10x - 50&= -29 \\[0.3cm]
+	-7x&= 21 \\[0.3cm]
+	x&= -3
+	\end{aligned}
+	\]
+But then $y= 2x + 10= 2(-3) + 10= -6 + 10= 4$. Therefore, the solution is $(x, y)= (-3, 4)$. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use elimination to solve the following system of equations:
+	\[
+	\begin{aligned}
+	5x + 6y&= 4 \\
+	4x - 3y&= 11
+	\end{aligned}
+	\] \pspace
+
+\sol Multiplying the second equation by 2, we have\dots
+	\[
+	\begin{aligned}
+	5x + 6y&= 4 \\
+	8x - 6y&= 22
+	\end{aligned}
+	\] 
+Adding these equations, we have\dots
+	\[
+	\begin{aligned}
+	13x&= 26 \\[0.3cm]
+	x&= 2
+	\end{aligned}
+	\] 
+Using this in the first equation, we have\dots
+	\[
+	\begin{aligned}
+	5x + 6y&= 4 \\[0.3cm]
+	5(2) + 6y&= 4 \\[0.3cm]
+	10 + 6y&= 4 \\[0.3cm]
+	6y&= -6 \\[0.3cm]
+	y&= -1
+	\end{aligned}
+	\] 
+Therefore, we have solution $(x, y)= (2, -1)$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Determine whether the following system of equations has a solution:
+	\[
+	\begin{aligned}
+	-2x + 3y&= 5 \\
+	4x - 6y&= -30
+	\end{aligned}
+	\] \pspace
+
+\sol The system of linear equations has a solution if and only if the lines are not parallel. We solve for $y$ in both equations to determine the slopes. We have
+	\[
+	\begin{aligned}
+	-2x + 3y&= 5 \\[0.3cm]
+	3y&= 2x + 5 \\[0.3cm]
+	y&= \dfrac{2}{3}\,x + \dfrac{5}{3}
+	\end{aligned}
+	\]
+This line has slope $m_1= \dfrac{2}{3}$. We also have\dots
+	\[
+	\begin{aligned}
+	4x - 6y&= -30 \\[0.3cm]
+	-6y&= -4x - 30 \\[0.3cm]
+	y&= \dfrac{2}{3}\,x + 5
+	\end{aligned}
+	\]
+This lines has slope $m_2= \dfrac{2}{3}$. Because $m_1= m_2$, the lines are parallel. [Observe also that the lines are distinct.] Therefore, the system of equations has no solution.
+
+
+\end{document}

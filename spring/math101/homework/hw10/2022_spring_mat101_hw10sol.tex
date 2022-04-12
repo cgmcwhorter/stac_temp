@@ -1,0 +1,147 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{10: Due 04/12}{Algebra is the metaphysics of arithmetic.}{John Ray}
+
+% Problem 1
+\problem{10} Use completing the square to solve the following equation:
+	\[
+	x(2x + 7)= 15
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	x(2x + 7)&= 15 \\[0.3cm]
+	2x^2 + 7x&= 15 \\[0.3cm]
+	2x^2 + 7x - 15&= 0 \\[0.3cm]
+	2 \left(x^2 + \dfrac{7}{2}\,x - \dfrac{15}{2} \right)&= 0 \\[0.3cm]
+	2 \left(x^2 + \dfrac{7}{2}\,x + \dfrac{49}{16} - \dfrac{49}{16} - \dfrac{15}{2} \right)&= 0 \\[0.3cm]
+	2 \left( \left(x + \dfrac{7}{4} \right)^2 - \dfrac{49}{16} - \dfrac{120}{16} \right)&= 0 \\[0.3cm]
+	2 \left( \left(x + \dfrac{7}{4} \right)^2  - \dfrac{169}{16} \right)&= 0 \\[0.3cm]
+	2 \left(x + \dfrac{7}{4} \right)^2  - \dfrac{169}{8}&= 0 \\[0.3cm]
+	2 \left(x + \dfrac{7}{4} \right)^2&= \dfrac{169}{8} \\[0.3cm] 
+	\left(x + \dfrac{7}{4} \right)^2&= \dfrac{169}{16} \\[0.3cm]
+	x + \dfrac{7}{4}&= \pm \sqrt{\dfrac{169}{16}} \\[0.3cm]
+	x + \dfrac{7}{4}&= \pm \dfrac{13}{4} \\[0.3cm]
+	x&= -\dfrac{7}{4} \pm \dfrac{13}{4}
+	\end{aligned}
+	\]
+Therefore, $x= -\frac{7}{4} - \frac{13}{4}= -\frac{20}{4}= -5$ or $x= -\frac{7}{4} + \frac{13}{4}= \frac{6}{4}= \frac{3}{3}$. 
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use factoring to solve the following equation:
+	\[
+	2x= 80 - x^2
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	2x= 80 - x^2 \\[0.3cm]
+	x^2 + 2x - 80= 0 
+	\end{aligned}
+	\]
+
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 80} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot -80$ & $-79$ \\
+	$-1 \cdot 80$ & $79$ \\
+	$2 \cdot -40$ & $-38$ \\
+	$-2 \cdot 40$ & $38$ \\
+	$4 \cdot -20$ & $-16$ \\
+	$-4 \cdot 20$ & $16$ \\
+	$5 \cdot -16$ & $-9$ \\
+	$-5 \cdot 16$ & $9$ \\
+	$8 \cdot -10$ & $-2$ \\ \hline
+	\multicolumn{1}{|r}{$-8 \cdot 10$} & \multicolumn{1}{r|}{$2$} \\ \hline
+	\end{tabular}
+	\end{table}
+
+	\[
+	\begin{aligned}
+	2x= 80 - x^2 \\[0.3cm]
+	x^2 + 2x - 80= 0 \\[0.3cm]
+	(x - 8)(x + 10)= 0 
+	\end{aligned}
+	\] \pspace
+
+But then either $x - 8=0$, i.e. $x= 8$, or $x + 10= 0$, i.e. $x= -10$. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use the quadratic equation to solve the following equation:
+	\[
+	2x^2 - 1= 2x
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	2x^2 - 1= 2x \\[0.3cm]
+	2x^2 - 2x - 1= 0 
+	\end{aligned}
+	\]
+
+Then we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	x&= \dfrac{-(-2) \pm \sqrt{(-2)^2 - 4(2)(-1)}}{2(2)} \\[0.3cm]
+	x&= \dfrac{2 \pm \sqrt{4 + 8}}{4} \\[0.3cm]
+	x&= \dfrac{2 \pm \sqrt{12}}{4} \\[0.3cm]
+	x&= \dfrac{2 \pm \sqrt{4 \cdot 3}}{4} \\[0.3cm]
+	x&= \dfrac{2 \pm 2 \sqrt{3}}{4} \\[0.3cm]
+	x&= \dfrac{1 \pm \sqrt{3}}{2}
+	\end{aligned}
+	\] \pspace
+
+Therefore, the solutions are $x= \dfrac{1 - \sqrt{3}}{2}$ and $x= \dfrac{1 + \sqrt{3}}{2}$. 
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Use the quadratic formula to factor $280x^2 + 6x - 315$. \pspace
+
+\sol Solving the equation $280x^2 + 6x - 315= 0$, we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	x&= \dfrac{-6 \pm \sqrt{6^2 - 4(280)(-315)}}{2(280)} \\[0.3cm]
+	x&= \dfrac{-6 \pm \sqrt{36 + 352800}}{560} \\[0.3cm]
+	x&= \dfrac{-6 \pm \sqrt{352836}}{560} \\[0.3cm]
+	x&= \dfrac{-6 \pm 594}{560}
+	\end{aligned}
+	\] \pspace
+
+Therefore, the solutions are $x= \dfrac{-6 - 594}{560}= \dfrac{-600}{560}= -\dfrac{15}{14}$ or $x= \dfrac{-6 + 594}{560}= \dfrac{588}{560}= \dfrac{21}{20}$. Therefore, we have\dots
+	\[
+	280x^2 + 6x - 315= a(x - r_1)(x - r_2)= 280 \left(x - \dfrac{-15}{14} \right) \left(x - \dfrac{21}{20} \right)= 280 \left(x + \dfrac{15}{14} \right) \left(x - \dfrac{21}{20} \right)
+	\]
+
+
+\end{document}
