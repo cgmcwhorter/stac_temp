@@ -2,7 +2,6 @@
 % Packages
 % -------------------
 \usepackage{
-	actuarialsymbol,	% Actuary Symbols
 	amsmath,			% Math Environments
 	amssymb,			% Extended Symbols
 	cancel,			% Use Cancellations
@@ -17,7 +16,6 @@
 	tikz,				% Create Tikz Diagrams
 	tkz-euclide		% Automate Graph Plots
 }
-\usepackage{arydshln} % Matrix Lines - Load After Tabularx
 
 
 % -------------------
@@ -97,7 +95,7 @@
 \newcommand{\examtitle}{\noindent \textbf{\course} \hfill \textbf{Name: } \underline{\hspace{1.25cm}\wans{  Caleb M\textsuperscript{c}Whorter --- Solutions  }\hspace{1.25cm}} \\ \textbf{\term} \\ \textbf{\examdate} \\ \textbf{\timelimit} \\[0.2cm] \rule[2ex]{\textwidth}{2pt}}
 \newcommand{\instructions}[1]{%
 	\begin{center}
-	\fbox{\fbox{\parbox{6in}{\centering #1}}}
+	\fbox{\fbox{\parbox{6.2in}{\centering #1}}}
 	\end{center} \vspace{0.1cm}
 }
 \newcommand{\scores}{
@@ -145,3 +143,8 @@
 \firstpageheader{}{}{}
 \runningheader{\course}{}{\thepage\ of \numpages}
 \runningheadrule
+
+
+
+% Commands
+\DeclareMathOperator{\lcm}{lcm}

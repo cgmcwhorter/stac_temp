@@ -66,22 +66,35 @@ T
 F
 
 
-Suppose that you wanted to approximate a function $f(x)$ on the interval $[a, b]$ using Lagrange or Newton interpolation. Then the more points you use, the more accurate the approximation, i.e. the less the error $|f(x) - p(x)|$ on the interval $[a, b]$. 
+% Quiz 10
+\quizsol \textit{True/False}: Suppose that you wanted to approximate a function $f(x)$ on the interval $[a, b]$ using Lagrange or Newton interpolation. Then the more points you use, the more accurate the approximation, i.e. the less the error $|f(x) - p(x)|$ on the interval $[a, b]$. 
 
 F
 
 
 
-To approximate $f(x)= \sin(3x)$ on the interval $[0, 1]$ with an interpolating polynomial $p(x)$ such that we have $|f(x) - p(x)| < 0.01$ for all $x \in [0, 1]$, it is sufficient to choose \textit{any} five nodes to create your interpolating polynomial. 
+% Quiz 11
+\quizsol \textit{True/False}: To approximate $f(x)= \sin(3x)$ on the interval $[0, 1]$ with an interpolating polynomial $p(x)$ such that we have $|f(x) - p(x)| < 0.01$ for all $x \in [0, 1]$, it is sufficient to choose \textit{any} five nodes to create your interpolating polynomial. 
 
 F
 
 
-If $f(x) \in C^1[a, b]$ with bounded derivative and has a fixed point $p \in [a, b]$, then given $p_0 \in [a, b]$, the fixed point iteration $p_{n+1}= f(p_n)$ converges to $p$. 
+% Quiz 12
+\quizsol \textit{True/False}: If $f(x) \in C^1[a, b]$ with bounded derivative and has a fixed point $p \in [a, b]$, then given $p_0 \in [a, b]$, the fixed point iteration $p_{n+1}= f(p_n)$ converges to $p$. 
 
 F
 
 
-The approximation $f'(x) \approx \dfrac{f(x + h) - f(x - h)}{2h}$ is exact for linear and quadratic functions. 
+% Quiz 13
+\quizsol \textit{True/False}: The approximation $f'(x) \approx \dfrac{f(x + h) - f(x - h)}{2h}$ is exact for linear and quadratic functions. 
 T
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: The composite Simpson's rule, 
+	\[
+	\dfrac{h}{3} \left[ f(x_0) + 2 \sum_{i=2}^{n/2} f(x_{2i-2}) + 4 \sum_{i=1}^{n/2} f(x_{2i-1}) + f(x_n) \right]
+	\]
+is exact for polynomials $f \in \prod_4$. 
 \end{document}
