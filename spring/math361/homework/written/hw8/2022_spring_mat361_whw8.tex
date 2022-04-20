@@ -1,0 +1,102 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{8: Due 05/12}{The true spirit of delight, the exaltation, the sense of being more than Man, which is the touchstone of the highest excellence, is to be found in mathematics as surely as poetry.}{Bertrand Russell}
+
+
+% Problem 1.
+\problem{Existence \& Uniqueness} Given an ordinary differential equation, an initial-value problem may have many solutions. It is then not clear when trying to approximate a solution to the initial-value problem which solution one is approximating. However, we had existence and uniqueness theorems to know when a solution to an initial value problem not only existed but was unique. Show that the initial value problem
+	\[
+	\left\{
+	\begin{aligned}
+	\dfrac{dx}{dt}&= \tan x \\
+	x(0)&= 0
+	\end{aligned} \right.
+	\]
+has a unique solution in the interval $|t| < \frac{\pi}{2}$. 
+
+
+
+\newpage
+
+
+
+% Problem 2.
+\problem{Taylor Series Method} When numerically solving a differential equation, one can hardly hope to obtain an exact solution. Instead, one then tries to approximate a solution. If the solution is sufficiently differentiable, an `immediate' approach would be to apply Taylor series to approximate a solution. For instance, consider the case of 
+	\[
+	\left\{
+	\begin{aligned}
+	\dfrac{dx}{dt}&= t^2 + \cos x
+	x(0)&= 1
+	\end{aligned} \right.
+	\]
+Use a single iteration of the Taylor series method of order two to approximate $x(1.1)$. 
+
+
+
+\newpage
+
+
+
+% Problem 3.
+\problem{Euler's Method} There are many techniques to approximate solutions to differential equations. Among the simplest to implement is Euler's method. Euler's method has large error in practice due to error accumulation throughout the algorithm. However, Euler's method has easily understood error with a `nice' geometric description. For instance, consider the initial-value problem $y'(t)= 2t y^3$ with $y(0)= 1$. Use three steps of Euler's method to approximate $y(0.3)$. Compare to the actual value using the fact that the solution to this differential equatoin is 
+	\[
+	y(t)= \dfrac{1}{\sqrt{1 - 2t^2}}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4.
+\problem{Runge-Kutta} Taylor series methods have the feature that we can choose $n$ such that the approximation is of order $O(h^n)$. But a priori, the determination of required $n$ to make the error `small' is difficult and the number of derivatives needed to be computed tends to be large. Instead, we derive the Runge-Kutta method, which is one of the most common approximation techniques, using appropriate Taylor methods so that we still obtain order $O(h^n)$. However, Runge-Kutta requires many function evaluations at each step. Consider the case where $y'= t - y$ with $y(0)= 3$. Perform four steps of Runge-Kutta using $h= 0.1$ to approximate $y(0.4)$. Compare your approximations using the exact solution $y= e^{-t} (4 - e^t + t e^t)$. 
+
+
+
+\newpage
+
+
+
+% Evaluation
+\noindent{\bfseries Evaluation.} \pvspace{0.3cm}
+
+Complete the following survey by rating each problem. Each area will be rated on a scale of 1 to 5. For interest, 1 is ``mind-numbing'' while a 5 is ``mind-blowing.'' For difficulty, 1 is ``trivial/routine'' while 5 is ``brutal.'' For learning, 1 means ``nothing new'' while 5 means ''profound awakening.'' Then you to estimate the amount of time you spent on each problem (in minutes). 
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+ & Interest & Difficulty & Learning & Time Spent \\ \hline \hline
+Problem 1 &  &  &  &  \\ \hline
+Problem 2 &  &  &  &  \\ \hline
+Problem 3 &  &  &  &  \\ \hline
+Problem 4 &  &  &  & 
+\end{tabular}
+\end{center}
+\vspace{0.25cm}
+
+Finally, indicate whether you believe lectures were useful in completing this assignment and whether you believe the problems were useful enough/interesting enough to assign again to future students by checking the appropriate space.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+  & \multicolumn{2}{c|}{Lectures} &  \multicolumn{2}{c|}{Assign Again} \\ \cline{2-5}
+   & Yes & No & Yes & No \\ \hline \hline
+  Problem 1 &  &  &  &  \\ \hline 
+  Problem 2 &  &  &  &  \\ \hline 
+  Problem 3 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  &  
+\end{tabular}
+\end{center}
+
+\end{document}

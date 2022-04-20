@@ -10,7 +10,7 @@
 \newcommand{\examdate}{04/14/2022}
 \newcommand{\timelimit}{85 Minutes}
 
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -112,7 +112,10 @@ Alternatively, we can use the `evaluation method':
 	f(2)&= -3(2^2) + 12(2) - 7= -3(4) + 12(2) - 7= -12 + 24 - 7= 5
 	\end{aligned}
 	\]
-Therefore, the vertex form is $f(x)= -3(x - 2)^2 + 5$. 
+This shows that the vertex, $(p, q)$, is $(2, 5)$. Therefore, the vertex form is\dots
+	\[
+	f(x)= a(x - p)^2 + q= -3(x - 2)^2 + 5
+	\]
 }
 
 
@@ -201,7 +204,120 @@ Therefore,
 
 % Question 7
 \newpage
-\question[10] Factor $10x^2 + 43x - 35$ completely. 
+\question[10] Factor $10x^2 + 43x - 35$ completely. \pspace
+
+{\itshape
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 35} \pvspace{0.2cm}
+	\begin{tabular}{cc}
+	$1 \cdot -35$ \\
+	$-1 \cdot 35$ \\
+	$5 \cdot -7$ \\
+	$-5 \cdot 7$
+	\end{tabular}
+	\end{table}
+
+Then as $10= 1 \cdot 10$ or $10= 2 \cdot 5$, we have\dots
+	\[
+	\begin{tikzpicture}
+	\node at (0,0) {$1 \cdot -35$};
+
+	\node at (-1,0.5) {\footnotesize$1, 10$};
+	\draw[line width=0.03cm,label={1}] (-0.2,0.3) -- (-0.8,1);
+	\node at (-1,1.4) {$1, -350$};
+
+	\node at (1,0.5) {\footnotesize$10, 1$};
+	\draw[line width=0.03cm,label={1}] (0.2,0.3) -- (0.8,1);
+	\node at (1,1.4) {$10, -35$};	
+	
+	\node at (-1,-0.5) {\footnotesize$2, 5$};
+	\draw[line width=0.03cm,label={1}] (-0.2,-0.3) -- (-0.8,-1);
+	\node at (-1,-1.4) {$2, -175$};
+
+	\node at (1,-0.5) {\footnotesize$5, 2$};
+	\draw[line width=0.03cm,label={1}] (0.2,-0.3) -- (0.8,-1);
+	\node at (1,-1.4) {$5, -70$};
+
+	\tikzset{shift={(7,0)}}
+	
+	\node at (0,0) {$-1 \cdot 35$};
+
+	\node at (-1,0.5) {\footnotesize$1, 10$};
+	\draw[line width=0.03cm,label={1}] (-0.2,0.3) -- (-0.8,1);
+	\node at (-1,1.4) {$-1, 350$};
+
+	\node at (1,0.5) {\footnotesize$10, 1$};
+	\draw[line width=0.03cm,label={1}] (0.2,0.3) -- (0.8,1);
+	\node at (1,1.4) {$-10, 35$};	
+	
+	\node at (-1,-0.5) {\footnotesize$2, 5$};
+	\draw[line width=0.03cm,label={1}] (-0.2,-0.3) -- (-0.8,-1);
+	\node at (-1,-1.4) {$-2, 175$};
+
+	\node at (1,-0.5) {\footnotesize$5, 2$};
+	\draw[line width=0.03cm,label={1}] (0.2,-0.3) -- (0.8,-1);
+	\node at (1,-1.4) {$-5, 70$};
+		
+	\tikzset{shift={(-7,-4)}}
+	
+	\node at (0,0) {\framebox{$5 \cdot -7$}};
+
+	\node at (-1,0.5) {\footnotesize$1, 10$};
+	\draw[line width=0.03cm,label={1}] (-0.2,0.3) -- (-0.8,1);
+	\node at (-1,1.4) {$5, -70$};
+
+	\node at (1,0.5) {\footnotesize$10, 1$};
+	\draw[line width=0.03cm,label={1}] (0.2,0.3) -- (0.8,1);
+	\node at (1,1.4) {\framebox{$50, -7$}};	
+	
+	\node at (-1,-0.5) {\footnotesize$2, 5$};
+	\draw[line width=0.03cm,label={1}] (-0.2,-0.3) -- (-0.8,-1);
+	\node at (-1,-1.4) {$10, -35$};
+
+	\node at (1,-0.5) {\footnotesize$5, 2$};
+	\draw[line width=0.03cm,label={1}] (0.2,-0.3) -- (0.8,-1);
+	\node at (1,-1.4) {$25, -14$};
+	
+	\tikzset{shift={(7,0)}}
+	
+	\node at (0,0) {$-5 \cdot 7$};
+
+	\node at (-1,0.5) {\footnotesize$1, 10$};
+	\draw[line width=0.03cm,label={1}] (-0.2,0.3) -- (-0.8,1);
+	\node at (-1,1.4) {$-5, 70$};
+
+	\node at (1,0.5) {\footnotesize$10, 1$};
+	\draw[line width=0.03cm,label={1}] (0.2,0.3) -- (0.8,1);
+	\node at (1,1.4) {$-50, 7$};	
+	
+	\node at (-1,-0.5) {\footnotesize$2, 5$};
+	\draw[line width=0.03cm,label={1}] (-0.2,-0.3) -- (-0.8,-1);
+	\node at (-1,-1.4) {$-10, 35$};
+
+	\node at (1,-0.5) {\footnotesize$5, 2$};
+	\draw[line width=0.03cm,label={1}] (0.2,-0.3) -- (0.8,-1);
+	\node at (1,-1.4) {$-25, 14$};			
+	\end{tikzpicture}
+	\]
+
+Therefore, 
+	\[
+	10x^2 + 43x - 35= (x + 5)(10x - 7)
+	\] \pspace
+Alternatively, we can use the quadratic formula to solve $10x^2 + 43x - 35= 0$:
+	\[
+	x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}= \dfrac{-43 \pm \sqrt{43^2 - 4(10)(-35)}}{2(10)}= \dfrac{-43 \pm \sqrt{3249}}{20}= \dfrac{-43 \pm 57}{20}
+	\]
+This gives us $x= \frac{-43 - 57}{20}= -5$ and $x= \frac{-43 + 57}{20}= \frac{7}{10}$. Therefore, we know that $10x^2 + 43x - 35$ factors as\dots
+	\[
+	10x^2 + 43x - 35= a(x - r_1)(x - r_2)= 10(x + 5) \left( x - \frac{7}{10} \right)
+	\]
+We can see this is equivalent to the answer above via\dots
+	\[
+	10x^2 + 43x - 35= 10(x + 5) \left( x - \frac{7}{10} \right)= (x + 5) \cdot 10 \left( x - \frac{7}{10} \right)= (x + 5)(10x - 7)
+	\]
+}
 
 
 
@@ -300,7 +416,21 @@ But then either $2x= 0$, so that $x= 0$, or $x - 3=0$, so that $x= 3$.
 	0= (2x - 5)&(2x + 5)
 	\end{aligned}
 	\] \pspace
-But then either $2x - 5= 0$, which implies $x= \dfrac{5}{2}$, or $2x + 5= 0$, which implies that $x= -\dfrac{5}{2}$.}
+But then either $2x - 5= 0$, which implies $x= \dfrac{5}{2}$, or $2x + 5= 0$, which implies that $x= -\dfrac{5}{2}$. \pspace
+
+Alternatively, we have
+	\[
+	\begin{aligned}
+	5(x + 5)=& 4x^2 + 5x \\[0.3cm]
+	5x + 25=& 4x^2 + 5x \\[0.3cm]
+	25= & \;4x^2 \\[0.3cm]
+	x^2&= \dfrac{25}{4} \\[0.3cm]
+	x&= \pm \sqrt{\dfrac{25}{4}} \\[0.3cm]
+	x&= \pm \dfrac{5}{2}
+	\end{aligned}
+	\] 
+Therefore, $x= -\frac{5}{2}$ or $x= \frac{5}{2}$. 
+}
 
 
 
@@ -309,13 +439,54 @@ But then either $2x - 5= 0$, which implies $x= \dfrac{5}{2}$, or $2x + 5= 0$, wh
 \question[10] Use the quadratic formula to solve the following:
 	\[
 	6 - 5x^2= 4x(1 - x)
-	\]
+	\] \pspace
+
+{\itshape We have\dots
+	\[
+	\begin{aligned}
+	6 - 5x^2= 4x(1 - x) \\[0.3cm]
+	6 - 5x^2= 4x - 4x^2 \\[0.3cm]
+	x^2 + 4x - 6= 0 
+	\end{aligned}
+	\] \pspace
+But then we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&=  \dfrac{-4 \pm \sqrt{4^2 - 4(1)(-6)}}{2(1)} \\[0.3cm]
+	&=  \dfrac{-4 \pm \sqrt{16 + 24}}{2} \\[0.3cm]
+	&= \dfrac{-4 \pm \sqrt{40}}{2} \\[0.3cm]
+	&= \dfrac{-4 \pm \sqrt{4 \cdot 10}}{2} \\[0.3cm]
+	&= \dfrac{-4 \pm 2\sqrt{10}}{2} \\[0.3cm]
+	&= -2 \pm \sqrt{10}
+	\end{aligned}
+	\] \pspace
+Therefore, the solutions are $x= -2 - \sqrt{10}$ and $x= -2 + \sqrt{10}$. 
+}
 
 
 
 % Question 14
 \newpage
-\question[10] Use the quadratic formula to factor $x^2 - 10x + 23$. 
+\question[10] Use the quadratic formula to factor $x^2 - 10x + 23$. \pspace
+
+{\itshape We find the roots of $x^2 - 10x + 23$ using the quadratic formula: \pspace
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&=  \dfrac{-(-10) \pm \sqrt{(-10)^2 - 4(1)(23)}}{2(1)} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{100 - 92}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{8}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{4 \cdot 2}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm 2\sqrt{2}}{2} \\[0.3cm]
+	&= 5 \pm \sqrt{2}
+	\end{aligned}
+	\] \pspace
+Therefore, the roots are $r_1= 5 - \sqrt{2}$ and $r_2= 5 + \sqrt{2}$. Using the fact that $a= 1$, we then know that $x^2 - 10x + 23$ factors as\dots \pspace
+	\[
+	x^2 - 10x + 23= a(x - r_1)(x - r_2)= 1 \big(x - (5 - \sqrt{2}) \big)  \big(x - (5 + \sqrt{2}) \big)=  \big(x - (5 - \sqrt{2}) \big)  \big(x - (5 + \sqrt{2}) \big)
+	\]
+}
 
 
 
@@ -381,7 +552,26 @@ Because $(5, -4)$ does not satisfy both of the equations, $(x, y)= (5, -4)$ is n
 	10x - 4y&= -24 \\[0.3cm]
 	-5x + 2y&= -2
 	\end{aligned}
-	\]
+	\] \pspace
+
+{\itshape Solving for $y$ in both equations, we have\dots
+	\[
+	\begin{aligned}
+	10x - 4y&= -24 \\[0.3cm]
+	-4y&= -10x - 24 \\[0.3cm]
+	y&= \dfrac{5}{2}\,x + 6
+	\end{aligned}
+	\] 
+and
+	\[
+	\begin{aligned}
+	-5x + 2y&= -2 \\[0.3cm]
+	2y&= 5x - 2 \\[0.3cm]
+	y&= \dfrac{5}{2}\,x - 1
+	\end{aligned}
+	\] \pspace
+Both lines have slope $\frac{5}{2}$. But then the lines are parallel so that they do not interest. Because there cannot be a point on both the lines at once, there are no solutions to the given system of equations.
+}
 
 
 
@@ -393,7 +583,46 @@ Because $(5, -4)$ does not satisfy both of the equations, $(x, y)= (5, -4)$ is n
 	3x + 5y&= 16 \\[0.3cm]
 	x + 6y&= 1
 	\end{aligned}
+	\] \pspace
+
+{\itshape Using substitution, from the second equation, we have\dots
+	\[
+	\begin{aligned}
+	x + 6y&= 1 \\[0.3cm]
+	x&= 1 - 6y
+	\end{aligned}
 	\]
+Using this in the first equation, we have\dots
+	\[
+	\begin{aligned}
+	3x + 5y&= 16 \\[0.3cm]
+	3(1 - 6y) + 5y&= 16 \\[0.3cm]
+	3 - 18y + 5y&= 16 \\[0.3cm]
+	3 - 13y&= 16 \\[0.3cm]
+	-13y&= 13 \\[0.3cm]
+	y&= -1
+	\end{aligned}
+	\]
+Then we have $x= 1 - 6y= 1 - 6(-1)= 1 + 6= 7$. Therefore, the solution is $(7, -1)$. 
+
+	\begin{center} {\bfseries OR} \end{center}
+
+Using elimination, we multiply the second equation by $-3$. This yields\dots
+	\[
+	\begin{aligned}
+	3x + 5y&= 16 \\[0.3cm]
+	-3x - 18y&= -3 
+	\end{aligned}
+	\]
+Adding these equations, we have\dots
+	\[
+	\begin{aligned}
+	-13y&= 13 \\[0.3cm]
+	y&= -1
+	\end{aligned}
+	\]
+Using this in the second equation, we have $x + 6y= 1$ so that $x + 6(-1)= 1$. But then $x - 6= 1$. Therefore, $x= 7$. The solution is then $(7, -1)$. 
+}
 
 
 
@@ -406,6 +635,48 @@ Because $(5, -4)$ does not satisfy both of the equations, $(x, y)= (5, -4)$ is n
 	2x - 5y&= -4
 	\end{aligned}
 	\]
+
+{\itshape Using substitution, from the first equation, we have\dots
+	\[
+	\begin{aligned}
+	4x + 7y&= -8 \\[0.3cm]
+	7y&= -4x - 8 \\[0.3cm]
+	y&= -\dfrac{4}{7}\,x - \dfrac{8}{7}
+	\end{aligned}
+	\]
+Using this in the second equation, we have\dots
+	\[
+	\begin{aligned}
+	2x - 5y&= -4 \\[0.3cm]
+	2x - 5 \left( -\dfrac{4}{7}\,x - \dfrac{8}{7} \right)&= -4 \\[0.3cm]
+	2x + \dfrac{20}{7}\,x + \dfrac{40}{7}&= -4 \\[0.3cm]
+	7 \left( 2x + \dfrac{20}{7}\,x + \dfrac{40}{7} \right)&= -4 \cdot 7 \\[0.3cm]
+	14x + 20x + 40&= -28 \\[0.3cm]
+	34x + 40&= -28 \\[0.3cm]
+	34x&= -68 \\[0.3cm]
+	x&= -2
+	\end{aligned}
+	\]
+Then we have $y= -\frac{4}{7} \cdot -2 - \frac{8}{7}= \frac{8}{7} - \frac{8}{7}= 0$. Therefore, the solution is $(-2, 0)$. 
+
+	\begin{center} {\bfseries OR} \end{center}
+
+Using elimination, we multiply the second equation by $-2$. This yields\dots
+	\[
+	\begin{aligned}
+	4x + 7y&= -8 \\[0.3cm]
+	-4x + 10y&= 8
+	\end{aligned}
+	\]
+Adding these equations, we have\dots
+	\[
+	\begin{aligned}
+	17y&= 0 \\
+	y&= 0
+	\end{aligned}
+	\]
+Using this in the first equation, we have $4x + 7y= -8$ so that $4x + 7(0)= -8$. But then $4x= -8$. Therefore, $x= -2$. The solution is then $(-2, 0)$. 
+}
 
 
 
@@ -440,9 +711,22 @@ Because $(5, -4)$ does not satisfy both of the equations, $(x, y)= (5, -4)$ is n
 	-x + y&= 1 \\
 	2x + y&= x^2 + 1
 	\end{aligned}
-	\] \pvspace{3cm}
+	\] 
 
-\part[5] Setting the functions equal, verify the solution(s) to the system of equations from (a).
+{\itshape The first equation is equivalent to $y= x + 1$ and the second is equivalent to $y= x^2 - 2x + 1$. Solving the system of equations is then equivalent to finding the intersection points between these curves, i.e. the parabola and the line. From the plot above, we see the solutions are $(x, y)= (0, 1)$ and $(x, y)= (3, 4)$.} \pvspace{0.75cm}
+
+\part[5] Setting the functions equal, verify the solution(s) to the system of equations from (a). \pspace
+
+{\itshape We have\dots
+	\[
+	\begin{aligned}
+	x^2 - 2x + 1&= x + 1 \\
+	x^2 - 3x&= 0 \\
+	x(x - 3)&= 0
+	\end{aligned}
+	\]
+But then either $x= 0$ or $x - 3= 0$, so that $x= 3$. Using the fact that $y= x + 1$, we see that if $x= 0$, $y= 0 + 1= 1$. If $x= 3$, $y= 3 + 1= 4$. Therefore, the solutions are $(0, 1)$ and $(3, 4)$, which is what we obtained in (a).
+}
 \end{parts}
 
 

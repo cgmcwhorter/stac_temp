@@ -1,0 +1,328 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11700,        320]
+NotebookOptionsPosition[     10420,        288]
+NotebookOutlinePosition[     10815,        304]
+CellTagsIndexPosition[     10772,        301]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name : 
+Mathematica HW 6\
+\>", "Section",
+ CellChangeTimes->{{3.8594229823250847`*^9, 
+  3.859423013566112*^9}},ExpressionUUID->"62661449-81c5-4982-b52b-\
+51dd452f48f7"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1. Numerically Integrating in Mathematica", "Subsection",
+ CellChangeTimes->{{3.859422998575243*^9, 3.8594229996578217`*^9}, {
+  3.859447318987855*^9, 
+  3.85944732409291*^9}},ExpressionUUID->"473c8337-49c7-415f-878d-\
+d6138a561ef4"],
+
+Cell[TextData[{
+ "There are a plethora of numerical integration techniques. Approximation \
+formulas can come from Taylor series, interpolation, quadrature, etc. Given \
+an approximation problem for integration it can be difficult to decide what \
+approximation technique should be used. However, most scientific programs \
+have built-in functions which handle this issue \[OpenCurlyQuote]on the back \
+end.\[CloseCurlyQuote] \n\t(a) Use Mathematica\[CloseCurlyQuote]s NIntegrate \
+to approximate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Pi]"], 
+    RowBox[{
+     RowBox[{"sin", "(", 
+      SuperscriptBox["x", "2"], ")"}], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "255f6473-c997-42a8-a81e-0437e00bd1c6"],
+ ".\n\t(b) Use Mathematica\[CloseCurlyQuote]s NIntegrate to approximate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Pi]"], 
+    RowBox[{
+     FractionBox[
+      RowBox[{"sin", "(", "x", ")"}], "x"], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6499e1af-e3b6-4a90-ab15-9ac0704d7acd"],
+ ". What issue does Mathematica\[CloseCurlyQuote]s NIntegrate seem to be \
+handling \[OpenCurlyQuote]in the background\[CloseCurlyQuote]? Compare \
+Mathematica\[CloseCurlyQuote]s value to the known value of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Pi]", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "17fb8660-7ab9-4707-9c29-12316f70b9f6"],
+ ".\n\t(c) Use Mathematica\[CloseCurlyQuote]s NIntegrate to approximate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+    RowBox[{
+     SuperscriptBox["e", 
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["x", "2"]}], "/", "2"}]], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "493ce466-a92b-42b7-9e2b-d68603a5d8ee"],
+ ". What issue does Mathematica\[CloseCurlyQuote]s NIntegrate seem to be \
+handling \[OpenCurlyQuote]in the background\[CloseCurlyQuote]? Compare \
+Mathematica\[CloseCurlyQuote]s value to the known value of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8e098e61-5802-44b1-b761-99cc17831222"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.859447325949677*^9, 3.859447647234964*^9}, {
+  3.859448036006925*^9, 
+  3.859448083027062*^9}},ExpressionUUID->"59038147-4bf2-45d1-8383-\
+67e4b9355fa8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. Composite Trapezoid Rule", "Subsection",
+ CellChangeTimes->{{3.859447652438201*^9, 3.859447655096303*^9}, {
+  3.8594478154678307`*^9, 
+  3.859447824832859*^9}},ExpressionUUID->"9789aa42-5794-430a-9a85-\
+8758ada8ff10"],
+
+Cell[TextData[{
+ "While it is important to have a theoretical understanding of the algorithms \
+involved in approximating integrals, it is equally important to be able to \
+implement them in practice. Use Mathematica\[CloseCurlyQuote]s NSum function \
+to implement the composite trapezoid rule to approximate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", 
+     RowBox[{"2", "\[Pi]"}]], 
+    RowBox[{
+     SuperscriptBox["e", 
+      RowBox[{"-", "x"}]], 
+     RowBox[{"cos", "(", "x", ")"}], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f3689463-15c8-493d-80dc-7bf1a06c2ccd"],
+ " using a total of 200 subintervals. Compare your value to the value using \
+Mathematica\[CloseCurlyQuote]s NIntegrate. "
+}], "Text",
+ CellChangeTimes->{{3.8594476606602783`*^9, 3.859447780630151*^9}, {
+  3.859447959227131*^9, 
+  3.859447967276228*^9}},ExpressionUUID->"ebddb52e-d0b3-456b-8dc3-\
+31859182e9fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Composite Simpson\[CloseCurlyQuote]s Rule", "Subsection",
+ CellChangeTimes->{{3.8594478020664797`*^9, 
+  3.859447831381433*^9}},ExpressionUUID->"776497bc-f6d2-4770-9295-\
+24cfe7d7e21d"],
+
+Cell[TextData[{
+ "Once again, one should be able to implement any numerical approximation \
+technique for integration. Use Mathematica\[CloseCurlyQuote]s NSum function \
+to implement the composite Simpson\[CloseCurlyQuote]s rule to approximate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], 
+    RowBox[{
+     FractionBox[
+      RowBox[{"1", " ", "-", " ", 
+       SuperscriptBox["x", "5"]}], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "5"], "+", "2"}]]], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2e7a6067-2752-473d-b723-20b864081fc7"],
+ " using a step size of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"h", " ", "=", " ", "0.01"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0939733d-a2b8-4de1-8815-875f0a16f11d"],
+ ". Compare your value to the value using Mathematica\[CloseCurlyQuote]s \
+NIntegrate. "
+}], "Text",
+ CellChangeTimes->{{3.8594476606602783`*^9, 3.859447780630151*^9}, {
+  3.859447833679286*^9, 
+  3.859447940082549*^9}},ExpressionUUID->"7f4eff87-048d-4963-a742-\
+af1a51dca6da"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Gaussian Quadrature", "Subsection",
+ CellChangeTimes->{{3.85944798193908*^9, 
+  3.8594479922611723`*^9}},ExpressionUUID->"f1f66ec8-6634-4d80-8236-\
+db3b29e451a3"],
+
+Cell[TextData[{
+ "Using the theory of quadrature, it is possible to find a \
+\[OpenCurlyQuote]best\[CloseCurlyQuote] choice of weights given a set of \
+nodes. We then generalized this to quadrature where given an interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"a", ",", " ", "b"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "02491639-ec92-4fa6-b98f-b359a3f1deee"],
+ ", it was possible to find the best possible weights and nodes to \
+approximate an integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", "b"], 
+    RowBox[{
+     RowBox[{"f", "(", "x", ")"}], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "52e4f5f7-3f3b-4d9f-ae33-6111474138b2"],
+ ". If ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "873d893a-8281-433f-ad15-58fa10f8afb6"],
+ " nodes were used, we called the resulting quadrature rule an ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c966fb5a-999d-4bb2-83ac-57ac001218ba"],
+ "-point quadrature rule.\n\t(a) It turns out that the optimal choice of \
+nodes are the roots of the Legendre polynomials; that is, to construct an ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ec4ac68a-03ca-4f7c-a1f5-5f580687d26f"],
+ "-point quadrature rule, one uses nodes that are the roots of the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["n", "th"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b5579af6-bf00-42d8-8dc1-2000b76b53fa"],
+ " Legendre polynomial. The Legendre polynomials are built into Mathematica \
+using the LegendreP function. Create a table of the first 8 Legendre \
+polynomials.\n\t(b) Use Mathematica\[CloseCurlyQuote]s NSolve to find the \
+required nodes for a 6-point quadrature rule.\n\t(c) It also turns out that \
+the weights for an ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "879b1776-1572-4e35-8eaf-62e1c04ec429"],
+ "-point quadrature rule are given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["w", "i"], " ", "=", " ", 
+    FractionBox["2", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", " ", "-", " ", 
+        SuperscriptBox[
+         SubscriptBox["x", "i"], "2"]}], ")"}], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["P", "n"], "'"}], 
+         RowBox[{"(", 
+          SubscriptBox["x", "i"], ")"}]}], ")"}], "2"]}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1d2936e4-bb47-4204-9a25-29d6ecdfaed0"],
+ ". Use your answer in (b) to find the weights for a ",
+ Cell[BoxData[
+  FormBox["6", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0979db3d-64d6-4d31-9ce3-585e175b5e23"],
+ "-point quadrature rule.\n\t(d) Use your answers in (b) and (c) to use a ",
+ Cell[BoxData[
+  FormBox["6", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "02aa0f39-7fe2-41bb-b06e-dc3ef15c5318"],
+ "-point quadrature rule to approximate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{"1", "-", 
+       SuperscriptBox["x", "4"]}]], " ", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],ExpressionUUID->
+  "669c066c-1171-4f8d-81e7-716ba7bbd969"],
+ ". Compare your approximation with one obtained using Mathematica\
+\[CloseCurlyQuote]s NIntegrate. "
+}], "Text",
+ CellChangeTimes->{{3.859448095287929*^9, 3.859448104637405*^9}, {
+  3.859448177726631*^9, 3.8594486829821463`*^9}, {3.859448745504485*^9, 
+  3.859448773927623*^9}},ExpressionUUID->"8d91b73d-735b-415b-bdbe-\
+c4dcf117c260"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{Automatic, 14}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cd1ae36d-be21-439c-863a-83e33f84fbe8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 179, 6, 105, "Section",ExpressionUUID->"62661449-81c5-4982-b52b-51dd452f48f7"],
+Cell[CellGroupData[{
+Cell[784, 32, 247, 4, 54, "Subsection",ExpressionUUID->"473c8337-49c7-415f-878d-d6138a561ef4"],
+Cell[1034, 38, 2620, 63, 247, "Text",ExpressionUUID->"59038147-4bf2-45d1-8383-67e4b9355fa8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3691, 106, 234, 4, 54, "Subsection",ExpressionUUID->"9789aa42-5794-430a-9a85-8758ada8ff10"],
+Cell[3928, 112, 998, 23, 108, "Text",ExpressionUUID->"ebddb52e-d0b3-456b-8dc3-31859182e9fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4963, 140, 202, 3, 54, "Subsection",ExpressionUUID->"776497bc-f6d2-4770-9295-24cfe7d7e21d"],
+Cell[5168, 145, 1154, 30, 95, "Text",ExpressionUUID->"7f4eff87-048d-4963-a742-af1a51dca6da"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6359, 180, 179, 3, 54, "Subsection",ExpressionUUID->"f1f66ec8-6634-4d80-8236-db3b29e451a3"],
+Cell[6541, 185, 3851, 99, 334, "Text",ExpressionUUID->"8d91b73d-735b-415b-bdbe-c4dcf117c260"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -2,7 +2,7 @@
 \usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
 \usepackage{../style/homework}
 \usepackage{../style/commands}
-\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{quotetype}{true} % True: Side; False: Under
 \setbool{hideans}{true} % Student: True; Instructor: False
 
 % -------------------
@@ -10,21 +10,22 @@
 % -------------------
 \begin{document}
 
-\homework{1: Due 02/15}{Well, that's no reason to cry. One cries because one is sad. For example, I cry because others are stupid and it makes me sad.}{Sheldon Cooper, The Big Bang Theory}
+\homework{4: Due 05/12}{Film is one of the three universal languages, the other two: mathematics and music.}{Frank Cappa}
 
 
 % Problem 1.
-\problem{Horner's Method} We have seen that Horner's Method is an extremely efficient method for evaluating polynomials. Here, we will compare the efficiency of several methods of evaluating polynomials. Let $x_0 \in \mathbb{R}$, $f(x)= x^4 - 9x^2 - 4x + 12$, and $g(x)= a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$
+\problem{Uniqueness of Interpolation} Given a set of $n + 1$ points $\{(x_i, y_i)\}_{i=0}^n$, we constructed---using various methods---a polynomial interpolating these points. Regardless of the method, especially in appearance, the polynomial was unique. We show this is the case: let $f(x)$ be a polynomial of degree at most $n$ and let $\{(x_i, y_i)\}_{i=0}^n$ be the points given by $y_i= f(x_i)$. 
 	\begin{enumerate}[(a)]
-	\item Evaluate $f(2)$ using the traditional `by-hand way.' How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using the traditional `by-hand way'?
-	\item Evaluate $f(2)$ by computing the powers of 2 using fast exponentiation. How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using fast exponentiation to compute the powers of $x_0$ require?
-	\item Evaluate $f(2)$ using Horner's Method. How many flops does this evaluation require? How many flops does evaluating $g(x_0)$ require using Horner's Method require?
-	\item Using the fact that $f(x)$ has roots $x= -2, -2, 1, 3$ and leading coefficient 1, we can write $f(x)= 1 \cdot (x + 2)^2 (x - 1)(x - 3)$. Compute $f(2)$ as written. How many flops does this require? If $g(x)$ has roots $r_1, r_2, \ldots, r_n$, we can write
+	\item Let $p_n(x)$ be an interpolating polynomial for these points. Show that $f(x)= p_n(x)$. 
+	\item Suppose that $L(x)$ was a Lagrange polynomial interpolating the points $\{(x_i, y_i)\}_{i=0}^n$. Use the error term associated to $L(x)$ to show that $f(x)= L(x)$. 
+	\item Consider the set of points $\{ (-1, -18), (0, 2), (1, 4), (2, 6) \}$. Each of the following polynomials interpolate these points:
 		\[
-		g(x)= a_n \prod_{i=1}^n (x - r_i)
+		\begin{aligned}
+		f(x)&= 2x + x(x - 1) + 3x(x - 1)(x - 2) - (x + 1)(x - 2) \\
+		g(x)&= 18x - 7x(x + 1) + 4(x + 1)(x - 1) + 3(x + 1)(x - 1)(x - 2)
+		\end{aligned}
 		\]
-	How many flops does evaluating $g(x)$ written as above require? Comment on any possible issues evaluating $g(x)$ in this fashion and how one might resolve them. 
-	\item Of all the methods used above, which requires the least amount of flops to evaluate $g(x_0)$?
+	Does this violate the uniqueness of interpolating polynomials? Explain why or why not.
 	\end{enumerate}
 
 
@@ -33,47 +34,52 @@
 
 
 
-% Problem 2. 
-\problem{Bisection Method} We have seen that the bisection method always converges to a solution of $f(x)= 0$ on $[a, b]$ if $f(x)$ is continuous and $f(a)f(b) < 0$. Let's examine the bisection method a bit more closely:
-	\begin{enumerate}[(a)]
-	\item Practice implementing the bisection method by using three steps of the bisection method to find a solution to $x^3= x^2 + 5$ using an initial interval of $[0, 3]$. Be sure to verify that the bisection method will converge to a solution.
-	\item How many steps of the bisection method would one have to perform using the initial interval in (a) to approximate the solution to five digits of accuracy?
-	\item 
-	\item 
-	\end{enumerate}
+% Problem 2.
+\problem{Lagrange \& Newton Polynomials} We have seen how to construct Lagrange and Newton interpolating polynomials. Here, we practice the procedures involved in creating these polynomials. Consider the function $f(x)= \sin(\ln x)$. Suppose we want to interpolate this function on the interval $[1, 4]$. We have the following data:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|rrrrr}
+	$x$ & $1$ & $2\phantom{000}$ & $3\phantom{000}$ & $4\phantom{000}$ \\ \hline
+	$f(x)$ & $0$ & $0.638961$ & $0.890577$ & $0.983028$  
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Construct the Lagrange polynomial interpolating the function $f(x)$ on the interval $[1, 4]$ using the data above. 
+\item Use a divided difference table to construct the Newton polynomial interpolating the function $f(x)$ on the interval $[1, 4]$ using the data above. 
+\item Use (a) or (b) to approximate $f(2.5)$. Does it matter if you use the answer from (a) or (b)? Explain.
+\item What is the maximum possible error in your approximation from (c)? Justify your answer. 
+\item If one were to want to add another point $(x, f(x))$ to the interpolation, should one use the polynomial in (a) or (b)? Explain. 
+\end{enumerate}
+
+
+
+\newpage
+
+
 
 % Problem 3.
-\problem{} 
-bisection by hand
-fail (x-1)^2
-can you get all the roots?
+\problem{Hermite Interpolation} We have seen that given a set of nodes, $x_0, \ldots, x_n$, we can find a polynomial that values $f_0, \ldots, f_n$ at these nodes. However, we know that we can also find polynomials with not only specified values but specified derivatives as well. Suppose you were a Calculus instructor writing an in-class assignment for students practicing derivatives and their related theorems. Find a polynomial $f(x)$ such that $f(1)= 4$, $f(2)= -3$, and that has a maximum or minimum value at $x= 1$. Show that your function satisfies these properties. 
 
 
-% Problem 4.
-\problem{}
-newton method by hand
-newton fail
-(0 problem)
-diverge problem
-loop problem
-not quadratic
 
-% Problem 5.
-\problem{} 
-fixed point
+\newpage
 
 
-pn= harmonic
-show diverges 
-show error tends to 0
 
-taylor series to show
-e_{k+1} approx |f''(x_k)/(2f'(x_k)) e_k| |e_k|
-so if close to enough to make term < 1 conv fast
+% Problem 3.
+\problem{Chebyshev Nodes} When interpolating a function, one must first make a selection of nodes $\{ x_i \}_{i=0}^n$ and then construct the corresponding interpolating polynomial using  a method of choice. This interpolating polynomial comes with an associated error term, which we have seen. However, not all choice of nodes `are created equal.' The Chebyshev nodes minimized the error in interpolating a function. This selection of nodes came from finding roots to the Chebyshev polynomials. Recall the Chebyshev polynomials were generated by choosing $T_0(x)= 1$, $T_1(x)= x$, and using the recurrence relation $T_k(x)= 2x T_{k-1}(x) - T_{k-2}(x)$. 
+	\begin{enumerate}[(a)]
+	\item Find the first four Chebyshev polynomials. 
+	\item Use the property that $T_n(x)= \cos(n \arccos(x))$ for $-1 \leq x \leq 1$ to show that the roots of $T_n(x)$ are 
+		\[
+		x_k= \cos\left( \dfrac{(2k + 1)\pi}{2n} \right), \quad k= 0, 1, \ldots, n - 1
+		\]
+	\item Using four Chebyshev nodes, construct an interpolating polynomial for $f(x)= e^{-x}$ on $[-1, 1]$. 
+	\item What nodes should be chosen to interpolate $f(x)= e^{-x}$ on $[-2, 6]$? Explain and construct the interpolating polynomial. 
+	\end{enumerate}
 
-prob 23 matlab book
-prob 18 matlab book
-prob 22 matlab book
+
 
 \newpage
 
@@ -91,8 +97,7 @@ Complete the following survey by rating each problem. Each area will be rated on
 Problem 1 &  &  &  &  \\ \hline
 Problem 2 &  &  &  &  \\ \hline
 Problem 3 &  &  &  &  \\ \hline
-Problem 4 &  &  &  &  \\ \hline
-Problem 5 &  &  &  &  \\ \hline
+Problem 4 &  &  &  &  
 \end{tabular}
 \end{center}
 \vspace{0.25cm}
@@ -107,8 +112,7 @@ Finally, indicate whether you believe lectures were useful in completing this as
   Problem 1 &  &  &  &  \\ \hline 
   Problem 2 &  &  &  &  \\ \hline 
   Problem 3 &  &  &  &  \\ \hline 
-  Problem 4 &  &  &  &  \\ \hline 
-  Problem 5 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  &  
 \end{tabular}
 \end{center}
 

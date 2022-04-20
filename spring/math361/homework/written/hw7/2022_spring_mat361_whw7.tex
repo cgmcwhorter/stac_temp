@@ -1,0 +1,154 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 05/12}{I don't think that everyone should become a mathematician, but I do believe that many students don't give mathematics a real chance.}{Maryam Mirzakhani}
+
+
+% Problem 1.
+\problem{Least Square Regression Line} Linear models are of particular use for understanding data and making predictions because of their simplicity. However, perfectly linear datasets do not exist `in nature.' But we have seen that even when a dataset is not \textit{perfectly} linear, it is still possible to ``approximate'' the data using a linear model. Consider the following dataset:
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	$x$ & $y$ \\ \hline
+	$0.3$ & $89.3$ \\
+	$3.5$ & $35.8$ \\
+	$7.9$ & $5.7$ \\
+	$10.2$ & $-55.4$ \\
+	$14.9$ & $-109.2$
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Compute the least square regression line for this dataset. 
+\item Compute the prediction and residual for $x= 7.9$. 
+\item Is a linear model ``appropriate'' for this dataset? Explain. 
+\item Compute the total ``error'' in the model using the following error measurements:
+	\[
+	\begin{aligned}
+	\text{Maximum: }& \max_i |y_i - \widehat{y}_i| \\
+	\text{Average Error: }& \dfrac{1}{n} \sum_i |y_i - \widehat{y}_i| \\
+	\text{Root Mean-Square Error: }& \dfrac{1}{n} \sum_i |y_i - \widehat{y}_i|^2
+	\end{aligned}
+	\]
+Which of the above error measurements is the closest used to compute the linear regression and how does this `define' the regression line?
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2.
+\problem{Least Square Parabola} Although the most commonly used regression is a linear regression, we can fit any polynomial $a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1x + a_0$ to a given dataset. Just as with linear regressions, we choose the model that minimizes the squares of the error, i.e. the least square polynomial. This procedure allowed us to find the optimal choice of coefficients $\{ a_i \}_{i=0}^n$. Consider the following dataset:
+
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	$x$ & $y$ \\ \hline
+	$-5.5$ & $219.7$ \\
+	$-2.7$ & $47.7$ \\
+	$0.3$ & $1.4$ \\
+	$3.8$ & $-33.7$ \\
+	$6.9$ & $136.9$ 
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Use the `normal equations' to find the least square parabola for the data given above. 
+\item Compute the total square error for this model. 
+\item Given a model $f(x)= ax^2 + bx + c$ for the data above, what is the smallest possible `error' (measured by square error)? Explain. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3.
+\problem{Linearizing Data} We have seen how to find models that best fit a dataset using analytic techniques that produced exact solutions. However, not all choices of models had the property that we could exactly find the conditions that minimized the square error. In some cases, we could perform a change of variables to linearize the data and then apply standard least square regression techniques to find the model. 
+	\begin{enumerate}[(a)]
+	\item For each of the following models, find a chance of variables that `linearizes' the data and write the model in linearized form:
+		\begin{enumerate}[(i)]
+		\item $y= Ax^2 + C$, $x \geq 0$. 
+		\item $y= \dfrac{A}{x} + C$, $x \neq 0$
+		\item $y= Ab^{Cx}$
+		\item $y= \dfrac{1}{(Ax + C)^2}$, $x \neq -\frac{C}{A}$
+		\end{enumerate}
+	\item Suppose one chooses a model $y= 2^x$. Given the dataset below, find the linearized dataset. 
+		\begin{table}[!ht]
+		\centering
+		\begin{tabular}{r|r}
+		$x$ & $y$ \\ \hline
+		$0.1$ & $1.53$ \\
+		$3.7$ & $14.01$ \\
+		$5.4$ & $46.18$ \\
+		$6.6$ & $94.22$ \\
+		$8.0$ & $261.4$
+		\end{tabular}
+		\end{table}
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4.
+\problem{Gradient Descent} One of the most commonly used minimization techniques in applied mathematics is gradient descent or one of its variants. The method can be rather slow, each iteration typically requires few flops; moreover, the method is simple to understand and implement. Consider the case where $f(x, y)= 8xy + \dfrac{1}{x} + \dfrac{1}{y}$. 
+	\begin{enumerate}[(a)]
+	\item Show that $f(x, y)$ has a minimum at $(\frac{1}{2}, \frac{1}{2})$. 
+	\item Implement gradient descent using five iterations with step size $h= 0.1$. Use an initial value of $\mathbf{x}_0= (1.0, 1.0)$. 
+	\item Find the error in your approximation from (b). 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Evaluation
+\noindent{\bfseries Evaluation.} \pvspace{0.3cm}
+
+Complete the following survey by rating each problem. Each area will be rated on a scale of 1 to 5. For interest, 1 is ``mind-numbing'' while a 5 is ``mind-blowing.'' For difficulty, 1 is ``trivial/routine'' while 5 is ``brutal.'' For learning, 1 means ``nothing new'' while 5 means ''profound awakening.'' Then you to estimate the amount of time you spent on each problem (in minutes). 
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+ & Interest & Difficulty & Learning & Time Spent \\ \hline \hline
+Problem 1 &  &  &  &  \\ \hline
+Problem 2 &  &  &  &  \\ \hline
+Problem 3 &  &  &  &  \\ \hline
+Problem 4 &  &  &  & 
+\end{tabular}
+\end{center}
+\vspace{0.25cm}
+
+Finally, indicate whether you believe lectures were useful in completing this assignment and whether you believe the problems were useful enough/interesting enough to assign again to future students by checking the appropriate space.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+  & \multicolumn{2}{c|}{Lectures} &  \multicolumn{2}{c|}{Assign Again} \\ \cline{2-5}
+   & Yes & No & Yes & No \\ \hline \hline
+  Problem 1 &  &  &  &  \\ \hline 
+  Problem 2 &  &  &  &  \\ \hline 
+  Problem 3 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  & 
+\end{tabular}
+\end{center}
+
+\end{document}

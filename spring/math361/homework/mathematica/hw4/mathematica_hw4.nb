@@ -1,0 +1,518 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18086,        510]
+NotebookOptionsPosition[     16801,        478]
+NotebookOutlinePosition[     17195,        494]
+CellTagsIndexPosition[     17152,        491]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name : 
+Mathematica HW 4\
+\>", "Section",
+ CellChangeTimes->{{3.854671612789234*^9, 3.8546716251415997`*^9}, {
+  3.8547658901951427`*^9, 3.8547658902744417`*^9}, {3.857236752113958*^9, 
+  3.857236752227686*^9}, {3.859039923123392*^9, 
+  3.859039923172854*^9}},ExpressionUUID->"edc73f7d-f939-4b7d-9b42-\
+aa40fce7f5c9"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1. Interpolating in Mathematica", "Subsection",
+ CellChangeTimes->{{3.859039927046427*^9, 
+  3.859039958958848*^9}},ExpressionUUID->"d11d26eb-0d19-412f-9119-\
+8a18b9c88dbb"],
+
+Cell[TextData[{
+ "Interpolating functions is a tedious \[Dash] though routine \[Dash] process \
+by hand. However, computers are able to perform this effortlessly. \
+Mathematica has a variety of built-in features to interpolate points using a \
+variety of methods. However, here we will only be interested in constructing \
+interpolating polynomials.\n\t(a) Use Mathematica\[CloseCurlyQuote]s \
+InterpolatingPolynomial function to find a polynomial interpolating the \
+values -1, -2, -7, -10 at ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3d259997-ce07-4895-a0f6-79f57791db3d"],
+ "-values ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", " ", "=", " ", "0"}], ",", " ", "1", ",", " ", "2", ",", " ",
+     "3"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9a3de982-b4c7-47b0-958e-d61fe148c10d"],
+ ". What type of method does Mathematica appear to be using? Explain. \n\t(b) \
+Use Mathematica\[CloseCurlyQuote]s InterpolatingPolynomial to find a \
+polynomial interpolating the points (-8, -169 634), (-7, -85 776), (-6, \
+-39212), (-5, -15776), (-4, -5454), (-3, -1664), (-2, -536), (-1, -192), (0, \
+-26), (1, 16), (2, 156), (3, 1504), (4, 6778), (5, 21 024), (6, 52 336), (7, \
+112 576), (8, 218 094). Use this polynomial to predict the value at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " ", "=", " ", "6.7", " "}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e5920e45-bb11-4412-8d4a-2605b9f9e705"],
+ ".\n\t(c) What degree did you expect the polynomial from (b) to have? Is \
+your answer from (b) an error? Explain."
+}], "Text",
+ CellChangeTimes->{{3.859040017936157*^9, 3.859040121514634*^9}, {
+  3.8590401621034117`*^9, 3.8590401938348227`*^9}, {3.859040305867689*^9, 
+  3.8590404583002157`*^9}, {3.8594645661983643`*^9, 
+  3.859464713450696*^9}},ExpressionUUID->"dba6b682-8bb0-4b5f-ad60-\
+b7a905527315"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. Error for Interpolation", "Subsection",
+ CellChangeTimes->{{3.859039938310158*^9, 3.859039946080475*^9}, {
+  3.8594647224759083`*^9, 
+  3.859464726250255*^9}},ExpressionUUID->"3521fddd-6789-469c-915e-\
+a82afc56180a"],
+
+Cell[TextData[{
+ "We have seen how to interpolate a dataset using a polynomial with a variety \
+of techniques. Despite the procedure used to construct the procedure, we know \
+that the resulting degree ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "812a2169-7393-447e-8411-4f3aff57ccaf"],
+ " polynomial interpolating the chosen distinct ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "+", " ", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "20e61b58-781b-48b4-bd43-9879645ca602"],
+ " points is unique. We know generally that if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f3349c73-a77f-4a8a-86db-3062deb0b361"],
+ " is a polynomial of degree ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"<=", " ", "n"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "035af3ae-5183-4a5f-971d-b3f1d0a7a666"],
+ " interpolating ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "76d3dc58-be4a-4339-8a70-b3223916628a"],
+ " at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "+", " ", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "494ef6fd-300f-4226-808a-44d4ed3538d4"],
+ " distinct nodes on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"a", ",", " ", "b"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "931fb3b9-14e1-4be3-9ebd-07f9c2c76a70"],
+ " that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "(", "x", ")"}], " ", "-", " ", 
+     RowBox[{"p", "(", "x", ")"}]}], " ", "=", " ", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"n", " ", "+", " ", "1"}], ")"}], "!"}]], 
+     RowBox[{
+      SuperscriptBox["f", 
+       RowBox[{"(", 
+        RowBox[{"n", "+", "1"}], ")"}]], "(", "c", ")"}], " ", 
+     UnderoverscriptBox[
+      RowBox[{"\[Product]", " "}], 
+      RowBox[{"i", "=", "0"}], 
+      RowBox[{" ", "n", " "}]], 
+     RowBox[{"(", 
+      RowBox[{"x", " ", "-", " ", 
+       SubscriptBox["x", "i"]}], ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5ee5dd44-77c3-4c16-8e1e-b0287ad3c4c7"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"c", " ", "\[Element]", " ", 
+    RowBox[{"[", 
+     RowBox[{"a", ",", " ", "b"}], "]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7996ab6f-c379-4b65-ad60-d914ec2040f9"],
+ ".\n\t(a) Use Mathematica to find the interpolating polynomial, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4cf7c84c-aa89-4929-b524-3b6e5ed171d7"],
+ ", for the dataset (-2.4, -177.4), (0.1, -6.9), (1.5, 35.2), (2.5, 201.5), \
+(3.8, 1115.0), (4.0, 1396.0).\n\t(b) The true underlying function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7e1ad030-320f-4558-9321-1e31d23d8473"],
+ " is the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox["x", "5"], " ", "-", " ", 
+     RowBox[{"2", 
+      SuperscriptBox["x", "2"]}], " ", "+", " ", 
+     RowBox[{"5", 
+      SuperscriptBox["x", "3"]}], " ", "+", " ", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "2"]}], " ", "+", " ", 
+     RowBox[{"11", "x"}], " ", "-", " ", "8"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9fc37cee-5d3b-49ec-84c5-226f6923eb95"],
+ ". Plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ef628aa9-13c5-4318-b971-1a8f4692193d"],
+ " along with your polynomial from (a) and the points the polynomial is \
+interpolating. \n\t(c) Plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"n", " ", "+", " ", "1"}], ")"}], "!"}]], " ", 
+    UnderoverscriptBox[
+     RowBox[{"\[Product]", " "}], 
+     RowBox[{"i", "=", "0"}], 
+     RowBox[{" ", "n", " "}]], 
+    RowBox[{"(", 
+     RowBox[{"x", " ", "-", " ", 
+      SubscriptBox["x", "i"]}], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "b894aeb3-2c57-4e3c-8f9a-41b8ca67a435"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"(", 
+       RowBox[{"n", "+", "1"}], ")"}]], "(", "x", ")"}], " "}], 
+   TraditionalForm]],ExpressionUUID->"1492a415-45ef-4869-98a2-1a14fdcd8f75"],
+ " to estimate their maximum absolute value on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", "3"}], ",", " ", "4"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "05eac5aa-4b1f-48e7-8007-9880d15bbe3c"],
+ ". You may also make use of any built-in Mathematica function to approximate \
+these values. Define the product of these numbers to be ",
+ Cell[BoxData[
+  FormBox["M", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "14391359-ee4a-4412-8909-8d3ad8fbd773"],
+ "\n\t(d) Plot the difference ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "-", " ", 
+    RowBox[{"p", "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6459f9f6-c568-4351-b57a-ae9bade5afe1"],
+ " along with horizontal lines ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", " ", "=", " ", 
+    RowBox[{"\[PlusMinus]", " ", "M"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d5c9a6e0-8f6d-4727-8544-9e414dd077ec"],
+ ". Does ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7713d9a0-8647-4b4a-b0a9-09013ef72da9"],
+ " interpolate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a5b8bb7a-d7ae-4fa3-bce2-1da26a67f1b1"],
+ " on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", "3"}], ",", " ", "4"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "39fc01ef-d8fb-4bad-b3ab-49c7b2bcfeae"],
+ " within the expected tolerance. Use your plot to justify your response. "
+}], "Text",
+ CellChangeTimes->{{3.8594647410518312`*^9, 3.8594647704400167`*^9}, {
+  3.8594648343683233`*^9, 3.859464912356789*^9}, {3.859464943660592*^9, 
+  3.859465233460414*^9}, {3.8594653108408337`*^9, 3.85946535002887*^9}, {
+  3.8594654128152723`*^9, 3.859465506787798*^9}, {3.859465572394518*^9, 
+  3.859465863150642*^9}},ExpressionUUID->"b77f4a95-02cc-44c3-9f13-\
+b92ecd0e539a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Visualizing the Chebyshev Nodes", "Subsection",
+ CellChangeTimes->{{3.859039941465961*^9, 3.859039950646802*^9}, {
+  3.859465877925045*^9, 
+  3.85946588609629*^9}},ExpressionUUID->"4f4ebfa4-163e-4316-8231-\
+27be76b1b6eb"],
+
+Cell[TextData[{
+ "While one could make a selection of any ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "+", " ", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ac59c395-3b88-4f2a-92e5-cbe769676480"],
+ " distinct nodes on the interval  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"a", ",", " ", "b"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "66b124f7-ab7f-406f-b6f7-2edcd2353ba6"],
+ " to interpolate a function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "069d7cb7-7f9b-4e9c-8739-ad0a7b891bed"],
+ ", there was an optimal choice. Examining the error term for an \
+interpolating polynomial for a given function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "951294c3-2a74-4029-987a-83e7d5b468ba"],
+ ", we need to minimize ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Product]", 
+     RowBox[{" ", 
+      RowBox[{"i", "=", " ", "0"}]}], 
+     RowBox[{" ", "n"}]], 
+    RowBox[{"(", 
+     RowBox[{"x", " ", "-", " ", 
+      SubscriptBox["x", "i"]}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "33ab1347-b821-4c75-a745-f13c6fac4e97"],
+ ". The choice of nodes ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], ",", " ", 
+    SubscriptBox["x", "1"], ",", " ", "...", " ", ",", " ", 
+    SubscriptBox["x", "n"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c455036d-2cb4-45af-b6ae-342a7954cdb7"],
+ " that minimized this product on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", " ", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f434b72b-7f77-4664-8424-ff1245e33a17"],
+ " were the Chebyshev nodes.\n\t(a) It turns out, the Chebyshev nodes are the \
+zeros of the Chebyshev polynomial of degree ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "44c7ff90-427c-4fb8-a664-dd8ab9bd3bca"],
+ ". Use Mathematica\[CloseCurlyQuote]s Table function along with the built in \
+ChebyshevT function to create a table of the first ten Chebyshev polynomials.\
+\n\t(b) Use Mathematica\[CloseCurlyQuote]s Table, NSolve, and Chebyshev \
+functions to create a table of the Chebyshev nodes for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"n", " ", "=", " ", "1"}], ",", " ", "2", ",", " ", "...", " ", 
+    ",", " ", "10"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "60485238-4867-41f9-8dd7-1ae92b367f8c"],
+ ".\n\t(c) Let ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox[
+    RowBox[{"{", 
+     SubscriptBox["x", "i"], "}"}], 
+    RowBox[{" ", 
+     RowBox[{"i", " ", "=", " ", "0"}]}], 
+    RowBox[{" ", "n"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "250c45c1-3ad6-4d17-9085-489351d8183d"],
+ " be the Chebyshev nodes. For ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "=", " ", "10"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "45174fd0-7e6c-47ba-88ee-40f63868b908"],
+ ", plot the points ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["x", 
+      RowBox[{"i", ","}]], 
+     SqrtBox[
+      RowBox[{"1", " ", "-", " ", 
+       SuperscriptBox[
+        SubscriptBox["x", "i"], "2"]}]]}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e030f257-a40e-476b-bc23-c1be054c311b"],
+ " along with a unit semicircle. What do you notice about the distribution of \
+these points?"
+}], "Text",
+ CellChangeTimes->{{3.85946590617054*^9, 3.859466156904228*^9}, {
+  3.859466195272889*^9, 3.859466273849208*^9}, {3.85946630498549*^9, 
+  3.859466342532316*^9}, {3.859466374781149*^9, 3.8594663844231663`*^9}, {
+  3.859466456244318*^9, 
+  3.859466692281344*^9}},ExpressionUUID->"ad5cc465-6fd0-495b-be7e-\
+6c2707793625"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Using the Chebyshev Nodes", "Subsection",
+ CellChangeTimes->{{3.859039943155005*^9, 3.859039952074541*^9}, {
+  3.85946589202315*^9, 
+  3.8594658975325623`*^9}},ExpressionUUID->"9b5d7710-8f74-421f-a55c-\
+47a95af2ba86"],
+
+Cell[TextData[{
+ "Given a function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9e515a27-07eb-467a-b96a-19415b9d8cfd"],
+ " on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", " ", "1"}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c6143fc6-0e8b-4660-8ad2-0f898c72ed87"],
+ ", among all the possible ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "+", " ", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "708e3d18-56e8-4404-ba8f-d105d3ceffbc"],
+ " nodes one could choose on this interval to create a polynomial ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5c21846a-bcfb-4f96-bfc4-326aa4c1dcdc"],
+ " interpolating ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e7110551-56af-47d8-b06c-055595be0462"],
+ " on this interval, choosing the Chebyshev nodes minimizes the error for the \
+interpolation. Use this fact to find the \[OpenCurlyQuote]best\
+\[CloseCurlyQuote] interpolating to the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{"sin", "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9f66ade8-be46-45fc-b5cd-6da6ca954fad"],
+ " on the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b3995ce6-91a5-4e8b-ac21-680b70d1e8b4"],
+ " using a total of 10 nodes. Does this interpolating polynomial satisfy the \
+expected error bounds? Explain. "
+}], "Text",
+ CellChangeTimes->{{3.859466720237554*^9, 3.8594668789388933`*^9}, {
+  3.859466956713758*^9, 3.859466957038888*^9}, {3.8594670589525948`*^9, 
+  3.859467164126095*^9}},ExpressionUUID->"11dae581-e1de-45e2-acd4-\
+6327dcea49d3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{Automatic, 7}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e1e916df-3933-4b50-bad4-a8aaa35eb447"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 327, 8, 105, "Section",ExpressionUUID->"edc73f7d-f939-4b7d-9b42-aa40fce7f5c9"],
+Cell[CellGroupData[{
+Cell[932, 34, 187, 3, 54, "Subsection",ExpressionUUID->"d11d26eb-0d19-412f-9119-8a18b9c88dbb"],
+Cell[1122, 39, 1927, 38, 242, "Text",ExpressionUUID->"dba6b682-8bb0-4b5f-ad60-b7a905527315"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3086, 82, 233, 4, 54, "Subsection",ExpressionUUID->"3521fddd-6789-469c-915e-a82afc56180a"],
+Cell[3322, 88, 6788, 195, 368, "Text",ExpressionUUID->"b77f4a95-02cc-44c3-9f13-b92ecd0e539a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10147, 288, 238, 4, 54, "Subsection",ExpressionUUID->"4f4ebfa4-163e-4316-8231-27be76b1b6eb"],
+Cell[10388, 294, 4021, 112, 273, "Text",ExpressionUUID->"ad5cc465-6fd0-495b-be7e-6c2707793625"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14446, 411, 234, 4, 54, "Subsection",ExpressionUUID->"9b5d7710-8f74-421f-a55c-47a95af2ba86"],
+Cell[14683, 417, 2090, 57, 127, "Text",ExpressionUUID->"11dae581-e1de-45e2-acd4-6327dcea49d3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

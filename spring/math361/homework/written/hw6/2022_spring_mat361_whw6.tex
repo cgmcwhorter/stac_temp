@@ -1,0 +1,134 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 05/12}{Mathematics is a place where you can do things which you can't do in the real world.}{Marcus du Sautoy}
+
+
+% Problem 1.
+\problem{Exactness of Simpson's Rule} To create approximations to integrals, we used the idea of quadrature; that is, we approximated 
+	\[
+	\int_a^b f(x) \;dx= Q(f) + E(f)
+	\]
+where $\displaystyle Q(f)= \sum_{k=0}^n w_k f(x_k)$ and $E(f)$ was an error term. The degree of precision of a quadrature formula was a positive integer $d$ such that the approximation was exact for polynomials of degree $\leq d$. For instance, we derived Simpson's Rule:
+	\[
+	\dfrac{h}{3} \sum_{k=1}^n \big( f(x_{2k-2}) + 4f(x_{2k-1}) + f(x_{2k}) \big)
+	\]
+which had error term $E(f, h)= \dfrac{-(b - a) f^{(4)}(c) h^4}{180}$ for some $c \in (a, b)$. Hence, Simpson's Rule was exact for linear, quadratic, and cubic polynomials. Verify that Simpson's Rule is exact for cubic polynomials two ways: using the error term and directly applying the formula on an interval $[a, b]$ to $x^3$, $x^2$, $x$, and $1$. 
+
+
+
+\newpage
+
+
+
+% Problem 2.
+\problem{Trapezoidal \& Simpson's Rule} To approximate integrals, we had a number of different quadrature formulas. For instance, we created the Trapezoidal Rule and Simpson's Rule:
+	\[
+	\begin{aligned}
+	T(f, h)&= \dfrac{h}{2} \sum_{k=1}^n \big( f(x_{k-1}) + f(x_k) \big) \\
+	S(f, h)&= \dfrac{h}{3} \sum_{k=1}^n \big( f(x_{2k-2}) + 4f(x_{2k-1}) + f(x_{2k}) \big)
+	\end{aligned}
+	\]
+which had error terms
+	\[
+	\begin{aligned}
+	E_T(f, h)&= -\dfrac{(b - a) f^{(2)}(c) h^2}{12} \\
+	E_S(f, h)&= -\dfrac{(b - a) f^{(4)}(c) h^4}{180}
+	\end{aligned}
+	\]
+for some $h \in (a, b)$, respectively. For instance, let $f(x)= \dfrac{5}{2x + 1}$.
+	\begin{enumerate}[(a)]
+	\item Find the exact value of $\displaystyle \int_0^1 f(x) \;dx$. 
+	\item Approximate the integral $\int_0^1 f(x) \;dx$ using step size $h= 0.5$ and $h= 0.2$. 
+	\item Find an upper bound for the error and show that your approximation in (b) is accurate to the guaranteed accuracy. 
+	\item If a step size of $h= 0.1$ were to approximate $\displaystyle \int_0^1 f(x) \;dx$ accurate to 8 decimal places, what should the step size be to obtain 20 digits of accuracy?
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3.
+\problem{Gaussian Quadrature} Quadrature allowed us to `best' approximate an integral by finding an optimal choice of weights given a collection of nodes $\{ x_i \}$. However, fixing an interval $[a, b]$, we could use Gaussian Quadrature to find both an optimal choice of weights and nodes. For instance, using a three point rule, we have\dots
+	\[
+	\int_{-1}^1 f(x) \;dx \approx \dfrac{5f(-\sqrt{3/5}) + 8f(0) + 5f(\sqrt{3/5})}{9}
+	\]
+with error term given by $\dfrac{f^{(6)}(c)}{15750}$. 
+
+\begin{enumerate}[(a)]
+\item What are the weights and nodes in a Gaussian three-point rule?
+\item What is the precision for a Gaussian three-point rule? Explain. 
+\item Use the Gaussian three-point rule to approximate
+	\[
+	\int_{-2}^6 \dfrac{2x - 1}{x^4 + 1} \;dx
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4.
+\problem{Approximating Arclength} Recall from Calculus that if $f(x)$ is a differentiable function on the interval $[a, b]$, then the arclength of the curve given by $(t, f(t))$ from $t= a$ to $t= b$ is
+	\[
+	\mathcal{L}= \int_a^b \sqrt{1 + \big(f'(x)\big)^2} \;dx
+	\]
+However, even for `reasonable' choice of $f(x)$, one could not obtain exact values for the arclength. Our only option is then to approximate the arclength. Consider the famous case of the complete elliptic integral
+	\[
+	\int_0^2 \sqrt{1 + \cos^2(x)} \;dx
+	\]
+Using ten evenly spaced subintervals, apply composite Simpson's Rule to approximate the integral above. Find the absolute and relative error to the `actual' value of $2.35168880740$. 
+
+
+
+\newpage
+
+
+
+% Evaluation
+\noindent{\bfseries Evaluation.} \pvspace{0.3cm}
+
+Complete the following survey by rating each problem. Each area will be rated on a scale of 1 to 5. For interest, 1 is ``mind-numbing'' while a 5 is ``mind-blowing.'' For difficulty, 1 is ``trivial/routine'' while 5 is ``brutal.'' For learning, 1 means ``nothing new'' while 5 means ''profound awakening.'' Then you to estimate the amount of time you spent on each problem (in minutes). 
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+ & Interest & Difficulty & Learning & Time Spent \\ \hline \hline
+Problem 1 &  &  &  &  \\ \hline
+Problem 2 &  &  &  &  \\ \hline
+Problem 3 &  &  &  &  \\ \hline
+Problem 4 &  &  &  &  \\ \hline
+Problem 5 &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+\vspace{0.25cm}
+
+Finally, indicate whether you believe lectures were useful in completing this assignment and whether you believe the problems were useful enough/interesting enough to assign again to future students by checking the appropriate space.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+  & \multicolumn{2}{c|}{Lectures} &  \multicolumn{2}{c|}{Assign Again} \\ \cline{2-5}
+   & Yes & No & Yes & No \\ \hline \hline
+  Problem 1 &  &  &  &  \\ \hline 
+  Problem 2 &  &  &  &  \\ \hline 
+  Problem 3 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  &  \\ \hline 
+  Problem 5 &  &  &  &  \\ \hline 
+\end{tabular}
+\end{center}
+
+\end{document}

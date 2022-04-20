@@ -15,13 +15,13 @@
 % Class Time
 \newcommand{\classtimes}{TR 11:25~am -- 12:50~pm}
 % Classroom
-\newcommand{\classroom}{MAGR 118}
+\newcommand{\classroom}{SPEL G 16}
 
 
 % Instructor
 \newcommand{\instructor}{Dr. Caleb McWhorter}
 % Instructor Office
-\newcommand{\office}{MAGR 129}
+\newcommand{\office}{MAG 129}
 % Instructor Number
 \newcommand{\phone}{845.398.4077}
 % Instructor Email
@@ -59,6 +59,7 @@
 \hspace{0.3cm} Attendance \& Participation \dotfill \pageref{attend} \par
 \hspace{0.3cm} Quizzes \dotfill \pageref{quiz} \par
 \hspace{0.3cm} Homework \dotfill \pageref{hw} \par
+\hspace{0.3cm} Project \dotfill \pageref{project} \par
 \hspace{0.3cm} Mathematics Help \dotfill \pageref{help} \par
 \hspace{0.3cm} Respect Policy \dotfill \pageref{respect} \par
 \hspace{0.3cm} COVID Discussion Policy \dotfill \pageref{covid_disc} \par
@@ -134,43 +135,47 @@ Computer arithmetic, solutions of nonlinear equations; solving systems of linear
 \mysection{0.27}{Course Objectives\label{course_obj}}
 After this course, among other things, students should be able to\dots
 	\begin{itemize} \itemsep=0.3ex
-	\item Construct truth tables as well as convert between written statements and compound statements. They should also understand predicates and quantified statements. They should also be able to determine truth values for these statements. 
-	\item Understand tautologies, fallacies, contradictions, and the rules of inference.
-	\item Understand the connection between truth tables and digital logic circuits.
-	\item Write basic proofs using various proof techniques.
-	\item Explain and write basic proofs using induction.
-	\item Understand and compute with basic recursive methods.
-	\item Understand sets and the basic properties of sets. They should also be able to write basic proofs involving properties of sets. 
-	\item Understand the properties of functions and prove/disprove these properties in specific cases.
-	\item Explain the concept of cardinality, including Cantor's famous argument. 
-	\item Understand equivalence relations and work with basic examples of them.
-	\item Understand basic concepts in number theory, e.g. parity, primes, factorizations, division algorithms, congruences, etc. 
-	\item Compute permutations and combinations. Moreover, they should be work with applications of these concepts. 
-	\item Understand and perform basic probabilistic calculations, e.g. conditional probability and expected value.
-	\item Understand graphs and special types of graphs, especially trees. They should also understand basic algorithms associated with graphs. 
-	\item Perform basic matrix calculations and understand their connections to graphs.
-	\item Understand and compute the complexity of algorithms.
-	\item Understand the definitions of finite-state automata.  
-	\end{itemize}
-Furthermore, students should\dots
+	\item Describe what numerical analysis is, broadly speaking, and some real life applications.
+	\item Be able to implement a variety of numerical analysis concepts and algorithms using a computer system to both mathematical and `real world' problems.
+	\item Explain the concepts of error, loss of significance, stable/unstable problems, condition numbers, and norms. 
+	\item Be able to understand and explain big O notation and its relation to computational complexity.
+	\item Be able to explain to the problem of root finding along with a variety of algorithms that can be used to solve these problems. 
+	\item Be able to explain and implement the bisection method and Newton's method to find roots along with their error and convergence rate. 
+	\item Be able to understand and explain the concept of interpolation. 
+	\item Be able to implement a variety of interpolation techniques, especially Lagrange and Newton polynomials, to a data set as well as discuss their computational aspects and error bounds.
+	\item Be able to explain the concept of Chebyshev nodes and use them in practice.
+	\item Be able to explain the concept of splines and be able to interpolate points using splines.
+	\item Be able to explain and implement a variety of techniques to approximate derivatives to functions along with their errors, especially Taylor series based methods. 
+	\item Be able to explain and implement gradient descent to minimize functions as well as discuss its real world applications. 
+	\item Be able to explain and implement a variety of numerical integration techniques along with the ability to discuss their computational aspects and errors.
+	\item Be able to approximate integrals using composite trapezoid and Simpson's rule and discuss the errors associated with these approximations. 
+	\item Be able to compute and use quadrature-based approximations, especially Gaussian quadrature. 
+	\item Be able to discuss and implement a number of numerical linear algebra techniques, e.g. Gaussian elimination, LU decomposition, SVD decompositions, Power/Jacobi Method, etc. as well as discuss computational aspects and associated errors.
+	\item Be able to explain and implement a variety of algorithms to fit models to a given dataset, e.g. least square regression, least square parabolas, power fitting, etc. 
+	\item Be able to explain and implement a variety of techniques to approximate solutions to initial-value problems and general differential equations.
+	\item Be able to existence and uniqueness to solutions of differential equations as well as identify when a differential equation has a solution and when it is unique. 
+	\item Be able to explain and implement Euler's Method and Runge-Kutta to approximate solutions to initial values problems as well as discuss error and step size issues. 
+	\end{itemize} \pspace
+Furthermore, students should\dots \pspace
 	\begin{itemize} \itemsep=0.3ex
 	\item  Improve their ability to engage in mathematical thinking, reasoning, communication, and problem solving.
 	\item Develop a matured perspective on how to approach mathematical problems and concepts.
 	\item Be able to state ways Mathematics applies to real world problems.
 	\item Learn to properly utilize technology to explore, expand upon, or answer mathematical questions.
 	\item Refine their cognitive skills by improving their ability to learn independently, approach problems imaginatively, solve problems methodically, and communicate solutions intelligibly.
+	\item Feel more comfortable writing code/programs, especially in Mathematica, and applying Mathematics to real-world problems. 
 	\end{itemize}
 \sectionbreak
 
 
 
+
 % Course Materials
 \mysection{0.22}{Course Materials\label{course_mat}}
-{\itshape\bfseries\color{stacred}Textbook.} The primary reference for course topics will be lecture notes and related materials provided by the instructor. However, students wishing to have a consistent standard reference are suggested to use the free open source textbook \textit{Discrete Mathematics: An Open Introduction} by Oscar Levin found at \url{http://discrete.openmathbooks.org/dmoi3.html}. \pspace
+{\itshape\bfseries\color{stacred}Textbook.} The primary reference for course topics will be lecture notes and related materials provided by the instructor. Student's wanting a consistent text reference should consult with the instructor on an appropriate text reference. \pspace
 
-{\itshape\bfseries\color{stacred}Technology.} The course may make use of the computational engine Mathematica via the WolframAlpha website: \url{https://www.wolframalpha.com}. Although WolframAlpha does have a paid account option for additional resources, the course will not make use of these features and students {\itshape will not} be required to setup an account or make any kind of payment. The course may also make use of various programming languages, e.g. Python. These languages will be free and the instructor will provide instructions and resources to be able to make use of them. \pspace
-
-\LaTeX\ (or \TeX) will be used in the course. All homeworks must be created in \LaTeX\ or \TeX\ and the \texttt{.tex} file must be made available, if requested. Students can install a compiler on their personal computer, e.g. TeXworks, TeXmaker, TeXShop, etc., or they may use an online program, e.g. OverLeaf. The instructor will provide guidelines and resources for \LaTeX/\TeX.   
+{\itshape\bfseries\color{stacred}Technology.} Student's will be required to having a working copy of Mathematica. However, students will not have to purchase and download the actual program. Wolfram offers monthly access to an online version of Mathematica for a small fee. Students should create an account and get a monthly subscription to get access to Mathematica at \href{https://www.wolfram.com/mathematica/}{https://www.wolfram.com/mathematica/}. Student's wanting to purchase their own student copy of Mathematica may do so, but it is not required.  
+\sectionbreak
 \sectionbreak
 
 
@@ -185,15 +190,16 @@ Furthermore, students should\dots
 \largeheader{0.3cm}{Course Policies\label{course_polc}}
 
 
-
 % Grading Components
 \mysection{0.27}{Grading Components\label{grade_comp}}
-Course grades are determined by the following components: \par
+Course grades are determined by the following components: \newpage
 	\begin{table}[!ht]
         \begin{tabular}{clr}
-	& Participation & 15\% \\
+	& Project Presentation & 10\% \\
+	& Project Paper & 15\% \\
 	& Quizzes & 15\% \\
-	& Homework & 70\% \\
+	& Mathematica Homework & 20\% \\
+	& Written Homework & 40\%
         \end{tabular} 
         \end{table}
 \sectionbreak
@@ -219,7 +225,7 @@ The grade scale is the standard St. Thomas Aquinas College grading scale and is 
 
 % Course Format
 \mysection{0.19}{Course Format\label{course_form}}
-The course consists of two lectures per week. Each class will begin with a quiz followed by lecture. Lectures will may include some time for individual and group problem solving. However, due to the large number of course topics, students will spend the majority of their time working with problems outside of lecture. Weekly lectures may not cover all aspects of a particular topic, so students will be required to do outside reading. Each student will be required to have a weekly, hour-long group meeting. Students are expected to typically spend approximately 3~hours per credit outside of class on course materials. However, some weeks this may be more or less. The primary method of evaluation in the course will be homework.
+The course consists of two lectures per week. Each class will begin with a quiz followed by lecture. Lectures will may include some time for individual and group problem solving. However, due to the large number of course topics, students will spend the majority of their time working with problems outside of lecture. Weekly lectures may not cover all aspects of a particular topic, so students will be required to do outside reading. Students are expected to typically spend approximately 3~hours per credit outside of class on course materials. However, some weeks this may be more or less. The primary method of evaluation in the course will be homework.
 \sectionbreak
 
 
@@ -231,16 +237,13 @@ The course consists of two lectures per week. Each class will begin with a quiz 
 If you miss a lecture, you are responsible for any material covered, any work assigned, any course changes made, etc. during the class. Do not assume or expect the instructor to provide you with anything, particularly lecture notes, from the class(es) missed. {\itshape Four or more unexcused absences from lectures could result in receiving an `F' in the course.} Furthermore, excessive lateness will also count as an absence. If you are dismissed from lecture due to problems during the lecture, e.g. disruptive behavior or unauthorized cell phone use, then this dismissal will be recorded as an absence for the lecture. If you cannot attend a class due to a mandated quarantine, inform your instructor immediately so that arrangements can be made. In this case, the student may be required to participate in lectures virtually and submit assignments online. \pspace
 
 {\itshape\bfseries\color{stacred}Participation.} 
-Students are expected to participate in the course---both inside and outside the classroom. Inside the classroom, this means attending class, paying attention, taking notes, asking and answering questions when appropriate, etc. However, course participation does not begin and end at the classroom door. Students are expected to review course material and complete course assignments. Typically, students can expect to spend approximately 3~hours per credit outside of class working for the course---although some weeks this could be more or less. \pspace
-
-Students will be broken up into groups throughout the semester. Part of the participation grade will be meeting weekly with their group for at least one hour. The purpose of these meetings will be to discuss course material, work on appropriate course assignments, and generally support each other through the course. Groups will determine on their own when and where to meet as well as what they will do during the meeting. To present proof that the meeting occurred, students will take a group photo and submit it to the instructor electronically. 
-\sectionbreak
+Students are expected to participate in the course---both inside and outside the classroom. Inside the classroom, this means attending class, paying attention, taking notes, asking and answering questions when appropriate, etc. However, course participation does not begin and end at the classroom door. Students are expected to review course material and complete course assignments. Typically, students can expect to spend approximately 3~hours per credit outside of class working for the course---although some weeks this could be more or less. Students are encouraged to break into groups throughout the semester. Group meetings should focus on discussing course material, working on appropriate course assignments, and generally support each other through the course. \sectionbreak
 
 
 
 % Quizzes
 \mysection{0.18}{Quizzes\label{quiz}}
-There will be a quiz \textit{every} class. Quizzes are meant to be short and simple. These quizzes serve more as a method of gauging whether you are keeping up with the material. It is important that if you are late that you obtain a copy of the quiz immediately. Quiz solutions will often be discussed following the quiz. Because quiz solutions will often be discussed in class, no make-up quizzes will be given, even in the case of an emergency. However, the lowest four scores on quizzes as well as any missed quizzes due to excused absences will be dropped. Unless otherwise instructed, there are no calculators, computational devices, notes, or outside assistance of any kind allowed on quizzes. 
+There will be a quiz \textit{every} class. Quizzes are meant to be short and simple. These quizzes serve more as a method of gauging whether you are keeping up with the material. It is important that if you are late that you obtain a copy of the quiz immediately. Quiz solutions will often be discussed following the quiz. Because quiz solutions will often be discussed in class, no make-up quizzes will be given, even in the case of an emergency. Unless otherwise instructed, there are no calculators, computational devices, notes, or outside assistance of any kind allowed on quizzes. 
 \pspace
 
 
@@ -249,31 +252,57 @@ There will be a quiz \textit{every} class. Quizzes are meant to be short and sim
 \mysection{0.18}{Homework\label{hw}}
 The only way to learn Mathematics is to do Mathematics! Therefore, there will be weekly homework assignments. It is essential for students to complete all of the assignments for the course. Working on homework is the best way of engaging with course concepts and gauging one's mastery of the material. Moreover, homework is an essential portion of the course grade. Assignments should be started as soon as possible. Do not delay working through homework; it is easier to keep up than it is to catch up. Students may request extensions on homework assignments. Requests for extensions should be submitted to the instructor in a timely fashion---do not delay! However, do not simply assume that you will be able to receive extra time on an assignment and plan your schedule carefully. Any extensions, due dates, and grade penalties for late assignments will be determined by the instructor on a student-by-student basis. \pspace
 
-Students will be required to submit homework that is created in \LaTeX\ or \TeX. This is a standard typesetting language for mathematical content.  Students can install a compiler on their personal computer, e.g. TeXworks, TeXmaker, TeXShop, etc., or they may use an online program, e.g. OverLeaf. \LaTeX\ comes with a fairly steep learning curve at first---so be patient with yourself. It is understandable that you may struggle at times typesetting what you want. For better or worse, nearly all students that learn \TeX\ are `thrown into the deep end' in this way---know that you are not alone. However, the instructor will provide guidelines and resources for \LaTeX/\TeX. A great resource when working with \TeX\ will be Google (\url{https://tex.stackexchange.com/} almost certainly has an answer to your question) but especially your group. You can discuss \LaTeX\ issues in your group meetings. Using Overleaf (or a common GoogleDoc in the case of compilers), you can easily share code between one another. While certain commands and formats is fine, you should not be sharing code, in \TeX\ or otherwise, that in any essential way solves the problem. For instance, it is fine to share commands for \LaTeX\ symbols or certain environment structures, but it would not be fine to share code that generates a circuit diagram if the problem was asking for the diagram. If you are unsure if certain help is permissible, consult your instructor. \pspace
-
-You are encouraged to work with others on homeworks. Mathematics is a social activity! Working on homework assignments is one of the purposes of the weekly group meetings. The purpose of working together on assignments is to engage with course topics, see different perspectives, ask questions, and have others look over your work. However, do not simply use others to do your assignments. You should also not allow other students to use you to complete their assignments. Of course, using online solutions is a violation of the St. Thomas Aquinas College academic integrity policies. If you are unsure of whether a particular resource is appropriate to use on an assignment, consult with your instructor first. Any issues which cannot be properly resolved amongst group members should be brought to the attention of the instructor. \pspace
+Often, written homework will be paired with a corresponding Mathematica homework. These homeworks will focus on the actual, practical implementation of course concepts. Student's are not expected to know much programming and little background will be assumed. However, as with all courses of this `type', there is a learning curve to these programatic homeworks. It is natural to feel slightly overwhelmed. But do not allow yourself to become completely overwhelmed---ask for help! Students unfamiliar with programming should expect to spend a bit of time `getting a feel' for how to use Mathematica. However, if you spend a sufficient amount of time without making progress on a problem, ask your instructor for assistance! Do not wait to ask for help. \pspace
 
 
 
 
 
+\newpage
+
+
+
+
+
+You are encouraged to work with others on homeworks. Mathematics is a social activity! Work with others on assignments to help engage with course topics, see different perspectives, ask questions, and have others look over your work. However, do not simply use others to do your assignments. You should also not allow other students to use you to complete their assignments nor should you share entire computer code verbatim. Of course, using online solutions is a violation of the St. Thomas Aquinas College academic integrity policies. If you are unsure of whether a particular resource is appropriate to use on an assignment, consult with your instructor first. 
 \sectionbreak
+
+
+
+
+
+% Project
+\mysection{0.24}{Project\label{project}}
+
+There will be a project and paper in this course. These are `paired.' The project will consist of examining more advanced aspects of topics seen in the course, general topics that were not covered in the course, or a specific application and implementation of numerical analysis techniques to a `real world' problem. Students may choose a topic that fits their interest and students may even choose the same topic, with permission. However, projects are to be completed independently. Before choosing a topic, you must confirm your selection with your instructor. \pspace
+
+Once a topic is selected, you will write a 3--5 page paper (the paper should \textit{not} be under 3~pages and likely should not be more than 5) on the topic. The paper should motivate why one would care about the topic. Then the paper should motivate the underlying mathematics and derive any results required, balancing detail with good exposition. The paper should then address applications of the algorithm to mathematical problems, including at least one `real world' problem. Students having trouble finding or constructing examples should ask their instructor for help. Finally, the paper should conclude with what a reader might want to investigate next. The paper should be typeset as a single spaced paper with one-inch margins and size 11~font. With permission, some mathematical `typesetting' may be hand-written into the document. Do not procrastinate in working on the project. For topic ideas, consult with your instructor. More details and grading scales will be released later in the semester. \pspace
+
+There will also be a presentation in the course. The presentation is based on the paper topic that a student selects. These presentations will occur during the last week of classes. These presentations should be 10--15~minutes. They should \textit{not} be less than 8~minutes nor should they be longer than 15~minutes. The presentation should motivate the topic that was covered in their paper---including the general motivation for applications and the general theory. It should also include at least one explicit example of the topic, e.g. algorithms, approximations, etc. along with a discussion of its applications. The presentation should also demonstrate a computer implementation of the topic at least once. The presentation can be made in any format, e.g. slides or board work. Think of the presentation as a `mini lecture' on the topic to their fellow classmates. The presentation should be clear and engage the audience. Your fellow classmates should be able to clearly summarize your topic after your presentation. The best presentations are well thought out and practiced. So do not procrastinate in starting to work on the presentations! More details and grading scales will be released later in the semester. \sectionbreak
+
+
+
+
+
+\newpage
+
+
 
 
 
 % Mathematics Help
 \mysection{0.24}{Mathematics Help\label{help}}
-Be proactive about your success in the course! If you need help, there are many resources available to help you. Your first primary contact for help is the instructor. If you are struggling, attend office hours or send an email. The instructors office hours for this semester can be found below:
+Be proactive about your success in the course! If you need help, there are many resources available to help you. Your first primary contact for help is the instructor. If you are struggling, attend office hours or send an email. The instructors office hours for this semester can be found below: \par
 	\begin{table}[!ht]
 	\centering
 	\begin{tabular}{l || l}
-	Mon. & TBD \\
-	Tues. & TBD \\
-	Wed. & TBD \\
-	Thurs. & TBD \\
-	Fri. & TBD
+	Mon. & 1:30~p.m. -- 2:30~p.m. \\
+	Tues. & 1:30~p.m. -- 2:30~p.m. \\
+	Wed. & 1:30~p.m. -- 2:30~p.m. \\
+	Thurs. & 1:30~p.m. -- 2:30~p.m. \\
+	Fri. & 11:00~a.m. -- 2:00~p.m.
 	\end{tabular}
-	\end{table}
+	\end{table} \par
 Do not wait to bring issues, course related or otherwise, to the attention of the instructor. If you cannot attend office hours, send an email to the instructor to try to make other arrangements. There are also a number of resources available to you at St. Thomas Aquinas College: Center for Student Success, Academic Recovery Program, Writing Center, etc. Students looking for extra mathematics help should consult with the Academic Services Office in Spellman~106, via email at \href{mailto:AcademicServices@stac.edu}{academicservices@stac.edu}, or on the web at \href{https://www.stac.edu/academics/academic-services}{https://www.stac.edu/academics/academic-services}. The Center for Student Success website is \url{https://www.stac.edu/academics/academic-services/center-student-success} and can be found at Spellman~111 or contacted at 845.398.4090.
 \sectionbreak
 
@@ -482,16 +511,25 @@ If you've already been granted academic accommodations at St. Thomas Aquinas Col
 
 
 
+
+
+\newpage
+
+
+
+
+
 % Gender- or Sex-Based Misconduct Policy
 \mysection{0.50}{Gender- or Sex-Based Misconduct Policy\label{college_sexmisconduct}}
 
 Students should be aware that faculty members are required to report certain information to the STAC's Title IX Coordinator. If you inform your instructor about, or that person witnesses, gender- or sex-based misconduct, which includes sexual harassment, sexual assault, intimate partner or domestic violence, stalking, or any gender- or sex-based discrimination, the faculty member will keep the information as private as possible, but must bring it to the attention of STAC's Title IX Coordinator. \pspace
 
-Students should also be aware that disclosing such experiences in course assignments does NOT put the College on notice and will NOT begin the process of STAC providing assistance or response to those experiences. If you would like to talk to the Title IX Coordinator directly, you can contact Ms. Maria Coupe at \href{mailto:mcoupe@stac.edu}{mcoupe@stac.edu} or call 845.398.4044. Additionally, you also may report incidents or complaints to campus security by calling 845.398.4080. You can find more information at \href{www.stac.edu/titleix}{www.stac.edu/titleix}. \pspace
+Students should also be aware that disclosing such experiences in course assignments does NOT put the College on notice and will NOT begin the process of STAC providing assistance or response to those experiences. If you would like to talk to the Title IX Coordinator directly, you can contact Ms. Maria Coupe at \href{mailto:mcoupe@stac.edu}{mcoupe@stac.edu} or call 845.398.4044. Additionally, you also may report incidents or complaints to campus security by calling 845.398.4080. You can find more information at \href{http://www.stac.edu/titleix}{http://www.stac.edu/titleix}. \pspace
 
 Please remember that instances of gender- and sex-based misconduct that occur in virtual/online environments are covered by STAC's Title IX, Student Code of Conduct, and Faculty/Employee Conduct policies. \pspace
 
 If you would like to report a private concern to a confidential counseling resource who is not required to initiate a Title IX report, you may contact the following people on a confidential basis: \pspace
+
 
         \hfill\begin{minipage}[t]{0.49\textwidth}
         {\bfseries Ms. Yanara Reda, MSN, RN} \par
@@ -634,9 +672,9 @@ The following is a \emph{tentative} schedule for the course and is subject to ch
         \scalebox{1}{%
         \begin{tabular}{ll || ll}
         Date & Topic(s) & Date & Topic(s) \\ \hline 
-	02/01 & Essential Review & 03/24 & Numerical Integration \\
-	02/03 & Machine Numbers/Arithmetic, Error & 03/29 & Numerical Integration \\
-	02/08 & Computational Considerations & 03/31 & Numerical Integration \\
+	02/01 & Introduction \& Motivation & 03/24 & Numerical Integration \\
+	02/03 & Floating Point Numbers, Error & 03/29 & Numerical Integration \\
+	02/08 & Conditioning, Big O, Stability & 03/31 & Numerical Integration \\
 	02/10 & Root Finding & 04/05 & ODEs \\
 	02/15 & Root Finding & 04/07 & ODEs \\
 	02/17 & Root Finding & 04/12 & ODEs \\
@@ -647,7 +685,7 @@ The following is a \emph{tentative} schedule for the course and is subject to ch
 	03/08 & Numerical Differentiation & 04/28 & Numerical Linear Algebra \\
 	03/10 & Numerical Differentiation & 05/03 & Numerical Linear Algebra \\
 	03/15 & Spring Break & 05/05 & Numerical Linear Algebra \\
-	03/17 & Spring Break & 05/10 & Special Topics \\
+	03/17 & Spring Break & 05/10 & Selected Topics \\
 	03/22 & Gradient Descent & 05/12 & Project Presentations
         \end{tabular}
         }

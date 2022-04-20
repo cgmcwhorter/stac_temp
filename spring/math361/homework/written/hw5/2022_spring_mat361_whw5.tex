@@ -1,0 +1,141 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 05/12}{For the things of this world cannot be made known without a knowledge of mathematics.}{Roger Bacon}
+
+
+% Problem 1.
+\problem{Center Difference Formula} There are a number of approximations to derivatives of various orders. Perhaps the simplest was the centered formula: if $f \in C^3[a, b]$ and $(x - h, x + h) \subseteq [a, b]$, then
+	\[
+	f'(x) \approx \dfrac{f(x + h) - f(x - h)}{2h}
+	\]
+This approximation was $O(h^2)$. Consider the example when $f(x)= \sin(2x)$. 
+	\begin{enumerate}[(a)]
+	\item Compute approximations to $f'(0)$ using $h= 0.1$, $0.01$, and $0.001$. 
+	\item Compare your approximations in (b) to the actual value $f'(0)$. What are the absolute and relative errors? 
+	\item Show that your approximations are within the the error bound given by this centered difference formula. 
+	\item What step size should be used to approximate $f'(0)$ to 8 decimal digits? Should one simply use the smallest value of $h$ possible? Explain. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2.
+\problem{Extending to Partial Derivatives} Recall that for a function $f(x, y)$, the partial derivatives $f_x(x, y)$ and $f_y(x, y)$ were defined by\dots
+	\[
+	\begin{aligned}
+	f_x(x, y)&:= \lim_{h \to 0} \dfrac{f(x + h, y) - f(x, y)}{h} \\
+	f_x(x, y)&:= \lim_{h \to 0} \dfrac{f(, y + h) - f(x, y)}{h} 
+	\end{aligned}
+	\]
+We can extend our methods for approximating derivatives to one variable to functions in many variables. For instance, we can use a center difference formula to approximate $f_x(x, y)$ as follows:
+	\[
+	f_x(x, y)= \dfrac{f(x + h, y) - f(x - h, y)}{2h} + O(h^2)
+	\]
+A similar approximation for $f_y(x, y)$ is obtained mutatis mutandis. For instance, let's consider the example of $f(x, y)= \dfrac{y}{x^2 + y}$. 
+	\begin{enumerate}[(a)]
+	\item Compute $f_x(-1, 2)$ and $f_y(-1, 2)$ exactly. 
+	\item Use the center difference formula above to approximate $f_x(-1, 2)$ and $f_y(-1, 2)$ using step sizes $h= 0.1$, $0.01$, and $0.001$. 
+	\item Compare your approximations in (b) to the exact values in (a). What are the relative and absolute errors? Does this approximation appear to be $O(h^2)$? Explain. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3.
+\problem{Kirchoff's Law} Suppose you have an electrical circuit with an impressed voltage given by $E(t)$, measured in volts. Kirchoff's Law states that $E$ obeys the differential equation 
+	\[
+	E= L\, \dfrac{dI}{dt} + RI
+	\]
+where $R$ is the resistance of the circuit (measured in ohms), $I$ is the current (measured in amperes), and $L$ is the inductance (measured in henries). Suppose you had an electrical circuit with $R= 0.173$ and $L= 0.91$. You measure the current, $I(t)$, in the circuit at regular time intervals. The measurements you take are given below. 
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cc}
+	$t$, seconds & $I(t)$, amperes \\ \hline
+	$1.0$ & $106.029$ \\
+	$1.1$ & $106.013$ \\
+	$1.2$ & $105.998$ \\
+	$1.3$ & $105.983$ \\
+	$1.4$ & $105.968$ \\
+	$1.5$ & $105.954$ \\
+	$1.6$ & $105.940$
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Approximate $I'(1.3)$. Show all your work.
+\item Compare your approximation in (a) to the exact solution $I(t)= 105.202 + e^{-0.19011t}$. 
+\item Use your approximation in (a) to approximate $E(1.3)$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4.
+\problem{Forward Difference} Although we primarily focused on center difference formulas, there are many methods to approximate derivatives. Strategies for any of these types can then be adapted to approximate derivatives of higher orders. For instance, the following forward difference formula can be used to approximate $f''(x)$:
+	\[
+	f''(x_0) \approx \dfrac{2f_0 - 5f_1 + 4f_2 - f_3}{h^2} + O(h^2)
+	\]
+Consider the case where $f(x)= \arctan(x^2)$. 
+	\begin{enumerate}[(a)]
+	\item Compute $f''(0)$ exactly. Show all your work.
+	\item Approximate $f''(0)$ using the forward difference formula above using $h= 0.01$. 
+	\item Compare your approximation in (b) with your answer in (a). What are the absolute and relative errors? 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Evaluation
+\noindent{\bfseries Evaluation.} \pvspace{0.3cm}
+
+Complete the following survey by rating each problem. Each area will be rated on a scale of 1 to 5. For interest, 1 is ``mind-numbing'' while a 5 is ``mind-blowing.'' For difficulty, 1 is ``trivial/routine'' while 5 is ``brutal.'' For learning, 1 means ``nothing new'' while 5 means ''profound awakening.'' Then you to estimate the amount of time you spent on each problem (in minutes). 
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+ & Interest & Difficulty & Learning & Time Spent \\ \hline \hline
+Problem 1 &  &  &  &  \\ \hline
+Problem 2 &  &  &  &  \\ \hline
+Problem 3 &  &  &  &  \\ \hline
+Problem 4 &  &  &  & 
+\end{tabular}
+\end{center}
+\vspace{0.25cm}
+
+Finally, indicate whether you believe lectures were useful in completing this assignment and whether you believe the problems were useful enough/interesting enough to assign again to future students by checking the appropriate space.
+
+\vspace{0.25cm}
+\begin{center}
+\begin{tabular}{c||c|c|c|c|}
+  & \multicolumn{2}{c|}{Lectures} &  \multicolumn{2}{c|}{Assign Again} \\ \cline{2-5}
+   & Yes & No & Yes & No \\ \hline \hline
+  Problem 1 &  &  &  &  \\ \hline 
+  Problem 2 &  &  &  &  \\ \hline 
+  Problem 3 &  &  &  &  \\ \hline 
+  Problem 4 &  &  &  & 
+\end{tabular}
+\end{center}
+
+\end{document}

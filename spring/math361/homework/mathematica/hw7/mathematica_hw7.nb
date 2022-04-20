@@ -1,0 +1,274 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9964,        266]
+NotebookOptionsPosition[      8688,        234]
+NotebookOutlinePosition[      9082,        250]
+CellTagsIndexPosition[      9039,        247]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name : 
+Mathematica HW 7\
+\>", "Section",
+ CellChangeTimes->{{3.8594229823250847`*^9, 
+  3.859423021601055*^9}},ExpressionUUID->"9cf97fd7-95e0-4979-8520-\
+477091d21b1b"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1. Least Square Regression", "Subsection",
+ CellChangeTimes->{{3.859422998575243*^9, 3.8594229996578217`*^9}, {
+  3.859423631484275*^9, 
+  3.859423636317059*^9}},ExpressionUUID->"b0c4a824-1920-4569-abcb-\
+41a294cc927f"],
+
+Cell["\<\
+The least square regression line is the most common mathematical model. While \
+this can be tedious to implement by-hand, most scientific programs have this \
+as a built-in feature. In Mathematica, linear regressions can be computed \
+using LinearModelFit (among other possible options). Consider the data points \
+(0.3, 89.3), (3.5, 35.8), (7.9, 5.7), (10.2, -55.4), and (14.9, -109.2). 
+\t(a) Use Mathematica\[CloseCurlyQuote]s LinearModelFit to find the equation \
+of the least square regression line.
+\t(b) Use Mathematica to compute the prediction and residual for each of the \
+data points.
+\t(c) Find the correlation coefficient and the coefficient of determination. 
+\t(d) Plot the least square regression line and the data points on the same \
+plot.\
+\>", "Text",
+ CellChangeTimes->{{3.859423645487434*^9, 3.8594236844113293`*^9}, {
+  3.859423748333851*^9, 
+  3.859423949184614*^9}},ExpressionUUID->"1e54a4c1-88b0-4215-83c7-\
+42537b477ba3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. Least Square Cubic", "Subsection",
+ CellChangeTimes->{{3.859423954324243*^9, 
+  3.859423967282844*^9}},ExpressionUUID->"f65c9868-0067-4ce3-96a1-\
+d1702b9f9ecd"],
+
+Cell["\<\
+We can use the methodological approach we used in deriving the least square \
+regression line to find the least square regression polynomial for any \
+polynomial. Just as with a simple linear regression, these are equally \
+tedious to compute by-hand. Mathematica can be used to compute arbitrary \
+model fits. Consider the data points (-6.7, -768.6), (-4.9, -382.8), (-3.5, \
+-289.5), (-3.4, -166.6), (-0.7, -26.3), (1.1, 1.9), (8.5, 1644.8), and (12.4, \
+2315). 
+\t(a) Use Mathematica\[CloseCurlyQuote]s NonlinearModelFit to find the \
+equation of the best cubic function fitting this data.
+\t(b) Use Mathematica to compute the prediction and residual for each of the \
+data points.
+\t(d) Plot the cubic model and the data points on the same plot.\
+\>", "Text",
+ CellChangeTimes->{{3.8594239746616898`*^9, 3.859424126015025*^9}, {
+  3.8594241941545973`*^9, 3.859424298395115*^9}, {3.8594243856820498`*^9, 
+  3.859424400370944*^9}, {3.859424474826026*^9, 
+  3.8594245005130577`*^9}},ExpressionUUID->"49971a84-2536-4379-8231-\
+15a7f80608b5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Nonlinear Fits", "Subsection",
+ CellChangeTimes->{{3.859424516514135*^9, 3.859424519779334*^9}, {
+  3.859425782532649*^9, 
+  3.859425785311173*^9}},ExpressionUUID->"5b05afa9-a5f5-446f-a4ce-\
+58da2dd6693e"],
+
+Cell[TextData[{
+ "When creating nonlinear models to fit a dataset, it is sometimes possible \
+to linearize the data so that one can then find the least square regression \
+line to find the desired nonlinear model. Of course, Mathematica can find \
+optimal nonlinear models but we can also do this directly. Consider the \
+points (-3.1, 0.08), (-1.6, 0.176), (0.4, 2.404), (1.8, 19.210), (3, 122.4), \
+(6.6, 41 033.9). \n\t(a) Plot the data points and explain why a model of the \
+form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", " ", 
+    RowBox[{"A", " ", 
+     SuperscriptBox["5", "x"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d45977f8-78aa-4731-875d-b4f279ef3043"],
+ " might be appropriate.\n\t(b) \[OpenCurlyQuote]Linearize\[CloseCurlyQuote] \
+the data. Using this linearized data, use Mathematica\[CloseCurlyQuote]s \
+LinearModelFit to find the least square regression line.\n\t(c) Find the \
+optimal model of the form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", " ", 
+    RowBox[{"A", " ", 
+     SuperscriptBox["5", "x"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3548ae2b-e0cb-4b85-9094-cdbe98310a4f"],
+ ".\n\t(d) Compare your model in (c) to Mathematica\[CloseCurlyQuote]s result \
+using NonlinearModelFit."
+}], "Text",
+ CellChangeTimes->{{3.859425793730173*^9, 3.859425892272819*^9}, {
+  3.859425933798785*^9, 
+  3.8594261783728037`*^9}},ExpressionUUID->"53f64dde-9b2e-4ec3-aa66-\
+eae548ff5a37"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Gradient Descent", "Subsection",
+ CellChangeTimes->{{3.859424524938861*^9, 3.859424527280032*^9}, {
+  3.859426193845254*^9, 
+  3.8594261958285723`*^9}},ExpressionUUID->"72aba851-2615-4b89-b513-\
+b20d60ee2881"],
+
+Cell[TextData[{
+ "One of the most common minimization methods, especially in the field of \
+machine learning, is gradient descent. Although this algorithm tends to be \
+rather slow to converge, it is routine to implement and has the benefit of \
+being simple to understand what the algorithm is \[OpenCurlyQuote]doing\
+\[CloseCurlyQuote] at every step. Consider the function  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", " ", "y"}], ")"}], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox["y", "4"], "-", 
+     RowBox[{"2", " ", "x", " ", 
+      SuperscriptBox["y", "2"]}], "+", 
+     SuperscriptBox["x", "3"], "-", "x"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "984578d8-e92f-43dd-bf55-2d58fc350a94"],
+ "\n\t(a) Use Mathematica\[CloseCurlyQuote]s Plot3D to plot the function over \
+the region ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"-", "1.5"}], ",", "1.5"}], "]"}], "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f35bbe58-3bea-4b59-a25f-6f12001d30b7"],
+ ". Does the function appear to have local minima? How many?\n\t(b) Use \
+Mathematica\[CloseCurlyQuote]s derivative function, D, to show that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    RowBox[{"x", ",", " ", "y"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e53a406d-8e4b-4879-ab64-b084190509c3"],
+ " has local minima at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"1", ",", "1"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "65b0502c-9022-441b-98d2-00290f37f91a"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"1", ",", 
+     RowBox[{"-", "1"}]}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "78f26e8b-f63a-44cf-a336-8dd35f1cfaaa"],
+ ".\n\t(c) Use Mathematica\[CloseCurlyQuote]s D function to find the gradient \
+of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    RowBox[{"x", ",", " ", "y"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e61d60f6-ec40-47b2-b59d-82f1f35866ef"],
+ ".\n\t(d) Use twenty steps of the gradient descent method with step size ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"h", "=", "0.1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c568e0fe-1433-4acc-9b9b-9b849dce0505"],
+ " with initial values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"0.4", ",", " ", "0.4"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c5bac79a-16f6-426a-aea3-32df733038d8"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"0.2", ",", " ", 
+     RowBox[{"-", "0.3"}]}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "26f31561-6d28-4b73-acd6-f76aab0be7a6"],
+ " to approximate the minimum of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", 
+    RowBox[{"x", ",", " ", "y"}], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e52d5f08-d90c-4bd9-a14a-073378f14dc1"],
+ ".\n\t(e) Are your approximations in (d) the same? Explain this in the \
+context of the gradient descent algorithm."
+}], "Text",
+ CellChangeTimes->{{3.859426203756131*^9, 3.859426286362844*^9}, {
+  3.859426438405632*^9, 
+  3.859426752058155*^9}},ExpressionUUID->"1643fbe0-a6cd-426b-8765-\
+f07496952f7e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{Automatic, 6}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cebbc666-2455-413a-98f1-d085b014e503"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 179, 6, 105, "Section",ExpressionUUID->"9cf97fd7-95e0-4979-8520-477091d21b1b"],
+Cell[CellGroupData[{
+Cell[784, 32, 233, 4, 54, "Subsection",ExpressionUUID->"b0c4a824-1920-4569-abcb-41a294cc927f"],
+Cell[1020, 38, 959, 17, 196, "Text",ExpressionUUID->"1e54a4c1-88b0-4215-83c7-42537b477ba3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2016, 60, 177, 3, 54, "Subsection",ExpressionUUID->"f65c9868-0067-4ce3-96a1-d1702b9f9ecd"],
+Cell[2196, 65, 1051, 18, 196, "Text",ExpressionUUID->"49971a84-2536-4379-8231-15a7f80608b5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3284, 88, 222, 4, 54, "Subsection",ExpressionUUID->"5b05afa9-a5f5-446f-a4ce-58da2dd6693e"],
+Cell[3509, 94, 1480, 32, 219, "Text",ExpressionUUID->"53f64dde-9b2e-4ec3-aa66-eae548ff5a37"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5026, 131, 226, 4, 54, "Subsection",ExpressionUUID->"72aba851-2615-4b89-b513-b20d60ee2881"],
+Cell[5255, 137, 3405, 93, 261, "Text",ExpressionUUID->"1643fbe0-a6cd-426b-8765-f07496952f7e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

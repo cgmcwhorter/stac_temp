@@ -1,0 +1,410 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13864,        402]
+NotebookOptionsPosition[     12583,        370]
+NotebookOutlinePosition[     12977,        386]
+CellTagsIndexPosition[     12934,        383]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name : 
+Mathematica HW 5\
+\>", "Section",
+ CellChangeTimes->{{3.8594229823250847`*^9, 
+  3.859422993833864*^9}},ExpressionUUID->"d21cd4de-3220-46d2-8ac9-\
+50ff3e007c94"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1. Differentiation in Mathematica", "Subsection",
+ CellChangeTimes->{{3.859422998575243*^9, 3.8594229996578217`*^9}, {
+  3.859448824233152*^9, 
+  3.859448827990499*^9}},ExpressionUUID->"d2ed2a02-8acc-4402-bc8c-\
+b932c686e460"],
+
+Cell[TextData[{
+ "When one first learns differentiation in Calculus, the amount of rules and \
+approaches can be overwhelming. After time, these differentiation \
+\[OpenCurlyQuote]rules\[CloseCurlyQuote] become more routine. However, some \
+functions remain tedious to differentiate. Moreover, higher derivatives are \
+often even more problematic to compute because of the increase need to use \
+greater number of product, quotient, and chain rules. However, for a symbolic \
+calculator like Mathematica, even these remain routine to evaluate.\n\t(a) \
+Use Mathematica\[CloseCurlyQuote]s built-in differentiation function, D, to \
+compute the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", 
+    SuperscriptBox["x", "5"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3e0e3f9d-89a6-409e-bff8-a0b6180c5694"],
+ ". Does this agree with what you would expect?\n\t(b) Use Mathematica\
+\[CloseCurlyQuote]s D function to find the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], " ", "=", " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["e", 
+       RowBox[{"2", "x"}]], 
+      RowBox[{"tan", "(", "x", ")"}]}], 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       RowBox[{"cos", "(", "x", ")"}]}]]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1a0bfb0f-68c5-41c8-886b-28e1885a07d5"],
+ ". Also, use this function to find the second and third derivative of this \
+function. \n\t(c) Use Mathematica\[CloseCurlyQuote]s derivative function to \
+create a table of the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["n", "th"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b2bfd6af-69ae-469f-a75e-6dbbeedd8adc"],
+ " derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox["x", "5"], "-", 
+     RowBox[{"6", 
+      SuperscriptBox["x", "3"]}], "+", 
+     RowBox[{"7", 
+      SuperscriptBox["x", "2"]}], "-", 
+     RowBox[{"15", "x"}], "+", "9"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f21b17e3-b086-48af-ad8f-fd44fffe3454"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"n", " ", "=", " ", "0"}], ",", " ", "1", ",", " ", "...", " ", 
+    ",", " ", "7"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "48a0a942-4056-4753-a3be-d86ede17d064"],
+ ". Does this agree with what you would expect? \n\t(d) Use Mathematica to \
+find ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "x"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "82309ecc-a7c0-4918-bc5f-548871ca9031"],
+ " and  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["f", "y"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1773b095-25a8-4088-9d57-5bc319c7206b"],
+ " of the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "6"], "y"}], " ", "-", " ", 
+     FractionBox[
+      SuperscriptBox["y", "3"], "x"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "610205f5-a243-4a7c-86c3-ec20d67c4476"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.85944883521033*^9, 3.859449252560527*^9}, {
+  3.859450140829954*^9, 
+  3.85945014838947*^9}},ExpressionUUID->"93d136c9-1792-4ef9-b547-\
+bcefcdf7d1e0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. Other Derivatives", "Subsection",
+ CellChangeTimes->{{3.859450132550603*^9, 3.859450137331354*^9}, {
+  3.859450380702817*^9, 
+  3.859450380912236*^9}},ExpressionUUID->"d17ef069-8e45-430c-ae05-\
+64ba5ba3d411"],
+
+Cell[TextData[{
+ "Mathematica\[CloseCurlyQuote]s built-in differentiation also allow one to \
+compute other notions of rates of change for many types of functions. For \
+instance, Mathematica can find derivatives of vector-valued functions, total \
+derivatives, and gradients. \n\t(a) Use Mathematica to find the derivative of \
+the vector valued function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "t", ")"}], "=", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{
+      RowBox[{"cos", "(", 
+       RowBox[{"2", "t"}], ")"}], ",", " ", 
+      RowBox[{"sin", "(", 
+       RowBox[{"2", "t"}], ")"}], ",", " ", 
+      RowBox[{"6", "t"}]}], " ", "\[RightAngleBracket]"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1ed1be68-e773-4f27-8768-8087713a9ead"],
+ ".\n\t(b) Use Mathematica to find the total derivative of the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], " ", "=", " ", 
+    FractionBox[
+     SuperscriptBox["x", "2"], 
+     SuperscriptBox["y", "3"]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "432bbe1e-ba5c-4f52-9fe7-eea2e700db36"],
+ ".\n\t(c) Use Mathematica to find the gradient of the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox["e", 
+      RowBox[{"-", "x"}]], 
+     RowBox[{"cos", "(", 
+      RowBox[{"3", "y"}], ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d4df90b5-2d63-4ad5-b50c-45c98cbb8706"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.859450151991684*^9, 3.859450186314788*^9}, {
+  3.859450217713966*^9, 
+  3.859450367826087*^9}},ExpressionUUID->"355cbf31-73ad-4d05-8608-\
+5bd45f906d53"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Center Difference Formula", "Subsection",
+ CellChangeTimes->{{3.859449260264249*^9, 3.859449270702373*^9}, {
+  3.859449654030737*^9, 3.859449654182378*^9}, {3.859450387792334*^9, 
+  3.859450387882444*^9}},ExpressionUUID->"681e5eb5-0841-464b-911f-\
+cd0d97f0077a"],
+
+Cell[TextData[{
+ "The first and perhaps simplest numerical approximation we saw for \
+differentiation was the center difference formula ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", "x", ")"}]}], "\[TildeTilde]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"f", "(", 
+       RowBox[{"x", " ", "+", " ", "h"}], ")"}], " ", "-", " ", 
+      RowBox[{"f", "(", 
+       RowBox[{"x", " ", "-", " ", "h"}], ")"}]}], 
+     RowBox[{"2", "h"}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4119215d-e486-4443-bddb-09f0c62dc34e"],
+ ". Use Mathematica\[CloseCurlyQuote]s Table function to create a table of \
+centered difference approximations to the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["x", "3"], " ", "-", " ", "1"}], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", " ", 
+      RowBox[{"2", "x"}], " ", "-", " ", "7"}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6f710a33-55d0-4b0b-8da8-3212b43db6f7"],
+ " at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " ", "=", " ", "1"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8a6a8757-bf98-477f-ae0f-e1de17b2fd20"],
+ " using ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", " ", "=", " ", "0.1"}], ",", " ", "0.01", ",", " ", "0.001", 
+    ",", " ", "...", " ", ",", " ", "0.000000001"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "33d42a29-bafa-47ff-a8b1-fc19b7cc20c1"],
+ ". Compare your values to the exact value of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "'"}], 
+    RowBox[{"(", "1", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9f8ceb51-e4a3-4a9a-99d9-b65b7e76867e"],
+ ". Also, compare your values to the \[OpenCurlyQuote]na\[IDoubleDot]ve\
+\[CloseCurlyQuote] approximation using the definition of the derivative ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", "x", ")"}]}], " ", "\[TildeTilde]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"f", "(", 
+       RowBox[{"x", " ", "+", " ", "h"}], ")"}], " ", "-", " ", 
+      RowBox[{"f", "(", "x", " ", ")"}]}], "h"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "68c4a96f-84aa-4e88-995e-b598e1a51348"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.859449275537277*^9, 3.859449371155118*^9}, {
+  3.859449459973081*^9, 3.859449648776965*^9}, {3.8594499889317703`*^9, 
+  3.859450017537788*^9}, {3.859450071654084*^9, 
+  3.859450124143165*^9}},ExpressionUUID->"492c2a7b-e6a3-4062-b942-\
+485bd85b5fd9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Backward Difference Formula", "Subsection",
+ CellChangeTimes->{{3.859449660056538*^9, 3.859449663472289*^9}, {
+  3.859449696359785*^9, 3.859449697511359*^9}, {3.8594503896363497`*^9, 
+  3.859450389713375*^9}},ExpressionUUID->"29947780-6126-4717-a48c-\
+67630c9188f9"],
+
+Cell[TextData[{
+ "We could also apply the same techniques we used to create approximations \
+for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "'"}], 
+    RowBox[{"(", "x", ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6e1fd0e0-f0fc-426e-9e3c-dc81e1718cbf"],
+ " to find approximation formulas for derivatives of higher order. Consider \
+the backwards difference approximation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"(", "3", ")"}]], "(", 
+     SubscriptBox["x", "0"], ")"}], " ", "\[TildeTilde]", " ", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"5", 
+       SubscriptBox["f", "0"]}], " ", "-", " ", 
+      RowBox[{"18", "f"}], 
+      SubscriptBox["-", "1"], " ", 
+      RowBox[{
+       RowBox[{"+", " ", "24"}], 
+       SubscriptBox["f", 
+        RowBox[{"-", "2"}]]}], " ", "-", " ", 
+      RowBox[{"14", 
+       SubscriptBox["f", 
+        RowBox[{"-", "3"}]]}], " ", "+", " ", 
+      RowBox[{"3", 
+       SubscriptBox["f", 
+        RowBox[{"-", "4"}]]}]}], 
+     RowBox[{"2", 
+      SuperscriptBox["h", "3"]}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ed84d9f9-a7f9-4ae0-aa2d-5c7a1dbc42e3"],
+ ". Consider the case when ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"2", 
+      SuperscriptBox["x", "4"]}], " ", "-", " ", 
+     RowBox[{"3", "x"}], " ", "+", " ", "12"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "93db4d1d-d9f7-4fd1-a993-0b6a5ef92698"],
+ ". Use Mathematica\[CloseCurlyQuote]s Table function to create a table of \
+approximations to the third derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "75c3bc5c-721d-4295-9400-58a5d463c03d"],
+ " at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " ", "=", " ", "2"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a85285bd-5a2d-4e98-a471-e125d623139d"],
+ " using  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", " ", "=", " ", "0.1"}], ",", " ", "0.01", ",", " ", "0.001", 
+    ",", " ", "...", " ", ",", " ", "0.000000001"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b2afe783-0e54-4aae-a518-0f20442c82c8"],
+ ". Does this center difference approximation always become more accurate as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"h", "->", "0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ad7272ac-a13b-4d5a-bff7-dd75ab9277a4"],
+ "? Explain. "
+}], "Text",
+ CellChangeTimes->{{3.859449704862604*^9, 
+  3.859449975511424*^9}},ExpressionUUID->"0141df4c-8648-43e4-9314-\
+7ece456c52f3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"eee0d153-baee-4f32-afb5-c8bd12515153"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 179, 6, 105, "Section",ExpressionUUID->"d21cd4de-3220-46d2-8ac9-50ff3e007c94"],
+Cell[CellGroupData[{
+Cell[784, 32, 240, 4, 54, "Subsection",ExpressionUUID->"d2ed2a02-8acc-4402-bc8c-b932c686e460"],
+Cell[1027, 38, 3426, 93, 311, "Text",ExpressionUUID->"93d136c9-1792-4ef9-b547-bcefcdf7d1e0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4490, 136, 225, 4, 54, "Subsection",ExpressionUUID->"d17ef069-8e45-430c-ae05-64ba5ba3d411"],
+Cell[4718, 142, 1747, 46, 163, "Text",ExpressionUUID->"355cbf31-73ad-4d05-8608-5bd45f906d53"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6502, 193, 279, 4, 54, "Subsection",ExpressionUUID->"681e5eb5-0841-464b-911f-cd0d97f0077a"],
+Cell[6784, 199, 2702, 75, 151, "Text",ExpressionUUID->"492c2a7b-e6a3-4062-b942-485bd85b5fd9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9523, 279, 283, 4, 54, "Subsection",ExpressionUUID->"29947780-6126-4717-a48c-67630c9188f9"],
+Cell[9809, 285, 2746, 81, 159, "Text",ExpressionUUID->"0141df4c-8648-43e4-9314-7ece456c52f3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
