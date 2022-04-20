@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18894,        523]
-NotebookOptionsPosition[     17380,        487]
-NotebookOutlinePosition[     17775,        503]
-CellTagsIndexPosition[     17732,        500]
+NotebookDataLength[     18579,        511]
+NotebookOptionsPosition[     17066,        475]
+NotebookOutlinePosition[     17460,        491]
+CellTagsIndexPosition[     17417,        488]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -327,15 +327,13 @@ the convergence or divergence of fixed point iteration.\na) Suppose a \
 function ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],ExpressionUUID->
   "bf4b418b-fe82-4f50-a279-3e2b67c8d8ae"],
  ", interval ",
  Cell[BoxData[
   FormBox[
    RowBox[{"[", 
-    RowBox[{"a", ",", "b"}], "]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"a", ",", "b"}], "]"}], TraditionalForm]],ExpressionUUID->
   "e31234ed-8f05-408c-92a5-d0d0c71f8c1a"],
  ", initial value ",
  Cell[BoxData[
@@ -343,52 +341,46 @@ function ",
    RowBox[{
     SubscriptBox["x", "0"], "\[Element]", " ", 
     RowBox[{"[", 
-     RowBox[{"a", ",", "b"}], "]"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"a", ",", "b"}], "]"}]}], TraditionalForm]],ExpressionUUID->
   "f32e0157-d448-45e8-ae9b-9a6087dcd1a6"],
  ", and number of iterations ",
  Cell[BoxData[
-  FormBox["n", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["n", TraditionalForm]],ExpressionUUID->
   "03fa8cb6-db79-4e8f-b29a-ae2fbff5601f"],
  " is given. Explain what the following code does:\n\tFPIGraph[x0_, n_, \
 {a_,b_}] := Module[{points, xval, yval, listplot, lineplot},\n\t\txval = x0;\n\
-\t\tyval = f[x0];\n\t\tpoints = { {xval, 0}, {xval, yval} };\n\t\tDo[\n\t\t\t\
-xval = points[[-1, 2];\n\t\t\tyval = f[xval];\n\t\t\tAppendTo[points, {xval, \
-yval}];\n\t\t\tAppendTo[points, {yval, yval}];\n\t\t, {k, 1, n}];\n\t\t\
-listplot = ListLinePlot[points, PlotRange -> { {a, b}, {a, b} }, PlotStyle -> \
-Black];\n\t\tlineplot = Plot[{x, f[x]}, {x, a, b}, PlotRange -> { {a, b}, {a, \
-b} }, PlotStyle -> {Red, Blue}];\n\t\tShow[lineplot, listplot]\n\t]\nb) Use \
-(a) to explain why ",
+\t\tyval = f[x0];\n\t\tpoints = { {xval, 0}, {xval, yval}, {yval,yval} };\n\t\
+\tDo[\n\t\t\txval = points[[-1, 2];\n\t\t\tyval = f[xval];\n\t\t\t\
+AppendTo[points, {xval, yval}];\n\t\t\tAppendTo[points, {yval, yval}];\n\t\t, \
+{k, 1, n}];\n\t\tlistplot = ListLinePlot[points, PlotRange -> { {a, b}, {a, \
+b} }, PlotStyle -> Black];\n\t\tlineplot = Plot[{x, f[x]}, {x, a, b}, \
+PlotRange -> { {a, b}, {a, b} }, PlotStyle -> {Red, Blue}];\n\t\t\
+Show[lineplot, listplot]\n\t]\nb) Use (a) to explain why ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"g", "(", "x", ")"}], "=", 
     RowBox[{"2", 
      RowBox[{"x", "(", 
-      RowBox[{"1", "-", "x"}], ")"}]}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+      RowBox[{"1", "-", "x"}], ")"}]}]}], TraditionalForm]],ExpressionUUID->
   "2713d305-313b-40c9-ac9b-3c5d05881580"],
  " has a unique fixed point on the interval ",
  Cell[BoxData[
   FormBox[
    RowBox[{"[", 
-    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],ExpressionUUID->
   "ff85bc74-5585-4653-9f21-9f22583c262a"],
  " and why fixed point iteration on ",
  Cell[BoxData[
   FormBox[
    RowBox[{"[", 
-    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]],ExpressionUUID->
   "1a55ab76-62ae-40f7-bf75-df4789860ace"],
  " with ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["x", "0"], "=", "0.1"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SubscriptBox["x", "0"], "=", "0.1"}], TraditionalForm]],ExpressionUUID->
   "f16d7c34-d4d3-4e76-90b2-9f7d57e99100"],
  " converges. Is the fixed point an attracting or repelling fixed point?\nc) \
 Use (a) to explain why ",
@@ -400,28 +392,24 @@ Use (a) to explain why ",
      RowBox[{
       FractionBox["1", "2"], 
       SuperscriptBox["x", "2"]}], "+", "x", "-", "3"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "d98f41ab-2fad-4727-affc-149d9052e67e"],
+  ExpressionUUID->"d98f41ab-2fad-4727-affc-149d9052e67e"],
  " has a unique fixed point on the interval ",
  Cell[BoxData[
   FormBox[
    RowBox[{"[", 
-    RowBox[{"2", ",", "3"}], "]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"2", ",", "3"}], "]"}], TraditionalForm]],ExpressionUUID->
   "fc5bc066-58e0-47ce-ba77-2148d1c8ec49"],
  " and why fixed point iteration on ",
  Cell[BoxData[
   FormBox[
    RowBox[{"[", 
-    RowBox[{"2", ",", "3"}], "]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"2", ",", "3"}], "]"}], TraditionalForm]],ExpressionUUID->
   "ef2d7a14-d4e6-4cd0-9430-fb104e4dbbbf"],
  " with ",
  Cell[BoxData[
   FormBox[
    RowBox[{
-    SubscriptBox["x", "0"], "=", "2.45"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SubscriptBox["x", "0"], "=", "2.45"}], TraditionalForm]],ExpressionUUID->
   "a3687373-a125-462a-bb33-4424b4c76241"],
  " diverges. Is the fixed point an attracting or repelling fixed point?"
 }], "Text",
@@ -432,8 +420,8 @@ Use (a) to explain why ",
   3.857242238145171*^9}, {3.857242288174747*^9, 3.857242358931285*^9}, {
   3.8572424628945417`*^9, 3.8572425033340273`*^9}, {3.857242636646821*^9, 
   3.857242715756205*^9}, {3.8572432421756687`*^9, 3.85724337245228*^9}, {
-  3.8572441193106833`*^9, 
-  3.8572441585439796`*^9}},ExpressionUUID->"22495c78-00de-48ed-8ea8-\
+  3.8572441193106833`*^9, 3.8572441585439796`*^9}, {3.859471235762903*^9, 
+  3.85947124095538*^9}},ExpressionUUID->"22495c78-00de-48ed-8ea8-\
 61d576c4a725"]
 }, Open  ]],
 
@@ -486,7 +474,7 @@ algorithms."
 }, Open  ]]
 },
 WindowSize->{808, 747},
-WindowMargins->{{Automatic, 12}, {Automatic, 0}},
+WindowMargins->{{7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"f1353a65-faef-4fcd-8d62-1140ae9c3918"
@@ -518,11 +506,11 @@ Cell[6887, 206, 4022, 105, 303, "Text",ExpressionUUID->"925109ee-b10e-41a6-ab06-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[10946, 316, 291, 4, 54, "Subsection",ExpressionUUID->"ed631482-6a56-4b1b-b046-696f8e6d43fa"],
-Cell[11240, 322, 4422, 114, 523, "Text",ExpressionUUID->"22495c78-00de-48ed-8ea8-61d576c4a725"]
+Cell[11240, 322, 4108, 102, 523, "Text",ExpressionUUID->"22495c78-00de-48ed-8ea8-61d576c4a725"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15699, 441, 289, 4, 54, "Subsection",ExpressionUUID->"3c8643a6-8aa5-4041-b4ae-abb7d84df7ce"],
-Cell[15991, 447, 1361, 36, 131, "Text",ExpressionUUID->"cc9ea312-4979-4b3c-8eb9-9f3cfb65c9e6"]
+Cell[15385, 429, 289, 4, 54, "Subsection",ExpressionUUID->"3c8643a6-8aa5-4041-b4ae-abb7d84df7ce"],
+Cell[15677, 435, 1361, 36, 131, "Text",ExpressionUUID->"cc9ea312-4979-4b3c-8eb9-9f3cfb65c9e6"]
 }, Open  ]]
 }, Open  ]]
 }
