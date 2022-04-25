@@ -1,0 +1,80 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{11: Due 05/02}{The laws of probability, so true in general, so fallacious in particular.}{Edward Gibbon}
+
+% Problem 1
+\problem{10} The probabilities of several events in a finite probability space are given below:
+	\[
+	\begin{aligned}
+	P(A)&= 0.10 & P(A \text{ and } B)&= 0.06 \\
+	P(B)&= 0.34 & P(A \text{ and } C)&= 0.77 \\
+	P(C)&= 0.81 & P(B \text{ or } C)&= 0.25 \\
+	P(D)&= 0.50 & P(B \text{ and } D)&= 0.00
+	\end{aligned}
+	\] 
+\begin{enumerate}[(a)]
+\item Find $P(A \text{ or } B)$. 
+\item Assuming $A$ and $D$ are independent events, find $P(A \text{ and } D)$.
+\item Find $P(A \;|\; B)$.
+\item Find $P(B \text{ and } C)$. 
+\item Are $C$ and $D$ disjoint? Explain.
+\item Are $A$ and $C$ independent? Explain.
+\item Are $B$ and $D$ independent? Explain.
+\end{enumerate} 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Of the most recent hit `scamster' shows, people were surveyed about whether they had watched \textit{The Dropout} or \textit{Inventing Anna}. Fifty people were surveyed with twenty-one of them saying that they had seen \textit{The Dropout}, thirty-seven of them saying that they had seen \textit{Inventing Anna}, and twelve of them saying that they had watched both. Suppose you select one of these fifty people at random. 
+	\begin{enumerate}[(a)]
+	\item Find the probability that they had seen \textit{The Dropout}.
+	\item Find the probability that they had only seen \textit{Inventing Anna}.
+	\item Find the probability that they had seen neither show.
+	\item Find the probability that they had seen \textit{The Dropout} given that they had seen \textit{Inventing Anna}.
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose a blood test for a common genetic marker correctly identifies when a person has the marker 97.4\% of the time. The test incorrectly indicates that a person has the marker when they do not 6.5\% of the time. It is estimated that 78\% of the population possesses the genetic marker. 
+	\begin{enumerate}[(a)]
+	\item What is the probability that a person that tests positive for the marker has the genetic marker?
+	\item What is the probability that a person being tested for the marker will test positive or have the marker? 
+	\item What is the probability that a person that does not possess the marker will test negative for the marker?
+	\item Given that a person tests for the marker, what is the probability that they actually have the marker? 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} You are playing a game where you roll a die. If you roll a number less than three, you win nothing. If you roll a four or a five, you win \$1. But if you roll a six, you win \$3. 
+	\begin{enumerate}[(a)]
+	\item Find the probability that if you roll the die twice that you win nothing.
+	\item Find the average amount you expect to win per game.
+	\item If you had to pay \$2 to play this game, should you play this game? Explain. 
+	\end{enumerate}
+
+
+\end{document}
