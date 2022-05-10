@@ -144,6 +144,97 @@ Then the solutions are $x= \dfrac{-b + \sqrt{b^2 - 4ac}}{2a}$ and $x= \dfrac{-b 
 \sol The statement is \textit{true}. Suppose $f(x)= ax^2 + bx + c$. If the solutions to $f(x)= 0$ are $x= r_1$ and $x= r_2$, then $f(x)$ factors as $f(x)= a(x - r_1)(x - r_2)$. But then we have\dots
 	\[
 	f(x)= 20 \left(x - \dfrac{-7}{10} \right) \left(x - \dfrac{3}{2} \right)= 20 \left(x + \dfrac{7}{10} \right) \left(x - \dfrac{3}{2} \right)
+	\] \pvspace{1.5cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: Every system of linear equations can be solved using substitution or elimination. \pspace
+
+\sol The statement is \textit{false}. One can use substitution or elimination to solve a system of linear equations \textit{provided there is a solution}. However, not all systems of linear equations have a solution. For instance, the following system of linear equations has no solution:
+	\[
+	\begin{aligned}
+	x + y&= 0 \\
+	x + y&= 1
+	\end{aligned}
 	\]
+Subtracting the first equation from the second, we have $0= 1$, which is impossible. Alternatively, solving for $y$ in each we have $y= -x$ and $y= 1 - x$. Observe that these are distinct parallel lines so that these lines do not intersect, i.e. there is no solution to the system of equations. \pvspace{1.5cm}
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: The function $f(x)= -5 \left( \dfrac{2}{3} \right)^{4x}$ is decreasing. \pspace
+
+\sol The statement is \textit{false}. Recall that when we write an exponential function $y= Ab^{cx}$ in the form $y= Ab^x$, the function is increasing if $A > 0$ and $b > 1$ or $A < 0$ and $b < 1$, and decreasing if $A > 0$ and $b < 1$ or $A < 0$ and $b > 1$. We have\dots
+	\[
+	f(x)= -5 \left( \dfrac{2}{3} \right)^{4x}=  -5 \left( \left( \dfrac{2}{3} \right)^4 \right)^x= -5 \left( \dfrac{16}{81} \right)^x
+	\]
+Because $A= -5 < 0$ and $b= \frac{16}{81} < 1$, the function $f(x)$ is increasing. \pvspace{1.5cm}
+
+
+
+% Quiz 17
+\quizsol \textit{True/False}: For any base $b > 0$ with $b \neq 1$, $\log_b 1= 0$. \pspace
+
+\sol The statement is \textit{true}. Recall that $\log_b a$ is the power of $b$, say $p$, such that $b^p= a$. But $b^0= 1$ for any $b \neq 0$. But then $\log_b 1= 0$ for $b > 0$ with $b \neq 1$. 
+
+
+
+\newpage
+
+
+
+% Quiz 18
+\quizsol \textit{True/False}: We have $\log_6(19)= \dfrac{\ln(19)}{\ln(6)}$. \pspace
+
+\sol The statement is \textit{true}. Recall that we have the change of base formula $\log_b a= \dfrac{\log_c a}{\log_c b}$. So we have $\log_6(19)= \dfrac{\log_b(19)}{\log_b(6)}$ for any base $b > 0$ with $b \neq 1$. Choosing $b= e$, we have $\log_6(19)= \dfrac{\log_e(19)}{\log_e(6)}= \dfrac{\ln(19)}{\ln(6)}$. Generally, using the change of base formula with $b= e$, we have $\log_b a= \dfrac{\log_e a}{\log_e b}= \dfrac{\ln a}{\ln b}$. \pvspace{1.5cm}
+
+
+
+% Quiz 19
+\quizsol \textit{True/False}: If $\log_2(5 - 2x) + 3= 4$, then $x= \frac{3}{2}$. \pspace
+
+\sol The statement is \textit{true}. We have\dots
+	\[
+	\begin{aligned}
+	\log_2(5 - 2x) + 3&= 4 \\[0.3cm]
+	\log_2(5 - 2x)&= 1 \\[0.3cm]
+	2^{\log_2(5 - 2x)}&= 2^1 \\[0.3cm]
+	5 - 2x&= 2 \\[0.3cm]
+	2x&= 3 \\[0.3cm]
+	x&= \dfrac{3}{2}
+	\end{aligned}
+	\]
+We can also check this: 
+	\[
+	\log_2(5 - 2 \cdot \frac{3}{2}) + 3= \log_2(5 - 3) + 3= \log_2(2) + 3= 1 + 3= 4
+	\] \pvspace{1.5cm}
+
+
+
+% Quiz 20
+\quizsol \textit{True/False}: If you take out a loan for \$7,000 at 4.2\% annual interest, compounded continuously, then the amount you owe after 8~years is $7000(1 + 0.042)^8$. \pspace
+
+\sol The statement is \textit{false}. Recall that the resulting amount of money, $F$, after applying an interest rate $r$, compounded continuously, to an amount $P$ for $t$ years is
+	\[
+	F= P e^{rt}
+	\]
+In this case, we have $P= 7000$, $r= 0.042$, and $t= 8$. Therefore, the amount is $F= 7000 e^{0.042 \cdot 8} \approx 9795.37$. 
+
+
+
+\newpage
+
+
+
+% Quiz 21
+\quizsol \textit{True/False}: The number of digits in $5^{87}$, represented in base 9, is $\text{RU}(\log_9(5^{87}))$, where $\text{RU}$ denotes that one should `round up' to the smallest integer greater than $\log_9(5^{87})$. \pspace
+
+\sol The statement is \textit{true}. The number of digits in a number $x$ in base $b$ is $\text{RU}(\log_b x)$. We have
+	\[
+	\text{RU}(\log_9(5^{87}))= \text{RU}(87 \log_9 5)= \text{RU}(87 \cdot 0.732487)= \text{RU}(63.7263)= 64
+	\]
+Therefore, $5^{87}$ has 64 digits in base 9. 
+
 
 \end{document}

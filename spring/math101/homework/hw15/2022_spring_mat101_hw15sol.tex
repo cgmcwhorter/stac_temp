@@ -1,0 +1,158 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{15: Due 05/10}{If you think you can do a thing or think you can’t do a thing, you’re right.}{Henry Ford}
+
+% Problem 1
+\problem{10} Write the following functions in the form $y= Ab^x$ and determine whether the function is increasing or decreasing:
+	\begin{enumerate}[(a)]
+	\item $f(x)= -6(7^{-2x + 1})$
+	\item $g(x)= 8 \left( \dfrac{16}{9} \right)^{x/2}$
+	\item $h(x)= -15 \left( \dfrac{1}{2} \right)^{1 - x}$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	f(x)= -6(7^{-2x + 1})= -6( 7^{-2x} \cdot 7^1)= -42 ( (7^{-2})^x)= -42 \left( \dfrac{1}{49} \right)^x
+	\]
+Because $A= -42 < 0$, $b= \frac{1}{49} < 1$, and $c= 1 > 0$, $f(x)$ is increasing. \pspace
+ 
+\item We have\dots
+	\[
+	g(x)= 8 \left( \dfrac{16}{9} \right)^{x/2}= 8 \left( \left( \dfrac{16}{9} \right)^{1/2} \right)^x= 8 \left( \dfrac{4}{3} \right)^x
+	\]
+Because $A= 8 > 0$, $b= \frac{4}{3} > 1$, and $c= 1 > 0$, $g(x)$ is increasing. \pspace
+
+\item We have\dots
+	\[
+	h(x)= -15 \left( \dfrac{1}{2} \right)^{1 - x}= -15 \left( \left( \dfrac{1}{2} \right)^1 \cdot \left( \dfrac{1}{2} \right)^{-x} \right)= -\dfrac{15}{2} \left( \left( \dfrac{1}{2} \right)^{-1} \right)^x= -\dfrac{15}{2} \, (2^x)
+	\]
+Because $A= -\frac{15}{2} < 0$, $b= 2 > 1$, and $c= 1 > 0$, $h(x)$ is decreasing. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Rewrite the following logarithm in terms of $\log_2 x$, $\log_2 y$, and constants:
+	\[
+	\log_2 \left( \dfrac{x^7}{4y^8} \right)
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\log_2 \left( \dfrac{x^7}{4y^8} \right)&= \log_2(x^7) - \log_2(4y^8) \\[0.3cm]
+	&= \log_2(x^7) - \big( \log_2(4) + \log_2(y^8) \big) \\[0.3cm]
+	&= \log_2(x^7) - \log_2(4) - \log_2(y^8) \\[0.3cm]
+	&= 7\log_2(x) - 2 - 8\log_2(y) \\[0.3cm]
+	&= 7\log_2(x) - 8\log_2(y) - 2
+	\end{aligned}
+	\]
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Solve the following equation:
+	\[
+	\log_3(5 - x) + 4= 36
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\log_3(5 - x) + 4&= 36 \\[0.3cm]
+	\log_3(5 - x)&= 32 \\[0.3cm]
+	3^{\log_3(5 - x)}&= 3^{32} \\[0.3cm]
+	5 - x&= 3^{32} \\[0.3cm]
+	x&= 5 - 3^{32}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Solve the following equation: 
+	\[
+	e^{2x - 1}= 17
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	e^{2x - 1}&= 17 \\[0.3cm]
+	\ln e^{2x - 1}&= \ln(17) \\[0.3cm]
+	2x - 1&= \ln(17) \\[0.3cm]
+	2x&= \ln(17) + 1 \\[0.3cm]
+	x&= \dfrac{\ln(17) + 1}{2}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Suppose you invest \$500 in an account that earns 4.2\% annual interest, compounded quarterly. How long until you have \$800 saved? \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	800&= 500 \left(1 + \dfrac{0.042}{4} \right)^{4t} \\[0.3cm]
+	800&= 500 (1.0105)^{4t} \\[0.3cm]
+	(1.0105)^{4t}&= 1.6 \\[0.3cm]
+	\ln(1.0105)^{4t}&= \ln(1.6) \\[0.3cm]
+	4t \ln(1.0105)&= \ln(1.6) \\[0.3cm]
+	t&= \dfrac{\ln(1.6)}{4\ln(1.0105)} \\[0.3cm]
+	t&\approx 11.25 \text{ years}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} If you take out a \$10,000 loan at a 7\% annual interest rate, compounded continuously, how long until the loan amount has doubled? \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	F&= P e^{rt} \\[0.3cm]
+	20000&= 10000 e^{0.07 t} \\[0.3cm]
+	e^{0.07t}&= 2 \\[0.3cm]
+	\ln e^{0.07t}&= \ln(2) \\[0.3cm]
+	0.07t&= \ln(2) \\[0.3cm]
+	t&= \dfrac{\ln(2)}{0.07} \\[0.3cm]
+	t&\approx 9.9 \text{ years}
+	\end{aligned}
+	\]
+
+
+\end{document}

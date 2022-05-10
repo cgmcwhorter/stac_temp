@@ -1,0 +1,132 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{13: Due 05/03}{You have no idea, how much poetry there is in the calculation of a table of logarithms!}{Carl Friedrich Gauss}
+
+% Problem 1
+\problem{10} Compute the following:
+	\begin{enumerate}[(a)]
+	\item $\log_7(1)$
+	\item $\log_2(128)$
+	\item $\log_4 \left( \dfrac{1}{16} \right)$
+	\item $\ln(e)$
+	\item $\ln(e^{2/3})$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item $\log_7(1)= 0$ 
+
+\item $\log_2(128)= \log_2(2^7)= 7$
+
+\item $\log_4 \left( \dfrac{1}{16} \right)= \log_4 \left( \dfrac{1}{4^2} \right)= \log_4(4^{-2})= -2$
+
+\item $\ln(e)= \log_e(e^1)= 1$
+
+\item $\ln(e^{2/3})= \log_e(e^{2/3})= \frac{2}{3}$
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Write the following in terms of $\ln x$, $\ln y$, and $\ln z$:
+	\[
+	\ln \left( \dfrac{x^2 y}{z^6} \right)
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	\ln \left( \dfrac{x^2 y}{z^6} \right)&= \ln(x^2y) - \ln(z^6) \\[0.3cm]
+	&= \ln(x^2) + \ln(y) - \ln(z^6) \\[0.3cm]
+	&= 2 \ln(x) + \ln(y) - 6 \ln(z) 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Write the following as a single logarithm involving no negative powers:
+	\[
+	5\log_2(x) - 2\log_2 \left( \dfrac{1}{y^2} \right) - 3\log_2(z) + 3
+	\] \pspace
+
+\sol
+	\[
+	\begin{aligned}
+	5\log_2(x) - 2\log_2 \left( \dfrac{1}{y^2} \right) - 3\log_2(z) + 3&= 5\log_2(x) - 2\log_2 \left( \dfrac{1}{y^2} \right) - 3\log_2(z) + \log_2(2^3) \\[0.3cm]
+	&= 5\log_2(x) - 2\log_2 \left( \dfrac{1}{y^2} \right) - 3\log_2(z) + \log_2(8) \\[0.3cm]
+	&= \log_2(x^5) + \log_2 \left( \dfrac{1}{y^{-4}} \right) + \log_2(z^{-3}) + \log_2(8) \\[0.3cm]
+	&= \log_2 \left( \dfrac{x^5 \cdot z^{-3} \cdot 8}{y^{-4}} \right) \\[0.3cm]
+	&= \log_2 \left( \dfrac{8 x^5 y^4}{z^3} \right) 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Solve the following equations:
+	\begin{enumerate}[(a)]
+	\item $15 \left( \dfrac{1}{2} \right)^x= 45$
+	\item $3^{2 - x} + 5= 15$
+	\item $e^{x/3} - 12= 28$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\begin{aligned}
+	15 \left( \dfrac{1}{2} \right)^x&= 45 \\[0.3cm]
+	\left( \dfrac{1}{2} \right)^x&= 3 \\[0.3cm]
+	\log_2 \left( \left( \dfrac{1}{2} \right)^x \right)&= \log_{1/2}(3) \\[0.3cm]
+	x&= \log_{1/2}(3)
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	3^{2 - x} + 5&= 15 \\[0.3cm]
+	3^{2 - x}&= 10 \\[0.3cm]
+	\log_3(3^{2 - x})&= \log_3(10) \\[0.3cm]
+	2 - x&= \log_3(10) \\[0.3cm]
+	x&= 2 - \log_3(10)
+	\end{aligned}
+	\]
+
+\item 
+	\[
+	\begin{aligned}
+	e^{x/3} - 12&= 28 \\[0.3cm]
+	e^{x/3}&= 40 \\[0.3cm]
+	\ln(e^{x/3})&= \ln(40) \\[0.3cm]
+	\dfrac{x}{3}&= \ln(40) \\[0.3cm]
+	x&= 3 \ln(40)
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+\end{document}

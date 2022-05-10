@@ -1,0 +1,94 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 05/05}{Money is a terrible master but an excellent servant.}{P.T. Barnum}
+
+% Problem 1
+\problem{10} Suppose you take out a loan for \$250 at a 5\% annual interest rate, compounded monthly. How much is owed after a year and a half? \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	&= 250 \left(1 + \dfrac{0.05}{12} \right)^{12 \cdot 1.5} \\[0.3cm]
+	&= 250 (1.00416667)^{18} \\[0.3cm]
+	&= 250 (1.0777162) \\[0.3cm]
+	&= \$269.43
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} If you invest \$6000 in an account which earns 2.5\% annual interest, compounded continuously, how much is in the account after 7~years? \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	F&= P e^{rt} \\[0.3cm]
+	&= 6000 e^{0.025 \cdot 7} \\[0.3cm]
+	&= 6000 (1.1912462) \\[0.3cm]
+	&= \$7147.48
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} If one were to place \$5000 into a savings account that earns 4\% annual interest, compounded semiannually, how long until the account has \$7000? \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	7000&= 5000 \left(1 + \dfrac{0.04}{2} \right)^{2t} \\[0.3cm]
+	7000&= 5000 (1.02)^{2t} \\[0.3cm]
+	(1.02)^{2t}&= 1.4 \\[0.3cm]
+	\ln (1.02)^{2t}&= \ln(1.4) \\[0.3cm]
+	2t \ln(1.02)&= \ln(1.4) \\[0.3cm]
+	t&= \dfrac{\ln(1.4)}{2 \ln(1.02)} \\[0.3cm]
+	t&\approx 8.5 \text{ years}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} If you take out a loan for \$1200 at a 6.5\% annual interest, compounded continuously, how long until the loan amount has doubled?  \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	F&= P e^{rt} \\[0.3cm]
+	2400&= 1200 e^{0.065 t} \\[0.3cm]
+	e^{0.065 t}&= 2 \\[0.3cm]
+	\ln e^{0.065 t}&= \ln(2) \\[0.3cm]
+	0.065t&= \ln(2) \\[0.3cm]
+	t&= \dfrac{\ln(2)}{0.065} \\[0.3cm]
+	t&\approx 10.66 \text{ years}
+	\end{aligned}
+	\]
+
+
+\end{document}
