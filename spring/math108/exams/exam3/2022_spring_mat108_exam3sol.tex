@@ -1,0 +1,401 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 3}
+\renewcommand{\term}{Spring -- 2022}
+\newcommand{\examdate}{05/11/2022}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question A student is given a set of data points on an exam to for which they are to create a linear regression. Suppose that the points are $(-2, 1)$, $(0, 5)$, $(2, 3)$, and $(4, 5)$. Their computation of the least square regression line is shown below. Unfortunately, they spilled coffee on their work, obscuring some of the numbers. 
+
+\begin{parts}
+\part[7] Recompute (i)--(vii) for the student and place your answers in the appropriate space below. 
+	\[
+	\begin{aligned}
+	\overline{x}&= \text{(i)} \\[0.3cm]
+	\overline{y}&= \dfrac{1 + 5 + 3 + 5}{4}= \dfrac{14}{4}= 3.5 \\[0.3cm]
+	s_x^2&= \dfrac{1}{3} \cdot 20 \approx 6.6667 \Longrightarrow s_x \approx 2.582 \\[0.3cm]
+	s_y^2&= \text{(ii)} \Longrightarrow s_y= \text{(iii)}
+	\end{aligned}
+	\]
+	
+\begin{table}[!ht]
+\centering
+\begin{tabular}{rrrrrrrrr}
+\multicolumn{1}{c|}{$x$} & \multicolumn{1}{c|}{$y$} & \multicolumn{1}{c|}{$x_i - \overline{x}$} & \multicolumn{1}{c|}{$(x_i - \overline{x})^2$} & \multicolumn{1}{c|}{$y_i - \overline{y}$} & \multicolumn{1}{c|}{$(y_i - \overline{y})^2$} & \multicolumn{1}{c|}{$\frac{x_i - \overline{x}}{s_x}$} & \multicolumn{1}{c|}{$\frac{y_i - \overline{y}}{s_y}$} & \multicolumn{1}{c}{$\frac{x_i - \overline{x}}{s_x} \cdot \frac{y_i - \overline{y}}{s_y}$} \\ \hline
+\multicolumn{1}{r|}{$-2$} & \multicolumn{1}{r|}{$1$} & \multicolumn{1}{r|}{(iv)} & \multicolumn{1}{r|}{$9$} & \multicolumn{1}{r|}{$-2.5$} & \multicolumn{1}{r|}{$6.25$} & \multicolumn{1}{r|}{$-1.1619$} & \multicolumn{1}{r|}{$-1.3056$} & $1.517$ \\
+\multicolumn{1}{r|}{$0$} & \multicolumn{1}{r|}{$5$} & \multicolumn{1}{r|}{$-1$} & \multicolumn{1}{r|}{$1$} & \multicolumn{1}{r|}{$1.5$} & \multicolumn{1}{r|}{$2.25$} & \multicolumn{1}{r|}{$-0.3873$} & \multicolumn{1}{r|}{$0.7833$} & $-0.3034$ \\
+\multicolumn{1}{r|}{$2$} & \multicolumn{1}{r|}{$3$} & \multicolumn{1}{r|}{$1$} & \multicolumn{1}{r|}{$1$} & \multicolumn{1}{r|}{$-0.5$} & \multicolumn{1}{r|}{(v)} & \multicolumn{1}{r|}{$0.3873$} & \multicolumn{1}{r|}{$-0.2611$} & $-0.1011$ \\
+\multicolumn{1}{r|}{$4$} & \multicolumn{1}{r|}{$5$} & \multicolumn{1}{r|}{$3$} & \multicolumn{1}{r|}{$9$} & \multicolumn{1}{r|}{$1.5$} & \multicolumn{1}{r|}{$2.25$} & \multicolumn{1}{r|}{$1.1619$} & \multicolumn{1}{r|}{$0.7833$} & (vi) \\ \hline
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & Sum: & (vii) & Sum: & $11$ & \multicolumn{1}{l}{} & Sum: & $2.0226$
+\end{tabular}
+\end{table}
+
+	\[
+	\begin{aligned}
+	\text{(i)}&= \dfrac{-2 + 0 + 2 + 4}{4}= 1 &\hspace{1cm}&& \text{(v)}&= (-0.5)^2= 0.25 \\[0.3cm]
+	\text{(ii)}&= \dfrac{1}{3} \cdot 11 \approx 3.6667 &&& \text{(vi)}&= 1.1619 \cdot 0.7833 \approx 0.9101 \\[0.3cm]
+	\text{(iii)}&= \sqrt{3.6667} \approx 1.9149 &&& \text{(vii)}&= 9 + 1 + 1 + 9= 20 \\[0.3cm]
+	\text{(iv)}&= -2 - 1= -3
+	\end{aligned}
+	\]
+
+\part[5] Compute $r^2$ for the student. Based on this value, explain to the student whether the least square regression line is a `good' model. \pspace
+
+{\itshape We know $r= \frac{1}{3} \cdot 2.0226= 0.6742$. But then $r^2 \approx 0.4545$. Because this value is `small', i.e. less than $0.85$, this linear model is not a `good' model.} \pvspace{0.3cm}
+
+\part[4] Given that the resulting linear regression is $\widehat{y}= 0.5x + 3$, find the predicted value for $x= 2$ and its corresponding residual for the student. \pspace
+
+{\itshape The predicted value for $x= 2$ is $\widehat{y}(2)= 0.5(2) + 3= 4$ with residual $y_i - \widehat{y}_i= 3 - 4= -1$.}
+\end{parts}
+
+
+
+% Question 2
+\newpage
+\question[8] The same student from Problem~1 also had to compute the regression coefficient, $R$, for several different data sets. Unfortunately, they dropped their papers---separating the data from the computed $R$ value. Match the dataset to the most likely regression coefficient for the student. \pspace
+	\begin{figure}[!ht]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+	   \centering
+	   \includegraphics[width=0.9\textwidth]{reg1.png}
+	   \caption*{(a)}
+	\end{minipage}\hfill
+	\begin{minipage}{0.45\textwidth}
+	   \centering
+	   \includegraphics[width=0.9\textwidth]{reg2.png}
+	   \caption*{(b)}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+	   \centering
+	   \includegraphics[width=0.9\textwidth]{reg3.png}
+	   \caption*{(c)}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+	   \centering
+	   \includegraphics[width=0.9\textwidth]{reg4.png}
+	   \caption*{(d)}
+	\end{minipage}
+	\end{figure} \pspace
+
+\begin{enumerate}[(i)]
+\item\underline{\hspace{0.5cm}(b)\hspace{0.5cm}}: $R= -0.9831$ \pspace
+\item\underline{\hspace{0.5cm}(c)\hspace{0.5cm}}: $R= -0.6050$ \pspace
+\item\underline{\hspace{0.5cm}(a)\hspace{0.5cm}}: $R= 0.4635$ \pspace
+\item\underline{\hspace{0.5cm}(d)\hspace{0.5cm}}: $R= 0.9032$
+\end{enumerate} 
+
+
+
+
+
+
+% Question 3
+\newpage
+\question Suppose $A$, $B$, and $C$ are events in a finite probability space. Suppose $P(A)= 0.40$, $P(B)= 0.20$, $P(C)= 0.30$, $P(A \text{ and } B)= 0$, and $P(B \text{ and } C)= 0.05$. \pspace
+
+\begin{parts}
+\part[2] Assuming $A$ and $C$ are independent, compute $P(A \text{ and } C)$. \pvspace{1cm}
+
+{\itshape Because $A$ and $C$ are independent,
+	\[
+	P(A \text{ and } C)= P(A) \cdot P(C)= 0.40 \cdot 0.30= 0.12
+	\]
+} \pvspace{0.2cm}
+
+\part[2] Still assuming that $A$ and $C$ are independent, find $P(A \text{ or } C)$. \pvspace{1cm}
+	\[
+	P(A \text{ or } C)= P(A) + P(C) - P(A \text{ and } C)= 0.40 + 0.30 - 0.12= 0.58
+	\] \pvspace{1.2cm}
+
+\part[2] Are $A$ and $B$ disjoint events? Explain. \pvspace{1.5cm}
+
+{\itshape Because $P(A \text{ and } B)= 0$, $A$ and $B$ are disjoint events.} \pvspace{1.5cm}
+
+\part[2] Are $A$ and $B$ independent events? Explain. \pvspace{1.25cm}
+
+{\itshape By (c), we know that $A$ and $B$ are disjoint. Therefore, $A$ and $B$ are not independent because disjoint events can never be independent.} \pvspace{1.25cm}
+
+\part[2] Find $P(B \;|\; C)$. 
+	\[
+	P(B \;|\;C)= \dfrac{P(B \text{ and } C)}{P(C)}= \dfrac{0.05}{0.30} \approx 0.1667
+	\]
+\end{parts}
+
+
+
+% Question 4
+\newpage
+\question Students across various STEM majors at local colleges were surveyed to determine whether they preferred Netflix, Hulu, Disney$+$, or HBO Max. The results are shown below.
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|r||c|c|c|c|c||c|} \hline
+	& Biology & Chemistry & Computer Science & Physics & Mathematics & Total \\ \hline\hline
+	Netflix & 3 & 7 & 14 & 4 & 8 & 36 \\ \hline
+	Hulu & 6 & 13 & 12 & 3 & 7 & 41 \\ \hline
+	Disney$+$ & 15 & 4 & 1 & 4 & 2 & 26 \\ \hline
+	HBO Max & 10 & 2 & 5 & 2 & 1 & 20 \\ \hline\hline
+	Total & 34 & 26 & 32 & 13 & 18 & 123 \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{parts}
+\part[2] What is the probability that a randomly selected student was a Physics major that preferred Disney$+$? \pvspace{0.35cm}
+	\[
+	P(\text{Physics and Disney}+)= \dfrac{4}{123} \approx 0.0325
+	\] \pvspace{0.35cm}
+
+\part[2] What is the probability that a randomly selected student preferred Hulu? \pvspace{0.35cm}
+	\[
+	P(\text{Hulu})= \dfrac{41}{123} \approx 0.3333
+	\] \pvspace{0.35cm}
+
+\part[2] What is the probability that a randomly selected student preferred Netflix or was a Chemistry major? \pvspace{0.35cm}
+	\[
+	P(\text{Netflix or Chemistry})= \dfrac{36 + 26 - 7}{123}= \dfrac{55}{123} \approx 0.4472
+	\] \pvspace{0.35cm}
+
+\part[2] What is the probability that a Biology or Computer Science major preferred Netflix? \pvspace{0.35cm}
+	\[
+	P(\text{Netflix} \;|\; \text{Bio or CS})= \dfrac{3 + 14}{34 + 32}= \dfrac{17}{66} \approx 0.2576
+	\] \pvspace{0.35cm}
+
+\part[2] What is the probability that a student that preferred HBO Max was a Mathematics major? \pvspace{0.35cm}
+	\[
+	P(\text{Math} \;|\; \text{HBO Max})= \dfrac{1}{20}= 0.05
+	\]
+\end{parts}
+
+
+
+% Question 5
+\newpage
+\question Twenty-three students in a middle school class were asked whether they had any pets. Of the students, eight said that they had a dog, five said they had a cat, and two students said that they had both. \pspace
+
+\begin{parts}
+\part[3] What is the probability that a randomly selected student did not have a dog or cat? \pvspace{1.0cm}
+	\[
+	P(\text{No Dog or Cat})= \dfrac{12}{23} \approx 0.5217
+	\] \pvspace{1.0cm}
+	
+\part[3] What is the probability that a randomly selected student had a dog or a cat? \pvspace{1.0cm}
+	\[
+	P(\text{Dog or Cat})= \dfrac{6 + 2 + 3}{23}= \dfrac{11}{23} \approx 0.4783
+	\] \pvspace{1.0cm}
+
+\part[4] Assuming that a student with a cat was randomly chosen, what is the probability that they have a dog? \pvspace{0.5cm}
+	\[
+	P(\text{Dog} \;|\; \text{Cat})= \dfrac{2}{2 + 3}= \dfrac{2}{5}= 0.40 
+	\] \vfill
+
+	\[
+	\begin{tikzpicture}
+	\draw (0,0) rectangle (9,6);
+	\draw (3.5,3) circle (2);
+	\draw (5.5,3) circle (2);
+	
+	\node at (3.5,5.2) {Dog};
+	\node at (5.5,5.2) {Cat}; 
+	
+	\node at (2.5,3) {6};
+	\node at (4.5,3) {2};
+	\node at (6.5,3) {3};
+	\node at (8,1) {12};
+	\end{tikzpicture}
+	\]
+
+\end{parts}
+
+
+
+
+
+% Question 6
+\newpage
+\question When it comes to `fine' Mexican dining, people agree the two best options are Chipotle or Moe's. One survey suggested 80\% of people prefer Chipotle to Moe's. However of those surveyed, only 40\% of people that went to Chipotle had a good experience whereas 60\% of Moe's customers had a good experience. \pspace
+
+\begin{parts}
+\part[3] What is the probability that a randomly selected person had a good experience at Chipotle or Moe's? \pvspace{1.05cm}
+	\[
+	P(\text{Good at Chipotle/Moe's})= 0.32 + 0.12= 0.44
+	\] \pvspace{1.05cm}
+
+\part[3] What is the probability that a randomly selected person either preferred Moe's or had a bad experience at Chipotle? \pvspace{1.05cm}
+	\[
+	P(\text{Prefer Moe's or Bad at Chipotle})= 0.48 + 0.12 + 0.08= 0.68
+	\] \pvspace{1.05cm}
+
+\part[4] What is the probability that a person that did not have a good experience had it at Chipotle? \pvspace{1.05cm}
+	\[
+	P(\text{Chipotle} \;|\; \text{Bad Experience})= \dfrac{0.48}{0.48 + 0.08}= \dfrac{0.48}{0.56} \approx 0.8571
+	\] \vfill
+
+		\[
+		\begin{tikzpicture}[scale= 1.0]
+		\def\FirstUpLabel{Chipotle}
+		\def\FirstDownLabel{Moe's}
+		\def\SecondUpLabel{Good}
+		\def\SecondDownLabel{Bad}
+		\def\Up{$0.80$}
+		\def\Down{$0.20$}
+		\def\UpUp{$0.40$}
+		\def\UpDown{$0.60$}
+		\def\DownUp{$0.60$}
+		\def\DownDown{$0.40$}
+		\def\first{$0.32$}
+		\def\second{$0.48$}
+		\def\third{$0.12$}
+		\def\fourth{$0.08$}
+		
+		\node at (1,1) {\FirstUpLabel};	
+		\node at (1,-1) {\FirstDownLabel};	
+		\node at (1.8,0.6) {\Up};
+		\node at (1.8,-0.6) {\Down};
+		\draw[thick] (0,0) -- (2.5,1.5);
+		\draw[thick] (0,0) -- (2.5,-1.5);
+		
+		\node at (3.75,2.3) {\SecondUpLabel};
+		\node at (3.75,0.7) {\SecondDownLabel};
+		\node at (4,1.8) {\UpUp};
+		\node at (4.1,1.2) {\UpDown};
+		\node at (5.75,2.5) {\first};
+		\node at (5.75,0.5) {\second};
+		\draw[thick] (2.5,1.5) -- (5,2.5);
+		\draw[thick] (2.5,1.5) -- (5,0.5);
+
+		\node at (3.75,-0.7) {\SecondUpLabel};
+		\node at (3.75,-2.3) {\SecondDownLabel};
+		\node at (4.1,-1.2) {\DownUp};
+		\node at (4.1,-1.8) {\DownDown};
+		\node at (5.75,-0.5) {\third};	
+		\node at (5.75,-2.5) {\fourth};	
+		\draw[thick] (2.5,-1.5) -- (5,-0.5);
+		\draw[thick] (2.5,-1.5) -- (5,-2.5);
+		\end{tikzpicture}
+		\]
+\end{parts} 
+
+
+
+% Question 7
+\newpage
+\question ``Step right up,'' yells a clown at a carnival. ``Try your luck and see if fortune favors you today!'' You walk up to the booth. The clown explains that you can pay \$1 to try your luck at a dice rolling game. If you roll either a one, two, three, or four, you win nothing. If you roll a five, you receive \$0.50. However, if you roll a six, then you win \$5. \pspace
+
+\begin{parts}
+\part[7] Compute the amount, on average, you can expect to win playing this game. \pvspace{1.5cm}
+
+{\itshape The expected value, i.e. average amount you win per game, is\dots
+	\[
+	\begin{aligned}
+	\mu&= \sum_i x_i p_i \\[0.3cm]
+	&= 0 \cdot \dfrac{1}{6} + 0 \cdot \dfrac{1}{6} + 0 \cdot \dfrac{1}{6} + 0 \cdot \dfrac{1}{6}+ 0.50 \cdot \dfrac{1}{6} + 5 \cdot \dfrac{1}{6} \\[0.3cm]
+	&= 0 + 0 + 0 + 0 + \dfrac{1}{12} + \dfrac{5}{6} \\[0.3cm]
+	&= \dfrac{11}{12} \approx \$0.92
+	\end{aligned}
+	\]
+} \pvspace{3.4cm}
+
+\part[3] In the long run, should you play this game? Explain your reasoning using your computation in (a). \pvspace{1.5cm}
+
+{\itshape No, you should not play this game. We know from (a) that you only win \$0.92 per game, on average. However, you are paying \$1 to play this game. Therefore, you make on average $\$0.92 - \$1= -\$0.08$ per game, i.e. you are losing money on average.}
+\end{parts}
+
+
+
+% Question 8
+\newpage
+\question High school students looking to go to college will often take either the SAT or ACT. The ACT parent company data suggests that ACT scores in New York State were normally distributed with mean 26.3 and standard deviation 2.3. \pspace
+
+\begin{parts}
+\part[3] What percent of students in NYS receive below 23.2 on the ACT? \pvspace{0.45cm}
+
+{\itshape We have\dots \pvspace{0.1cm}
+	\[
+	z_{23.2}= \dfrac{23.2 - 26.3}{2.3}= \dfrac{-3.1}{2.3} \approx -1.35 \squiggle 0.0885 
+	\] \pspace
+Therefore, $P(X \leq 23.2)= 0.0885$.} \pvspace{0.45cm}
+
+\part[3] What percent of students in NYS receive above 32.7 on the ACT? \pvspace{0.45cm}
+
+{\itshape We have\dots \pvspace{0.1cm}
+	\[
+	z_{32.7}= \dfrac{32.7 - 26.3}{2.3}= \dfrac{6.4}{2.3} \approx 2.78 \squiggle 0.9973
+	\] \pspace
+Therefore, $P(X \geq 32.7)= 1 - P(X \leq 32.7)= 0.0027$.} \pvspace{0.45cm}
+
+\part[3] What percent of students in NYS receive between 23.2 and 32.7 on the ACT? \pvspace{0.45cm}
+	\[
+	P(23.2 \leq X \leq 32.7)= 0.9973 - 0.0885= 0.9088
+	\] \pvspace{2.4cm}
+
+\part[4] If you surveyed 80 students that took the ACT in NYS, what is the probability that their average score was below 25? \pvspace{0.45cm}
+
+{\itshape Because the underlying distribution is normally distributed (or because the sample size is $80 \geq 30$), we know by the Central Limit Theorem that the sampling distribution for averages of 80~students is $N(\mu, \sigma/\sqrt{n})= N(26.3, 2.3/\sqrt{80}) \approx N(26.3, 0.2571)$. We have\dots
+	\[
+	z_{25}= \dfrac{25 - 26.3}{0.2571}= \dfrac{-1.3}{0.2571} \approx -5.06 \squiggle 0.00
+	\]
+Therefore, $P( \overline{X} \leq 25) \approx 0$.}
+\end{parts}
+
+
+
+% Question 9
+\newpage
+\question There are a plethora of quick dining options in the United States. A recent survey approximates that 1 in 5 people have been to a Sonic drive-in. Suppose that ten people are randomly surveyed. \pspace
+
+\begin{parts}
+\part[3] What is the probability that exactly three of them had been to a Sonic before? \pvspace{0.8cm}
+	\[
+	P(X= 3)= 0.2013
+	\] \pvspace{1.6cm}
+
+\part[3] What is the probability that less than four of them had been to a Sonic before? \pvspace{0.2cm}
+	\[
+	\begin{aligned}
+	P(X < 4)= P(X \leq 3)&= P(X= 0) + P(X= 1) + P(X= 2) + P(X= 3) \\[0.3cm]
+	&= 0.1074 + 0.2684 + 0.3020 + 0.2013 \\[0.3cm]
+	&= 0.8791
+	\end{aligned}
+	\] \pvspace{0.1cm}
+
+\part[3] What is the probability that at least one of them had been to a sonic before? \pvspace{0.9cm}
+	\[
+	P(X \geq 1)= 1 - P(X = 0)= 1 - 0.1074= 0.8926
+	\] \pvspace{1.7cm}
+
+\part[4] Using the normal approximation to the binomial distribution, approximate the probability that if 300 people were surveyed that less than fifty of them had been to a Sonic before? \pvspace{0.4cm}
+
+{\itshape We have $np= 60 \geq 10$ and $n(1 - p)= 240 \geq 10$. By the Central Limit Theorem, we know that this binomial distribution is approximately $N(np, \sqrt{np(1 - p)}) \approx N(60, 6.9282)$. We have\dots
+	\[
+	z_{50}= \dfrac{50 - 60}{6.9282}= \dfrac{-10}{6.9282} \approx -1.44 \squiggle 0.0749
+	\]
+Therefore, $P(X \leq 50) \approx 0.0749$.}
+\end{parts}
+
+
+\end{questions}
+\end{document}
