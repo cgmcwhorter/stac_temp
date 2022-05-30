@@ -1,0 +1,278 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 05/26}{Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.}{William Paul Thurston}
+
+% Problem 1
+\problem{10} Suppose a course grade consists of the following weights:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rl}
+	Homework & 30\% \\
+	Quizzes & 15\% \\
+	Exam 1 & 20\% \\
+	Exam 2 & 20\% \\
+	Final Exam & 10\% \\
+	Project & 5\%
+	\end{tabular}
+	\end{table} \par
+Suppose also that a student had a 86\% homework average, 90\% quiz average, 72\% on exam 1, 87\% on exam 2, 95\% on the final, and 82\% on the project. Compute the student's course average. \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	\text{Course Average}&= \sum \text{weight} \cdot \text{average} \\[0.3cm]
+	&= 30(0.86) + 15(0.90) + 20(0.72) + 20(0.87) + 10(0.95) + 5(0.82) \\[0.3cm]
+	&= 84.7
+	\end{aligned}
+	\]
+	
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose a GPA consists of the following weights:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{lr|lr}
+	A & 4.0 & C+ & 2.3 \\
+	A$-$ & 3.7 & C & 2.0 \\
+	B+ & 3.3 & C$-$ & 1.7 \\
+	B & 3.0 & D & 1.0 \\
+	B$-$ & 2.7 & F & 0.0
+	\end{tabular}
+	\end{table} \par
+Suppose a student had the following grades on their courses:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{lcl}
+	Course & Credits & Grade \\ \hline
+	Survey of Literature & 3 & B$-$ \\
+	Freshman Seminar & 1 & A \\
+	Physics I & 4 & C+ \\
+	World Cultures & 3 & A$-$ \\
+	Spanish I & 3 & B \\
+	Algebra II & 4 & D \\
+	Macroeconomics & 3 & B+
+	\end{tabular}
+	\end{table}
+Compute this student's GPA. \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	\text{Semester GPA}&= \dfrac{\sum \text{credit} \cdot \text{weight}}{\sum \text{credits}} \\[0.3cm]
+	&= \dfrac{3(2.7) + 1(4.0) + 4(2.3) + 3(3.7) + 3(3.0) + 4(1.0) + 3(3.3)}{3 + 1 + 4 + 3 + 3 + 4 + 3} \\[0.3cm]
+	&= \dfrac{55.3}{21} \\[0.3cm]
+	&= 2.633
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Compute the following percentages:
+	\begin{enumerate}[(a)]
+	\item 40\% of 260
+	\item 35\% of 1050
+	\item 110\% of 37
+	\item 13\% of 810
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	260(0.40)= 104
+	\] \pspace
+
+\item 
+	\[
+	1050(0.35)= 367.5
+	\] \pspace
+
+\item 
+	\[
+	37(1.10)= 40.7
+	\] \pspace
+
+\item 
+	\[
+	810(0.13)= 105.3
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Compute the following:
+	\begin{enumerate}[(a)]
+	\item 600 increased by 80\%
+	\item 28 decreased by 60\%
+	\item 730 increased by 170\%
+	\item 45 decreased by 99\%
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+	\[
+	600(1 + 0.80)= 600(1.80)= 1080
+	\] \pspace
+
+\item 
+	\[
+	28(1 - 0.60)= 28(0.40)= 11.2
+	\] \pspace
+
+\item 
+	\[
+	730(1 + 1.70)= 730(2.70)= 1971
+	\] \pspace
+
+\item 
+	\[
+	45(1 - 0.99)= 45(0.01)= 0.45
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Convert 15~mi/min to m/s. [1~mi $=$ 5280~ft; 1~m $=$ 3.28084~ft] \pspace
+
+\sol
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c|c|c|c}
+	15~mi & 5280~ft & 1~m & 1~min \\ \hline
+	1~min & 1~mi & 3.28084~ft & 60~s
+	\end{tabular}
+	= 402.336~m/s
+	\end{table}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} How many feet are in 1~furlong? [1~furlong $= \frac{1}{8}$~mi; 1~mi $=$ 5280~ft] \pspace
+
+\sol 
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c|c|c}
+	1~furlong & $\frac{1}{8}$~mi & 5280~ft \\ \hline
+	 	        & 1~furlong & 1~mi
+	\end{tabular}
+	= 660~ft
+	\end{table}
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Convert 0.1~mi$^2$/s to ft$^2$/min. [1~mi $=$ 5280~ft] \pspace
+
+\sol
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c|c|c|c}
+	0.1~mi$^2$ & 5280~ft & 5280~ft & 60~s \\ \hline
+	1~s & 1~mi & 1~mi & 1~min
+	\end{tabular}
+	= 1\,672\,704\,000 mi$^2$/s
+	\end{table}
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Sand is filling into a giant rectangular container that is 5~ft wide, 8~ft long, and 1.5~ft deep. If the sand is flowing in at a rate of 0.6~ft$^3$/min, how long until the container is full? \pspace
+
+\sol We know the volume of the rectangular container is $V= l w h$. But then we know that the volume is $V= lwh= 5 \cdot 8 \cdot 1.5= 60 \text{ ft}^3$. But then we have\dots \pspace
+	\[
+	\begin{aligned}
+	\text{Total}&= \text{Rate} \cdot \text{Time} \\[0.3cm]
+	60 \text{ ft}^3&= 0.6 \text{ ft}^3/\text{min} \cdot t \\[0.3cm]
+	t&= \dfrac{60}{0.6} \text{ min} \\[0.3cm]
+	t&=  100 \text{ min}
+	\end{aligned}
+	\]
+Therefore, the sand will fill the container in 100~minutes, or 1~hour and 40~minutes. 
+
+
+
+\newpage
+
+
+
+% Problem 9
+\problem{10} Suppose a horse bet pays \$19 for every \$2.50 bet. If you bet \$227 and win, how much should you expect to be paid? \pspace
+
+\sol Comparing ratios, we have\dots
+	\[
+	\begin{aligned}
+	\dfrac{\$19}{\$2.50}&= \dfrac{x}{\$227} \\[0.3cm]
+	2.50x&= 4313 \\[0.3cm]
+	x&= \$1725.20
+	\end{aligned}
+	\]
+Therefore, you should be paid \$1,725.20.
+
+
+
+\newpage
+
+
+
+% Problem 10
+\problem{10} If you use 5 bags of flour every 7~months, how many should you purchase to have enough flour to last you 3 years? If a bag of flour costs you \$4.19, how much do you spend purchasing this amount? \pspace
+
+\sol Three years is 36~months. But then we have\dots \pspace
+	\[
+	\begin{aligned}
+	\dfrac{5 \text{ bags}}{7 \text{ months}}&= \dfrac{x}{36 \text{ months}} \\[0.3cm]
+	7x&= 180 \\[0.3cm]
+	x&= 25.71 \text{ bags}
+	\end{aligned}
+	\] \pspace
+Therefore, you will need 26~bags of flour to last the 3~years. But this will cost\dots \pspace
+	\[
+	\text{Total Cost}= \text{Price} \cdot \text{Bags}=  4.19 \cdot 26= \$108.94
+	\]
+
+
+\end{document}
