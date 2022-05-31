@@ -10,161 +10,50 @@
 \thispagestyle{title}
 
 % Quiz 1
-\quizsol \textit{True/False}: $57$ is prime. \pspace
+\quizsol \textit{True/False}: If $a$ and $b$ are distinct primes, then $\gcd(a, b)= 1$. \pspace
 
-\sol The statement is \textit{false}. We know that a number is divisible by 3 if and only if the sum of the digits is divisible by 3. Observe that $5 + 7= 12$, which is divisible by 3. Therefore, 57 is divisible by 3 so that it cannot be prime. In fact, $57= 3 \cdot 19$. \pvspace{1.5cm}
+\sol The statement is \textit{true}. Because $a$ is prime, the only divisors of $a$ are 1 and $a$. But then if $a$ and $b$ are distinct primes, then $a \neq b$. But then the only common divisor for $a$ and $b$ is 1. Therefore, $\gcd(a, b)= 1$. For instance, if $a= 3$ and $b= 5$, we have $\gcd(a, b)= \gcd(3, 5)= 1$. \pvspace{1.3cm}
 
 
 
 % Quiz 2
-\quizsol \textit{True/False}: If $b$ is a multiple of $a$, then $\gcd(a, b)= a$. \pspace
+\quizsol \textit{True/False}: There is a rational number equal to the following decimal:
+	\[
+	0.123456789101112131415\ldots
+	\]
 
-\sol The statement is \textit{true}. Let's consider an example. If $a= 6$ and $b= 24$, then $b$ is a multiple of $a$ because $24= 6 \cdot 4$. Now $\gcd(6, 24)= 6$. This is because 6 divides 6 and 24, and no integer larger than 6, e.g. 7, 10, 12, 19, etc. divides 6 so that the gcd can be no larger than 6 and must be at least 6. Now generally, if $b$ is a multiple of $a$, then $a$ divides $b$. But $a$ also divides $a$. But then $\gcd(a, b) \geq a$. But the gcd cannot be bigger than $a$ because no integer larger than $a$ can divide $a$. But then we know also $\gcd(a, b) \leq a$. Therefore, $\gcd(a, b)= a$. \pvspace{1.5cm}
+\sol The statement is \textit{false}. A rational number is a real number, i.e. decimal number, whose decimal expansion either terminates or repeats. The decimal number above simply `counts out' all the integers. Observe that the decimal expansion is 1, 2, 3, 4, \dots. But then the decimal expansion does not terminate nor does it repeat. Therefore, the decimal number above cannot be rational. \pvspace{1.3cm}
 
 
 
 % Quiz 3
-\quizsol \textit{True/False}: $(2 + 3i)^2= 4 + 9i^2$ \pspace
+\quizsol \textit{True/False}: $\sqrt[4]{2^{100} \cdot 3^{21} \cdot 5^{42}}= 2^{25} \cdot 3^5 \cdot 5^{10} \sqrt[4]{3^1 \cdot 5^2}$ \pspace
 
-\sol The statement is \textit{false}. It is \textit{not} true generally that $(x + y)^2= x^2 + y^2$---an error commonly referred to as the `freshman's dream.' One need to traditionally `FOIL' this out---$(x+ y)^2= (x + y)(x + y)= x^2 + xy + xy + y^2= x^2 + 2xy + y^2$. The same is true for any power, i.e. that it is \textit{not} generally true that $(x + y)^n= x^n + y^n$. In our specific case, we have\dots
+\sol The statement is \textit{true}. We have\dots
 	\[
-	(2 + 3i)^2= 2^2 + 6i + 6i + (3i)^2= 4 + 12i + 9(-1)= 4 - 9 + 12i= -5 + 12i
-	\] \pvspace{1.5cm}
+	\sqrt[4]{2^{100} \cdot 3^{21} \cdot 5^{42}}= \sqrt[4]{2^{100} \cdot (3^{20} \cdot 3^1) \cdot (5^{40} \cdot 5^2)}= 2^{100/4} \cdot 3^{20/4} \cdot 5^{40/4} \sqrt[4]{3^1 \cdot 5^2}= 2^{25} \cdot 3^5 \cdot 5^{10} \sqrt[4]{3^1 \cdot 5^2}
+	\]
+Alternatively, observe\dots
+	\[
+	\sqrt[4]{2^{100} \cdot 3^{21} \cdot 5^{42}}= (2^{100} \cdot 3^{21} \cdot 5^{42})^{1/4}= 2^{25} \cdot 3^{4 + 1/4} \cdot 5^{10 + 2/4}= 2^{25} \cdot 3^4 \cdot 5^{10} \sqrt[4]{3^1 \cdot 5^2}
+	\] \pvspace{1.3cm}
 
 
 
 % Quiz 4
-\quizsol \textit{True/False}: 43 increased by 125\% is $43(1.25)$. \pspace
+\quizsol \textit{True/False}: In a course, the first exam is worth 15\% of your course grade. If you receives an 80\% on that exam, then your maximum possible course grade is a 88\%. \pspace
 
-\sol The statement is \textit{false}. Recall that to increase or decrease a number $N$ be a percentage $\%$, we use $N(1 \pm \%)$, where we have written the percentage as a decimal---choosing $+$ for increase and $-$ for decrease. Therefore, this should be $43(1 + 1.25)= 43(2.25)$. \pvspace{1.5cm}
+\sol The statement is \textit{false}. Because you received an 80\%, you only received 80\% of the 15~total points possible. Therefore, you have earned $15(0.80)= 12$ points toward your average. But then you have lost $15 - 12= 3$ of your course grade. Therefore, your maximum possible grade is $100 - 3= 97$. Alternatively, by receiving an 80\%, you have lost $100\% - 80\%= 20\%$ of the 15~points of your course grade. Therefore, you have lost $15(0.20)= 3$ points of your overall average. Therefore, your maximum possible course grade is $100 - 3= 97$. \pvspace{1.3cm}
 
 
 
 % Quiz 5
-\quizsol \textit{True/False}: Given the following:
-	\begin{table}[!ht]
-	\centering
-	\begin{tabular}{r|rrrrr}
-	$x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\ \hline
-	$f(x)$ & $3$ & $-4$ & $0$ & $6$ & $3$
-	\end{tabular}
-	\end{table} 
-Then we must have $f^{-1}(3)= 1$. \pspace
+\quizsol \textit{True/False}: A function can have more than one $y$-intercept. \pspace
 
-\sol The statement is \textit{false}. We see that both $f(1)$ and $f(5)$ take on the value of 3; therefore, $f^{-1}(3)$ is not well defined because we could have either $f^{-1}(3)= 1$ or $f^{-1}(3)= 5$. \pvspace{1.5cm}
+\sol The statement is \textit{false}. Suppose the function had more than one $y$-intercept. Say $A$ and $B$ are $y$-intercepts, i.e. $(0, A)$ and $(0, B)$ are $y$-intercepts. But then the vertical line at $x= 0$ intersects the graph of the function in at least two points---namely, $(0, A)$ and $(0, B)$. But then the function fails the vertical line test. Therefore, the `function' cannot actually be a function. Alternatively, Say $A$ and $B$ are $y$-intercepts, i.e. $(0, A)$ and $(0, B)$ are $y$-intercepts. But then the `function' is not well defined at $x= 0$. Therefore, the `function' is not actually a function. \pvspace{1.3cm}
 
 
 
-\newpage
-
-
-
-% Quiz 6
-\quizsol \textit{True/False}: If $f(x)$ and $g(x)$ are functions, then $(f \circ g)(0)= 0$. \pspace
-
-\sol The statement is \textit{false}. We know that $(f \circ g)(0)= f(g(0))$, which need not be 0 unless $g(0)$ is a zero for $f(x)$. This is possible. For instance, if $f(x)= x - 1$ and $g(x)= x^2 + 1$, then $g(0)= 1$ so that $(f \circ g)(0)= f(g(0))= f(1)= 1 - 1= 0$. However, this need not generally be true. For instance, if $f(x)= 2x + 5$ and $g(x)= 3x + 7$, then $g(0)= 0 + 7= 7$ so that $(f \circ g)(0)= f(g(0))= f(7)= 14 + 5= 19 \neq 0$. \pvspace{1.5cm} 
-
-
-
-% Quiz 7
-\quizsol \textit{True/False}: The function $f(x)= 9 - \frac{4}{5}x$ is linear with slope $-\frac{4}{5}$ and $y$-intercept $(0, 9)$. \pspace
-
-\sol The statement is \textit{true}. A linear function has the form $y= mx + b$. Observe that $f(x)= -\frac{4}{5}x + 9$. So this function is linear with $m= -\frac{4}{5}$ and $b= 9$. \pvspace{1.5cm}
-
-
-
-% Quiz 8
-\quizsol \textit{True/False}: If $m$ is the slope of a linear function, we can interpret $m$ as the rate at which $y$ increases/decreases if $x$ increases or decreases---both cases chosen appropriately. \pspace
-
-\sol The statement is \textit{true}. We know that $m= \frac{\Delta y}{\Delta x}$. So if $m= r= \frac{r}{1}$, we can interpret this as $\Delta x= 1$ and $\Delta y= r$. Therefore, we can interpret this as an increase of $r$ in $y$ if $x$ increases by 1. For instance, if $m= \frac{2}{3}$, we can interpret this as every increase of 3 in $x$ results in a corresponding increase of 2 in $y$. As a final example, if $m= -2.43$, thinking of this as $m= -2.43= \frac{-2.43}{1}$, we can interpret this as every increase of 1 in $x$ results in a decrease of 2.43 in $y$. \pvspace{1.5cm}
-
-
-
-% Quiz 9
-\quizsol \textit{True/False}: The quadratic function $y= 10 - 3(x + 5)^2$ has a vertex of $(-5, 10$, axis of symmetry $x= -5$, and has a maximum value. \pspace
-
-\sol The statement is \textit{true}. When a quadratic function $f(x)= ax^2 + bx + c$ is written in vertex form, $f(x)= a(x - p)^2 + q$, where $(p, q)$ is the coordinate of the vertex. This also implies that the axis of symmetry is $x= p$. Writing $y= -3(x + 5)^2 + 10= -3(x - (-5))^2 + 10$, we see that $y$ has a vertex of $(-5, 10)$ with axis of symmetry of $x= -5$. Because $a= -3 < 0$, we know that the parabola opens downwards so that $y$ must have a maximum value. \pvspace{1.5cm}
-
-
-
-% Quiz 10
-\quizsol \textit{True/False}: If $f(x)= ax^2 + bx + c$ is a quadratic function with $a= 1$ and roots $x= -2$ and $x= 3$, then $f(x)= 1(x + 2)(x - 3)= (x - 2)(x + 3)$. \pspace
-
-\sol The statement is \textit{false}. We know that if $f(x)= ax^2 + bx + c$ is a quadratic function with roots $r_1$ and $r_2$, then $f(x)= a(x - r_1)(x - r_2)$. But then we have $f(x)= 1(x - (-2))(x - 3)= (x + 2)(x - 3)$. 
-
-
-
-\newpage
-
-
-
-% Quiz 11
-\quizsol \textit{True/False}: The solution to the system of equations
-	\[
-	\begin{aligned}
-	x + 4y&= 1 \\
-	2x - y&= 5
-	\end{aligned}
-	\]
-is the point $(-3, 1)$. \pspace
-
-\sol The statement is \textit{false}. The first line has slope $m_1= -\frac{1}{4}$ and the second line has slope $m_2= 2$. We know that the lines are not parallel because $m_1 \neq m_2$. Therefore, the lines intersect. Distinct lines intersect in at most one point. If $(-3, 1)$ is the point of intersection, it must lie on both lines, i.e. satisfy the equation for both lines---which we check:
-	\[
-	\begin{aligned}
-	x + 4y&= -3 + 4(1)= -3 + 4= 1= 1 \text{ \cmark} \\
-	2x - y&= 2(-3) - 1= -6 - 1= -7 \neq 5 \text{ \xmark}
-	\end{aligned}
-	\]
-Therefore, $(-3, 1)$ lies on the first line but not the second. Because $(-3, 1)$ does not lie on both lines, it cannot be the solution to the given system of equations. \pvspace{1.5cm}
-
-
-
-% Quiz 12
-\quizsol \textit{True/False}: To add $\dfrac{x + 4}{(x - 6)(x + 1)}$ and $\dfrac{7}{(x + 1)^2 (x + 5)}$, one would use the common denominator of $(x - 6)(x + 1)(x + 5)$. \pspace
-
-\sol The statement is \textit{false}. The common denominator one should use is the least common multiple of the denominators. The least common multiple is product of the largest powers of each of the irreducible factors in the denominators. First, we need factor the denominators---which has already been done. The irreducible factors in the first denominator are $x - 6$ and $x + 1$, both with power one. The irreducible factors in the second denominator are $x + 1$ and $x + 5$ with power two and one, respectively. Therefore, the common denominator would be $(x - 6)(x + 1)^2 (x + 5)$. \pvspace{1.5cm}
-
-
-
-% Quiz 13
-\quizsol \textit{True/False}: The $x$-intercept of $y= 25^{x - 2} - \frac{1}{5}$ is $(\frac{3}{2}, 0)$. \pspace
-
-\sol The statement is \textit{true}. The $x$-intercept occurs when $y= 0$. But then we have\dots
-	\[
-	\begin{aligned}
-	25^{x - 2} - \dfrac{1}{5}&= 0 \\
-	25^{x - 2}&= \dfrac{1}{5} \\
-	(5^2)^{x - 2}&= \dfrac{1}{5} \\
-	5^{2x - 4}&= \dfrac{1}{5} \\
-	5^{2x - 4}&= 5^{-1}
-	\end{aligned}
-	\]
-This equation holds if and only if the powers are equal, which implies that $2x - 4= -1$. But then $2x= 3$ so that $x= \frac{3}{2}$. Therefore, the $x$-intercept is $(\frac{3}{2}, 0)$. Alternatively, one could verify that $(\frac{3}{2}, 0)$ is an $x$-intercept by checking if $x= \frac{3}{2}$ is a root of $y(x)$---though this does not check if this is the only $x$-intercept:
-	\[
-	y \left( \frac{3}{2} \right)= 25^{3/2 - 2} - \frac{1}{5}= 25^{-1/2} - \frac{1}{5}= \dfrac{1}{25^{1/2}} - \dfrac{1}{5}= \dfrac{1}{\sqrt{25}} - \dfrac{1}{5}= \dfrac{1}{5} - \dfrac{1}{5}= 0 \text{ \cmark}
-	\] \pvspace{1.5cm}
-
-
-
-% Quiz 14
-\quizsol \textit{True/False}: If $\log_3(1 - x)= -2$, then $x= \frac{8}{9}$. \pspace
-
-\sol The statement is \textit{true}. We can verify this solution---although this does not check if this is the only solution:
-	\[
-	\log_3(1 - x)= \log_3\left(1 - \dfrac{8}{9} \right)= \log_3 \left(\dfrac{1}{9} \right)= \log_3(9^{-1})= -\log_3(9)= -\log_3(3^2)= -2= -2 \text{ \cmark}
-	\]
-Alternatively, we can solve the equation:
-	\[
-	\begin{aligned}
-	\log_3(1 - x)&= -2 \\
-	3^{\log_3(1 - x)}&= 3^{-2} \\
-	1 - x&= \dfrac{1}{3^2} \\
-	1 - x&= \dfrac{1}{9} \\
-	x&= 1 - \dfrac{1}{9} \\
-	x&= \dfrac{9}{9} - \dfrac{1}{9} \\
-	x&= \dfrac{8}{9}
-	\end{aligned}
-	\]
 
 
 \end{document}
