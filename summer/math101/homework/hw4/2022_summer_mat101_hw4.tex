@@ -102,8 +102,8 @@
 \problem{10} Suppose $f(x)$ and $g(x)$ are the functions given below. 
         \begin{table}[!ht]
         \centering
-        \begin{tabular}{| c || c | c | c | c | c | c | c |} \hline
-	$x$ & $-3$ & $-2$ & $-1$ & $\phantom{-}0$ & $\phantom{-}1$ & $\phantom{-}2$ & $\phantom{-}3$ \\ \hline
+        \begin{tabular}{| c || r | r | r | r | r | r | r |} \hline
+	$x$ & $-3$ & $-2$ & $-1$ & $\phantom{-}0$ & $\phantom{-}1$ & $\phantom{-}2$ & $\phantom{-}3$ \\ \hline \hline
 	$f(x)$ & $6$ & $0$ & $-4$ & $5$ & $4$ & $-3$ & $2$ \\ \hline
 	$g(x)$ & $0$ & $3$ & $1$ & $1$ & $2$ & $9$ & $6$ \\ \hline
 	$h(x)$ & $-1$ & $5$ & $-8$ & $-3$ & $8$ & $2$ & $0$ \\ \hline
@@ -122,7 +122,7 @@ Compute the following: \pspace
 	\item $(g \circ h)(-3)=$ \vfill
         \item $(h \circ g)(-3)=$ \vfill
 	\item $(h \circ f \circ g)(1)=$ \vfill
-        \end{enumerate} \pspace
+        \end{enumerate} 
 
 
 
@@ -140,18 +140,18 @@ Compute the following: \pspace
 	\]
 
 Compute the following: \pspace
-\begin{enumerate}[(a)]
-\item $g(2)=$ \vfill
-\item $f(-1)=$ \vfill
-\item $2f(1) - g(2)=$ \vfill
-\item $f(x) - g(x)=$ \vfill
-\item $f(x) \, g(x)=$ \vfill
-\item $\left( \dfrac{f}{g} \right)(x)=$ \vfill
-\item $(f \circ g)(0)=$ \vfill
-\item $(g \circ f)(1)=$ \vfill
-\item $(f \circ g)(x)=$ \vfill
-\item $(g \circ f)(x)=$ \vfill
-\end{enumerate} \pspace
+        \begin{enumerate}[(a)]
+        \item $g(2)=$ \vfill
+        \item $f(-1)=$ \vfill
+        \item $2f(1) - g(2)=$ \vfill
+        \item $f(x) - g(x)=$ \vfill
+        \item $f(x) \, g(x)=$ \vfill
+        \item $\left( \dfrac{f}{g} \right)(x)=$ \vfill
+        \item $(f \circ g)(0)=$ \vfill
+        \item $(g \circ f)(1)=$ \vfill
+        \item $(f \circ g)(x)=$ \vfill
+        \item $(g \circ f)(x)=$ \vfill
+        \end{enumerate} 
 
 
 
@@ -240,7 +240,7 @@ Compute the following: \pspace
 	minor tick = {-10,-9,...,10},
 	xlabel=\(x\),ylabel=\(y\),
 	]
-	\addplot[line width= 0.02cm,domain= 1:7] ({x},{(x - 4)^3 + 2}); 
+	\addplot[line width= 0.02cm,domain= 1:7, samples=100] ({x},{(x - 4)^3 + 2}); 
 	\end{axis}
 	\end{tikzpicture}
 	}
