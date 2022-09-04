@@ -1,0 +1,238 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{12: Due 06/16}{Progress is made by trial and failure; the failures are generally a hundred times more numerous than the successes; yet they are usually left unchronicled.}{William Ramsay}
+
+% Problem 1
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	4 - 3\log_2(5x)= 1
+	\] \pspace
+
+\sol 
+	\begin{gather*}
+	4 - 3\log_2(5x)= 1 \\[0.3cm]
+	3 \log_2(5x)= 3 \\[0.3cm]
+	\log_2(5x)= 1 \\[0.3cm]
+	2^{\log_2(5x)}= 2^1 \\[0.3cm]
+	5x= 2 \\[0.3cm]
+	x= \dfrac{2}{5}
+	\end{gather*}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	4 \log_3(1 - x) + 5= 100
+	\] \pspace
+
+\sol 
+	\begin{gather*}
+	4 \log_3(1 - x) + 5= 100 \\[0.3cm]
+	4 \log_3(1 - x)= 95 \\[0.3cm]
+	\log_3(1 - x)= \dfrac{95}{4} \\[0.3cm]
+	3^{\log_3(1 - x)}= 3^{95/4} \\[0.3cm]
+	1 - x= 3^{95/4} \\[0.3cm]
+	x= 1 - 3^{95/4}
+	\end{gather*} 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	2 \ln(x^2) - 4= 14
+	\] \pspace
+
+\sol 
+	\begin{gather*}
+	2 \ln(x^2) - 4= 14 \\[0.3cm]
+	2 \ln(x^2)= 18 \\[0.3cm]
+	\ln(x^2)= 9 \\[0.3cm]
+	e^{\ln(x^2)}= e^9 \\[0.3cm]
+	x^2= e^9 \\[0.3cm]
+	\sqrt{x^2}= \sqrt{e^9} \\[0.3cm]
+	x= \pm e^{9/2}
+	\end{gather*}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	6 - 5(4^{2x + 1})= 1
+	\] \pspace
+
+\sol
+	\begin{gather*}
+	6 - 5(4^{2x + 1})= 1 \\[0.3cm]
+	5(4^{2x + 1})= 5 \\[0.3cm]
+	4^{2x + 1}= 1 \\[0.3cm]
+	\log_4(4^{2x + 1})= \log_4(1) \\[0.3cm]
+	2x + 1= 0 \\[0.3cm]
+	2x= -1 \\[0.3cm]
+	x= -\dfrac{1}{2} 
+	\end{gather*}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	3e^{2x - 1} - 4= 11
+	\] \pspace
+
+\sol
+	\begin{gather*}
+	3e^{2x - 1} - 4= 11 \\[0.3cm]
+	3e^{2x - 1}= 15 \\[0.3cm]
+	e^{2x - 1}= 5 \\[0.3cm]
+	\ln(e^{2x - 1})= \ln(5) \\[0.3cm]
+	2x - 1= \ln(5) \\[0.3cm]
+	2x= 1 + \ln(5) \\[0.3cm]
+	x= \dfrac{1 + \ln(5)}{2}
+	\end{gather*}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Find the number of digits in each of the following numbers:
+	\begin{enumerate}[(a)]
+	\item $2^{100}$
+	\item $15^{12}$
+	\item $2022^{2023}$
+	\end{enumerate} \pspace
+
+\sol The number of digits in a number $N$ is the smallest integer larger than $\log_{10}(N)$. 
+\begin{enumerate}[(a)]
+\item We have $\log_{10}(2^{100})= 100 \log_{10}(2) \approx 100(0.301030)= 30.1030$. Therefore, $2^{100}$ has 31 digits. \pspace
+
+\item We have $\log_{10}(15^{12})= 12 \log_{10}(15) \approx 12(1.17609)= 14.1131$. Therefore, $15^{12}$ has 15 digits. \pspace
+ 
+\item We have $\log_{10}(2022^{2023})= 2023 \log_{10}(2022) \approx 2023(3.30578)= 6687.59$. Therefore, $2022^{2023}$ has 6,688 digits.  
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Find the number of digits in each of the following numbers if they were expressed in base-16:
+	\begin{enumerate}[(a)]
+	\item $2^{100}$
+	\item $15^{12}$
+	\item $2022^{2023}$
+	\end{enumerate} \pspace
+
+\sol The number of digits in a number $N$, expressed in base $b$, is the smallest integer larger than $\log_b(N)$. 
+\begin{enumerate}[(a)]
+\item We have $\log_{16}(2^{100})= 100 \log_{16}(2) \approx 100(0.25)= 25$. Therefore, $2^{100}$ has 26 digits in base 16. \pspace
+
+\item We have $\log_{16}(15^{12})= 12 \log_{16}(15) \approx 12(0.976723)= 11.7207$. Therefore, $15^{12}$ has 12 digits in base 16. \pspace
+ 
+\item We have $\log_{16}(2022^{2023})= 2023 \log_{16}(2022) \approx 2023(2.74539)= 5553.92$. Therefore, $2022^{2023}$ has 5,554 digits in base 16.  
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Stefan takes out a small business loan for \$24,000. The interest deal he got on the loan was 2.8\% annual interest, compounded continuously. How long until he owes \$60,000? \pspace
+
+\sol For continuously compounded interest, the amount of future value, $F$, given a principal investment, $P$, at an interest rate $r$ for $t$ years is given by $F= Pe^{rt}$. We have $F= 60000$, $P= 24000$, and $r= 0.028$. But then\dots \pspace
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\[0.3cm]
+	60000&= 24000 e^{0.028t} \\[0.3cm]
+	e^{0.028t}&= \dfrac{5}{2} \\[0.3cm]
+	\ln(e^{0.028t})&= \ln(5/2) \\[0.3cm]
+	0.028t&= \ln(5/2) \\[0.3cm]
+	t&= \dfrac{\ln(5/2)}{0.028} \\[0.3cm]
+	t&\approx 32.7247
+	\end{aligned}
+	\] \pspace
+Therefore, he will owe \$60,000 in 32.7~years. 
+
+
+
+\newpage
+
+
+
+% Problem 9
+\problem{10} Gloria invests \$6,000 in a startup that promises a 7.2\% annual return, compounded semiannually, in the form of interest on the investment. Assuming that the company can hold true to these promises, how long will it take for the investment to have earned \$500 in interest? \pspace
+
+\sol For discrete compounded interest, the amount of future value, $F$, given a principal investment, $P$, at an interest rate $r$, compounded $k$ times per year, for $t$ years is given by $F= P \left(1 + \frac{r}{k} \right)^{kt}$. We have $F= 6000 + 500= 6500$, $P= 6000$, $r= 0.072$, and $k= 2$. But then\dots \pspace
+	\[
+	\begin{aligned}
+	F&= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	6500&= 6000 \left( 1 + \dfrac{0.072}{2} \right)^{2t} \\[0.3cm]
+	6500&= 6000 (1.036)^{2t} \\[0.3cm]
+	1.036^{2t}&= 1.08333 \\[0.3cm]
+	\ln(1.036^{2t})&= \ln(1.08333) \\[0.3cm]
+	2t \ln(1.036)&= \ln(1.08333) \\[0.3cm]
+	t&= \dfrac{\ln(1.08333)}{2 \ln(1.036)} \\[0.3cm]
+	t&\approx 1.13155
+	\end{aligned}
+	\] \pspace
+Therefore, she will have earned \$500 in interest in 1.13~years. 
+
+
+
+\newpage
+
+
+
+% Problem 10
+\problem{10} Tatsuki purchases \$800 worth of savings bond which earn 9.62\% annual interest, compounded monthly. How long until Tatsuki's bonds have doubled in value? \pspace
+
+\sol For discrete compounded interest, the amount of future value, $F$, given a principal investment, $P$, at an interest rate $r$, compounded $k$ times per year, for $t$ years is given by $F= P \left(1 + \frac{r}{k} \right)^{kt}$. We have $F= 2(800)= 1600$, $P= 800$, $r= 0.0962$, and $k= 12$. But then\dots \pspace
+	\begin{gather*}
+	F= P \left( 1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	1600= 800 \left( 1 + \dfrac{0.0962}{12} \right)^{12t} \\[0.3cm]
+	1600= 800 (1.00802)^{12t} \\[0.3cm]
+	1.00802^{12t}= 2 \\[0.3cm]
+	\ln(1.00802^{12t})= \ln(2) \\[0.3cm]
+	12t \ln(1.00802)= \ln(2) \\[0.3cm]
+	t= \dfrac{\ln(2)}{12 \ln(1.00802)} \\[0.3cm]
+	t\approx 7.23112
+	\end{gather*}
+Therefore, his bonds will double in value in 7.23~years. 
+
+
+\end{document}
