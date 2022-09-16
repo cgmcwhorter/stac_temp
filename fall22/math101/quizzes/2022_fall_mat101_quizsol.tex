@@ -13,16 +13,14 @@
 % Quiz 1
 \quizsol \textit{True/False}: Both $12= 3 \cdot 4$ and $12= 2^2 \cdot 3$ are prime factorizations of 12.  \pspace
 
-\sol The statement is \textit{true}. QUIZANSWER \pvspace{0.5cm}
+\sol The statement is \textit{false}. A factorization of an integer $n$ is a product of integers that yields $n$. For instance, if $n= 100$, then $n= 1 \cdot 100, 10 \cdot 10, 5 \cdot 20, \ldots$ are all factorizations of 100. A prime factorization is a factorization where all the numbers in the product are primes or powers of primes. [If $n$ is prime, we allow $n= n$ to be the prime factorization, i.e. the `empty' product.] Then in the instance of $n= 100$, the factorizations $5 \cdot 20$ cannot be a prime factorization because 20 is not prime. In the given problem, $12= 3 \cdot 4$ is \textit{not} a prime factorization because 4 is not prime ($4= 2 \cdot 2$), while $12= 2^2 \cdot 3$ is a prime factorization because we have written 12 as a product of (powers of) primes. By the Fundamental Theorem of Arithmetic, every integer greater than 1 is either prime or can be written uniquely (up to order, e.g. $6= 2 \cdot 3= 3 \cdot 2$) as a product of primes. \pvspace{1.5cm}
 
 
 
+% Quiz 2
+\quizsol \textit{True/False}: $\gcd(2^{50} \cdot 3^{60} \cdot 7^{40}, 2^{30} \cdot 3^{70} \cdot 5^{90})= 2^{30} \cdot 3^{60} \cdot 5^{90} \cdot 7^{40}$ \pspace
 
-
-
-
-
-
+\sol The statement is \textit{false}. If one wishes to compute $\gcd(a, b)$, one can compute the prime factorizations of $a, b$ and find the product of the primes appearing in \textit{both} prime factorizations of $a, b$, each to the smaller of the prime powers involved in the factorizations of $a, b$. For instance, if we wanted to compute $\gcd(2520, 74844)= \gcd(2^3 \cdot 3^2 \cdot 5^1 \cdot 7, 2^2 \cdot 3^5 \cdot 7 \cdot 11)$, observe that the primes occurring both are $2, 3, 7$. The smallest power for each is 2, 2, 1, respectively. Therefore, $\gcd(2520, 74844)= \gcd(2^3 \cdot 3^2 \cdot 5^1 \cdot 7, 2^2 \cdot 3^5 \cdot 7 \cdot 11)= 2^2 \cdot 3^2 \cdot 7^1= 252$. In the given problem, while the smallest power of each prime was chosen, \textit{every} prime was used rather than just the primes both factorizations have in common. \pvspace{1.5cm}
 
 
 

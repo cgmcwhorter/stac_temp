@@ -13,23 +13,36 @@
 % Quiz 1
 \quizsol \textit{True/False}: Any function of one-variable which has a constant rate of change can be written in the form $f(x)= mx + b$ for some values $m$ and $b$. \pspace
 
-\sol The statement is \textit{true}. QUIZANSWER \pvspace{0.5cm}
+\sol The statement is \textit{true}. Suppose the rate of change were 5 and the current value is 2. After one step in time, the value is $2 + 1(5)= 2 + 5= 7$. After another step in time, the value is $7 + 5= 12$, or $2 + 2(5)= 2 + 10= 12$. Generally, after $n$ steps, the value is $2 + n \cdot 5= 5n + 2$, which is a linear function. Generally, if we start with initial value $y_0$ and have a constant rate of change $m$, after $x$ steps, we have $y= y_0 + x \cdot m= mx + y_0$. This is a linear function with $f(x)= y$, $x= x$, $m= m$, and $b= y_0$. But then we see that `any' function which changes at a constant rate is a linear function. We know that a linear function $f(x)= mx + b$ has a constant rate of change---the slope $m$. Therefore, a function is linear if and only if it has a constant rate of change.  \pvspace{1.5cm}
+
+
 
 % Quiz 2
 \quizsol \textit{True/False}: A break-even point is the point where a revenue and cost function curve intersect. \pspace
 
-\sol The statement is \textit{true}. QUIZANSWER \pvspace{0.5cm}
+\sol The statement is \textit{true}. Suppose that $(x, y)$ is a point in the plane where a revenue curve and a cost curve intersect, i.e. $(x, R(x) )$ and $(x, C(x) )$ are points on the revenue and cost curves, respectively. Then at level of production $x$, the revenue is $y$ and the cost is $y$, i.e. $R(x)= y$ and $C(x)= y$. But then at level of production $x$, we have $y= R(x)= C(x)$. Therefore at $x$, the profit is $P(x):= R(x) - C(x)= y - y= 0$. Therefore, $(x, y)$ is a break-even point. \pvspace{1.5cm}
+
+
 
 % Quiz 3
 \quizsol \textit{True/False}: If $C(q)$ is a \textit{linear} cost function, then $C(0)$ is the fixed costs and the slope of $C(q)$ is the marginal cost, i.e. the production cost per item. \pspace
 
-\sol The statement is \textit{true}. QUIZANSWER \pvspace{0.5cm}
+\sol The statement is \textit{true}. Suppose that $C(q)$ is the cost of producing $q$ items. The fixed costs are the costs that are incurred regardless of the level of production. Because if $q > 0$ some product is produced, the level of production corresponding to no production is $q= 0$. But then the fixed costs (the costs at a level of production of zero) are $C(0)$. The marginal cost at a level of production $q$ is the additional cost of producing one additional item, i.e. $C(q + 1) - C(q)$. Suppose that $C(q)$ were linear; that is, $C(q)= mq + b$ for some $m, b$, where $m$ is the slope. Notice if we use the points $(q, C(q) )$ and $(q + 1, C(q + 1) )$ to compute the slope of $C(q)$, we obtain\dots
+	\[
+	m= \dfrac{\Delta C}{\Delta q}= \dfrac{C(q + 1) - C(q)}{(q + 1) - q}= \dfrac{C(q + 1) - C(q)}{1}= C(q + 1) - C(q).
+	\]
+But then the slope of the linear function $C(q)$ is the marginal cost of production. \pvspace{1.5cm}
 
 
-% Quiz 3
-\quizsol \textit{True/False}: If $C(q)$ is a \textit{linear} cost function, then $C(0)$ is the fixed costs and the slope of $C(q)$ is the marginal cost, i.e. the production cost per item. \pspace
 
-\sol The statement is \textit{true}. QUIZANSWER \pvspace{0.5cm}
+% Quiz 4
+\quizsol \textit{True/False}: If the CPI (Consumer Price Index) was 253.80 last year and it is 284.75 this year, then the inflation rate from last year to this year was 12.91\%. \pspace
+
+\sol The statement is \textit{false}. The given two CPI's (measured from the same baseline), we can find the quotient of the new CPI and the old CPI and recognize it as a percentage increase (or decrease in the case of deflation). This percentage increase/decrease is the inflation/deflation rate. Therefore, we have $284.75/253.80 \approx 1.1219$, i.e. $284.75= 253.80(1.1219)= 253.80(1 + 0.1219)$. We can see that $1.1219= 1 + 0.1219$ represents a percent increase of 12.19\%---not 12.91\%. Note that some will say that the inflation rate should be calculated from the expression $\frac{\text{new CPI} - \text{old CPI}}{\text{old CPI}}$. Using this, we have $\frac{284.75 - 253.80}{284.75}= \frac{30.95}{253.80} \approx 0.1219 \squiggle 12.19\%$. These give equivalent answers in the case of inflation:
+	\[
+	\frac{\text{new CPI} - \text{old CPI}}{\text{old CPI}}= \frac{\text{new CPI}}{\text{old CPI}} - \frac{\text{old CPI}}{\text{old CPI}}= \frac{\text{new CPI}}{\text{old CPI}} - 1.
+	\]
+We already computed $\text{new CPI}/\text{old CPI}$ above---the minus one merely makes it simpler to recognize the percentage increase. However, in the case of deflation, one would need take the absolute value of this difference in the case of deflation---a disadvantage from the original method. [Unless one interprets a negative inflation rate as deflation.] \pvspace{1.5cm}
 
 
 
