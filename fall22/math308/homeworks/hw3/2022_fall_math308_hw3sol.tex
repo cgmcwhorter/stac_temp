@@ -1,0 +1,87 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 09/15}{If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.}{George Polya}
+
+% Problem 1
+\problem{10} Let the universe, $\mathcal{U}$, for $m, n, j, k$ be the set of integers. Define the following predicates:
+	\[
+	\begin{aligned}
+	P(m) &\colon m \text{ is even} \\
+	Q(n) &\colon n \text{ is a perfect square} \\
+	R(j) &\colon j \text{ is divisible by 3} \\
+	S(k) &\colon k \text{ is divisible by 6} \\
+	W(m) &\colon 1 < m \leq 8
+	\end{aligned}
+	\]
+Write the open sentences below as complete English sentences as `simply' as possible and then determine whether the statement is true or false. If the statement is true, explain why. If not, give a counterexample. 
+	\begin{enumerate}[(a)]
+	\item $(\exists! n) \big( Q(n) \wedge W(n) \big)$ 
+	\item $(\forall m) \big( P(m) \vee R(j) \big)$ 
+	\item $(\forall m) (\neg R(m) \to \neg S(m))$ 
+	\item $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$ 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} By defining appropriate universes and predicates, quantify the open sentences below. Indicate whether the resulting statement is true or false. No justification is necessary. 
+	\begin{enumerate}[(a)]
+	\item For all $m$, there exists $n$ such that $m= n + 1$.
+	\item For all integers $n$, if $n$ is divisible by 5 then the 1's digit of $n$ is either 0 or 5.
+	\item Nonzero real numbers have a unique multiplicative inverse. 
+	\item Given any pair of distinct integers, there is another integer between them.
+	\item Everybody has problems. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Being as clear and detailed as possible, explain why $\exists x P(x) \wedge \exists x Q(x)$ does not imply $\exists x [P(x) \wedge Q(x)]$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Let $P(x)$ be the predicate $R(x)$: $x$ is a rectangle and let $S(x)$ be the predicate $S(x)$: $x$ is a square. 
+	\begin{enumerate}[(a)]
+	\item Write $\forall x \big( R(x) \to S(x) \big)$ as a complete English sentence.
+	\item Write the contrapositive, converse, and negation of the open sentence in (a) as complete English sentences. 
+	\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

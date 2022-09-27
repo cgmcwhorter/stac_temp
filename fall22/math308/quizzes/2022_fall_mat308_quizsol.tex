@@ -45,12 +45,9 @@ Here, $P$ is the proposition $P: 6 < 5$ and $Q$ is the proposition $Q$: ``Earth 
 Because for each possible pair of choices for $P$ and $Q$ the outputs for $\neg (P \to \neg Q)$ and $P \wedge Q$ match, $\neg (P \to \neg Q) \equiv P \wedge Q$. Alternatively, we can transform one into the other by applying logical equivalences (recall $P \to Q \equiv \neg P \vee Q$ or $\neg (P \to Q) \equiv P \wedge \neg Q$):
 	\[
 	\neg (P \to \neg Q) \equiv \neg (\neg P \vee \neg Q) \equiv \neg (\neg P) \wedge \neg (\neg Q) \equiv P \wedge Q.
-	\] 
+	\]  \pvspace{0.5cm}
 
 
-
-
- \pvspace{0.5cm}
 
 % Quiz 3
 \quizsol \textit{True/False}: The logic corresponding to the circuit shown below is the proposition:
@@ -68,8 +65,7 @@ Because for each possible pair of choices for $P$ and $Q$ the outputs for $\neg 
 	\begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.74\textwidth]{images/circuit_sol}
-	\end{figure} \pvspace{0.5cm}
-
+	\end{figure} \pvspace{1.5cm}
 
 
 
@@ -77,6 +73,30 @@ Because for each possible pair of choices for $P$ and $Q$ the outputs for $\neg 
 \quizsol \textit{True/False}: Let the universe $\mathcal{U}$ be the set of real numbers and define $P(x)$ to be the predicate $P(x): x^2 + x - 4 \geq 0$. Then $(\forall x) \big(\neg P(x) \big)$ is true. \pspace
 
 \sol The statement is \textit{false}. If $P(x): x^2 + x - 4 \geq 0$, then $\neg P(x): x^2 + x - 4 < 0$. But then $(\forall x) \big(\neg P(x) \big)$ is the statement, ``For all $x$, $x^2 + x - 4 < 0$.'' Now if $x= 1$, we have $\neg P(1) \colon 1^2 + 1 - 4 < 0$, i.e. $-2 < 0$, which is true. If $x= 0$, we have $\neg P(0) \colon 0^2 + 0 - 4 < 0$, i.e. $-4 < 0$, which is true. However, while $(\forall x) \big(\neg P(x) \big)$ is clearly true for \textit{some} (we found at least two), it is not true \textit{for all} $x$. As a counterexample, let $x= 10$. Then $\neg P(10) \colon 10^2 + 10 - 4 < 0$, which is $104 < 0$---clearly false. Therefore, $\neg P(x)$ is not true for all $x$. But then $(\forall x) \big(\neg P(x) \big)$ is false. \pvspace{1.5cm}
+
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: Let the domain of $x, y$ be the integers. Then $(\exists! x)(\forall y)(x + 2y= 5)$. \pspace
+
+\sol The statement is \textit{false}. The logical proposition $(\exists! x)(\forall y)(x + 2y= 5)$ in words states, ``There exists a unique $x$ such that for all $y$, $x + 2y= 5$.'' Suppose that there were such a $x$, say $x_0$. Then we know that $x_0 + 2y= 5$ for all $y$. In particular, $x_0$ satisfies this equality when $y= 0$. But then we know that $x_0= 5$. But also, it must satisfy the equality when $x= 1$. But then $x_0 + 2= 5$ so that $x_0$. Then there is not a unique $x$ that works for all $y$! Therefore, the statement is false. Note that if we reverse the quantifiers, the statement is true: $(\forall y)(\exists! x)(x + 2y= 5)$. In this case, this is the statement, ``For all $y$, there exists a unique $x$ such that $x + 2y= 5$.'' If you were given any $y$, define $x_0:= 5 - 2y$. But then $x + 2y= (5 - 2y) + 2y= 5$. So there exists such an $x$. Is it unique? Well if there were two or more $x$ values that worked for some $y$, say two of them are $x_0$ and $\tilde{x}_0$, then we have $x_0 + 2y= 5= \tilde{x}_0 + 2y$. But then $x_0 + 2y= \tilde{x}_0 + 2y$. Subtracting $2y$, we have $x_0 = \tilde{x}_0$. Therefore, there can only be one such $x$. Because we have found one, we know that the statement that for all $y$, there exists a unique $y$ such that $x + 2y= 5$ is true. 
+
+
+
+
+\newpage
+
+
+
+
+% \{ 1, 2 \} \subseteq \{ \varnothing, \{ 1 \}, \{ 2 \}, \{ 1, 2 \} \}
+
+
+% $\displaystyle\bigcap_{n \in \mathbb{N}} \left( -\frac{1}{n}, \frac{1}{n} \right)= \varnothing$
+
+
+
 
 
 

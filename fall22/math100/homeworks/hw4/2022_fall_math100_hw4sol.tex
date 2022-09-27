@@ -1,0 +1,206 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 09/26}{For those who want some proof that physicists are human, the proof is in the idiocy of all the different units which they use for measuring energy.}{Richard Feynman}
+
+% Problem 1
+\problem{10} Showing all your work, convert the following indicated units to the units indicated in brackets using the given information:
+	\begin{enumerate}[(a)]
+	\item 1400~m to cm
+	\item 4,600~ft to km [1~ft = 0.3048~m]
+	\item 55~mph to km per hour [1~mi = 5280~ft, 1~m = 3.28084~ft]
+	\item 55~mph to ft per second [5280~ft = 1~mi]
+	\item 1000~ft$^3$ to m$^3$ [5~m = 16.4042~ft]
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	1400~m & 100~cm \\ \hline
+		      & 1~m
+	\end{tabular}
+	= 140,000~cm
+	\end{table}
+
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	4600~ft & 0.3048~m & 1~km \\ \hline
+		     & 1~ft 		& 1000~m
+	\end{tabular}
+	= 1.40208~km
+	\end{table}
+
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	55~mi & 5280~ft & 1~m & 1~km \\ \hline
+	1~hr & 1~mi & 3.28084~ft & 1000~m
+	\end{tabular}
+	= 88.5139~km per hr
+	\end{table}
+
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	55~mi & 5280~ft & 1~hr      & 1~min \\ \hline
+	1~hr   & 1~mi	   & 60~min & 60~s
+	\end{tabular}
+	= 80.6667~ft per second
+	\end{table}
+
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	1000~ft$^3$ & 5~m & 5~m & 5~m \\ \hline
+			    & 16.4042~ft & 16.4042~ft & 16.4042~ft
+	\end{tabular}
+	= 28.3168~m$^3$
+	\end{table}
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Tiffany's husband has to order a special paint she wants for their patio. The paint has to be shipped from Europe. He wants to be sure that he orders enough paint to paint the patio, which is 144~ft$^2$. Each can of paint costs \texteuro23 and claims it can cover 4.5~m$^2$.
+	\begin{enumerate}[(a)]
+	\item How many square feet can the paint cover? [3.28084~ft = 1~m]
+	\item How many cans should he order?
+	\item What is the cost of the paint in Euros per meter squared?
+	\item What is the cost of the paint in USD per square foot? [\$1 = \texteuro\ 0.95]
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We convert the 4.5~m$^2$ that the paint covers to square feet:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	4.5~m$^2$ & 3.28084~ft & 3.28084~ft \\ \hline
+			  & 1~m 		& 1~m 
+	\end{tabular}
+	= 48.4376~ft$^2$
+	\end{table} \pspace
+
+\item Because each paint can covers 48.4376~ft$^2$, the minimum number of paint cans required is $144 \text{ ft}^2/ 48.4376 \text{ ft}^2 \approx 2.97$ cans of paint. However, one can only purchase integer values of paint. The only options are then 2~cans of paint or 3~cans of paint. Because 2~cans will not be enough, Tiffany's husband must purchase 3~cans of paint. \pspace
+
+\item The cost of the paint in Euros per meter squared is \texteuro~$23/4.5 \text{ m}^2 \approx$~\texteuro~$ 5.11/ \text{ m}^2$. \pspace
+
+\item We convert the \texteuro~$ 5.11/ \text{ m}^2$ to USD per square foot:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	\texteuro 5.11   & \$1			 & 1~m		& 1~m \\ \hline
+	1 m$^2$ 		& \texteuro 0.95 & 3.28084~ft   & 3.28084~ft
+	\end{tabular}
+	= \$0.50/ft$^2$
+	\end{table} 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Aliens arrive on Earth and try to communicate with humans. Being intelligent beings, they first try to understand our mathematical systems. Aliens measure speed in blips per flarg. They claim to have traveled to Earth at 587~blips per flarg. We discover that in their units, 1~blips is 800~bloop and 465~bloop is 1,000~miles. We discover also 1~flarg is 8.2~s. What speed (in miles per second) did they travel to Earth? If the speed of light is 186,282~miles per second, what percent of the speed of light did they travel? \pspace
+
+\sol This is a traditional conversion problem, albeit with odd units: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	587 blips	& 800 bloop & 1000 mi     & 1 flarg \\ \hline
+	1 flarg	& 1 blips      & 465 bloop  & 8.2 s
+	\end{tabular}
+	= 123,158 miles per second
+	\end{table} \par
+Therefore, they traveled at\dots
+	\[
+	\dfrac{123,158 \text{ miles per second}}{186,282 \text{ miles per second}} \cdot 100= 0.661137 \cdot 100= 66.1137\%
+	\]
+of the speed of light.
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} You work at an international real estate company that helps people in the US purchase land in Japan. To help clients compare various options, you quote them the price that they are paying per square foot. Obviously, the prices in Japan are listed in Japanese Yen per square meter. If \textyen\ 1 is \$0.0069 and 1~m is 3.28084~ft, what number do you multiply the cost in yen per square meter to convert it to USD per square foot for your US clients? \pspace
+
+\sol If we know the cost of \textyen\ 1 /m$^2$ of property in USD per square foot, then we can simply multiply any given number of yen per square meter by this factor to find USD per square foot. So we compute this conversion: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	\textyen\ 1 & \$0.0069      & 1~m           & 1~m \\ \hline
+	1~m$^2$	  & \textyen\ 1  & 3.28084~ft & 3.28084~ft
+	\end{tabular}
+	= 0.000641~USD/ft$^2$
+	\end{table} \par
+Then the conversion factor is 0.000641. For instance, if a property costs \textyen\ 25840/m$^2$, then it costs \textyen\ 25840/m$^2$ $\cdot$ 0.000641 $=$ \$16.57/ft$^2$. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} One of your coworkers is commenting on how Karen just had her baby. She tells you that the baby was 19.5~in and 420~oz. If there are 16~oz in a pound, does this seem likely? Explain. \pspace
+
+\sol We can convert the weight of the baby from ounces to pounds: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	420~oz & 1~lb \\ \hline
+		    & 16~oz
+	\end{tabular}
+	= 26.25~lbs
+	\end{table} \par
+Considering that most children in the US are born between 5~lbs and 8~lbs and that the world record for birth weight is 22.5~lbs, it is highly unlikely that Karen's baby was 420~oz. It is far more likely that your coworker is misremembering the weight. 
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Children with a certain respiratory issue are prescribed a daily dosage of 28~mg of a certain drug. Parents can refill the prescription up to three times. If each prescription contains 16~tablets and each tablet is 14~mg, how many daily doses can the parents give to their children? \pspace
+
+\sol Because each tablet is 14~mg and a daily dosage is 28~mg, one most take 2~pills to get a daily dose. That is, each pill is half a daily dose. There are 16~tablets per bottle, so that there are 8~daily doses per bottle. The patient has the original prescription plus an additional 3~bottles, for a total of 4~bottles. But then the parents can give their children a maximum of $4 \cdot 8= 32$~daily doses. \pspace
+
+One can also treat this as a conversion problem: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	4~bottles  & 16~tablets & 14~mg    & 1~daily dose \\ \hline
+			& 1~bottle     & 1~tablet  & 28~mg
+	\end{tabular}
+	= 32~daily doses
+	\end{table} \par
+
+
+\end{document}

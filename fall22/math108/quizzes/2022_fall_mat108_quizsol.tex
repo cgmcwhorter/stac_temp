@@ -46,6 +46,31 @@ We already computed $\text{new CPI}/\text{old CPI}$ above---the minus one merely
 
 
 
+% Quiz 5
+\quizsol \textit{True/False}: If someone invests \$1,500 at 5.4\% annual interest, compounded quarterly, then in 5~years the investment is worth $\$1500 \left( 1 + \dfrac{0.054}{4} \right)^5 \approx \$1604.02$. \pspace
+
+\sol The statement is \textit{false}. If we have a principal of $P$ invested at an annual interest rate $r$, compounded discretely $k$ times per year for $t$ years, then the amount that $P$ has grown to after $t$ years is given by\dots
+	\[
+	P \left( 1 + \dfrac{r}{k} \right)^{kt}
+	\]
+We know that the principal is $P= 1500$ and that the annual interest rate is $r= 0.054$ . Because the interest is compounded quarterly (four times per year), we know also that $k= 4$. Finally, because $t= 5$, we have
+	\[
+	P \left( 1 + \dfrac{r}{k} \right)^{kt}= \$1500 \left( 1 + \dfrac{0.054}{4} \right)^{4 \cdot 5} \approx \$1500 (1.0135)^{20} \approx \$1500(1.30760045) \approx \$1961.40
+	\]
+The power on the given expression should have been 20---the number of times that the amount has been compounded. \pvspace{1.5cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: At the start of each month, Carter deposits \$150 into an account that earns 0.3\% yearly annual interest, compounded monthly. To compute how much Carter will have in 8~years, one would need to calculate the future value for general ordinary annuity. \pspace
+
+\sol The statement is \textit{false}. A general annuity is where the yearly payment and compound rates are not the same, while a simple annuity is where they occur at the same rate. Because the deposits and interest occur monthly, this is a simple annuity. An ordinary annuity is where the payments occur at the end of a period, while an annuity due are where payments occur at the start of the month. Carter deposits the month at the start of the month; therefore, this is an annuity due. Because we want to know how much money is accrued at the end of this time period, we are seeking a future value. Therefore, Carter needs to compute a future value for a simple ordinary annuity. 
+
+
+
+
+
+\newpage
 
 
 

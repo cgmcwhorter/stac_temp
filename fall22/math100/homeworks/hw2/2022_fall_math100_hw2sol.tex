@@ -1,0 +1,212 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{2: Due 09/19}{This is not yours to fix alone. You act like you're all alone out there in the world, but you're not. You're not alone}{Joyce Byers, Stranger Things}
+
+% Problem 1
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 55\% of 143
+	\item 1\% of 3.6
+	\item 49\% of 49
+	\item 121\% of 4000
+	\end{enumerate} \pspace
+
+\sol Recall to find a percent, $\%$, of a number $N$, we compute $N \cdot \%_d$, where $\%_d$ is the percentage written as a decimal. We then have\dots \pspace
+	\begin{enumerate}[(a)]
+	\item 
+		\[
+		143(0.55)= 78.65
+		\] \pspace
+	
+	\item 
+		\[
+		3.6(0.01)= 0.036
+		\] \pspace
+	
+	\item 
+		\[
+		49(0.49)= 24.01
+		\] \pspace
+	
+	\item 
+		\[
+		4000(1.21)= 4840
+		\]
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 78 increased by 40\%
+	\item 94 decreased by 65\%
+	\item 166 decreased by 2\%
+	\item 1820 increased by 163\%
+	\end{enumerate} \pspace
+
+\sol To find a percentage, $\%$, increase or decrease of a number $N$, we compute $N(1 + \pm \%_d)$, where we choose `$+$' if it is a percentage increase, `$-$' if it is a percentage decrease, and $\%_d$ is the percentage written as a decimal. We then have\dots \pspace
+	\begin{enumerate}[(a)]
+	\item 
+		\[
+		78 (1 + 0.40)= 78(1.40)= 109.2
+		\] \pspace
+	
+	\item 
+		\[
+		94(1 - 0.65)= 94(0.35)= 32.9
+		\] \pspace
+	
+	\item 
+		\[
+		166(1 - 0.02)= 166(0.98)= 162.68
+		\] \pspace
+	
+	\item 
+		\[
+		1820(1 + 1.63)= 1820(2.63)= 4786.6
+		\]
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Why is 80\% of 485 the same value as the value obtained by reducing 485 by 20\%? Be sure to give an explanation that does not simply involve computing both. Then compute both values as stated. \pspace
+
+\sol If we find 80\% of 485, then 485 has lost 20\% of its value. Vice versa, if we reduce 20\% of its value, then the resulting number has only 80\% of its original value. Therefore, 80\% of 485 must have the same value as reducing 485 by 20\%. Computing both, we have\dots \pspace
+	\[
+	\begin{aligned}
+	\text{80\% of 485: }& 485(0.80)= 388 \\[0.3cm]
+	\text{485 decreased by 20\%: }& 485(1 - 0.20)= 485(0.80)= 388
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Sally Forth is looking to book a vacation trip. She does not want to spend more than \$3,500 on the trip. The prices listed on the travel website she is using to book the trip do not include 7\% sales tax or a \$50 booking surcharge that the website charges (applied to the cost of the trip \textit{before} the tax). What is the highest advertised price on the website that she can book and actually afford? \pspace
+
+\sol We do not know the largest possible cost of a trip that Sally can afford. Let $P$ denote the highest advertised price trip that she can afford. If $P$ is the advertised cost, then once you book the trip you are charged the \$50 surcharge, followed by a 7\% tax on the combined cost of the trip and surcharge. The cost of the trip and the surcharge is $P + \$50$. Once the 7\% tax is added to this, i.e. a 7\% increase on this price, we have a total cost of\dots \pspace
+	\[
+	(P + \$50) \cdot (1 + 0.07)= (P + \$50)(1.07).
+	\] \pspace
+The maximum that this final price can be is \$3,500. But then \$3,500 is the most that the total cost, given above, can be. Therefore, we have\dots \pspace
+	\[
+	\begin{aligned}
+	(P + \$50)(1.07)&= \$3500 \\[0.3cm]
+	\dfrac{(P + \$50)\cancel{(1.07)}}{\cancel{1.07}}&= \dfrac{\$3500}{1.07} \\[0.3cm]
+	P + \$50&= \$3271.03 \\[0.3cm]
+	P + \$50 - \$50&= \$3271.03 - \$50 \\[0.3cm]
+	P&= \$3221.03.
+	\end{aligned}
+	\] \pspace
+Therefore, the most expensive advertised price for a trip that Sally can afford to book is \$3,221.03. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Ophelia Pane is taking a Mathematics course. For this Mathematics course, the grading scheme is as follows:
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{lrclr}
+	Participation & 5\% & \hspace{1.5cm} & Quizzes & 10\% \\
+	Activities & 5\% & & Exams & 30\% \\
+	Project & 10\% & & Homework & 40\%
+	\end{tabular}
+	\end{table} \par
+Suppose she had a 90\% participation average, 100\% activities average, 85\% project average, 75\% quiz average, and 79\% homework average. She received a 72\% on exam~1, 89\% on exam~2, and 84\% on exam~3, which gave her a 81.67 exam average (because they were weighted equally). What was her final average in the course? \pspace
+
+\sol This is a weighted average. Recall that a weighted average is given by\dots \pspace
+	\[
+	\sum \text{value} \cdot \text{weight},
+	\] \pspace
+where $\sum$ stands for the sum of the values value~$\cdot$~weight. For instance, if one value is the 10\% project grade and one has a 100\% on the project, one receives $10\%(1.00)= 10\%$ on that portion of the course grade. If one receives a 50\% on the project, one receives $10\%(0.50)= 5\%$ on that portion of the course grade. One finds each of these values for each portion of the course grade and adds them up. We compute this value: \pspace
+	\[
+	\begin{aligned}
+	\text{Course Average}&= \sum \text{value} \cdot \text{weight} \\[0.3cm]
+	&= 5\%(0.90) + 5\%(1.00) + 10\%(0.85) + 10\% (0.75) + 30\% (0.8167) + 40\% (0.79) \\[0.3cm]
+	&= 4.5\% + 5.0\% + 8.5\% + 7.5\% + 24.501\% + 31.6\% \\[0.3cm]
+	&= 81.601\% \\[0.3cm]
+	&\approx 81.6\%
+	\end{aligned}
+	\] \pspace
+Therefore, Ophelia has an 81.6\% course average. 
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Suppose that Jim Nasium is in his first semester at college. His transcript at the end of the first semester was as follows: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{llr}
+	Course & Letter Grade & Credits \\ \hline
+	First-Year Seminar & A & 1 \\
+	Calculus & A$-$ & 4 \\
+	Introductory Philosophy & C+ & 3 \\
+	German~I & B$-$ & 3 \\
+	Writing~I & B+ & 3 \\
+	American Poets & D & 3
+	\end{tabular} \hspace{1cm}
+        \begin{tabular}{|l||c|l||c|} \hline
+        A & 4.0 & C+ & 2.3 \\ \hline
+        A-- & 3.7 & C & 2.0 \\ \hline
+        B+ & 3.3 & C-- & 1.7 \\ \hline
+        B & 3.0 & D & 1.0 \\ \hline
+        B-- & 2.7 & F & 0.0 \\ \hline
+        \end{tabular}
+	\end{table} \par
+What was Jim's GPA for his first semester? [The college's letter grade scheme is show above on the right.] \pspace
+
+\sol This is a weighted average. Recall that a weighted average is given by\dots \pspace
+	\[
+	\sum \text{value} \cdot \text{weight},
+	\] \pspace
+where $\sum$ stands for the sum of the values value~$\cdot$~weight. Because all the weights in the case of GPA are measured out of the total credits, we can write this simply as: \pspace
+	\[
+	\dfrac{\sum \text{value} \cdot \text{credits}}{\text{total credits}}.
+	\] \pspace
+For instance, if one receives an `A' (which has value 4.0) in a course, one then multiplies by its credits (for instance 3~credits) for a total of $4.0 \cdot 3= 12.0$ contribution towards the GPA. We can then compute Jim's GPA: \pspace
+	\[
+	\begin{aligned}
+	\text{GPA}&= \dfrac{\sum \text{value} \cdot \text{credits}}{\text{total credits}} \\[0.3cm]
+	&= \dfrac{4.0(1) + 3.7(4) + 2.3(3) + 2.7(3) + 3.3(3) + 1.0(3)}{1 + 4 + 3 + 3 + 3 + 3} \\[0.3cm]
+	&= \dfrac{4.0 + 14.8 + 6.9 + 8.1 + 9.9 + 3}{17} \\[0.3cm]
+	&= \dfrac{46.7}{17} \\[0.3cm]
+	&= 2.74706 \\[0.3cm]
+	&\approx 2.747
+	\end{aligned}
+	\] \pspace
+Therefore, Jim has a 2.747 GPA. 
+
+
+\end{document}

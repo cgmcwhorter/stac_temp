@@ -6,6 +6,7 @@
 	amsmath,			% Math Environments
 	amssymb,			% Extended Symbols
 	arydshln,			% Matrix Lines
+	cancel,			% Use Cancel
 	caption,			% Remove 'Figure' Prefix
 	enumerate,		% Enumerate Environments
 	etoolbox,			% Use Booleans
@@ -60,6 +61,11 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
 %\usepgfplotslibrary{}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*},
+		holdot/.style={color=black,fill=white,only marks,mark=*},
+		compat=1.12
+}
 
 
 % -------------------
