@@ -43,6 +43,7 @@ so that the inflation rate was 3.271\%. \pspace
 \problem{10} Arty Fischel is attempting to compute his federal income tax for this year. Going online, as he is a single filer, he finds the following two charts to compute his federal income tax: \par
 	\begin{table}[!ht]
 	\centering
+	\scalebox{0.90}{%
 	\begin{tabular}{|l|l|} \hline
 	Taxable Income & Tax Owed \\ \hline \hline
 	\$0--\$10,275 & 10\% of taxable income \\ \hline
@@ -52,11 +53,9 @@ so that the inflation rate was 3.271\%. \pspace
 	\$170,051--\$215,950 & \$34,647.50 + 32\% amount over \$170,050 \\ \hline
 	\$215,951--\$539,900 & \$49,335.50 + 35\% amount over \$215,950 \\ \hline
 	$\geq$ \$539,901 & \$162,718 + 37\% amount over \$539,900 \\ \hline
-	\end{tabular}
-	\end{table}
-
-	\begin{table}[!ht]
-	\centering
+	\end{tabular}} \hfill
+	%
+	\scalebox{0.90}{%
 	\begin{tabular}{|l|l|} \hline
 	Tax Rate & Taxable Income \\ \hline \hline
 	10\% & Up to \$10,275 \\ \hline
@@ -66,12 +65,31 @@ so that the inflation rate was 3.271\%. \pspace
 	32\% & \$170,051--\$215,950 \\ \hline
 	35\% & \$215,951--\$539,900 \\ \hline
 	37\% & $\geq$ \$539,901 \\ \hline
-	\end{tabular}
+	\end{tabular}}
 	\end{table}	
 
 \begin{enumerate}[(a)]
 \item Explain how these two charts convey the same information. Your explanation should include an explanation of how to use each chart to compute the federal income tax for a single individual with \$20,000 of taxable income.
-\item If Arty made \$365,000 last year as a software engineer, how much will he pay in federal income tax.
+\item If Arty made \$365,000 taxable income last year as a software engineer, how much will he pay in federal income tax.
+\end{enumerate}
+
+\sol
+\begin{enumerate}[(a)]
+\item The charts convey the same information because they both give the tax income brackets as well as the rate at which income within those brackets are taxed. The difference is that the first chart computes the tax already charged up to a given bracket, whereas the second one leaves it for you to compute. For instance, the \$1,027.50 in the first chart's second bracket comes from the tax on the first \$10,275 of taxable income, which is charged at 10\%. The tax already charged up to that bracket is then $\$10275(0.10)= \$1,027.50$. The additional term in the third bracket of the first chart comes from the fact that one would have $\$41775 - \$10275= \$31500$ of income in the previous bracket, taxed at 12\%, for a total tax of $\$31500(0.12)= \$3780$ in the previous bracket. But along with the \$1,027.50 charged in the first bracket's income, this gives a total of $\$1027.50 + 3780= \$4807.5$ of tax charged up to that bracket. This logic follows similarly for all the other brackets. Then to compute the tax for \$20,000 of income (falling into the second bracket) using the first chart, we compute the tax of the income at that bracket and add this to the tax from the previous: $\$\$1027.50 + 0.12(\$20000 - \$10275)= \$2194.50$. Using the second chart, we compute the tax at each bracket `by hand': $\$10275(0.10) + 0.12(\$20000 - \$10275)= \$2194.50$. 
+
+\item Using the first chart, we have $\$49335.50 + 0.35(\$365000 - \$215950)= \$101503$. Using the second chart, we have\dots
+	\[
+	\hspace{-2.75cm}0.10(10275) + 0.12(41775 - 10275) + 0.22(89075 - 41775) + 0.24(170050 - 89075) + 0.32(215950 - 170050) + 0.35(365000 - 215950)
+	\]
+	\[
+	0.10(10275) + 0.12(31500) + 0.22(47300) + 0.24(80975) + 0.32(45900) + 0.35(149050)
+	\]
+	\[
+	1027.50 + 3780.00 + 10406.00 + 19434.00 + 14688.00 + 52167.50
+	\]
+	\[
+	\$101,503
+	\]
 \end{enumerate}
 	
 
@@ -86,7 +104,26 @@ so that the inflation rate was 3.271\%. \pspace
 	\item What is the effective interest rate for this loan?
 	\item How much does she owe after 2~years?
 	\item How long until Sue owes the bank \$150,000?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Note that this is a discrete compounded interest problem. We have a principal value of $P= \$85000$, an annual interest rate of $r= 0.0289$, and that the interest is compounded 12~times per year $k= 12$.
+
+\begin{enumerate}[(a)]
+\item The nominal interest rate is 2.89\%, while the effective annual interest rate is\dots
+	\[
+	\hspace{-1cm} r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.0289}{12} \right)^12 - 1= 1.0024083333^{12} - 1= 1.0292858943 - 1= 0.0292858943 \approx 2.93\%
+	\] \pspace
+
+\item The amount she owes after 2~years is the future value of $P= 85000$. This is\dots
+	\[
+	\hspace{-1cm} F= P \left(1 + \dfrac{r}{k} \right)^{kt}= 85000 \left(1 + \dfrac{0.0289}{12} \right)^{12 \cdot 2}= 85000(1.0024083333^{24})= 85000(1.0594294515) \approx \$90,051.50
+	\] \pspace
+
+\item We are now wondering how long until she owes the bank \$150,000, i.e. how long until the future value is \$150,000. This is\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(150000/85000)}{12 \ln \left(1 + \dfrac{0.0289}{12} \right)}= \dfrac{\ln(1.76470588235)}{12 \ln(1.0024083333)}= \dfrac{0.5679840376}{0.028865254958} \approx 12.68 \text{ years}
+	\]
+\end{enumerate}
 
 
 
@@ -100,7 +137,26 @@ so that the inflation rate was 3.271\%. \pspace
 	\item What is the effective interest rate for this account?
 	\item How much is in his account after 4~years?
 	\item If the cost of a year at the college is \$21,714, how much should have Lee placed in the account to have enough for his first full year at the college in four years?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Note that this is a continuous compounding interest problem. We have a principal value of \$2,500 and an annual interest rate of 0.13\%. 
+
+\begin{enumerate}[(a)]
+\item The nominal interest rate is 0.13\%, while the effective annual interest rate is\dots
+	\[
+	r_{\text{eff}}= e^r - 1= e^{0.0013} - 1= 1.0013008454 - 1= 0.0013008454 \approx 0.13008\%
+	\] \pspace
+
+\item The amount in his account after 4~years is the future value of $P= 2500$. This is\dots
+	\[
+	F= Pe^{rt}= 2500 e^{0.0013 \cdot 4}= 2500 e^{0.0052} 2500(1.005213543) \approx \$2,513.03
+	\] \pspace
+
+\item We are wondering how much he should have placed in the account initially, i.e. the principal value, so that after 4~years the amount in the account, $F$, is \$21,714. This is\dots
+	\[
+	P= \dfrac{F}{e^{rt}}= \dfrac{21714}{e^{0.0013 \cdot 4}}= \dfrac{21714}{e^{0.0052}}= \dfrac{21714}{1.00521354347} \approx \$21,601.38.
+	\] 
+\end{enumerate}
 
 
 
