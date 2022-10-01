@@ -165,7 +165,23 @@ so that the inflation rate was 3.271\%. \pspace
 
 
 % Problem 5
-\problem{10} Ray Gunne is comparing loan rates at two different banks. The first offers loans at a 7.99\% annual interest rate, compounded semiannually, while the other offers a loan at 7.89\% annual interest rate, compounded continuously. Which loan should he take? Justify your answer completely.
+\problem{10} Ray Gunne is comparing loan rates at two different banks. The first offers loans at a 7.99\% annual interest rate, compounded semiannually, while the other offers a loan at 7.89\% annual interest rate, compounded continuously. Which loan should he take? Justify your answer completely. \pspace
+
+\sol We can compare these different types of accounts either using doubling time or the effective interest. Obviously, because this is a loan, the longer the doubling time, the better the loan. The less the effective interest, the better the loan. We can compute the doubling time for both: \pspace
+	\[
+	\begin{aligned}
+	t_{D, \text{Disc.}}&= \dfrac{\ln(2)}{k \ln(1 + r/k)}= \dfrac{\ln(2)}{2 \ln(1 + 0.0799/2)}= \dfrac{0.69314718056}{0.078345270148}= 8.8473 \text{ years} \\[0.3cm]
+	t_{D, \text{Cont.}}&= \dfrac{\ln(2)}{r}= \dfrac{\ln(2)}{0.0789} \approx 8.785 \text{ years}
+	\end{aligned}
+	\] \pspace
+Because the doubling time for the discrete compounded interest loan, at a rate of 7.99\% annual interest, compounded semiannually, is less than that for the continuous compounding loan, the discrete compounded interest loan at 7.99\% is the better loan. Similarly, computing effective interests, we have\dots \pspace
+	\[
+	\begin{aligned}
+	r_{\text{eff}}&= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.0799}{2} \right)^2 - 1= 1.03995^2 - 1= 1.0814960025 - 1= 0.0814960025 \approx 8.15\% \\[0.3cm]
+	r_{\text{eff}}&= e^r - 1= e^{0.0789} - 1= 1.08209610 - 1= 0.08209610 \approx 8.21\%
+	\end{aligned}
+	\] \pspace
+Because the discrete compounded interest loan, at a rate of 7.99\%, has a lower effective interest rate than the continuous compounding loan, the discrete compounded interest loan, at a rate of 7.99\%, is the better loan. 
 
 
 
