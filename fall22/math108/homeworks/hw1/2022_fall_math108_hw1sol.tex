@@ -1,0 +1,125 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{1: Due 09/08}{I mean not homework. It's not work if you love it.}{Alex Dunphy, Modern Family}
+
+% Problem 1
+\problem{10} Ray runs a vegetable stand called `Beets by Ray.' The radishes he sells cost him an average of \$0.86 per radish in production costs. In order to turn a profit on their sale, he marks them up by 89.5\%.
+	\begin{enumerate}[(a)]
+	\item Find the amount by which Ray increases the beet price.
+	\item Using your answer from (a), find the price at which he markets the beets.
+	\item By recognizing the market price of the beets as a percent increase problem, find the market price of the beets you found in (b) `directly.'
+	\item If a customer that purchases 36~beets from Ray and must pay a 7\% tax, what is the final purchase price?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because Ray increases the price of the beets by 89.5\%, the price increase is $\$0.86(0.895) \approx \$0.77$. \pspace
+
+\item The final price of a beet is the cost of production plus its markup. Therefore, the price of a beet is $\$0.86 + \$0.77= \$1.63$. \pspace
+
+\item If Ray marks up the price of a beet by 89.5\%, then he is increasing the price 89.5\%. That is, the beet will cost $100\% + 89.5\%= 189.5\%$ of its original cost. But then the price of a beet is $\$0.86 (1 + 0.895)= \$0.86(1.895) \approx \$1.63$. \pspace
+
+\item Because each beet costs \$1.63, the cost of 36~beets is $36 \cdot \$1.63= \$58.68$. But then the customer pays 7\% sales tax, i.e. the cost is increased by 7\%. Therefore, the final purchase price is $\$58.68(1 + 0.07)= \$58.68(1.07) \approx \$62.79$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} For each of the following, determine the likely dependent variable(s) and independent variable. Then determine, with an explanation, whether the independent variable is a function of the given dependent variable(s). If the independent variable is a function, write it in function notation using appropriate variables. 
+	\begin{enumerate}[(a)]
+	\item The amount of sales at an electronic store given the number of people that have entered the store since opening. 
+	\item The amount of cars that have passed through an intersection some number of hours after 8~am.
+	\item The amount of money earned at an hourly job given their hourly pay and hours worked.
+	\item The number of children a couple has given their combined income (to the nearest thousand dollars) and the median of their ages. 
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item The net number of people that have entered the store since opening is the independent variable and the amount of sales is the dependent variable. Because only one fixed amount of sales have occurred after some net number of people have entered the store since opening, the amount of sales at an electronic store is a function of the number of people that have entered the store since opening. We can denote this $S(p)$, where $S$ is the sales (in \$) and $p$ is the net number of people that have entered the store since opening. \pspace
+
+\item The number of hours after 8~am is the independent variable and the the amount of cars that have passed through the intersection is the dependent variable. Because only one amount of cars have passed through the intersection after a given number of hours past 8~am, the number of cars having passed through the intersection is a function of the number of hours past 8~am. We can denote this $C(h)$, where $C$ is the number of cars and $h$ is the number of hours past 8~am. \pspace
+
+\item The independent variables are the hourly pay and the hours worked and the dependent variable is the amount of money earned. Because one has earned a fixed amount of money after working some number of hours at some hourly pay, the amount of money earned is a function of the hourly pay and the hours worked. We can denote this $I(p, h)$, where $I$ is the income (in \$), $p$ is the hourly pay, and $h$ is the number of hours worked. \pspace
+
+\item The independent variables are the median age of the couple (equivalently, the ages of the individuals in the couple) and their combined income (to the nearest thousand dollars) and the dependent variable is the number of children that the couple have. This is not a function. There are couples that are the same age and have the same combined income (to the nearest thousand dollars) that have different number of children. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Danisha just started as a sales representative at a local advertising firm. She received a \$1,200 starting bonus and earns \$38/hr. 
+	\begin{enumerate}[(a)]
+	\item Explain why the amount Danisha has made, $I$, after working at this firm for $d$ days is a linear function.
+	\item Assuming Danisha works 8~hour days, find $I(d)$, the amount Danisha has made after working $d$ days at the company. 
+	\item Interpret the slope and $y$-intercept from your answer in (b). 
+	\item How long until Danisha has earned \$10,000 from working at the company?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item Because her starting bonus was fixed and she earns money at a constant rate of \$38/hr, the overall amount of money she has made after starting at the company changes at a constant rate. Therefore, the amount of money she has made after $d$ days, $I(d)$, is linear. \pspace
+
+\item We know that she makes \$38/hr. Therefore, each day she makes $8 \cdot \$38\text{/hr}= \$304\text{/day}$. But then after $d$ days, she has made $\$304d$~dollars. Adding this to her starting bonus of \$1,200, she has made $\$304d + 1200$ dollars after starting. Therefore, we have\dots
+	\[
+	I(d)= 304d + 1200
+	\]
+
+\item The slope of $I(d)$ is 304. This is the amount of money that she makes per day. The $y$-intercept of $I(d)$ is $I(0)= 1200$, this represents the amount of money she has made after working 0~days at her company, i.e. her starting bonus. \pspace
+
+\item If she has worked $d$ days and earned \$10,000, then $I(d)= 10000$. But then we have\dots
+	\[
+	\begin{aligned}
+	I(d)&= 10000 \\[0.3cm]
+	304d + 1200&= 10000 \\[0.3cm]
+	304d&= 8800 \\[0.3cm]
+	d&\approx 28.95
+	\end{aligned}
+	\]
+Therefore, she has to work at the company for at least 29 days. [If she works only 28 days, she would have made less than what she would have working 28.95~days, which is \$10,000.]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Watch the following videos about issues with Excel:
+	\begin{itemize}
+	\item \href{https://www.youtube.com/watch?v=yb2zkxHDfUE&ab_channel=Stand-upMaths}{When Spreadsheets Attack!}
+	\item \href{https://www.youtube.com/watch?v=3tkz5MNg4FA&ab_channel=QIMacros}{Top 10 Mistakes with Excel Spreadsheets Vol1}
+	\item \href{https://www.youtube.com/watch?v=ujExCcncT6k&ab_channel=Pete-HowToAnalyst}{Avoid These Excel Formatting Mistakes}
+	\end{itemize}
+After watching these videos, as detailed as possible, describe the following (in addition to any other observations you would like to make):
+	\begin{itemize}
+	\item What did you learn from these videos?
+	\item What surprised you about these videos?
+	\item What issues should you be aware of in Excel?
+	\item What advice was given and did any of it seem contradictory?
+	\end{itemize} \par\vfill
+
+\begin{center}
+{\itshape Answers will vary.}
+\end{center} \vfill
+
+
+\end{document}

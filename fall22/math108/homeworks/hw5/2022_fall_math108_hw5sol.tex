@@ -1,0 +1,138 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 09/22}{Be aware of little expenses. A small leak will sink a great ship.}{Benjamin Franklin}
+
+% Problem 1
+\problem{10} Joy Rider is trying to save for college. At the end of each month, she places \$300 into an account that earns 4.6\% yearly annual interest, compounded monthly. If she does this for 4~years, how much has she saved for college? \pspace
+
+\sol This is an annuity. Because the deposits are at the end of the month and the payment rate per year equals the compounding rate per year, this is a simple ordinary annuity. We are looking for how much she has saved after 4~years, i.e. the future value of her savings. \pspace
+
+The payments are $R= \$300$. Because the payments are made monthly for 4~years, there are a total of $4 \cdot 12= 48$ deposits, i.e. $n= 48$. The annual yearly interest is $r= 0.046$, and because the interest is compounded quarterly, we know that $k= 12$. Then the interest rate per payment is\dots \pspace
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.046}{12} \right)^{12/12} - 1= 1.01675^1 - 1= 1.00383333333 - 1= 0.00383333333.
+	\] \pspace
+Note that we have\dots 
+	\[
+	s_{\actuarialangle{48\,}\, 0.00383333333}= \dfrac{(1 + 0.00383333333)^{48} - 1}{0.00383333333}= \dfrac{1.201593066766 - 1}{0.00383333333}= \dfrac{0.201593066766}{0.00383333333}= 52.58949572356.
+	\] \pspace
+Therefore, the amount she has saved is\dots \pspace
+	\[
+	\begin{aligned}
+	F&= R\, s_{\actuarialangle{n\,}\, i} \\[0.3cm]
+	&= \$300 \cdot s_{\actuarialangle{48\,}\, 0.00383333333} \\[0.3cm]
+	&= \$300 \cdot 52.58949572356 \\[0.3cm]
+	&\approx \$15,776.85
+	\end{aligned}
+	\] 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Oren Jellow owns a produce distribution company. To plan ahead, every 3~months, he makes a deposit at the beginning of the month, so that he will eventually have enough saved to replace a delivery truck. The money is placed into an account earning 3.8\% annual interest, compounded quarterly. If he anticipates having to replace a truck every 5~years and the trucks cost \$85,000 to replace, how much money should he deposit each time? \pspace
+
+
+\sol This is an annuity. Because the deposits are at the start of the month and the payment rate per year equals the compounding rate per year, this is a simple annuity due. We are looking for the amount that he should deposit each month to have at least \$85,000 saved after 5~years. \pspace
+
+The amount he wants to save is \$85,000, i.e. $F= \$85000$. Because the payments are made monthly for 5~years, there are a total of $5 \cdot 12= 60$ payments, i.e. $n= 60$. The annual yearly interest is $r= 0.038$, and because the interest is compounded quarterly, we know that $k= 4$. Then the interest rate per payment is\dots
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.038}{4} \right)^{4/12} - 1= 1.0095^{1/3} - 1= 1.00315669148 - 1= 0.00315669148.
+	\] \pspace
+Note that we have\dots 
+	\[
+	\begin{aligned}
+	s_{\actuarialangle{60\,}\, 0.00315669148}&= \dfrac{(1 + 0.00315669148)^{60} - 1}{0.00315669148}= \dfrac{1.208165599011 - 1}{0.00315669148}= \dfrac{0.208165599011}{0.00315669148}= 65.94423317257, \\[0.3cm]
+	\ddot{s}_{\actuarialangle{60\,}\, 0.00555244661}&= (1 + 0.00315669148) s_{\actuarialangle{60\,}\, 0.00315669148}= 66.152398771581.
+	\end{aligned}
+	\] \pspace
+Therefore, the monthly payments are\dots
+	\[
+	\begin{aligned}
+	R&= \dfrac{F}{\ddot{s}_{\actuarialangle{n\,}\, i}} \\[0.3cm]
+	&= \dfrac{\$85000}{\ddot{s}_{\actuarialangle{60\,}\, 0.00555244661}} \\[0.3cm]
+	&= \dfrac{\$85000}{66.152398771581} \\[0.3cm]
+	&\approx \$1,284.91
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Sara Bellum is setting aside money for her nephew's HS graduation in 2~years. At the start of each month, she places \$20 into an account that earns 1.8\% yearly annual interest, compounded semiannually. How much will be she be giving her nephew at the end of the 2~years? \pspace
+
+\sol This is an annuity. Because the deposits are at the start of the month and the payment rate per year does not equal the compounding rate per year, this is a general annuity due. We are looking at how much she has saved after depositing the \$20 a month for 2~years, i.e. its future value. \pspace
+
+The monthly payments are \$20, i.e. $R= 20$. Because the payments are made monthly for 2~years, there are a total of $2 \cdot 12= 24$ payments, i.e. $n= 24$. The annual yearly interest is $r= 0.018$, and because the interest is compounded semiannually, we know that $k= 2$. Then the interest rate per payment is\dots 
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.018}{2} \right)^{2/12} - 1= 1.009^{1/6} - 1= 1.00149440574162 - 1= 0.00149440574162.
+	\] \pspace
+Note that we have\dots 
+	\[
+	\begin{aligned}
+	\hspace{-1cm} s_{\actuarialangle{24\,}\, 0.00149440574162}&= \dfrac{(1 + 0.00149440574162)^{24} - 1}{0.00149440574162}= \dfrac{1.036488922561 - 1}{0.00149440574162}= \dfrac{0.036488922561}{0.00149440574162}= 24.417011755753, \\[0.3cm]
+	\hspace{-1cm} \ddot{s}_{\actuarialangle{24\,}\, 0.00149440574162}&= (1 + 0.00149440574162) s_{\actuarialangle{60\,}\, 0.00149440574162}= 24.453500678314.
+	\end{aligned}
+	\] \pspace
+Therefore, the amount she will be giving her nephew is\dots
+	\[
+	\begin{aligned}
+	F&= R\, \ddot{s}_{\actuarialangle{n\,}\, i} \\[0.3cm]
+	&= \$20 \cdot \ddot{s}_{\actuarialangle{24\,}\, 0.00149440574162} \\[0.3cm]
+	&\approx \$489.07
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Sonny Day is saving for a down payment on a condo. He wants to have \$35,000 saved in the next 5~years. So at the end of each month, he will make a deposit into an account that earns 3.7\% annual interest, compounded daily. How much should he make the monthly deposit? \pspace
+
+\sol This is an annuity. Because the deposits are at the end of the month and the payment rate per year does not equal the compounding rate per year, this is a general ordinary annuity. We are looking for how much his payments need to be to save \$35,000 in 5~years. \pspace
+
+We know that the future value of these deposits needs to be \$35,000, i.e. $F= 35000$. Because the payments are made monthly for 5~years, there are a total of $5 \cdot 12= 60$ deposits, i.e. $n= 60$. The annual yearly interest is $r= 0.037$, and because the interest is compounded daily, we know that $k= 365$. Then the interest rate per payment is\dots 
+	\[
+	\begin{aligned}
+	i&= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1 \\[0.3cm]
+	&= \left( 1 + \dfrac{0.037}{365} \right)^{365/12} - 1 \\[0.3cm]
+	&= 1.000101369863^{30.4167} - 1 \\[0.3cm]
+	&= 1.0030879349443 - 1 \\[0.3cm]
+	&= 0.0030879349443.
+	\end{aligned}
+	\] \pspace
+Note that we have\dots 
+	\[
+	s_{\actuarialangle{60\,}\, 0.0030879349443}= \dfrac{(1 + 0.0030879349443)^{60} - 1}{0.0030879349443}= \dfrac{1.20320715871 - 1}{0.20320715870}= \dfrac{0.20320715871}{0.0030879349443}= 65.806813413.
+	\] \pspace
+Therefore, his monthly payments should be\dots \pspace
+	\[
+	\begin{aligned}
+	R&= \dfrac{F}{s_{\actuarialangle{n\,}\, i}} \\[0.3cm]
+	&= \dfrac{\$35000}{s_{\actuarialangle{60\,}\, 0.0030879349443}} \\[0.3cm]
+	&= \dfrac{\$35000}{65.806813413} \\[0.3cm]
+	&\approx \$531.86
+	\end{aligned}
+	\] 
+
+
+\end{document}

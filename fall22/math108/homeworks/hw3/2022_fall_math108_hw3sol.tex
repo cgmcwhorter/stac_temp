@@ -1,0 +1,129 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 09/15}{Taking on a challenge is a lot like riding a horse, isn't it? If you're comfortable while you're doing it, you're probably doing it wrong.}{Ted Lasso, Ted Lasso}
+
+% Problem 1
+\problem{10} Sally Forth takes out a \$960 loan for 7~months that is discounted at an 8.3\% annual simple interest rate.
+	\begin{enumerate}[(a)]
+	\item What is the discount for this loan?
+	\item What is the maturity? What are the proceeds?
+	\item How much interest is paid on this loan? How much is paid in total?
+	\item Find the nominal and effective interest rates for this loan.
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item The discount for this loan is the interest that she has to pay. The maturity is \$960 with an annual interest rate of 8.3\%, i.e. $r= 0.083$. The discount is then\dots
+	\[
+	D= Mrt= \$960 \cdot 0.083 \cdot \dfrac{7}{12}= \$46.48.
+	\] \pspace
+
+\item The maturity is the requested loan amount, which is \$960. The proceeds are the amount received after paying the interest up front. Therefore, the proceeds are\dots
+	\[
+	P= M - D= \$960 - \$46.48= \$913.52.
+	\] \pspace
+
+\item The interest paid on the loan is the discount---which was \$46.48. She still has to pay back the maturity, which was \$960. Therefore, she pays $\$960 + \$46.48= \$1,006.48$. \pspace
+
+\item The nominal interest rate is the advertised interest---which was 8.3\%. The effective interest is\dots
+	\[
+	r_{\text{eff}}= \dfrac{0.083}{1 - 0.083 \cdot \frac{7}{12}}= \dfrac{0.083}{0.951583} \approx 0.087223= 8.7223\%
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Recall that the 2022~Federal Income Tax Bracket for single filers (who had a standard deduction \$12,950) was as follows:
+	\begin{table}[!ht]
+	\centering
+	\scalebox{0.75}{%
+	\begin{tabular}{|l|c|c|c|c|c|c|c|} \hline 
+	Income & \$0--\$10,275 & \$10,275--\$41,775 & \$41,775--\$89,075 & \$89,075--\$170,050 & \$170,050--\$215,950 & \$215,950--\$539,900 & $>$\$539,000 \\ \hline
+	Tax Rate & 10\% & 12\% & 22\% & 24\% & 32\% & 35\% & 37\% \\ \hline
+	\end{tabular}
+	}
+	\end{table}
+
+	\begin{enumerate}[(a)]
+	\item Find a single filer's federal tax amount if they made \$40,852 and took the standard deduction. 
+	\item Find a single filer's federal tax amount if they made \$92,661 and took the standard deduction. 
+	\item In what sense is it sensible to say that millionaires (and higher) are taxed at a rate of 37\%? In what sense does that not make sense? Explain.
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item A single filer making \$40,852 and taking the standard deduction has $\$40,852 - \$12,950= \$27,902$ in taxable income. Therefore, in taxes, they pay\dots
+	\[
+	\begin{aligned}
+	0.10(\$10,275 - \$0) + 0.12(\$27,902 - \$10,275)&= 0.10(\$10,275) + 0.12(\$17,627) \\[0.3cm]
+	&= \$1,027.50 + \$2,115.24 \\[0.3cm]
+	&= \$3,142.74.
+	\end{aligned}
+	\] \pspace
+
+\item A single filer making \$92,661 and taking the standard deduction has $\$92,661 - \$12,950= \$79,711$ in taxable income. Therefore, in taxes, they pay\dots
+	\[
+	\begin{aligned}
+	0.10(\$10,275 - \$0) + 0.12(\$41,775 &- \$10,275) + 0.22(\$79,711 - \$41,775) \\[0.3cm]
+	0.10(\$10,275) + 0.12&(\$31,500) + 0.22(\$37,936) \\[0.3cm]
+	\$1027.50 + &\$3,780.00 + \$8,345.92 \\[0.3cm]
+	&\$13,153.42.
+	\end{aligned}
+	\] \pspace
+
+\item It makes sense because the bulk of a millionaire's income is taxed in the upper bracket---which is taxed at 37\%. However, there is a sense in which this is not true. The first \$539,000 of a millionaire's income is taxed at rates lower than 37\%. Therefore, their overall income is taxed (slightly) lower than 37\%.
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} If a goods that cost \$97.65 last year now cost \$103.39, what is the inflation rate on these goods from last year to this year? Explain why this might be `harmful' for consumers and why this might not be `harmful' for consumers. \pspace
+
+\sol We have\dots 
+	\[
+	\dfrac{\$103.39}{\$97.65} \approx 1.05878= 1 + 0.05878.
+	\] \pspace
+Therefore, the inflation rate was 5.878\%. Obviously, this `harmful' to consumers because they have to pay more for their goods. Of course, there are others way that this may harm consumers. A rise in the price of this good may cause a drop in revenue due to less people purchasing the product. This may then result in an overall loss of profit, which may cause cuts in the company. \pspace
+
+However, there are possibilities that the inflation in this good could be `good' for consumers. The price of the good may have risen as a result of product improvement, e.g. the lifetime of the product may have gone up or the product now may be able to do more. So while consumers may be paying more, they might be getting more or saving money in the long term due to product improvement. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose the CPI in 2045 was 278.405. By what factors are goods more expensive in 2045 than in 1982? What is the inflation rate over this time period? If the CPI in 2044 were 276.901, what is the inflation rate from 2044 to 2045? \pspace
+
+\sol Because CPI is based off the cost of goods in 1982--1984, we know that the CPI for these years is 100.00. Then we have\dots
+	\[
+	\dfrac{278.405}{100.00}= 2.78405= 1 + 1.78405.
+	\] \pspace
+Therefore, prices in 2044 have risen by 178.405\% in comparison to 1982, i.e. prices have increased by a factor of 2.78405. Now we also have\dots \pspace
+	\[
+	\dfrac{278.405}{276.901} \approx 1.00543= 1 + 0.00543.
+	\] \pspace
+Therefore, the inflation rate from 2044 to 2045 was 0.543\%. 
+
+
+\end{document}

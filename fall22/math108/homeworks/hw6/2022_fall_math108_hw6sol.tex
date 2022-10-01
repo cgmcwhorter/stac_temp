@@ -1,0 +1,145 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 09/27}{The one thing that offends me the most is when I walk by a bank and see ads trying to convince people to take out second mortgages on their home so they can go on vacation. That's approaching evil.}{Jeff Bezos}
+
+% Problem 1
+\problem{10} The owner of the Lord of the Rinse laundromat chain is hoping to expand into a new part of the state. To help lease, refurbish, and stock the new locations, he takes out a loan with end of the month payments for \$1.2~million for 15~years at 6.7\% yearly annual interest, compounded quarterly. Find the monthly payments for this loan. \pspace
+
+\sol This is an amortized loan. Because the deposits are at the end of the month and the payment rate per year does not equal the compounding rate per year, this is an amortization based on a general ordinary annuity. We are looking for the monthly payments for this amortized loan. \pspace
+
+The borrowed amount is $P= \$1200000$. Because the payments are made monthly for 15~years, there are a total of $15 \cdot 12= 180$ payments, i.e. $n= 15$. The annual yearly interest is $r= 0.067$, and because the interest is compounded quarterly, we know that $k= 4$. Then the interest rate per payment is\dots
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.067}{4} \right)^{4/12} - 1= 1.01675^{1/3} - 1= 1.00555244661 - 1= 0.00555244661.
+	\]
+Note that we have\dots
+	\[
+	a_{\actuarialangle{180\,}\, 0.00555244661}= \dfrac{1 - (1 + 0.00555244661)^{-180}}{0.00555244661}= \dfrac{1 - 0.3691043261115}{0.00555244661}= \dfrac{0.6308956738885}{0.00555244661}= 113.62480690.
+	\]
+Therefore, the monthly payments are\dots
+	\[
+	\begin{aligned}
+	R&= \dfrac{P}{a_{\actuarialangle{n\,}\, i}} \\[0.3cm]
+	&= \dfrac{\$1200000}{a_{\actuarialangle{180\,}\, 0.00555244661}} \\[0.3cm]
+	&= \dfrac{\$1200000}{113.62480690} \\[0.3cm]
+	&= \$10561.0741 \\[0.3cm]
+	&\approx \$10,561.07
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Gerry Atrick is buying a smaller home for retirement. Because he has not sold his current home, he takes out a 30-year, \$80,000 mortgage at 4.53\% annual interest, compounded monthly and end of the month payments. If he sells his current home after 12 months, how much does he still owe on his new retirement home? \pspace
+
+\sol This is an amortized loan. Let us assume that Gerry has not made a down payment. Because the deposits are at the end of the month and the payment rate per year equals the compounding rate per year, this is an amortization based on a simple ordinary annuity. We are looking for how much Gerry still owes after 12~months, i.e. after 12~payments ($m= 12$). \pspace
+
+First, we need to find the monthly payments. The borrowed amount is $P= \$80000$. Because the payments are made monthly for 30~years, there are a total of $30 \cdot 12= 360$ payments, i.e. $n= 360$. The annual yearly interest is $r= 0.0453$, and because the interest is compounded monthly, we know that $k= 12$. Then the interest rate per payment is\dots \pspace
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.0453}{12} \right)^{12/12} - 1= 1.003775^1 - 1= 0.003775.
+	\] \pspace
+Note that we have\dots
+	\[
+	a_{\actuarialangle{360\,}\, 0.003775}= \dfrac{1 - (1 + 0.003775)^{-360}}{0.003775}= \dfrac{1 - 0.25757577642}{0.003775}= \dfrac{0.74242422358}{0.003775}= 196.66867.
+	\] \pspace
+Therefore, the monthly payments are\dots \pspace
+	\[
+	\begin{aligned}
+	R&= \dfrac{P}{a_{\actuarialangle{n\,}\, i}} \\[0.3cm]
+	&= \dfrac{\$80000}{a_{\actuarialangle{360\,}\, 0.003775}} \\[0.3cm]
+	&= \dfrac{\$80000}{196.66867} \\[0.3cm]
+	&\approx \$406.7755.
+	\end{aligned}
+	\] \pspace
+Note that we have\dots 
+	\[
+	a_{\actuarialangle{348\,}\, 0.003775}= \dfrac{1 - (1 + 0.003775)^{-348}}{0.003775}= \dfrac{1 - 0.26948929423}{0.003775}= \dfrac{0.73051070577}{0.003775}= 193.51276974.
+	\] \pspace
+Therefore, the Gerry owes after 12~months, i.e. 12~payments ($m= 12$), is\dots \pspace
+	\[
+	R\,a_{\actuarialangle{n - m\,}\, i}= \$406.7755 \cdot a_{\actuarialangle{360 - 12\,}\, 0.003775}= \$406.7755 \cdot a_{\actuarialangle{348\,}\, 0.003775}= \$406.7755 \cdot 193.51276974 \approx \$78,716.25
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Doris Schutt is purchasing a new home with her wife. They find a decent home in a good school district with a yard for their husky and German shepherd. The house is listed at \$269,900. A bank offers them a 30-year mortgage at 4.3\% annual interest, compounded monthly and end of the month payments with a downpayment of 12\%. If they take this mortgage, how much will they pay in total for the home? \pspace
+
+\sol This is an amortized loan. They make a down payment of 12\%, which is $\$269,900(0.12)= \$32,388.00$. Then the mortgage is for $\$269,900 - \$32,388= \$237,512$. Because the deposits are at the end of the month and the payment rate per year equals the compounding rate per year, this is an amortization based on a simple ordinary annuity. We are looking for how much they pay for in total for the house. \pspace
+
+First, we need to find the monthly payments. The borrowed amount is $P= \$237512$. Because the payments are made monthly for 30~years, there are a total of $30 \cdot 12= 360$ payments, i.e. $n= 360$. The annual yearly interest is $r= 0.043$, and because the interest is compounded monthly, we know that $k= 12$. Then the interest rate per payment is\dots \pspace
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.043}{12} \right)^{12/12} - 1= 1.0035833333^1 - 1= 0.0035833333.
+	\] \pspace
+Note that we have\dots \pspace
+	\[
+	a_{\actuarialangle{360\,}\, 0.0035833333}= \dfrac{1 - (1 + 0.0035833333)^{-360}}{0.0035833333}= \dfrac{1 - 0.2759062225}{0.0035833333}= \dfrac{0.7240937775}{0.0035833333}= 202.072683.
+	\] \pspace
+Therefore, the monthly payments are\dots \pspace
+	\[
+	\begin{aligned}
+	R&= \dfrac{P}{a_{\actuarialangle{n\,}\, i}} \\[0.3cm]
+	&= \dfrac{\$237512}{a_{\actuarialangle{360\,}\, 0.0035833333}} \\[0.3cm]
+	&= \dfrac{\$237512}{202.072683} \\[0.3cm]
+	&\approx \$1175.379059
+	\end{aligned}
+	\] \pspace
+Then the amount they will pay on the mortgage is $nR= 360 \cdot \$1175.379059 \approx \$423,136.46$. Therefore, the total amount they will pay for their new home is\dots \pspace
+	\[
+	\$32,388 + \$423,136.46= \$464,524.46.
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Warren Peace takes out a loan for \$15,000 at 6.2\% annual interest, compounded quarterly that will be paid off over 5~years with equal end of the month payments. After making payments for two years, how much of his next payment will actually go towards paying the loan, rather than towards interest? \pspace
+
+\sol This is an amortized loan. Because the deposits are at the end of the month and the payment rate per year does not equal the compounding rate per year, this is an amortization based on a general ordinary annuity. We are looking for how much is paid against the principal after 2~years of payments, i.e. $m= 2 \cdot 12= 24$. \pspace
+
+First, we need to find the monthly payments. The borrowed amount is $P= \$15000$. Because the payments are made monthly for 5~years, there are a total of $5 \cdot 12= 60$ payments, i.e. $n= 60$. The annual yearly interest is $r= 0.062$, and because the interest is compounded quarterly, we know that $k= 4$. Then the interest rate per payment is\dots \pspace 
+	\[
+	i= \left( 1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left( 1 + \dfrac{0.062}{12} \right)^{4/12} - 1= 1.0155^{1/3} - 1= 1.005140199742 - 1= 0.005140199742.
+	\] \pspace
+Note that we have\dots \pspace
+	\[
+	a_{\actuarialangle{60\,}\, 0.005140199742}= \dfrac{1 - (1 + 0.005140199742)^{-60}}{0.005140199742}= \dfrac{1 - 0.7351931385571}{0.005140199742}= \dfrac{0.264806861443}{0.005140199742}= 51.516842678.
+	\] \pspace
+Therefore, the monthly payments are\dots \pspace
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n\,}\, i}}= \dfrac{\$15000}{a_{\actuarialangle{60\,}\, 0.005140199742}}= \dfrac{\$15000}{51.516842678} \approx \$291.1669.
+	\] \pspace
+Now note that\dots \pspace
+	\[
+	\begin{aligned}
+	\hspace{-1cm}a_{\actuarialangle{37\,}\, 0.005140199742}&= \dfrac{1 - (1 + 0.005140199742)^{-37}}{0.005140199742}= \dfrac{1 - 0.8272070451028851}{0.005140199742}= \dfrac{0.17279295489711488}{0.005140199742}= 33.616000, \\
+	\hspace{-1cm}a_{\actuarialangle{36\,}\, 0.005140199742}&= \dfrac{1 - (1 + 0.005140199742)^{-36}}{0.005140199742}= \dfrac{1 - 0.8314590545427035}{0.005140199742}= \dfrac{0.16854094545729648}{0.005140199742}= 32.788793.
+	\end{aligned}
+	\] \pspace
+Therefore, the amount paid against the principal after 2~years is\dots 
+	\[
+	R \left( a_{\actuarialangle{n - m + 1\,}\, i} - a_{\actuarialangle{n - m\,}\, i} \right)= \$263.33079 \left( 33.616000 - 32.788793 \right)= \$263.33079 \cdot 0.827207 \approx \$240.86
+	\]
+
+
+\end{document}

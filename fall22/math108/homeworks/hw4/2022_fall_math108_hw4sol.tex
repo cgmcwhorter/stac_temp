@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -18,7 +18,20 @@
 	\item What was the inflation rate from last year to this year?
 	\item If the inflation rate remains constant from this year to next year, what will be the CPI that Levy should hope to predict for next year?
 	\item Assuming the inflation rate is constant over the next year, if a certain good cost \$15.99 this year, what should Levy predict that it costs next year according to this data?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\dfrac{305.86}{296.17} \approx 1.03272= 1 + 0.03271
+	\] \pspace
+so that the inflation rate was 3.271\%. \pspace
+
+\item If the inflation rate is the same, then by (a), we expect to see a 3.271\% increase in prices next year. We then expect (roughly) that the CPI next year will be 3.271\% higher than this year, i.e. a 3.271\% increase. But that means that a prediction for next year's CPI would be $305.86(1 + 0.03271)= 305.86(1.03271) \approx 315.87$. \pspace
+
+\item If the inflation rate is the same, then by (a), we expect to see a 3.271\% increase in prices next year. We then expect (roughly) that the price next year will be 3.271\% higher than this year, i.e. a 3.271\% increase. But that means that a prediction for next year's price would be $\$15.99(1 + 0.03271)= \$15.99(1.03271) \approx \$16.51$. 
+\end{enumerate}
 
 
 
