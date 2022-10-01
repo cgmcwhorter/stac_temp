@@ -190,7 +190,33 @@ Because the discrete compounded interest loan, at a rate of 7.99\%, has a lower 
 
 
 % Problem 6
-\problem{10} Sue Render wants to be able to save \$500 in the next two years by depositing \$400 in a savings account. She can either choose a savings account that compounds interest quarterly or continuously. For both types of savings account, find the interest rate on the savings account she would have to secure to have the \$500 after 2~years. Does her plan seem feasible? 
+\problem{10} Sue Render wants to be able to save \$500 in the next two years by depositing \$400 in a savings account. She can either choose a savings account that compounds interest quarterly or continuously. For both types of savings account, find the interest rate on the savings account she would have to secure to have the \$500 after 2~years. Does her plan seem feasible? \pspace
+
+\sol Suppose she puts the money into an account that compounds interest discretely at a rate of four times per year (quarterly) at an annual interest rate of $r$, in order to save \$500 from a principal value of \$400 in 2~years, we would have\dots
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	\$500&= \$400 \left(1 + \dfrac{r}{4} \right)^{4 \cdot 2} \\[0.3cm]
+	\$500&= \$400 \left(1 + \dfrac{r}{4} \right)^8 \\[0.3cm] 
+	1.25&= \left(1 + \dfrac{r}{4} \right)^8 \\[0.3cm]
+	\sqrt[8]{1.25}&= \sqrt[8]{\left(1 + \dfrac{r}{4} \right)^8} \\[0.3cm] 
+	1.0282855942979&= 1 + \dfrac{r}{4} \\[0.3cm]
+	0.0282855942978&= \dfrac{r}{4} \\[0.3cm]
+	r&\approx 0.1131
+	\end{aligned}
+	\]
+which is an interest rate of 11.31\%. If she instead puts the money into an account that compounds interest continuously at an annual interest rate of $r$, then to save \$500 from a principal value of \$400 in 2~years, we would have\dots 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\[0.3cm]
+	\$500&= \$400 e^{2r} \\[0.3cm]
+	1.25&= e^{2r} \\[0.3cm]
+	\ln(1.25)&= \ln(e^{2r}) \\[0.3cm]
+	0.2231435513142&= 2r \\[0.3cm]
+	r&\approx 0.1116
+	\end{aligned}
+	\]
+which is an interest rate of 11.16\%. While both the 11.31\% interest rate for the discretely compounded interest account and the 11.16\% interest rate for the continuously compounded interest account are \textit{possible}, these are both very high interest rates for a savings account. Therefore, her plan to save \$500 by depositing \$400 into a savings account for 2~years is likely not feasible. 
 
 
 \end{document}
