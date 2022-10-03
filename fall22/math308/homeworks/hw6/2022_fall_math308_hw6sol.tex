@@ -1,0 +1,214 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 09/27}{Since, as is well known, god helps those who help themselves, presumably the devil helps all those, and only those, who don't help themselves. Does the devil help himself?}{Douglas Hofstadter, G\"odel, Escher, Bach: An Eternal Golden Braid}
+
+% Problem 1
+\problem{10} Let $S:= \{ -3, -2, -1, 0, 1, 2, 3 \}$ be a universal set and define $X:= \{ -1, 0, 1 \}$. Give an example of\dots
+	\begin{enumerate}[(a)]
+	\item a proper subset of $S$, say $A$, that is disjoint from $X$.
+	\item a subset of $S$, say $B$, such that $B - X \neq B$.
+	\item a subset of $S$, say $C$, such that $X \Delta C= X \cup C$.
+	\item a subset of $S$, say $D$, such that $D^c$ contains only nonnegative numbers.
+	\item a subset of $S$, say $E$, such that the complement of $X \cup E$ is empty. 
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Let $A$ and $B$ be sets. By defining $A= B$ by using a quantified open sentence, show that $A \neq B$ is equivalent to the logical statement\dots
+	\[
+	(\exists x) \big( x \in A \wedge x \notin B \big) \vee (\exists x) \big( x \in B \wedge x \notin A \big)
+	\]
+
+\sol 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Let $A$ and $B$ be sets and consider the set $A \Delta B$. 
+	\begin{enumerate}[(a)]
+	\item Using set-builder notation and logical propositions, define the set $A \Delta B$.
+	\item Construct a Venn diagram for the set $(A \Delta B)^c$.
+	\item Construct a Venn diagram for the set $(A \cup B)^c \cup (A \cap B)$
+	\item What might you conjecture from your answers in (b) and (c)?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Let $A$, $B$, and $C$ be sets in some universe $\mathcal{U}$. Find the \textit{complement} of the following sets, showing all your work and `simplifying' as much as possible:
+	\begin{enumerate}[(a)]
+	\item $A \setminus B$
+	\item $(A^c \cup C) \cap B$
+	\item $\left( \big( (A \cup B) \cap C) \big)^c \cup B^c \right)^c$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Define $S:= \{ 1, 2, \{ 1 \}, \{ \{ 2 \} \} \}$. Determine whether the following are true or false---no justification is necessary:
+	\begin{2enumerate}
+	\item $\varnothing \in S$
+	\item $\varnothing \subseteq S$
+	\item $1 \in \mathcal{P}(S)$
+	\item $\{ 1 \} \in \mathcal{P}(S)$
+	\item $\{ \{ 1 \} \} \in \mathcal{P}(S)$
+	\item $1 \subseteq \mathcal{P}(S)$
+	\item $\{ 1 \} \subseteq \mathcal{P}(S)$
+	\item $\{ \{ 1 \} \} \subseteq \mathcal{P}(S)$
+	\item $\varnothing \in \mathcal{P}(S)$
+	\item $\{ \varnothing \} \in \mathcal{P}(S)$
+	\item $\varnothing \subseteq \mathcal{P}(S)$
+	\item $\{ \varnothing \} \subseteq \mathcal{P}(S)$
+	\end{2enumerate} \pspace
+
+\sol
+\begin{2enumerate}
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{2enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Define $A:= \{ 3, 5, 7 \}$ and $B:= \{ \pi, e, \sqrt{2}, \varphi \}$. 
+	\begin{enumerate}[(a)]
+	\item Determine $A \times B$.
+	\item Is $(3, \pi) \in A \times B$? Is $(\pi, 3) \in A \times B$? Explain the relation between your responses. 
+	\item Is $A \times B= B \times A$? Explain. 
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 7
+\problem{10} Determine $\displaystyle \bigcup_{i \in \mathcal{I}} A_n$ and $\displaystyle \bigcap_{i \in \mathcal{I}} A_n$ for the given $A_n$ and $\mathcal{I}$ below---no justification is necessary. However, if the set is finite, enumerate its elements; otherwise, either give the set in set-builder notation or using set operations with `standard' sets, e.g. $\mathbb{Q}$, $\mathbb{Z} \setminus \mathbb{N}$, etc. 
+	\begin{enumerate}[(a)]
+	\item $A_n:= \left( \frac{1}{n}, 1 + \frac{1}{n} \right)$; $\mathcal{I}:= \mathbb{N}$
+	\item $A_n:= \left( n, n + 1 \right)$; $\mathcal{I}:= \mathbb{Z}$
+	\item $A_n:= \left( n - \frac{1}{2}, n + \frac{1}{2} \right)$; $\mathcal{I}:= \mathbb{R}$
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 8
+\problem{10} Below is a partial proof of the fact that $A \setminus B= A \cap B^c$. By filling in the missing portions, complete the partial proof below so that it is a correct, logically sound proof with `no gaps': \pspace
+
+{\bfseries Proposition.} If $A$ and $B$ are sets, then $A \setminus B= A \cap B^c$. \pspace
+
+{\itshape Proof.} If $A \setminus B= \varnothing$, then there is no element in $A$ that is not also in $B$. But then $A \subseteq B$ so that $A^c \supseteq B^c$. But then $A \cap B^c \subseteq A \cap A^c= \varnothing$ so that $A \cap B^c= \varnothing$. Therefore, if $A \setminus B= \varnothing$, then $A \setminus B= A \cap B^c$. If $A \cap B^c= \varnothing$, then there is no element in both $A$ and $B^c$. Now if there were an element in $A \setminus B$, there would be an element in $A$ that is not in $B$, i.e. an element in $A$ that is in $B^c$, a contradiction to the fact that $A \cap B^c= \varnothing$, i.e. that there is no element in both $A$ and $B^c$. This shows that $A \setminus B= \varnothing$. Therefore, if $A \cap B^c= \varnothing$, then $A \setminus B= A \cap B^c$. Then we have shown that if either $A \setminus B$ or $A \cap B^c$ are empty then $A \setminus B= A \cap B^c$. Now assume that both $A \setminus B$ and $A \cap B^c$ are nonempty. \pspace
+
+To prove that $A \setminus B= A \cap B^c$, we need to show \underline{\hspace{3cm}} and \underline{\hspace{3cm}}. \par\vspace{3\baselineskip}
+
+$A \setminus B \subseteq A \cap B^c$: We prove that $A \setminus B \subseteq A \cap B^c$. Let $x \in$~\underline{\hspace{3cm}}. Then by definition, \pspace
+
+$x \in A$ and \underline{\hspace{3cm}}. But then $x \in$~\underline{\hspace{3cm}} and $x \in B^c$. This shows that \pspace
+
+$x \in$~\underline{\hspace{3cm}}. Therefore, this shows that \underline{\hspace{3cm}}. \par\vspace{3\baselineskip}
+
+\underline{\hspace{3cm}}: We need to show that $A \cap B^c \subseteq A \setminus B$. Let $x \in$~\underline{\hspace{3cm}}. Then \pspace
+
+$x \in$~\underline{\hspace{3cm}} and $x \in$~\underline{\hspace{3cm}}. But then $x \in$~\underline{\hspace{3cm}} and \pspace
+
+$x \notin$ \underline{\hspace{3cm}}. This shows that $x \in$~\underline{\hspace{3cm}}. Therefore, we know that \underline{\hspace{3cm}}. \par\vspace{3\baselineskip}
+
+Because \underline{\hspace{3cm}} and \underline{\hspace{3cm}}, we know that $A \setminus B= A \cap B^c$. \qed \pspace
+
+
+\sol 
+
+
+
+
+
+
+
+
+
+
+\end{document}
