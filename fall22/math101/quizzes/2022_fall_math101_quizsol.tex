@@ -54,15 +54,47 @@
 \sol The statement is \textit{false}. We can simplify this expression as follows:
 	\[
 	\dfrac{x y^4 z^3}{z^{-3} \sqrt{x^2 y^4}}= \dfrac{x y^4 z^3}{z^{-3} (x^{2/2} y^{4/2})}= \dfrac{x y^4 z^3}{z^{-3} x y^2}= \dfrac{x y^4 z^3 z^3}{x y^2}= \dfrac{y^4 z^6}{y^2}= y^2 z^6
+	\] \pvspace{1.2cm}
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: To compute 560 increased by 160\%, one computes $560(2.60)= 1456$. \pspace
+
+\sol The statement is \textit{true}. To compute a percentage increase/decrease of a number $N$, we compute $N(1 \pm \%_d)$, where $N$ is the number, $\%_d$ is the percentage written as a decimal, and where we choose `$+$' if it is a percentage increase and `$-$' if it is a percentage decrease. So here, we compute\dots
+	\[
+	N(1 \pm \%_d)= 560(1 + 1.60)= 560(2.60)= 1456
+	\] \pvspace{1.2cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: Suppose a course has three exams: two prelims and a final exam. The final exam is worth twice as much as any of the other exams. If a student receives an 85\%, 89\%, and 81\% on the prelims and final exam, respectively, then their exam average is $85\% \left( \frac{1}{4} \right) + 89\%  \left( \frac{1}{4} \right) +  81\% \left( \frac{1}{2} \right)= 84\%$. \pspace
+
+\sol The statement is \textit{true}. We know that the weighted average is $\sum \text{value} \cdot \text{weight}$. If the first exam is worth 1 part of the exam grade, the second must be worth 1 part and the final exam must be worth 2 parts (because it needs to be worth twice as much as either of the other two). Then the exam grade is split into $1 + 1 + 2= 4$ parts, which the first exam worth $1/4$~th of the grade, the second worth $1/4$~th of the grade, and the last worth $2/4= 1/2$ the grade. But then we have\dots
+	\[
+	\sum \text{value} \cdot \text{weight}= 85\% \cdot \frac{1}{4} + 89\% \cdot \frac{1}{4} + 81\% \cdot \frac{1}{2}= 21.25\% + 22.25\% + 40.5\%= 84\%
+	\] \pvspace{1.2cm}
+
+
+
+% Quiz 7
+\quizsol \textit{True/False}: The acceleration towards Earth due to gravitational attraction is approximately 9.8~m/s$^2$. To convert this to feet per hour, you need to multiply 9.8~m/s$^2$ by $60^2/0.3048 \approx 11811.0236$. [1~ft = 0.3048~m] \pspace
+
+\sol The statement is \textit{false}. To perform the conversion, we have\dots \par
+	\begin{table}[!ht]
+	\centering
+	\hspace{-1cm}
+	\begin{tabular}{c|c|c|c|c|c}
+	9.8~m	& 1~ft		& 60~s   & 60~min & 60~s    & 60~min \\ \hline
+	1~s$^2$	& 0.3048~m	& 1~min & 1~hr      & 1~min &  1~hr
+	\end{tabular}
+	\end{table} \par
+which gives us\dots
+	\[
+	9.8 \cdot 60 \cdot 60 \cdot 60 \cdot 60/0.3048= 9.8 \cdot 60^4/0.3048 \text{ ft}/\text{hr}^2 \approx 16692913.38 \text{ ft}/\text{hr}^2
 	\]
-
-
-% To compute 560 increased by 160\%, one computes $560(2.60)= 1456$. 
-
-
-% Suppose a course has three exams: two prelims and a final exam. The final exam is worth twice as much as any of the other exams. If a student receives an 85\%, 89\%, and 81\% on the prelims and final exam, respectively, then their exam average is $85\% \left( \frac{1}{4} \right) + 89\%  \left( \frac{1}{4} \right) +  81\% \left( \frac{1}{2} \right)= 84\%$.  
-
-% The acceleration towards Earth due to gravitational attraction is approximately 9.8~m/s$^2$. To convert this to mph, you need to multiply 9.8~m/s$^2$ by $60^2/0.3048 \approx 11811.0236$. [1~ft = 0.3048~m]
+So we need multiply by $60^4/0.3048$, not $60^2/0.3048$. The given computation only converts one units of seconds to hours, leaving one unit of seconds unconverted. Therefore, the given answer is really 9.8~m/s$^2$ $\cdot$ $60^2/0.3048 \approx 11811.0236$~ft/(s $\cdot$ hr). 
 
 
 
