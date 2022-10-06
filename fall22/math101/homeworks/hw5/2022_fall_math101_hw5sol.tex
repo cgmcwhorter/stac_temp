@@ -1,0 +1,270 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 10/03}{Between two evils, I always pick the one I never tried before.}{Mae West}
+
+% Problem 1
+\problem{10} Showing all your work, convert the following indicated units to the units indicated in brackets using the given information:
+	\begin{enumerate}[(a)]
+	\item 518.3~m to cm
+	\item 5,100~ft to km [1~ft = 0.3048~m]
+	\item 60~mph to km per hour [1~mi = 5280~ft, 1~m = 3.28084~ft]
+	\item 45~mph to ft per second [5280~ft = 1~mi]
+	\item 2000~ft$^3$ to cm$^3$ [5~m = 16.4042~ft]
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	518.3~m & 100~cm \\ \hline
+		      & 1~m
+	\end{tabular}
+	= 51830~cm
+	\end{table} \par
+
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	5100~ft & 0.3048~m & 1~km \\ \hline
+		      & 1~ft		& 1000~m
+	\end{tabular}
+	= 1.55448~km
+	\end{table} \par
+ 
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	60~mi  & 5280~ft  & 1~m		   & 1~km \\ \hline
+	1~hr	    & 1~mi      & 3.28084~ft   & 1000~m
+	\end{tabular}
+	= 96.56063~km per hour
+	\end{table} \par
+ 
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	45~mi  & 5280~ft  & 1~hr       & 1~min \\ \hline
+	1~hr	    & 1~mi      & 60~min  & 60~s
+	\end{tabular}
+	= 66~ft per second
+	\end{table} \par
+ 
+\item \phantom{.}
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r|r|r|r}
+	2000~ft$^3$ & 5~m		& 5~m		& 5~m		& 100~cm & 100~cm & 100~cm \\ \hline
+			    & 16.4042~ft & 16.4042~ft 	& 16.4042~ft.    & 1~m & 1~m & 1~m
+	\end{tabular} \par\vspace{0.3cm}
+	= 56633687.7472~cm$^3$
+	\end{table} 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Avery's husband has to order a special paint they want for their patio. The paint has to be shipped from Europe. He wants to be sure that he orders enough paint to paint the patio, which is 240~ft$^2$. Each can of paint costs \texteuro29 and claims it can cover 2.6~m$^2$.
+	\begin{enumerate}[(a)]
+	\item How many square feet can the paint cover? [3.28084~ft = 1~m]
+	\item How many cans should he order?
+	\item What is the cost of the paint in Euros per meter squared?
+	\item What is the cost of the paint in USD per square foot? [\$1 = \texteuro\ 0.98]
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We convert the 2.6~m$^2$ that each can of paint can cover to square feet: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r}
+	2.6~m$^2$ & 3.28084~ft & 3.28084~ft \\ \hline
+			  & 1~m 	        & 1~m 
+	\end{tabular}
+	= 27.9861~ft$^2$
+	\end{table} \pspace
+	
+\item If each can of paint can cover $27.9861 \text{ ft}^2$ of area and there is $240 \text{ ft}^2$ to cover, then the minimum number of cans of paint required is $240 \text{ ft}^2/(27.9861 \text{ ft}^2/\text{can}) \approx 8.57569 \text{ cans}$. But then a minimum of 9~cans of paint is required to cover the entire wall. [Notice $\approx 8.6$ is the minimum required, but you can only bring whole cans of paint and 8~cans is too few.] \pspace
+
+\item The cost of the pain in Euros per meter squared is $\text{\texteuro}29/2.6 \text{ m}^2 \approx \text{\texteuro}11.15385/\text{m}^2$. \pspace
+
+\item We can either convert the cost in Euro per meter squared to USD per square foot: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	\texteuro29 & \$1 		   & 1~m		& 1~m  \\ \hline
+	2.6~m$^2$ & \texteuro0.98  & 3.28084~ft & 3.28084~ft 
+	\end{tabular}
+	= \$1.0574/ft$^2$
+	\end{table} \pspace
+which can be computed\dots \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	\texteuro11.15385 & \$1 		   & 1~m		& 1~m  \\ \hline
+	1~m$^2$ & \texteuro0.98  & 3.28084~ft & 3.28084~ft 
+	\end{tabular}
+	= \$1.0574/ft$^2$
+	\end{table} \par
+We can also convert the cost from Euro to USD, $\text{\texteuro}29 \cdot \$1/\text{\texteuro}0.98= \$29.5918$, and we know from (a) the square foot that the paint covers, namely $27.9861 \text{ ft}^2$. But then the cost in USD per square foot is  $\$29.5918/27.9861 \text{ ft}^2 \approx \$1.0574/\text{ft}^2$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Aliens arrive on Earth and try to communicate with humans. Being intelligent beings, they first try to understand our mathematical systems. Aliens measure speed in blips per flarg. They claim to have traveled to Earth at 587~blips per flarg. We discover that in their units, 1~blips is 800~bloop and 465~bloop is 1,000~miles. We discover also 1~flarg is 8.2~s. What speed (in miles per second) did they travel to Earth? If the speed of light is 186,282~miles per second, what percent of the speed of light did they travel? \pspace
+
+\sol We merely need convert from blips per flarg to miles per second: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r|r|r}
+	587~blip   & 800~bloop & 1000~mi    & 1~flarg \\ \hline
+	1~flarg	& 1~blips      & 465~bloop & 8.2~s
+	\end{tabular}
+	= 123,157.6187~mi per second (mips)
+	\end{table} 
+As a percentage of the speed of light, this is $123157.6187 \text{ mips}/186282 \text{ mips} \approx 0.6611$, i.e. 66.11\% of the speed of light. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Alden drives to visit his family. On the outgoing trip, he runs into no traffic and is able to drive at 55~mph the entire way, completing the trip in only a few hours. However, on the return trip he runs into construction on the highway and is only able to drive 35~mph. It takes him 2~hours longer on the return trip than on the original trip. How many miles is his home from his family's home? \pspace
+
+\sol We do not know the distance from Alden to his family's home. Let $d$ be this distance. We know that he makes the trip in some amount of hours; let's call this amount of hours $t_1$. Because $d= vt$, we know that $d= 55t_1$. On the return trip, he takes 2~hours longer. Therefore, he took $t_2:= t_1 + 2$ hours to drive back. Again, because $d= vt$ and the fact that he drives 35~mph on the return trip, he traveled a total distance of $35t_2= 35(t_1 + 2)$ miles on the return trip. But because this was the same distance $d$, we know that $d= 35(t_1 + 2)$. But then we have\dots
+	\[
+	\begin{aligned}
+	d&= d \\[0.3cm]
+	55t_1&= 35t_2 \\[0.3cm]
+	55t_1&= 35(t_1 + 2) \\[0.3cm]
+	55t_1&= 35t_1 + 70 \\[0.3cm]
+	20t_1&= 70 \\[0.3cm]
+	t_1&= 3.5 \text{ hrs}
+	\end{aligned}
+	\]
+Therefore, he originally drove for 3.5~hours. But then he traveled a total distance of $d= 55 \text{ mph} \cdot 3.5 \text{ hrs}= 192.5 \text{ mi}$. Therefore, his family's home is 192.5~miles from his home. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Water is flowing into a large vat that can contain 587~ft$^3$ of water. Suppose that water is flowing it at a rate of 43.7~gallons per minute. 
+	\begin{enumerate}[(a)]
+	\item Find the rate at which the water is flowing in ft$^3$ per minute. [1~gallon = 0.134~ft$^3$]
+	\item How long does it take to fill the whole tank?
+	\item Assuming the tank begins empty, how much of the tank is unfilled after 10~minutes?
+	\item If the tank started with 250~ft$^3$ of water, what volume remains unfilled in the tank one hour after the water begins filling the tank?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We simply convert 43.7~gallons per minute to ft$^3$ per minute: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	43.7~gallons & 0.135~ft$^3$ \\ \hline
+	1~min	     & 1~gallon
+	\end{tabular}
+	= 5.8995~ft$^3$/min
+	\end{table} \pspace
+
+\item We know that $C= rt$, where $C$ is the change, $r$ is the rate, and $t$ is time. Because the water is flowing in at a rate of $5.8995 \text{ ft}^3/\text{min}$ and the change required to fill the tank is $587 \text{ ft}^3$, i.e. the tank holds $587 \text{ ft}^3$ of liquid, we know that $587 \text{ ft}^3= 5.8995 \text{ ft}^3/\text{min} \cdot t$. But then $t= 587 \text{ ft}^3/(5.8995 \text{ ft}^3/\text{min})= 99.5 \text{min}$, i.e. 1~hour, 39~minutes, and 30~seconds. \pspace
+
+\item We know that $C= rt$, where $C$ is the change, $r$ is the rate, and $t$ is time. Because the water is flowing in at a rate of $5.8995 \text{ ft}^3/\text{min}$ and the change required to fill the tank is $587 \text{ ft}^3$, i.e. the tank holds $587 \text{ ft}^3$ of liquid, we know that $C= 5.8995 \text{ ft}^3/\text{min} \cdot 10 \text{ min}= 58.995 \text{ ft}^3$. But this is the amount of water in the tank. The amount of unfilled space is then $587 \text{ ft}^3 - 58.995 \text{ ft}^3= 528.005 \text{ ft}^3$. \pspace
+
+\item We know that 1~hour is 60~minutes and that $C= rt$. The amount of water added is then $C= 5.8995 \cdot 60= 353.97 \text{ ft}^3$. The tank began with $250 \text{ ft}^3$ of water. But then the total amount of water in the tank is $250 \text{ ft}^3 + 353.96 \text{ ft}^3= 603.96 \text{ ft}^3$. Because this is greater than the total amount the tank can hold, there is no volume that is unfilled, i.e. the tank is overflowing. [In fact, the tank has been overflowing for the past 2~minutes and 52~seconds.]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Ann Velope is stuffing envelopes for an upcoming charity event. Counting, she has been able to stuff 116~envelopes in the last 20~minutes. 
+	\begin{enumerate}[(a)]
+	\item What is her rate in envelopes per hour?
+	\item How long will it take for her to fill 1,200 envelopes? 
+	\item If her coworker helps her and he can stuff 250~envelopes per hour, how long would it take both of them to stuff 2,000 envelopes? 
+	\item Suppose instead that Ann can stuff some large number of envelopes in 4~hours, while her coworker can do the same task in 6~hours. Suppose that the coworker starts stuffing envelopes, then an hour later Ann joins them to help speed things up. Assuming they work at their usual speeds, how long will it take them to stuff all the envelopes?
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We simply convert her rate of 116~envelopes per 20 minutes to envelopes per hour: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	116~envelopes & 60~min \\ \hline
+	20~minutes	& 1~hour
+	\end{tabular}
+	= 348~envelopes/hour
+	\end{table} \pspace
+
+\item Because we know that $C= rt$, where $C$ is the change, $r$ is the rate, and $t$ is the time, and she needs a change of 1,2000~envelopes---stuffing at a rate of 348~envelopes/hour, it takes her\dots
+	\[
+	\begin{aligned}
+	C&= rt \\[0.3cm]
+	1200 \text{ envelopes}&= 348 \text{ envelopes/hour} \cdot t \\[0.3cm]
+	t&=  3.44828 \text{ hours}
+	\end{aligned}
+	\]
+That is, it takes her 3~hours, 26~minutes, and 53.8~seconds. \pspace
+
+\item Combined, they can stuff $348 \text{ envelopes} + 250 \text{ envelopes}= 598 \text{ envelopes}$ each hour. But then using the method from (b), we have\dots
+	\[
+	\begin{aligned}
+	C&= rt \\[0.3cm]
+	2000 \text{ envelopes}&= 598 \text{ envelopes/hour} \cdot t \\[0.3cm]
+	t&=  3.34448 \text{ hours}
+	\end{aligned}
+	\]
+That is, it will take them 3~hours, 20~minutes, and 40.1~seconds. \pspace
+
+\item We know that stuffing envelopes at a rate of $r$~envelopes per hour for $t$ hours, a total of $C= rt$ envelopes have been stuffed. Let $A$ be the rate at which Ann stuffs envelopes. Then we know that $C= rt= 4A$. Let $W$ be the rate at which her coworker stuffs envelopes. Because he does this same task in 6~hours, we have $C= rt= 6W$. But then we know that $4A= C= 6W$ so that $A= \frac{4}{6}W= \frac{2}{3} W$; equivalently, $W= \frac{3}{2}A$. Now if they combine their efforts, they stuff envelopes at a rate of $A + W$~envelopes per hour. But then we have\dots
+	\[
+	\begin{aligned}
+	C&= rt \\[0.3cm]
+	C&= (A + W)t \\[0.3cm]
+	C&= \left(A + \frac{2}{3}\, A \right) t \\[0.3cm]
+	C&= \frac{5}{3}\, A \cdot t \\[0.3cm]
+	4A&= \frac{5}{3}\,A \cdot t \\[0.3cm]
+	t&= 4A \cdot \dfrac{3}{5} \cdot \dfrac{1}{A} \\[0.3cm]
+	t&= \dfrac{12}{5} \\[0.3cm]
+	t&= 2.4 \text{ hours}
+	\end{aligned}
+	\]
+Therefore, they take a combined 2.4~hours, i.e. 2~hours and 24~minutes, to stuff the envelopes. 
+\end{enumerate}
+
+
+\end{document}
