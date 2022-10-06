@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -18,7 +18,24 @@
 	\item Find the rate at which the water is flowing in ft$^3$ per minute. [1~gallon = 0.134~ft$^3$]
 	\item How long does it take to fill the whole tank?
 	\item Assuming the tank begins empty, how much of the tank is unfilled after 10~minutes?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We simply convert 37.5~gallons per minute to ft$^3$ per minute: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	37.5~gallons & 0.135~ft$^3$ \\ \hline
+	1~min	     & 1~gallon
+	\end{tabular}
+	= 5.0625~ft$^3$/min
+	\end{table} \pspace
+ 
+\item We know that $C= rt$, where $C$ is the change, $r$ is the rate, and $t$ is time. Because the water is flowing in at a rate of $5.0625 \text{ ft}^3/\text{min}$ and the change required to fill the tank is $288 \text{ ft}^3$, i.e. the tank holds $288 \text{ ft}^3$ of liquid, we know that $288 \text{ ft}^3= 5.0625 \text{ ft}^3/\text{min} \cdot t$. But then $t= 288 \text{ ft}^3/(5.0625 \text{ ft}^3/\text{min})= 56.8889 \text{min}$, i.e. 56~minutes and 53.33~seconds. \pspace
+ 
+\item We know that $C= rt$, where $C$ is the change, $r$ is the rate, and $t$ is time. Because the water is flowing in at a rate of $5.0625 \text{ ft}^3/\text{min}$ and the change required to fill the tank is $288 \text{ ft}^3$, i.e. the tank holds $288 \text{ ft}^3$ of liquid, we know that $C= 5.0625 \text{ ft}^3/\text{min} \cdot 10 \text{ min}= 50.625 \text{ ft}^3$. But this is the amount of water in the tank. The amount of unfilled space is then $288 \text{ ft}^3 - 50.625 \text{ ft}^3= 237.375 \text{ ft}^3$. \pspace 
+\end{enumerate}
 
 
 
@@ -32,7 +49,40 @@
 	\item What is her rate in envelopes per hour?
 	\item How long will it take for her to fill 1,200 envelopes? 
 	\item If her coworker helps her and he can stuff 250~envelopes per hour, how long would it take both of them to stuff 2,000 envelopes? 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item We simply convert her rate of 116~envelopes every 20~minutes to a rate of envelopes per hour: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{r|r}
+	116~envelopes & 60~min \\ \hline
+	20~minutes	& 1~hour
+	\end{tabular}
+	= 348~envelopes/hour
+	\end{table} \pspace
+
+\item Because we know that $C= rt$, where $C$ is the change, $r$ is the rate, and $t$ is the time, and she needs a change of 1,2000~envelopes---stuffing at a rate of 348~envelopes/hour, it takes her\dots
+	\[
+	\begin{aligned}
+	C&= rt \\[0.3cm]
+	1200 \text{ envelopes}&= 348 \text{ envelopes/hour} \cdot t \\[0.3cm]
+	t&=  3.44828 \text{ hours}
+	\end{aligned}
+	\]
+That is, it takes her 3~hours, 26~minutes, and 53.8~seconds. \pspace
+
+\item Combined, they can stuff $348 \text{ envelopes} + 250 \text{ envelopes}= 598 \text{ envelopes}$ each hour. But then using the method from (b), we have\dots
+	\[
+	\begin{aligned}
+	C&= rt \\[0.3cm]
+	2000 \text{ envelopes}&= 598 \text{ envelopes/hour} \cdot t \\[0.3cm]
+	t&=  3.34448 \text{ hours}
+	\end{aligned}
+	\]
+That is, it will take them 3~hours, 20~minutes, and 40.1~seconds. \pspace
+\end{enumerate}
 
 
 
@@ -41,7 +91,19 @@
 
 
 % Problem 3
-\problem{10} Showing all your work and explaining your logic, estimate the number of times an `average' American inhales during their lifetime. What are sources of error in your estimation? 
+\problem{10} Showing all your work and explaining your logic, estimate the number of times an `average' American inhales during their lifetime. What are sources of error in your estimation? \pspace
+
+\sol If we knew the average amount of breaths that someone takes per minute, we could then easily find how many times that they breathe per day (as an estimation). But then we could find the estimate of how many times they breathe per year and then per lifetime. We suppose that a person inhales/exhales about 18~times per minute. We suppose that a person lives for about 78~years. Then we have\dots
+	\[
+	\begin{aligned}
+	\text{Lifetime breaths}&= \text{breaths per minute} \cdot \text{min per hour} \cdot \text{hrs per day} \cdot \text{days per yr} \cdot \text{yrs per lifetime} \\[0.3cm]
+	&= 18 \cdot 60 \cdot 24 \cdot 365 \cdot 78 \\[0.3cm]
+	&= 737942400
+	\end{aligned}
+	\]
+So we estimate that the average person breaths about 737,942,400 times per lifetime. \pspace
+
+Of course, this assumes a constant rate of breaths of about 18~times per minute. When sleeping or exercising, this goes up/down---which we have not taken into account. We also are not sure about how long the person lives, which of course affects the total number of breaths. Also, we have not taken into account leap years, which adds a number of days to this estimation. All of these (and there are likely more) are sources of error. Of these factors, the variation in breath and variation in life expectancy are the biggest sources of error for this estimation. 
 
 
 
@@ -50,7 +112,13 @@
 
 
 % Problem 4
-\problem{10} Choose an original Fermi estimation problem of your choice and produce an estimate. Be sure to show your work and explain your reasoning. What are sources of error in your estimation?
+\problem{10} Choose an original Fermi estimation problem of your choice and produce an estimate. Be sure to show your work and explain your reasoning. What are sources of error in your estimation? \pspace
+
+\vfill
+\begin{center}
+{\itshape Answers will vary.}
+\end{center}
+\vfill
 
 
 \end{document}
