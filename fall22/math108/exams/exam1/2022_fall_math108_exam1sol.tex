@@ -1,0 +1,282 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 1}
+\renewcommand{\term}{Fall -- 2022}
+\newcommand{\examdate}{10/07/2022}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question Owen Scharck offers quick loans to his `friends' and neighbors. He charges a simple 13.2\% annual interest rate on his quick loans. But to be sure that his clients always pay something, he takes the interest on the loan up front. Anthony S. Muck takes out a \$4,000 loan from Owen for 5~months.
+	\begin{parts}
+	\part[3] What is the maturity on the loan that Anthony takes?
+	\part[3] What is the discount for the loan that Anthony takes?
+	\part[3] What are the proceeds on the loan that Anthony takes?
+	\part[3] How much does Anthony pay in total for this loan?
+	\part[3] If instead, Anthony took a loan out from a bank for this same period of time, what is the highest annual compounded continuously interest rate he can be offered to pay the same or less on the loan he takes from Owen?
+	\end{parts} \pspace
+
+\sol 
+{\itshape
+\begin{enumerate}[(a)]
+\item The maturity, $M$, is the value of the loan, which is \$4,000. \pspace
+
+\item The discount is the interest paid on the loan. The interest paid is $I= Prt= \$4000 \cdot 0.132 \cdot \frac{5}{12}= \$220$. Therefore, the discount on the loan, $D$, is \$220. \pspace
+
+\item The proceeds are the amount received from the loan, after the discount. This amount is $P= M - D= \$4000 - \$220= \$3780$. \pspace
+
+\item The total amount paid on the loan is the maturity plus the interest, which is $\$4000 + \$220= \$4220$. \pspace
+
+\item For continuously compounded interest, we know that $F= Pe^{rt}$. The total future amount is the value that he would have paid anyway: \$4220. The present value is the value of the loan, \$4000. The time is the same 5~month period, i.e. 5/12~years. But then we have\dots 
+	\[
+	\begin{aligned}
+	F&= Pe^{rt} \\[0.3cm]
+	4220&= 4000 e^{5r/12} \\[0.3cm]
+	1.055&= e^{5r/12} \\[0.5cm]
+	\dfrac{5r}{12}&= \ln(1.055) \\[0.3cm]
+	r&\approx 0.02231
+	\end{aligned}
+	\] \pspace
+Therefore, the maximum interest rate is 2.231\%. 
+\end{enumerate}
+}
+
+
+
+% Question 2
+\newpage
+\question[10] Winney Millons has won a lottery jackpot of \$12.6~million (after taxes). She would like this money to last at least the next 35~years. She will deposit this money into a savings account that earns 2.91\% annual interest, compounded quarterly. At the end of each month, she will have money automatically transferred from her savings account into her checking account to spend. What is the most each monthly transfer can be (to the nearest cent)? \pspace
+
+{\itshape 
+\sol This is an annuity. Because the payments are made at the end of each month, this is an ordinary annuity. However, because the compounding rate per year for the interest does not match the payment rate per year, this is a general annuity. Therefore, this is a general ordinary annuity. We need to find the monthly payments so that the future value of these present payments is the \$12.6~million (after taxes) that she has won. \pspace
+
+We know that the future value of these present payments is $P= \$12\,600\,000$. She will make a total of $n= 35 \cdot 12= 420$~payments. The annual interest rate is $r= 0.0291$ and because the interest is compounded quarterly we know that $k= 4$. The interest rate per payment is then\dots
+	\[
+	\hspace{-0.5cm} i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0291}{4} \right)^{4/12} - 1= 1.007275^{1/3} - 1= 1.002419143 - 1= 0.002419143
+	\]
+But then we have\dots
+	\[
+	a_{\actuarialangle{n}\,i}= a_{\actuarialangle{420}\,0.002419143}= \dfrac{1 - (1 + 0.002419143)^{-420}}{0.002419143}= \dfrac{0.6375298183}{0.002419143}= 33.9913515
+	\]
+so that we have\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{P}{a_{\actuarialangle{420}\,0.0294190967}}= \dfrac{12600000}{33.9913515}= 47811.413571 \approx \$47,811.41
+	\]
+}
+
+
+
+% Question 3
+\newpage
+\question[10] Vera Schrewd is comparing savings accounts at different banks. At Loan Wolves, they offer a savings account with a 2.6\% annual interest, compounded semiannually. Whereas at Hedge Bets, they offer a savings account with a 2.59\% annual interest, compounded continuously. Which bank should Vera use? Be sure to fully justify your answer with numerical support and a written explanation. \pspace
+
+{\itshape
+\sol We can compare these accounts either by using effective interest or doubling time. Suppose we compare them with effective interest. Then we have effective interests for discrete compounding (DC) and continuous compounding (CC) given by\dots
+	\[
+	\begin{aligned}
+	r_{\text{eff, DC}}&= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.026}{2} \right)^2 - 1= 1.013^2 - 1= 1.026169 - 1= 0.026169 \\[0.3cm]
+	r_{\text{eff, CC}}&= e^r - 1= e^{0.0259} - 1= 1.02623831951 - 1= 0.02623831951
+	\end{aligned}
+	\]
+Then Loan Wolves offers an effective interest rate of 2.6169\%, whereas Hedge Bets offers an effective interest rate of 2.6238\%. Because a higher savings account interest results in greater money, Vera should take the account with Hedge Bets. \pspace
+
+Using doubling time, we have a doubling time for discrete compounding (DC) and continuous compounding (CC) given by\dots
+	\[
+	\begin{aligned}
+	t_{\text{D, DC}}&= \dfrac{\ln(2)}{k \ln(1 + r/k)}= \dfrac{\ln(2)}{2 \ln(1 + 0.026/2)}= \dfrac{\ln(2)}{2 \ln(1.013)}= \dfrac{0.6931471805599}{0.02583245053}= 26.83242 \text{ yrs} \\[0.3cm]
+	t_{\text{D, CC}}&= \dfrac{\ln(2)}{r}= \dfrac{\ln(2)}{0.0259}= \dfrac{0.6931471805599}{0.0259}= 26.7624394 \text{ years}
+	\end{aligned}
+	\]
+Then Loan Wolves offers an account which doubles your money in 26.83~years, whereas Hedge Bets offers an account that doubles your money in 26.76~years. Because doubling your money quicker is better, Vera should take the account with Hedge Bets. 
+}
+
+
+
+% Question 4
+\newpage
+\question Suppose that this year the CPI was 305.648, up from last years CPI of 296.171. 
+	\begin{parts}
+	\part[3] What was the inflation rate from last year to this year (to the nearest tenth of a percent)?
+	\part[3] If a good cost \$19.99 last year, how would you estimate that it costs this year (to the nearest cent)?
+	\part[2] If the inflation rate continues at this level, how much would you estimate a good that costs \$9.99 now will cost in 5~years (to the nearest cent)?
+	\part[2] Given your answer in (c), would would the estimated inflation rate be from now to 5~years from now (to the nearest tenth of a percent)?
+	\end{parts} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\dfrac{305.648}{296.171} \approx 1.031= 1 + 0.031
+	\] \pspace
+Therefore, the inflation rate was 3.1\%. \pspace
+
+\item If the inflation rate stays constant from last year to this year to next, the good should cost 3.1\% more next year than it does this year. But then the good will cost\dots
+	\[
+	\$19.99 (1 + 0.031)= \$19.99 (1.031) \approx \$20.61 
+	\] \pspace
+
+\item If the inflation rate stays constant, then each year the cost will increase by 3.1\%. If the price is $P$~dollars now, then next year it will cost $P(1 + 0.031)= P(1.031)$~dollars. Then the following year, the cost will increase by 3.1\% and will then by $(P(1.031))(1 + 0.031)= (P(1.031))(1.031)= P(1.031)^2$. Continuing this way, after $n$ years, the cost will be $P(1.031)^n$. Therefore, the cost will be\dots
+	\[
+	\$9.99 (1.031)^5= \$9.99 (1.16491) \approx \$11.64
+	\] \pspace
+
+\item If the cost is \$9.99 now and will be \$11.64 in 5~years, then we have\dots
+	\[
+	\dfrac{\$11.64}{\$9.99}= 1.16517= 1 + 0.16517
+	\]
+Therefore, we would estimate that the inflation rate is 16.517\%. [Note: From the logic we used in (c), we know that a price $P$ increases to $P(1.031)^5= P(1.16491)= P(1 + 0.16491)$. Therefore, the exact inflation rate would be 16.491\%.]
+\end{enumerate}
+}
+
+
+
+% Question 5
+\newpage
+\question[15] Suppose that the standard deduction for federal taxable income for a single filer in a certain year was \$2,800 and that the tax brackets for that year are given below. Find the tax for a single filer taking the standard deduction that made \$85,000 that tax year (to the nearest cent). \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|l|l|} \hline
+	Tax Rate & Taxable Income \\ \hline \hline
+	15\% & Up to \$26,250 \\ \hline
+	28\% & \$26,251 -- \$63,550 \\ \hline
+	31\% & \$63,551 -- \$132,600 \\ \hline
+	36\% & \$132,601 -- \$288,350 \\ \hline
+	39.6\% & $\geq$ \$288,351 \\ \hline
+	\end{tabular}
+	\end{table} \pspace
+
+{\itshape
+\sol The taxable income for this individual is $\$85000 - \$2800= \$82200$. The tax brackets given above are the tax percentages applied to the portion of the income in that bracket. Therefore, the federal tax for this individual is\dots
+	\[
+	\begin{aligned}
+	\text{Federal Tax}&= (\$26250 - \$0)(0.15) + (\$63550 - \$26251)(0.28) + (\$82200 - \$63551)(0.31) \\[0.3cm]
+	&= \$26250(0.15) + \$37299(0.28) + \$18649(0.31) \\[0.3cm]
+	&= \$3937.50 + \$10443.70 + \$5781.19 \\[0.3cm]
+	&= \$20162.40
+	\end{aligned}
+	\]
+Therefore, the individual pays \$20,162.40 in federal taxes.
+}
+
+
+
+% Question 6
+\newpage
+\question[10] Ivan Oeder has taken out a loan to cover some medical expenses. The loan was for \$7,000 and was approved by a bank that set a 7.5\% annual interest, compounded monthly. If Mr.~Oeder has not paid any amount on the loan in the past 4~years, how much does he currently owe the bank? \pspace
+
+{\itshape
+\sol This is a discrete compounding interest problem. We want to know how much he owes after 4~years, i.e. the future value of \$7,000 after 4~years. We know that $F= P \left(1 + \frac{r}{k} \right)^{kt}$. We know that the loan was originally for \$7,000, i.e. $P= \$7000$, the amount of time that has passed is 4~years, i.e. $t= 4$, and that the annual interest rate is 7.5\%, i.e. $r= 0.075$, and is compounded each month, i.e. $k= 12$. But then we have\dots
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \frac{r}{k} \right)^{kt} \\[0.3cm]
+	&= \$7000 \left(1 + \frac{0.075}{12} \right)^{12 \cdot 4} \\[0.3cm]
+	&= \$7000 (1.00625)^{48} \\[0.3cm]
+	&= \$7000 (1.348599151) \\[0.3cm]
+	&\approx \$9440.19
+	\end{aligned}
+	\]
+Therefore, he owes \$9,440.19 after 4~years of non-payment. 
+}
+
+
+
+% Question 7
+\newpage
+\question[10] Thomas Katt is purchasing a condo. The condo was listed at \$280,000, but he managed to negotiate a price of \$265,000. He takes out a 30~year mortgage with end of the month payments at a 6.7\% annual interest rate, compounded monthly. The bank requires him to put down at least 20\%, i.e. pay at least \$53,000 upfront. He has \$60,000 to put down but is considering taking \$7,000 and investing it on improvements instead. How much more will be pay in total on the condo (to the nearest dollar) if he puts \$53,000 down instead of \$60,000? \pspace
+
+{\itshape
+\sol This is an amortization problem. Because the payments are at the end of the month and because the compounding rate per year matches the number of payments per year, this is an amortization corresponding to a simple ordinary annuity. Over the 30~year mortgage, he will make $n= 30 \cdot 12= 360$~payments. The annual interest rate is $r= 0.067$ and is compounded monthly, i.e. $k= 12$, with 12~payments per year, so that the interest per payment is\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.067}{12} \right)^{12/12} - 1= 1.005583333^1 - 1= 0.005583333
+	\]
+Now note that\dots
+	\[
+	\hspace{-0.5cm} a_{\actuarialangle{360}\,0.005583333}= \dfrac{1 - (1 + 0.005583333)^{-360}}{0.005583333}= \dfrac{1 - 0.1347398455}{0.005583333}= \dfrac{0.8652601545}{0.005583333} \approx 154.9719772
+	\] \pspace
+
+If he puts \$53,000 down (and hence has a loan value of $\$265000 - \$53000= \$212000$), then his monthly payments are\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{\$212000}{a_{\actuarialangle{360}\,0.005583333}}= \dfrac{\$212000}{154.9719772} \approx \$1367.99
+	\]
+But then he pays $360 \cdot \$1367.99= \$492,476.40$ in total for the condo. Now suppose that he puts \$60,000 down (and hence has a loan of $\$265000 - \$60000= \$205000$), then his monthly payments are\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{\$205000}{a_{\actuarialangle{360}\,0.005583333}}= \dfrac{\$205000}{154.9719772} \approx \$1322.82
+	\]
+But then he pays $360 \cdot \$1322.82= \$476,215.20$ in total for the condo. \pspace
+
+Therefore, if he puts \$53,000 down instead of \$60,000 down, he will end up paying $\$492,476.40 - \$476,215.20= \$16,261.20 \approx \$16,261$ more on the condo. 
+}
+
+
+
+% Question 8
+\newpage
+\question[10] William Powers has had the same car for the past 7~years and the upkeep costs on the car are starting to add up. So Will begins saving for a used car to replace his car once it `goes.' The car he has in mind has a Blue Book value of \$8,200. He places \$7,500 into an account that earns 2.5\% annual interest rate, compounded continuously. How long until he has enough money to purchase the car? \pspace
+
+{\itshape
+\sol This is continuous compounding interest problem. We want to know how long it will take the \$7,500 to accumulate enough value (interest) so that it is then worth \$8,200. We know that the initial amount of money that is placed in the account is \$7,500, i.e. $P= \$7500$, and that we want to save \$8,200, i.e. $F= \$8200$. We know also that the annual interest rate is 2.5\%, i.e. $r= 0.025$, and is compounded continuously. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	t&= \dfrac{\ln(F/P)}{r} \\[0.3cm]
+	&= \dfrac{\ln(\$8200/\$7500)}{0.025} \\[0.3cm]
+	&= \dfrac{\ln(1.0933333)}{0.025} \\[0.3cm]
+	&= 3.56924 \text{ years}
+	\end{aligned}
+	\]
+Therefore, he will have enough money in 3.56924~years, i.e. 3~years, 6~months, 25.2726~days. 
+}
+
+
+
+% Question 9
+\newpage
+\question[10] Eaton Wright runs a dietary consulting business. He would like to expand his business and has started setting aside profits to save for new office spaces. So at the start of each month, he places \$3,400 into an account that earnest 1.8\% annual interest, compounded quarterly. If he has been saving money for the past 5~years, how much is currently in the account (to the nearest dollar)? \pspace
+
+{\itshape 
+\sol This is an annuity. Because the payments are made at the start of each month, this is an annuity due. However, because the compounding rate per year for the interest does not match the payment rate per year, this is a general annuity. Therefore, this is a general annuity due. We need to find the future value of these savings. \pspace
+
+We know that he has been making monthly payments of \$3,400, i.e. $R= 3400$ for 5~years, i.e. $n= 12 \cdot 5= 60$. The annual interest rate is $r= 0.018$ and because the interest is compounded quarterly we know that $k= 4$. The interest rate per payment is then\dots
+	\[
+	\hspace{-0.5cm} i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.018}{4} \right)^{4/12} - 1= 1.0045^{1/3} - 1= 1.00149775561 - 1= 0.00149775561
+	\]
+But then we have\dots
+	\[
+	\begin{aligned}
+	\hspace{-0.5cm} s_{\actuarialangle{n}\,i}&= s_{\actuarialangle{60}\,0.00149775561}= \dfrac{(1 + 0.00149775561)^{60} - 1}{0.00149775561}= \dfrac{0.0939533983061}{0.00149775561}= 62.729458 \\
+	\hspace{-0.5cm} \ddot{s}_{\actuarialangle{n}\,i}&= (1 + i) s_{\actuarialangle{n}\,i}= (1 + 0.00149775561) s_{\actuarialangle{60}\,0.00149775561}= 1.00149775561 \cdot 62.729458 \approx 62.8234114
+	\end{aligned}
+	\]
+so that we have\dots
+	\[
+	F= R\, \ddot{s}_{\actuarialangle{n}\,i}= \$3400 (62.8234114)= 213599.59876 \approx 213599.60
+	\]
+Therefore, the will have saved $\$213,599.60 \approx \$213,600$. 
+}
+
+
+\end{questions}
+\end{document}

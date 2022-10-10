@@ -10,6 +10,7 @@
 	etoolbox,			% Define Boolean
 	float,				% Force Figure/Table Placement
 	graphicx,			% Include Images
+	longdivision,		% Use Long Division
 	mathtools,			% Matrix Lines & Floor/Ceiling
 	multicol,			% Use Multi-columns
 	tabularx,			% Special Tabular Environment
@@ -80,6 +81,7 @@
 \newcommand{\either}[2]{\ifbool{hideans}{\phantom{#1}}{#1}}
 \newcommand{\tans}[1]{\ifbool{hideans}{\underline{\phantom{$#1$}}}{\underline{$#1$}}}
 \newcommand{\spaceans}[2]{\ifbool{hideans}{\par\vspace{#1}}{{\itshape #2}}}
+\newcommand{\sol}{\noindent{{\bfseries Solution. }}}
 
 
 % -------------------
