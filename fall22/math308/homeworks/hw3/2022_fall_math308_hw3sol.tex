@@ -2,8 +2,8 @@
 \usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
 \usepackage{../style/homework}
 \usepackage{../style/commands}
-\setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -26,17 +26,21 @@
 Write the open sentences below as complete English sentences as `simply' as possible and then determine whether the statement is true or false. If the statement is true, explain why. If not, give a counterexample. 
 	\begin{enumerate}[(a)]
 	\item $(\exists! n) \big( Q(n) \wedge W(n) \big)$ 
-	\item $(\forall m) \big( P(m) \vee R(j) \big)$ 
-	\item $(\forall m) (\neg R(m) \to \neg S(m))$ 
+	\item $(\forall m) \big( P(m) \vee R(m) \big)$ 
+	\item $(\forall m) \big( \neg R(m) \to \neg S(m) \big)$ 
 	\item $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$ 
 	\end{enumerate} \pspace
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item Written in words, the proposition $(\exists! n) \big( Q(n) \wedge W(n) \big)$ is the statement, ``There exists a unique integer $n$ such that $n$ is a perfect square and $1 < n \leq 8$.'' The only perfect squares from 1 to 10 are 1, 4, 9. The only one of these greater than 1 and at most 8 is 1. Therefore, there is a unique perfect square greater than 1 and at most 8. Therefore, $(\exists! n) \big( Q(n) \wedge W(n) \big)$ is true. \pspace
+
+\item Written in words, the proposition $(\forall m) \big( P(m) \vee R(m) \big)$ is the statement, ``For all integers $m$, either $m$ is even $m$ is divisible by 3.'' The statement is false. As a counterexample, if $n= 1$, then $n$ is an integer but $n$ is neither even nor divisible by 3. \pspace
+ 
+\item Written in words, the proposition $(\forall m) \big( \neg R(m) \to \neg S(m) \big)$ is the statement, ``For all integers $m$, if $m$ is not divisible by 3, then $m$ is not divisible by 6.'' This statement is true. If $m$ is not divisible by 3, then it does not have 3 as a factor. If $m$ is divisible by 6, then $m$ has a factor of 6. But 6 has 3 as a factor. This would imply that $m$ has 3 as a factor. Therefore, if $m$ is not divisible by 3, it is not divisible by 6. Alternatively, the contrapositive of ``if $m$ is not divisible by 3, then $m$ is not divisible by 6'' is the statement ``if $m$ is divisibly by 6, then $m$ is divisible by 3.'' Because any integer divisible by 6 must be divisible by 3, the contrapositive is true. But then the original statement is also true. \pspace
+
+
+\item Written in words, the proposition $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$ is the statement, ``For all integers $m$, there exists an integer $n$ such that if $m$ is divisible by 6, then $m= 2n$ and $n$ is even.'' The statement is false. Take $m= 6$. Then $m$ is divisible by 6. If there were an integer $n$ with $m= 2n$, then we know $n= m/6= 6/6= 1$. But then $n$ is not even. This shows that the statement $m= 2n$ and $n$ is even is false. Therefore, the statement $S(m) \to [(m= 2n) \wedge P(n)]$ is false so that the statement $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$. 
 \end{enumerate}
 
 

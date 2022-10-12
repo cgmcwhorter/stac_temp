@@ -76,7 +76,7 @@ The power on the given expression should have been 20---the number of times that
 
 
 
-% Quiz 6
+% Quiz 7
 \quizsol \textit{True/False}: Suppose Rasheed takes out an amortized loan for \$57,000 at an annual interest rate of 6.7\%, compounded monthly. He makes monthly payments of \$1,752.19 for 3 years. The total interest he pays on this loan is $\$1752.19(36) - \$57000 = \$6078.84$. \pspace
 
 \sol The statement is \textit{true}. If he pays \$1,752.19 per month for 3~years, he makes a total of $3 \cdot 12= 36$~payments. Then the total payment is $36 \cdot \$1752.19= \$63,078.84$. Because this repays both the loan and the interest, we know that the difference between the total amount paid and the loan value must be the interest. But then we have $\$63,078.84 - \$57,000= \$6,078.84$ in interest. \pvspace{1.5cm}
@@ -84,10 +84,16 @@ The power on the given expression should have been 20---the number of times that
 
 
 
-%Given a dataset $\{ (x_i, y_i) \}$, a simple linear regression line $\hat{y}= b_0 + b_1x$, is the line which minimizes the sum of the squares of the errors for this model. 
+% Quiz 8
+\quizsol \textit{True/False}: Given a dataset $\{ (x_i, y_i) \}$, a simple linear regression line $\widehat{y}= b_0 + b_1x$, is the line which minimizes the sum of the squares of the errors for this model. \pspace
+
+\sol The statement is \textit{true}. Given a linear model $\widehat{y}= b_0 + b_1 x$, for each $x_i$ in the dataset, we can compute a predicted $y$-value---namely $\widehat{y}_i:= b_0 + b_1 x_i$. There is then an associated error/residual to this prediction: $e_i= y_i - \widehat{y}_i$. There is then a total square error for this model: $\displaystyle \sum_i e_i^2= \sum (y_i - \widehat{y}_i)^2$. A simple linear regression is a linear model which minimizes this sum for the given dataset. \pvspace{1.5cm}
 
 
-% Suppose you have a dataset $\{ (x_i, y_i ) \}$, where $x$ is the number of hours spent at the mall $y$ is the amount of money left in someone's wallet. If a linear regression model performed on this dataset and results in $\widehat{y}= 27.1 - 4.5x$. Then the model predicts that $x$ and $y$ are negatively correlated and that, on average, you spend \$4.50 every hour at the mall.
+% Quiz 9
+\quizsol \textit{True/False}: Suppose you have a dataset $\{ (x_i, y_i ) \}$, where $x$ is the number of hours spent at the mall $y$ is the amount of money left in someone's wallet. If a linear regression model performed on this dataset and results in $\widehat{y}= 27.1 - 4.5x$. Then the model predicts that $x$ and $y$ are negatively correlated and that, on average, you spend \$4.50 every hour at the mall. \pspace
+
+\sol The statement is \textit{true}. We have a linear model $\widehat{y}= 27.1 - 4.5x$ so that $b_0= 27.1$, i.e. $y$-intercept $27.1$, and $b_1= -4.5$, i.e. slope $-4.5$. Because $b_1 < 0$, the model predicts that $x$ and $y$ are negatively correlated. Interpreting the slope $-4.5= \frac{-4.5}{1}= \frac{\Delta y}{\Delta x}$, we see that for every increase of 1 in $x$, there is a decrease of 4.5 in $y$, i.e. for every additional hour spent at the mall, you lose (spend) \$4.50. \pvspace{1.5cm}
 
 
 

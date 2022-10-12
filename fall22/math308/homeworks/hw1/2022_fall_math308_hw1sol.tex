@@ -24,11 +24,15 @@
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item The interrogative sentence, ``Have you been watching `The Rings of Power'?'' is neither true nor false. The answer to this question may either be `yes' or `no' and that yes/no may have a truth value of `true' or `false', but the question itself has neither truth value. The question is asking for an answer whose likely intended answer will have a truth value. But the question itself has no inherent truth value. \pspace
+
+\item The inequality $|9 - 17| > 10$ is either true or false. Hence, this must be a proposition. Because $|9 - 17|= |-8|= 8 \not> 10$, we know that the statement is false. \pspace
+
+\item The mathematical equation $x^2 + x - 2= 0$ is neither true nor false. For instance, if $x= 0$, then this is $-2 = 0$, which is false. If $x= 1$, we have $0= 0$, which is true. If $x=$ blue, then the left side does not even make sense. The equation  $x^2 + x - 2= 0$ will only make sense for some possible inputs for $x$ and of those for only some will the equation be true. Therefore, the equation $x^2 + x - 2= 0$ has no fixed true or false value. \pspace
+
+\item The novel \textit{Ulysses} either was or was not written by James Joyce. Therefore, the declarative statement, ``The novel \textit{Ulysses} was written by James Joyce,'' is either true or false. Therefore, this sentence is a proposition. In fact, \textit{Ulysses} was written by James Joyce. \pspace
+
+\item The sixth digit of $e$ is an integer from 0 to 9. But then the sixth digit of $e$ either is 1 or is not 1. Therefore, the declarative statement, ``The sixth digit of $e$ is 1,'' is either true or false. Therefore, this is a proposition. Because $e \approx 2.718281828\ldots$, so that the sixth digit is 1, the statement is true. 
 \end{enumerate}
 
 
@@ -48,10 +52,13 @@
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item Let $P$ be the proposition, ``He is lying,'' $Q$ be the proposition, ``He is coming,'' and $R$ be the proposition, ``We are at the right place.'' Then the statement, ``Either he is lying and isn't coming, or we are at the wrong place,'' can be translated into logical symbols as $(P \wedge \neg Q) \vee \neg R$. \pspace
+
+\item Let $P$ be the proposition, ``You hear it raining,'' $Q$ be the proposition, ``The weather indicates it is sunny,'' and $R$ be the proposition, ``You bring an umbrella with you.'' Then $(P \wedge \neg Q) \to R$ is the statement, ``If you hear it raining and the weather indicates that it is not sunny, then you bring an umbrella with you.'' \pspace
+
+\item Let $P$ be the proposition, ``You exercise,'' $Q$ be the proposition, ``You eat healthy,'' and $R$ be the proposition, ``You will live a long life.'' Then the declarative sentence, ``If you exercise and eat healthy, then you will live a long life,'' can be written in logical symbols as $P \wedge Q \to R$. \pspace
+
+\item Let $P$ be the proposition, ``You clean your apartment,'' and $Q$ be the proposition, ``You do your laundry.'' Then the logical expression $P \vee (\neg P \wedge Q)$ can be written, ``You clean your apartment, or you don't clean your apartment and do your laundry.'' 
 \end{enumerate}
 
 
@@ -66,13 +73,52 @@
 	\item Determine whether the given compound statement is a tautology. Be sure to justify your response. 
 	\item Using a truth table, show that the \textit{negation} of the given compound statement is logically equivalent to $P \wedge Q$. 
 	\item Show that the \textit{negation} of the given compound statement is logically equivalent to $P \wedge Q$ by simplifying the given compound statement.
-	\end{enumerate} \pspace
+	\end{enumerate} 
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item We can construct a truth table for the logical expression $(P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q$: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cc||ccccc|c}
+	$P$ & $Q$ & $\neg P$ & $\neg Q$ & $P \vee \neg Q$ & $\neg P \wedge Q$ & $ (\neg P \wedge Q) \vee \neg Q$ & $(P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q$ \\ \hline
+	T & T & F & F & T & F & F & F \\
+	T & F & F & T & T & F & T & T \\
+	F & T & T & F & F & T & T & T \\
+	F & F & T & T & T & F & T & T
+	\end{tabular}
+	\end{table} \par
+Because $(P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q$ is not true for every input (true/false) of $P$ and $Q$, the proposition is not a tautology. \pspace
+
+\item We know the truth value of $(P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q$ from the previous part. We can then easily compute its negation and compare with $P \wedge Q$: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c|c||c|c|c}
+	$P$ & $Q$ & $(P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q$ & $\neg \big( (P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q \big)$ & $P \wedge Q$ \\ \hline
+	T & T & F & T & T \\
+	T & F & T & F & F \\
+	F & T & T & F & F \\
+	F & F & T & F & F
+	\end{tabular}
+	\end{table} \par
+Because the columns for $\neg \big( (P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q \big)$ and $P \wedge Q$ match for each input of $P$ and $Q$, these propositions are logically equivalent. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\neg \big( (P \vee \neg Q) \to (\neg P \wedge Q) \vee \neg Q \big) &\equiv (P \vee \neg Q) \wedge \neg \big( (\neg P \wedge Q) \vee \neg Q \big) \\
+	&\equiv (P \vee \neg Q) \wedge \big( \neg( \neg P \wedge Q) \wedge \neg(\neg Q) \big) \\
+	&\equiv (P \vee \neg Q) \wedge \big( ( \neg(\neg P) \vee \neg Q) \wedge Q \big) \\
+	&\equiv (P \vee \neg Q) \wedge \big( (P \vee \neg Q) \wedge Q \big) \\
+	&\equiv (P \vee \neg Q) \wedge \big( (P \wedge Q) \vee (\neg Q \wedge Q) \big) \\
+	&\equiv (P \vee \neg Q) \wedge \big( (P \wedge Q) \vee F_0 \big) \\
+	&\equiv (P \vee \neg Q) \wedge (P \wedge Q) \\ 
+	&\equiv (P \wedge P \wedge Q) \vee (\neg Q \wedge P \wedge Q) \\
+	&\equiv (P \wedge Q) \vee F_0 \\
+	&\equiv P \wedge Q
+	\end{aligned}
+	\]
+Therefore, the two expressions are logically equivalent. 
 \end{enumerate}
 
 
@@ -92,10 +138,17 @@
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item  
+\item If $x \neq 3$, then the statement is true regardless because $P \to Q$ is always true if $P$ is false. Now if $x= 3$, then we know that $x^2= 3^2= 9$ so that $x^2= 9$. But then if $x= 3$, the logical expression is equivalent to $T_0 \to T_0$ so that the statement is true. But then the statement ``if $x= 3$, then $x^2= 9$'' is always true. \pspace
+
+\item Fix a real number $x$. Let $P$ be the proposition that $x= 3$ and let $Q$ be the proposition that $x^2= 9$. Then the implication ``if $x= 3$, then $x^2= 9$'' can be expressed as $P \to Q$. \pspace 
+
+\item The negation of $P \to Q$ is $\neg (P \to Q) \equiv P \wedge \neg Q$. The converse of $P \to Q$ is $Q \to P$. The contrapositive of $P \to Q$ is $\neg Q \to \neg P$. \pspace
+
+\item As a sentence, the negation $P \wedge \neg Q$ is written ``$x= 3$ and $x^2 \neq 9$.'' This is clearly false because when $x= 3$, we know $x^2= 9$ so that we cannot have $x^2 \neq 9$. [Notice this implies that the original statement ``if $x= 3$, then $x^2= 9$ is true because its negation is false.] \pspace
+
+As a sentence, the converse $Q \to P$ is written ``if $x^2= 9$, then $x= 3$.'' This statement is false. As a counterexample, let $x= -3$. Then we do have $x^2= 9$ but $x \neq 3$. [Notice the converse being false \textit{does not} imply that the original statement was true---though it is. A statement and its converse have `unrelated' truth values.] \pspace
+
+As a sentence, the contrapositive $\neg Q \to \neg P$ is written ``if $x^2 \neq 9$, then $x \neq 3$.'' Because the original statement is true, we know that this statement is true because a statement and its contrapositive have the same truth value. As a proof of this statement, suppose that $x^2 \neq 9$ but $x= 3$, i.e. assume the statement is false. But this is a contradiction because $x^2= 3^2= 9$. Alternatively, assume $x^2 \neq 9$. Then we have $x^2 - 9 \neq 0$ which is equivalent to $(x - 3)(x + 3) \neq 0$. This implies that $x \neq -3$ and $x \neq 3$. 
 \end{enumerate}
 
 

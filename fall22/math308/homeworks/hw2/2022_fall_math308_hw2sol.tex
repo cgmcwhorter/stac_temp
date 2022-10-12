@@ -2,8 +2,8 @@
 \usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
 \usepackage{../style/homework}
 \usepackage{../style/commands}
-\setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -15,7 +15,26 @@
 % Problem 1
 \problem{10} Show that $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is a tautology by constructing its truth table. Using words, explain why this expression is a tautology without making reference to its truth table. \pspace
 
-\sol 
+\sol Constructing the truth table, we have\dots \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{ccc||ccc|cc||c}
+	$P$ & $Q$ & $R$ & $\neg Q$ & $\neg Q \vee R$ & $P \wedge (\neg Q \vee R)$ & $P \wedge R$ & $(P \wedge R) \vee \neg Q$ & $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ \\ \hline
+	T & T & T & F & T & T & T & T & T \\
+	T & T & F & F & F & F & F & F & T \\
+	T & F & T & T & T & T & T & T & T \\
+	T & F & F & T & T & T & F & T & T \\
+	F & T & T & F & T & F & F & F & T \\
+	F & T & F & F & F & F & F & F & T \\
+	F & F & T & T & T & F & F & T & T \\
+	F & F & F & T & T & F & F & T & T
+	\end{tabular}
+	\end{table} \par
+Because $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is true for every input of $P$, $Q$, and $R$, we know that $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is a tautology. \pspace
+
+Now let us explain why $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is a tautology without making reference to a truth table. We know that $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ can only be false if $P \wedge (\neg Q \vee R)$ is true but $(P \wedge R) \vee \neg Q$ is false. Assume that $P \wedge (\neg Q \vee R)$ is true. This means that $P$ is true and $\neg Q \vee R$ is true. Because $\neg Q \vee R$ is true, either $\neg Q$ is true or $R$ is true. But then for $P \wedge (\neg Q \vee R)$ to be true, we know that either $P$ and $\neg Q$ is true, or $P$ and $R$ is true. \pspace
+
+If $P$ and $\neg Q$ is true, then we know $\neg Q$ is true. But then $(P \wedge R) \vee \neg Q$ is true because $\neg Q$ is true. But then $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is true. Now if $P$ and $R$ is true, we know that both $P$ and $R$ are true. But then $P \wedge R$ is true so that $(P \wedge R) \vee \neg Q$ is true. But then $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is true. Now we see that no matter the combination of inputs for $P$, $Q$, and $R$, the proposition $P \wedge (\neg Q \vee R) \to (P \wedge R) \vee \neg Q$ is true. Therefore, this proposition is a tautology. 
 
 
 
@@ -24,18 +43,20 @@
 
 
 % Problem 2
-\problem{10} Consider the statement, ``If $n$ is even, then $n$ is not prime or $n$ is 2.''
+\problem{10} Let $n$ be a fixed natural number. Consider the statement, ``If $n$ is even, then $n$ is not prime or $n$ is 2.''
 	\begin{enumerate}[(a)]
 	\item By defining appropriate propositions, write the given statement as a logical expression.
-	\item Write the converse of your answer in (a). Then write this logical expression in words. Is this statement true? Explain.
-	\item Write the contrapositive of your answer in (a). Then write this logical expression in words. Is this statement true? Explain. 
+	\item Write the converse of your answer in (a). Then write this logical expression in words. Is this statement always true? Explain.
+	\item Write the contrapositive of your answer in (a). Then write this logical expression in words. Is this statement always true? Explain. 
 	\end{enumerate} \pspace
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item Fix an integer $n$. Let $P$ be the proposition that ``$n$ is even,'' let $Q$ be the proposition that ``$n$ is prime,'' and $R$ be the proposition that ``$n$ is 2.'' Then the statement ``If $n$ is even, then $n$ is not prime or $n$ is 2'' can be written as $P \to \neg Q \vee R$. \pspace
+
+\item The converse of $P \to \neg Q \vee R$ is $\neg Q \vee R \to P$. In words, the proposition $\neg Q \vee R$ is ``if $n$ is not prime or $n$ is 2, then $n$ is even.'' This statement is not always true. As a counterexample, choose $n= 9$. Then $n$ is not prime so that ``$n$ is not prime or $n$ is 2'' is true. But $n$ is not even, so that the statement ``if $n$ is not prime or $n$ is 2, then $n$ is even'' is false. \pspace
+
+\item The contrapositive of $P \to \neg Q \vee R$ is $\neg (\neg Q \vee R) \to \neg P \equiv Q \wedge \neg R \to \neg P$. In words, the proposition $Q \wedge \neg R \to \neg P$ is ``if $n$ is prime and $n$ is not 2, then $n$ is not even.'' The statement is always true. If $n$ is prime, then $n$ is one of $2, 3, 5, 7, \ldots$. If $n$ were an even number greater than 2, then $n$ would be divisible by 2 and hence not prime. So if $n$ is a prime that is not 2, it must be odd. But then $n$ is not even. Therefore, the statement ``if $n$ is prime and $n$ is not 2, then $n$ is not even'' is true. 
 \end{enumerate}
 
 
@@ -55,14 +76,20 @@
 	\item A sufficient condition for the metal to glow red is that its temperature is at least 460$^\circ$C.
 	\end{enumerate} \pspace
 
-\sol
+\sol Suppose that the temperature of the metal is $T$. Let $P$ be the proposition ``the metal is growing red,'' $Q$ be the proposition $T \geq 460^\circ \text{C}$. Then the statement ``If this metal is glowing red, then its temperature must be at least 460$^\circ$C'' can be written as $P \to Q$. Because this statement is true, we know that either $P$ is false, i.e. the metal is not glowing red, or both $P$ and $Q$ are true, i.e. the metal is glowing red and its temperature is at least 460$^\circ$C. 
+
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
+\item This can be written as $Q \to P$.
+
+\item This can be written as $\neg Q \to \neg P$.
+
+\item This can be written as 
+
+\item This can be written as  
+
+\item This can be written as  
+
+\item This can be written as  
 \end{enumerate}
 
 
@@ -83,9 +110,34 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item By definition, we know that $P \boxplus Q$ is true only when both $P$ and $Q$ are true. Then we know that the truth table must be\dots \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cc|c}
+	$P$ & $Q$ & $P \boxplus Q$ \\ \hline
+	T & T & T \\
+	T & F & F \\
+	F & T & F \\
+	F & F & F
+	\end{tabular}
+	\end{table} \par
+[Note: This is just the truth table for $P \wedge Q$ so that we must have $P \boxplus Q \equiv P \wedge Q$.] \pspace
+
+\item We can show that these are logically equivalent using a truth table: the truth values of $P \boxplus Q$ and $(P \leftrightarrow Q) \wedge P$ and $P \boxplus Q$ and $(P \leftrightarrow Q) \wedge Q$ match for each input of $P$ and $Q$ \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{cc||c|c|cc}
+	$P$ & $Q$ & $P \boxplus Q$ & $P \leftrightarrow Q$ & $(P \leftrightarrow Q) \wedge P$ & $(P \leftrightarrow Q) \wedge Q$ \\ \hline
+	T & T & T & T & T & T \\
+	T & F & F & F & F & F \\
+	F & T & F & F & F & F \\
+	F & F & F & T & F & F
+	\end{tabular}
+	\end{table}
+Therefore, by the truth table above, we have $(P \boxplus Q) \equiv (P \leftrightarrow Q) \wedge P$ and $(P \boxplus Q) \equiv (P \leftrightarrow Q) \wedge Q$. \pspace
+
+\item We know that $P \boxplus Q$ is true if and only if both $P$ and $Q$ are true. We know that $(P \leftrightarrow Q) \wedge P$ is true if and only if both $P \leftrightarrow Q$ is true and $P$ is true. Now $P \leftrightarrow Q$ is true if and only if the truth values for $P$ and $Q$ match. But then $(P \leftrightarrow Q) \wedge P$ is true if and only if the truth values for $P$ and $Q$ match and $P$ is true, i.e. both $P$ and $Q$ are true. But this precisely the criterion for $P \boxplus Q$ to be true. Therefore, $P \boxplus Q \equiv (P \leftrightarrow Q) \wedge R$. The same explanation holds for $P \boxplus Q \equiv (P \leftrightarrow Q) \wedge Q$ by interchanging the roles of $P$ and $Q$, i.e. it holds mutatis mutandis. \pspace
+
 \item 
 \item 
 \end{enumerate}
@@ -141,14 +193,9 @@
 	\end{itemize}
 Then as thoroughly as possible, comment on what you observed and learned from the video. Be sure to remark as much as possible on how these videos connect to the course content. \pspace
 
-\sol 
-
-
-
-
-
-
-
+\vfill
+\begin{center} {\itshape Solutions will vary.} \end{center}
+\vfill
 
 
 \end{document}
