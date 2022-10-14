@@ -1,0 +1,96 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 10/12}{He knows nothing, and he thinks he knows everything. That clearly points to a political career.}{George Bernard Shaw}
+
+% Problem 1
+\problem{10} Define what it means to be a linear function. Then give an example of a linear function and evaluate it at some value. \pspace
+
+\sol A linear function is `any' function which has a constant rate of change. Moreover, `any' function which has a constant rate of change is a linear function. `Any' function of one variable which has a constant can be written in the form $f(x)= mx + b$ for some real numbers $m$ and $b$. For instance, choosing $m= -2$ and $b= 11$, we have\dots
+	\[
+	f(x)= -2x + 11= 11 - 2x
+	\]
+We can evaluate this function for any real number $x$. For instance, evaluating this at $x= 3$, we have\dots
+	\[
+	f(3)= 11 - 2(3)= 11 - 6= 5
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider the function $f(x)= 121.5 - 11.6x$. 
+	\begin{enumerate}[(a)]
+	\item Explain why $f(x)$ is linear.
+	\item Find the slope and $y$-intercept of $f(x)$.
+	\item Find $f(x)$ when $x= 7.2$
+	\end{enumerate} \pspace
+
+\begin{enumerate}[(a)]
+\item The given function $f(x)= 121.5 - 11.6x= -11.6x + 121.5$ can be written in the form $y= mx + b$, where $m= -11.6$ and $b= 121.5$. Therefore, $f(x)$ is linear. \pspace
+
+\item Because $f(x)= -11.6x + 121.5$ has the form $y= mx + b$ with $m= -11.6$ and $b= 121.5$, we know that the slope is $m= -11.6$ and that the $y$-intercept is $b= 121.5$. \pspace
+
+\item We have\dots
+	\[
+	f(7.2)= -11.6(7.2) + 121.5= -83.52 + 121.5= 37.98
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Find the equation of the linear function which passes through the points $(-4, 10)$ and $(6, -8)$. \pspace
+
+\sol Because the function is linear, we know that it has the form $f(x)= mx + b$. To find the equation of the line, we need a point and a slope. We know that the linear function contains the point $(-4, 10)$. To find the slope, $m$, we use the fact that this is the ratio of change in $y$ and $x$:
+	\[
+	m= \dfrac{\Delta y}{\Delta x}= \dfrac{10 - (-8)}{-4 - 6}= \dfrac{10 + 8}{-10}= \dfrac{18}{-10}= -1.8
+	\]
+But then we know that $f(x)= mx + b= -1.8x + b$. Because the linear fucntion contains the point $(-4, 10)$, we know that when $x= -4$ that $f(x)= 10$. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	f(x)&= -1.8x + b \\[0.3cm]
+	10&= -1.8(-4) + b \\[0.3cm]
+	10&= 7.2 + b \\[0.3cm]
+	b&= 2.8
+	\end{aligned}
+	\]
+Therefore, we know that $f(x)= -1.8x + 2.8$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Find the equation of the linear function with slope $-15$ and $y$-intercept 19. \pspace
+
+\sol Because the function is linear, we know that it has the form $f(x)= mx + b$. To find the equation of the line, we need a point and a slope. Because the line has $y$-intercept is 19, we know that the line contains the point $(0, 19)$. Because the slope is $-15$, we know that $m= -15$. Therefore, we know that $f(x)= mx + b= -15x + b$. Because the linear function contains the point $(0, 19)$, we know when $x= 0$ that $f(x)= 19$. But then we have\dots
+	\[
+	\begin{aligned}
+	f(x)&= -15x + b \\[0.3cm]
+	19&= -15(0) + b \\[0.3cm]
+	b&= 19
+	\end{aligned}
+	\]
+Therefore, we know that $f(x)= -15x + 19$. 
+
+
+\end{document}

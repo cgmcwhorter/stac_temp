@@ -1,0 +1,214 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 308: Exam 1}
+\renewcommand{\term}{Fall -- 2022}
+\newcommand{\examdate}{10/21/2022}
+\newcommand{\timelimit}{180 Minutes}
+
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Construct the truth table for the logical expression given below. Is this expression a tautology? Explain. 
+	\[
+	\left[ \big( \neg P \wedge (Q \vee R) \big) \to P \right] \Longleftrightarrow P
+	\]
+
+
+
+% Question 2
+\newpage
+\question[10] Consider the subsets of $\mathbb{R}$ given by $A= [0, 5]$ and $B= [4, 10)$. Determine the following:
+	\begin{enumerate}[(a)]
+	\item $A^c$
+	\item $A \cup B$
+	\item $A \cap B$
+	\item $A - B$
+	\item $A \Delta B$
+	\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[10] Define $P(x)$, $Q(x)$, and $R(x)$ to be the following predicates:
+	\[
+	\begin{aligned}
+	P(x)&: x^2 + x - 20= 0 \\
+	Q(x)&: x \text{ is even} \\
+	R(x)&: x < 0
+	\end{aligned}
+	\]
+For the universe of integers, write each of the following quantified statements in a sentence and then determine whether it is true or false---being sure to justify your answer.
+	\begin{enumerate}[(a)]
+	\item $\forall x\, \big( R(x) \to P(x) \big)$
+	\item $\exists x\, \big( P(x) \to \neg Q(x) \wedge R(x) \big)$
+	\item $\forall x\, \big( P(x) \to Q(x) \vee R(x) \big)$
+	\item $\forall x\, \big( Q(x) \vee R(x) \to P(x) \big)$
+	\item $\exists! x\, \big( P(x) \wedge \neg R(x) \big)$
+	\end{enumerate}
+
+
+
+% Question 4
+\newpage
+\question[10] Recall that DeMorgan's laws, $(A \cap B)^c= A^c \cup B^c$ and $(A \cup B)^c= A^c \cap B^c$, allows one to compute complements of unions and intersections. Complete the proof below to prove a similar rule to compute complements of relative complements. \pspace
+
+\noindent{\bfseries Proposition.} Let $A$ and $B$ be sets with common universe $\mathcal{U}$. Then $(A \setminus B)^c= A^c \cup B$. \pspace
+
+\noindent{\itshape Proof.} We want to prove $(A \setminus B)^c= A^c \cup B$. So we need to show that \underline{\hspace{4cm}} \pspace
+
+and \underline{\hspace{4cm}}. \pspace \pspace
+
+
+First, we prove \underline{\hspace{4cm}}. If $x \in A \setminus B$, then we know that $x \in$ \underline{\hspace{4cm}} \pspace 
+
+and \underline{\hspace{4cm}}. But then $x \in$ \underline{\hspace{4cm}}. But this shows that if \pspace
+
+$y \in (A \setminus B)^c$, we must have $y \in (A \cap B^c)^c$. But by DeMorgan's Law, we know that \pspace
+
+$(A \cap B^c)^c=$ \underline{\hspace{4cm}}. But then because $y \in (A \cap B^c)^c$, we know that \pspace
+
+$y \in A^c \cup B$. So, if $y \in (A \setminus B)^c$, we know $y \in A^c \cup B$. Therefore, \underline{\hspace{4cm}}. \pspace \pspace
+
+
+Now we need to prove that \underline{\hspace{4cm}}. Let $x \in$ \underline{\hspace{4cm}}. \pspace
+
+Then either $x \in$ \underline{\hspace{4cm}} or $x \in$ \underline{\hspace{4cm}}. There are two \pspace cases: \pspace
+
+	\begin{enumerate}[(i)]
+	\item $x \in A^c$: Suppose $x \in A^c$. Then $x \notin$ \underline{\hspace{4cm}}. If $y \in A \setminus B$, we must \pspace
+	
+	have $y \in A$. But then if $y \notin A$, we know $y \notin A \setminus B$. But this shows that \pspace
+	
+	$y \in$ \underline{\hspace{4cm}}. But because \underline{\hspace{4cm}}, we know that \pspace
+	
+	$x \in (A \setminus B)^c$. \pspace
+	
+	\item $x \in B$: Suppose $x \in B$. If $y \in B$, then we know that $y \notin A \setminus B$. But then \pspace
+	
+	$y \in$ \underline{\hspace{4cm}}. But then because $x \in B$, \newpage
+	
+	\phantom{.}\pspace
+	we know that $x \in$ \underline{\hspace{4cm}}. 
+	\end{enumerate} \pspace
+
+We have now shown that if $x \in A^c$ or $x \in B$, that $x \in \underline{\hspace{4cm}}$. \pspace
+
+Therefore, we know that \underline{\hspace{4cm}}. \pspace \pspace
+
+But then we have shown that \underline{\hspace{4cm}} and \underline{\hspace{4cm}}. \pspace
+
+Therefore, $(A \setminus B)^c= A^c \cup B$. \qed
+
+
+
+% Question 5
+\newpage
+\question[10] A certain computer program has $n, m$ as integer variables. Suppose that $A$ is a two-dimensional array of 200~integers values: $A[1, 1]$, $A[1, 2]$, $\ldots$, $A[1, 20]$, $A[2, 1]$, $A[2, 2]$, $\ldots$, $A[2, 20]$, $\ldots$, $A[10, 20]$, i.e. $A$ is an array with ten rows and twenty columns. We could represent $A$ visually as a matrix via\ldots
+	\[
+	\begin{pmatrix}
+	A[1,1] & A[1,2] & \cdots & A[1,20] \\
+	A[2,1] & A[2,2] & \cdots & A[2,20] \\
+	\vdots & \ddots & & \vdots \\
+	A[10,1] & A[10,2] & \cdots & A[10,20]
+	\end{pmatrix}
+	\]
+Write each of the following statements as a quantified open statement:
+	\begin{enumerate}[(a)]
+	\item Every element of $A$ is positive. 
+	\item Some entries of $A$ are larger than 100.
+	\item The entries in each row of $A$ are sorted into strictly ascending order.
+	\item All of the entries of $A$ are distinct. 
+	\item All the entries of the first 4 columns of $A$ are distinct. 
+	\end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[10] Let $S_n$ denote the subset of $\mathbb{R}$ given by $\left[-1 + \frac{1}{n}, 2 + \frac{1}{n} \right)$. Compute the following:
+	\begin{enumerate}[(a)]
+	\item $S_1$
+	\item $S_2$
+	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n$
+	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n$
+	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n^c$ [Hint: Consider complements and (c).]
+	\end{enumerate}
+
+
+
+% Question 7
+\newpage
+\question[10] A function $f: \mathbb{R} \to \mathbb{R}$ is called uniformly continuous if for all $\epsilon > 0$, there exists $\delta > 0$ such that if $|x - y| < \delta$, then $|f(x) - f(y)| < \epsilon$. 
+	\begin{enumerate}[(a)]
+	\item Write the definition of a function $f$ being uniformly continuous as a quantified statement.
+	\item Negate your expression in (a).
+	\item State in words what means for a function $f$ to \textit{not} be uniformly continuous. 
+	\end{enumerate}
+
+
+
+% Question 8
+\newpage
+\question[10] Let $A= \{ 1, 2, 3, 4 \}$ and $B= \{ 3, 4, 5, 6 \}$. Compute the following:
+	\begin{enumerate}[(a)]
+	\item $\mathcal{P}(\varnothing)$
+	\item $A \times B$
+	\item $\mathcal{P}(A \setminus B)$
+	\item $A \times \varnothing$
+	\item $A \cap (A \times B)$
+	\item $(A \setminus B) \cap \mathcal{P}(A \setminus B)$
+	\end{enumerate}
+
+
+
+% Question 9
+\newpage
+\question[10] Negate the logical expression below, simplifying as much as possible. Your answer should include no `$\neg$' symbols. 
+	\[
+	\neg(P \vee Q) \vee \big( (\neg P \wedge Q) \vee \neg Q \big)
+	\]
+
+
+
+% Question 10
+\newpage
+\question[10] Mark each of the following as being true ($T$) or false ($F$): \pspace
+        \begin{enumerate}[(a)]
+        \item \underline{\hspace{1.5cm}}: $\varnothing \subseteq \varnothing$ \vfill
+        \item \underline{\hspace{1.5cm}}: $\{ A \} \subseteq \mathcal{P}(A)$ \vfill
+        \item \underline{\hspace{1.5cm}}: $\varnothing \in \{ 0 \}$ \vfill
+        \item \underline{\hspace{1.5cm}}: $100 < -100 \to 0= 1$ \vfill
+        \item \underline{\hspace{1.5cm}}: $A \subseteq \mathcal{P}(A)$ \vfill
+        \item \underline{\hspace{1.5cm}}: $\forall x\ \forall y\ P(x, y) \equiv \forall y\ \forall x\ P(x, y)$ \vfill
+        \item \underline{\hspace{1.5cm}}: $\{ \varnothing \} \subseteq \{ \varnothing \}$ \vfill
+        \item \underline{\hspace{1.5cm}}: $A \in \mathcal{P}(A)$ \vfill
+        \item \underline{\hspace{1.5cm}}: $\forall x\ \exists y\ P(x, y) \equiv \exists y\ \forall x\ P(x, y)$ \vfill
+        \item \underline{\hspace{1.5cm}}: $\varnothing \subsetneq \varnothing$ \vfill
+        \end{enumerate}
+
+
+\end{questions}
+\end{document}

@@ -109,7 +109,7 @@ Because for each possible pair of choices for $P$ and $Q$ the outputs for $\neg 
 % Quiz 8
 \quizsol \textit{True/False}: Let $E(n)$ denote the relation from $\mathbb{N}$ to $\mathbb{Z}^{\geq 0}$ given by the rule that $E(n)$ is the number of positive even integers less than or equal to $n$. Then this relation is a function with $E(5)= 2$, i.e. 2 is in the image of 5, and 10 in the preimage of 5. \pspace
 
-\sol The statement is \textit{false}. There are several claims here. First, the claim that $E(n): \mathbb{N} \to \mathbb{Z}^{\geq 0}$ is a function. Given some $n \in \mathbb{N}$, there is a single number of positive even integers $\leq n$. But then for every input for $E(n)$, there is only one possible output. Therefore, $E(n)$ is a function from $\mathbb{N}$ to $\mathbb{Z}^{\geq 0}$. For 2 to be in the image of 5, we need $E(5)= 2$. There are two positive even integers $\leq 5$ (namely, 2 and 4) so that 2 is in the image of 5. For 10 to be in the preimage of 5, we would have to have $E(10)= 5$. Note that there are 5 even integers $\leq 10$ (namely 2, 4, 6, 8, 10). Therefore, 10 is in the preimage of 5. \pvspace{1.5cm}
+\sol The statement is \textit{true}. There are several claims here. First, the claim that $E(n): \mathbb{N} \to \mathbb{Z}^{\geq 0}$ is a function. Given some $n \in \mathbb{N}$, there is a single number of positive even integers $\leq n$. But then for every input for $E(n)$, there is only one possible output. Therefore, $E(n)$ is a function from $\mathbb{N}$ to $\mathbb{Z}^{\geq 0}$. For 2 to be in the image of 5, we need $E(5)= 2$. There are two positive even integers $\leq 5$ (namely, 2 and 4) so that 2 is in the image of 5. For 10 to be in the preimage of 5, we would have to have $E(10)= 5$. Note that there are 5 positive even integers $\leq 10$ (namely 2, 4, 6, 8, 10). Therefore, 10 is in the preimage of 5. \pvspace{1.5cm}
 
 
 
@@ -128,7 +128,7 @@ Because for each possible pair of choices for $P$ and $Q$ the outputs for $\neg 
 
 
 % Quiz 10
-\quizsol \textit{True/False}:  Suppose that $f: A \to B$ and $g: B \to C$ are functions and that $g \circ f$ is injective. Then it must be that $f$ is injective. \pspace
+\quizsol \textit{True/False}: Suppose that $f: A \to B$ and $g: B \to C$ are functions and that $g \circ f$ is injective. Then it must be that $f$ is injective. \pspace
 
 \sol The statement is \textit{true}. Observe that $g \circ f: A \to C$. Suppose $f$ were not injective. Then there are two values in $A$, say $a_1, a_2$, such that $a_1 \neq a_2$ and $f(a_1)= f(a_2)$. But then we have\dots
 	\[
@@ -142,7 +142,7 @@ But then there are two values in the domain of $g \circ f$, namely $a_1, a_2$ su
 
 
 
-
+% Fix an integer $n > 1$ and let $\{ a_n \}_{n \in \mathbb{N}}$ and $\{ b_n \}_{n \in \mathbb{N}}$ be sequences. Then $\displaystyle \prod_{k=1}^n a_n b_n= \prod_{k=1}^n a_n \cdot \prod_{k=1}^n b_n$ but $\displaystyle \sum_{k=1}^n a_n b_n \neq \sum_{k=1}^n a_n \cdot \sum_{k=1}^n b_n$. 
 
 
 \end{document}
