@@ -39,7 +39,7 @@
 
 % Question 2
 \newpage
-\question[10] Consider the subsets of $\mathbb{R}$ given by $A= [0, 5]$ and $B= [4, 10)$. Determine the following:
+\question[10] Consider the subsets of $\mathbb{R}$ given by $A= (0, 5]$ and $B= [4, 10)$. Determine the following:
 	\begin{enumerate}[(a)]
 	\item $A^c$
 	\item $A \cup B$
@@ -60,7 +60,7 @@
 	R(x)&: x < 0
 	\end{aligned}
 	\]
-For the universe of integers, write each of the following quantified statements in a sentence and then determine whether it is true or false---being sure to justify your answer.
+For the universe of integers, write each of the following quantified statements in a sentence (avoiding the word `not' and stated as `properly' as possible) and then determine whether the quantified statement is true or false---being sure to justify your answer.
 	\begin{enumerate}[(a)]
 	\item $\forall x\, \big( R(x) \to P(x) \big)$
 	\item $\exists x\, \big( P(x) \to \neg Q(x) \wedge R(x) \big)$
@@ -82,51 +82,57 @@ For the universe of integers, write each of the following quantified statements 
 and \underline{\hspace{4cm}}. \pspace \pspace
 
 
-First, we prove \underline{\hspace{4cm}}. If $x \in A \setminus B$, then we know that $x \in$ \underline{\hspace{4cm}} \pspace 
+First, we prove \underline{\hspace{4cm}}. We first make an observation. Suppose that \pspace
 
-and \underline{\hspace{4cm}}. But then $x \in$ \underline{\hspace{4cm}}. But this shows that if \pspace
-
-$y \in (A \setminus B)^c$, we must have $y \in (A \cap B^c)^c$. But by DeMorgan's Law, we know that \pspace
-
-$(A \cap B^c)^c=$ \underline{\hspace{4cm}}. But then because $y \in (A \cap B^c)^c$, we know that \pspace
-
-$y \in A^c \cup B$. So, if $y \in (A \setminus B)^c$, we know $y \in A^c \cup B$. Therefore, \underline{\hspace{4cm}}. \pspace \pspace
+$y \in A \setminus B$. Then we know that \underline{\hspace{4cm}} and \underline{\hspace{4cm}}. \pspace
 
 
-Now we need to prove that \underline{\hspace{4cm}}. Let $x \in$ \underline{\hspace{4cm}}. \pspace
+But then $y \in A \cap B^c$. Now let $x \in (A \setminus B)^c$. By our observation, because $x \in (A \setminus B)^c$, \pspace
 
-Then either $x \in$ \underline{\hspace{4cm}} or $x \in$ \underline{\hspace{4cm}}. There are two \pspace cases: \pspace
+it must be that $x \in (A \cap B^c)^c$. But by DeMorgan's Law, we know that \pspace
+
+$(A \cap B^c)^c=$ \underline{\hspace{4cm}}. But then because $x \in (A \cap B^c)^c$, we know that \pspace
+
+$x \in A^c \cup B$. So, if $x \in (A \setminus B)^c$, we know $x \in A^c \cup B$. Therefore, \underline{\hspace{4cm}}. \pvspace{1.5cm}
+
+
+Second, we need to prove that \underline{\hspace{4cm}}. Let $x \in A^c \cup B$. Then we know \pspace
+
+that either $x \in$ \underline{\hspace{4cm}} or $x \in$ \underline{\hspace{4cm}}. There are two \pspace cases: \pspace
 
 	\begin{enumerate}[(i)]
-	\item $x \in A^c$: Suppose $x \in A^c$. Then $x \notin$ \underline{\hspace{4cm}}. If $y \in A \setminus B$, we must \pspace
+	\item $x \in A^c$: Observe that if $y \in A \setminus B$, we must have $y \in A$. But then if $y \notin A$, we \pspace
 	
-	have $y \in A$. But then if $y \notin A$, we know $y \notin A \setminus B$. But this shows that \pspace
+	know $y \notin A \setminus B$. This shows that $y \in$ \underline{\hspace{4cm}}. Now let \pspace
 	
-	$y \in$ \underline{\hspace{4cm}}. But because \underline{\hspace{4cm}}, we know that \pspace
+	$x \in A^c$. We need to show that $x \in (A \setminus B)^c$. Because $x \in A^c$, we know \pspace
 	
-	$x \in (A \setminus B)^c$. \pspace
+	$x \notin$ \underline{\hspace{4cm}}. But then by our observation, we know that \pspace
+	
+	$x \notin$ \underline{\hspace{4cm}}, which implies that $x \in (A \setminus B)^c$. \pspace
 	
 	\item $x \in B$: Suppose $x \in B$. If $y \in B$, then we know that $y \notin A \setminus B$. But then \pspace
 	
-	$y \in$ \underline{\hspace{4cm}}. But then because $x \in B$, \newpage
+	$y \in$ \underline{\hspace{4cm}}. But then because $x \in B$, we know that \pspace
 	
-	\phantom{.}\pspace
-	we know that $x \in$ \underline{\hspace{4cm}}. 
-	\end{enumerate} \pspace
+	$x \in$ \underline{\hspace{4cm}}. 
+	\end{enumerate} \pvspace{1cm}
 
 We have now shown that if $x \in A^c$ or $x \in B$, that $x \in \underline{\hspace{4cm}}$. \pspace
 
-Therefore, we know that \underline{\hspace{4cm}}. \pspace \pspace
+Therefore, we know that \underline{\hspace{4cm}}. \pvspace{1.5cm}
 
 But then we have shown that \underline{\hspace{4cm}} and \underline{\hspace{4cm}}. \pspace
 
-Therefore, $(A \setminus B)^c= A^c \cup B$. \qed
+Therefore, $(A \setminus B)^c= A^c \cup B$. \qed \vfill
+
+{\small \itshape Note: If $(A \setminus B)^c$ or $A^c \cup B$ are empty, then clearly $(A \setminus B)^c \subseteq A^c \cup B$ or $A^c \cup B \subseteq (A \setminus B)^c$, respectfully. We then only needed to prove the result when $(A \setminus B)^c$ and $A^c \cup B$ are nonempty, which was the given proof. We omitted the empty cases for simplicity.}
 
 
 
 % Question 5
 \newpage
-\question[10] A certain computer program has $n, m$ as integer variables. Suppose that $A$ is a two-dimensional array of 200~integers values: $A[1, 1]$, $A[1, 2]$, $\ldots$, $A[1, 20]$, $A[2, 1]$, $A[2, 2]$, $\ldots$, $A[2, 20]$, $\ldots$, $A[10, 20]$, i.e. $A$ is an array with ten rows and twenty columns. We could represent $A$ visually as a matrix via\ldots
+\question[10] A certain computer program has $n$, $m$ as integer variables. Suppose that $A$ is a two-dimensional array of 200~integers values: $A[1, 1]$, $A[1, 2]$, $\ldots$, $A[1, 20]$, $A[2, 1]$, $A[2, 2]$, $\ldots$, $A[2, 20]$, $\ldots$, $A[10, 20]$, i.e. $A$ is an array with ten rows and twenty columns. We could represent $A$ visually as a matrix via\ldots
 	\[
 	\begin{pmatrix}
 	A[1,1] & A[1,2] & \cdots & A[1,20] \\
@@ -148,13 +154,13 @@ Write each of the following statements as a quantified open statement:
 
 % Question 6
 \newpage
-\question[10] Let $S_n$ denote the subset of $\mathbb{R}$ given by $\left[-1 + \frac{1}{n}, 2 + \frac{1}{n} \right)$. Compute the following:
+\question[10] Let $S_n$ denote the subset of $\mathbb{R}$ given by $\left[-1 + \frac{1}{n}, 2 - \frac{1}{n} \right)$. Compute the following:
 	\begin{enumerate}[(a)]
 	\item $S_1$
 	\item $S_2$
 	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n$
-	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n$
-	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n^c$ [Hint: Consider complements and (c).]
+	\item $\displaystyle \bigcap_{n \in \mathbb{N}} S_n$
+	\item $\displaystyle \bigcup_{n \in \mathbb{N}} S_n^c$ [Hint: Consider complements and (d).]
 	\end{enumerate}
 
 
@@ -165,7 +171,7 @@ Write each of the following statements as a quantified open statement:
 	\begin{enumerate}[(a)]
 	\item Write the definition of a function $f$ being uniformly continuous as a quantified statement.
 	\item Negate your expression in (a).
-	\item State in words what means for a function $f$ to \textit{not} be uniformly continuous. 
+	\item State in words what means for a function $f: \mathbb{R} \to \mathbb{R}$ to \textit{not} be uniformly \par continuous. 
 	\end{enumerate}
 
 
@@ -186,7 +192,7 @@ Write each of the following statements as a quantified open statement:
 
 % Question 9
 \newpage
-\question[10] Negate the logical expression below, simplifying as much as possible. Your answer should include no `$\neg$' symbols. 
+\question[10] Negate the logical expression below, simplifying as much as possible. Your answer should not include `$\neg$' symbols. 
 	\[
 	\neg(P \vee Q) \vee \big( (\neg P \wedge Q) \vee \neg Q \big)
 	\]
