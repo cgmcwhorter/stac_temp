@@ -20,7 +20,7 @@
 	Q(n) &\colon n \text{ is a perfect square} \\
 	R(j) &\colon j \text{ is divisible by 3} \\
 	S(k) &\colon k \text{ is divisible by 6} \\
-	W(m) &\colon 1 < m \leq 8
+	W(\ell) &\colon 1 < \ell \leq 8
 	\end{aligned}
 	\]
 Write the open sentences below as complete English sentences as `simply' as possible and then determine whether the statement is true or false. If the statement is true, explain why. If not, give a counterexample. 
@@ -28,7 +28,7 @@ Write the open sentences below as complete English sentences as `simply' as poss
 	\item $(\exists! n) \big( Q(n) \wedge W(n) \big)$ 
 	\item $(\forall m) \big( P(m) \vee R(m) \big)$ 
 	\item $(\forall m) \big( \neg R(m) \to \neg S(m) \big)$ 
-	\item $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$ 
+	\item $(\forall m) (\exists n) \big( S(m) \to [(m= 6n) \wedge P(n)] \big)$ 
 	\end{enumerate} 
 
 
@@ -40,7 +40,7 @@ Write the open sentences below as complete English sentences as `simply' as poss
 % Problem 2
 \problem{10} By defining appropriate universes and predicates, quantify the open sentences below. Indicate whether the resulting statement is true or false. No justification is necessary. 
 	\begin{enumerate}[(a)]
-	\item For all $m$, there exists $n$ such that $m= n + 1$.
+	\item For all integers $m$, there exists an integer $n$ such that $m= n + 1$.
 	\item For all integers $n$, if $n$ is divisible by 5 then the 1's digit of $n$ is either 0 or 5.
 	\item Nonzero real numbers have a unique multiplicative inverse. 
 	\item Given any pair of distinct integers, there is another integer between them.
@@ -54,7 +54,7 @@ Write the open sentences below as complete English sentences as `simply' as poss
 
 
 % Problem 3
-\problem{10} Being as clear and detailed as possible, explain why $\exists x P(x) \wedge \exists x Q(x)$ does not imply $\exists x [P(x) \wedge Q(x)]$. 
+\problem{10} Being as clear and detailed as possible, explain why $\exists x\, P(x) \wedge \exists x\, Q(x)$ does not imply $\exists x\, [P(x) \wedge Q(x)]$. 
 
 
 
@@ -68,20 +68,6 @@ Write the open sentences below as complete English sentences as `simply' as poss
 	\item Write $\forall x \big( R(x) \to S(x) \big)$ as a complete English sentence.
 	\item Write the contrapositive, converse, and negation of the open sentence in (a) as complete English sentences. 
 	\end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \end{document}

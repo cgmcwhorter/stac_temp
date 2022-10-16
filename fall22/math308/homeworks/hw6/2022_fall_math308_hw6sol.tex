@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -22,13 +22,17 @@
 	\item a subset of $S$, say $E$, such that the complement of $X \cup E$ is empty. 
 	\end{enumerate} \pspace
 
-\sol
+\sol {\itshape Note: Answers may vary.}
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item The chosen set, $A$, needs to be disjoint from $X$; that is, the set $A$ needs to contain no elements of $X$, i.e. $-1$, $0$, $1$. The set $A$ also needs to be a proper subset of $S$, i.e. not contain every element of $S$. Examples of such $A$ are $A= \{ -3, -2, 2, 3 \}$, $A= \{ -2, 2 \}$, $A= \{ 3 \}$, $\varnothing$, etc. \pspace
+
+\item The set $B - X$ is the set of elements that are in $B$ but \textit{not} in $X$. For $B - X$ to not contain every element of $B$, i.e. $B - X \neq B$, $B$ and $X$ cannot be disjoint, i.e. $B \cap X \neq \varnothing$. Then the given set $B$ needs to contain at least one element of $X$. Examples of such $B$ are $B= \{ 0 \}$, $B= \{ -3, -2, -1 \}$, $B= \{ -1, 0, 1 \}$, etc. \pspace
+
+\item The set $X \Delta C$ is the set of elements that are \textit{only} in $X$ or \textit{only} in $C$, i.e. the elements in $X$ or $C$ but not in $X \cap C$. The set $X \cup C$ is the set of elements in $X$ or $C$. For $X \Delta C= X \cup C$, there was nothing from $X \cup C$ `excluded' from $X \Delta C$, i.e. every element of $X \cup C$ is in $X$ or $C$ but not both. Examples of such $C$ are $C= \{ -3, -2, 2, 3 \}$, $C= \{ 3 \}$, $C= \varnothing$, etc. \pspace
+
+\item The set $D^c$ is the set of elements of $S$ that are \textit{not} in $D$. Then for $D^c$ to contain only nonnegative numbers, i.e. real numbers $x \geq 0$, the set $D^c$ must then contain all the negative numbers of $S$. Therefore, the only such example of $D$ is $D= \{ -3, -2, -1 \}$. \pspace
+
+\item The set $X \cup E$ is the set of elements that are in $X$ or in $E$. The complement of $X \cup E$, i.e. $(X \cup E)^c$, is the set of elements that are not in $X \cup E$. For the set $(X \cup E)^c$ to be empty, there must be no elements in $S$ that are not already in $X \cup E$, i.e. $X \cup E= S$. Examples of such $E$ are $E= \{ -3, -2, 2, 3 \}$, $E= \{ -2, -1, 0, 1, 2 \}$, $E= \{ -3, -2, -1, 0, 1, 2, 3 \}$, etc. 
 \end{enumerate}
 
 
@@ -41,9 +45,23 @@
 \problem{10} Let $A$ and $B$ be sets. By defining $A= B$ by using a quantified open sentence, show that $A \neq B$ is equivalent to the logical statement\dots
 	\[
 	(\exists x) \big( x \in A \wedge x \notin B \big) \vee (\exists x) \big( x \in B \wedge x \notin A \big)
-	\]
+	\] \pspace
 
-\sol 
+\sol By definition, we know that $A= B$ if and only if $A \subseteq B$ and $B \subseteq A$, i.e. every element of $A$ is an element of $B$ and every element of $B$ is an element of $A$. More precisely, $A= B$ if and only if we have: if $a \in A$, then $a \in B$ and if $b \in B$, then $b \in A$. Writing this as a qualified open statement, we have\dots
+	\[
+	(\forall x)(x \in A \to x \in B) \wedge (\forall x)(x \in B \to x \in A)
+	\]
+Then recalling $\neg (\forall x) \equiv \exists x$, $\neg (P \to Q) \equiv P \wedge \neg Q$, and $\neg (x \in X) \equiv x \notin X$, as well as the fact that $A \neq B= \neg [A= B]$, we must have\dots
+	\[
+	\begin{aligned}
+	A \neq B&\equiv \neg [A= B] \\[0.3cm]
+	&\equiv \neg \big( (\forall x)(x \in A \to x \in B) \wedge (\forall x)(x \in B \to x \in A) \big) \\[0.3cm]
+	&\equiv \neg(\forall x)(x \in A \to x \in B) \vee \neg(\forall x)(x \in B \to x \in A) \\[0.3cm]
+	&\equiv \big( (\exists x) \neg(x \in A \to x \in B) \big) \vee (\exists x) \big( \neg(x \in B \to x \in A) \big) \\[0.3cm] 
+	&\equiv (\exists x) \big(x \in A \wedge \neg(x \in B) \big) \vee (\exists x) \big(x \in B \wedge \neg (x \in A) \big) \\[0.3cm]
+	&\equiv (\exists x) \big( x \in A \wedge x \notin B \big) \vee (\exists x) \big( x \in B \wedge x \notin A \big)
+	\end{aligned}
+	\]
 
 
 
@@ -52,7 +70,7 @@
 
 
 % Problem 3
-\problem{10} Let $A$ and $B$ be sets and consider the set $A \Delta B$. 
+\problem{10} Let $A$ and $B$ be sets in a universe $\mathcal{U}$ and consider the set $A \Delta B$. 
 	\begin{enumerate}[(a)]
 	\item Using set-builder notation and logical propositions, define the set $A \Delta B$.
 	\item Construct a Venn diagram for the set $(A \Delta B)^c$.
@@ -60,12 +78,75 @@
 	\item What might you conjecture from your answers in (b) and (c)?
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item We know that the set $A \Delta B$ is the set of elements of $\mathcal{U}$ that are in $A$ or $B$ but \textit{not} in both $A$ and $B$. From this description of $A \Delta B$, we have\dots
+	\[
+	\begin{aligned}
+	A \Delta B&= \{ x \in \mathcal{U} \colon (x \in A \vee x \in B) \wedge \neg (x \in A \cap B) \} \\[0.3cm]
+	A \Delta B&= \{ x \in \mathcal{U} \colon (x \in A \vee x \in B) \wedge \neg (x \in A \cap B) \} 
+	\end{aligned}
+	\]
+Equivalently, the set $A \Delta B$ is the set of elements of $\mathcal{U}$ that are in $A$ but not $B$ or that are in $B$ but not $A$. From this description, we have\dots
+	\[
+	A \Delta B= \{ x \in \mathcal{U} \colon (x \in A \vee x \in B) \wedge (x \notin A \cap B) \}
+	\] \pvspace{1.5cm}
+
+\item Using any of the descriptions of $A \Delta B$ given in (a), the Venn diagram for $A \Delta B$ is\dots
+	\[
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillOnlyA
+	\fillOnlyB
+	\end{venndiagram2sets}
+	\]
+But then the Venn diagram for $(A \Delta B)^c$ is\dots
+	\[
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillACapB
+	\fillNotAorB
+	\end{venndiagram2sets}
+	\] 
+
+
+
+\newpage
+
+
+
+\item The Venn diagram for $A \cup B$ is given below on the left, which gives the Venn diagram for $(A \cup B)^c$ below on the right. 
+	\[
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillA
+	\fillB
+	\end{venndiagram2sets}
+	\qquad
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillNotAorB
+	\end{venndiagram2sets}
+	\]
+The Venn diagram for $A \cap B$ is\dots
+	\[
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillACapB
+	\end{venndiagram2sets}	
+	\]
+But then the diagram for $(A \cup B)^c \cup (A \cap B)$ is\dots
+	\[
+	\begin{venndiagram2sets}[tikzoptions={scale=1}]
+	\fillNotAorB
+	\fillACapB
+	\end{venndiagram2sets}	
+	\] \pspace
+
+\item Because the Venn diagram for $(A \Delta B)^c$ in (b) is the same as the Venn diagram for $(A \cup B)^c \cup (A \cap B)$ in (d), we conjecture that $(A \Delta B)^c= (A \cup B)^c \cup (A \cap B)$. In fact, one can prove this:
+	\[
+	\begin{aligned}
+	(A \Delta B)^c&= \big( (A \cup B) - (A \cap B) \big)^c \\[0.3cm]
+	&= \big( (A \cup B) \cap (A \cap B)^c \big)^c \\[0.3cm]
+	&= (A \cup B)^c \cup \big( (A \cap B)^c \big)^c \\[0.3cm]
+	&= (A \cup B)^c \cup (A \cap B)
+	\end{aligned}
+	\]
 \end{enumerate}
 
 
@@ -82,11 +163,39 @@
 	\item $\left( \big( (A \cup B) \cap C) \big)^c \cup B^c \right)^c$
 	\end{enumerate} \pspace
 
-\sol
+\sol Recall that if $A$ and $B$ are sets, then by DeMorgan's Laws, $(A \cup B)^c= A^c \cap B^c$ and $(A \cap B)^c= A^c \cup B^c$. We also have $(A^c)^c= A$ and the distributive laws $A \cap (B \cup C)= (A \cap B) \cup (A \cap C)$ and $A \cup (B \cap C)= (A \cup B) \cap (A \cup C)$.
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item Recall that $A \setminus B$ is the set of elements that are in $A$ but not in $B$, i.e. the set $A \cap B^c$. But then we have\dots
+	\[
+	\begin{aligned}
+	(A \setminus B)^c&= (A \cap B^c)^c \\[0.3cm]
+	&= A^c \cup (B^c)^c \\[0.3cm]
+	&= A^c \cup B
+	\end{aligned}
+	\]
+That is, $(A \setminus B)^c$ are the elements that are either not in $A$ or in $B$. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\big( (A^c \cup C) \cap B \big)^c&= (A^c \cup C)^c \cup B^c \\[0.3cm]
+	&= \big( (A^c)^c \cap C^c \big) \cup B^c \\[0.3cm]
+	&= (A \cap C^c) \cup B^c
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\left( \left( \big( (A \cup B) \cap C) \big)^c \cup B^c \right)^c \right)^c&= \big( (A \cup B) \cap C) \big)^c \cup B^c \\[0.3cm]
+	&= \big( (A \cup B)^c \cup C^c \big) \cup B^c \\[0.3cm]
+	&= \big( (A^c \cap B^c) \cup C^c \big) \cup B^c \\[0.3cm]
+	&= \big( (A^c \cap B^c) \cup B^c \big) \cup (C^c \cup B^c) \\[0.3cm]
+	&= B^c \cup (C^c \cup B^c) \\[0.3cm]
+	&= C^c \cup B^c \\[0.3cm]
+	&= (C \cap B)^c
+	\end{aligned}
+	\]
 \end{enumerate}
 
 
@@ -112,20 +221,32 @@
 	\item $\{ \varnothing \} \subseteq \mathcal{P}(S)$
 	\end{2enumerate} \pspace
 
-\sol
+\sol It would be useful to write $S$ and compute $\mathcal{P}(S)$:
+	\[
+	\mathcal{P}(S)= 
+	\left\{
+	\begin{matrix}
+	\varnothing, \\
+	\{ 1 \}, & \{ 2 \}, & \{ \{ 1 \} \}, & \{ \{ \{ 2 \} \} \}, \\
+	\{ 1, 2 \}, & \{ 1, \{ 1 \} \}, & \{ 1, \{ \{ 2 \} \} \}, & \{ 2, \{ 1 \} \}, & \{ 2, \{ \{ 2 \} \} \}, & \{ \{ 1 \}, \{ \{ 2 \} \} \} \\
+	\{ 1, 2, \{ 1 \} \}, & \{ 1, 2, \{ \{ 2 \} \} \}, & \{ 1, \{ 1 \}, \{ \{ 2 \} \} \}, & \{ 2, \{ 1 \}, \{ \{ 2 \} \} \}, & \\
+	S= \{ 1, 2, \{ 1 \}, \{ \{ 2 \} \} \}
+	\end{matrix}
+	\right\}
+	\]
 \begin{2enumerate}
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
-\item 
+\item $F$
+\item $T$
+\item $F$
+\item $T$
+\item $T$
+\item $F$
+\item $F$
+\item $T$
+\item $T$
+\item $F$
+\item $T$
+\item $T$
 \end{2enumerate}
 
 
@@ -142,11 +263,34 @@
 	\item Is $A \times B= B \times A$? Explain. 
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item We have\dots
+	\[
+	A \times B= \{ (a, b) \colon a \in A, b \in B \}= 
+	\left\{
+	\begin{matrix}
+	(3, \pi), & (3, e), & (3, \sqrt{2}), & (3, \varphi) \\
+	(5, \pi), & (5, e), & (5, \sqrt{2}), & (5, \varphi) \\
+	(7, \pi), & (7, e), & (7, \sqrt{2}), & (7, \varphi)	
+	\end{matrix}
+	\right\}
+	\] \pspace
+
+\item From (a), we can see that $(3, \pi) \in A \times B$ but $(\pi, 3) \notin A \times B$. The set $A \times B$ consists of ordered pairs---ordered. The order in an order pair matters. So while $(3, \pi) \in A \times B$ because $3 \in A$ and $\pi \in B$, we know that $(\pi, 3) \notin A \times B$ because $\pi \notin A$ and $3 \notin B$. This is in contrast to sets where order does not matter so that $\{ 3, \pi \}= \{ \pi, 3 \}$. \pspace
+
+\item We have\dots
+	\[
+	A \times B= \{ (b, a) \colon a \in A, b \in B \}= 
+	\left\{
+	\begin{matrix}
+	(\pi, 3), & (e, 3), & (\sqrt{2}, 3), & (\varphi, 3) \\	
+	(\pi, 5), & (e, 5), & (\sqrt{2}, 5), & (\varphi, 5) \\	
+	(\pi, 7), & (e, 7), & (\sqrt{2}, 7), & (\varphi, 7) 
+	\end{matrix}
+	\right\}
+	\] 
+We can see that $(3, \pi) \in A \times B$ but $(3, \pi) \notin B \times A$. Because the sets do not contain the same elements, we know that these sets cannot be equal. In fact, $A \times B$ will never be the same as $B \times A$ unless $A$ and $B$ contain all the same elements. 
 \end{enumerate}
 
 
@@ -165,9 +309,11 @@
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item $\displaystyle \bigcup_{i \in \mathcal{I}} A_n= (0, 2]$, \quad $\displaystyle \bigcap_{i \in \mathcal{I}} A_n= \{ 1 \}$
+
+\item $\displaystyle \bigcup_{i \in \mathcal{I}} A_n= \mathbb{R} \setminus \mathbb{Z}$, \quad $\displaystyle \bigcap_{i \in \mathcal{I}} A_n= \varnothing$
+
+\item $\displaystyle \bigcup_{i \in \mathcal{I}} A_n= \mathbb{R}$, \quad $\displaystyle \bigcup_{i \in \mathcal{I}} A_n= \varnothing$
 \end{enumerate}
 
 
@@ -183,32 +329,23 @@
 
 {\itshape Proof.} If $A \setminus B= \varnothing$, then there is no element in $A$ that is not also in $B$. But then $A \subseteq B$ so that $A^c \supseteq B^c$. But then $A \cap B^c \subseteq A \cap A^c= \varnothing$ so that $A \cap B^c= \varnothing$. Therefore, if $A \setminus B= \varnothing$, then $A \setminus B= A \cap B^c$. If $A \cap B^c= \varnothing$, then there is no element in both $A$ and $B^c$. Now if there were an element in $A \setminus B$, there would be an element in $A$ that is not in $B$, i.e. an element in $A$ that is in $B^c$, a contradiction to the fact that $A \cap B^c= \varnothing$, i.e. that there is no element in both $A$ and $B^c$. This shows that $A \setminus B= \varnothing$. Therefore, if $A \cap B^c= \varnothing$, then $A \setminus B= A \cap B^c$. Then we have shown that if either $A \setminus B$ or $A \cap B^c$ are empty then $A \setminus B= A \cap B^c$. Now assume that both $A \setminus B$ and $A \cap B^c$ are nonempty. \pspace
 
-To prove that $A \setminus B= A \cap B^c$, we need to show \underline{\hspace{3cm}} and \underline{\hspace{3cm}}. \par\vspace{3\baselineskip}
-
-$A \setminus B \subseteq A \cap B^c$: We prove that $A \setminus B \subseteq A \cap B^c$. Let $x \in$~\underline{\hspace{3cm}}. Then by definition, \pspace
-
-$x \in A$ and \underline{\hspace{3cm}}. But then $x \in$~\underline{\hspace{3cm}} and $x \in B^c$. This shows that \pspace
-
-$x \in$~\underline{\hspace{3cm}}. Therefore, this shows that \underline{\hspace{3cm}}. \par\vspace{3\baselineskip}
-
-\underline{\hspace{3cm}}: We need to show that $A \cap B^c \subseteq A \setminus B$. Let $x \in$~\underline{\hspace{3cm}}. Then \pspace
-
-$x \in$~\underline{\hspace{3cm}} and $x \in$~\underline{\hspace{3cm}}. But then $x \in$~\underline{\hspace{3cm}} and \pspace
-
-$x \notin$ \underline{\hspace{3cm}}. This shows that $x \in$~\underline{\hspace{3cm}}. Therefore, we know that \underline{\hspace{3cm}}. \par\vspace{3\baselineskip}
-
-Because \underline{\hspace{3cm}} and \underline{\hspace{3cm}}, we know that $A \setminus B= A \cap B^c$. \qed \pspace
+To prove that $A \setminus B= A \cap B^c$, we need to show \spaceun{0.18cm}{$A \setminus B \subseteq A \cap B^c$} and \spaceun{0.17cm}{$A \cap B^c \subseteq A \setminus B$}. \par\vspace{3\baselineskip}
 
 
-\sol 
+$A \setminus B \subseteq A \cap B^c$: We prove that $A \setminus B \subseteq A \cap B^c$. Let $x \in$~\spaceun{1.05cm}{$A \setminus B$}. Then by definition, \pspace
+
+$x \in A$ and \spaceun{1cm}{$x \notin B$}. But then $x \in$~\spaceun{1.35cm}{$A$} and $x \in B^c$. This shows that \pspace
+
+$x \in$~\spaceun{0.9cm}{$A \cap B^c$}. Therefore, this shows that \spaceun{0.18cm}{$A \setminus B \subseteq A \cap B^c$}. \par\vspace{3\baselineskip}
 
 
+\spaceun{0.18cm}{$A \cap B^c \subseteq A \setminus B$}: We need to show that $A \cap B^c \subseteq A \setminus B$. Let $x \in$~\spaceun{0.9cm}{$A \cap B^c$}. Then \pspace
 
+$x \in$~\spaceun{1.35cm}{$A$} and $x \in$~\spaceun{1.27cm}{$B^c$}. But then $x \in$~\spaceun{1.35cm}{$A$} and \pspace
 
+$x \notin$~\spaceun{1.35cm}{$B$}. This shows that $x \in$~\spaceun{1.05cm}{$A \setminus B$}. Therefore, we know that \spaceun{0.18cm}{$A \cap B^c \subseteq A \setminus B$}. \par\vspace{3\baselineskip}
 
-
-
-
+Because \spaceun{0.18cm}{$A \setminus B \subseteq A \cap B^c$} and \spaceun{0.18cm}{$A \cap B^c \subseteq A \setminus B$}, we know that $A \setminus B= A \cap B^c$. \qed
 
 
 \end{document}

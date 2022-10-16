@@ -20,7 +20,7 @@
 	Q(n) &\colon n \text{ is a perfect square} \\
 	R(j) &\colon j \text{ is divisible by 3} \\
 	S(k) &\colon k \text{ is divisible by 6} \\
-	W(m) &\colon 1 < m \leq 8
+	W(\ell) &\colon 1 < \ell \leq 8
 	\end{aligned}
 	\]
 Write the open sentences below as complete English sentences as `simply' as possible and then determine whether the statement is true or false. If the statement is true, explain why. If not, give a counterexample. 
@@ -28,19 +28,19 @@ Write the open sentences below as complete English sentences as `simply' as poss
 	\item $(\exists! n) \big( Q(n) \wedge W(n) \big)$ 
 	\item $(\forall m) \big( P(m) \vee R(m) \big)$ 
 	\item $(\forall m) \big( \neg R(m) \to \neg S(m) \big)$ 
-	\item $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$ 
+	\item $(\forall m) (\exists n) \big( S(m) \to [(m= 6n) \wedge P(n)] \big)$ 
 	\end{enumerate} \pspace
 
 \sol
 \begin{enumerate}[(a)]
-\item Written in words, the proposition $(\exists! n) \big( Q(n) \wedge W(n) \big)$ is the statement, ``There exists a unique integer $n$ such that $n$ is a perfect square and $1 < n \leq 8$.'' The only perfect squares from 1 to 10 are 1, 4, 9. The only one of these greater than 1 and at most 8 is 1. Therefore, there is a unique perfect square greater than 1 and at most 8. Therefore, $(\exists! n) \big( Q(n) \wedge W(n) \big)$ is true. \pspace
+\item This open sentence can be `translated' as, ``There exists a unique integer such that $n$ is a perfect square and $1 < n \leq 8$.'' The perfect squares are 0, 1, 4, 9, 16, 25, \ldots. But then the only perfect square greater than one but at most eight is 4. Therefore, the statement is true as there is only one perfect square $n$ with $1 < n \leq 8$. \pspace
 
-\item Written in words, the proposition $(\forall m) \big( P(m) \vee R(m) \big)$ is the statement, ``For all integers $m$, either $m$ is even $m$ is divisible by 3.'' The statement is false. As a counterexample, if $n= 1$, then $n$ is an integer but $n$ is neither even nor divisible by 3. \pspace
- 
-\item Written in words, the proposition $(\forall m) \big( \neg R(m) \to \neg S(m) \big)$ is the statement, ``For all integers $m$, if $m$ is not divisible by 3, then $m$ is not divisible by 6.'' This statement is true. If $m$ is not divisible by 3, then it does not have 3 as a factor. If $m$ is divisible by 6, then $m$ has a factor of 6. But 6 has 3 as a factor. This would imply that $m$ has 3 as a factor. Therefore, if $m$ is not divisible by 3, it is not divisible by 6. Alternatively, the contrapositive of ``if $m$ is not divisible by 3, then $m$ is not divisible by 6'' is the statement ``if $m$ is divisibly by 6, then $m$ is divisible by 3.'' Because any integer divisible by 6 must be divisible by 3, the contrapositive is true. But then the original statement is also true. \pspace
+\item This open sentence can be `translated' as, ``For all integers $m$, either $m$ is even or $m$ is divisible by 3.'' This statement is clearly false. As a counterexamples, consider the integer 1 is not even nor is it divisible by 3. There are many other counterexamples. For instance, 5, 7, 11, 13, \ldots are all integers that are not even, i.e. odd integers that are not divisible by 3. \pspace
 
 
-\item Written in words, the proposition $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$ is the statement, ``For all integers $m$, there exists an integer $n$ such that if $m$ is divisible by 6, then $m= 2n$ and $n$ is even.'' The statement is false. Take $m= 6$. Then $m$ is divisible by 6. If there were an integer $n$ with $m= 2n$, then we know $n= m/6= 6/6= 1$. But then $n$ is not even. This shows that the statement $m= 2n$ and $n$ is even is false. Therefore, the statement $S(m) \to [(m= 2n) \wedge P(n)]$ is false so that the statement $(\forall m) (\exists n) \big( S(m) \to [(m= 2n) \wedge P(n)] \big)$. 
+\item This open sentence can be `translated' as, ``For all integers $m$, if $m$ is not divisible by 3, then $m$ is not divisible by 6.'' The statement is true. We know that a number is divisible by 6 if and only if it is divisible by 2 and 3. But then for an integer to be divisible by 6, it must be divisible by 3. Therefore, if an integer is not divisible by 3, it cannot be divisible by 6. \pspace
+
+\item This open sentence can be `translated' as, ``For all integers $m$, if $m$ is divisible by 6, then there is an integer $n$ such that $m= 2n$ and $n$ is even.'' This statement is false. As a counterexample, take $m= 6$. Clearly, $m$ is divisible by 6. If $m= 2n$, then $6= 2n$ so that we must have $n= 3$, which is odd. Therefore, there can be no such $n$. 
 \end{enumerate}
 
 
@@ -52,20 +52,24 @@ Write the open sentences below as complete English sentences as `simply' as poss
 % Problem 2
 \problem{10} By defining appropriate universes and predicates, quantify the open sentences below. Indicate whether the resulting statement is true or false. No justification is necessary. 
 	\begin{enumerate}[(a)]
-	\item For all $m$, there exists $n$ such that $m= n + 1$.
+	\item For all integers $m$, there exists an integer $n$ such that $m= n + 1$.
 	\item For all integers $n$, if $n$ is divisible by 5 then the 1's digit of $n$ is either 0 or 5.
 	\item Nonzero real numbers have a unique multiplicative inverse. 
 	\item Given any pair of distinct integers, there is another integer between them.
 	\item Everybody has problems. 
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item Let the universe for $m, n$ be $\mathcal{U}= \mathbb{Z}$. Define $P(m, n)$ to be the predicate $P(m, n): m= n + 1$. We can quantify the given open sentence as $(\forall m \in \mathbb{Z})(\exists n \in \mathbb{Z}) P(m, n)$. The statement is true. Given $m$, choose $n:= m - 1$. Then we have $n + 1= (m - 1) + 1= m$, as desired. \pspace
+
+\item Let the universe for $n$ be $\mathcal{U}= \mathbb{Z}$. Define open statements $P(n): n$ is divisible by 5 and $Q(n):$ ones digit of $n$ is 0 and $R(n):$ ones digit of $n$ is 5. We can quantify the given open statement as $(\forall n) \big( P(n) \to Q(n) \vee R(n) \big)$. The statement is true. We know that an integer is divisible by 5 if and only if the last digit (the 1s place) is either a 0 or 5. \pspace
+
+\item Let the universe for $r, s$ be $\mathcal{U}= \mathbb{R}$. Define open statements $P(r): r \neq 0$ and $Q(r, s): rs= 1$. We can quantify the given open statement as $(\forall r \in \mathbb{R})(\exists! s \in \mathbb{R}) \big( P(r) \to Q(r, s) \big)$. The statement is true. Given $r \neq 0$, we can define $s:= \frac{1}{r}$. But then $rs= r \cdot \frac{1}{r}= 1$. Moreover, this is unique because if there were two such $s$, say $s_1, s_2$, then we would have $rs_1= 1= rs_2$ so that dividing by $r$, we have $s_1= s_2$. \pspace
+
+\item Let the universe for $n, m$ be $\mathcal{U}= \mathbb{Z}$. Define open statements $P(n, m): n= m$ and $Q(n, m): n < m$. We can quantify the given open statement as $(\forall n \in \mathbb{Z})(\forall m \in \mathbb{Z})(\exists a \in \mathbb{Z}) \big( \neg P(n, m) \to Q(n, a) \wedge Q(a, m)$. The statement is false. Take $n= 1$ and $m= 2$. Clearly, $n \neq m$. However, there is no integer between 1 and 2. \pspace
+
+\item Let the universe for $p$ be $\mathcal{U}=$ set of people and the universe for $m$ be $\widetilde{\mathcal{U}}=$ the set of problems. Define an open statement $Q(p, m):$ $p$ has problem $m$. We can quantify the given open statement as $(\forall p)(\exists m) Q(p, m)$. The statement is true. For instance, you had the problem of solving this problem and I had the problem of writing this problem and typing its solution. 
 \end{enumerate}
 
 
@@ -75,9 +79,11 @@ Write the open sentences below as complete English sentences as `simply' as poss
 
 
 % Problem 3
-\problem{10} Being as clear and detailed as possible, explain why $\exists x P(x) \wedge \exists x Q(x)$ does not imply $\exists x [P(x) \wedge Q(x)]$. \pspace
+\problem{10} Being as clear and detailed as possible, explain why $\exists x\, P(x) \wedge \exists x\, Q(x)$ does not imply $\exists x\, [P(x) \wedge Q(x)]$. \pspace
 
-\sol 
+\sol Suppose that $\exists x\, P(x) \wedge \exists x\, Q(x)$ is true. This implies that both $\exists x\, P(x)$ and $\exists x\, Q(x)$ are both true. That is, there is an $x$ such that $P(x)$ is true and there is an $x$ such that $Q(x)$ is true. But observe that nothing about this statement says that the $x$ such that $P(x)$ is true and the $x$ such that $Q(x)$ is true are is an $x$ which makes \textit{both} $P(x)$ and $Q(x)$ true at the same time. There may or may not be such $x$. So generally, $\exists x\, P(x) \wedge \exists x\, Q(x)$ does not imply $\exists x\, [P(x) \wedge Q(x)]$. For example, let $P(x)$ be the predicate $P(x): x > 0$ and let $Q(x)$ be the predicate $Q(x): x < 0$. Certainly, there exist $x$ such that $P(x)$ is true, e.g. $x= 1$, $15^{10}$, $\frac{19}{3}$, $\pi$, etc. There exist also $x$ such that $Q(x)$ is true, e.g. $x= -5$, $-\frac{1}{3}$, $-\sqrt{2}$, etc. However, there is no real-valued $x$ such that $P(x)$ and $Q(x)$ are \textit{both} true. Otherwise, there would be an $x$ which is both positive and negative---which is obviously impossible. \pspace
+
+\noindent {\itshape Remark.} The quantified open sentence $\exists x\, [P(x) \wedge Q(x)]$ being true \textit{does} imply that the quantified statement $\exists x\, P(x) \wedge \exists x\, Q(x)$ is true. If $\exists x\, [P(x) \wedge Q(x)]$ is true, then there is an $x$ such that $P(x) \wedge Q(x)$ is true. But $P(x) \wedge Q(x)$ is true if and only if $P(x)$ is true and $Q(x)$ is true. But then $\exists x\, P(x)$ is true and $\exists x\, Q(x)$ is true. Then there is an $x$ such that $\exists x\, P(x) \wedge \exists x\, Q(x)$ is true. 
 
 
 
@@ -92,25 +98,18 @@ Write the open sentences below as complete English sentences as `simply' as poss
 	\item Write the contrapositive, converse, and negation of the open sentence in (a) as complete English sentences. 
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
+\item The quantified predicate statement $\forall x \big( R(x) \to S(x) \big)$ can be `translated' as, ``All rectangles are squares.'' \pspace
+
+\item The contrapositive of $\forall x \big( R(x) \to S(x) \big)$ is $\forall x \big( \neg S(x) \to \neg R(x) \big)$. The quantified predicate statement $\forall x \big( \neg S(x) \to \neg R(x) \big)$ can be `translated' as, ``All non-squares are non-rectangles.'' Alternatively, we could say, ``If an object is not a square, it is not a rectangle.'' \pspace
+
+The converse of $\forall x \big( R(x) \to S(x) \big)$ is $\forall x \big( S(x) \to R(x) \big)$. The quantified predicate statement $\forall x \big( S(x) \to R(x) \big)$ can be `translated' as, ``All squares are rectangles.'' \pspace
+
+The negation of $\forall x \big( R(x) \to S(x) \big)$ is $\neg \bigg( \forall x \big( R(x) \to S(x) \big) \bigg) \equiv \exists x \big( R(x) \wedge \neg S(x) \big)$. The quantified predicate statement $\exists x \big( R(x) \wedge \neg S(x) \big)$ can be `translated' as, ``There is a rectangle that is not a square.'' \pspace
+
+\noindent {\itshape Remark}. Note that the negation of $\forall x \big( R(x) \to S(x) \big)$ is not the same thing as its negative, which is $\forall x \big( \neg R(x) \to \neg S(x) \big)$. In this case, the negative could be `translated' as, ``All non-rectangles are non-squares.'' Alternatively, we could say, ``If an object is not a rectangle, then it is not a square.''
 \end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \end{document}

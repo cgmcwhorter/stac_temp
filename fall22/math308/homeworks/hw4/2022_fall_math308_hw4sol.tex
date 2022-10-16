@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -17,16 +17,19 @@
 	\begin{enumerate}[(a)]
 	\item There are choices of $x$ for which $P(x)$ is true and choices of $x$ for which $P(x)$ is false.
 	\item Once one quantifies $P(x)$ using $\forall x$ or $\exists x$, the resulting statement is always true or always false---but not both.
-	\item If $\exists! P(x)$ is true, then $\exists P(x)$ is true. 
+	\item If $\exists!x\, P(x)$ is true, then $\exists x\, P(x)$ is true. 
 	\item The converse of (c) is also true.
 	\end{enumerate} \pspace
 
 \sol
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item The statement is false. Recall that a predicate is a `statement' that depends on finitely many variables such that when the variables are substituted, the resulting statement is a proposition, i.e. has a well-defined truth value of true or false. Assuming that $P(x)$ is a predicate, we then know that for any given $x$, $P(x)$ is either true or false. Because we required our domains be nonempty, there must be a value $x$ for which $P(x)$ is true or false. However, there need not be an $x$ where $P(x)$ is true and where $P(x)$ is false. For instance, if $P(x): x^2 < 0$, then for all $x \in \mathbb{R}$, $P(x)$ is false. Alternatively, if $P(x): x^2 \geq 0$, then for all $x \in \mathbb{R}$, $P(x)$ is true. So the truth set and false set for $P(x)$ need not both be nonempty, though this can be the case. For example, $P(x): 1 - x^2 \geq 0$ is true for $-1 \leq x \leq 1$ but false for $x \in (-\infty, -1) \cup (1, \infty)$. \pspace
+
+\item The statement is true. From the discussion in (a), we know that at least one of the truth set or the false set of $P(x)$ is nonempty. Once one quantifies a predicate with $\exists$ or $\forall$, the resulting statement is either true or false. For instance, $\forall x\, P(x)$ is true if and only if the truth set is nonempty but is precisely $\mathcal{U}$ and is false otherwise. We know $\exists x\, P(x)$ is true if and only if the truth set of $P(x)$ is nonempty. Finally, we know that the statement cannot be \textit{both} true and false. \pspace
+
+\item The statement is true. For $\exists x\, P(x)$ to be true, there need only be at least one $x$ for which $P(x)$ is true. If $\exists! x\, P(x)$ is true, there is one and only one $x$ such that $P(x)$ is true. But then there is still at least one such $x$ so that $\exists x\, P(x)$ is true. \pspace
+
+\item This statement is false. For $\exists x\, P(x)$ to be true, there need only be at least one $x$ (but may be more) for which $P(x)$ is true. For $\exists! x\, P(x)$ to be true, there is one and only one $x$ such that $P(x)$ is true. There then can be many values of $x$ for such $P(x)$ is true, so that $\exists x\, P(x)$ is true, but then $\exists! x\, P(x)$ is false. As a counterexample to the statement, consider $P(x): x > 0$. Because $x= 1 > 0$, we know that $\exists x\, P(x)$ is true. However, because $x= 2 > 0$ also gives us $P(x) \equiv T_0$, we know that $\exists! x\, P(x)$ is false. 
 \end{enumerate}
 
 
@@ -37,19 +40,24 @@
 
 % Problem 2
 \problem{10} Let the universe for $x$ be the set of real numbers. Let $P(x)$ be the predicate $P(x) \colon 0 < x^2 \leq 50$ and $Q(x)$ be the predicate $Q(x) \colon x^2= 50$.
-	\begin{enumerate}
+	\begin{enumerate}[(a)]
 	\item Find at least two values for which $P(x)$ is true and two values for which $P(x)$ is false. Do the same for $Q(x)$. 
 	\item Find the truth set for $P(x)$, and also for $Q(x)$.
 	\item Is it true that there is a unique $x$ in the domain such that $P(x) \wedge Q(x)$ is true? Explain.
 	\item How would your answer in (b) change if the universe were instead the set of integers? Explain. 
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item We know that $P(-2): 0 < 4 \leq 50$, $P(1): 0 < 1 \leq 50$, $P(\sqrt{2}): 0 < 2 \leq 50$, $P(\pi): 0 < \pi^2 \leq 50$, $P(5.56): 0 < 30.9136 \leq 50$, and $P(7): 0 < 49 \leq 50$ are all true, while $P(0): 0 < 0 \leq 50$, $P(\sqrt{51}): 0 < 51 \leq 50$, and $P(10): 0 < 100 \leq 50$ are all false. For $Q(x)$, we know that $Q(-\sqrt{50}): 50= 50$ and $Q(\sqrt{50}): 50= 50$ are true, while $Q(0): 0 = 50$, $Q(-1): 1= 50$, $Q(20): 400= 50$, and $Q(e): e^2= 50$ are all false. \pspace
+
+\item We know $P(x)$ is either true or false. It suffices to find when $P(x)$ is true. We know $P(x)$ is true when $0 < x^2 \leq 50$. We know that $x^2 > 0$ so long as $x \neq 0$ because $x^2 \geq 0$ for all $x \in \mathbb{R}$ and that $x^2= 0$ if and only if $x= 0$. Now if we have $x^2 \leq 50$, then we know that $\sqrt{x^2} \leq \sqrt{50}$. Because $\sqrt{x}= |x|$, this implies that $|x| \leq \sqrt{50}$. But then $-\sqrt{50} \leq x \leq \sqrt{50}$, i.e. $x \in [-\sqrt{50}, \sqrt{50}]$. Combining this with the fact that $x \neq 0$, we know the truth set is $x \in [-\sqrt{50}, \sqrt{50}]$ with $x \neq 0$. Therefore, $P(x)$ is false whenever $x \in (-\infty, -\sqrt{50})$ or $x= 0$ or $x \in (\sqrt{50}, \infty)$. \pspace
+
+We know that $Q(x)$ is either true or false. For $Q(x)$ to be true, we need $x^2= 50$. But then $x^2 - 50= 0$. This implies that $(x - \sqrt{50})(x + \sqrt{50})= 0$ so that $x= -\sqrt{50}$, $x= \sqrt{50}$. One can confirm that $Q(-\sqrt{50})$ and $Q(\sqrt{50})$ are true. But then the truth set for $Q(x)$ is $\{ -\sqrt{50}, \sqrt{50} \}$, which implies the false set for $Q(x)$ is $x \in (-\infty, -\sqrt{50})$ or $x \in (-\sqrt{50}, \sqrt{50})$ or $x \in (\sqrt{50}, \sqrt{50})$. \pspace
+
+\item This is asking whether $\exists! x\, \big( P(x) \wedge Q(x) \big)$ is true. Because $P(x) \wedge Q(x)$ is true if and only if $P(x)$ and $Q(x)$ are both true, for $\exists! x\, \big( P(x) \wedge Q(x) \big)$ to be true, there would only be a single $x$ that is in both the truth set of $P(x)$ and $Q(x)$. But notice from (b) both $P(x)$ and $Q(x)$ are true when $x= -\sqrt{50}$ or $x= \sqrt{50}$. Therefore, $\exists! x\, \big( P(x) \wedge Q(x) \big)$ is false. \pspace
+
+\item If the universe were the integer, only integers would be `allowed.' We would then have to restrict the truth sets of $P(x)$ to $Q(x)$ to the integer values (if any) they contained. Taking only the integer values in the truth set of $P(x)$, we know the truth set of $P(x)$ when the universe is the integers is $\{ -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7 \}$ and $P(x)$ is false for all integers not in this set. Taking only the integer values in the truth set of $Q(x)$, we see that the truth set for $Q(x)$ when the universe is the integers is $\varnothing$, meaning $Q(x)$ is always false.
 \end{enumerate}
 
 
@@ -61,7 +69,17 @@
 % Problem 3
 \problem{10} Students in their first algebra course may believe that the following rule is true for real numbers: $\sqrt{x + y}= \sqrt{x} + \sqrt{y}$. Write this `rule' as a quantified open statement in English, being as clear and specific as possible. Then prove or disprove the resulting statement. \pspace
 
-\sol 
+\sol Let $P(x, y)$ be the predicate given by $P(x, y): \sqrt{x + y}= \sqrt{x} + \sqrt{y}$. The `rule' that $\sqrt{x + y}= \sqrt{x} + \sqrt{y}$ can be stated more precisely by saying, ``For all real numbers $x, y$, $\sqrt{x + y}= \sqrt{x} + \sqrt{y}$.'' Written as a quantified statement, this is $\forall x\, \forall y\, P(x, y)$. Certainly, this `rule', i.e. quantified statement is false. As a counterexample, take $x= 1$ and $y= 1$, then we have\dots
+	\[
+	\begin{aligned}
+	\sqrt{x + y}&= \sqrt{x} + \sqrt{y} \\[0.3cm]
+	\sqrt{1 + 1}&\stackrel{?}{=} \sqrt{1} + \sqrt{1} \\[0.3cm]
+	\sqrt{2}&\stackrel{?}{=} 2 \\[0.3cm]
+	1&\stackrel{?}{=} \dfrac{2}{\sqrt{2}} \\[0.3cm]
+	1&\neq \sqrt{2}
+	\end{aligned}
+	\]
+Therefore, the statement $\forall x\, \forall y\, P(x, y)$ is false. Note that there are values where $P(x, y)$ is true. For instance, if either $x= 0$ and $y= 1$ or $x= 1$ and $y= 0$, then we have (up to rearrangement) $\sqrt{1 + 0}= \sqrt{1} + \sqrt{0}$, which is true. Generally, $P(x, y)$ also works for any combination of $x, y$ where one of $x, y$ is zero and the other is a perfect square. However, $\forall x\, \forall y\, P(x, y)$ is still \textit{false} because $P(x, y)$ is not true for \textit{all} $x, y$. 
 
 
 
@@ -78,12 +96,35 @@
 	\item All the values in the array are distinct. 
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item The first entry, $A[1]$ is nonnegative if $A[1] \geq 0$. Similarly, the second entry, $A[2]$, is nonnegative if $A[2] \geq 0$. But then every entry of $A$ is nonnegative if $A[k] \geq 0$ for all $k$, i.e. $k= 1, 2, \ldots, 20$. We can write this as\dots
+	\[
+	\forall k\, (A[k] \geq 0)
+	\] \pspace
+
+\item If the first value of the array, $A[1]$, is smallest, then we know that it is smaller than the second entry, i.e. $A[1] \leq A[2]$. We know also that $A[1]$ must be smaller than the third entry, i.e. $A[1] \leq A[3]$. Generally, we need this true for any entry, i.e. $A[1] \leq A[k]$ for all $k$. We can write this as\dots
+	\[
+	\forall k\, (A[1] \leq A[k])
+	\] \pspace
+
+\item If the array is sorted in ascending order, each subsequent element is larger than the previous. For instance, the second element is at least as large as the previous, i.e. $A[1] \leq A[2]$, and the third is at least as large as the second, i.e. $A[2] \leq A[3]$, etc. Then we want $A[k] \leq A[k + 1]$ for all $k$. We can write this as\dots
+	\[
+	\forall k\, (A[k] \leq A
+	\]
+Note that if the order is sorted in ascending order, then we also know that any `previous' element is at most the size of `later' elements, i.e. if $j < k$, then because $A[j]$ occurs `before' $A[k]$, we must have $A[j] \leq A[k]$. Then another way of expressing the condition in (c) is\dots
+	\[
+	\forall j\, \forall k\, \big( j \leq k \to A[j] \leq A[k] \big)
+	\] \pspace
+
+\item We know that $A[1]$ is distinct from $A[2]$ if $A[1] \neq A[2]$. We know also that $A[1]$ is distinct from $A[15]$ if $A[1] \neq A[15]$. Finally, we see that $A[14]$ is distinct from $A[6]$ if $A[14] \neq A[6]$. Then generally, we know $A[j]$ is distinct from $A[k]$ if $A[j] \neq A[k]$ (obviously, $j \neq k$ or otherwise they would be the same element of the array). We can write this as\dots
+	\[
+	\forall j\, \forall k\, \big( j \neq k \to A[j] \neq A[k] \big)
+	\]
+Note that one can do this more `algorithmically' as follows:
+	\[
+	\forall j\, \forall k\, \big( j < k \to A[j] \neq A[k] \big)
+	\]
 \end{enumerate}
 
 
@@ -97,16 +138,46 @@
 	\begin{enumerate}[(a)]
 	\item $\forall x \big( P(x) \to \neg Q(x) \big)$
 	\item $\exists x \big( P(x) \Longleftrightarrow Q(x) \wedge R(x) \big)$
-	\item $\forall x \exists y \big( P(x, y) \vee Q(x, y) \big)$
-	\item $\forall x \big( 1 < x < 3 \to P(x) \big)$
+	\item $\forall x\, \exists y\, \big( P(x, y) \vee Q(x, y) \big)$
+	\item $\forall x \big( P(x) \to 1 < x < 3 \big)$
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item We have\dots
+	\[
+	\begin{aligned}
+	\neg \left( \forall x \big( P(x) \to \neg Q(x) \big) \right)&\equiv \exists x\, \neg \big( P(x) \to \neg Q(x) \big) \\[0.3cm]
+	&\equiv \exists x\, \left( P(x) \wedge \neg \big(\neg Q(x) \big) \right) \\[0.3cm]
+	&\equiv \exists x\, \big( P(x) \wedge Q(x) \big)
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\neg \left( \exists x \big( P(x) \Longleftrightarrow Q(x) \wedge R(x) \big) \right)&\equiv \forall x\, \neg \big( P(x) \Longleftrightarrow Q(x) \wedge R(x) \big) \\[0.3cm]
+	&\equiv \forall x\, \big( \neg P(x) \Longleftrightarrow Q(x) \wedge R(x) \big)
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\neg \left( \forall x\, \exists y \big( P(x, y) \vee Q(x, y) \big) \right)&\equiv \exists x\, \neg \left( \exists y \big( P(x, y) \vee Q(x, y) \big) \right) \\[0.3cm]
+	&\equiv \exists x\, \forall y\, \neg \big( P(x, y) \vee Q(x, y) \big) \\[0.3cm]
+	&\equiv \exists x\, \forall y\, \big( \neg P(x, y) \wedge \neg Q(x, y) \big)
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\neg \left( \forall x \big( 1 < x < 3 \to P(x) \big) \right)&\equiv \exists x\, \neg \big( 1 < x < 3 \to P(x) \big) \\[0.3cm]
+	&\equiv \exists x\, \big( P(x) \wedge \neg (1 < x < 3) \big) \\[0.3cm]
+	&\equiv \exists x\, \big( P(x) \wedge (x \leq 1 \vee x \geq 3) \big)
+	\end{aligned}
+	\]
 \end{enumerate}
 
 
@@ -123,11 +194,24 @@
 	\item Explain why $\displaystyle \lim_{x \to 0} \dfrac{1}{x}$ does not exist using your response from (b) and considering what happens when $x= 1/n$ and $n \to \infty$. 
 	\end{enumerate} \pspace
 
-\sol
+\sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item We have\dots
+	\[
+	(\forall \epsilon > 0)(\exists \delta > 0) \big( |x - a| < \delta \to |f(x) - L| < \epsilon \big)
+	\] \pspace
+
+\item The definition of $f(x)$ having a limit at $x= a$ is $(\forall \epsilon > 0)(\exists \delta > 0) \big( |x - a| < \delta \to |f(x) - L| < \epsilon \big)$. Then what it means for $f(x)$ to \textit{not} to have a limit is $\neg (\forall \epsilon > 0)(\exists \delta > 0) \big( |x - a| < \delta \to |f(x) - L| < \epsilon \big)$. But this is\dots
+	\[
+	\begin{aligned}
+	\neg (\forall \epsilon > 0)(\exists \delta > 0) \big( |x - a| < \delta \to |f(x) - L| < \epsilon \big)&\equiv (\exists \epsilon > 0) \neg(\exists \delta > 0) \big( |x - a| < \delta \to |f(x) - L| < \epsilon \big) \\[0.3cm]
+	&\equiv (\exists \epsilon > 0)(\forall \delta > 0) \neg\big( |x - a| < \delta \to |f(x) - L| < \epsilon \big) \\[0.3cm] 
+	&\equiv (\exists \epsilon > 0)(\forall \delta > 0) \big( |x - a| < \delta \wedge \neg (|f(x) - L| < \epsilon) \big) \\[0.3cm] 
+	&\equiv (\exists \epsilon > 0)(\forall \delta > 0) \big( |x - a| < \delta \wedge |f(x) - L| \geq \epsilon \big) 
+	\end{aligned}
+	\] \pspace
+
+\item Let $f(x)= \dfrac{1}{x}$. Observe that $f(1/n)= \dfrac{1}{1/n}= n$. Then $|f(x) - L|= |n - L|$, so that if $|n - L| \geq \epsilon$, then $n - L \leq -\epsilon$ or $n - L \geq \epsilon$, i.e. $n \geq L + \epsilon$. Suppose $\epsilon$ were given. If you had any $\delta > 0$, consider the $x= \frac{1}{n}$. If $n$ is sufficiently large, then certainly $|\frac{1}{n}|= |x| = |x - 0|= |x - a|< \delta$. But then because $n$ is large, $f(1/n)= n$ is large. We can always choose $n$ even larger so that we also have $n \geq L + \epsilon$ because $L$ and $\epsilon$ are fixed. But then we know that the given $f(x)$ with $a= 0$ meets the criterion for \textit{not} having a limit. Therefore, $\displaystyle \lim_{x \to 0} \dfrac{1}{x}$ does not exist.
 \end{enumerate}
 
 
