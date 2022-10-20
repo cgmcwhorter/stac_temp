@@ -186,12 +186,12 @@ Compute the sets below. When giving your solution, either enumerate all the elem
 \begin{enumerate}[(a)]
 \item The elements of $B^c$ are the integers that are not in $B$, i.e. not odd. Therefore, the elements of $B^c$ are the even integers. We can give this as a set by\dots
 	\[
-	B^c= \{ n \colon (\exists k \in \mathbb{Z})(n= 2k) \}= \{ 2k \colon k \in \mathbb{Z} \}
+	B^c= \{ n \colon (\exists k \in \mathbb{Z})(n= 2k) \}= \{ 2k \colon k \in \mathbb{Z} \}= A
 	\]
 
 \item The elements of $A \cup B$ are either even or odd integers. But every integer is either even or odd. Therefore, the union of all even and odd integers is the entire collection of integers, i.e. $A \cup B= \mathbb{Z}$. \pspace
 
-\item The elements of $A \cap C$ are the integers that are both even and prime. However, any even number that is not 2 is divisible by 2 and another integer that is not $\pm 1$---which is not a prime integer. Therefore, the only element of $A \cap C$ is 2, i.e. $A \cap C= \{ 2 \}$. \pspace
+\item The elements of $A \cap C$ are the integers that are both even and prime. However, any even number that is not 2 is divisible by 2 and another integer that is not $\pm 1$. But then the given integer is not prime. Therefore, the only element of $A \cap C$ is 2, i.e. $A \cap C= \{ 2 \}$. \pspace
 
 \item The elements in $B \cap C$ are the integer which are odd and prime. This can be given in \textit{many} ways, e.g.
 	\[
@@ -210,9 +210,9 @@ Compute the sets below. When giving your solution, either enumerate all the elem
 	G - D= \{ 2, \; 3, \; 5, \; 6, \; 7, \; 8, \; 10, \; 11, \; 12, \; 13, \; 14, \; 15, \; 17, \; 18, \; 19 \}
 	\] \pspace
 
-\item The elements of $E \Delta F$ are the elements that are only in $E$ or $F$ but not both, i.e. the integers that are either nonnegative or positive but not both. But there are no integers that are both nonnegative and positive. Therefore, we know that $E \Delta F$ are the integers that are nonnegative or positive. But these are just the nonnegative integers, which we can give as a set by\dots
+\item The elements of $E \Delta F$ are the elements that are only in $E= \{ 0, 1, 2, 3, \ldots \}$ or $F= \{ 1, 2, 3, 4, \ldots \}$ but not both, i.e. the integers that are either nonnegative or positive but not both. However, every positive integer is nonnegative so that $E \cap F= \{ 1, 2, 3, \ldots \}$. Therefore, the only element of the set $E \Delta F$ is the only nonpositive, nonnegative integer:
 	\[
-	\{ z \in \mathbb{Z} \colon z \geq 0 \}
+	E \Delta F= \{ 0 \}
 	\] \pspace
 
 \item The elements of $C \cap H$ are the elements that are in both $C$ and $H$, i.e. integers that are both prime and a multiple of 5. The primes are 2, 3, 5, 7, 11, 13, 17, 19, \ldots and the multiples of 5 are $\ldots, -15, -10, -5, 0, 5, 10, 15, \ldots$. But then it is clear that any multiple of 5---other than 5 itself---cannot be prime. Therefore, the only integer that is both prime and a multiple of 5 is 5 itself. Then we know that $C \cap H= \{ 5 \}$. \pspace

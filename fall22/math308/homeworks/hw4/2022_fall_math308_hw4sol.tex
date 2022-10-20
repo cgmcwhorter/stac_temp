@@ -79,7 +79,9 @@ We know that $Q(x)$ is either true or false. For $Q(x)$ to be true, we need $x^2
 	1&\neq \sqrt{2}
 	\end{aligned}
 	\]
-Therefore, the statement $\forall x\, \forall y\, P(x, y)$ is false. Note that there are values where $P(x, y)$ is true. For instance, if either $x= 0$ and $y= 1$ or $x= 1$ and $y= 0$, then we have (up to rearrangement) $\sqrt{1 + 0}= \sqrt{1} + \sqrt{0}$, which is true. Generally, $P(x, y)$ also works for any combination of $x, y$ where one of $x, y$ is zero and the other is a perfect square. However, $\forall x\, \forall y\, P(x, y)$ is still \textit{false} because $P(x, y)$ is not true for \textit{all} $x, y$. 
+Therefore, the statement $\forall x\, \forall y\, P(x, y)$ is false. Note that there are values where $P(x, y)$ is true. For instance, if either $x= 0$ and $y= 1$ or $x= 1$ and $y= 0$, then we have (up to rearrangement) $\sqrt{1 + 0}= \sqrt{1} + \sqrt{0}$, which is true. Generally, $P(x, y)$ also works for any combination of $x, y$ where one of $x, y$ is zero and the other is a perfect square. However, $\forall x\, \forall y\, P(x, y)$ is still \textit{false} because $P(x, y)$ is not true for \textit{all} $x, y$. \vfill
+
+{\itshape \small Note: We should be able to know $\sqrt{2} \neq 1$ without the use of a calculator: we know that $\sqrt{2} \neq 1$ because $\sqrt{2}$ is the nonnegative real number, $r$, such that $r^2= 2$. Because $1 \cdot 1 < 2$ and $\sqrt{2} \cdot \sqrt{2}= 2$, we know that we must have $\sqrt{2} > 1$; hence, $\sqrt{2} \neq 1$.}
 
 
 
@@ -110,7 +112,7 @@ Therefore, the statement $\forall x\, \forall y\, P(x, y)$ is false. Note that t
 
 \item If the array is sorted in ascending order, each subsequent element is larger than the previous. For instance, the second element is at least as large as the previous, i.e. $A[1] \leq A[2]$, and the third is at least as large as the second, i.e. $A[2] \leq A[3]$, etc. Then we want $A[k] \leq A[k + 1]$ for all $k$. We can write this as\dots
 	\[
-	\forall k\, (A[k] \leq A
+	\forall k\, (A[k] \leq A[k+1])
 	\]
 Note that if the order is sorted in ascending order, then we also know that any `previous' element is at most the size of `later' elements, i.e. if $j < k$, then because $A[j]$ occurs `before' $A[k]$, we must have $A[j] \leq A[k]$. Then another way of expressing the condition in (c) is\dots
 	\[
