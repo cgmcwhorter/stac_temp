@@ -53,14 +53,15 @@
 \item For continuously compounded interest, we know that $F= Pe^{rt}$. The total future amount is the value that he would have paid anyway: \$4220. The present value is the value of the loan, \$4000. The time is the same 5~month period, i.e. 5/12~years. But then we have\dots 
 	\[
 	\begin{aligned}
-	F&= Pe^{rt} \\[0.3cm]
-	4220&= 4000 e^{5r/12} \\[0.3cm]
-	1.055&= e^{5r/12} \\[0.5cm]
-	\dfrac{5r}{12}&= \ln(1.055) \\[0.3cm]
-	r&\approx 0.02231
+	F&= Pe^{rt} \\[0.2cm]
+	4220&= 4000 e^{5r/12} \\[0.2cm]
+	1.055&= e^{5r/12} \\[0.2cm]
+	\dfrac{5r}{12}&= \ln(1.055) \\[0.2cm]
+	\dfrac{5r}{12}&= 0.0535408 \\[0.2cm]
+	r&\approx 0.1285
 	\end{aligned}
 	\] \pspace
-Therefore, the maximum interest rate is 2.231\%. 
+Therefore, the maximum interest rate Owen can take is 12.85\%. 
 \end{enumerate}
 }
 
@@ -83,7 +84,7 @@ But then we have\dots
 	\]
 so that we have\dots
 	\[
-	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{P}{a_{\actuarialangle{420}\,0.0294190967}}= \dfrac{12600000}{33.9913515}= 47811.413571 \approx \$47,811.41
+	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{P}{a_{\actuarialangle{420}\,0.0294190967}}= \dfrac{\$12600000}{33.9913515}= \$47811.413571 \approx \$47,811.41
 	\]
 }
 
@@ -106,7 +107,7 @@ Then Loan Wolves offers an effective interest rate of 2.6169\%, whereas Hedge Be
 Using doubling time, we have a doubling time for discrete compounding (DC) and continuous compounding (CC) given by\dots
 	\[
 	\begin{aligned}
-	t_{\text{D, DC}}&= \dfrac{\ln(2)}{k \ln(1 + r/k)}= \dfrac{\ln(2)}{2 \ln(1 + 0.026/2)}= \dfrac{\ln(2)}{2 \ln(1.013)}= \dfrac{0.6931471805599}{0.02583245053}= 26.83242 \text{ yrs} \\[0.3cm]
+	t_{\text{D, DC}}&= \dfrac{\ln(2)}{k \ln(1 + r/k)}= \dfrac{\ln(2)}{2 \ln(1 + 0.026/2)}= \dfrac{\ln(2)}{2 \ln(1.013)}= \dfrac{0.6931471805599}{0.02583245053}= 26.83242 \text{ years} \\[0.3cm]
 	t_{\text{D, CC}}&= \dfrac{\ln(2)}{r}= \dfrac{\ln(2)}{0.0259}= \dfrac{0.6931471805599}{0.0259}= 26.7624394 \text{ years}
 	\end{aligned}
 	\]
@@ -130,25 +131,25 @@ Then Loan Wolves offers an account which doubles your money in 26.83~years, wher
 \begin{enumerate}[(a)]
 \item We have\dots
 	\[
-	\dfrac{305.648}{296.171} \approx 1.031= 1 + 0.031
+	\dfrac{305.648}{296.171} \approx 1.032= 1 + 0.032
 	\] \pspace
-Therefore, the inflation rate was 3.1\%. \pspace
+Therefore, the inflation rate was 3.2\%. \pspace
 
-\item If the inflation rate stays constant from last year to this year to next, the good should cost 3.1\% more next year than it does this year. But then the good will cost\dots
+\item If the inflation rate stays constant from last year to this year to next, the good should cost 3.2\% more next year than it does this year. But then the good will cost\dots
 	\[
-	\$19.99 (1 + 0.031)= \$19.99 (1.031) \approx \$20.61 
+	\$19.99 (1 + 0.032)= \$19.99 (1.032) \approx \$20.63 
 	\] \pspace
 
-\item If the inflation rate stays constant, then each year the cost will increase by 3.1\%. If the price is $P$~dollars now, then next year it will cost $P(1 + 0.031)= P(1.031)$~dollars. Then the following year, the cost will increase by 3.1\% and will then by $(P(1.031))(1 + 0.031)= (P(1.031))(1.031)= P(1.031)^2$. Continuing this way, after $n$ years, the cost will be $P(1.031)^n$. Therefore, the cost will be\dots
+\item If the inflation rate stays constant, then each year the cost will increase by 3.2\%. If the price is $P$~dollars now, then next year it will cost $P(1 + 0.032)= P(1.032)$~dollars. Then the following year, the cost will increase by 3.2\% and will then by $(P(1.032))(1 + 0.032)= (P(1.032))(1.032)= P(1.032)^2$. Continuing this way, after $n$ years, the cost will be $P(1.032)^n$. Therefore, the cost will be\dots
 	\[
-	\$9.99 (1.031)^5= \$9.99 (1.16491) \approx \$11.64
+	\$9.99 (1.032)^5= \$9.99 (1.17057) \approx \$11.69
 	\] \pspace
 
 \item If the cost is \$9.99 now and will be \$11.64 in 5~years, then we have\dots
 	\[
-	\dfrac{\$11.64}{\$9.99}= 1.16517= 1 + 0.16517
+	\dfrac{\$11.69}{\$9.99}= 1.17017= 1 + 0.17017
 	\]
-Therefore, we would estimate that the inflation rate is 16.517\%. [Note: From the logic we used in (c), we know that a price $P$ increases to $P(1.031)^5= P(1.16491)= P(1 + 0.16491)$. Therefore, the exact inflation rate would be 16.491\%.]
+Therefore, we would estimate that the inflation rate is $17.017\% \approx 17.0\%$. [Note: From the logic we used in (c), we know that a price $P$ increases to $P(1.031)^5= P(1.17057)= P(1 + 0.17057)$. Therefore, the exact inflation rate would be 17.057\%.]
 \end{enumerate}
 }
 
@@ -173,13 +174,13 @@ Therefore, we would estimate that the inflation rate is 16.517\%. [Note: From th
 \sol The taxable income for this individual is $\$85000 - \$2800= \$82200$. The tax brackets given above are the tax percentages applied to the portion of the income in that bracket. Therefore, the federal tax for this individual is\dots
 	\[
 	\begin{aligned}
-	\text{Federal Tax}&= (\$26250 - \$0)(0.15) + (\$63550 - \$26251)(0.28) + (\$82200 - \$63551)(0.31) \\[0.3cm]
-	&= \$26250(0.15) + \$37299(0.28) + \$18649(0.31) \\[0.3cm]
-	&= \$3937.50 + \$10443.70 + \$5781.19 \\[0.3cm]
-	&= \$20162.40
+	\text{Federal Tax}&= (\$26250 - \$0)(0.15) + (\$63550 - \$26250)(0.28) + (\$82200 - \$63550)(0.31) \\[0.3cm]
+	&= \$26250(0.15) + \$37300(0.28) + \$18650(0.31) \\[0.3cm]
+	&= \$3937.50 + \$10444 + \$5781.50 \\[0.3cm]
+	&= \$20163
 	\end{aligned}
 	\]
-Therefore, the individual pays \$20,162.40 in federal taxes.
+Therefore, the individual pays \$20,163.00 in federal taxes.
 }
 
 
@@ -222,13 +223,15 @@ If he puts \$53,000 down (and hence has a loan value of $\$265000 - \$53000= \$2
 	\[
 	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{\$212000}{a_{\actuarialangle{360}\,0.005583333}}= \dfrac{\$212000}{154.9719772} \approx \$1367.99
 	\]
-But then he pays $360 \cdot \$1367.99= \$492,476.40$ in total for the condo. Now suppose that he puts \$60,000 down (and hence has a loan of $\$265000 - \$60000= \$205000$), then his monthly payments are\dots
+But then he pays $360 \cdot \$1367.99= \$492,476.40$ on the mortgage for a total of $\$53,000 + \$492,476.40= \$545,476.40$ in total for the condo. \pspace
+
+Now suppose that he puts \$60,000 down (and hence has a loan of $\$265,000 - \$60,000= \$205,000$), then his monthly payments are\dots
 	\[
 	R= \dfrac{P}{a_{\actuarialangle{n}\,i}}= \dfrac{\$205000}{a_{\actuarialangle{360}\,0.005583333}}= \dfrac{\$205000}{154.9719772} \approx \$1322.82
 	\]
-But then he pays $360 \cdot \$1322.82= \$476,215.20$ in total for the condo. \pspace
+But then he pays $360 \cdot \$1322.82= \$476,215.20$ on the mortgage for a total of $\$60,000 + \$476,215.20= \$536,215.20$ in total for the condo. \pspace
 
-Therefore, if he puts \$53,000 down instead of \$60,000 down, he will end up paying $\$492,476.40 - \$476,215.20= \$16,261.20 \approx \$16,261$ more on the condo. 
+Therefore, if he puts \$53,000 down instead of \$60,000 down, he will end up paying $\$545,476.40 - \$536,215.20= \$9,261.20 \approx \$9,261$ more on the condo. 
 }
 
 
@@ -244,6 +247,7 @@ Therefore, if he puts \$53,000 down instead of \$60,000 down, he will end up pay
 	t&= \dfrac{\ln(F/P)}{r} \\[0.3cm]
 	&= \dfrac{\ln(\$8200/\$7500)}{0.025} \\[0.3cm]
 	&= \dfrac{\ln(1.0933333)}{0.025} \\[0.3cm]
+	&= \dfrac{0.0892311}{0.025} \\[0.3cm]
 	&= 3.56924 \text{ years}
 	\end{aligned}
 	\]
