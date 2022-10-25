@@ -94,11 +94,75 @@ which gives us\dots
 	\[
 	9.8 \cdot 60 \cdot 60 \cdot 60 \cdot 60/0.3048= 9.8 \cdot 60^4/0.3048 \text{ ft}/\text{hr}^2 \approx 16692913.38 \text{ ft}/\text{hr}^2
 	\]
-So we need multiply by $60^4/0.3048$, not $60^2/0.3048$. The given computation only converts one units of seconds to hours, leaving one unit of seconds unconverted. Therefore, the given answer is really 9.8~m/s$^2$ $\cdot$ $60^2/0.3048 \approx 11811.0236$~ft/(s $\cdot$ hr). 
+So we need multiply by $60^4/0.3048$, not $60^2/0.3048$. The given computation only converts one units of seconds to hours, leaving one unit of seconds unconverted. Therefore, the given answer is really 9.8~m/s$^2$ $\cdot$ $60^2/0.3048 \approx 11811.0236$~ft/(s $\cdot$ hr). \pvspace{1.4cm}
 
 
-%% Quiz 8
-%\quizsol \textit{True/False}: A function is a relation which has one output per input. 
+
+% Quiz 8
+\quizsol \textit{True/False}: A function is a relation which has one output per input. \pspace
+
+\sol The statement is \textit{true}. The definition of a function is as follows: a relation $f(x)$ is a function if for each input $x$, there is only one possible output, $f(x)$. For instance, the relation $f(x)$ shown below is a function because for each possible input, namely $2$, $4$, $6$, there is only one output, namely $f(2)= 8$, $f(4)= 4$, and $f(6)= 4$, respectively. 
+	\[
+	\begin{tikzpicture}
+	\node at (2.5,2) {$f(x)$};
+	% Ellipses
+	\draw[line width=0.03cm] (0,0) circle (1 and 2);
+	\draw[line width=0.03cm] (5,0) circle (1 and 2);
+	
+	% Nodes
+	\draw[fill=black] (0,1) circle (0.07);
+	\draw[fill=black] (0,0) circle (0.07);
+	\draw[fill=black] (0,-1) circle (0.07);
+	
+	\draw[fill=black] (5,1) circle (0.07);
+	\draw[fill=black] (5,0) circle (0.07);
+	\draw[fill=black] (5,-1) circle (0.07);
+	
+	% Arrow
+	\draw[line width=0.04cm,->] (0,1) -- (4.9,-1);
+	\draw[line width=0.04cm,->] (0,0) -- (4.9,0);
+	\draw[line width=0.04cm,->] (0,-1) -- (4.9,0);
+	
+	% Labels
+	\node at (-0.3,1) {$2$};
+	\node at (-0.3,0) {$4$};
+	\node at (-0.3,-1) {$6$};
+	
+	\node at (5.4,1) {$-2$};
+	\node at (5.4,0) {$4$};
+	\node at (5.4,-1) {$8$};
+	\end{tikzpicture}
+	\]
+As another example, $g(x)= \dfrac{x^2 + 4}{x^2 + x + 20}$ is a function because for each possible input, $x$, there is only one possible output---namely, the one obtained by `plugging in' $x$ and following order of operations in $g(x)$. \pvspace{1.4cm}
+
+
+
+% Quiz 9
+\quizsol \textit{True/False}: If $f(x)$ and $g(x)$ are functions, then $(f \circ g)(0)= (g \circ f)(0)$. \pspace
+
+\sol The statement is \textit{false}. Function composition is not like multiplication---it is not commutative. So while $(fg)(0)= (gf)(0)$, it is not necessarily true that $(f \circ g)(0)= (g \circ f)(0)$. For instance, if $f(x)= 1$ and $g(x)= 2$, we have $(f \circ g)(0)= f(g(0))= f(2)= 1$ while $(g \circ f)(0)= g(f(0))= g(1)= 2$. While there can be particular choices of functions $f(x)$ and $g(x)$ such that $(f \circ g)(0)= (g \circ f)(0)$, it is not generally true, i.e. it is not true for all functions $f(x)$ and $g(x)$. \pvspace{1.4cm}
+
+
+
+% Quiz 10
+\quizsol \textit{True/False}: Suppose $f(x)$ is a function with $f(-2)= 10$ and $f(5)= 10$. This data is enough to show that $f^{-1}(x)$ does not exist. \pspace
+
+\sol The statement is \textit{false}. If $f(-2)= 10$, then we know that $f^{-1}(10)= -2$. However, we also know that $f(5)= 10$ implies that $f^{-1}(10)= 5$. But we cannot have $f^{-1}(10)= -2$ and $f^{-1}(10)= 5$ at the same time---$f^{-1}(10)$ can only have one possible output if $f^{-1}(x)$ is a function. Because $f^{-1}(10)$ is not well defined, we know that $f^{-1}(x)$ is not a function, i.e. $f^{-1}(x)$ does not exist. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
 
 
 

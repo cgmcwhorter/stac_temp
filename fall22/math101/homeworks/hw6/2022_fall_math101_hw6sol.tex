@@ -1,0 +1,187 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 10/12}{Good judgement comes from experience, and a lot of that comes from bad judgement.}{Will Rogers}
+
+% Problem 1
+\problem{10} Determine if the relations $f(x)$ and $g(x)$ shown below are functions. Explain why or why not. 
+	\[
+	\begin{tikzpicture}
+	\node at (2.5,2) {$f(x)$};
+	% Ellipses
+	\draw[line width=0.03cm] (0,0) circle (1 and 2);
+	\draw[line width=0.03cm] (5,0) circle (1 and 2);
+	
+	% Nodes
+	\draw[fill=black] (0,1) circle (0.07);
+	\draw[fill=black] (0,0) circle (0.07);
+	\draw[fill=black] (0,-1) circle (0.07);
+	
+	\draw[fill=black] (5,1) circle (0.07);
+	\draw[fill=black] (5,0) circle (0.07);
+	\draw[fill=black] (5,-1) circle (0.07);
+	
+	% Arrow
+	\draw[line width=0.04cm,->] (0,1) -- (4.9,-1);
+	\draw[line width=0.04cm,->] (0,0) -- (4.9,0);
+	\draw[line width=0.04cm,->] (0,-1) -- (4.9,1);
+	\draw[line width=0.04cm,->] (0,-1) -- (4.9,-1);
+	
+	% Labels
+	\node at (-0.3,1) {$2$};
+	\node at (-0.3,0) {$4$};
+	\node at (-0.3,-1) {$6$};
+	
+	\node at (5.4,1) {$-2$};
+	\node at (5.4,0) {$4$};
+	\node at (5.4,-1) {$8$};
+	
+	\tikzset{shift={(8,0)}}
+	%
+	\node at (2.5,2) {$g(x)$};
+	% Ellipses
+	\draw[line width=0.03cm] (0,0) circle (1 and 2);
+	\draw[line width=0.03cm] (5,0) circle (1 and 2);
+	
+	% Nodes
+	\draw[fill=black] (0,1) circle (0.07);
+	\draw[fill=black] (0,0) circle (0.07);
+	\draw[fill=black] (0,-1) circle (0.07);
+	
+	\draw[fill=black] (5,1) circle (0.07);
+	\draw[fill=black] (5,0) circle (0.07);
+	\draw[fill=black] (5,-1) circle (0.07);
+	
+	% Arrow
+	\draw[line width=0.04cm,->] (0,1) -- (4.9,-1);
+	\draw[line width=0.04cm,->] (0,0) -- (4.9,1);
+	\draw[line width=0.04cm,->] (0,-1) -- (4.9,-1);
+	
+	% Labels
+	\node at (-0.3,1) {$1$};
+	\node at (-0.3,0) {$3$};
+	\node at (-0.3,-1) {$5$};
+	
+	\node at (5.4,1) {$-1$};
+	\node at (5.4,0) {$-3$};
+	\node at (5.4,-1) {$-5$};
+	\end{tikzpicture}
+	\] \pspace
+
+\sol We know that the relation $f(x)$ is \textit{not} a function. While we know that $f(2)= 8$ and $f(4)= 4$, $f(6)$ has two possible outputs; that is, $f(6)$ is not well defined because $f(6) \in \{ -2, 8 \}$. \pspace
+
+On the other hand, $g(x)$ is a function because for each possible input, there is only one possible output. In fact, we know that $f(1)= -5$, $f(3)= -1$, and $f(5)= -5$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose $f(x)$ is the function given below.
+	\[
+	\begin{tikzpicture}
+	\node at (2.5,2) {$f(x)$};
+	% Ellipses
+	\draw[line width=0.03cm] (0,0) circle (1 and 2);
+	\draw[line width=0.03cm] (5,0) circle (1 and 2);
+	
+	% Nodes
+	\draw[fill=black] (0,1) circle (0.07);
+	\draw[fill=black] (0,0) circle (0.07);
+	\draw[fill=black] (0,-1) circle (0.07);
+	
+	\draw[fill=black] (5,1) circle (0.07);
+	\draw[fill=black] (5,0) circle (0.07);
+	\draw[fill=black] (5,-1) circle (0.07);
+	
+	% Arrow
+	\draw[line width=0.04cm,->] (0,1) -- (4.9,1);
+	\draw[line width=0.04cm,->] (0,0) -- (4.9,1);
+	\draw[line width=0.04cm,->] (0,-1) -- (4.9,0);
+	
+	% Labels
+	\node at (-0.4,1) {$\frac{1}{2}$};
+	\node at (-0.3,0) {$0$};
+	\node at (-0.3,-1) {$15$};
+	
+	\node at (5.4,1) {$0$};
+	\node at (5.4,0) {$1$};
+	\node at (5.4,-1) {$2$};
+	\end{tikzpicture}
+	\]
+
+\begin{enumerate}[(a)]
+\item Explain why $f(x)$ is a function.
+\item Find the value of $f(x)$ on each value in its domain. 
+\item What is the domain of $f(x)$?
+\item What is the codomain of $f(x)$?
+\item What is the range of $f(x)$?
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item For each of the three possible outputs, namely $\frac{1}{2}$, $0$, and $15$, there is a single possible output. Therefore, $f(x)$ is a function. In fact, we know that $f(\frac{1}{2})= 0$, $f(0)= 0$, and $f(15)= 1$. \pspace
+
+\item We know that\dots
+	\[
+	\begin{aligned}
+	f\left( \frac{1}{2} \right)&= 0 \\[0.3cm]
+	f(0)&= 0 \\[0.3cm]
+	f(15)&= 1
+	\end{aligned}
+	\] \pspace
+
+\item The domain of $f(x)$ is the set of possible inputs. Therefore, the domain is $\{ \frac{1}{2}, 0, 15 \}$. \pspace
+
+\item The codomain of $f(x)$ is the set of \textit{possible} outputs. Therefore, the codomain is $\{ 0, 1, 2 \}$. \pspace
+
+\item The range of $f(x)$ is the set of \textit{actual} outputs. Therefore, the range is $\{ 0, 1 \}$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Explain why $f(x, y)= 2x^2 - y^3 + 6$ is a function. Then find $f(0, 0)$, $f(3, -1)$, $f(-3, 2)$, and $f(1, 1)$. \pspace
+
+\sol We know that $f(x, y)$ is a function because for each input, i.e. each $(x, y)$, there is only one possible output---namely, the one obtained by `plugging in' $x$ and $y$ into $f(x, y)$ and following order of operations. We know that\dots
+	\[
+	\begin{aligned}
+	f(0, 0)&= 2(0^2) - 0^3 + 6= 2(0) - 0 + 6= 0 - 0 + 6= 6 \\[0.3cm]
+	f(3, -1)&= 2(3^2) - (-1)^3 + 6= 2(9) - (-1) + 6= 18 + 1 + 6= 25 \\[0.3cm]
+	f(-3, 2)&= 2(-3)^2 - 2^3 + 6= 2(9) - 8 + 6= 18 - 8 + 6= 16 \\[0.3cm]
+	f(1, 1)&= 2(1^2) - 1^3 + 6= 2(1) - 1 + 6= 2 - 1 + 6= 7
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Give an example of a `real world' relationship between two variables which does represent a functional relationship. Also, give an example of a `real world' relationship between two variables which \textit{does not} represent a functional relationship. Be sure to fully explain your responses. \pspace
+
+\vfill
+\begin{center}
+{\itshape Answers will vary.}
+\end{center}
+\vfill
+
+
+\end{document}
