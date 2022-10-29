@@ -2,7 +2,7 @@
 \usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
 \usepackage{../style/homework}
 \usepackage{../style/commands}
-\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{quotetype}{false} % True: Side; False: Under
 \setbool{hideans}{true} % Student: True; Instructor: False
 
 % -------------------
@@ -10,10 +10,66 @@
 % -------------------
 \begin{document}
 
-\homework{11: Due 11/03}{
+\homework{11: Due 11/04}{There are ﬁve elementary arithmetical operations: addition, subtraction, multiplication, division, and modular forms.}{Martin Eichler}
 
 % Problem 1
-\problem{10} 
+\problem{10} Showing all your steps, compute the following:
+	\begin{2enumerate}
+	\item $(15 + 14) \mod 6$
+	\item $(8 - 17) \mod 5$
+	\item $-(1 + 8) \mod 3$
+	\item $(20 - 11) \mod 8$
+	\item $(9 + 7) \mod 4$
+	\item $14(5) \mod 6$
+	\item $2(3) \mod 7$
+	\item $-7(4) \mod 9$
+	\item $(-3)^3 \mod 4$
+	\item $6^2 \mod 5$
+	\end{2enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider arithmetic modulo 4. 
+	\begin{enumerate}[(a)]
+	\item List two positive elements and two negative elements of $[0]$ and $[3]$. 
+	\item Choose elements $x \in [1]$ and $y \in [3]$ with $x, y > 10$ and show that $[x] + [y]= [0]$; that is, use the division algorithm to write $x= 4m + r_x$ and $y= 4n + r_y$ and show $[x] + [y]= [r_x] + [r_y]= [0]$.  
+	\item Choose elements $x, y \in [2]$ with $x, y > 10$ and show that $[x] \cdot [y]= [0]$; that is, use the division algorithm to write $x= 4m + r_x$ and $y= 4n + r_y$ and show $[x] \cdot [y]= [r_x] \cdot [r_y]= [0]$. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, complete the following: 
+	\begin{enumerate}[(a)]
+	\item Compute $\phi(7)$, $\phi(11)$, and $\phi(131)$.
+	\item Compute $\phi(8)$, $\phi(9)$, and $\phi(49)$. 
+	\item Compute $\phi(360)$.
+	\item How many integers $0, 1, 2, \ldots, 359$ are invertible modulo 360? Explain. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Being sure to fully justify your responses, answer the following:
+	\begin{enumerate}[(a)]
+	\item Is 7 invertible modulo 15? Explain. 
+	\item Prove your claim in (a) by finding an inverse for 7 modulo 15 or showing that there is no inverse of 7 modulo 15. 
+	\item Is 2 invertible modulo 6? Explain.
+	\item Prove your claim in (c) by finding an inverse for 2 modulo 6 or showing that there is no inverse of 2 modulo 6.
+	\end{enumerate}
 
 
 \end{document}
