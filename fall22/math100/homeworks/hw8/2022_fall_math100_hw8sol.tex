@@ -1,0 +1,153 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{8: Due 10/17}{Every single line means something.}{Jean-Michel Basquiat}
+
+% Problem 1
+\problem{10} Find the equation of the line with slope $-\frac{2}{3}$ that passes through the point $(-9 ,10)$. \pspace
+
+\sol Because this is not a vertical line, we know that the line has the form $y= mx + b$ for some $m$ and $b$, where $m$ is the slope and $b$ is the $y$-intercept. We know that the slope, $m$, is $m= -\frac{2}{3}$. Therefore, we know that $y= -\frac{2}{3}\,x + b$. However, the line contains the point $(-9, 10)$, i.e. when $x= -9$, we know that $y= 10$. But then we have\dots
+	\[
+	\begin{aligned}
+	y&= -\frac{2}{3}\, x + b \\[0.3cm]
+	10&= -\frac{2}{3} \cdot -9 + b \\[0.3cm]
+	10&= 6 + b \\[0.3cm]
+	b&= 4
+	\end{aligned}
+	\]
+Therefore, we know that\dots
+	\[
+	y= -\frac{2}{3}\, x + 4
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Find the equation of the line passing through the points $(-5, 8)$ and $(7, 8)$. \pspace
+
+\sol Clearly, this is not a vertical line. Therefore, we know that the line has the form $y= mx + b$ for some $m$ and $b$, where $m$ is the slope and $b$ is the $y$-intercept. We know that\dots
+	\[
+	m= \dfrac{\Delta y}{\Delta x}= \dfrac{8 - 8}{-5 - 7}= \dfrac{0}{-12}= 0
+	\]
+Then we know that $y= 0 \cdot x + b= b$. But because $(-5, 8)$ is on the line, we know that when $x= -5$, we have $y= 8$. Using this in $y= b$, we have $8= b$. Therefore, we have\dots
+	\[
+	y= 8
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Let $\ell(x)= 18.2 - 13.7x$. Find the slope and $y$-intercept of this function. \pspace
+
+\sol If $f(x)$ is a linear function, it has the form $f(x)= mx + b$, where $m$ is the slope and the $y$-intercept is $b$. Writing $\ell(x)$ in this form, we have $\ell(x)= -13.7x + 18.2$. Therefore, the slope is $m= -13.7$ and the $y$-intercept is $b= 18.2$ (or more generally, $(0, 18.2)$). 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Let $\ell(x)= 57.6x - 1654.8$. Explain why $\ell(x)$ is a linear function. Find the $y$-intercept and $x$-intercept of this function. \pspace
+
+\sol We know any function of the form $f(x)= mx + b$ is a linear function. Writing $\ell(x)$ in this form, we have $\ell(x)= 57.6x + (-1654.8)$. Therefore, $\ell(x)$ has the form $f(x)= mx + b$ with $m= 57.6$ and $b= -1654.8$. \pspace
+
+We now find the $y$-intercept. We know the $y$-intercept occurs when the input, $x$, is 0. But we have\dots
+	\[
+	\ell(0)= 57.6 \cdot 0 - 1654.8= -1654.8
+	\]
+Therefore, the $y$-intercept is $-1654.8$ (or more generally, $(0, -1654.8)$). \pspace
+
+We now find the $x$-intercept. We know the $x$-intercept occurs when the output, $\ell(x)$, is 0. But then we have\dots
+	\[
+	\begin{aligned}
+	\ell(x)&= 57.6x - 1654.8 \\[0.3cm]
+	0&= 57.6x - 1654.8 \\[0.3cm]
+	57.6x&= 1654.8 \\[0.3cm]
+	x&\approx 28.7292
+	\end{aligned}
+	\]
+Therefore, the $x$-intercept is $28.7292$ (or more generally, $(28.7292, 0)$). 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Suppose you work an hourly job where you are paid \$17.50 an hour. You have already made \$288.75 this week. Let $W$ represent the wages you have been paid by working an addition $h$ hours this week.
+	\begin{enumerate}[(a)]
+	\item Explain why $W$ is a linear function of $h$. 
+	\item Explain why $W(h)= 17.50h + 288.75$.
+	\item What is the slope and what does it represent?
+	\item What is the $y$-intercept and what does it represent?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The amount of money that you have only changes because you are working. Because you are paid a constant rate of \$17.50/hour, the rate at which your net money changes is constant. But a function with a constant rate of change is a linear function. Therefore, $W$ is a linear function of $h$. \pspace
+
+\item We know that the rate of change of $W$ is \$17.50/hour. So after working $h$ hours, you have added $\$17.50h$ to your account. Because you started with \$288.75, the total amount you have after working $h$ hours is then $\$17.50h + 288.75$. Therefore, $W(h)= 17.50h + 288.75$. \pspace
+
+Alternatively, because $W(h)$ is linear, we know that $W(h)= mh + b$ for some $m, b$. We know that the rate of change of $W(h)$ is as a result of your hourly pay. Therefore, $m= 17.50$ so that $W(h)= 17.50h + b$. We know after working zero hours, you have \$288.75. But then we know that $288.75= W(0)= 17.50(0) + b= b$. Therefore, $W(h)= 17.50h + 288.75$. \pspace
+
+\item The slope of a linear function is its rate of change. We know the rate of change of your money is a result of your hourly pay. Therefore, the slope represents your hourly pay. \pspace
+
+\item The $y$-intercept is $W(0)= 17.50(0) + 288.50= 288.50$. This is the amount of money you initially have. Therefore, the $y$-intercept represents the initial \$288.75 you begin with. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Let $M$ represent the total amount of money in your account $d$ days from now. Suppose that right now you have \$15,000 in your account and that you spend \$530 a day.
+	\begin{enumerate}[(a)]
+	\item Find $M(d)$.
+	\item What are the slope and $y$-intercept of $M(d)$? What do they represent?
+	\item Find the $x$-intercept of $M(d)$.
+	\item Interpret your answer in (c). 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because your money only increases/decreases as a result of your spending and you are spending money at a constant rate, we know that $M(d)$ is a linear function. Therefore, we know that $M(d)= md + b$ for some $m, b$. Because you are spending \$530 per day, we know that $m= -530$. Then we know that $M(d)= -530d + b$. We know you initially have \$15,000. But then $15000= M(0)= -530(0) + b= b$. Therefore, $M(d)= -530d + 15000$. \pspace
+
+\item The slope of $M(d)= -530d + 15000$ is $-530$. This is the rate of change of $M$. This represents the amount you spend per day. The $y$-intercept of $M(d)$ is $M(0)= -530(0) + 15000= 15000$. This is the amount of money that you have on day zero, i.e. the amount of money you initially have. \pspace
+
+\item The $x$-intercept is the value(s) where the output is 0, i.e. the values of $d$ such that $M(d)= 0$. But then we have\dots
+	\[
+	\begin{aligned}
+	M(d)&= -530d + 15000 \\[0.3cm]
+	0&= -530d + 15000 \\[0.3cm]
+	530d&= 15000 \\[0.3cm]
+	d&= 28.3019
+	\end{aligned}
+	\]
+Therefore, the $x$-intercept is 28.3019~days, i.e. $(0, 28.3019)$. \pspace
+
+\item The $x$-intercept is when the output is zero, i.e. $M(d)= 0$. But then the amount of money that you have is \$0. Therefore, the $x$-intercept implies that you run out of money after 28.3~days. 
+\end{enumerate}
+
+
+\end{document}

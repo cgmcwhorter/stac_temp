@@ -142,21 +142,116 @@ But then there are two values in the domain of $g \circ f$, namely $a_1, a_2$ su
 
 
 
-% Fix an integer $n > 1$ and let $\{ a_n \}_{n \in \mathbb{N}}$ and $\{ b_n \}_{n \in \mathbb{N}}$ be sequences. Then $\displaystyle \prod_{k=1}^n a_n b_n= \prod_{k=1}^n a_n \cdot \prod_{k=1}^n b_n$ but $\displaystyle \sum_{k=1}^n a_n b_n \neq \sum_{k=1}^n a_n \cdot \sum_{k=1}^n b_n$. 
+% Quiz 11
+\quizsol \textit{True/False}: Fix an integer $n > 1$ and let $\{ a_n \}_{n \in \mathbb{N}}$ and $\{ b_n \}_{n \in \mathbb{N}}$ be sequences. Then $\displaystyle \prod_{k=1}^n a_n b_n= \prod_{k=1}^n a_n \cdot \prod_{k=1}^n b_n$ but $\displaystyle \sum_{k=1}^n a_n b_n \neq \sum_{k=1}^n a_n \cdot \sum_{k=1}^n b_n$. \pspace
 
-% Suppose that $a_{n+2}= 6a_n - a_{n+1}$ with $a_0= 4$ and $a_1= 3$. Then the characteristic polynomial is given by the equation $x^2= 6 - x$, i.e. the characteristic polynomial is $x^2 + x - 6$. Because $x^2 + x - 6= (x + 3)(x - 2)$ has roots $-3, 2$, the general solution is $a_n= c_1(-3)^n + c_2 2^n$. The specific solution is then $a_n= (-3)^n + 3 \cdot 2^n$. 
+\sol The statement is \textit{true}. It is true that $\displaystyle \prod_{k=1}^n a_n b_n= \prod_{k=1}^n a_n \cdot \prod_{k=1}^n b_n$. For instance, if $n=2$, we have\dots
+	\[
+	\prod_{k=1}^2 a_n b_n= a_1 b_1 \cdot a_2 b_2= (a_1 a_2) \cdot (b_1 b_2)= \prod_{k=1}^2 a_n \cdot \prod_{k=1}^2 b_n
+	\]
+We can always rearrange the terms in this way for any $n$. Therefore, the statement is true for products. \pspace
 
-% $6^{2022} \equiv 1 \mmod 5$
+However, even in the case of $n= 2$, the statement is untrue for sums. For example, if $n= 2$ in $\displaystyle \sum_{k=1}^n a_n b_n \neq \sum_{k=1}^n a_n \cdot \sum_{k=1}^n b_n$, then we have\dots
+	\[
+	\begin{aligned}
+	\sum_{k=1}^2 a_n b_n&= a_1b_1 + a_2b_2 \\[0.3cm]
+	\sum_{k=1}^2 a_n \cdot \sum_{k=1}^n b_2&= (a_1 + a_2) \cdot (b_1 + b_2)= a_1b_1 + a_1b_2 + a_2b_1 + a_2 b_2
+	\end{aligned}
+	\]
+While this may be true for some sequences $\{ a_n \}_{n \in \mathbb{N}}$ and $\{ b_n \}_{n \in \mathbb{N}}$, it will not generally be true. The `issues' the distributive property cause for larger $n$ make this even `more untrue.' 
 
-%There is a unique solution to the following system of linear congruences:
-%	\[
-%	\begin{aligned}
-%	2x - 1 &\equiv 5 \text{ mod } 3 \\
-%	x &\equiv 0 \text{ mod } 5 \\
-%	6x &\equiv 5 \text{ mod } 7
-%	\end{aligned}
-%	\]
 
-% The number $1$ is prime. 
+
+
+
+\newpage
+
+
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: Suppose that $a_{n+2}= 6a_n - a_{n+1}$ with $a_0= 4$ and $a_1= 3$. Then the characteristic polynomial is given by the equation $x^2= 6 - x$, i.e. the characteristic polynomial is $x^2 + x - 6$. Because $x^2 + x - 6= (x + 3)(x - 2)$ has roots $-3, 2$, the general solution is $a_n= c_1(-3)^n + c_2 2^n$. The specific solution is then $a_n= (-3)^n + 3 \cdot 2^n$. \pspace
+
+\sol The statement is \textit{true}. Because $a_{n+2}= 6a_n - a_{n+1}$ and the `lowest' term involved is $n$, we give the $n$th term power 0 for $x$. Then we have $x^{0 + 2}= 6 x^0 - x^{0 + 1}$. This is $x^2= 6 - x$. We then have $x^2 + x - 6= 0$. Therefore, the characteristic polynomial for this homogeneous linear recurrence relation is $x^2 + x - 6$. This polynomial has roots $-3$ and 2 because $x^2 + x - 6= 0$ is equivalent to $(x + 3)(x - 2)= 0$, which has solutions $x= -3$ and $x= 2$. Therefore, we know that $a_n= c_1 (-3)^n + c_2 \cdot 2^n$. Now we use the fact that when $n= 0$, we have $a_0= 4$, and when $n= 1$, we have $a_1= 3$. But then we have\dots
+	\[
+	\begin{aligned}
+	4&= a_0= c_1 (-3)^0 + c_2 \cdot 2^0= c_1 + c_2 \\[0.3cm]
+	3&= a_1= c_1 (-3)^1 + c_2 \cdot 2^1= -3c_1 + 2c_2
+	\end{aligned}
+	\]
+This is a linear system of two equations in two unknowns. Solving this system yields $c_1= 1$ and $c_2= 3$. Therefore, we have $a_n= (-3)^n + 3 \cdot 2^n$. \pvspace{1.5cm}
+
+
+
+% Quiz 13
+\quizsol \textit{True/False}: $6^{2022} \equiv 1 \mmod 5$ \pspace
+
+\sol The statement is \textit{true}. Using the division algorithm, we know that $6= 1(5) + 1$. But then we know that $6 \equiv 1 \mmod 5$. But then we have\dots
+	\[
+	6^{2022} \equiv 1^{2022} \equiv 1 \mmod 5
+	\] \pvspace{1.5cm}
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: There is a unique solution to the following system of linear congruences:
+	\[
+	\begin{aligned}
+	2x - 1 &\equiv 2 \mmod 3 \\
+	x &\equiv 0 \mmod 5 \\
+	6x &\equiv 5 \mmod 7
+	\end{aligned}
+	\] 
+
+\sol The statement is \textit{true}. The first congruence is $2x - 1 \equiv 2 \mmod 3$. Adding 1 to both sides, we see that this is equivalent to $2x \equiv 3 \equiv 0 \mmod 3$. Because $\gcd(2, 3)= 1$, we know that $2^{-1}$ exists mod 3. In fact, because $2 \cdot 2 \equiv 4 \equiv 1 \mmod 3$. Therefore, $2^{-1} \equiv 2 \mmod 3$. Therefore, $2x \equiv 0 \mmod 3$ implies $2^{-1} \cdot 2x \equiv 2^{-1} \cdot 0 \mmod 3$. This is $x \equiv 0 \mmod 3$. In the last congruence, because $\gcd(6, 7)= 1$, we know that $6^{-1}$ exists mod 7. In fact, because $6 \cdot 6 \equiv 36 \equiv 1 \mmod 7$, we know that $6^{-1} \equiv 6 \mmod 7$. But then $6x \equiv 5 \mmod 7$ implies $6^{-1} \cdot 6x \equiv 6^{-1} \cdot 5 \mmod 7$. But this is $x \equiv 6 \cdot 5 \equiv 30 \equiv 2 \mmod 7$. The original system of congruences is then equivalent to\dots
+	\[
+	\begin{aligned}
+	x &\equiv 0 \mmod 3 \\
+	x &\equiv 0 \mmod 5 \\
+	x &\equiv 2 \mmod 7
+	\end{aligned}
+	\] 
+This system now has the `proper form' to apply the Chinese Remainder Theorem. Because $\gcd(3, 5, 7)= 1$, we know there exists a unique solution to the system of congruences. In fact, we have solution\dots
+	\[
+	x= \sum a_i N_i M_i= 0 \cdot 2 \cdot 35 + 0 \cdot 1 \cdot 21 + 2 \cdot 1 \cdot 15= 0 + 0 + 30= 30 
+	\]
+The solution is then the congruence class of 30 modulo $3 \cdot 5 \cdot 7= 105$. Therefore, the solution is 30, i.e. $[30]= \{ \ldots, -720, -570, -420, -270, -120, 30, 180, 330, 480, 630, 780, \ldots \}$. \pvspace{1.5cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: The number $1$ is prime. \pspace
+
+\sol The statement is \textit{false}. A prime number is an integer greater than 1 which has no proper divisors. Because 1 is not greater than 1, 1 cannot be prime. Note that 1 is also not composite. To be composite, an integer need have proper divisors. However, the only divisor of 1 is 1. Therefore, 1 also cannot be composite. This shows 1 is neither prime nor composite. \pvspace{1.5cm}
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: Using the division algorithm to divide $-10$ by $3$, we have $-10= 3(3) + 1$. \pspace
+
+\sol The statement is \textit{false}. Recall that given $a, b \in \mathbb{Z}$ with $a \neq 0$, we can write $b= qa + r$ for some $q, r \in \mathbb{Z}$ and $0 \leq r < a$. Clearly, the statement is false because $3(3) + 1= 9 + 1= 10 \neq -10$. The multiple of 3 that is less than or equal to $-10$ is $-12$. Because $-10= -12 + 2$, we have $-10= -4(3) + 2$. Because $-4, 2 \in \mathbb{Z}$ and $0 \leq 2 < 3$, we have expressed $-10$ divided by 3 using the division algorithm. Note that one cannot use $-10= -3(3) - 1$ because it is not the case that $0 \leq -1 < 3$. \pvspace{1.5cm}
+
+
+
+% Quiz 17
+\quizsol \textit{True/False}: The number $2B002B$ in base-10 is 2818091. \pspace 
+
+\sol The statement is \textit{true}. The number 2B002B is in hexadecimal. Converting this to base-10 (and recalling $A= 10$, $B= 11$, $C= 12$, $D= 13$, $E= 14$, and $F= 15$), we have\dots
+	\[
+	2B002B= 2 \cdot 16^5 + 11 \cdot 16^4 + 0 \cdot 16^3 + 0 \cdot 16^2 + 2 \cdot 16^1 + 11 \cdot 16^0= 2097152 + 720896 + 0 + 0 + 32 + 11= 2818091
+	\]
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}

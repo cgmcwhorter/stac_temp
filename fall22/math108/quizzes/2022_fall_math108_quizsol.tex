@@ -96,15 +96,87 @@ The power on the given expression should have been 20---the number of times that
 \sol The statement is \textit{true}. We have a linear model $\widehat{y}= 27.1 - 4.5x$ so that $b_0= 27.1$, i.e. $y$-intercept $27.1$, and $b_1= -4.5$, i.e. slope $-4.5$. Because $b_1 < 0$, the model predicts that $x$ and $y$ are negatively correlated. Interpreting the slope $-4.5= \frac{-4.5}{1}= \frac{\Delta y}{\Delta x}$, we see that for every increase of 1 in $x$, there is a decrease of 4.5 in $y$, i.e. for every additional hour spent at the mall, you lose (spend) \$4.50. \pvspace{1.5cm}
 
 
-% Let $A$ and $B$ be events. Then $P(A \text{ and } B)= P(A) \cdot P(B)$. 
 
-% If $A$ and $B$ are events, then $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$. 
+% Quiz 10
+\quizsol \textit{True/False}: Let $A$ and $B$ be events. Then $P(A \text{ and } B)= P(A) \cdot P(B)$. \pspace
 
-% Suppose you play a game of chance, and call the amount you win or lose per game $X$ and label by $EX$ the expected value of $X$. Then if $EX= \$4.30$, the expected value of $X$, then if you played the game `enough times' and averaged the net total amount you won/lost, you could expect to win approximately \$4.30 per game on average. 
+\sol The statement is \textit{false}. This is generally true only when $A$ and $B$ are independent events. Generally, we have $P(A \text{ and } B)= P(A) \cdot P(B \;|\; A)$ or equivalently $P(A \text{ and } B)= P(B) P(A \;|\; B)$. That is, we find the probability of $B$ occurring and then $A$ occurring given that $B$ occurs, or the probability that $A$ occurs given that $B$ occurs. If $A$ and $B$ are independent, then their occurrence/non-occurrence does not affect the occurrence/non-occurrence of the other, i.e. it does not affect their probability of occurrence. In this case, $P(A \;|\; B)= P(A)$ and $P(B \;|\; A)= B$. But then $P(A \text{ and } B)= P(A) P(B)$. However, if $A$ and $B$ are \textit{not} independent, these probabilities can be different. For instance, imagine taking an exam. Let $A$ be the event that you score at least an 85 and $B$ be the event where you pass an exam. Then $P(A \;|\; B)$ is the probability that you score at least an 85 given that you pass the exam. Who knows what this is? However, we know that $P(B \;| A)$, i.e. the probability that you pass the exam given that you score at least an 85\%, is certainly 1---if you received at least an 85\%, you passed! Observe that these probabilities are not the same. Moreover, knowing that you passed the exam certainly increases the likelihood that you received 85\% or higher. If one wanted $P(A \text{ and } B)$, one cannot then simply multiply $P(A)$ and $P(B)$. \pvspace{1.5cm}
 
-% The normal distribution given by $N(-5.6, 2.2)$ has mean $\mu= -5.6$ and standard deviation $\sigma= 2.2$.
 
-% Suppose Alice and Bob took an exam with scores that were normally distributed. Alice received a score that had a $z$-score of $-3.15$. Bob received a score that had a $z$-score of $1.18$. Because Alice's score had a $z$-score that was larger in absolute value, her score was more `unusual' and she did better on the exam. 
+
+% Quiz 11
+\quizsol \textit{True/False}: If $A$ and $B$ are events, then $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$. \pspace
+
+\sol The statement is \textit{true}. We can always add the probabilities of events $A$ and $B$ to find $P(A \text{ or } B)$; however, we then may overcount events which occurred in both $A$ and $B$. What would this overcount be? The probability of the events that are in both $A$ and $B$ is precisely $P(A \text{ and } B)$. Therefore, we have $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$. If $A$ and $B$ are disjoint, i.e. share no events in common, we know that $P(A \text{ and } B)= 0$, because $A$ and $B$ cannot occur at the same time. But then if $A$ and $B$ are disjoint events, we have $P(A \text{ or } B)= P(A) + P(B)$. \pvspace{1.5cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: Suppose you play a game of chance, and call the amount you win or lose per game $X$ and label by $EX$ the expected value of $X$. Then if $EX= \$4.30$, the expected value of $X$, then if you played the game `enough times' and averaged the net total amount you won/lost, you could expect to win approximately \$4.30 per game on average. \pspace
+
+\sol The statement is \textit{true}. We know that the expected value of a discrete random variable $X$ is\dots
+	\[
+	EX= \sum x P(X= x)
+	\]
+That is, the expected value is the sum of the values times their probability. [One could then say, it is the sum of the values weighted by their probability.] To see why this measures the amount you win/lose on average, suppose you have a game where you either win \$10 or lose \$5. If you wanted to find the average amount you have won/lost after playing the game $n$ times, you have\dots
+	\[
+	\begin{aligned}
+	\text{Average Amount}&= \dfrac{\$10 \cdot \text{Times Won} + (-\$5) \cdot \text{Times Lost}}{n} \\
+	&= \dfrac{\$10 \cdot \text{Times Won}}{n} + \dfrac{-\$5 \cdot \text{Times Lost}}{n} \\
+	&= \$10 \cdot \dfrac{\text{Times Won}}{n} + (-\$5) \cdot \dfrac{\text{Times Lost}}{n} \\
+	&\approx \$10 \cdot \text{Probability Won} + (-\$5) \cdot \text{Probability Lost}
+	\end{aligned}
+	\] 
+The last approximation becomes more and more accurate the more games you play because $\frac{\text{times won}}{n}$ and $\frac{\text{times lost}}{n}$ approach the probability of winning or losing, respectively, as $n$ gets larger. Therefore, if $EX= \$4.30 > 0$, we expect that if we played this game a `large' number of times, the average amount we won per game was \$4.30. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Quiz 13
+\quizsol \textit{True/False}: The normal distribution given by $N(-5.6, 2.2)$ has mean $\mu= -5.6$ and standard deviation $\sigma= 2.2$. \pspace
+
+\sol The statement is \textit{true}. The notation $N(\mu, \sigma)$ denotes a normal distribution with mean $\mu$ and standard deviation $\sigma$. Therefore, $N(-5.6, 2.2)$ denotes a normal distribution with mean $\mu= -5.6$ and standard deviation $\sigma= 2.2$. \pvspace{1.5cm}
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: Suppose Alice and Bob took an exam with scores that were normally distributed. Alice received a score that had a $z$-score of $-3.15$. Bob received a score that had a $z$-score of $1.18$. Because Alice's score had a $z$-score that was larger in absolute value, her score was more `unusual' and she did better on the exam. \pspace
+
+\sol The statement is \textit{false}. We know the larger $|z|$, the more `unusual' the score. This is because the $z$-score measures the number of standard deviations away from the mean a value is. For a normal distribution, the more negative or positive that $z$ is, the further the value must be from the mean. Because $|-3.15|= 3.15 > 1.18= |1.18|$, we know that Alice's score is more `unusual' than Bob's. However, if $z < 0$, the value is below the mean; if $z= 0$, the value is equal to the mean; if $z > 0$, the value is above the mean. Because $z= -3.15 < 0$, Alice received a below average exam score. And because $1.18 > 0$, Bob received an above average exam score. Therefore, Alice did worse than Bob. \pvspace{1.5cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: If you take simple random samples of size 15 from a distribution with mean 130 and standard deviation 25, the resulting distribution of sample means is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pspace
+
+\sol The statement is \textit{false}. If a random variable $X$ has a distribution with mean $\mu$ and (finite) standard deviation $\sigma$, the Central Limit Theorem (CLT) says that the distribution of sample means, $\overline{X}$, of size $n$ has distribution $N(\mu, \sigma/\sqrt{n})$ so long as at least one of the following criterion are met: the underlying distribution is normal, i.e. you are sampling from $N(\mu, \sigma)$, or the sample size is `sufficiently large' (e.g., $n \geq 30$). We were not told that the underlying distribution was normal. Because the sample size is $15 < 30$, the sample size is not sufficiently large enough to meet the criterion of the Central Limit Theorem. Therefore, it is not necessarily the case that the distribution of $\overline{X}$ is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pvspace{1.5cm}
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: Suppose that a support for a particular bill is approximately 34\%, i.e. 34\% of the population supports the bill. Then among a population of 1,000 randomly chosen individuals, the distribution of the number of people supporting the bill is approximately $N(340, 14.98)$. \pspace
+
+\sol The statement is \textit{true}. An individual either supports the bill or not. We are selecting a fixed number of individuals---namely 1,000---with fixed probability of support---namely 34\%. We assume that the individuals opinions on the bill are independent from each other. [We assume also that the population is `large' relative to this sample.] The support for the bill then has binomial distribution $B(1000, 0.34)$. This would be cumbersome to work with. We know that $np= 1000(0.34)= 340 \geq 10$ and $n(1 - p)= 1000(1 - 0.34)= 1000(0.66)= 660 \geq 10$. Therefore, we can use the normal approximation to the binomial distribution. For counts, the normal approximation to the binomial distribution is $N(np, \sqrt{np(1 - p)})= N(1000 \cdot 0.34, \sqrt{1000 \cdot 0.34 \cdot 0.66}) \approx N(340, 14.98)$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

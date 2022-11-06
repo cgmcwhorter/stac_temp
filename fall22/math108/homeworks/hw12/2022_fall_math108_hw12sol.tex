@@ -1,0 +1,83 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{12: Due 11/01}{Facts are stubborn things, but statistics are pliable.}{Mark Twain}
+
+% Problem 1
+\problem{10} Suppose that you sample from a distribution with mean 250 and standard deviation 30. Let $X$ denote a random sample from this distribution. Let $\overline{X}$ represent the mean of a simple random sample from this distribution of size 50.
+	\begin{enumerate}[(a)]
+	\item Find $P(X \leq 240)$.
+	\item Find $P(X \geq 240)$.
+	\item Find $P(\overline{X} \leq 240)$.
+	\item Find $P(\overline{X} \geq 240)$.
+	\item Could you use your method in (b) and (c) if the sample size were 15? Explain. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	z_{240}= \dfrac{240 - 250}{30}= \dfrac{-10}{30} \approx -0.33 \squiggle 0.3707
+	\]
+Therefore, $P(X \leq 240)= 0.3707$. \pspace
+
+\item We have $P(X \geq 240)= 1 - P(X \leq 240)= 1 - 0.3707= 0.6293$. \pspace
+
+\item Because the sample size is `sufficiently large' ($50 \geq 30$), the Central Limit Theorem states that the distribution of sample means of size 50 is approximately $N(\mu, \sigma/\sqrt{n})= N(250, 30/\sqrt{50})= N(250, 4.24264)$. But then we have\dots
+	\[
+	z_{240}= \dfrac{240 - 250}{4.24264}= \dfrac{-10}{4.24264} \approx -2.36 \squiggle 0.0091
+	\]
+Therefore, $P(\overline{X} \leq 240)= 0.0091$. \pspace
+
+\item We have $P(\overline{X} \geq 240)= 1 - P(\overline{X} \leq 240)= 1 - 0.0091= 0.9909$. \pspace
+
+\item No. The Central Limit Theorem requires either that the underlying distribution you are sampling from is normal (which is not stated to be the case here) or for the sample size to be `sufficiently large.' By our standards, $15 \leq 30$ is not `sufficiently large.' 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose that an industrial waste company claims that their operations do not affect the health of local residents. However, the local residents believe otherwise. Suppose that the percentage of the US population with a certain type of cancer has a normal distribution with average 5\% and standard deviation 1\%. What is the probability that if the residents took a simple random sample of size 10 from their community that the percentage of them having that type of cancer was more than 6.5\%? If the sample suggested that 9\% of the community was affected by that type of cancer, does the company's claim seem likely? \pspace
+
+\sol We know that the distribution of the probability of having that type of cancer is $N(0.05, 0.01)$. Because the distribution is normal, the distribution of sample means of size 10 is also normally distributed by the Central Limit Theorem with $N(\mu, \sigma/\sqrt{n})= N(0.05, 0.01/\sqrt{10})= N(0.05, 0.00316228)$. But then we have\dots
+	\[
+	z_{0.065}= \dfrac{0.065 - 0.05}{0.00316228}= \dfrac{0.015}{0.00316228}= 4.74341 \squiggle 1.0
+	\]
+Therefore, $P(\overline{X} \geq 0.065)= 1 - P(X \leq 0.065)= 1 - 1.0 \approx 0.$. Therefore, the probability that a sample of 10 people from a population with cancer rate having a normal distribution with mean 5\% and standard deviation 1\% having a rate of 6.5\% or greater is approximately 0\%. Then the chance of finding a cancer rate of 9\% in the group of 10 individuals is also approximately 0\%. Therefore, it is not very likely that this cancer rate of 9\% occurred randomly. Instead, it is likely that there is some external influence which resulted in this higher probability. While one cannot confirm that it is from the industrial waste company from this data alone, it is a plausible hypothesis. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose that you are an engineer at a company that produces laptops and other electronic devices. You are trying to give data to the marketing team so that they know how to advertise the company's new laptop. The team would like to know the average battery life for this laptop. You take a simple random sample of 40 laptops and find an average battery life of 12.5~hours. Based on the construction of the laptop, the battery life for this type of computer is known to have a standard deviation of 1.3~hours. Construct and interpret in the context of the problem a 95\% confidence interval for the average battery life of this new laptop. \pspace
+
+\sol Because the sample size is `sufficiently large' ($40 \geq 30$), the Central Limit Theorem applies. Therefore, we know that the distribution of sample means of size 40 is approximately normally distributed with distribution $N(\mu, \sigma/\sqrt{n})= N(\mu, 1.3/\sqrt{40})= N(\mu, 0.205548)$. The sample mean, $\overline{x}$, was 12.5. If we desire a 95\% confidence interval, 95\% of possibilities are `in the middle', leaving 5\% for the `outer space.' But then there is 2.5\% of possibilities `on the left.' Therefore, we know that $z^*$ corresponds to $0.95 + 0.025= 0.975$. Then we have $z^*= 1.96$. We then have\dots
+	\[
+	\begin{aligned}
+	\overline{x} \qquad &\pm \qquad z^* \; \dfrac{\sigma}{\sqrt{n}} \\
+	12.5 \qquad &\pm \qquad 1.96 \cdot \dfrac{1.3}{\sqrt{40}} \\
+	12.5 \qquad &\pm \qquad 1.96 \cdot 0.205548 \\
+	12.5 \qquad &\pm \qquad 1.96 \cdot 0.205548 \\
+	12.5 \qquad &\pm \qquad 0.402874
+	\end{aligned}
+	\] \pspace
+Therefore, we are 95\% certain that the average battery life for this laptop is between 12.1 and 12.9~hours. 
+
+
+\end{document}

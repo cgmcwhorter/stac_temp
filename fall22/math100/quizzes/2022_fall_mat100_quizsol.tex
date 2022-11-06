@@ -99,15 +99,71 @@ The distance we want is the dotted line---the hypotenuse of the triangle sketche
 % Quiz 8
 \quizsol \textit{True/False}: `Any' function which has a constant rate of change can be represented by a linear function. \pspace
 
-\sol The statement is \textit{true}. Suppose the rate of change were 5 and the current value is 2. After one step in time, the value is $2 + 1(5)= 2 + 5= 7$. After another step in time, the value is $7 + 5= 12$, or $2 + 2(5)= 2 + 10= 12$. Generally, after $n$ steps, the value is $2 + n \cdot 5= 5n + 2$, which is a linear function. Generally, if we start with initial value $y_0$ and have a constant rate of change $m$, after $x$ steps, we have $y= y_0 + x \cdot m= mx + y_0$. This is a linear function with $y= y$, $x= x$, $m= m$, and $b= y_0$. But then we see that `any' function which changes at a constant rate is a linear function. We know that a linear function $y= mx + b$ has a constant rate of change---the slope $m$. Therefore, a function is linear if and only if it has a constant rate of change. 
+\sol The statement is \textit{true}. Suppose the rate of change were 5 and the current value is 2. After one step in time, the value is $2 + 1(5)= 2 + 5= 7$. After another step in time, the value is $7 + 5= 12$, or $2 + 2(5)= 2 + 10= 12$. Generally, after $n$ steps, the value is $2 + n \cdot 5= 5n + 2$, which is a linear function. Generally, if we start with initial value $y_0$ and have a constant rate of change $m$, after $x$ steps, we have $y= y_0 + x \cdot m= mx + y_0$. This is a linear function with $y= y$, $x= x$, $m= m$, and $b= y_0$. But then we see that `any' function which changes at a constant rate is a linear function. We know that a linear function $y= mx + b$ has a constant rate of change---the slope $m$. Therefore, a function is linear if and only if it has a constant rate of change. \pvspace{1.5cm}
 
 
 
-% Quiz 9 y-int interp in context
+% Quiz 9
+\quizsol \textit{True/False}: The $y$-intercept of a `real-world' function always has an interpretation in the context of the problem. \pspace
 
-% Quiz 10 Janet is waiting in line for the copier. She notices that the faculty member ahead of her already has 10 copies printed and that in the last 2~minutes, 6~copies have been made. Then the amount of copies made can be modeled by $C(t)= 2t + 10$.
+\sol The statement is \textit{false}. We can always compute a $y$-intercept---it occurs when the function input is 0. Therefore, the $y$-intercept of $f(x)$ is $f(0)$ (or $\big(0, f(0) \big)$).However, this does not mean the $y$-intercept has an interpretation in the context of the problem. Suppose $M(t)$ represents the amount of money in your checking account in $t$ days. The $y$-intercept is $M(0)= \$8271$, which means you have \$8,271 in your checking account right now---which makes sense. Now suppose $W(t)$ represents your weight at time $t$. The $y$-intercept is $W(0)= -15$, so at the `start' time, you have weight $-15$, which is nonsense. [Note that a negative value does not mean it does not have an interpretation in the problem context. For instance, return to the exam where $M(t)$ represents the amount of money in your checking account in $t$ days. If $M(0)= -540$, one could interpret this as meaning you have $-\$540$ in your checking account right now, i.e. right now your checking account is \$540 overdrawn.] Whether or not a `real-world' function has an interpretable $y$-intercept depends on the function, the intercept, and how one is interpreting the values. \pvspace{1.5cm}
 
-% quiz 11: If the CPI last year was \$255.43 and the CPI this year was \$271.11, then the inflation rate was approximately 61\%. 
+
+
+% Quiz 10
+\quizsol \textit{True/False}: Janet is waiting in line for the copier. She notices that the faculty member ahead of her already has 10 copies printed and that in the last 2~minutes, 6~copies have been made. Then the amount of copies made can be modeled by $C(t)= 3t + 10$. \pspace
+
+\sol The statement is \textit{true}. We shall assume that the copier is making copies at a constant rate. Then we know that $C(t)= mt + b$ for some $m, b$. We know that the copier makes 6~copies in 2~minutes; therefore, the copier makes $6/2= 3$~copies per minute. We know then that $m= 3$. So we have $C(t)= 3t + b$. We know after 2~minutes, a total of $10 + 6= 16$ copies have been made. But then we have\dots
+	\[
+	\begin{aligned}
+	C(t)&= 3t + b \\[0.3cm]
+	C(2)&= 3(2) + b \\[0.3cm]
+	16&= 6 + b \\[0.3cm]
+	b&= 10
+	\end{aligned}
+	\]
+Therefore, we know that the number of copies made after $t$ minutes is given by $C(t)= 3t + 10$. [Equivalently, one could have said at 0~minutes that only 10~copies have been made. But then we know that $10= C(0)= 3(0) + b= b$, arriving again at $C(t)= 3t + 10$.] \pvspace{1.5cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: If the CPI last year was \$255.43 and the CPI this year was \$271.11, then the inflation rate was approximately 61\%. \pspace
+
+\sol The statement is \textit{false}. We know that the ratio of this year's CPI to last year's CPI is\dots
+	\[
+	\dfrac{\text{Current CPI}}{\text{Previous CPI}}= \dfrac{\$271.11}{\$255.43}= 1.06139= 1 + 0.06139
+	\]
+Interpreting this as a percentage increase (because the ratio is greater than 1), we can see that the CPI from last year increased by 6.139\% to this year's CPI. Therefore, the inflation rate was 6.139\%. \pvspace{1.5cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: If \$5000 accumulates interest at a 4.2\% annual interest rate, compounded monthly, then the amount after 6~years is\dots
+	\[
+	\$5000 \left(1 + \dfrac{0.042}{12} \right)^{12 \cdot 6} \approx \$6430.15
+	\] \pspace
+
+
+
+\newpage
+
+
+
+\sol The statement is \textit{true}. We know that $P$~dollars gaining interest at an annual interest rate $r$ each year, compounded $k$ times per year for $t$~years is given by $P \left(1 + \dfrac{r}{k} \right)^{kt}$. Here we begin with an initial value of $P= \$5000$. The annual interest rate is 4.2\%, i.e. $r= 0.042$. The interest is compounded monthly, i.e. 12~times per year. Then we know that $k= 12$. The money is earning interest for 6~years, so that $t= 6$. Therefore, the amount of money after this time is\dots
+	\[
+	\$5000 \left(1 + \dfrac{0.042}{12} \right)^{12 \cdot 6} \approx \$5000 (1.0035)^{72} \approx \$5000(1.28603) \approx \$6430.15
+	\]
+
+
+
+% Quiz 13
+\quizsol \textit{True/False}: If you take out a loan for \$2,300 at 5.6\% annual interest, compounded quarterly, for a period of 3~years, then the amount you pay in interest is \$417.59. \pspace
+
+\sol 
+
+
+
+
 
 
 

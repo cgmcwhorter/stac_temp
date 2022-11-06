@@ -1,0 +1,125 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{9: Due 10/25}{I have never played the lottery in my life and never will. Voltaire described lotteries as a tax on stupidity. More specifically, I think, on innumeracy.}{Daniel Tammet}
+
+% Problem 1
+\problem{10} Let $X$ be a discrete random variable. We know that $P(X= -3)= 0.25$, $P(X= 0)= 0.30$, $P(X= 2)= 0.45$. 
+	\begin{enumerate}[(a)]
+	\item Given a random event, what is $P(X= -3 \text{ or } X= 2)$?
+	\item Given a sequence of two independent random events, what is the probability that $X= 2$ both times?
+	\item Find the average value for this random variable, i.e. find the expected value.
+	\item Find the standard deviation for this random variable. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	P(X= -3 \text{ or } X= 2)= P(X= -3) + P(X= 2)= 0.25 + 0.45= 0.70
+	\] \pspace
+
+\item 
+	\[
+	P(X= 2 \text{ and } X= 2)= P(X= 2) \cdot P(X= 2)= 0.45 \cdot 0.45= 0.2025
+	\] \pspace
+
+\item 
+	\[
+	EX= \sum x \cdot P(X= x)= -3 \cdot 0.25 + 0 \cdot 0.30 + 2 \cdot 0.45= -0.75 + 0.00 + 0.90= 0.15
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\sigma^2&= \sum (x - EX)^2 \cdot P(X= x) \\[0.3cm]
+	&= (-3 - 0.2025)^2 \cdot 0.25 + (0 - 0.2025)^2 \cdot 0.30 + (2 - 0.2025)^2 \cdot 0.45 \\[0.3cm]
+	&= (-3.2025)^2 \cdot 0.25 + (-0.2025)^2 \cdot 0.30 + (1.7975)^2 \cdot 0.45 \\[0.3cm]
+	&= 10.256 \cdot 0.25 + 0.0410063 \cdot 0.30 + 3.23101 \cdot 0.45 \\[0.3cm]
+	&= 2.564 + 0.0123019 + 1.45395 \\[0.3cm]
+	&= 4.03026
+	\end{aligned}
+	\]
+Therefore, we have $\sigma = \sqrt{\sigma^2}= \sqrt{4.03026}= 2.00755$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose you play a game where you roll a tetrahedral die with sides labeled one through four. The probabilities for which are (partially) given below. If you roll a 4, you win \$20. However, if you roll a 3, you win nothing; if you roll a 2, you must pay \$4; if you roll a 1, you must pay \$6. 
+	\begin{table}[!ht]
+	\centering 
+	\begin{tabular}{|c||c|c|c|c|} \hline 
+	$n$ & $1$ & $2$ & $3$ & $4$ \\ \hline 
+	$P(n)$ & $\dfrac{3\rule{0pt}{2.9ex}}{10\rule[-1.3ex]{0pt}{0pt}}$ & \phantom{$\dfrac{00}{00}$} & $\dfrac{2}{10}$ & $\dfrac{1}{10}$ \\ \hline 
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Find $P(2)$. 
+\item Find the probability that if you roll the die twice, lose money both times. 
+\item Find the average amount you win per game. 
+\item Should you play this game? Explain.
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know that the sum of the probabilities of the entire sample space must be 1. But then we have\dots
+	\[
+	\begin{aligned}
+	1&= P(X= 1) + P(X= 2) + P(X= 3) + P(X= 4) \\[0.3cm]
+	&= \dfrac{3}{10} + P(X= 2) + \dfrac{2}{10} + \dfrac{1}{10} \\[0.3cm]
+	&= P(X= 2) + \dfrac{6}{10}
+	\end{aligned}
+	\]
+Therefore, $P(X= 2)= 1 - \frac{6}{10}= \frac{4}{10}$. \pspace
+
+\item First, observe you only lose money if you roll a 1 or a 2. We know that $P(X= 1 \text{ or } X= 2)= P(X= 1) + P(X= 2)= \frac{3}{10} + \frac{4}{10}= \frac{7}{10}$. Second, observe that the dice rolls are independent from each other. Finally, using these two facts, we have\dots
+	\[
+	P(\text{lose money twice})= \dfrac{7}{10} \cdot \dfrac{7}{10}= \dfrac{49}{100}
+	\] \pspace
+
+\item This is the expected value for this game. We have\dots
+	\[
+	EX= \sum x \cdot P(X= x)= -\$6 \cdot \dfrac{3}{10} + -\$4 \cdot \dfrac{4}{10} + \$0 \cdot \dfrac{2}{10} + \$20 \cdot \dfrac{1}{10}= -\dfrac{14}{10}= -\$1.40
+	\] \pspace
+
+\item Because the expected payout is negative, on average, you are losing money playing this game. For instance, playing the game 100 times, one would expect to lose $100 \cdot \$1.40= \$140$. Therefore, one should not play this game. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Recently, the Mega Millions jackpot was \$1.28~billion. If you won and took the `cash option' (the smarter move), the payout is then \$747.2~million. After a mandatory 24\% federal tax withholding, you would finally walk away with 567.872~million. The odds of hitting the jackpot were 1 in 302~million (specifically, 1 in 302,575,350). A Mega Millions ticket costs \$2. Should you have purchased a ticket? \pspace
+
+\sol There are many factors that can/should be used in deciding whether to play the lottery. At least, on average, one could use the expected value for the lottery. We know that the probability of winning, $P(\text{win})$, is 1 in 302,575,350. Therefore, $P(\text{lose})$ is 302,575,349 in 302,575,350. For this record payout, the amount earned from winning is the end winnings minus the cost of the ticket, i.e. $567,872,000 - 2= 567,871,998$. The amount `won' from losing the lottery is the cost of the ticket, i.e. \$2. Therefore, on average, the expected payout from playing the lottery is\dots
+	\[
+	\begin{aligned}
+	EX&= \sum x \cdot P(X= x) \\[0.3cm]
+	&= \$567871998 \cdot \dfrac{1}{302575350} + -\$2 \cdot \dfrac{302575349}{302575350} \\[0.3cm]
+	&\approx \$1.8768 - \$2 \\[0.3cm]
+	&= -\$0.1232 \\[0.3cm]
+	&\approx -\$0.12
+	\end{aligned}
+	\]
+Even for this historically high lottery payout, the expected value is negative. This shows that, on average, even playing a lottery with this high a payout that one loses money. Then for more `reasonable' lottery payouts, the expected value will be even more negative. This shows that, on average, one should not play the lottery. 
+
+
+\end{document}
