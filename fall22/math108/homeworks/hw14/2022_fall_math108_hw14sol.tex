@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,40 @@
 	\item What is the probability that less than five of them support the governor?
 	\item What is the probability that five or more of them support the governor?
 	\item If instead you took a survey of 1,200 voters. What is the probability that more than 17\% of them support the governor?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol This is a binomial distribution with $n= 19$ and $p= 0.15$, i.e. $B(19, 0.15)$. 
+
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	P(X= 0)= 0.0456
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	P(X < 5)&= P(X= 4) + P(X= 3) + P(X= 2) + P(X= 1)+ P(X= 0) \\[0.3cm]
+	&= 0.1714 + 0.2428 + 0.2428 + 0.1529 + 0.0456 \\[0.3cm]
+	&= 0.8555
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	P(X \geq 5)= 1 - P(X < 5)= 1 - 0.8555= 0.1445
+	\] \pspace
+
+\item Because we have $np= 1200(0.15)= 180 \geq 10$ and $n(1 - p)= 1200(1 - 0.15)= 1200(0.85)= 1020 \geq 10$, we can use the normal approximation. By the Central Limit Theorem, we know that $B(1200, 0.15) \approx N(p, \sqrt{p(1 - p)/n})$. We have $N(p, \sqrt{p(1 - p)/n}) \approx N(0.15, \sqrt{0.15(0.85)/1200}) \approx N(0.15, 0.0103078)$. But then we have\dots
+	\[
+	z_{0.17}= \dfrac{0.17 - 0.15}{0.0103078}= \dfrac{0.02}{0.0103078} \approx 1.94 \squiggle 0.9738
+	\]
+Therefore, $P(\text{more than 17\%}) \approx P(X \geq 0.17)= 1 - P(X \leq 0.17)= 1 - 0.9738= 0.0262$. Equivalently, by the Central Limit Theorem, we know that $B(1200, 0.15) \approx N(np, \sqrt{np(1 - p)})$. But $N(np, \sqrt{np(1 - p)})= N(180, 12.3693)$. We have $0.17 \cdot 1200= 204$. But then the question is equivalent to finding the probability that more than 204 people surveyed support the governor. We have\dots
+	\[
+	z_{204}= \dfrac{204 - 180}{12.3693}= \dfrac{24}{12.3693} \approx 1.94 \squiggle 0.9738
+	\]
+Therefore, $P(X \geq 204)= 1 - P(X \leq 204)= 1 - 0.9738= 0.0262$. 
+\end{enumerate}
 
 
 
@@ -34,7 +67,37 @@
 	\item Find the probability that more than 155~people surveyed support the new tax.
 	\item Find the probability that between 120 and 155~people surveyed support the new tax.
 	\item Use the continuity correction to improve the estimation of the probability in (a).
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Because we have $np= 300(0.45)= 135 \geq 10$ and $n(1 - p)= 300(1 - 0.45)= 300(0.55)= 165 \geq 10$, the Central Limit Theorem applies. Using counts, we have $B(n, p) \approx N(np, \sqrt{np(1 - p)})$, while using proportions we have $B(n, p) \approx N(p, \sqrt{p(1 - p)/n})$. We have $N(np, \sqrt{np(1 - p)}) \approx N(135, 8.61684)$ and $N(p, \sqrt{p(1 - p)/n}) \approx N(0.45, 0.0287228)$. 
+
+\begin{enumerate}[(a)]
+\item First, observe that $120/300= 0.40$. We have\dots
+	\[
+	\begin{aligned}
+	z_{120}&= \dfrac{120 - 135}{8.61684}= \dfrac{-15}{8.61684} \approx -1.74 \squiggle 0.0409 \\
+	z_{0.40}&= \dfrac{0.40 - 0.45}{0.0287228}= \dfrac{-0.05}{0.0287228} \approx -1.74 \squiggle 0.0409
+	\end{aligned}
+	\]
+Therefore, $P(X < 120)= 0.0409$. \pspace
+
+\item First, observe that $155/300 \approx 0.516667$. We have\dots
+	\[
+	\begin{aligned}
+	z_{155}&= \dfrac{155 - 135}{8.61684}= \dfrac{20}{8.61684} \approx 2.32 \squiggle 0.9898 \\
+	z_{0.517}&= \dfrac{0.5167 - 0.45}{0.0287228}= \dfrac{0.0667}{0.0287228} \approx 2.32 \squiggle 0.9898
+	\end{aligned}
+	\]
+Therefore, $P(X > 155)= 1 - P(X \leq 155)= 1 - 0.9898= 0.0102$. \pspace
+
+\item We have $P(120 \leq X \leq 155)= P(X \leq 155) - P(X \leq 120)= 0.9898 - 0.0409= 0.9489$. \pspace
+
+\item Using the continuity correct, we have\dots	
+	\[
+	z_{119.5}= \dfrac{119.5 - 135}{8.61684}= \dfrac{-15.5}{8.61684} \approx -1.80 \squiggle 0.0359
+	\]
+Therefore, $P(X < 120)= 0.0359$. 
+\end{enumerate}
 
 
 \end{document}

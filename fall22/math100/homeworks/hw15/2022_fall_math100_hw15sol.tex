@@ -1,0 +1,140 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{15: Due 11/07}{Life is a school of probability.}{Walter Bagehot}
+
+% Problem 1
+\problem{10} Researchers surveyed 320~people on which superpower from comics they found most interesting/best. A table of their findings are found below.
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c||c|c||c|} \hline
+	& Child & Adult & Total \\ \hline \hline
+	Flight & 30 & 36 & 66 \\ \hline
+	Mind Reading & 15 & 60 & 75 \\ \hline
+	Super Strength & 40 & 14 & 54 \\ \hline \hline
+	Total & 85 & 110 & 195 \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Find the probability that a person chose flight as the best superpower.
+\item Find the probability that a person surveyed was a child.
+\item Find the probability that a person was a child and chose super strength as the most interesting super power.
+\item Find the probability that a person chose mind reading or was an adult.
+\item Find the probability that a person that chose mind reading was an adult. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	P(\text{flight})= \dfrac{66}{195} \approx 0.3385
+	\]
+
+\item 
+	\[
+	P(\text{child})= \dfrac{85}{195} \approx 0.4359
+	\]
+
+\item 
+	\[
+	P(\text{child and super strength})= \dfrac{40}{195} \approx 0.2051
+	\]
+
+\item 
+	\[
+	P(\text{mind reading or adult})= \dfrac{75 + 110 - 60}{195}= \dfrac{125}{195} \approx 0.6410
+	\]
+
+\item 
+	\[
+	P(\text{adult} \;|\; \text{mind reading})= \dfrac{60}{75} \approx 0.80
+	\]
+\end{enumerate}
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider the breakdown of students majors at a college by gender.
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c||c|c|c|c|} \hline
+	& School of Business & School of Education & Arts \& Social Sciences & STEM \\ \hline \hline
+	Male & 80 & 85 & 75 & 92 \\ \hline
+	Female & 75 & 80 & 90 & 94 \\ \hline
+	Unspecified & 8 & 15 & 22 & 1 \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Find the probability that a randomly selected person from this school was in education. 
+\item Find the probability that a randomly selected person from this school was male.
+\item Find the probability that a randomly selected person from this school was a female and in the School of Business.
+\item Find the probability that a randomly selected person from this school was in STEM or had unspecified gender.
+\item Find the probability that a person was in the school of Arts \& Social Sciences given that their gender was unspecified. 
+\end{enumerate} \pspace
+
+\sol First, we should find the totals in each row and column: 
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c||c|c|c|c||c|} \hline
+	& School of Business & School of Education & Arts \& Social Sciences & STEM & Total \\ \hline \hline
+	Male & 80 & 85 & 75 & 92 & 332 \\ \hline
+	Female & 75 & 80 & 90 & 94 & 339 \\ \hline
+	Unspecified & 8 & 15 & 22 & 1 & 46 \\ \hline \hline
+	Total & 163 & 180 & 187 & 187 & 717 \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	P(\text{education})= \dfrac{180}{717} \approx 0.2510
+	\]
+
+\item 
+	\[
+	P(\text{male})= \dfrac{332}{717} \approx 0.4630
+	\]
+
+\item 
+	\[
+	P(\text{female and business})= \dfrac{75}{717} \approx 0.1046
+	\]
+
+\item 
+	\[
+	P(\text{STEM or unspecified})= \dfrac{187 + 46 - 1}{717}= \dfrac{232}{717} \approx 0.3236
+	\]
+
+\item 
+	\[
+	P(\text{Arts \& Social} \;|\; \text{unspecified})= \dfrac{22}{46} \approx 0.4783
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Is it always true that for events $A$ and $B$, $P(A \text{ and } B)= P(A) \cdot P(B)$? Explain using an original example. \pspace
+
+\sol No. It is true that if $A$ and $B$ are independent events that $P(A \text{ and } B)= P(A) \cdot P(B)$. However, this is not generally true for arbitrary events $A$ and $B$. Generally, we have $P(A \text{ and } B)= P(A) P(B \;|\; A)$ or $P(A \text{ and } B)= P(B) P(A \;|\; B)$. To see why $P(A \text{ and } B)$ may be different than $P(A) \cdot P(B)$, consider the events $A$ and $B$, where $A$ is passing a course and $B$ is failing a course. Clearly, you cannot pass and fail a course at the same time. So $P(A \text{ and } B)= 0$. However, unless $P(A)= 0$ or $P(B)= 0$, then $P(A) \cdot P(B) \neq 0$. Because $A$ and $B$ are disjoint events (they cannot happen at the same time), they cannot be independent. So we should not have expected that $P(A \text{ and } B)= P(A) \cdot P(B)$. 
+
+
+\end{document}

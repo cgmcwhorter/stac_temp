@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -38,7 +38,17 @@
 	37\% & \$539,901 or more & \$162,718 plus 37\% of amount over \$539,900.\\ \hline
 	\end{tabular}}
 	\end{table} \par
-Explain how the amount of tax owed in the chart on the right is computed by showing there the \$1,027.50 and the \$4,807.40 are arrived at. 
+Explain how the amount of tax owed in the chart on the right is computed by showing how the \$1,027.50 and the \$4,807.50 are obtained. \pspace
+
+\sol Each entry in the `Tax Owed' column on the chart on the right is the tax owed from the previous brackets plus the tax owed in the `current bracket.' For instance, the \$1,027.50 in the second bracket is the tax owed from the initial \$10,275 of taxable income:
+	\[
+	0.10(\$10275 - \$0)= 0.10(\$10275)= \$1027.50
+	\]
+If you are in the third tax bracket, then you have paid\dots
+	\[
+	0.10(\$10275 - \$0) + 0.12(\$41775 - \$10275)= 0.10(\$10275) + 0.12(\$31500)= \$1027.50 + \$3780= \$4807.50
+	\]
+from the previous two tax brackets. 
 
 
 
@@ -47,7 +57,13 @@ Explain how the amount of tax owed in the chart on the right is computed by show
 
 
 % Problem 2
-\problem{10} Suppose that you place \$8,520 into a bank account that earns 1.2\% annual interest, compounded monthly. If you save this money in this bank account for 4~years, how much money do you have at the end of the 4~years? How much interest have you earned? 
+\problem{10} Suppose that you place \$8,520 into a bank account that earns 1.2\% annual interest, compounded monthly. If you save this money in this bank account for 4~years, how much money do you have at the end of the 4~years? How much interest have you earned? \pspace
+
+\sol We know that if $P$ dollars accumulating interest at an annual interest rate of $r$, compounded $k$ times year, then the amount after $t$ years is $P \left(1 + \frac{r}{k} \right)^{kt}$. The initial amount of money is $P= \$8520$. The annual interest rate is $r= 0.012$, compounded each month, i.e. $k= 12$ times per year. Then after $t= 4$ years, we have\dots
+	\[
+	\$8520 \left(1 + \dfrac{0.012}{12} \right)^{12 \cdot 4}= \$8520 (1.001)^{48}= \$8520(1.0491455)= \$8938.72
+	\]
+Therefore, the amount in the account after 4~years is \$8938.72. Because the account began with \$8,520, any additional money must have come from interest. But then the total interest earned is $\$8938.72 - \$8520= \$418.72$. 
 
 
 \end{document}

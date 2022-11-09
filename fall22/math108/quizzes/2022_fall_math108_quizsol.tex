@@ -163,14 +163,15 @@ The last approximation becomes more and more accurate the more games you play be
 % Quiz 16
 \quizsol \textit{True/False}: Suppose that a support for a particular bill is approximately 34\%, i.e. 34\% of the population supports the bill. Then among a population of 1,000 randomly chosen individuals, the distribution of the number of people supporting the bill is approximately $N(340, 14.98)$. \pspace
 
-\sol The statement is \textit{true}. An individual either supports the bill or not. We are selecting a fixed number of individuals---namely 1,000---with fixed probability of support---namely 34\%. We assume that the individuals opinions on the bill are independent from each other. [We assume also that the population is `large' relative to this sample.] The support for the bill then has binomial distribution $B(1000, 0.34)$. This would be cumbersome to work with. We know that $np= 1000(0.34)= 340 \geq 10$ and $n(1 - p)= 1000(1 - 0.34)= 1000(0.66)= 660 \geq 10$. Therefore, we can use the normal approximation to the binomial distribution. For counts, the normal approximation to the binomial distribution is $N(np, \sqrt{np(1 - p)})= N(1000 \cdot 0.34, \sqrt{1000 \cdot 0.34 \cdot 0.66}) \approx N(340, 14.98)$. 
+\sol The statement is \textit{true}. An individual either supports the bill or not. We are selecting a fixed number of individuals---namely 1,000---with fixed probability of support---namely 34\%. We assume that the individuals opinions on the bill are independent from each other. [We assume also that the population is `large' relative to this sample.] The support for the bill then has binomial distribution $B(1000, 0.34)$. This would be cumbersome to work with. We know that $np= 1000(0.34)= 340 \geq 10$ and $n(1 - p)= 1000(1 - 0.34)= 1000(0.66)= 660 \geq 10$. Therefore, we can use the normal approximation to the binomial distribution. For counts, the normal approximation to the binomial distribution is $N(np, \sqrt{np(1 - p)})= N(1000 \cdot 0.34, \sqrt{1000 \cdot 0.34 \cdot 0.66}) \approx N(340, 14.98)$. \pvspace{1.5cm}
 
 
 
 
+% Quiz 17
+\quizsol \textit{True/False}: If $X$ is a sample count from a population of size 1,000 with $p= 0.50$, then $X$ is approximately distributed as $N(500, 15.81)$. \pspace
 
-
-
+\sol The statement is \text{true}. Because $np= 1000(0.50)= 500 \geq 10$ and $n(1 - p)= 1000(1 - 0.50)= 1000 (0.50)= 500 \geq 10$, we know that the Central Limit Theorem applies. Therefore, we can approximate the binomial distribution of $X$, i.e. $B(1000,0.50)$, with the normal distribution $N(np, \sqrt{np(1 - p)})$. But then we have $N(1000 \cdot 0.50, \sqrt{1000 \cdot 0.50 (1 - 0.50)})= N(500, 15.81)$. 
 
 
 

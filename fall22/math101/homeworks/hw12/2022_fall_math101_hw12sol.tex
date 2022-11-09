@@ -1,0 +1,91 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{12: Due 11/07}{The good thing about science is that it's true whether or not you believe it.}{Neil deGrasse Tyson}
+
+% Problem 1
+\problem{10} Consider the line $2x - 5y= 4$.
+	\begin{enumerate}[(a)]
+	\item Is $(-2, 0)$ on the line? Explain.
+	\item Is $(-3, -2)$ on the line? Explain.
+	\item Showing all your work, find two points, distinct from $(-2, 0)$ and $(-3, -2)$, on the given line. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	2x - 5y&= 4 \\[0.3cm]
+	2(-2) - 5(0)&\stackrel{?}{=} 4 \\[0.3cm]
+	-4 - 0&\stackrel{?}{=} 4 \\[0.3cm]
+	-4 &\neq 4 \\
+	&\;\;\text{\xmark}
+	\end{aligned}
+	\]
+Therefore, $(-2, 0)$ is not on the line $2x - 5y= 4$. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	2x - 5y&= 4 \\[0.3cm]
+	2(-3) - 5(-2)&\stackrel{?}{=} 4 \\[0.3cm]
+	-6 + 10&\stackrel{?}{=} 4 \\[0.3cm]
+	4&= 4 \\
+	&\;\;\text{\cmark}
+	\end{aligned}
+	\]
+Therefore, $(-3, -2)$ is on the line $2x - 5y= 4$. \pspace
+
+\item Any $(x, y)$ which satisfy the equation $2x - 5y= 4$ are on the line. If $x= 0$, we have $-5y= 4$ so that $y= -\frac{4}{5}$. Therefore, $(0, -\frac{4}{5})$ is a point on the line. Similarly, if $y= 0$, we have $2x= 4$ so that $x= \frac{4}{2}= 2$. Therefore, $(2, 0)$ is on the line. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider the line $-3x - 5y= 10$.
+	\begin{enumerate}[(a)]
+	\item Find the slope of the line.
+	\item Find the $y$-intercept of the line.
+	\item Find this line as a linear function, $f(x)$.
+	\item Using your $f(x)$ from (c), find a point on the line distinct from the $y$-intercept.	
+	\end{enumerate} \pspace
+
+\sol First, observe that\dots
+	\[
+	\begin{aligned}
+	-3x - 5y&= 10 \\[0.3cm]
+	-5y&= 3x + 10 \\[0.3cm]
+	y&= -\frac{3}{5}\,x - 2
+	\end{aligned}
+	\]
+
+\begin{enumerate}[(a)]
+\item Because $y= -\frac{3}{5}\,x - 2$ is of the form $f(x)= mx + b$ with $m= -\frac{3}{5}$ and $b= -2$, the slope of the line is $-\frac{3}{5}$. \pspace
+
+\item Because $y= -\frac{3}{5}\,x - 2$ is of the form $f(x)= mx + b$ with $m= -\frac{3}{5}$ and $b= -2$, the $y$-intercept of the line is $-2$, i.e. $(0, -2)$. \pspace
+
+\item From the work above, we have $f(x)= -\frac{3}{5}\,x - 2$. \pspace
+
+\item If $x= x_0$, then $\big(x_0, f(x_0) \big)$ is a point on the line. For instance, suppose that $x= 5$, then we have\dots
+	\[
+	f(5)= -\dfrac{3}{5} \cdot 5 - 2= -3 - 2= -5
+	\]
+Therefore, $(5, -5)$ is a point on the line. 
+\end{enumerate}
+
+
+\end{document}

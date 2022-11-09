@@ -2,22 +2,51 @@
 \usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
 \usepackage{../style/homework}
 \usepackage{../style/commands}
-\setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
 % -------------------
 \begin{document}
 
-\homework{10: Due 10/26}{Getting arrested, that makes people look guilty, even the innocent ones and innocent people get arrested every day.}{James (Jimmy) McGill, \par Better Call Saul}
+\homework{10: Due 10/26}{Getting arrested, that makes people look guilty, even the innocent ones and innocent people get arrested every day.}{James (Jimmy) McGill, Better Call Saul}
 
 % Problem 1
-\problem{10} Jeffrey is writing a term paper. After 3~hours of writing, he has written 8~pages. He takes a break and then goes back to writing. After an additional 5~hours of writing, he has written 20~pages. 
+\problem{10} Jeffrey is writing a term paper. Currently, he has only written 8~pages. He returns from a writing break and then goes back to the paper. After an additional 5~hours of writing, he has written 20~pages. 
 	\begin{enumerate}[(a)]
 	\item Assuming Jeffrey writes at a constant rate, find the linear function representing the number of pages that he has written after $t$ hours of writing. 
-	\item How long will it take him to write this 50~page term paper?
-	\end{enumerate}
+	\item How long after this break will it take him in total to write this 50~page term paper?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Assuming that Jeffrey writes at a constant rate, we know that the number of pages he has written, $P$, after $t$~hours is a linear function. But then we know that $P(t)= mt + b$ for some $m, b$. We know that after 5~hours, he has written 20~pages. But then we have\dots
+	\[
+	m= \dfrac{\Delta P}{\Delta t}= \dfrac{20}{5}= 4
+	\]
+But then $P(t)= 4t + b$. At the start, he has written 8~pages. Therefore, $(0, 8)$ is a point on the line $P(t)$. So we know\dots
+	\[
+	\begin{aligned}
+	P(t)&= 4t + b \\[0.3cm]
+	P(0)&= 4(0) + b \\[0.3cm]
+	8&= 0 + b \\[0.3cm]
+	b&= 8
+	\end{aligned}
+	\]
+Therefore, $P(t)= 4t + 8$. \pspace
+
+\item If he needs to write 50~pages, then we have $P(t)= 50$. But then we have\dots
+	\[
+	\begin{aligned}
+	P(t)&= 50 \\[0.3cm]
+	4t + 8&= 50 \\[0.3cm]
+	4t&= 42 \\[0.3cm]
+	t&= 10.5
+	\end{aligned}
+	\]
+Therefore, it will take Jeffrey 10.5~hours after his break to write the term paper. 
+\end{enumerate}
 
 
 
@@ -29,8 +58,19 @@
 \problem{10} Richard is a tailor. He uses an automated sewing machine can create custom labels on jackets. Every 4~hours, it is able to stitch 26~jackets. Richard sets the machine going during the night and when he comes in the next morning it has stitched 80~jackets.
 	\begin{enumerate}[(a)]
 	\item Assuming the machine works at a constant rate, find the number of jackets, $J$, that the machine has stitched $t$~hours from now.
-	\item How many jackets has the machine stitched in total 8~hours from now. 
-	\end{enumerate}
+	\item How many total jackets has the machine stitched 8~hours after opening?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because the machine works at a constant rate, the number of jackets, $J$, it has produced after $t$~hours is linear, i.e. $J(t)$ can be written in the form $J(t)= mt + b$ for some $m, b$. Because the machine produces 26~additional jackets every 4~hours, we know that the machine produces at a rate of $m= \frac{26}{4}= \frac{13}{2}$ jackets per hour. But then $J(t)= \frac{13}{2}\,t + b$. Using the fact that it currently has 80~jackets produced in the morning, i.e. $t= 0$, we know that $80= J(0)= \frac{13}{2} \cdot 0 + b$ so that $b= 80$. But then $J(t)= \frac{13}{2}\,t + 80$. \pspace
+
+\item We have\dots
+	\[
+	J(8)= \dfrac{13}{2} \cdot 8 + 80= 52 + 80= 132
+	\]
+Therefore, 8~hours after opening, the machine will have stitched a total of 132~jackets. 
+\end{enumerate}
 
 
 \end{document}

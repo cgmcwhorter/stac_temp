@@ -1,0 +1,66 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 11/07}{If you want to have good ideas, you must have many ideas.}{Linus Pauling}
+
+% Problem 1
+\problem{10} Showing all your work and explaining your reasoning, answer the following:
+	\begin{enumerate}[(a)]
+	\item Find the equation of the line through $(-5, 9)$ with slope $-\frac{3}{5}$.
+	\item Find the equation of the line through $(0, -4)$ and $(-6, -11)$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because the line is not vertical, we know that it has the form $y= mx + b$ for some $m, b$. Because the slope is $-\frac{3}{5}$, we know that $m= -\frac{3}{5}$. But then $y= -\frac{3}{5}\,x + b$. But as $(-5, 9)$ is on the line, we know\dots
+	\[
+	\begin{aligned}
+	y&= -\frac{3}{5}\,x + b \\[0.3cm]
+	9&= -\frac{3}{5} \cdot -5 + b \\[0.3cm]
+	9&= 3 + b \\[0.3cm]
+	b&= 6
+	\end{aligned}
+	\]
+Therefore, the equation of the line is $y= -\frac{3}{5}\,x + 6$. \pspace
+
+\item Because the line is not vertical, we know that it has the form $y= mx + b$ for some $m, b$. We know that the slope is\dots
+	\[
+	m= \dfrac{\Delta y}{\Delta x}= \dfrac{-11 - (-4)}{-6 - 0}= \dfrac{-7}{-6}= \dfrac{7}{6}
+	\]
+Therefore, $m= \frac{7}{6}$. Then $y= \frac{7}{6}\,x + b$. Because the line contains the point $(0, -4)$, we have\dots
+	\[
+	\begin{aligned}
+	y&= \dfrac{7}{6}\,x + b \\[0.3cm]
+	-4&= \dfrac{7}{6} \cdot 0 + b \\[0.3cm]
+	b&= -4
+	\end{aligned}
+	\]
+Therefore, the equation of the line is $y= \frac{7}{6}\,x - 4$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Find the equation of the line with $x$-intercept $-7$ and $y$-intercept 3. \pspace
+
+\sol Because the line is not vertical, the line has the form $y= mx + b$. If the $x$-intercept of the line is $-7$, then the line contains the point $(-7, 0)$. If the $y$-intercept of the line is 3, the line contains the point $(0, 3)$. The slope is\dots
+	\[
+	m= \dfrac{\Delta y}{\Delta x}= \dfrac{0 - 3}{-7 - 0}= \dfrac{-3}{-7}= \dfrac{3}{7}
+	\]
+Therefore, $y= \frac{3}{7}\,x + b$. Because the line contains the point $(0, 3)$, we have $3= \frac{3}{7} \cdot 0 + b$ so that $b= 3$. Therefore, the equation of the line is $y= \frac{3}{7}\,x + 3$. 
+
+
+\end{document}

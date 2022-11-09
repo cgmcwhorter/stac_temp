@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,14 +19,25 @@
 	\begin{tabular}{|l|l|} \hline
 	Tax Rate & Taxable Income \\ \hline
 	10\% & \$0 -- \$10,275 \\ \hline
-	12\% & \$10276 -- \$41,775 \\ \hline
+	12\% & \$10,276 -- \$41,775 \\ \hline
 	22\% & \$41,776 -- \$89,075 \\ \hline
 	24\% & \$89,076 -- \$170,050 \\ \hline
 	32\% & \$170,051 -- \$215,950 \\ \hline
 	35\% & \$215,951 -- \$539,900 \\ \hline
 	37\% & \$539,901 or more \\ \hline
 	\end{tabular}
-	\end{table}
+	\end{table} \pspace
+
+\sol After tax deductions, Justin has $\$98553 - \$12950= \$85603$ in taxable income. But then we have\dots
+	\[
+	\begin{aligned}
+	\text{Tax}&= 0.10(\$10275 - \$0) + 0.12(\$41775 - \$10275) + 0.22(\$85603 - \$41775) \\[0.3cm]
+	&= 0.10(\$10275) + 0.12(\$31500) + 0.22(\$43828) \\[0.3cm]
+	&= \$1027.50 + \$3780.00 + \$9642.16 \\[0.3cm]
+	&= \$14449.70
+	\end{aligned}
+	\]
+Therefore, Justin will pay \$14,449.70 in federal income taxes in 2022. 
 
 
 
@@ -35,7 +46,12 @@
 
 
 % Problem 2
-\problem{10} If a good that cost \$15 last year now costs \$20, what was the inflation rate from last year to this year? Suppose that this was the true inflation rate. If the CPI last year was \$287.33, what is the CPI this year?
+\problem{10} If a good that cost \$15 last year now costs \$20, what was the inflation rate from last year to this year? Suppose that this was the true inflation rate. If the CPI last year was \$287.33, what is the CPI this year? \pspace
+
+\sol We have $\frac{\$20}{\$15} \approx 1.3333= 1 + 0.3333$. Therefore, the inflation rate was 33.33\%. But then if the CPI last year was \$287.33, we predict that the CPI this year would be\dots
+	\[
+	\$287.33(1 + 0.3333)= \$287.33(1.3333) \approx \$383.097
+	\]
 
 
 \end{document}

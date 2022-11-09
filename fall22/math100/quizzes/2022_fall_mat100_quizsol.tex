@@ -152,14 +152,30 @@ Interpreting this as a percentage increase (because the ratio is greater than 1)
 \sol The statement is \textit{true}. We know that $P$~dollars gaining interest at an annual interest rate $r$ each year, compounded $k$ times per year for $t$~years is given by $P \left(1 + \dfrac{r}{k} \right)^{kt}$. Here we begin with an initial value of $P= \$5000$. The annual interest rate is 4.2\%, i.e. $r= 0.042$. The interest is compounded monthly, i.e. 12~times per year. Then we know that $k= 12$. The money is earning interest for 6~years, so that $t= 6$. Therefore, the amount of money after this time is\dots
 	\[
 	\$5000 \left(1 + \dfrac{0.042}{12} \right)^{12 \cdot 6} \approx \$5000 (1.0035)^{72} \approx \$5000(1.28603) \approx \$6430.15
-	\]
+	\] \pvspace{1.5cm}
 
 
 
 % Quiz 13
 \quizsol \textit{True/False}: If you take out a loan for \$2,300 at 5.6\% annual interest, compounded quarterly, for a period of 3~years, then the amount you pay in interest is \$417.59. \pspace
 
-\sol 
+\sol The statement is \textit{true}. We know that $P$~dollars gaining interest at an annual interest rate $r$ each year, compounded $k$ times per year for $t$~years is given by $P \left(1 + \dfrac{r}{k} \right)^{kt}$. Here we begin with an initial value of $P= \$2300$. The annual interest rate is 5.6\%, i.e. $r= 0.056$. The interest is compounded quarterly, i.e. 4~times per year. Then we know that $k= 4$. The money is earning interest for 3~years, so that $t= 3$. Therefore, the amount of money after this time is\dots
+	\[
+	\$2300 \left(1 + \dfrac{0.056}{4} \right)^{4 \cdot 3}= \$2300 \left(1.014 \right)^{12}= \$2300(1.1815591) \approx \$2717.59
+	\]
+Because the loan was only for \$2,300, the interest on the loan is $\$2717.59 - \$2300= \$417.59$. \pvspace{1.5cm}
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: If $A$ and $B$ are events, then $P(A \text{ and } B)= P(A) \cdot P(B)$. \pspace
+
+\sol The statement is \textit{false}. It is true that if $A$ and $B$ are independent events that $P(A \text{ and } B)= P(A) \cdot P(B)$. However, this is not generally true for arbitrary events $A$ and $B$. Generally, we have $P(A \text{ and } B)= P(A) P(B \;|\; A)$ or $P(A \text{ and } B)= P(B) P(A \;|\; B)$. To see why $P(A \text{ and } B)$ may be different than $P(A) \cdot P(B)$, consider the events $A$ and $B$, where $A$ is passing a course and $B$ is failing a course. Clearly, you cannot pass and fail a course at the same time. So $P(A \text{ and } B)= 0$. However, unless $P(A)= 0$ or $P(B)= 0$, then $P(A) \cdot P(B) \neq 0$. Because $A$ and $B$ are disjoint events (they cannot happen at the same time), they cannot be independent. So we should not have expected that $P(A \text{ and } B)= P(A) \cdot P(B)$.  
+
+
+
+
+
 
 
 

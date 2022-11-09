@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -18,7 +18,24 @@
 	\item Find and interpret the slope of $P(t)$.
 	\item Find and interpret the $y$-intercept of $P(t)$.
 	\item How long did it take her to read this work?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because the function $P(t)= 65t$ has the form $f(x)= mx + b$ for $m= 65$ and $b= 0$, we know that $P(t)$ is linear and that the slope is $m= 65= \frac{65}{1}$. Interpreting the slope $m= \frac{\Delta P}{\Delta t}$, we can see that every additional hour, Louise increases the page count by 65, i.e. Louise reads 65~pages per hour. \pspace
+
+\item Because the function $P(t)= 65t$ has the form $f(x)= mx + b$ for $m= 65$ and $b= 0$, we know that $P(t)$ is linear and that the $y$-intercept is $b= 0$. That is, at time $t= 0$, there have been zero pages read of the book. Then the $y$-intercept is the fact that at the start, Louise had only just begun reading the book. \pspace
+
+\item She is finished reading the work when she has completed the 3,200~pages, i.e. when $P(t)= 3200$. But then we have\dots
+	\[
+	\begin{aligned}
+	P(t)&= 3200 \\[0.3cm]
+	65t&= 3200 \\[0.3cm]
+	t&= 49.23
+	\end{aligned}
+	\]
+Therefore, Louise finishes the book after 49.23~hours, i.e. 49~hours, 13~minutes, and 50~seconds. 
+\end{enumerate}
 
 
 
@@ -32,7 +49,20 @@
 	\item Find and interpret the slope of $N(t)$.
 	\item Does the $y$-intercept of $N(t)$ have an interpretation in the context of this problem? Explain.
 	\item Find the number of people that have ridden the subway by 5~pm. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because $N(t)= 8429t - 1008$ has the form $f(x)= mx + b$ with $m= 8429$ and $b= -1008$, we know that $N(t)$ is linear with slope $m= 8429$. Interpreting this as $\frac{\Delta N}{\Delta t}$, we can see that for every additional hour, the number of people that have ridden the subway has increased by 8,429, i.e. 8,429~people ride the subway every hour. \pspace
+
+\item Because $N(t)= 8429t - 1008$ has the form $f(x)= mx + b$ with $m= 8429$ and $b= -1008$, we know that $N(t)$ is linear with $y$-intercept $-1008$, i.e. $(0, -1008)$. That this means at $t= 0$, i.e. 8:00~am, $-1008$ have ridden the subway. As this is impossible, the $y$-intercept does not have an interpretation in the context of the problem. \pspace
+
+\item We know that 5~pm is 9~hours after 8:00~am. But then we have\dots
+	\[
+	N(9)= 8429(9) - 1008= 75861 - 1008= 74853
+	\]
+Therefore, 74,853~people have ridden the subway by 5~pm. 
+\end{enumerate}
 
 
 \end{document}

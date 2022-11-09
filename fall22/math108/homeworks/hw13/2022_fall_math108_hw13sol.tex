@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,31 @@
 	\item What is the probability that three or less of the students are business majors?
 	\item What is the probability that less than three of the students are business majors?
 	\item What is the probability that at least one of the students is a business major?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol This is a binomial distribution with $n= 13$ and $p= 0.20$, i.e. $B(13, 0.20)$. 
+
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	P(X= 4)= 0.1535
+	\] 
+
+\item We have\dots
+	\[
+	P(X \leq 3)= P(X= 3) + P(X= 2) + P(X= 1) + P(X= 0)= 0.2457 + 0.2680 + 0.1787 + 0.0550= 0.7474 
+	\]
+
+\item We have\dots
+	\[
+	P(X < 3)= P(X= 2) + P(X= 1) + P(X= 0)= 0.2680 + 0.1787 + 0.0550= 0.5017 
+	\] 
+
+\item We have\dots
+	\[
+	P(X \geq 1)= 1 - P(X= 0)= 1 - 0.0550= 0.9450
+	\]
+\end{enumerate}
 
 
 
@@ -34,7 +58,32 @@
 	\item What is the probability that all of you are late?
 	\item What is the probability that more than three of you are on time?
 	\item What is the probability that none of you are late?
-	\end{enumerate} 
+	\end{enumerate} \pspace
+
+\sol Because $p= 0.80$ is not `available' on the binomial chart, we rephrase the questions in-terms of the number of individuals on-time and its probability: $1 - 0.80= 0.20$. Therefore, noting that you and your friends makes a total of 7~people, we have binomial distribution $N(7, 0.20)$. 
+
+\begin{enumerate}[(a)]
+\item If exactly four of you are late, then exactly 3 are on-time. Therefore, we have\dots
+	\[
+	P(4 \text{ late})= P(X= 2)= 0.1147
+	\] \pspace
+
+\item If everyone is late, then no one is on-time. Therefore, we have\dots
+	\[
+	P(\text{all late})= P(X= 0)= 0.2097
+	\] \pspace
+
+\item As this question is phrased in terms of being on-time, we have\dots
+	\[
+	P(X > 3)= 0.0287 + 0.0043 + 0.0004 + 0.0000= 0.0334
+	\] \pspace
+
+\item If none of you are late, then all of you are on-time. Therefore, we have\dots 
+	\[
+	P(X= 7) \approx 0.0000
+	\]
+[Note: The exact value is $P(X= 7)= (0.20)^7= 0.0000128$.]
+\end{enumerate}
 
 
 \end{document}

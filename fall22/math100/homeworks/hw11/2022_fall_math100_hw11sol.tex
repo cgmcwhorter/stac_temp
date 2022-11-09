@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -26,7 +26,13 @@
 	\$215,951--\$539,900 & \$49,335.50 + 35\% amount over \$215,950 \\ \hline
 	$\geq$ \$539,901 & \$162,718 + 37\% amount over \$539,900 \\ \hline
 	\end{tabular}
-	\end{table}
+	\end{table} \pspace
+
+\sol After taking the standard deduction, Wyatt has $\$72000 - \$2400= \$69600$ in taxable income. But then we have\dots
+	\[
+	\text{Tax}= \$4807.50 + 0.22(\$69600 - \$41775)= \$4807.50 + 0.22(\$27825)= \$4807.50 + \$6121.50= \$10929
+	\]
+Therefore, Wyatt will pay \$10,929 in federal income taxes. 
 
 
 
@@ -35,7 +41,16 @@
 
 
 % Problem 2
-\problem{10} Suppose that the CPI last year was \$296.808. This year, the CPI is \$301.21. What was the inflation rate from last year to this year? If a good cost \$95.99 last year, what do you predict that it will cost this year?
+\problem{10} Suppose that the CPI last year was \$296.808. This year, the CPI is \$301.21. What was the inflation rate from last year to this year? If a good cost \$95.99 last year, what do you predict that it will cost this year? \pspace
+
+\sol We have\dots
+	\[
+	\dfrac{\$301.21}{\$296.808}= 1.01483= 1 + 0.01483
+	\] \pspace
+Therefore, the inflation rate is 1.483\%. But then if a good costs \$95.99 last year, we would predict this year that it costs\dots
+	\[
+	\$95.99(1 + 0.01483)= \$95.99(1.01483) \approx \$97.41
+	\]
 
 
 \end{document}

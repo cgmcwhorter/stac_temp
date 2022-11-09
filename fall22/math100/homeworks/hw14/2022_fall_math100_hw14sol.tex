@@ -1,0 +1,55 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 11/07}{A business that makes nothing but money is a poor business.}{Henry Ford}
+
+% Problem 1
+\problem{10} If you place \$620 in a savings account that earns 1.3\% annual interest, compounded monthly, find the amount that you have after 8~years. \pspace
+
+\sol We know that if $P$ dollars accumulating interest at an annual interest rate of $r$, compounded $k$ times year, then the amount after $t$ years is $P \left(1 + \frac{r}{k} \right)^{kt}$. The initial amount of money is $P= \$620$. The annual interest rate is $r= 0.013$, compounded each month, i.e. $k= 12$ times per year. Then after $t= 8$ years, we have\dots
+	\[
+	\$620 \left(1 + \dfrac{0.013}{12} \right)^{12 \cdot 8}= \$620 (1.0010833)^{96}= \$620(1.1095344) \approx \$687.91
+	\]
+Therefore, the amount in the account after 8~years is \$687.91. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose that you take out a loan for \$1,500 at 7.1\% annual interest, compounded daily, for a period of 2~years. Find the amount of interest that you pay on the loan. \pspace
+
+\sol We know that if $P$ dollars accumulating interest at an annual interest rate of $r$, compounded $k$ times year, then the amount after $t$ years is $P \left(1 + \frac{r}{k} \right)^{kt}$. The initial amount of money is $P= \$1500$. The annual interest rate is $r= 0.071$, compounded each day, i.e. $k= 365$ times per year. Then after $t= 2$ years, we have\dots
+	\[
+	\$1500 \left(1 + \dfrac{0.071}{365} \right)^{365 \cdot 2}= \$1500 (1.00019452)^{730}= \$1500(1.15256) \approx \$1728.84
+	\]
+Therefore, the owed on the loan after 4~years is \$1,728.84. But because the original amount of the loan was \$1,500, the rest must be interest. Therefore, one pays $\$1,728.84 - \$1,500= \$228.84$ in interest. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose that you plan on saving \$3,000 to put down on a car. You place \$2,600 into an account which earns 2\% annual interest, compounded quarterly. How long until you have enough money in the account to put down for the car? \pspace
+
+\sol We know that if $P$ dollars accumulating interest at an annual interest rate of $r$, compounded $k$ times year, then the amount of years, $t$, required to reach $F$~dollars is $t= \frac{\ln(F/P)}{k \ln(1+ r/k)}$. The initial amount of money is $P= \$2600$. The annual interest rate is $r= 0.02$, compounded each quarter, i.e. $k= 4$ times per year. The amount desired is $F= \$3000$. We then have\dots
+	\[
+	\dfrac{\ln(\$3000/\$2600)}{4 \ln(1 + 0.02/4)}= \dfrac{\ln(1.15385)}{4 \ln(1.005)}= \dfrac{\ln(1.15385)}{4(0.00498754)}= \dfrac{0.143104}{0.0199502}= 7.173
+	\]
+Therefore, the amount of time required to save \$2,600 is 7.173~years, i.e. 7~years, 2~months, and 2.31~days. 
+
+
+\end{document}
