@@ -24,11 +24,45 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item We know that an integer $n$ is even if there exists $k \in \mathbb{Z}$ such that $n= 2k$. Because $-484= 2(-242)$, we know that $k$ is even. \pspace
+
+\item An odd integer is an integer that is not even, i.e. $n$ is odd if there does not exist an integer $k$ such that $n= 2k$. If there were such a $k$ for 151, we would have $151= 2k$. But this implies that $k= \frac{151}{2} \notin \mathbb{Z}$, a contradiction. Therefore, 151 cannot be even so that 151 is odd. Alternatively, we know that an integer $n$ is odd if there exists $k \in \mathbb{Z}$ such that $n= 2k + 1$. Observe that $151= 2(75) + 1$. Therefore, 151 is odd. \pspace
+
+\item We have\dots
+	\[
+	\begin{tikzpicture}
+	\node at (-0.15,0.1) {$360$};
+	\draw[line width=0.03cm] (-0.4,-0.1) -- (-0.8,-0.5);
+	\node at (-0.8,-0.8) {$10$};
+	\draw[line width=0.03cm]  (0.1,-0.1) -- (0.5,-0.5);
+	\node at (0.5,-0.8) {$36$};
+		
+	\draw[line width=0.03cm] (-0.8,-1) -- (-1.2,-1.6);
+	\node at (-1.2,-1.8) {$2$};
+	\draw[line width=0.03cm] (-0.8,-1) -- (-0.6,-1.6);
+	\node at (-0.6,-1.8) {$5$};
+	
+	\draw[line width=0.03cm] (0.5,-1) -- (0.1,-1.6);
+	\node at (0.1,-1.8) {$6$};
+	\draw[line width=0.03cm] (0.5,-1) -- (0.8,-1.6);
+	\node at (0.8,-1.8) {$6$};
+	
+	\draw[line width=0.03cm] (0,-2.0) -- (-0.2,-2.4);
+	\node at (-0.2,-2.6) {$2$};
+	\draw[line width=0.03cm] (0.2,-2.0) -- (0.20,-2.4);
+	\node at (0.20,-2.6) {$3$};
+	
+	\draw[line width=0.03cm] (0.8,-2.0) -- (0.7,-2.4);
+	\node at (0.7,-2.6) {$2$};
+	\draw[line width=0.03cm] (0.8,-2.0) -- (1.1,-2.4);
+	\node at (1.1,-2.6) {$3$};
+	\end{tikzpicture}
+	\] 
+Therefore, $360= 2^3 \cdot 3^2 \cdot 5$. \pspace
+
+\item We have $45!= 45 \cdot 44 \cdot 43 \cdot \cdots \cdot 2 \cdot 1$. Therefore, by Euclid's Theorem, if $p \mid 45!$, then $p \mid k$, where $1 \leq k \leq 45$. But then $p$ is a divisor of one of the integers from 1 to 45. Conversely, because each prime divisor of $k$, where $1 \leq k \leq 45$, occurs as an integer in the product $45!$, we know that each such prime divisor occurs. Therefore, $p \mid 45!$ if and only if it is a prime number less than 45. The prime numbers less than 45 are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, and 43. 
+
+\item Because $n^4 - 9= (n^2 - 3)(n^2 + 3)$, if $n^4 - 9$ is prime, then one of $n^2 - 3$ or $n^2 + 3$ is $\pm 1$. Clearly, $n^2 + 3 \geq \pm 1$. Therefore, it must be that $n^2 - 3= \pm 1$, i.e. $n^2= 4$ or $n^2= 2$. The latter case implies $n= \pm \sqrt{2}$, which is not an integer. In the former, we have $n= \pm 2$. We can check that if $n= \pm 2$, then $n^4 - 9= 7$, which is prime. Conversely, if $n \neq \pm 2$, then $n^2 - 3 \neq \pm 1$ and $n^2 + 3 \geq 1$ so that $(n^2 - 3)(n^2 + 3)= n^4 - 9$ is not prime. Therefore, $n^4 - 9$ is prime when $n= \pm 2$, and is composite otherwise. 
 \end{enumerate}
 
 
@@ -151,8 +185,36 @@ Therefore, $\lcm(25, 60)= 300$. \pspace
 	\lcm(196, 1320)= \dfrac{196 \cdot 1320}{\gcd(196, 1320)}= \dfrac{258720}{4}= 64680
 	\] \pspace
 
-\item If $\gcd(a, b)= p$ is prime, then we know that $p \mid a$ and $p \mid b$. But then we can write $a= Ap^r$ and $b= Bp^s$, where $A, B, r, s \in \mathbb{Z}$, $\gcd(A, p)= 1$, $\gcd(B, p)= 1$, and $r, s \geq 1$. Clearly, we cannot have $r, s \geq 2$ simultaneously; otherwise, we would have $\gcd(a, b)= \gcd(Ap^r, Bp^s) \geq p^2$, a contradiction. Therefore, one of $r$ or $s$ is 1. By possibly relabeling, we suppose that $a= Ap$ and $b= Bp^s$, where $s \geq 1$. \pspace
+\item If $\gcd(a, b)= p$ is prime, then we know that $p \mid a$ and $p \mid b$. But then we can write $a= Ap^r$ and $b= Bp^s$, where $A, B, r, s \in \mathbb{Z}$, $\gcd(A, p)= 1$, $\gcd(B, p)= 1$, and $r, s \geq 1$. Clearly, we cannot have $r, s \geq 2$ simultaneously; otherwise, we would have $\gcd(a, b)= \gcd(Ap^r, Bp^s) \geq p^2$, a contradiction. \pspace
+
+Then we have $\gcd(a^2, b)= \gcd(A^2 p^{2r}, Bp^s)= p^{\min(2r, s)}$. Because $r, s \geq 1$ and one of $r, s$ is 1, we know that $\min(2r, s) \in \{ 1, 2\}$. Therefore, $\gcd(a^2, b) \in \{ p, p^2 \}$. \pspace
+
+Similarly, we have $\gcd(a, b^2)= \gcd(A p^r, B^2p^{2s})= p^{\min(r, 2s)}$. Because $r, s \geq 1$ and one of $r, s$ is 1, we know that $\min(r, 2s) \in \{ 1, 2\}$. Therefore, $\gcd(a, b^2) \in \{ p, p^2 \}$. \pspace
+
+We also have $\gcd(a^2, b^2)= \gcd(A^2 p^{2r}, B^2 p^{2s})= p^{\min(2r, 2s)}= p^{2 \min(r, s)}$. Because $r, s \geq 1$ and one of $r, s$ is 1, we know $2 \min(r, s)= 2 \cdot 1= 2$. Therefore, $\gcd(a^2, b^2)= p^2$. \pspace
+
+Finally, we have $\gcd(a^2, b^3)= \gcd(A^2 p^{2r}, B^3 p^{3s})= p^{\min(2r, 3s)}$. Because $r, s \geq 1$ and one of $r, s$ is 1, we know $\min(2r, 3s) \in \{ 2, 3 \}$. Therefore, $\gcd(a^2, b^3) \in \{ p^2, p^3 \}$. 
 \end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
