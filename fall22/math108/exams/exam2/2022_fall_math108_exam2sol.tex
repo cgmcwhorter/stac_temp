@@ -1,0 +1,141 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 2}
+\renewcommand{\term}{Fall -- 2022}
+\newcommand{\examdate}{11/10/2022}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Researchers studying changing viewpoints for youths in education took a survey of 1,001 students in middle school. The researchers asked the students what they believed was the most useful thing in school: having high grades, being popular, or athletic ability. The results, broken down by type of school, are found below. \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{| l || c | c | c || c |} \hline 
+	& Public & Private & Charter & Total \\ \hline \hline
+	Grades & 87 & 115 & 82 & 284 \\ \hline
+	Popularity & 165 & 91 & 177 & 433 \\ \hline
+	Athleticism & 102 & 88 & 94 & 284 \\ \hline \hline
+	Total & 354 & 294 & 353 & 1001 \\ \hline
+	\end{tabular}
+	\end{table} \par
+Assuming that this survey is representative of public, private, and charter schools as a whole, determine\dots
+
+\begin{enumerate}[(a)]
+\item \dots the percentage of students that attend private schools. \pvspace{0.3cm}
+	\[
+	P(\text{private})= \dfrac{294}{1001} \approx 0.2937 \squiggle 29.37\%
+	\] \pvspace{0.3cm}
+
+\item \dots the percentage of students that believe grades are the most useful thing. \pvspace{0.3cm}
+	\[
+	P(\text{grades})= \dfrac{284}{1001} \approx 0.2837 \squiggle 28.37\%
+	\] \pvspace{0.3cm}
+
+\item \dots the percentage of students that are in charter schools and believe popularity is the most useful thing. \pvspace{0.3cm}
+	\[
+	P(\text{charter and popularity})= \dfrac{177}{1001} \approx 0.1768 \squiggle 17.68\%
+	\] \pvspace{0.3cm}
+
+\item \dots the percentage of students in public schools that believe athleticism is the most useful thing. \pvspace{0.3cm}
+	\[
+	P(\text{athleticism} \;|\; \text{public})= \dfrac{102}{354} \approx 0.2881 \squiggle 28.81
+	\] \pvspace{0.3cm}
+
+\item \dots the percentage of students in public school, private school, or believe that athleticism is the most important thing. \pvspace{0.3cm}
+	\[
+	\hspace{-1.2cm} P(\text{public or private or athleticism})= \dfrac{354 + 294 + 284 - 102 - 88}{1001}= \dfrac{742}{1001} \approx 0.7413 \squiggle 74.13\%
+	\]
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[10] Several medical researchers believe that `genetic drift' is causing the average cholesterol levels in adults to drift upwards. Hence, previously used measurements of `high cholesterol' may be too low. The researchers measured the cholesterol levels of 265~individuals and found a sample average of 194.1~mg/dL. If cholesterol levels in adults have a standard deviation of 3.8~mg/dL, construct a 92\% confidence interval for the average cholesterol level in adults. \pvspace{1.5cm}
+
+{\itshape Because the sample size of 265~individuals is sufficiently large, we know that the Central Limit Theorem applies. The underlying population standard deviation is $\sigma= 3.8$~mg/dL. We have a sample average of $\overline{x}= 194.1$~mg/dL on a sample size of $n= 265$~individuals. We require a $z$-score that corresponds to $92\% + \frac{100\% - 92\%}{2}= 92\% + 4\%= 96\%$. But then we have $z^* \approx 1.75$. But then we have\dots
+	\[
+	\begin{aligned}
+	\overline{x} \qquad&\pm\qquad z^* \dfrac{\sigma}{\sqrt{n}} \\[0.3cm]
+	194.1 \text{ mg/dL} \qquad&\pm\qquad 1.75 \cdot \dfrac{3.8 \text{ mg/dL}}{\sqrt{265}} \\[0.3cm]
+	194.1 \text{ mg/dL} \qquad&\pm\qquad 1.75 \cdot 0.233 \text{ mg/dL} \\[0.3cm]
+	194.1 \text{ mg/dL} \qquad&\pm\qquad 0.408 \text{ mg/dL} 
+	\end{aligned}
+	\] \pspace
+Note that $194.1 \text{ mg/dL} - 0.408 \text{ mg/dL} \approx 193.7 \text{ mg/dL}$ and $194.1 \text{ mg/dL} + 0.408 \text{ mg/dL} \approx 194.5 \text{ mg/dL}$. \pspace
+
+Therefore, we are 92\% confident that the average adult blood pressure is between 193.7~mg/dL and 194.5~mg/dL. 
+}
+
+% Question 1
+\newpage
+\question binom
+
+% Question 1
+\newpage
+\question normal
+
+% Question 1
+\newpage
+\question tree
+
+% Question 1
+\newpage
+\question normal approx
+
+% Question 1
+\newpage
+\question regression
+
+% Question 1
+\newpage
+\question clt
+
+% Question 1
+\newpage
+\question raw prob
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+\end{document}

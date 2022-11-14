@@ -1,0 +1,200 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{11: Due 11/04}{There are ﬁve elementary arithmetical operations: addition, subtraction, multiplication, division, and modular forms.}{Martin Eichler}
+
+% Problem 1
+\problem{10} Showing all your steps, compute the following:
+	\begin{2enumerate}
+	\item $(15 + 14) \mod 6$
+	\item $(8 - 17) \mod 5$
+	\item $-(1 + 8) \mod 3$
+	\item $(20 - 11) \mod 8$
+	\item $(9 + 7) \mod 4$
+	\item $14(5) \mod 6$
+	\item $2(3) \mod 7$
+	\item $-7(4) \mod 9$
+	\item $(-3)^3 \mod 4$
+	\item $6^2 \mod 5$
+	\end{2enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(15 + 14) \equiv (3 + 2) \equiv 5 \mod 6
+	\]
+
+\item 
+	\[
+	(8 - 17) \equiv -9 \equiv 1 \mod 5
+	\]
+
+\item 
+	\[
+	-(1 + 8) \equiv -9 \equiv 0 \mod 3
+	\]
+
+\item 
+	\[
+	(20 - 11) \equiv 9 \equiv 1 \mod 8
+	\]
+
+\item 
+	\[
+	(9 + 7) \equiv 16 \equiv 0 \mod 4
+	\]
+
+\item 
+	\[
+	14(5) \equiv 2(5) \equiv 10 \equiv 4 \mod 6
+	\]
+
+\item 
+	\[
+	2(3) \equiv 6 \mod 7
+	\]
+
+\item 
+	\[
+	-7(4) \equiv 2(4) \equiv 8 \mod 9
+	\]
+
+\item 
+	\[
+	(-3)^3 \equiv -27 \equiv 1 \mod 4
+	\]
+
+\item 
+	\[
+	6^2 \equiv 1^2 \equiv 1 \mod 5
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider arithmetic modulo 4. 
+	\begin{enumerate}[(a)]
+	\item List two positive elements and two negative elements of $[0]$ and $[3]$. 
+	\item Choose elements $x \in [1]$ and $y \in [3]$ with $x, y > 10$ and show that $[x] + [y]= [0]$; that is, use the division algorithm to write $x= 4m + r_x$ and $y= 4n + r_y$ and show $[x] + [y]= [r_x] + [r_y]= [0]$.  
+	\item Choose elements $x, y \in [2]$ with $x, y > 10$ and show that $[x] \cdot [y]= [0]$; that is, use the division algorithm to write $x= 4m + r_x$ and $y= 4n + r_y$ and show $[x] \cdot [y]= [r_x] \cdot [r_y]= [0]$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have $4, 8 \in [0]$ and $-4, -8 \in [0]$, and we have $3, 7 \in [3]$ and $-1, -5 \in [3]$. Generally, observe that $[0]= \{ \ldots, -12, -8, -4, 0, 4, 8, 12, \ldots \}$ and that the elements of $[0]$ are of the form $4k$ for some $k \in \mathbb{Z}$. Furthermore, observe that $[3]= \{ \ldots, -9, -5, -1, 3, 7, 11, \ldots \}$ and that the elements of $[3]$ are of the form $4k + 3$ for some $k \in \mathbb{Z}$. \pspace
+
+\item Observe that $4(5) + 1= 21 \in [1]$ and $4(4) + 3= 19 \in [3]$. But then we have\dots
+	\[
+	21 + 19 \equiv (4 \cdot 5 + 1) + (4 \cdot 4 + 3) \equiv 4(5 + 4) + (1 + 3) \equiv 0 + 4 \equiv 0 \mod 4
+	\]
+Generally, if $x \in [1]$, then $x= 4k + 1$ for some $k \in \mathbb{Z}$, and if $y \in [3]$, then $y= 4j + 3$ for some $j \in \mathbb{Z}$. But then\dots
+	\[
+	x + y \equiv (4k + 1) + (4j + 3) \equiv 4(k + j) + (1 + 3) \equiv 0 + 4 \equiv 0
+	\]
+
+\item Observe that $4(5) + 2= 22 \in [2]$ and $4(8) + 2= 34 \in [2]$. But then we have\dots
+	\[
+	22 \cdot 34 \equiv (4 \cdot 5 + 2) \cdot (4 \cdot 8 + 2) \equiv 4(160) + 4 (10) + 4(16) + 2 \cdot 2 \equiv 0 + 0 + 0 + 4 \equiv 0 \mod 4
+	\]
+Generally, if $x, y \in [2]$, then $x= 4k + 2$ and $y= 4j + 2$ for some $k, j \in \mathbb{Z}$. But then we have\dots
+	\[
+	x \cdot y \equiv (4k + 2) \cdot (4j + 2) \equiv 4(4kj) + 4(2k) + 4(2j) + 2 \cdot 2 \equiv 0 + 0 + 0 + 4 \equiv 0 \mod 4
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, complete the following: 
+	\begin{enumerate}[(a)]
+	\item Compute $\phi(7)$, $\phi(11)$, and $\phi(131)$.
+	\item Compute $\phi(8)$, $\phi(9)$, and $\phi(49)$. 
+	\item Compute $\phi(360)$.
+	\item How many integers $0, 1, 2, \ldots, 359$ are invertible modulo 360? Explain. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item If $p$ is prime, we know that $\phi(p)= p - 1$. But then we have\dots
+	\[
+	\begin{aligned}
+	\phi(7)&= 7 - 1= 6 \\
+	\phi(11)&= 11 - 1= 10 \\
+	\phi(131)&= 131 - 1= 130 
+	\end{aligned}
+	\]
+
+\item If $p$ is prime and $k \geq 1$, we know that $\phi(p^k)= p^{k - 1} (p - 1)$. But then we have\dots
+	\[
+	\begin{aligned}
+	\phi(8)&= \phi(2^3)= 2^2(2 - 1)= 4 \cdot 1= 4 \\
+	\phi(9)&= \phi(3^2)= 3^1(3 - 1)= 3 \cdot 2= 6 \\
+	\phi(49)&= \phi(7^2)= 7^1(7 - 1)= 7 \cdot 6= 42
+	\end{aligned}
+	\]
+
+\item We know that if $\gcd(a, b)= 1$, then $\phi(ab)= \phi(a) \cdot \phi(b)$. But then using the fact that if $p$ is prime and $k \geq 0$, then $\phi(p^k)= p^{k - 1} (p - 1)$, and the fact that $360= 2^3 \cdot 3^2 \cdot 5$, we have\dots
+	\[
+	\phi(360)= \phi(2^3 \cdot 3^2 \cdot 5)= \phi(2^3) \cdot \phi(3^2) \cdot \phi(5)= 2^2(2 - 1) \cdot 3^1(3 - 1) \cdot (5 - 1)= 4 \cdot 6 \cdot 4= 96
+	\]
+
+\item If $a \in \{ 0, 1, \ldots, 359 \}$, then $a$ is invertible mod 360, i.e. $a^{-1}$ exists, if and only if $\gcd(a, 360)= 1$. Therefore, we need to count the number of integers $0 \leq k \leq 359$ that are relatively prime to 360. However, $\phi(n)$ counts the number of integers $0 \leq k \leq n$ that are relatively prime to $n$. From (c), we know that $\phi(360)= 96$. Therefore, there are 96 integers between 0 and 359, inclusive, that are invertible modulo 360. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Being sure to fully justify your responses, answer the following:
+	\begin{enumerate}[(a)]
+	\item Is 7 invertible modulo 15? Explain. 
+	\item Prove your claim in (a) by finding an inverse for 7 modulo 15 or showing that there is no inverse of 7 modulo 15. 
+	\item Is 2 invertible modulo 6? Explain.
+	\item Prove your claim in (c) by finding an inverse for 2 modulo 6 or showing that there is no inverse of 2 modulo 6.
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know that $7^{-1}$ exists modulo 15 if and only if $\gcd(7, 15)= 1$. Because $\gcd(7, 15)= 1$, we know that 7 is invertible modulo 15. \pspace
+
+\item Observe that $7(13) \equiv 91 \equiv 1$~mod 15. Therefore, $7^{-1} \equiv 13$~mod 15. \pspace
+
+\item We know that $2^{-1}$ exists modulo 6 if and only if $\gcd(2, 6)= 1$. Because $\gcd(2, 6)= 2 \neq 1$, we know that 2 is not invertible modulo 6. \pspace
+
+\item We know that 2 is not invertible modulo 6 as\dots
+	\[
+	\begin{aligned}
+	2 \cdot 0 \equiv 0 \mod 6 \\
+	2 \cdot 1 \equiv 2 \mod 6 \\
+	2 \cdot 2 \equiv 4 \mod 6 \\
+	2 \cdot 3 \equiv 6 \equiv 0 \mod 6 \\
+	2 \cdot 4 \equiv 8 \equiv 2 \mod 6 \\
+	2 \cdot 5 \equiv 10 \equiv 4 \mod 6
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{12: Due 11/04}{Algebra is the intellectual instrument which has been created for rendering clear the quantitative aspects of the world.}{Alfred North Whitehead}
+
+% Problem 1
+\problem{10} Showing all your work, complete the following:
+	\begin{enumerate}[(a)]
+	\item Find the last digit of $3^{300}$.
+	\item Find the last two digits of $13^{100}$.
+	\item Fermat's Little Theorem states that if $p$ is prime, then $a^p \equiv a \mod p$. Verify this claim when $p= 5$ and $a= 3$. 
+	\item A generalization of Fermat's Little Theorem states that $a^{\varphi(n)} \equiv 1 \mod n$ if $a$ is coprime to $n$, where $\varphi(n)$ is the Euler Phi function. Verify this claim when $p= 3$ and $a= 8$. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item Compute 147 modulo 3. 
+	\item Compute 147 modulo 3 by writing $147= 1 \cdot 100 + 4 \cdot 10 + 7 \cdot 1$.
+	\item Compute $a_2a_1a_0$ modulo 3 by writing $a_2a_1a_0= a_2 \cdot 100 + a_1 \cdot 10 + a_0 \cdot 1$. When is $a_2a_1a_0$ divisible by 3? Explain.
+	\item Using the previous parts, give a necessary and sufficient condition for an integer to be divisible by 3. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use the Chinese Remainder Theorem to solve the following system of linear congruences
+	\[
+	\begin{aligned}
+	2x &\equiv 1 \mod 3 \\
+	x - 3&\equiv 0 \mod 4 \\
+	3x + 2&\equiv 4 \mod 5
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Show that there are no integer solutions to $x^3 + 7y^2= 5$. 
+
+
+\end{document}

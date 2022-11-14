@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -20,6 +20,8 @@
 	% Ellipses
 	\draw[line width=0.03cm] (0,0) circle (1 and 2);
 	\draw[line width=0.03cm] (5,0) circle (1 and 2);
+	
+	\draw[line width= 0.04cm,->,red] (0,-0.75) -- (4.9,-0.5);
 	
 	% Nodes
 	\draw[fill=black] (0,1.5) circle (0.07);
@@ -39,7 +41,7 @@
 	\draw[line width=0.04cm,->] (0,0.75) -- (4.9,-1.5);
 	\draw[line width=0.04cm,->] (0,0) -- (4.9,1.5);
 	\draw[line width=0.04cm,->] (0,-1.5) -- (4.9,0.5);
-
+	
 	
 	% Labels
 	\node at (-0.3,1.5) {$1$};
@@ -60,6 +62,17 @@
 \item Add an arrow to the diagram so that $f(x)$ is a surjective function.
 \item Identify the domain, codomain, and range for $f(x)$. 
 \item Is $f(x)$ an injective function? Explain why or why not. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item A function must be defined on its entire domain. Because the domain of $f(x)$ is the set $\{ 1, 2, 3, 4, 5 \}$, $f(4)$ need be defined for $f(x)$ to be a function. \pspace
+
+\item For $f(x)$ to be a surjective function, we first need assure that $f(x)$ is a function, i.e. we need to define $f(4)$. We can choose any one of $\{ a, b, c, d \}$, i.e. $f(4) \in \{ a, b, c, d \}$. For $f(x)$ to be surjective, we need $\im f= \{ a, b, c, d \}$. As defined above, $\im f= \{ a, b, c, d \}$. But then defining $f(4)$ to be in $\{ a, b, c, d \} \setminus \im f= \{ c \}$, i.e. $f(4):= c$ (given by the red arrow in the diagram above), $f(x)$ is then a surjective function. \pspace
+
+\item The domain of $f(x)$ is $\{ 1, 2, 3, 4, 5 \}$. The codomain of $f(x)$ is $\{ a, b, c, d \}$. The range of the original `function' was $\{ a, b, d \}$, while the range of the $f(x)$ defined is $\{ a, b, c, d \}$. \pspace
+
+\item The function $f(x)$ is not injective as $f(1)= b= f(5)$ but $1 \neq 5$. 
 \end{enumerate}
 
 
@@ -75,19 +88,19 @@
 
 \noindent {\itshape Proof.} We know that if $X \setminus f^{-1}(B)= \varnothing$, then $X \setminus f^{-1}(B) \subseteq f^{-1}(Y \setminus B)$. Assume that \pspace
 
-$X \setminus f^{-1}(B)\neq \varnothing$. To show that $X \setminus f^{-1}(B) \subseteq f^{-1}(Y \setminus B)$, we need to show that if \underline{\hspace{3cm}}, \pspace
+$X \setminus f^{-1}(B)\neq \varnothing$. To show that $X \setminus f^{-1}(B) \subseteq f^{-1}(Y \setminus B)$, we need to show that if \uans{0.3cm}{$x \in X \setminus f^{-1}(B)$}, \pspace
 
-then \underline{\hspace{3cm}}. \pspace
+then \uans{0.17cm}{$x \in f^{-1}(Y \setminus B)$}. \pvspace{0.7cm}
 
-Let $x \in X \setminus f^{-1}(B)$. But then we know that \underline{\hspace{3cm}} and $x \notin$ \underline{\hspace{3cm}}. Because \pspace
+Let $x \in X \setminus f^{-1}(B)$. But then we know that \uans{0.95cm}{$x \in X$} and $x \notin$ \uans{0.85cm}{$f^{-1}(B)$}. Because \pspace
 
-$x \notin$ \underline{\hspace{3cm}}, we know that $f(x) \notin$ \underline{\hspace{3cm}}. It is clear that $f(x) \in Y$. But then \pspace
+$x \notin$ \uans{0.85cm}{$f^{-1}(B)$}, we know that $f(x) \notin$ \uans{1.35cm}{$B$}. It is clear that $f(x) \in Y$. But then \pspace
 
-\underline{\hspace{3cm}} and $f(x) \notin$ \underline{\hspace{3cm}}. This shows that $f(x) \in$ \underline{\hspace{3cm}}. \pspace
+\uans{0.72cm}{$f(x) \in Y$} and $f(x) \notin$ \uans{1.35cm}{$B$}. This shows that $f(x) \in$ \uans{1cm}{$Y \setminus B$}. \pspace
 
-This shows that $f(x)$ is in the preimage of $Y \setminus B$. But then we know that $x \in$ \underline{\hspace{3cm}}. \pspace
+This shows that $f(x)$ is in the preimage of $Y \setminus B$. But then we know that $x \in$ \uans{0.55cm}{$f^{-1}(Y \setminus B)$}. \pspace
 
-But then if $x \in$ \underline{\hspace{3cm}}, then $x \in$ \underline{\hspace{3cm}}. Therefore, $X \setminus f^{-1}(B) \subseteq f^{-1}(Y \setminus B)$.
+But then if $x \in$ \uans{0.53cm}{$X \setminus f^{-1}(B)$}, then $x \in$ \uans{0.55cm}{$f^{-1}(Y \setminus B)$}. Therefore, $X \setminus f^{-1}(B) \subseteq f^{-1}(Y \setminus B)$.
 
 
 
@@ -101,7 +114,25 @@ But then if $x \in$ \underline{\hspace{3cm}}, then $x \in$ \underline{\hspace{3c
 	\item Without referencing the graph of $f$, use the definition of decreasing to show that $f(x)$ is not a decreasing function on $\mathbb{R}$ by giving a counterexample. 
 	\item Determine whether or not $3 \in \text{im } f$. If $3 \in \text{im } f$, find an element in the preimage of 3. If $3 \notin \text{im } f$, explain why. 
 	\item Is $f^{-1}(x)$ a function? Explain why or why not by referencing the graph of $f(x)$. Give an additional explanation of why or why not using your response in (b). 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item A function is decreasing if $f(x_2) \leq f(x_1)$ whenever $x_1 < x_2$. Observe that $0 < 1$ but $f(1)= -3 \not< -7= f(0)$. Therefore, $f(x)$ is not decreasing. [Note: We can write $f(x)= x^2 + 3x - 7= \left(x + \frac{3}{2} \right)^2 - \frac{37}{4}$. Therefore, $f(x)$ is decreasing on $(-\infty, -\frac{3}{2})$ and increasing on $(\frac{3}{2}, \infty)$.] \pspace
+
+\item If $3 \in \im f$, then there exists $x_0 \in \mathbb{R}$ such that $f(x_0)= 3$. But then we would have\dots
+	\[
+	\begin{aligned}
+	f(x_0)&= 3 \\[0.3cm]
+	x_0^2 + 3x_0 - 7&= 3 \\[0.3cm]
+	x_0^2 + 3x_0 -10&= 0 \\[0.3cm]
+	(x_0 + 5)(x_0 - 2)&= 0 
+	\end{aligned}
+	\]
+Then $x_0= -5$ or $x_0= 2$. One can easily verify that $f(-5)= f(2)= 3$. Therefore, $3 \in \im f$. \pspace
+
+\item If $f^{-1}(x)$ is a function, then given $y \in \im f$, there is a unique $x$ such that $f(x)= y$. From (b), observe that given $3 \in \im f$, $f(-5)= f(2)= 3$. Therefore, $f^{-1}(3) \in \{ -5, 2 \}$ so that, as a function, $f^{-1}(3)$ is not well defined. Therefore, $f^{-1}(x)$ is not a function. 
+\end{enumerate}
 
 
 \end{document}

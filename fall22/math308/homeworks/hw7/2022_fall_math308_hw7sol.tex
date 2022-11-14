@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -17,10 +17,23 @@
 	\begin{enumerate}[(a)]
 	\item $\{ (x, y) \colon x, y \in \mathbb{Z}, y= x^2 + 5 \}$ as a relation from $\mathbb{Z}$ to $\mathbb{Z}$
 	\item $\{ (x, y) \colon x, y \in \mathbb{R}, y= x^2 \}$ as a relation from $\mathbb{R}$ to $\mathbb{R}$
-	\item $\{ (x, y) \colon x, y \in \mathbb{Z}, y^2= x \}$ as a relation from $\mathbb{R}$ to $\mathbb{R}$
+	\item $\{ (x, y) \colon x, y \in \mathbb{R}, y^2= x \}$ as a relation from $\mathbb{R}$ to $\mathbb{R}$
 	\item $\{ (x, y) \colon x, y \in \mathbb{Z}, y= 2x + 3 \}$ as a relation from $\mathbb{Z}$ to $\mathbb{Z}$
-	\item $\{ (x, y) \colon x, y \in \mathbb{Z}, x^2 + y^2= 4 \}$ as a relation from $\mathbb{R}$ to $\mathbb{R}$
-	\end{enumerate}
+	\item $\{ (x, y) \colon x, y \in \mathbb{R}, x^2 + y^2= 4 \}$ as a relation from $\mathbb{R}$ to $\mathbb{R}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item This relation is a function. For each $x$, there is precisely one associated $y$---namely, the one obtained by evaluating $y= x^2 + 5$ for a given $x$. The image of the function is the set $\{ x^2 + 5 \;|\; x \in \mathbb{Z} \}$. The graph, $\{ (x, y) \colon x, y \in \mathbb{Z}, y= x^2 + 5 \}$, is the set of lattice points on the parabola $y= x^2 + 5$. 
+
+\item This relation is a function. For each $x$, there is precisely one associated $y$---namely, the one obtained by evaluating $y= x^2$ for a given $x$. The image of the function is the set $\{ x^2  \;|\; x \in \mathbb{R} \}$. The graph, $\{ (x, y) \colon x, y \in \mathbb{R}, y= x^2 \}$, is the set of points on the parabola $y= x^2$.  
+
+\item This relation is not a function of $x$. For instance, if $x= 4$, observe that both $(-2)^2= 4$ and $2^2= 4$ so that each $x$ is not associated to a unique $y$. The relation is a function of $y$. For each $y$, there is precisely one associated $x$---namely, the one obtained by evaluating $x= y^2$ for a given $y$. The image of the function is the set $\{ y^2 \;|\; y \in \mathbb{R} \}$. The graph, $\{ (x, y) \colon x, y \in \mathbb{R}, x= y^2 \}$, is the set of points on the `sideways' parabola $x= y^2$.  
+
+\item This relation is a function. For each $x$, there is precisely one associated $y$---namely, the one obtained by evaluating $y= 2x + 3$ for a given $x$. The image of the function is the set $\{ 2x + 3 \;|\; x \in \mathbb{Z} \}$. The graph, $\{ (x, y) \colon x, y \in \mathbb{Z}, y= 2x + 3 \}$, is the set of lattice points on the line $y= 2x + 3$. 
+
+\item This relation is neither a function of $x$ nor $y$. For instance, if $x= 1$, then $1^2 + y^2= 4$ so that $y^2= 3$, i.e. $y= \pm \sqrt{3}$. But then $x= 1$ is associated to both $y= -\sqrt{3}$ and $y= \sqrt{3}$. Similarly,  if $y= 1$, then $x^2 + 1^2= 4$ so that $x^2= 3$, i.e. $x= \pm \sqrt{3}$. But then $y= 1$ is associated to both $x= -\sqrt{3}$ and $x= \sqrt{3}$. Therefore, this relation is neither a function of $x$ nor a function of $y$. The image of $\{ (x, y) \colon x, y \in \mathbb{Z}, x^2 + y^2= 4 \}$ as a subset of $\mathbb{R}^2$ is the circle of radius 2 centered at the origin. 
+\end{enumerate}
 
 
 
@@ -29,7 +42,27 @@
 
 
 % Problem 2
-\problem{10} Define $A= \{ 3, 6, 9 \}$ and $B= \{ 3x \colon x \in \mathbb{Z} \} - \{ x \in \mathbb{Z} \colon x \leq 0, x > 10 \}$. Let $f: A \to \mathbb{Z}$ be given by $f(x)= 2x + 1$ and $g: B \to \mathbb{Z}$ be defined by $g(x)= x^3 - 18x^2 + 101x - 161$. Show that $f= g$.
+\problem{10} Define $A= \{ 3, 6, 9 \}$ and $B= \{ 3x \colon x \in \mathbb{Z} \} - \{ x \in \mathbb{Z} \colon x \leq 0, x > 10 \}$. Let $f: A \to \mathbb{Z}$ be given by $f(x)= 2x + 1$ and $g: B \to \mathbb{Z}$ be defined by $g(x)= x^3 - 18x^2 + 101x - 161$. Show that $f= g$. \pspace
+
+\sol We need to show that $f, g$ have the same domain, same codomain, and agree with each other 
+
+First, observe that we have\dots
+	\[
+	\begin{aligned}
+	B&= \{ 3x \colon x \in \mathbb{Z} \} - \{ x \in \mathbb{Z} \colon x \leq 0, x > 10 \} \\[0.3cm]
+	&= \{ \ldots, -12, -9, -6, -3, 0, 3, 6, 9, 12, \ldots \}  - \{ \ldots, -5, -4, -3, -2, -1, 0, 11, 12, 13, 14, 15, \ldots \} \\[0.3cm]
+	&= \{ 3, \; 6, \; 9 \} 
+	\end{aligned}
+	\]
+Therefore, $A= B$. Trivially, we have $\mathbb{Z}= \mathbb{Z}$. Then $f$ and $g$ have the same domain and codomain. It only remains to show that the agree on every element in their domain. 
+	\[
+	\begin{aligned}
+	f(3)&= 2(3) + 1= 6 + 1= 7 &\qquad g(3)&=  3^3 - 18(3^2) + 101(3) - 161=  27 - 162 - 303 - 161= 7 \\
+	f(6)&= 2(6) + 1= 12 + 1= 13 & g(6)&=  6^3 - 18(6^2) + 101(6) - 161=  216 - 648 + 606 - 161= 13 \\
+	f(9)&= 2(9) + 1= 18 + 1= 19 & g(9)&=  9^3 - 18(9^2) + 101(9) - 161= 729 - 1458 + 909 - 161= 19 
+	\end{aligned}
+	\]
+Now because $f$ and $g$ have the same domain, same codomain, and agree on every element in their domain, we know that $f= g$. 
 
 
 
@@ -45,7 +78,35 @@
 	\item $(g \circ f)(5)$
 	\item $(6f)(-3)$
 	\item $\left( \dfrac{f}{g} \right)(n)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(fg)(1)= f(1) \cdot g(1)= (1 - 1) \cdot \dfrac{1}{1 + 1}= 0 \cdot \dfrac{1}{2}= 0
+	\] \pspace
+
+\item 
+	\[
+	(f + g)(n)= f(n) + g(n)= 1 - n + \dfrac{n}{n + 1}= \dfrac{(1 - n)(n + 1)}{n + 1} + \dfrac{n}{n + 1}= \dfrac{1 - n^2}{n + 1} + \dfrac{n}{n + 1}= \dfrac{-n^2 + n - 1}{n + 1}
+	\] \pspace
+
+\item 
+	\[
+	(g \circ f)(5)= g(f(5))= g(1 - 5)= g(-4)= \dfrac{-4}{-4 + 1}= \dfrac{-4}{-3}= \dfrac{4}{3}
+	\] \pspace
+
+\item 
+	\[
+	(6f)(-3)= 6 f(-3)= 6 \cdot \big(1 - (-3) \big)= 6 \cdot (1 + 3)= 6 \cdot 4= 24
+	\] \pspace
+
+\item 
+	\[
+	\left( \dfrac{f}{g} \right)(n)= \dfrac{f(n)}{g(n)}= \dfrac{1 - n}{\frac{n}{n + 1}}= \dfrac{(1 - n)(n + 1)}{n}= \dfrac{1 - n^2}{n}
+	\]
+\end{enumerate}
 
 
 
@@ -62,6 +123,35 @@
 	\item $A= \mathbb{Z}$
 	\item $A= \mathbb{R}$
 	\end{enumerate}
+
+\sol Let $f(x)= |x|$. If $S$ is a set of real numbers, let $\pm |S|:= \{ \pm |s| \colon s \in S \}$. Observe that because $f(P)= \{ f(p) \colon p \in P \}$, if $P$ is a set of nonnegative real numbers, then $f(P)= P$. Moreover, because $f(N)= \{ f(n) \colon n \in N \}$, if $N$ is a set of negative real numbers, we know that $f(N)= \{ f(n) \colon n \in N \}= \{ f(|n|) \colon n \in N \}= f(|N|)= |N|$. But then given a set $S$ of real numbers, we can decompose $S= P \cup N$ into a set of nonnegative numbers, $P$, and negative numbers, $N$, respectively. But then we have $f(S)= f(P \cup N)= f(P) \cup f(N)= P \cup |N|$. 
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	f \big( [1,6] \big)= [1, 6]
+	\] \pspace
+
+\item 
+	\[
+	f \big( (-3, 4] \big)= f \big( (-3, 0) \cup [0, 4] \big)= f \big( (-3, 0) \big) \cup f \big( [0, 4] \big)= (0, 3) \cup [0, 4]= [0, 4]
+	\] \pspace
+	
+\item 
+	\[
+	f(\mathbb{N})= \mathbb{N}
+	\] \pspace
+
+\item 
+	\[
+	f(\mathbb{Z})= f(\mathbb{Z}_{< 0} \cup \mathbb{Z}_{\geq 0})= f(\mathbb{Z}_{< 0}) \cup f(\mathbb{Z}_{\geq 0})= \mathbb{Z}_+ \cup \mathbb{Z}_{\geq 0}= \mathbb{Z}_{\geq 0}
+	\] \pspace
+
+\item 
+	\[
+	f(\mathbb{R})= f(\mathbb{R}_{< 0} \cup \mathbb{R}_{\geq 0})= f(\mathbb{R}_{< 0}) \cup f(\mathbb{R}_{\geq 0})= \mathbb{R}_{> 0} \cup \mathbb{R}_{\geq 0}= \mathbb{R}_{\geq 0}
+	\]
+\end{enumerate}
 
 
 \end{document}

@@ -1,0 +1,156 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 308: Exam 2}
+\renewcommand{\term}{Fall -- 2022}
+\newcommand{\examdate}{11/18/2022}
+\newcommand{\timelimit}{`$\infty$' Minutes}
+
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Consider the `rule' $f: \mathbb{R} \to \mathbb{R}^2$ given by $t \mapsto (3\cos t, 3\sin t)$.
+	\begin{enumerate}[(a)]
+	\item Is $f(t)$ a function? Explain.
+	\item Consider $\im f \subseteq \mathbb{R}^2= \{ (x, y) \colon x, y \in \mathbb{R} \}$. If $(x, y) \in \im f$, show that $x^2 + y^2= 9$. 
+	\item Considered as a subset of $\mathbb{R}^2$, geometrically describe $\im f$. 
+	\item Can $\im f$ be given by the image of a function of $x$? What about a function of $y$? Explain. 
+	\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[10] Define functions $f, g: \mathbb{R} \to \mathbb{R}$ by $f(x)= |x + 5|$ and $g(x)= 7 - 3x$.
+	\begin{enumerate}[(a)]
+	\item Find an element in $\im f$ and also find an element in $\im g$. 
+	\item Is $-5 \in \im f$? If not, explain why, and if so, find its preimage. 
+	\item Is $12 \in \im g$? If not, explain why, and if so, find its preimage. 
+	\item Compute $f\big( [-6, 6) \big)$ and $g\big( (-6, 6] \big)$. 
+	\item Compute $f^{-1} \big( [-1,1] \big)$ and $g^{-1} \big( [-1, 1] \big)$.
+	\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[10] Define the function $f: \mathbb{R} \to \mathbb{R}$ via $x \mapsto x^2 + 5$. 
+	\begin{enumerate}[(a)]
+	\item Is $f(x)$ an injective function? If it is injective, explain why; if it is not injective, give a counterexample. 
+	\item Is $f(x)$ a surjective function? If it is surjective, explain why; if it is not surjective, give a counterexample. 
+	\item Is $f(x)$ a bijective function? Explain. 
+	\item Does $f(x)$ have in inverse function? Explain. 
+	\end{enumerate}
+
+
+
+% Question 4
+\newpage
+\question[10] A \textit{fixed point} for a function $f: \mathbb{R} \to \mathbb{R}$ is $x_0 \in \mathbb{R}$ such that $f(x_0)= x_0$. 
+	\begin{enumerate}[(a)]
+	\item Show that $-5$ is a fixed point for $f(x)= 3x + 10$.
+	\item Show that $4$ is not a fixed point for $g(x)= \dfrac{x + 4}{2 - x}$.
+	\item Find the fixed points for $h(x)= 2x^2 + 6x - 3$. 
+	\item Use the quadratic formula to show that $j(x)= x^2 - 3x + 5$ has no fixed points in $\mathbb{R}$ but does have fixed points in $\mathbb{C}$. 
+	\end{enumerate}
+
+
+
+% Question 5
+\newpage
+\question[10] Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $\displaystyle \sum_{k= -2}^3 (5 - k)$
+	\item $\displaystyle \prod_{k=1}^5 (2k -3)$ 
+	\item $\displaystyle \sum_{k=0}^{1000} (k - 7)$
+	\item $\displaystyle \sum_{k=0}^{1000} \left( \sqrt{k + 5} - \sqrt{k} \right)$
+	\item $\displaystyle \prod_{k=1}^{1000} \left(1 + \dfrac{1}{k} \right)$
+	\end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[10] Being sure to show all your work and fully justify your logic complete the following:
+	\begin{enumerate}[(a)]
+	\item Using the definition of odd/even, show that $-237$ is odd but not even.
+	\item Express $1854/17$ using the division algorithm. 
+	\item Find the prime factorization of 2040. 
+	\item Compute $\gcd(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next smallest divisor of the two given numbers. 
+	\item Compute $\lcm(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next largest multiple of the two given numbers.
+	\end{enumerate}
+
+
+
+% Question 7
+\newpage
+\question[10] Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $(2468 \cdot 3579 + 97531) \mmod 2$
+	\item $(10 - 18)^{100} \mmod 3$
+	\item $(3^{11} + 3^{10}) \mmod 4$
+	\item $(16 \cdot -7) \mmod 5$
+	\item $(-17 \cdot 13 + 145) \mmod 6$
+	\end{enumerate}
+
+
+
+% Question 8
+\newpage
+\question[10] Being sure to show all your work and fully explaining your logic, complete the following:
+	\begin{enumerate}[(a)]
+	\item What is the remainder when $2022^{2024}$ is divided by $2023$?
+	\item What are the last three digits of $2022^{50}$?
+	\item Show that working modulo two that $(x + y)^2= x^2 + y^2$. 
+	\end{enumerate}
+
+
+
+% Question 9
+\newpage
+\question[10] Let $a= 1561$ and $b= 8525$.
+	\begin{enumerate}[(a)]
+	\item Use the Euclidean algorithm to find $\gcd(a, b)$. 
+	\item Explain why $a^{-1}$ exists $\mmod b$.
+	\item Continuing your work in (a), use the extended Euclidean algorithm to compute $a^{-1}$.
+	\item Prove that your answer in (c) is correct. 
+	\end{enumerate}
+
+
+
+% Question 10
+\newpage
+\question[10] Solve the following system of congruences and show that your solution is correct:
+	\[
+	\begin{cases}
+	x + 1 \equiv 2 \mmod 3 \\
+	x \equiv 0 \mmod 5 \\
+	3x + 4 \equiv 2 \mmod 7 \\
+	1 - x \equiv 4 \mmod 11
+	\end{cases}
+	\]
+
+
+\end{questions}
+\end{document}
