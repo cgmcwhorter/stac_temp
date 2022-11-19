@@ -1,0 +1,75 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{16: Due 11/09}{From a child, I had an inordinate desire for knowledge and especially music, painting, flowers, and the sciences, algebra being one of my favorite studies.}{George Washington Carver}
+
+% Problem 1
+\problem{10} Find the line perpendicular to $y= \frac{3}{2}\, x + 6$ that passes through its $x$-intercept. \pspace
+
+\sol Because the line is perpendicular to $y= \frac{3}{2}\, x + 6$, the line has the form $y= mx + b$. The line $y= \frac{3}{2}\,x + 6$ has slope $\frac{3}{2}$. Therefore, the line has slope $m= -\frac{2}{3}$. The $x$-intercept of $y= \frac{3}{2}\,x + 6$ occurs when $y= 0$. But then we have\dots
+	\[
+	\begin{aligned}
+	y&= \frac{3}{2}\,x + 6 \\[0.3cm]
+	0&= \frac{3}{2}\,x + 6 \\[0.3cm]
+	-\frac{3}{2}\,x&= 6 \\[0.3cm]
+	-\frac{2}{3} \cdot -\frac{3}{2}\,x&= -\frac{2}{3} \cdot 6 \\[0.3cm]
+	x&= -4 
+	\end{aligned}
+	\]
+Therefore, the $x$-intercept of $y= \frac{3}{2}\,x + 6$ is $(-4, 0)$. Because the line contains the point $(-4, 0)$, we have\dots
+	\[
+	\begin{aligned}
+	y&= mx + b \\[0.3cm]
+	y&= -\frac{2}{3}\,x + b \\[0.3cm]
+	0&= -\frac{2}{3} \cdot -4 + b \\[0.3cm]
+	0&= \frac{8}{3} + b \\[0.3cm]
+	b&= -\frac{8}{3}
+	\end{aligned}
+	\]
+Therefore, the line is $y= -\frac{2}{3}\,x - \frac{8}{3}$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Solve the following equation:
+	\[
+	3(x - 1)= 1 - 8x
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	3(x - 1)&= 1 - 8x \\[0.3cm]
+	3x - 3&= 1 - 8x \\[0.3cm]
+	11x - 3&= 1 \\[0.3cm]
+	11x&= 4 \\[0.3cm]
+	x&= \frac{4}{11}
+	\end{aligned}
+	\]
+We can easily check/verify this solution:
+	\[
+	\begin{aligned}
+	3(x - 1)&\stackrel{?}{=} 1 - 8x \\[0.3cm]
+	3 \left( \frac{4}{11} - 1 \right)&\stackrel{?}{=} 1 - 8 \cdot \frac{4}{11} \\[0.3cm]
+	3 \left( \dfrac{4}{11} - \dfrac{11}{11} \right)&\stackrel{?}{=} 1 - \dfrac{32}{11} \\[0.3cm]
+	3 \cdot \dfrac{-7}{11}&\stackrel{?}{=} \dfrac{11}{11} - \dfrac{32}{11} \\[0.3cm]
+	-\dfrac{21}{11}&= -\dfrac{21}{11} \\[0.3cm]
+	&\;\text{\cmark}
+	\end{aligned}
+	\]
+
+
+\end{document}

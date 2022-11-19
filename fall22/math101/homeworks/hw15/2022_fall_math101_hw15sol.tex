@@ -1,0 +1,44 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{15: Due 11/09}{It is hard to convince a high-school student that he will encounter a lot of problems more difficult than those of algebra and geometry.}{E.W. Howe}
+
+% Problem 1
+\problem{10} Find the equation of the line passing through the point $(-1, 8)$ and perpendicular to the $x$-axis. \pspace
+
+\sol Because the line is perpendicular to the $x$-axis (which is horizontal), the line must be vertical. But then the line must be of the form $x= c$ for some $c$. Because the line contains the point $(-1, 8)$, it must be that $x= -1$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Find the equation of the line through $(-5, 4)$ that is perpendicular to the line $y= 5 - 3x$. \pspace
+
+\sol Because the line is perpendicular to the line $y= 5 - 3x$, the line must have the form $y= mx + b$. The line is perpendicular to $y= 5 - 3x$, which has slope $-3$. The line must then have slope $m= - \left( \frac{1}{-3} \right)= \frac{1}{3}$. Because the line contains the point $(-5, 4)$, it must be that $x= -5$ and $y= 4$ satisfy the equation $y= mx + b$. But then\dots
+	\[
+	\begin{aligned}
+	y&= mx + b \\[0.3cm]
+	y&= \frac{1}{3}\,x + b \\[0.3cm]
+	4&= \frac{1}{3} \cdot -5 + b \\[0.3cm]
+	4&= \frac{-5}{3} + b \\[0.3cm]
+	b&= 4 + \frac{5}{3} \\[0.3cm]
+	b&= \frac{12}{3} + \frac{5}{3} \\[0.3cm]
+	b&= \frac{17}{3}
+	\end{aligned}
+	\]
+Therefore, the line is $y= \frac{1}{3}\,x + \frac{17}{3}$. 
+
+
+\end{document}

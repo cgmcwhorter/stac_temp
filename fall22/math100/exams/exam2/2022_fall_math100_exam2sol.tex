@@ -10,7 +10,7 @@
 \newcommand{\examdate}{11/14/2022}
 \newcommand{\timelimit}{85 Minutes}
 
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -34,13 +34,39 @@
 	\begin{enumerate}[(a)]
 	\item Find the number of miles on the car after 4~years.
 	\item How long until the car's milage is 100,000~miles?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item The number of miles on the car after $t= 4$ years is $M(4)$. We have\dots
+	\[
+	M(4)= 8500(4) + 48000= 34000 + 48000= 82000
+	\]
+Therefore, after 4~years, the car has 82,000~miles on it. \pspace
+
+\item If the millage on the car is 100,000~miles, then we have $M(t)= 100000$. But then\dots
+	\[
+	\begin{aligned}
+	M(t)&= 100000 \\[0.3cm]
+	8500t + 48000&= 100000 \\[0.3cm]
+	8500t&= 520000 \\[0.3cm]
+	t&\approx 6.12
+	\end{aligned}
+	\]
+Therefore, the car will have 100,000~miles on it after 6.12~years, i.e. 6~years and 43.8~days.  
+\end{enumerate}
+}
 
 
 
 % Question 2
 \newpage
-\question[10] Suppose that a worker at a local warehouse is paid an hourly wage of \$20/hour. Explain why the worker's net salary is a linear function. 
+\question[10] Suppose that a worker at a local warehouse is paid an hourly wage of \$20/hour. Explain why the worker's net salary is a linear function. \pspace
+
+{\itshape
+\sol Because the worker's hourly wage is fixed, their net salary has a constant rate of change. But then their net salary must be a linear function of the number of hours that they work. 
+}
 
 
 
@@ -50,13 +76,29 @@
 	\begin{enumerate}[(a)]
 	\item Find and interpret the slope of $O(d)$ in the context of the problem. 
 	\item Find and interpret the $y$-intercept of $O(d)$ in the context of the problem. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+{\itshape First, observe that $O(d)= 180000 - 19000d$ has the form $y= mx + b$ with $m= -19000$ and $b= 180000$. 
+\begin{enumerate}[(a)]
+\item The slope of $O(d)$ is $m= -19000$. Thinking of $m$ as $m= \frac{\Delta O}{\Delta d}= \frac{-19000}{1}$, we can see that for each additional day, the amount of oil in the tank decreases by $-19000$; that is, the oil company sells 19,000 gallons of oil in the tank each day. \pspace
+
+\item The $y$-intercept of $O(d)$ is $b= 180000$. This is the amount of oil in the tank at $d= 0$. Therefore, at the start of the sale, there was 180,000~gallons of oil in the tank. 
+\end{enumerate}
+}
 
 
 
 % Question 4
 \newpage
-\question[10] If the CPI was \$284.581 last year and this year it is \$301.779, find the inflation rate from last year to this year. 
+\question[10] If the CPI was \$284.581 last year and this year it is \$301.779, find the inflation rate from last year to this year. \pspace
+
+{\itshape
+\sol We have\dots \par\vspace{0.1cm}
+	\[
+	\dfrac{\$301.779}{\$284.581} \approx 1.06043= 1 + 0.06043
+	\] \pspace
+Therefore, the inflation rate was 6.043\%. 
+}
 
 
 
@@ -75,25 +117,64 @@
 	35\% & \$215,951 -- \$539,900 \\ \hline
 	37\% & $\geq$ \$539,901 \\ \hline
 	\end{tabular}
-	\end{table}
+	\end{table} \pspace
+
+{\itshape 
+\sol Your taxable income is $\$72,000 - \$13,200= \$58,800$. Therefore, your federal income tax is\dots
+	\[
+	\begin{aligned}
+	\text{Income Tax}&= 0.10(\$10275 - \$0) + 0.12(\$41775 - \$10275) + 0.22(\$58800 - \$41776) \\[0.3cm]
+	&= 0.10(\$10275) + 0.12(\$31500) + 0.22(\$17024) \\[0.3cm]
+	&= \$1027.50 + \$3780 + \$3745.28 \\[0.3cm]
+	&= \$8552.78
+	\end{aligned}
+	\]
+Therefore, you pay \$8,552.78 in federal income taxes. 
+}
 
 
 
 % Question 6
 \newpage
-\question[10] If you placed \$500 into an account which earns 1.2\% annual interest, compounded semiannually, how long until there is \$600 in the account? 
+\question[10] If you placed \$500 into an account which earns 1.2\% annual interest, compounded semiannually, how long until there is \$600 in the account? \pspace
+
+{\itshape
+\sol If $P$~dollars is gaining interest at an annual interest rate $r$ each year, compounded $k$ timers per year, then the amount of time this amount $P$ takes to reach $F$ dollars is $t= \dfrac{\ln(F/P)}{k \ln(1 + r/k)}$. We have $P= \$500$, $r= 0.012$, and $F= \$600$. Because the interest is compounded semiannually, the interest is compounded twice per year, i.e. $k= 2$. Therefore, we have\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln(1 + r/k)}= \dfrac{\ln(\$600/\$500)}{2 \ln \left(1 + \frac{0.012}{2} \right)}= \dfrac{\ln(1.2)}{2 \ln(1.006)}= \dfrac{\ln(1.2)}{2(0.00598207)}= \dfrac{0.182322}{0.0119641} \approx 15.24
+	\]
+Therefore, the account will have \$600 after. 15.24~years, i.e. 15~years, 3~months, and 3.5 days. 
+}
 
 
 
 % Question 7
 \newpage
-\question[10] Suppose that you take out a loan for \$13,000 at 6.5\% annual interest, compounded monthly. How much do you owe on the loan after 3~years?
+\question[10] Suppose that you take out a loan for \$13,000 at 6.5\% annual interest, compounded monthly. How much do you owe on the loan after 3~years? \pspace
+
+{\itshape
+\sol We know that $P$~dollars gaining interest at an annual interest rate $r$ each year, compounded $k$ times per year for $t$~years is given by $P \left(1 + \dfrac{r}{k} \right)^{kt}$. We have $P= \$13000$, $r= 0.065$, and $t= 3$. Because the interest is compounded monthly, the interest is compounded 12 times per year, i.e. $k= 12$. But then we have\dots
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	&= \$13000 \left(1 + \dfrac{0.065}{12} \right)^{12 \cdot 3} \\[0.3cm]
+	&= \$13000 (1.0054167)^{36} \\[0.3cm]
+	&= \$13000 (1.214673) \\[0.3cm]
+	&\approx \$15790.75
+	\end{aligned}
+	\]
+Therefore, you owe \$15,790.75 at the end of the 3~years. 
+}
 
 
 
 % Question 8
 \newpage
-\question[10] If you invest \$5,400 in an account which earns 2.3\% annual interest, compounded quarterly, how much interest has been earned from this investment after 6~years?
+\question[10] If you invest \$5,400 in an account which earns 2.3\% annual interest, compounded quarterly, how much interest has been earned from this investment after 6~years? \pspace
+
+{\itshape
+\sol We know that $P$~dollars gaining interest at an annual interest rate $r$ each year, compounded $k$ times per year for $t$~years is given by $P \left(1 + \dfrac{r}{k} \right)^{kt}$.
+}
 
 
 
