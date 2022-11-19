@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,27 @@
 	\item Find and interpret the $y$-intercept of $O(d)$ in the context of the problem.
 	\item Find how long it will take the company to sell all the oil in the tank. 
 	\item If the company sells the oil for \$2.085/gallon, how much money do they make selling this reserve oil?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The slope of $O(d)$ is $m= -133.4= \frac{-133.4}{1}$. Interpreting $m= \frac{-133.4}{1}$ as $\frac{\Delta O}{\Delta d}$, we can see that for every additional day, the amount of oil decreases by $133.4$~tens of thousands of gallons. Therefore, the company sells 133.4~tens of thousands of gallons of oil per day. \pspace
+
+\item The $y$-intercept of $O(d)$ is $b= 1600$. The $y$-intercept occurs when $d= 0$, i.e. the first day. Therefore, the oil reserve contains 1,600~tens of thousands of gallons of oil on the first day of the sales. \pspace
+
+\item If the company has sold all the oil in the tank, the amount left in the tank, $O(d)$, is 0. But then we have\dots
+	\[
+	\begin{aligned}
+	O(d)&= 0 \\[0.3cm]
+	1600 - 133.4d&= 0 \\[0.3cm]
+	133.4d&= 1600 \\[0.3cm]
+	d&= 11.994
+	\end{aligned}
+	\] 
+Therefore, they have sold all the oil in the tank after 11.994~days. \pspace
+
+\item By (b), we know that the reserve contains 1,600~tens of thousands of gallons of oil, i.e. $1600 \cdot 10000= 16000000$~gallons of oil. Each gallon is sold for \$2.085/gallon. Therefore, the amount of revenue from selling this oil reserve is $\$2.085 \cdot 16,000,000= \$33,360,000$. 
+\end{enumerate}
 
 
 
@@ -34,7 +54,44 @@
 	\item Interpret the slope and $y$-intercept from your function in (a).
 	\item What is your prediction for the level of demand in 5~years?
 	\item Predict how many years until the demand is 400~thousand units. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know that the demand, $D(t)$, after $t$ years has the form $D(t)= mt + b$. We know that last year, i.e. $t= -1$~years ago, the level of production was 185~thousand units. Next year, i.e. $t= 1$~years from now, the demand will be 221~thousand units. Therefore, $(-1, 185)$ and $(1, 221)$ are points on the graph of $D(t)$. But then the slope of $D(t)$ is\dots
+	\[
+	m= \dfrac{\Delta D}{\Delta t}= \dfrac{221 - 185}{1 - (-1)}= \dfrac{36}{1 + 1}= \dfrac{36}{2}= 18
+	\]
+But then $D(t)= 18t + b$. Because the graph of $D(t)$ contains the point $(1, 221)$, when $t= 1$, $D(1)= 221$, i.e. $t= 1$ and $D= 221$ satisfy the equation for $D(t)$. But then\dots
+	\[
+	\begin{aligned}
+	D(t)&= 18t + b \\[0.3cm]
+	221&= 18(1) + b \\[0.3cm]
+	221&= 18 + b \\[0.3cm]
+	b&= 203
+	\end{aligned}
+	\]
+Therefore, $D(t)= 18t + 203$. \pspace
+
+\item The slope of $D(t)= 18t + 203$ is $m= 18$. Interpreting the slope $m= 18$ as $m= \dfrac{\Delta D}{\Delta t}$, we see that for each additional year, the demand increases by 18~thousand units; that is, there is a yearly increase in demand of 18,000~units. The $y$-intercept of $D(t)= 18t + 203$ is $b= 203$. The $y$-intercept occurs when $t= 0$, i.e. this current year. Therefore, the current demand is 203~thousand units. \pspace
+
+\item We have\dots
+	\[
+	D(5)= 18(5) + 203= 90 + 203= 293
+	\]
+Therefore, if the rate of change in demand is constant, the demand in 5~years will be 293~thousand units. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	D(t)&= 18t + 203 \\[0.3cm]
+	400&= 18t + 203 \\[0.3cm]
+	18t&= 197 \\[0.3cm]
+	t&= 10.94
+	\end{aligned}
+	\]
+Therefore, the demand will be 400~thousand units in 10.94~years, i.e. 10~years, 11~months, and 9~days. 
+\end{enumerate}
 
 
 \end{document}
