@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -13,7 +13,20 @@
 \homework{17: Due 11/14}{Geometry is not true, it is advantageous.}{Henri Poincar\'e}
 
 % Problem 1
-\problem{10} Explain why the lines $y= 2(2 - x)$ and $y= \frac{7}{3}\,x + 17$ intersect at the point $(-3, 10)$. 
+\problem{10} Explain why the lines $y= 2(2 - x)$ and $y= \frac{7}{3}\,x + 17$ intersect at the point $(-3, 10)$. \pspace
+
+\sol First, we check that each line contains the point $(-3, 10)$. If the point $(-3, 10)$ is on a line, then $x= -3$ and $y= 10$ satisfies the equations. But we have\dots
+	\[
+	\begin{aligned}
+	y&= 2(2 - x) &\hspace{2cm} y&= \frac{7}{3}\,x + 17 \\[0.3cm]
+	10&\stackrel{?}{=} 2 \big(2 - (-3) \big) & 10&\stackrel{?}{=} \frac{7}{3} \cdot -3 + 17 \\[0.3cm]
+	10&\stackrel{?}{=} 2 (2 + 3) & 10&\stackrel{?}{=} - 7 + 17 \\[0.3cm]
+	10&\stackrel{?}{=} 2(5) & 10&= 10 \\[0.3cm]
+	10&= 10 & &\;\text{\cmark} \\[0.3cm]
+	&\;\text{\cmark}
+	\end{aligned}
+	\]
+Therefore, $(-3, 10)$ is on each of the lines. But then $(-3, 10)$ is an intersection point for the lines $y= 2(2 - x)$ and $y= \frac{7}{3}\,x + 17$. 
 
 
 
@@ -29,7 +42,21 @@
 	\ell_2&: y= 14 - 3x
 	\end{aligned}
 	\]
-Explain why these lines intersect and find their point of intersection. 
+Explain why these lines intersect and find their point of intersection. \pspace
+
+\sol The slope of the first line is $m_1= \frac{2}{3}$. The slope of the second line is $m_2= -3$. Because $m_1 \neq m_2$, the lines are not parallel. But then the lines must intersect. We can find the $x$-coordinate of their intersection:
+	\[
+	\begin{aligned}
+	\frac{2}{3}\,x + 3&= 14 - 3x \\[0.3cm]
+	\frac{2}{3}\,x + 3x + 3&= 14 \\[0.3cm]
+	\frac{2}{3}\,x + 3x&= 11 \\[0.3cm]
+	\frac{2}{3}\,x + \frac{9}{3}\,x&= 11 \\[0.3cm]
+	\frac{11}{3}\,x&= 11 \\[0.3cm]
+	\frac{3}{11} \cdot \frac{11}{3}\,x&= \frac{3}{11} \cdot 11 \\[0.3cm]
+	x&= 3
+	\end{aligned}
+	\]
+Using either of the equations for the line, for instance the second one, we know that $y= 14 - 3x= 14 - 3(3)= 14 - 9= 5$. Therefore, the point of intersection is $(3, 5)$. 
 
 
 
@@ -44,7 +71,29 @@ Explain why these lines intersect and find their point of intersection.
 	\ell_1&: y= 4x - 13 \\[0.3cm]
 	\ell_2&: 5x + 4y= -10 
 	\end{aligned}
+	\] \pspace
+
+\sol First, we put each line into the form $y= mx + b$. Observe the first line already has this form: $y= 4x - 13$. For the second line, we have\dots
+	\[
+	\begin{aligned}
+	5x + 4y&= -10 \\[0.3cm]
+	4y&= -5x - 10 \\[0.3cm]
+	y&= -\frac{5}{4}\,x - \frac{10}{4} \\[0.3cm]
+	y&= -\frac{5}{4}\,x - \frac{5}{2} 
+	\end{aligned}
 	\]
+But then the $x$-coordinate of the intersection is\dots
+	\[
+	\begin{aligned}
+	4x - 13&= -\frac{5}{4}\,x - \frac{5}{2} \\[0.3cm]
+	4(4x - 13)&= 4 \cdot -\frac{5}{4}\,x - 4 \cdot \frac{5}{2} \\[0.3cm]
+	16x - 52&= -5x - 10 \\[0.3cm]
+	21x - 52&= -10 \\[0.3cm]
+	21x&= 42 \\[0.3cm]
+	x&= 2
+	\end{aligned}
+	\]
+Then using either of the equations of the line, for instance the first one, we have $y= 4x - 13= 4(2) - 13= 8 - 13= -5$. Therefore, the point of intersection is $(2, -5)$. 
 
 
 \end{document}
