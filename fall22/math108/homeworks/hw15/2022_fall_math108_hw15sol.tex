@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,31 @@
 	\item $\mathbf{v} - \mathbf{u}$
 	\item $\mathbf{u} \cdot \mathbf{v}$
 	\item $\mathbf{v}^T$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	-2\mathbf{u}= -2 \begin{pmatrix} 1 \\ -2 \\ 3 \\ 4 \end{pmatrix}= \begin{pmatrix} -2 \\ 4 \\ -6 \\ -8 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\mathbf{v} - \mathbf{u}= \begin{pmatrix} 10 \\ 8 \\ -2 \\ 3 \end{pmatrix} - \begin{pmatrix} 1 \\ -2 \\ 3 \\ 4 \end{pmatrix}= \begin{pmatrix} 10 - 1 \\ 8 - (-2) \\ -2 - 3 \\ 3 - 4 \end{pmatrix}= \begin{pmatrix} 9 \\ 10 \\ -5 \\ -1 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\begin{pmatrix} 1 \\ -2 \\ 3 \\ 4 \end{pmatrix} \cdot \begin{pmatrix} 10 \\ 8 \\ -2 \\ 3 \end{pmatrix}= 1(10) + (-2) 8 + 3(-2) + 4(3)= 10 - 16 - 6 + 12= 0
+	\] 
+{\itshape Note: The fac that $\mathbf{u} \cdot \mathbf{v}= 0$ shows that $\mathbf{u}$ and $\mathbf{v}$ are perpendicular.} 
+
+\item 
+	\[
+	\begin{pmatrix} 10 \\ 8 \\ -2 \\ 3 \end{pmatrix}^T= \begin{pmatrix} 10 & 8 & -2 & 3 \end{pmatrix}
+	\]
+\end{enumerate}
 
 
 
@@ -38,7 +62,35 @@ Compute the following:
 	\item $A + B$
 	\item $A^T$
 	\item $A^TB$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	3 \begin{pmatrix} 1 & -4 & 2 \\ 1 & -8 & -3 \end{pmatrix}= \begin{pmatrix} 3 & -12 & 6 \\ 3 & -24 & -9 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\begin{pmatrix} 3 & 6 & 2 \\ -9 & 3 & -8 \end{pmatrix} + \begin{pmatrix} 1 & -4 & 2 \\ 1 & -8 & -3 \end{pmatrix}= \begin{pmatrix} 3 + 1 & 6 - 4 & 2 + 2 \\ -9 + 1 & 3 - 8 & -8 + (-3) \end{pmatrix}= \begin{pmatrix} 4 & 2 & 4 \\ -8 & -5 & -11 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\begin{pmatrix} 3 & 6 & 2 \\ -9 & 3 & -8 \end{pmatrix}^T= \begin{pmatrix} 3 & -9 \\ 6 & 3 \\ 2 & -8 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\begin{aligned}
+	\begin{pmatrix} 3 & 6 & 2 \\ -9 & 3 & -8 \end{pmatrix}^T \begin{pmatrix} 1 & -4 & 2 \\ 1 & -8 & -3 \end{pmatrix}&= \begin{pmatrix} 3 & -9 \\ 6 & 3 \\ 2 & -8 \end{pmatrix} \begin{pmatrix} 1 & -4 & 2 \\ 1 & -8 & -3 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 3(1) + (-9)1 & 3(-4) - 9(-8) & 3(2) - 9(-3) \\ 6(1) + 3(1) & 6(-4) + 3(-8) & 6(2) + 3(-3) \\ 2(1) - 8(1) & 2(-4) - 8(-8) & 2(2) - 8(-3) \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 3 - 9 & -12 + 72 & 6 + 27 \\ 6 + 3 & -24 - 24 & 12 - 9 \\ 2 - 8 & -8 + 64 & 4 + 24 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} -6 & 60 & 33 \\ 9 & -48 & 3 \\ -6 & 56 & 28 \end{pmatrix} 
+	\end{aligned}
+	\]
+\end{enumerate}
 
 
 
@@ -50,10 +102,20 @@ Compute the following:
 \problem{10} Define the following matrices:
 	\[
 	\begin{aligned}
-	A= \begin{pmatrix} 1 & 0 \\ -2 & 3 \\ 0 & -1 \end{pmatrix}, \qquad B= \begin{pmatrix} 1 & 0 & -1 & 5 \end{pmatrix}, \qquad C= \begin{pmatrix} 2 & 0 \\ -1 & 3 \end{pmatrix}
+	A= \begin{pmatrix} 1 & 0 \\ -2 & 3 \\ 0 & -1 \end{pmatrix}, \qquad B= \begin{pmatrix} 1 & 0 & -1 & 5 \end{pmatrix}, \qquad C= \begin{pmatrix} 2 & 0 \\ -1 & 3 \end{pmatrix} 
 	\end{aligned}
 	\]
-Only one of the following is computable: $CA$, $AB$, or $AC$. For those products that cannot be computed, explain why. For the product that can be computed, compute the product.  
+Only one of the following is computable: $CA$, $AB$, or $AC$. For those products that cannot be computed, explain why. For the product that can be computed, compute the product. \pspace
+
+\sol The matrix $A$ has dimension $3 \times 2$. The matrix $B$ has dimension $1 \times 4$. The matrix $C$ has dimension $2 \times 2$. If $P$ is a $m \times n$ matrix and $Q$ is a $a \times b$ matrix, then $PQ$ can be multiplied only if $n= a$. If so, then the resulting matrix, $PQ$, has dimension $m \times b$. But then neither $AB$ nor $BA$ can be formed. Similarly, neither $BC$ nor $CB$ can be formed. While $CA$ cannot be formed, we can form the product $AC$. Then we have\dots
+	\[
+	\begin{aligned}
+	AC&= \begin{pmatrix} 1 & 0 \\ -2 & 3 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} 2 & 0 \\ -1 & 3 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 1(2) + 0(-1) & 1(0) + 0(3) \\ -2(2) + 3(-1) & -2(0) + 3(3) \\ 0(2) + (-1)(-1) & 0(0) + (-1)3 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 2 + 0 & 0 + 0 \\ -4 - 3 & 0 + 9 \\ 0 + 1 & 0 - 3 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 2 & 0 \\ -7 & 9 \\ 1 & -3 \end{pmatrix}
+	\end{aligned}
+	\]
 
 
 \end{document}

@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -13,7 +13,17 @@
 \homework{16: Due 11/22}{Algebra is the offer made by the devil to the mathematician\dots All you need to do, is give me your soul: give up geometry.}{Michael Atiyah}
 
 % Problem 1
-\problem{10} Suppose you have a 3-day drive. You drive at an average speed of 55~mph, 65~mph, and 60~mph each day, respectively. Furthermore, you drive for 10~hours, 8~hours, and 5~hours each day, respectively. Represent your speeds each day as a vector $\mathbf{v}$ and your drive times as a vector $\mathbf{t}$. Compute $\mathbf{v} \cdot \mathbf{t}$ and interpret the result. 
+\problem{10} Suppose you have a 3-day drive. You drive at an average speed of 55~mph, 65~mph, and 60~mph each day, respectively. Furthermore, you drive for 10~hours, 8~hours, and 5~hours each day, respectively. Represent your speeds each day as a vector $\mathbf{v}$ and your drive times as a vector $\mathbf{t}$. Compute $\mathbf{v} \cdot \mathbf{t}$ and interpret the result. \pspace
+
+\sol We have\dots
+	\[
+	\mathbf{v}= \begin{pmatrix} 55 \\ 65 \\ 60 \end{pmatrix} \qquad \text{and} \qquad \mathbf{t}= \begin{pmatrix} 10 \\ 8 \\ 5 \end{pmatrix}
+	\]
+Then we have\dots
+	\[
+	\mathbf{v} \cdot \mathbf{t}= \begin{pmatrix} 55 \\ 65 \\ 60 \end{pmatrix} \cdot \begin{pmatrix} 10 \\ 8 \\ 5 \end{pmatrix}= 55(10) + 65(8) + 60(5)= 550 + 520 + 300= 1370
+	\]
+Observe that $\mathbf{v} \cdot \mathbf{t}= \sum_i v_i t_i$. As $d= vt$, each $v_i t_i$ is a distance traveled on one of the particular days. But then $\sum v_i t_i$ is a total distance traveled. Therefore, $\mathbf{v} \cdot \mathbf{t}$ computes the 1,370~miles traveled in total. 
 
 
 
@@ -26,7 +36,18 @@
 	\[
 	A= \begin{pmatrix} 7 & 8 & 6 \\ 8 & 8 & 8 \\ 5 & 12 & 9 \end{pmatrix}, \qquad \mathbf{u}= \begin{pmatrix} 15 \\ 12 \\ 20 \end{pmatrix}
 	\]
-Compute $A\mathbf{u}$ and interpret the entries of the resulting vector.
+Compute $A\mathbf{u}$ and interpret the entries of the resulting vector. \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	A\mathbf{u}&= \begin{pmatrix} 7 & 8 & 6 \\ 8 & 8 & 8 \\ 5 & 12 & 9 \end{pmatrix} \begin{pmatrix} 15 \\ 12 \\ 20 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 7(15) + 8(12) + 6(20) \\ 8(15) + 8(12) + 8(20) \\ 5(15) + 12(12) + 9(20) \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 105 + 96 + 120 \\ 120 + 96 + 160 \\ 75 + 144 + 180 \end{pmatrix} \\[0.3cm]
+	&= \begin{pmatrix} 321 \\ 376 \\ 399 \end{pmatrix}
+	\end{aligned}
+	\]
+Observe that each entry in the resulting vector is a sum of the form $\sum_i a_{ij} u_{jk}$. But then each entry is a sum of a number of hours worked times a pay rate, i.e. a amount paid that day. But then each entry is a sum of amounts paid that day. But then each entry is a total daily payroll. Therefore, on the first day the payroll was \$321, the second \$376, and on the third \$399. 
 
 
 
@@ -38,6 +59,24 @@ Compute $A\mathbf{u}$ and interpret the entries of the resulting vector.
 \problem{10} Assume that each of the following matrices are the reduced-row echelon form from some system of equations. For each, indicate whether there was a solution to the system or not. If there was a solution, either give the solution or give a parametrization of all possible solutions. 
 	\[
 	A= \begin{pmatrix} 1 & 0 & 0 & 0 & -4 \\ 0 & 1 & 0 & 0 & 3 \\ 0 & 0 & 1 & 0 & 5 \\ 0 & 0 & 0 & 1 & 0  \end{pmatrix}, \qquad B= \begin{pmatrix} 1 & 0 & 0 & 5 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad C= \begin{pmatrix} 1 & 0 & 0 & 7 \\ 0 & 1 & -2 & 5 \\ 0 & 0 & 0 & 0 \end{pmatrix}
+	\] \pspace
+
+\sol The matrix $A$ is in RREF and represents a system with a unique solution: 
+	\[
+	\begin{cases}
+	x_1= -4 \\
+	x_2= 3 \\
+	x_3= 5 \\
+	x_4= 0 
+	\end{cases}
+	\]
+The matrix $B$ is in RREF and represents a system without a solution as the last row represents the equation $0= 1$, which is clearly impossible. Finally, the matrix $C$ is in RREF and the zero row indicates that there is at least one free variable. Because column three does not have a pivot position, we choose $x_3:$ free. But then the second row indicates $x_2 - 2x_3= 5$ so that $x_2= 2x_3 + 5$. The first row indicates $x_1= 7$. Therefore, the solutions are\dots
+	\[
+	\begin{cases}
+	x_1= 7 \\
+	x_2= 2x_3 + 5 \\
+	x_3: \text{free}
+	\end{cases}
 	\]
 
 
