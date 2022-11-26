@@ -269,24 +269,24 @@ Therefore, a score of at least approximately 59.5 would put you in the top 10\% 
 	\item What is the probability that between 620 and 720 of these adults will have a disability?
 	\end{enumerate} \pspace
 
-\sol Suppose that the sample is a simple random sample and that each selection for the sample is independent from the next. Because we have a fixed population of 2,500~adults, each person selected is a `success' or not (has a disability or not), and the chance of `success' is fixed with probability 0.26, this is binomial, namely $B(2600, 0.26)$. Because $np= 2600(0.26)= 676 \geq 10$ and $n(1 - p)= 2600(1 - 0.26)= 2600(0.74)= 1924 \geq 10$, we can approximate this binomial distribution with a normal distribution: $B(n, p) \approx N(np, \sqrt{np(1 - p)})$. Therefore, this distribution is approximately $N(2600(0.26), \sqrt{2600(0.26)(1 - 0.26)}) \approx N(676, 22.366)$. 
+\sol Suppose that the sample is a simple random sample and that each selection for the sample is independent from the next. Because we have a fixed population of 2,500~adults, each person selected is a `success' or not (has a disability or not), and the chance of `success' is fixed with probability 0.26, this is binomial, namely $B(2500, 0.26)$. Because $np= 2500(0.26)= 650 \geq 10$ and $n(1 - p)= 2500(1 - 0.26)= 2500(0.74)= 1850 \geq 10$, we can approximate this binomial distribution with a normal distribution: $B(n, p) \approx N(np, \sqrt{np(1 - p)})$. Therefore, this distribution is approximately $N(2500(0.26), \sqrt{2500(0.26)(1 - 0.26)}) \approx N(650, 21.9317)$. 
 
 \begin{enumerate}[(a)]
 \item We have\dots
 	\[
-	z_{620}= \dfrac{620 - 676}{22.366}= \dfrac{-56}{22.366} \approx -2.50 \squiggle 0.0062
+	z_{620}= \dfrac{620 - 650}{21.9317}= \dfrac{-30}{21.9317} \approx -1.37 \squiggle 0.0853
 	\]
-Therefore, $P(X \leq 620) \approx 0.0062$. \pspace
+Therefore, $P(X \leq 620) \approx 0.0853$. \pspace
 
 \item We have\dots
 	\[
-	z_{720}= \dfrac{720 - 676}{22.366}= \dfrac{44}{22.366} \approx 1.97 \squiggle 0.9756
+	z_{720}= \dfrac{720 - 650}{21.9317}= \dfrac{70}{21.9317} \approx 3.19 \squiggle 0.9993
 	\]
-Therefore, $P(X \leq 720) \approx 0.9756$. \pspace
+Therefore, $P(X \leq 720) \approx 0.9993$. \pspace
 
 \item Using (a) and (b), we know that\dots
 	\[
-	P(620 \leq X \leq 720)= P(X \leq 720) - P(X \leq 620) \approx 0.9756 - 0.0062= 0.9694
+	P(620 \leq X \leq 720)= P(X \leq 720) - P(X \leq 620) \approx 0.9993 - 0.0853= 0.9140
 	\]
 \end{enumerate}
 
@@ -338,10 +338,15 @@ Therefore, the model predicts that a student that sleeps 8~hours a night will ha
 	\end{enumerate} \pspace
 
 \sol 
-{\itshape
+{\itshape Assuming that the central limit theorem applies, i.e. that the underlying distribution of incomes at this warehouse is normally distributed or that the sample size is sufficiently large ($\geq \approx 30$), then we know that the distribution of sample means of size 15 is approximately distributed as $N(\mu, \sigma/\sqrt{n})$. If we assume that $\mu= 23.75$ and $\sigma= 1.27$, because we have $n= 15$, we have $N(\mu, \sigma/\sqrt{n})= N(23.75, 1.27/\sqrt{15}) \approx N(23.75, 0.328)$. 
 \begin{enumerate}[(a)]
-\item 
-\item 
+\item From the comments above, we have\dots
+	\[
+	z_{23}= \dfrac{23 - 23.75}{0.328}= \dfrac{-0.75}{0.328} \approx -2.29 \squiggle 0.0110
+	\]
+Therefore, we have $P(\overline{X} \leq 23)= 0.0110$. \pspace
+
+\item As commented above, the above calculation relies on the fact that the distribution of average incomes of sample of size 15 have distribution $N(23.75, 0.328)$. This required that the central limit theorem applies; that is, this would require either the underlying distribution of warehouse incomes was normally distributed or a sufficiently large sample size. Because the sample size is not sufficiently large, we must assume that the underlying distribution of incomes at this warehouse is normally distributed. 
 \end{enumerate}
 }
 
@@ -364,23 +369,11 @@ Now respond to the following two questions:
 \sol 
 {\itshape
 \begin{enumerate}[(a)]
-\item 
-\item 
+\item The politician's claim is not correctly reasoned. They are assuming that these events are independent. One can only multiply probabilities if the events are independent. For instance, it might be that there is a much lower chance an immigrant without higher education will commit a crime, perhaps for fear of deportation. [In fact, studies suggest this is the case.] There may also be arguments to suggest that they are more likely to commit a violent crime. Regardless, these events are, in principle, very dependent. Therefore, one cannot simply multiply these probabilities. \pspace
+
+\item The efficiency manager's claim is not correctly reasoned. To add percentages/probabilities, one need know that the underlying events are disjoint. Otherwise, one would overestimate the percentage/probability. In principle, there may be workers at this firm that both handle paperwork and data entry, in which case they would be overestimating the percentage of workers at this company that perform either task. [In fact, this is very likely to be the case.] Therefore, one cannot simply add these percentages. 
 \end{enumerate}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \end{questions}
