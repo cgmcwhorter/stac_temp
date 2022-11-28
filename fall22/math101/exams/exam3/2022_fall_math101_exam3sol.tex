@@ -239,11 +239,11 @@ Therefore, $(-1, 1)$ is on the line. }
 
 \item Because $m= -\frac{6}{5} < 0$, we see that $f(x)$ is decreasing. \pspace
 
-\item Because $f(x)= 7 - \frac{6}{5}\,x$ has the form $y= mx + b$, we see that the $y$-intercept is $(0, 7)$. \pspace
+\item Because $f(x)= 7 - \frac{6}{5}\,x$ has the form $y= mx + b$, we see that the $y$-intercept is $7$, i.e. $(0, 7)$. \pspace
 
 \item We have\dots
 	\[
-	f \big( \frac{2}{3} \big)= 7 - \frac{6}{5} \cdot \frac{2}{3}= 7 - \frac{2}{5} \cdot \frac{2}{1}= 7 - \frac{4}{5}= \frac{35}{5} - \frac{4}{5}= \frac{31}{5}
+	f \left( \frac{2}{3} \right)= 7 - \frac{6}{5} \cdot \frac{2}{3}= 7 - \frac{2}{5} \cdot \frac{2}{1}= 7 - \frac{4}{5}= \frac{35}{5} - \frac{4}{5}= \frac{31}{5}
 	\]
 \end{enumerate}
 }
@@ -269,7 +269,17 @@ Therefore, $(-1, 1)$ is on the line. }
 
 \item Because $m= -6 < 0$, we see that $f(x)$ is decreasing. \pspace
 
-\item Because $f(x)= -6x + 21$ has the form $y= mx + b$, we see that the $y$-intercept is $(0, 21)$. \pspace
+\item The $x$-intercept occurs when $f(x)= 0$. But then\dots
+	\[
+	\begin{aligned}
+	f(x)&= 0 \\
+	-3(2x - 7)&= 0 \\
+	2x - 7&= 0 \\
+	2x&= 7 \\
+	x&= \frac{7}{2}
+	\end{aligned}
+	\]
+Therefore, the $x$-intercept is $\frac{7}{2}$, i.e. $\big( \frac{7}{2}, 0 \big)$. \pspace
 
 \item If $f(x)= 9$, we have\dots
 	\[
@@ -409,7 +419,44 @@ Therefore, the line $y= -\frac{21}{4}\,x - 5$.
 	\item Interpret the slope of your linear model in (b).
 	\item Interpret the $y$-intercept of your linear model in (b), if possible. 
 	\item How long until the company has a profit of \$5~million? 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol {\itshape We will let the profits, $P$, at a time $t$ years from now be denoted by $P(t)$. 
+\begin{enumerate}[(a)]
+\item The rate of change of the profits must be constant. \pspace
+
+\item Because $P(t)$ is a linear function, we know $P(t)= mt + b$ for some $m, b$. We know that in a year, the company will have \$800,000 in profits, i.e. $(1, 800000)$ is a point on the graph of $P(t)$. Similarly, because the company makes \$1,200,000 two years from now, $(2, 1200000)$ is on the graph of $P(t)$. But then we have\dots
+	\[
+	m= \dfrac{1200000 - 800000}{2 - 1}= \dfrac{400000}{1}= 400000
+	\]
+Because $(1, 800000)$ is on the line, we have\dots
+	\[
+	\begin{aligned}
+	P(t)&= mt + b \\
+	P(t)&= 400000t + b \\
+	800000&= 400000(1) + b \\
+	800000&= 400000 + b \\
+	b&= 400000
+	\end{aligned}
+	\]
+Therefore, $P(t)= 400000t + 400000= 400000(t + 1)$. \pspace
+
+\item From (b), we know that $m= 400000$. Interpreting $m= 400000= \frac{400000}{1}$ as $\frac{\Delta P}{\Delta t}$, we see that every additional year, the company makes an additional \$400,000 in profit, i.e. the company makes an additional \$400,000 in profit per year. \pspace
+
+\item From (b), the $y$-intercept is 400,000. The $y$-intercept occurs when $t= 0$, i.e. the current year. Therefore, the company is currently making \$400,000 in profit. \pspace
+
+\item If the profit is \$5~million, then $P(t)= 5000000$. But then\dots
+	\[
+	\begin{aligned}
+	P(t)&= 5000000 \\
+	400000t + 400000&= 5000000 \\
+	400000t&= 4600000 \\
+	t&= 11.5
+	\end{aligned}
+	\]
+Therefore, the company will have a profit of \$5~million in 11.5~years. 
+\end{enumerate}
+}
 
 
 
@@ -421,7 +468,23 @@ Therefore, the line $y= -\frac{21}{4}\,x - 5$.
 	\item Interpret the slope of $D(t)$.
 	\item Interpret the $y$-intercept of $D(t)$. 
 	\item How far has she traveled after a total of 10~hours?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item Because $D(t)= 65t + 130$ has the form $y= mx + b$ with $m= 65$, $x= t$, and $b= 130$, we know that $D(t)$ is linear. \pspace
+
+\item The slope of $D(t)= 65t + 130$ is $m= 65$. Interpreting the slope $m= 65= \frac{65}{1}$ as $\frac{\Delta D}{\Delta t}$, we see that every additional hour from now sees her distance driven increasing by 65~miles, i.e. she is currently traveling at an average rate of 65~mph. \pspace
+
+\item The $y$-intercept of $D(t)= 65t + 130$ is 130. The $y$-intercept occurs when $t= 0$, i.e. 0~hours from now. But then currently, her total distance traveled is 130~miles. [Note: She has already driven for 2~hours.] \pspace
+
+\item She has already driven 2~hours. Therefore, she would need to drive an additional 8~hours from now to drive for a total of 10~hours. But then\dots
+	\[
+	D(8)= 65(8) + 130= 520 + 130= 650 
+	\]
+Therefore, after a total of 10~hours, she has driven 650~miles. 
+\end{enumerate}
+}
 
 
 \end{questions}

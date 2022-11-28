@@ -1,0 +1,454 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 308: Exam 2}
+\renewcommand{\term}{Fall -- 2022}
+\newcommand{\examdate}{11/18/2022}
+\newcommand{\timelimit}{`$\infty$' Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Consider the `rule' $f: \mathbb{R} \to \mathbb{R}^2$ given by $t \mapsto (3\cos t, 3\sin t)$.
+	\begin{enumerate}[(a)]
+	\item Is $f(t)$ a function? Explain.
+	\item Consider $\im f \subseteq \mathbb{R}^2= \{ (x, y) \colon x, y \in \mathbb{R} \}$. If $(x, y) \in \im f$, show that $x^2 + y^2= 9$. 
+	\item Considered as a subset of $\mathbb{R}^2$, geometrically describe $\im f$. 
+	\item Can $\im f$ be given by the image of a function of $x$? What about a function of $y$? Explain. 
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item Yes, $f(t)$ is a function. For each input $t \in \mathbb{R}$, we have one output---namely, $f(t)= (3 \cos t, 3 \sin t) \in \mathbb{R}^2$. While $\cos t$ and $\sin t$ may be $2\pi$-periodic, $2\pi$ translations of $t$ would be different inputs. For example, $f(0)$ and $f(2\pi)$ have the same value as $f(0)= (3 \cos 0, 3 \sin 0)= (3, 0)$ and $f(2\pi)= (3 \cos 2\pi, 3 \sin 2\pi)= (3, 0)$ but $f(0)$ and $f(2\pi)$ are still well defined because the inputs are different.\pspace
+
+\item Suppose $\mathbf{v} \in \im f \subseteq \mathbb{R}^2$. As $\mathbf{v} \in \mathbb{R}^2$, we know $\mathbf{v}= (x, y)$ for some $x, y \in \mathbb{R}^2$. But because $\mathbf{v} \in \im f$, we know that $\mathbf{v}= (3 \cos t, 3 \sin t)$ for some $t \in \mathbb{R}$. But then using the fact that $\cos^2 \theta + \sin^2 \theta= 1$ for all $\theta \in \mathbb{R}$, we have\dots
+	\[
+	\begin{aligned}
+	x^2 + y^2&= (3 \cos t)^2 + (3 \sin t)^2 \\
+	&= 9 \cos^2 t + 9 \sin^2 t \\
+	&= 9( \cos^2 t + \sin^2 t) \\
+	&= 9 \cdot 1 \\
+	&= 9
+	\end{aligned}
+	\]
+
+\item Observe that elements of $\im f$ satisfy the relation $x^2 + y^2= 9$. Geometrically, as a subset of the plane, $x^2 + y^2= 9$ is a circle of radius 3 centered at the origin. This shows that $\im f$ must be a subset of this circle. The converse is true as well (though it is less immediate). Therefore, $\im f$ is the circle of radius 3 centered at the origin. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=0.6,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -4.5, xmax=4.5,
+	ymin= -4.5, ymax=4.5,
+	xtick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	ytick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	minor tick = {-10,-9,...,10},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\draw[line width=0.03cm] (0,0) circle (3);
+	\draw[line width=0.03cm,dotted] (0,0) -- (2.12132, 2.12132) -- (2.12132,0);
+	\node at (0.6,0.3) {$t$};
+	\node at (0.8,1.2) {$3$};
+	\node at (1.3, -0.2) {$x$};
+	\node at (2.4, 0.8) {$y$};
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\]
+[Note: To see the converse, draw a ray at the angle $t \in \mathbb{R}$, measured from the positive $x$-axis counterclockwise, and let $(x, y)$ be the point of intersection of this ray with the circle. Clearly, $x^2 + y^2= 9$. But using trigonometry, we see that $\cos t= \frac{x}{3}$ and $\sin t= \frac{y}{3}$. This implies $x= 3\cos t$ and $y= 3 \sin t$. Because each such point on the circle can be obtained this way, we can see that every point on the circle has the form $(3\cos t, 3\sin t)$ for some $t \in \mathbb{R}$.]
+
+\item Using (c), we can see that $\im f$ is a circle with radius 3 centered at the origin. But then clearly $\im f$ cannot be a function of $x$ because the circle fails the vertical line test; that is, there are different $x$-values corresponding to the same $y$-value (as shown below). Furthermore, the circle fails the horizontal line test, so that the circle cannot be a function of $y$; that is, there are different $y$-values corresponding to the same $x$-value. \pspace
+
+Alternatively, we can find distinct $x$-values associated to the same $y$-value to show that $f(t)$ is not a function of its $x$-coordinate. Observe that $f \big( \frac{\pi}{2} \big)= (0, 3)$ and $f \big(-\frac{\pi}{2} \big)= (0, -3)$. But then $0 \sim 3$ and $0 \sim -3$ so that $f(t)$ cannot be a function of its $x$-coordinate. Observe also that $f(0)= (3, 0)$ and $f(\pi)= (-3, 0)$. But then $0 \sim 3$ and $0 \sim -3$ so that $f(t)$ cannot be a function of its $y$-coordinate. \pspace
+
+Putting (a)--(d) together, we observe that the circle with radius 3 centered at the origin is neither a function of $x$ or $y$, but it is a function of something---namely, $t$ (its angles). 
+\end{enumerate}
+}
+
+
+
+% Question 2
+\newpage
+\question[10] Define functions $f, g: \mathbb{R} \to \mathbb{R}$ by $f(x)= |x + 5|$ and $g(x)= 7 - 3x$.
+	\begin{enumerate}[(a)]
+	\item Find an element in $\im f$ and also find an element in $\im g$. 
+	\item Is $-5 \in \im f$? If not, explain why, and if so, find its preimage. 
+	\item Is $12 \in \im g$? If not, explain why, and if so, find its preimage. 
+	\item Compute $f\big( [-6, 6) \big)$ and $g\big( (-6, 6] \big)$. 
+	\item Compute $f^{-1} \big( [-1,1] \big)$ and $g^{-1} \big( [-1, 1] \big)$.
+	\end{enumerate} \pspace
+
+\sol {\itshape 
+\begin{enumerate}[(a)]
+\item Given any $x \in \mathbb{R}$, we know that $f(x)$ and $g(x)$ are elements in the image of $f$ and $g$, respectively. For instance, choosing $x= 0$, we have\dots
+	\[
+	\begin{aligned}
+	f(0)&= |0 + 5|= |5|= 5 \\[0.3cm]
+	g(0)&= 7 - 3(0)= 7 - 0= 7 
+	\end{aligned}
+	\]
+Therefore, we have $5 \in \im f$ and $7 \in \im g$. Of course, we need not have chosen $x= 0$, chosen $x$ to be an integer, nor chosen the same $x$-value for both. For instance, we also have\dots
+	\[
+	\begin{aligned}
+	f \left( -\dfrac{11}{2} \right)&= \left| -\dfrac{11}{2} + 5 \right|= \left| -\dfrac{1}{2} \right|= \dfrac{1}{2} \\[0.3cm]
+	g(\pi)&= 7 - 3\pi 
+	\end{aligned}
+	\]
+This shows that $\frac{1}{2} \in \im f$ and $7 - 3\pi \in \im g$. \pspace
+
+\item If $-5 \in \im f$, then there is $x \in \mathbb{R}$ such that $f(x)= -5$. But then $|x + 5|= -5$. Because $|x + 5| \geq 0$ for all $x \in \mathbb{R}$, there is no such $x$. Therefore, $-5 \notin \im f$. \pspace
+
+\item If $12 \in \im g$, then there is $x \in \mathbb{R}$ such that $g(x)= 12$. But then\dots
+	\[
+	\begin{aligned}
+	g(x)&= 12 \\
+	7 - 3x&= 12 \\
+	-3x&= 5 \\
+	x&= -\dfrac{5}{3}
+	\end{aligned}
+	\]
+Of course, this only shows that if $g(x)= 12$, then $x= -\frac{5}{3}$. We need show that $g(-5/3)= 12$. This is routine: $g \left(-\frac{5}{3} \right)= 7 - 3 \cdot -\frac{5}{3}= 7 + 5= 12$. Therefore, $12 \in \im g$. \pspace
+
+\item 
+\item 
+\end{enumerate}
+}
+
+
+
+% Question 3
+\newpage
+\question[10] Define the function $f: \mathbb{R} \to \mathbb{R}$ via $x \mapsto x^2 + 5$. 
+	\begin{enumerate}[(a)]
+	\item Is $f(x)$ an injective function? If it is injective, explain why; if it is not injective, give a counterexample. 
+	\item Is $f(x)$ a surjective function? If it is surjective, explain why; if it is not surjective, give a counterexample. 
+	\item Is $f(x)$ a bijective function? Explain. 
+	\item Does $f(x)$ have an inverse function? Explain. 
+	\end{enumerate} \pspace
+
+\sol {\itshape 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+}
+
+
+
+% Question 4
+\newpage
+\question[10] A \textit{fixed point} for a function $f: \mathbb{R} \to \mathbb{R}$ is $x_0 \in \mathbb{R}$ such that $f(x_0)= x_0$. 
+	\begin{enumerate}[(a)]
+	\item Show that $-5$ is a fixed point for $f(x)= 3x + 10$.
+	\item Show that $4$ is not a fixed point for $g(x)= \dfrac{x + 4}{2 - x}$.
+	\item Find the fixed points for $h(x)= 2x^2 + 6x - 3$. 
+	\item Use the quadratic formula to show that $j(x)= x^2 - 3x + 5$ has no fixed points in $\mathbb{R}$ but does have fixed points in $\mathbb{C}$. 
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+}
+
+
+
+% Question 5
+\newpage
+\question[10] Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $\displaystyle \sum_{k= -2}^3 (5 - k)$
+	\item $\displaystyle \prod_{k=1}^5 (2k -3)$ 
+	\item $\displaystyle \sum_{k=0}^{1000} (k - 7)$
+	\item $\displaystyle \sum_{k=0}^{1000} \left( \sqrt{k + 5} - \sqrt{k} \right)$
+	\item $\displaystyle \prod_{k=1}^{1000} \left(1 + \dfrac{1}{k} \right)$
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+}
+
+
+
+% Question 6
+\newpage
+\question[10] Being sure to show all your work and fully justify your logic complete the following:
+	\begin{enumerate}[(a)]
+	\item Using the definition of odd/even, show that $-237$ is odd but not even.
+	\item Express $1854/17$ using the division algorithm. 
+	\item Find the prime factorization of 2040. 
+	\item Compute $\gcd(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next smallest divisor of the two given numbers. 
+	\item Compute $\lcm(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next largest multiple of the two given numbers.
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+}
+
+
+
+% Question 7
+\newpage
+\question[10] Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $(2468 \cdot 3579 + 97531) \mmod 2$
+	\item $(10 - 18)^{100} \mmod 3$
+	\item $(3^{11} + 3^{10}) \mmod 4$
+	\item $(16 \cdot -7) \mmod 5$
+	\item $(-17 \cdot 13 + 145) \mmod 6$
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(2468 \cdot 3579 + 97531) \equiv 0 \cdot 1 + 1 \equiv 0 + 1 \equiv 1 \mmod 2
+	\] \pspace
+
+\item  
+	\[
+	(10 - 18)^{100} \equiv (-8)^{100} \equiv 1^{100} \equiv 1 \mmod 3
+	\] \pspace
+
+\item  
+	\[
+	(3^{11} + 3^{10}) \equiv 3^{10} (3 + 1) \equiv 3^{10} \cdot 4 \equiv 3^{10} \cdot 0 \equiv 0 \mmod 4
+	\] \pspace
+
+\item  
+	\[
+	16 \cdot -7  \equiv 1 \cdot 3 \equiv 3 \mmod 5
+	\] \pspace
+
+\item  
+	\[
+	-17 \cdot 13 + 145 \mmod 1 \cdot 1 + 1 \equiv 1 + 1 \equiv 2 \mmod 6
+	\] 
+\end{enumerate}
+}
+
+
+
+% Question 8
+\newpage
+\question[10] Being sure to show all your work and fully explaining your logic, complete the following:
+	\begin{enumerate}[(a)]
+	\item What is the remainder when $2022^{2024}$ is divided by $2023$?
+	\item What are the last three digits of $2022^{50}$?
+	\item Show that working modulo two that $(x + y)^2= x^2 + y^2$. 
+	\end{enumerate} \pspace
+
+\sol {\itshape 
+\begin{enumerate}[(a)]
+\item The remainder when $2022^{2024}$ is divided by $2023$ is $2022^{2024} \mmod 2023$. We have\dots
+	\[
+	2022^{2024} \equiv (-1)^{2024} \equiv 1 \mmod 2023
+	\]
+Therefore, the remainder when $2022^{2024}$ is divided by $2023$ is 1. \pspace
+
+\item The last three digits of $2022^{50}$ is the remainder when $2022^{50}$ is divided by 1000. But this is precisely $2022^{50} \mmod 1000$. Observe\dots
+	\[
+	\begin{aligned}
+	2022^1&\equiv 22 \mmod 1000 \\
+	2022^2&\equiv (2022^1)^2 \equiv 22^2 \equiv 484 \mmod 1000 \\
+	2022^4&\equiv (2022^2)^2 \equiv 484^2 \equiv 234256 \equiv 256 \mmod 1000 \\
+	2022^8&\equiv (2022^4)^2 \equiv 256^2 \equiv 65536 \equiv 536 \mmod 1000 \\
+	2022^{16}&\equiv (2022^8)^2 \equiv 536^2 \equiv 287296 \equiv 296 \mmod 1000 \\
+	2022^{32}&\equiv (2022^{16})^2 \equiv 296^2 \equiv 87616 \equiv 616 \mmod 1000
+	\end{aligned}
+	\]
+Observe that $50= 32 + 16 + 2$. But then\dots
+	\[
+	\hspace{-3cm} 2022^{50} \equiv 2022^{32 + 16 + 2} \equiv 2022^{32} \cdot 2022^{16} \cdot 2022^2 \equiv 616 \cdot 296 \cdot 484 \equiv 182336 \cdot 484 \equiv 336 \cdot 484 \equiv 162624 \equiv 624 \mmod 1000
+	\] \pspace
+
+\item Observe that working modulo 2, we have\dots
+	\[
+	(x + y)^2= (x + y)(x + y)= x^2 + xy + yx + y^2= x^2 + xy + xy + y^2= x^2 + 2xy + y^2 \equiv x^2 + y^2 \mmod 2
+	\]
+\end{enumerate}
+}
+
+
+
+% Question 9
+\newpage
+\question[10] Let $a= 1561$ and $b= 8525$.
+	\begin{enumerate}[(a)]
+	\item Use the Euclidean algorithm to find $\gcd(a, b)$. 
+	\item Explain why $a^{-1}$ exists $\mmod b$.
+	\item Continuing your work in (a), use the extended Euclidean algorithm to compute $a^{-1}$ mod 8525.
+	\item Prove that your answer in (c) is correct. 
+	\end{enumerate} \pspace
+
+\sol {\itshape
+\begin{enumerate}[(a)]
+\item Repeatedly applying the division algorithm with $b= 8525$ and $a= 1561$ and using the fact that $a> 0$, we have\dots
+	\[
+	\begin{aligned}
+	8525&= 5(1561) + 720; & q& = \floor*{\dfrac{8525}{1561}}= 5, & r& = 8525 - 5(1561)= 8525 - 7805= 720 \\
+	1561&= 2(720) + 121; & q& = \floor*{\dfrac{1561}{720}}= 2, & r&= 1561 - 2(720)= 1561 - 1440= 121 \\
+	720&= 5(121) + 115; & q& = \floor*{\dfrac{720}{151}}= 5, & r&= 720 - 5(121)= 720 - 605= 115 \\
+	121&= 1(115) + 6; & q& = \floor*{\dfrac{121}{115}}= 1, & r&= 121 - 1(115)= 121 - 115= 6 \\
+	115&= 19(6) + 1; & q& = \floor*{\dfrac{115}{6}}= 19, & r&= 115 - 19(6)= 115 - 114= 1 \\
+	6&= 6(1) + 0; & q& = \floor*{\dfrac{6}{1}}= 6, & r&= 6 - 6(1)= 6 - 6= 0 
+	\end{aligned}
+	\]
+Therefore, $\gcd(1561, 8525)= 1$. \pspace
+
+\item We know that $a^{-1}$ exists modulo $N$ if and only if $\gcd(a, N)= 1$. Using (a), we know $\gcd(1561, 8525)= 1$. Therefore, $1561^{-1}$ exists modulo 8525. \pspace
+
+\item Using the extended algorithm, we can write $1561x + 8525y= \gcd(1561, 8525)= 1$ for some $x, y$. But taking this equation modulo 8525, we have $1561x \equiv 1 \mmod 8525$. But then $1561^{-1} \equiv x \mmod 8525$. \pspace
+
+\item First, solving for the remainders, we have\dots
+	\[
+	\begin{aligned}
+	1&= 115 - 19(6) \\
+	6&= 121 - 1(115) \\
+	115&= 720 - 5(121) \\
+	121&= 1561 - 2(720) \\
+	720&= 8525 - 5(1561)
+	\end{aligned}
+	\]
+But then using the extended Euclidean algorithm, we have\dots
+	\[
+	\begin{aligned}
+	1&= 115 - 19(6) \\
+	&= 115 - 19 \big(121 - 1(115) \big)= 115 - 19 \cdot 121 + 19 \cdot 115= 20 \cdot 115 - 19 \cdot 121 \\
+	&= 20 \big(720 - 5(121) \big) - 19 \cdot 121= 20 \cdot 720 - 100 \cdot 121 - 19 \cdot 121= 20 \cdot 720 - 119 \cdot 121 \\
+	&= 20 \cdot 720 - 119 \big(1561 - 2(720) \big)= 20 \cdot 720 - 119 \cdot 1561 + 238 \cdot 720= 258 \cdot 720 - 119 \cdot 1561 \\
+	&= 258 \big(8525 - 5(1561) \big) - 119 \cdot 1561= 258 \cdot 8525 - 1290 \cdot 1561 - 119 \cdot 1561 \\
+	&= -1409 \cdot 1561 + 258 \cdot 8525 
+	\end{aligned}
+	\]
+Taking this equation modulo 8525, we have $-1409 \cdot 1561 \equiv 1 \mmod 8525$. But then $-1409 \equiv 7116 \mmod 8525$ is the inverse of 1561 modulo $8525$, i.e. $1561^{-1} \equiv 7116 \mmod 8525$. \pspace
+
+\item The inverse of an element $a \mmod N$ is an element $b \mmod N$ such that $ab \equiv 1 \mmod N$. The inverse, when it exists, is unique. Therefore, we only need check that $1561 \cdot 7116 \equiv 1 \mmod 8525$. This is routine:
+	\[
+	1561 \cdot 7116 \equiv 11108076 \equiv 1 \mmod 8525
+	\]
+\end{enumerate}
+}
+
+
+
+% Question 10
+\newpage
+\question[10] Solve the following system of congruences and show that your solution is correct:
+	\[
+	\begin{cases}
+	x + 1 \equiv 2 \mmod 3 \\
+	x \equiv 0 \mmod 5 \\
+	3x + 4 \equiv 2 \mmod 7 \\
+	1 - x \equiv 4 \mmod 11
+	\end{cases}
+	\] \pspace
+
+\sol {\itshape First, we put each congruence into the form $x \equiv a_i \mod m_i$. 
+
+	\[
+	\begin{aligned}
+	x + 1&\equiv 2 \mmod 3 &\quad x&\equiv 0 \mmod 5 &\quad 3x + 4&\equiv 2 \mmod 7 &\quad 1 - x&\equiv 4 \mmod 11 \\
+	x&\equiv 1 \mmod 3 & x&\equiv 0 \mmod 5 & 3x&\equiv -2 \mmod 7 & 1&\equiv x + 4 \mmod 11 \\
+	& & & & 3x&\equiv 5 \mmod 7 & x&\equiv -3 \mmod 11 \\
+	& & & & 3^{-1} \cdot 3x&\equiv 3^{-1} \cdot 5 \mmod 7 & x&\equiv 8 \mmod 11 \\
+	& & & & x&\equiv 5 \cdot 5 \mmod 7 \\
+	& & & & x&\equiv 25 \mmod 7 \\
+	& & & & x&\equiv 4 \mmod 7 \\
+	\end{aligned}
+	\]
+Therefore, this system of congruences is equivalent to the following system of congruences:
+	\[
+	\begin{cases}
+	x \equiv 1 \mmod 3 \\
+	x \equiv 0 \mmod 5 \\
+	x \equiv 4 \mmod 7 \\
+	x \equiv 8 \mmod 11
+	\end{cases}
+	\] 
+Because $\gcd(3, 5, 7, 11)= 1$, the Chinese Remainder Theorem states that there is a solution, which is unique modulo $M:= 3 \cdot 5 \cdot 7 \cdot 11= 1155$. The solution(s) have the same residue class as $x= \sum a_i N_i M_i$, where $M_i= M/m_i$ and $N_i= M_i^{-1} \mmod m_i$. From the work above, we have\dots
+	\[
+	\begin{aligned}
+	a_1&= 1 \\
+	a_2&= 0 \\
+	a_3&= 4 \\
+	a_4&= 8
+	\end{aligned}
+	\]
+Furthermore, we have\dots
+	\[
+	\begin{aligned}
+	M_1&= \dfrac{M}{m_1}= \dfrac{1155}{3}= 5 \cdot 7 \cdot 11= 385 \\
+	M_2&= \dfrac{M}{m_2}= \dfrac{1155}{5}= 3 \cdot 7 \cdot 11= 231 \\
+	M_3&= \dfrac{M}{m_3}= \dfrac{1155}{7}= 3 \cdot 5 \cdot 11= 165 \\
+	M_4&= \dfrac{M}{m_4}= \dfrac{1155}{11}= 3 \cdot 5 \cdot 7= 105
+	\end{aligned}
+	\]
+Now we need compute $N_i= M_i^{-1} \mod m_i$. First, we reduce each $M_i$ modulo $m_i$:
+	\[
+	\begin{aligned}
+	M_1&= 385 \equiv 1 \mmod 3 \\
+	M_2&= 231 \equiv 1 \mmod 5 \\
+	M_3&= 165 \equiv 4 \mmod 7 \\
+	M_4&= 105 \equiv 6 \mmod 11
+	\end{aligned}
+	\]
+Clearly, $N_1= M_1^{-1} \mmod 3= 1^{-1} \mmod 3= 1 \mmod 3$. Similarly, we know $N_2= M_2^{-1} \mmod 5= 1^{-1} \mmod 5= 1 \mmod 5$. To compute $N_3= M_3^{-1} \mmod 7= 4^{-1} \mmod 7$. But because $4 \cdot 2= 8 \equiv 1 \mmod 7$, we know that $N_3= 4^{-1} \equiv 2 \mmod 7$. Finally, we need to compute $N_4= M_4^{-1} \mmod 11= 6^{-1} \mmod 11$. But because $6 \cdot 2= 12 \equiv 1 \mmod 11$, we know that $N_4= 6^{-1} \equiv 2 \mmod 11$. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	N_1&= 1 \\
+	N_2&= 1 \\
+	N_3&= 2 \\
+	N_4&= 2
+	\end{aligned}
+	\]
+But then the unique solution modulo $M= 3 \cdot 5 \cdot 7 \cdot 11= 1155$ is\dots
+	\[
+	\hspace{-0.75cm} \sum a_i N_i M_i= 1(1)385 + 0(1)231 + 4(2)165 + 8(2)105= 385 + 0 + 1320 + 1680= 3385 \equiv 1075 \mmod 1155
+	\]
+Therefore, the unique solution modulo 1155 is 1075 and the integer solutions are those integers $n$ such that $n \equiv 1075 \mmod 1155$, e.g. $-1235$, $-80$, $1075$, $2230$, $3385$, etc. 
+}
+
+
+\end{questions}
+\end{document}
