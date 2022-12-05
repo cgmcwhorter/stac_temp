@@ -132,8 +132,23 @@ This shows that $\frac{1}{2} \in \im f$ and $7 - 3\pi \in \im g$. \pspace
 	\]
 Of course, this only shows that if $g(x)= 12$, then $x= -\frac{5}{3}$. We need show that $g(-5/3)= 12$. This is routine: $g \left(-\frac{5}{3} \right)= 7 - 3 \cdot -\frac{5}{3}= 7 + 5= 12$. Therefore, $12 \in \im g$. \pspace
 
-\item 
-\item 
+\item Observe that if $x + 5 \geq 0$, i.e. $x \geq -5$, then $f(x)= |x + 5|= x + 5$. If $x + 5 < 0$, i.e. $x < -5$, then $f(x)= |x + 5|= -(x + 5)= -x - 5$. But then using the fact that if $f(x)$ is a function and $A, B$ are sets that $f(A \cup B)= f(A) \cup f(B)$, we have\dots
+	\[
+	f \big( [-6, 6) \big)= f \big( [-6, -5] \cup [-5, 6) \big)= f \big([-6, -5] \big) \cup f \big( [-5, 6) \big)= [0, 1] \cup [0, 11)= [0, 11)
+	\]
+Observe that $g(x)$ is linear because it is of the form $y= mx + b$ with $y= g(x)$, $x= x$, $m= -3$, and $b= 7$. Because $g(x)$ is continuous, it must take intervals to intervals, i.e. the image of an interval is an interval.  Because $m= -3 < 0$, the function is decreasing. Putting these facts together, we know that $g([a, b])= [g(b), g(a)]$, $g \big( (a, b) \big)= \big( g(b), g(a) \big)$, etc. But then we have\dots
+	\[
+	g\big( (-6, 6] \big)= (g(6), g(-6)]= (-11, 25]
+	\]
+
+\item Observe that if $x + 5 \geq 0$, i.e. $x \geq -5$, then $f(x)= |x + 5|= x + 5$. But then if $f(x)= c$ and $x \geq -5$, we have $c= f(x)= |x + 5|= x + 5$ so that $x= c - 5$. Clearly, this then holds if $x= c - 5 \geq -5$, i.e. $c \geq 0$. Now if $x + 5 < 0$, i.e. $x < -5$, then $f(x)= |x + 5|= -(x + 5)$. But then if $f(x)= c$ and $x < -5$, we have $c= f(x)= |x + 5|= -(x + 5)$. But then we have $x= -c - 5$. Clearly, this then holds if $x= -c - 5 < -5$, i.e. $-c < 0$, which of course implies $c > 0$. Putting these two facts together, if $f(x)= |x + 5|= c \geq 0$, then either $x= c - 5$ or $x= -c - 5$. We can check: if $x= c - 5$, then $f(x)= |(c - 5) + 5|= |c|= c$, and if $x= -c - 5$, then $f(x)= |(-c - 5) + 5|= |-c|= c$. But this then shows that if $c \geq 0$, then $f^{-1}(c)= \{ -c - 5, c - 5 \}$. Clearly, $f(x)= |x + 5| \geq 0$ so that if $c < 0$, then $f(x) \neq c$ for all $x \in \mathbb{R}$, i.e. $f^{-1}(c)= \varnothing$. Using these facts and the fact that $f^{-1}$ is the preimage of a function $f$ and $A, B$ are sets, then $f^{-1}(A \cup B)= f^{-1}(A) \cup f^{-1}(B)$, we have\dots	
+	\[
+	f^{-1} \big( [-1,1] \big)= f^{-1} \big( [-1,0) \big) \cup f^{-1} \big( [0, 1] \big)= \varnothing \cup \big( [-6, -5] \cup [-5, -4] \big)= [-6, -4]
+	\]
+Observe that if $g^{-1}(c)= x$, then $g(x)= c$. But then $7 - 3x= c$, which implies that $-3x= c - 7$ so that $x= \frac{c - 7}{-3}= \frac{7 - c}{3}$. By the work in (d), because $g(x)$ is a decreasing linear function, the preimage of an interval must be an interval and $g^{-1} \big( (a, b) \big)= \big( g^{-1}(b), g^{-1}(a) \big)$, $g^{-1} \big( [a, b] \big)= \big[ g^{-1}(b), g^{-1}(a) \big]$, etc. But then we have\dots
+	\[
+	g^{-1} \big( [-1, 1] \big)= \big[ g^{-1}(1), g^{-1}(-1) \big]= \left[ \dfrac{7 - 1}{3}, \dfrac{7 - (-1)}{3} \right]= \left[\; 2, \;\dfrac{8}{3}\; \right]
+	\]
 \end{enumerate}
 }
 
@@ -151,10 +166,73 @@ Of course, this only shows that if $g(x)= 12$, then $x= -\frac{5}{3}$. We need s
 
 \sol {\itshape 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item The function $f(x)$ is not injective. If $f(x)$ is not injective, then there exist $x, y$ with $x \neq y$ but $f(x)= f(y)$. Observe that if $x= -1$ and $y= 1$, we have $f(-1)= (-1)^2 + 5= 1 + 5= 6$ and $f(1)= 1^2 + 5= 1 + 5= 6$. But then $f(-1)= f(1)$ but $-1 \neq 1$. Therefore, $f(x)$ is not injective. In fact, if $c \in \mathbb{R}$ and $c \neq 0$, then $f(-c)= f(c)$ but $c \neq -c$: $f(-c)= (-c)^2 + 5= c^2 + 5$ and $f(c)= c^2 + 5$ but we cannot have $c= -c$ because then $2c= 0$ so that $c= 0$, which is impossible if $c \neq 0$. Alternatively, we can see that $f(x)$ is not injective because it fails the horizontal line test: not every horizontal line intersects the function at most once
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=0.6,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -10.5, xmax=10.5,
+	ymin= -5, ymax=25,
+	xtick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	ytick={-5,0,...,25},
+	minor tick = {-25,-24,...,25},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\addplot[samples=100,line width=0.03cm] (x, x^2 + 5);
+	\draw[line width= 0.03cm, dotted, red] (-10.5, 20.5) -- (10.5, 20.5);
+	\draw[line width= 0.03cm, dotted, red] (-10.5, 13.5) -- (10.5, 13.5);
+	\draw[line width= 0.03cm, dotted, red] (-10.5, 7.5) -- (10.5, 7.5);
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\]
+
+\item The function $f(x)$ is not surjective. If $f(x)$ is not surjective, then there is $c \in \mathbb{R}$ such that $f(x) \neq c$ for all $x \in \mathbb{R}$. Let $c= 4$. If there were $x \in \mathbb{R}$ such that $f(x)= 4$, then we have\dots
+	\[
+	\begin{aligned}
+	f(x)&= 4 \\
+	x^2 + 5&= 4 \\
+	x^2&= -1
+	\end{aligned}
+	\]
+But if $x \in \mathbb{R}$, then $x^2 \geq 0$. Therefore, there is no $x \in \mathbb{R}$ such that $x^2= -1$. Therefore, $f(x)$ is not surjective. In fact, let $c < 5$. If there were $x \in \mathbb{R}$ such that $f(x)= c$, then we have\dots
+	\[
+	\begin{aligned}
+	f(x)&= c \\
+	x^2 + 5&= c \\
+	x^2&= c - 5
+	\end{aligned}
+	\]
+But because $c < 5$, we know that $c - 5 < 0$. But because $x^2 \geq 0$, if $x \in \mathbb{R}$, then clearly $x^2 \neq c - 5 < 0$. But then there is no such $x \in \mathbb{R}$ with $f(x)= c$ if $c < 5$. Alternatively, we can see that $f(x)$ is not surjective because not every horizontal line intersects the function at least once.
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=0.6,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -10.5, xmax=10.5,
+	ymin= -5, ymax=25,
+	xtick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	ytick={-5,0,...,25},
+	minor tick = {-25,-24,...,25},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\addplot[samples=100,line width=0.03cm] (x, x^2 + 5);
+	\draw[line width= 0.03cm, dotted, red] (-10.5, 3.5) -- (10.5, 3.5);
+	\draw[line width= 0.03cm, dotted, red] (-10.5, -0.5) -- (10.5, -0.5);
+	\draw[line width= 0.03cm, dotted, red] (-10.5, -3.5) -- (10.5, -3.5);
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\] \pspace
+
+\item The function $f(x)$ is not bijective. By definition, a function is bijective if and only if it is injective and surjective. By (a), we know that $f(x)$ is not injective. Furthermore, by (b), we know $f(x)$ is not surjective. Therefore, $f(x)$ is not bijective. \pspace
+
+\item The function $f(x)$ does not have an inverse. A function $f: A \to B$ has an inverse function $f^{-1}: B \to A$ if and only if it is a bijection. By (c), we know that $f(x)$ is not a bijection. Therefore, $f(x)$ does not have an inverse function. 
 \end{enumerate}
 }
 
@@ -172,10 +250,60 @@ Of course, this only shows that if $g(x)= 12$, then $x= -\frac{5}{3}$. We need s
 
 \sol {\itshape
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item If $-5$ is a fixed point for $f(x)$, then $f(-5)= -5$. We check this:
+	\[
+	f(-5)= 3(-5) + 10= -15 + 10= -5
+	\] \pspace
+
+\item If $4$ is not a fixed point for $g(x)$, then $g(4) \neq 4$. We check this:
+	\[
+	g(4)= \dfrac{4 + 4}{2 - 4}= \dfrac{8}{-2}= -4
+	\]
+
+\item If $x$ is a fixed point for $h(x)$, then $h(x)= x$. But then we have\dots
+	\[
+	\begin{aligned}
+	h(x)&= x \\
+	2x^2 + 6x - 3&= x \\
+	2x^2 + 5x - 3&= 0 \\
+	(2x - 1)(x + 3)&= 0 
+	\end{aligned}
+	\]
+But then either $2x - 1= 0$, which implies $x= \frac{1}{2}$, or $x + 3= 0$, which implies $x= -3$. Of course, this only shows that if $x$ is a fixed point, then $x= \frac{1}{2}$ or $x= -3$. This does not necessarily imply that $h \left( \frac{1}{2} \right)= \frac{1}{2}$ or $h(-3)= -3$. We need check this:
+	\[
+	\begin{aligned}
+	h \left( \frac{1}{2} \right)&= 2 \left( \dfrac{1}{2} \right)^2 + 6 \cdot \dfrac{1}{2} - 3= \dfrac{1}{2} + 3 - 3= \dfrac{1}{2} \\[0.3cm]
+	h(-3)&= 2(-3)^2 + 6(-3) - 3= 18 - 18 - 3= -3 
+	\end{aligned}
+	\]
+Therefore, $x= -3$ and $x= \frac{1}{2}$ are fixed points for $h(x)$. \pspace
+
+
+
+\newpage
+
+
+
+\item If $x$ is a fixed point for $j(x)$, then $j(x)= x$. But then we have\dots
+	
+	\begin{gather*}
+	j(x)= x \\[0.3cm]
+	x^2 - 3x + 5= x \\[0.3cm]
+	x^2 - 4x + 5= 0 \\[0.3cm]
+	x= \dfrac{-(-4) \pm \sqrt{(-4)^2 - 4(1)5}}{2(1)} \\[0.3cm]
+	x= \dfrac{4 \pm \sqrt{16 - 20}}{2} \\[0.3cm]
+	x= \dfrac{4 \pm 2i}{2} \\[0.3cm]
+	x= 2 \pm i
+	\end{gather*}
+
+Therefore, there can be no fixed points over $\mathbb{R}$ as the only possibilities are $x= 2 \pm i$. But then there are possible fixed points over $\mathbb{C}$. Indeed, we can check that $2 + i$ and $2 - i$ are fixed points:
+	\[
+	\begin{aligned}
+	j(2 + i)&= (2 + i)^2 - 3(2 + i) + 5=  (3 + 4i) + (-6 - 3i) + 5= 2 + i \\
+	j(2 - i)&= (2 - i)^2 - 3(2 - i) + 5= (3 - 4i) + (-6 + 3i) + 5= 2 - i
+	\end{aligned}
+	\]
+Therefore, $2 + i$ and $2 - i$ are fixed points for $j(x)$. 
 \end{enumerate}
 }
 
@@ -186,19 +314,44 @@ Of course, this only shows that if $g(x)= 12$, then $x= -\frac{5}{3}$. We need s
 \question[10] Showing all your work, compute the following:
 	\begin{enumerate}[(a)]
 	\item $\displaystyle \sum_{k= -2}^3 (5 - k)$
-	\item $\displaystyle \prod_{k=1}^5 (2k -3)$ 
+	\item $\displaystyle \prod_{k=1}^5 (2k - 3)$ 
 	\item $\displaystyle \sum_{k=0}^{1000} (k - 7)$
 	\item $\displaystyle \sum_{k=0}^{1000} \left( \sqrt{k + 5} - \sqrt{k} \right)$
 	\item $\displaystyle \prod_{k=1}^{1000} \left(1 + \dfrac{1}{k} \right)$
-	\end{enumerate} \pspace
+	\end{enumerate} 
 
 \sol {\itshape
 \begin{enumerate}[(a)]
 \item 
+	\[
+	\sum_{k= -2}^3 (5 - k)= 7 + 6 + 5 + 4 + 3 + 2= 27
+	\] 
+
 \item 
+	\[
+	\prod_{k=1}^5 (2k - 3)= -1 \cdot 1 \cdot 3 \cdot 5 \cdot 7= -105
+	\] 
+
 \item 
+	\[
+	\hspace{-2cm} \sum_{k=0}^{1000} (k - 7)= \sum_{k=0}^{1000} k + \sum_{k=0}^{1000} (-7)= \sum_{k=0}^{1000} k - 7 \sum_{k=0}^{1000} 1= \dfrac{1000(1001)}{2} - 7(1000 - 0 + 1)= 500500 - 7007= 493493
+	\] 
+
 \item 
+	\[
+	\begin{aligned}
+	\sum_{k=0}^{1000} \left( \sqrt{k + 5} - \sqrt{k} \right)= ( \cancel{\sqrt{5}} - \sqrt{0} ) + ( \cancel{\sqrt{6}} - \sqrt{1} ) + ( \cancel{\sqrt{7}} - \sqrt{2} ) + ( \cancel{\sqrt{8}} - \sqrt{3} ) + ( \cancel{\sqrt{9}} - \sqrt{4} ) + \\
+	( \cancel{\sqrt{10}} - \cancel{\sqrt{5}} ) + ( \cancel{\sqrt{11}} - \cancel{\sqrt{6}} ) + ( \cancel{\sqrt{12}} - \cancel{\sqrt{7}} ) + \cdots + \\
+	( \cancel{\sqrt{998}} - \cancel{\sqrt{993}} ) + ( \cancel{\sqrt{999}} - \cancel{\sqrt{994}} ) + ( \cancel{\sqrt{1000}} - \sqrt{995} ) + ( \sqrt{1001} - \cancel{\sqrt{996}} ) +   \\
+	( \sqrt{1002} - \cancel{\sqrt{997}} ) + ( \sqrt{1003} - \cancel{\sqrt{998}} ) + ( \sqrt{1004} - \cancel{\sqrt{999}} ) + ( \sqrt{1005} - \cancel{\sqrt{1000}} ) \\
+	= \sqrt{1005} + \sqrt{1004} + \sqrt{1003} + \sqrt{1002} + \sqrt{1001} - \sqrt{1} - \sqrt{2} - \sqrt{3} - \sqrt{4}
+	\end{aligned}
+	\] 
+
 \item 
+	\[
+	\prod_{k=1}^{1000} \left(1 + \dfrac{1}{k} \right)= \prod_{k=1}^{1000} \left(\dfrac{k + 1}{k} \right)= \dfrac{\cancel{2}}{1} \cdot \dfrac{\cancel{3}}{\cancel{2}} \cdot \dfrac{\cancel{4}}{\cancel{3}} \cdot \dfrac{\cancel{5}}{\cancel{4}} \cdot \cdots \cdot \dfrac{\cancel{998}}{\cancel{997}} \cdot \dfrac{\cancel{999}}{\cancel{998}} \cdot \dfrac{\cancel{1000}}{\cancel{999}} \cdot \dfrac{1001}{\cancel{1000}}= 1001
+	\]
 \end{enumerate}
 }
 
@@ -211,17 +364,60 @@ Of course, this only shows that if $g(x)= 12$, then $x= -\frac{5}{3}$. We need s
 	\item Using the definition of odd/even, show that $-237$ is odd but not even.
 	\item Express $1854/17$ using the division algorithm. 
 	\item Find the prime factorization of 2040. 
-	\item Compute $\gcd(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next smallest divisor of the two given numbers. 
-	\item Compute $\lcm(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next largest multiple of the two given numbers.
+	\item Compute $\gcd(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next largest divisor of the two given numbers. 
+	\item Compute $\lcm(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})$ and find the next smallest multiple of the two given numbers.
 	\end{enumerate} \pspace
 
 \sol {\itshape
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item If $-237$ is odd, then there exists a $k \in \mathbb{Z}$ such that $-237= 2k + 1$. Observe that $-237= 2(-119) + 1$ so that $-237$ is odd. If $-237$ were even, there would exist $k \in \mathbb{Z}$ such that $-237= 2k$. But this would imply that $k= \frac{-237}{2} \notin \mathbb{Z}$. Therefore, $-237$ is not even. \pspace
+
+\item Let $b= 1854$ and $a= 17$. We find $q, r \in \mathbb{Z}$ such that $b= qa + r$, where $0 \leq r < a$. Because $a > 0$, we have $q= \floor*{\dfrac{b}{a}}= \floor*{\dfrac{1854}{17}}= 109$. But then $r= b - qa= 1854 - 109(17)= 1854 - 1853= 1$. Therefore, we have $1854= 109(17) + 1$. \pspace
+
+\item Observe that\dots
+	\[
+	\begin{tikzpicture}
+	\node at (-0.15,0) {$2040$};
+	\draw[line width=0.03cm] (-0.4,-0.2) -- (-0.8,-0.5);
+	\node at (-0.8,-0.8) {$204$};
+	\draw[line width=0.03cm]  (0.1,-0.2) -- (0.5,-0.5);
+	\node at (0.5,-0.8) {$10$};
+		
+	\draw[line width=0.03cm] (-0.8,-1) -- (-1.8,-1.6);
+	\node at (-1.8,-1.8) {$6$};
+	\draw[line width=0.03cm] (-0.8,-1) -- (-0.6,-1.6);
+	\node at (-0.6,-1.8) {$34$};
+	
+	\draw[line width=0.03cm] (0.5,-1) -- (0.1,-1.6);
+	\node at (0.1,-1.8) {$2$};
+	\draw[line width=0.03cm] (0.5,-1) -- (0.8,-1.6);
+	\node at (0.8,-1.8) {$5$};
+	
+	\draw[line width=0.03cm] (-2.2, -2.5) -- (-1.8, -2.1);
+	\node at (-2.2,-2.8) {$2$};
+	\draw[line width=0.03cm] (-1.6,-2.5) -- (-1.8, -2.1);
+	\node at (-1.6,-2.8) {$3$};
+	
+	\draw[line width=0.03cm] (-0.2, -2.4) -- (-0.6,-2.0);
+	\node at (-0.2,-2.6) {$17$};
+	\draw[line width=0.03cm] (-1.0,-2.4) -- (-0.6,-2.0);
+	\node at (-1.0,-2.6) {$2$};
+	\end{tikzpicture}
+	\] 
+Therefore, the prime factorization of 2040 is $2040= 2^3 \cdot 3 \cdot 5 \cdot 17$. \pspace
+
+\item We know that if $a= \prod_i p_i^{a_i}$ and $b= \prod_i p_i^{b_i}$, where the $p_i$ are prime and $a_i, b_i \geq 0$, then $\gcd(a, b)= \gcd \left( \prod_i p_i^{a_i}, \prod_i p_i^{b_i} \right)= \prod_i p^{\min(a_i, b_i)}$. But then we have\dots
+	\[
+	\gcd(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})= 2^{173} \cdot 3^{187}
+	\]
+Any divisors of two positive integers $a, b$ divides the $\gcd(a, b)$. But then if $\gcd(a, b)= \prod_i p_i^{g_i}$, where the $p_i$ are prime and $g_i \geq 0$, any divisor of $a, b$ must be of the form $\prod_i p_i^{d_i}$, where $0 \leq d_i \leq g_i$. Assuming $\gcd(a, b) > 1$, the next greatest divisor must have the same prime factorization as $\gcd(a, b)$ with one less power of the smallest prime divisor of $\gcd(a, b)$ with nonnegative power. Applying this in the case above, the next largest divisor is $2^{172} \cdot 3^{187}$. 
+
+
+\item We know that if $a= \prod_i p_i^{a_i}$ and $b= \prod_i p_i^{b_i}$, where the $p_i$ are prime and $a_i, b_i \geq 0$, then $\lcm(a, b)= \lcm \left( \prod_i p_i^{a_i}, \prod_i p_i^{b_i} \right)= \prod_i p^{\max(a_i, b_i)}$. But then we have\dots
+	\[
+	\lcm(2^{173} \cdot 3^{187} \cdot 5^{685} \cdot 11^{203}, \; 2^{578} \cdot 3^{281} \cdot 7^{323} \cdot 13^{360})= 2^{578} \cdot 3^{281} \cdot 5^{686} \cdot 7^{323} \cdot 11^{203} \cdot 13^{360}
+	\]
+Any multiple of two positive integers $a, b$ must be a multiple of $\lcm(a, b)$. But then if $\lcm(a, b)= \prod_i p_i^{\ell_i}$, where the $p_i$ are prime and $\ell_i \geq 0$, any divisor of $a, b$ must be of the form $\prod_i p_i^{d_i}$, where $g_i \leq \ell_i$. But then the next smallest multiple must have the same prime factorization as $\lcm(a, b)$ with one additional power of the smallest possible prime---namely, 2. Applying this in the case above, the next smallest multiple is $2^{579} \cdot 3^{281} \cdot 5^{686} \cdot 7^{323} \cdot 11^{203} \cdot 13^{360}$.
 \end{enumerate}
 }
 
@@ -365,7 +561,7 @@ Taking this equation modulo 8525, we have $-1409 \cdot 1561 \equiv 1 \mmod 8525$
 
 \item The inverse of an element $a \mmod N$ is an element $b \mmod N$ such that $ab \equiv 1 \mmod N$. The inverse, when it exists, is unique. Therefore, we only need check that $1561 \cdot 7116 \equiv 1 \mmod 8525$. This is routine:
 	\[
-	1561 \cdot 7116 \equiv 11108076 \equiv 1 \mmod 8525
+	1561 \cdot 7116 \equiv 11108076 \equiv 1303(8525) + 1 \equiv 1 \mmod 8525
 	\]
 \end{enumerate}
 }

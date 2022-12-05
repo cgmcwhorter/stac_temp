@@ -189,11 +189,38 @@ The last approximation becomes more and more accurate the more games you play be
 
 
 
+%Suppose the matrix given below is the RREF form of an augmented matrix coming from a linear system of equations. Then the original system had 3 linear equations in 5 variables and the system has 3 free variables. 
+%	\[
+%	\begin{pmatrix}
+%	1 & 3 & 0 & 0 & 0 & 5 \\
+%	0 & 0 & 1 & 2 & 1 & -1 \\
+%	0 & 0 & 0 & 0 & 0 & 0 \\
+%	\end{pmatrix}
+%	\]
 
 
 
-
-
+%The region shown below is bounded. 
+%	\[
+%	\fbox{
+%	\begin{tikzpicture}[scale=0.8,every node/.style={scale=0.5}]
+%	\begin{axis}[
+%	grid=both,
+%	axis lines=middle,
+%	ticklabel style={fill=blue!5!white},
+%	xmin= -1, xmax=10,
+%	ymin= -1, ymax=10,
+%	xtick={0,2,4,6,8,10},
+%	ytick={0,2,4,6,8,10},
+%	minor tick = {-1,0,1,...,10},
+%	xlabel=\(x_1\),ylabel=\(x_2\),
+%	]
+%	\draw[line width=0.03cm] (10,2/3) -- (2,2) -- (0,4) -- (0,10);
+%	\draw[line width=0.01cm,fill= blue,opacity=0.1] (10,2/3) -- (2,2) -- (0,4) -- (0,10) -- (10,10) -- (10,2/3);
+%	\end{axis}
+%	\end{tikzpicture}
+%	}
+%	\]
 
 
 

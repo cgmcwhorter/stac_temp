@@ -193,6 +193,10 @@ Because the loan was only for \$2,300, the interest on the loan is $\$2717.59 - 
 % Quiz 17
 %Suppose $x$ comes from a normal distribution, $N(\mu, \sigma)$. Then the larger the value of $|z_x|$, the more `unusual' the value. 
 
+%  If you take simple random samples of size 15 from a distribution with mean 130 and standard deviation 25, the resulting distribution of sample means is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pspace
+
+%\sol The statement is \textit{false}. If a random variable $X$ has a distribution with mean $\mu$ and (finite) standard deviation $\sigma$, the Central Limit Theorem (CLT) says that the distribution of sample means, $\overline{X}$, of size $n$ has distribution $N(\mu, \sigma/\sqrt{n})$ so long as at least one of the following criterion are met: the underlying distribution is normal, i.e. you are sampling from $N(\mu, \sigma)$, or the sample size is `sufficiently large' (e.g., $n \geq 30$). We were not told that the underlying distribution was normal. Because the sample size is $15 < 30$, the sample size is not sufficiently large enough to meet the criterion of the Central Limit Theorem. Therefore, it is not necessarily the case that the distribution of $\overline{X}$ is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pvspace{1.5cm}
+
 
 
 \end{document}
