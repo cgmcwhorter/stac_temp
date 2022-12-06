@@ -1,0 +1,72 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{18: Due 12/08}{Linear programming can be viewed as part of a great revolutionary development which has given mankind the ability to state general goals and to lay out a path of detailed decisions to take in order to `best' achieve its goals when faced with practical situations of great complexity.}{George Dantzig}
+
+% Problem 1
+\problem{10} Write down the initial simplex tableau for the following optimization problem:
+	\[
+	\begin{aligned}
+	\max z= 4.6x_1 + \,&3.1x_2 + 7.9x_3 \\
+	5.5x_1 - 6x_2 + \,&1.1x_3 \leq 110.3 \\
+	-6.7x_1 - \,&8.3 x_3 \leq 220.1 \\
+	x_1 - 7.7x_2 + \,&4.5x_3 \leq 662.0 \\
+	x_1, \, &x_2, x_3 \geq 0 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose that the initial simplex tableau below was associated to a standard maximization problem. Write down the function being maximized and the corresponding system of constraints. \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr|r}
+	$2$ & $-1$ & $4$ & $1$ & $0$ & $0$ & $100$ \\
+	$6$ & $0$ & $2$ & $0$ & $1$ & $0$ & $80$ \\
+	$-4$ & $8$ & $3$ & $0$ & $0$ & $1$ & $220$ \\ \hline
+	$-3$ & $-1$ & $-5$ & $0$ & $0$ & $0$ & $0$ \\
+	\end{tabular}
+	\end{table}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose that the final simplex tableau associated to a maximization problem was the following: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrrrrr}
+	$1$ & $1.1$ & $2$ & $0$ & $0$ & $0.22$ & $0.067$ & $-0.011$ & $0$ & $140$ \\
+	$0$ & $2.1$ & $1.5$ & $1$ & $0$ & $-0.021$ & $0.23$ & $-0.037$ & $0$ & $85$ \\
+	$0$ & $-1.1$ & $-0.59$ & $0$ & $1$ & $0.008$ & $-0.088$ & $0.16$ & $0$ & $42$ \\
+	$0$ & $-6.4$ & $-12$ & $0$ & $0$ & $-0.55$ & $-0.45$ & $0.54$ & $1$ & $270$ \\
+	$0$ & $2.3$ & $2.3$ & $0$ & $0$ & $0.2$ & $0.59$ & $0.72$ & $0$ & $760$ \\
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item How many inequalities were considered?
+\item How many variables were there in the original inequalities?
+\item How many slack/surplus variables were introduced?
+\item What was the solution to this maximization problem?
+\end{enumerate}
+
+
+\end{document}
