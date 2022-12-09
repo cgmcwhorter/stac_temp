@@ -1,0 +1,64 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{20: Due 12/13}{We should forget about small efficiencies, say about 97\% of the time: premature optimization is the root of all evil.}{Donald Knuth}
+
+% Problem 1
+\problem{10} Write down the initial simplex tableau for the following optimization problem:
+	\[
+	\begin{aligned}
+	\min z= 5.3x_1 - &\,3.4x_2 + 6.8x_3 + 8.1x_4 \\
+	1.1x_1 - 2.2x_2 + &\,3.3x_3 - 4.4x_4 \geq 15.6 \\
+	8.4x_1 + 5.9x_2 &+ 17.8x_4 \geq 78.4 \\
+	9.9x_1 - x_1 &+ 6.7 x_3 \geq 100.5 \\
+	x_1, x_2, &x_3, x_4 \geq 0 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Find the dual problem for the following minimization problem:
+	\[
+	\begin{aligned}
+	\min z= 5x_1 &+ 4x_2 \\
+	x_1 + x_2 &\geq 4 \\
+	x_1 + 7x_2 &\geq 8 \\
+	x_1 + 5x_2 &\geq 9 \\
+	x_1, x_2 &\geq 0 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Write down the initial simplex tableau for the following optimization problem:
+	\[
+	\begin{aligned}
+	\max z= 2x_1 + x_2 - 3x_3 \\
+	x_1 + 2x_2 + 3x_3 \leq 90 \\
+	x_1 + x_2 \geq 10 \\
+	x_1 - x_2 - x_3 \leq -20 \\
+	x_1, x_2, x_3 \geq 0 
+	\end{aligned}
+	\]
+
+
+\end{document}
