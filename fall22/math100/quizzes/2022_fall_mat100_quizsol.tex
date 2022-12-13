@@ -174,28 +174,71 @@ Because the loan was only for \$2,300, the interest on the loan is $\$2717.59 - 
 
 
 
-
-
 \newpage
-
-
 
 
 
 % Quiz 15
 \quizsol \textit{True/False}: If $A$ and $B$ are independent events with $P(A)= 0.40$, $P(B)= 0.20$, then $P(A \text{ or } B)= P(A) + P(B)= 0.40 + 0.20= 0.60$. \pspace
 
-\sol The statement is \textit{false}. We know that $A$ and $B$ are disjoint events, then $P(A \text{ or } B)= P(A) + P(B)$. However, if $A$ and $B$ are not disjoint, this may not be true. Generally, if $A$ and $B$ are events, then $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$. If $A$ and $B$ are disjoint, then $P(A \text{ and } B)= 0$ and the formula reduces to the disjoint case. Now because $A$ and $B$ are independent, we know $P(A \text{ and } B)= P(A) \cdot P(B)= 0.40 \cdot 0.20= 0.08$. But then we have $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)= 0.40 + 0.20 - 0.08= 0.52$. 
+\sol The statement is \textit{false}. We know that $A$ and $B$ are disjoint events, then $P(A \text{ or } B)= P(A) + P(B)$. However, if $A$ and $B$ are not disjoint, this may not be true. Generally, if $A$ and $B$ are events, then $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$. If $A$ and $B$ are disjoint, then $P(A \text{ and } B)= 0$ and the formula reduces to the disjoint case. Now because $A$ and $B$ are independent, we know $P(A \text{ and } B)= P(A) \cdot P(B)= 0.40 \cdot 0.20= 0.08$. But then we have $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)= 0.40 + 0.20 - 0.08= 0.52$. \pvspace{1.6cm}
 
 
-%The 5-number summary is the min, Q1, mean, Q3, and max. 
+
+% Quiz 16
+\quizsol \textit{True/False}: The 5-number summary is the minimum, Q1, mean, Q3, and maximum. \pspace
+
+\sol The statement is \textit{false}. The five numbers included in the 5-number summary are: minimum, Q1, the \textit{median}, Q3, and the maximum. The purpose of the 5-number summary is to try to `break-up' and show the `spread' of the data about the median. The 5-number summary then breaks up the data into four `chunks', each containing 25\% of the data values---though each quarter of the data need not be `spread' out equally. We can then visualize this spread with a box plot, e.g. the one below
+	\[
+	\begin{tikzpicture}
+	\draw (0,0) -- (11,0);
+	\draw[thick] (3,1) -- (4.8,1);
+	\draw[thick] (8.1,1) -- (10,1);
+	
+	\draw[thick] (3,0.75) -- (3,1.25);
+	\draw[thick] (10,0.75) -- (10,1.25);
+	
+	\draw[thick] (4.8,0.5) -- (4.8,1.5);
+	\draw[thick] (6.95,0.5) -- (6.95,1.5);
+	\draw[thick] (8.1,0.5) -- (8.1,1.5);
+	
+	\draw[thick] (4.8,1.5) -- (8.1,1.5);
+	\draw[thick] (4.8,0.5) -- (8.1,0.5);
+	
+	\draw[thick] (0,-0.2) -- (0,0.2);
+	\node at (0,-0.5) {0}; 
+
+	\draw[thick] (10,-0.2) -- (10,0.2);
+	\node at (10,-0.5) {100}; 
+
+	\draw[thick] (3,-0.2) -- (3,0.2);
+	\node at (3,-0.5) {30}; 
+
+	\draw[thick] (4.8,-0.2) -- (4.8,0.2);
+	\node at (4.8,-0.5) {48}; 
+
+	\draw[thick] (6.95,-0.2) -- (6.95,0.2);
+	\node at (6.95,-0.5) {69.5}; 
+
+	\draw[thick] (8.1,-0.2) -- (8.1,0.2);
+	\node at (8.1,-0.5) {81}; 
+		
+	\end{tikzpicture}
+	\] \pvspace{1.6cm}
+
+
 
 % Quiz 17
-%Suppose $x$ comes from a normal distribution, $N(\mu, \sigma)$. Then the larger the value of $|z_x|$, the more `unusual' the value. 
+\quizsol \textit{True/False}: Suppose $x$ comes from a normal distribution, $N(\mu, \sigma)$. Then the larger the value of $|z_x|$, the more `unusual' the value. \pspace
 
-%  If you take simple random samples of size 15 from a distribution with mean 130 and standard deviation 25, the resulting distribution of sample means is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pspace
+\sol The statement is \textit{true}. Recall that the $z$-score for $x$ is given by $z_x= \frac{x - \mu}{\sigma}$. But then because $\sigma \geq 0$, $|z_x|= \left| \frac{x - \mu}{\sigma} \right|= \frac{|x - \mu|}{|\sigma|}= \frac{|x - \mu|}{\sigma}$. The value of $|x - \mu|$ is how far $x$ is from the mean, $\mu$. But then $|z_x|= \frac{|x - \mu|}{\sigma}$ measures the number of standard deviations $x$ is from the mean. The sign of $z_x$ indicates the direction, i.e. $z_x < 0$ implies $x$ is less than the mean, $z_x= 0$ implies $x$ is equal to the mean, and $z_x > 0$ implies that $x$ is greater than the mean. Then the greater $|z_x|$ is, the farther $x$ is above/below the mean, where values `occur less frequently.' Hence, the larger the value of $|z_x|$, the more `unusual' the value. \pvspace{1.8cm}
 
-%\sol The statement is \textit{false}. If a random variable $X$ has a distribution with mean $\mu$ and (finite) standard deviation $\sigma$, the Central Limit Theorem (CLT) says that the distribution of sample means, $\overline{X}$, of size $n$ has distribution $N(\mu, \sigma/\sqrt{n})$ so long as at least one of the following criterion are met: the underlying distribution is normal, i.e. you are sampling from $N(\mu, \sigma)$, or the sample size is `sufficiently large' (e.g., $n \geq 30$). We were not told that the underlying distribution was normal. Because the sample size is $15 < 30$, the sample size is not sufficiently large enough to meet the criterion of the Central Limit Theorem. Therefore, it is not necessarily the case that the distribution of $\overline{X}$ is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pvspace{1.5cm}
+
+
+% Quiz 18
+\quizsol \textit{True/False}: If you take simple random samples of size 15 from a distribution with mean 130 and standard deviation 25, the resulting distribution of sample means is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pspace
+
+\sol The statement is \textit{false}. If a random variable $X$ has a distribution with mean $\mu$ and (finite) standard deviation $\sigma$, the Central Limit Theorem (CLT) says that the distribution of sample means, $\overline{X}$, of size $n$ has distribution $N(\mu, \sigma/\sqrt{n})$ so long as at least one of the following criterion are met: the underlying distribution is normal, i.e. you are sampling from $N(\mu, \sigma)$, or the sample size is `sufficiently large' (e.g., $n \geq 30$). We were not told that the underlying distribution was normal. Because the sample size is $15 < 30$, the sample size is not sufficiently large enough to meet the criterion of the Central Limit Theorem. Therefore, it is not necessarily the case that the distribution of $\overline{X}$ is $N(130, 25/\sqrt{15}) \approx N(130, 6.45497)$. \pvspace{1.5cm}
 
 
 

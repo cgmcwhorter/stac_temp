@@ -1,0 +1,67 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{18: Due 12/06}{Combinatorialists use recurrence, generating functions, and such transformations as the Vandermonde convolution; others, to my horror, use contour integrals, differential equations, and other resources of mathematical analysis.}{John Riordan}
+
+% Problem 1
+\problem{10} By counting functions (`ordinary' functions, injections, or surjections), showing all your work and fully explaining your reasoning, answer the following:
+	\begin{enumerate}[(a)]
+	\item How many ways 5 people can be assigned to 8 tasks, where each person can only be assigned to a single task but a task may have more than one person assigned to it. [Ans: 32,768]
+	\item How many ways 5 people can be assigned to 8 tasks, where each person can only be assigned to a single task and each task may only have one person assigned to it. [Ans: 6,720]
+	\item How many ways can 5 people be assigned to 3 tasks, where each task must have at least one person assigned to it? [Ans: 150]
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Using the principle of inclusion-exclusion, how many integers between 1 and 1000, inclusive, are\dots
+	\begin{enumerate}[(a)]
+	\item Divisible by at least one of 2, 3, 5? [Ans: 734]
+	\item Divisible by 2 and 3 but not by 5? [Ans: 133]
+	\item Divisible by 5 but not 2 nor 3? [Ans: 67]
+	\item Divisible by 2, 3, and 5? [Ans: 33]
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work and fully explaining your reasoning, use the (general) binomial theorem to answer the following:
+	\begin{enumerate}[(a)]
+	\item What is the coefficient of $x^4 y^{10}$ in $(x + y)^{14}$? [Ans: 1001]
+	\item What is the coefficient of $x^6 y^5$ in $(2x - 3y)^{11}$? [Ans: $-$7,185,024]
+	\item What is the coefficient of $x^{17} y z^2$ in $(x + y + z)^{20}$? [Ans: 3,420]
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Using the theory of dearrangements, showing all your work, and fully explaining your reasoning, answer the following:
+	\begin{enumerate}[(a)]
+	\item Find all the dearrangements of the set $S= \{ 1, 2, 3 \}$. 
+	\item How many dearrangements are there for a set with four elements? [Ans: 9]
+	\item Approximate how many dearrangements there are for a set with 10~elements. [Ans: 1,334,961]
+	\end{enumerate}
+
+
+\end{document}

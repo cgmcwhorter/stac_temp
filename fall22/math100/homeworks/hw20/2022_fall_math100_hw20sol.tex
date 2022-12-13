@@ -1,0 +1,131 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{20: Due 12/05}{The only normal people are the ones you don't know very well.}{Alfred Adler}
+
+% Problem 1
+\problem{10} Given the binomial distributions below, find the probability of the event(s) indicated. 
+	\begin{enumerate}[(a)]
+	\item $B(0.40, 7)$, $P(X= 4)$
+	\item $B(0.25, 12)$, $P(X < 3)$
+	\item $B(0.50, 4)$, $P(X \geq 1)$
+	\item $B(0.10, 15)$, $P(X > 5)$
+	\item $B(0.15, 8)$, $P(2 < X \leq 6)$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	P(X= 4)= 0.0256
+	\]
+
+\item 
+	\[
+	P(X < 3)= P(X= 0) + P(X= 1) + P(X= 2)= 0.0317 + 0.1267 + 0.2323= 0.3907
+	\]
+
+\item 
+	\[
+	P(X \geq 1)= 1 - P(X= 0)= 1 - 0.0625= 0.9375
+	\]
+
+\item 
+	\[
+	\begin{aligned}
+	P(X > 5)&= 1 - P(X \leq 4) \\
+	&= 1 - P(X= 0) - P(X= 1) - P(X= 2) - P(X= 3) - P(X= 4) \\
+	&= 1 - 0.2059 - 0.3432 - 0.2669 - 0.1285 \\
+	&= 0.0555
+	\end{aligned}
+	\]
+
+\item 
+	\[
+	\begin{aligned}
+	P(2 < X \leq 6)&= P(X= 3) + P(X= 4) + P(X= 5) + P(X= 6) \\
+	&= 0.0839 + 0.0185 + 0.0026 + 0.0002 \\
+	&= 0.1052
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+\newpage
+
+
+% Problem 2
+\problem{10} Suppose at a school that 15\% of students do not receive any scholarships. If you take a simple random sample of 14 students, find the probability that\dots
+	\begin{enumerate}[(a)]
+	\item exactly four of the students did not receive any scholarships. 
+	\item five or more of the students did not receive any scholarships.
+	\item at least one of the students did not receive any scholarships.
+	\item less than 3 of the students did not receive any scholarships.
+	\item none of the students received a scholarship. 
+	\end{enumerate} \pspace
+
+\sol Because each student either received a scholarship or not, the probability of not receiving a scholarship is fixed with $p= 0.15$, we take a fixed number of $n= 14$~students, and each sample was taken independently, this is a binomial distribution with $B(n, p)= B(14, 0.15)$. 
+
+\begin{enumerate}[(a)]
+\item This is\dots
+	\[
+	P(X= 4)= 0.0998
+	\] \pspace
+	
+\item This is\dots
+	\[
+	\begin{aligned}
+	P(X \geq 5)&= P(X= 5) + P(X= 6) + P(X= 7) + P(X= 8) + P(X= 9) + \cdots + P(X= 14) \\
+	&= 0.0352 + 0.0093 + 0.0019 + 0.0003 + 0.0000 + \cdots + 0.0000 \\
+	&= 0.0467
+	\end{aligned}
+	\] \pspace
+
+\item This is\dots
+	\[
+	P(X \geq 1)= 1 - P(X= 0)= 1 - 0.1028= 0.8972
+	\] \pspace
+
+\item This is \dots
+	\[
+	P(X < 3)= P(X= 0) + P(X= 1) + P(X= 2)= 0.1028 + 0.2539 + 0.2912= 0.6479
+	\] \pspace
+
+\item If none of them received a scholarship, then all of them did not receive a scholarship. This is\dots
+	\[
+	P(X= 14)= 0.000
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} A city is considering whether or not to build a park in a newly acquired lot. It is estimated that 53\% of the population is in favor of building the park. The city conducts a survey of its residents consisting of 300 people. What is the approximate probability that between 140 and 170 people surveyed are in favor of the park? \pspace
+
+\sol Because each person surveyed either is in favor of the park or not, the percentage chance of being in favor of the park is fixed at $p= 0.53$, there is a fixed survey of $n= 300$~people, and the survey respondents are assumed to be independent of each other, this is a binomial distribution with $B(n, p)= B(300, 0.53)$. However, because $np= 300(0.53)= 159 \geq 10$ and $n(1 - p)= 300(1 - 0.53)= 300(0.47)= 141 \geq 10$, we can approximate the binomial distribution $B(n, p)$ with $N(np, \sqrt{np(1 - p)})$. But then we have $B(300, 0.53) \approx N \big( 300(0.53), \sqrt{300 \cdot 0.53 \cdot (1 - 0.53)} \big)= N(159, 8.6447)$. But then we have\dots
+	\[
+	\begin{aligned}
+	z_{140}&= \dfrac{140 - 159}{8.6447}= \dfrac{-19}{8.6447} \approx -2.20 \squiggle 0.0139 \\[0.3cm]
+	z_{170}&= \dfrac{170 - 159}{8.6447}= \dfrac{11}{8.6447} \approx 1.27 \squiggle 0.8980
+	\end{aligned}
+	\]
+But then we know that\dots
+	\[
+	P(140 \leq X \leq 170) \approx P(X \leq 170) - P(140 \leq X)= 0.8980 - 0.0139= 0.8841
+	\]
+
+
+\end{document}

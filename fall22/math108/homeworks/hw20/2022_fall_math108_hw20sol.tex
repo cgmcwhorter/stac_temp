@@ -1,0 +1,165 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{20: Due 12/13}{We should forget about small efficiencies, say about 97\% of the time: premature optimization is the root of all evil.}{Donald Knuth}
+
+% Problem 1
+\problem{10} Write down the initial simplex tableau for the following optimization problem:
+	\[
+	\begin{aligned}
+	\min z= 5.3x_1 - &\,3.4x_2 + 6.8x_3 + 8.1x_4 \\
+	1.1x_1 - 2.2x_2 + &\,3.3x_3 - 4.4x_4 \geq 15.6 \\
+	8.4x_1 + 5.9x_2 &+ 17.8x_4 \geq 78.4 \\
+	9.9x_1 - x_2 &+ 6.7 x_3 \geq 100.5 \\
+	x_1, x_2, \,&x_3, x_4 \geq 0 
+	\end{aligned}
+	\] \pspace
+
+\sol Introducing surplus variables into each inequality (except the last non-negativity inequality) to obtain equalities, we have\dots \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrrrrrrrr}
+	$1.1x_1$ & $+$ & $-2.2x_2$ & $+$ & $3.3x_3$ & $+$ & $-4.4x_4$ & $+$ & $-s_1$ & & & $=$ & $15.6$ \\
+	$8.4x_1$ & $+$ & $-5.9x_2$ & $+$ & $0.0x_3$ & $+$ & $17.8x_4$ & $+$ & & $-s_2$ & & $=$ & $78.4$ \\
+	$9.9x_1$ & $+$ & $-1.0x_2$ & $+$ & $6.7x_3$ & $+$ & $0.0x_4$ & $+$ & & & $-s_3$ & $=$ & $100.5$
+	\end{tabular}
+	\end{table} \par
+Moving things to the `$z$'-side of the equality in the function, we have $z - 5.3x_1 + 3.4x_2 - 6.8x_3 - 8.1x_4= 0$. Adding this to the table yields\dots \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrrrrrrrrrr}
+	&&$1.1x_1$ & $+$ & $-2.2x_2$ & $+$ & $3.3x_3$ & $+$ & $-4.4x_4$ & $+$ & $-s_1$ & & & $=$ & $15.6$ \\
+	&&$8.4x_1$ & $+$ & $-5.9x_2$ & $+$ & $0.0x_3$ & $+$ & $17.8x_4$ & $+$ & & $-s_2$ & & $=$ & $78.4$ \\
+	&&$9.9x_1$ & $+$ & $-1.0x_2$ & $+$ & $6.7x_3$ & $+$ & $0.0x_4$ & $+$ & & & $-s_3$ & $=$ & $100.5$ \\
+	$z$ & $+$ & $-5.3x_1$ & $+$ & $3.4x_2$ & $+$ & $-6.8x_3$ & $+$ & $8.1x_4$ & $+$ & & & & $=$ & $0$
+	\end{tabular}
+	\end{table} \par
+This yields the following initial simplex tableau: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrr|r}
+	$1.1$ & $-2.2$ & $3.3$ & $-4.4$ & $-1$ & $0$ & $0$ & $15.6$ \\
+	$8.4$ & $-5.9$ & $0.0$ & $17.8$ & $0$ & $-1$ & $0$ & $78.4$ \\
+	$9.9$ & $-1.0$ & $6.7$ & $0.0$ & $0$ & $0$ & $-1$ & $100.5$ \\ \hline
+	$-5.3$ & $3.4$ & $-6.8$ & $8.1$ & $0$ & $0$ & $0$ & $0$ 
+	\end{tabular}
+	\end{table} 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Find the dual problem for the following minimization problem:
+	\[
+	\begin{aligned}
+	\min z= 5x_1 &+ 4x_2 \\
+	x_1 + x_2 &\geq 4 \\
+	x_1 + 7x_2 &\geq 8 \\
+	x_1 + 5x_2 &\geq 9 \\
+	x_1, x_2 &\geq 0 
+	\end{aligned}
+	\] \pspace
+
+\sol First, we write the `matrix associated' to this minimization; that is, we create a matrix with rows corresponding to the equality version of the inequalities (with the exception of the non-negativity inequality) with the function being the last row. This yields matrix:
+	\[
+	\begin{pmatrix}
+	1 & 1 & 4 \\
+	1 & 7 & 8 \\
+	1 & 5 & 9 \\
+	5 & 4 & 0 
+	\end{pmatrix}
+	\]
+We now find the transpose of this matrix: 
+	\[
+	\begin{pmatrix}
+	1 & 1 & 4 \\
+	1 & 7 & 8 \\
+	1 & 5 & 9 \\
+	5 & 4 & 0 
+	\end{pmatrix}^T= 
+	\begin{pmatrix}
+	1 & 1 & 1 & 5 \\
+	1 & 7 & 5 & 4 \\
+	4 & 8 & 9 & 0 
+	\end{pmatrix}
+	\]
+We now find the standard maximization problem corresponding to this matrix:
+	\[
+	\begin{aligned}
+	\max w= 4y_1 + 8y_2 + 9y_3 \\
+	y_1 + y_2 + y_3 \leq 5 \\
+	y_1 + 7y_2 + 5y_3 \leq 4 \\
+	y_1, y_2, y_3 \geq 0 
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Write down the initial simplex tableau for the following optimization problem:
+	\[
+	\begin{aligned}
+	\max z= 2x_1 + x_2 - 3x_3 \\
+	x_1 + 2x_2 + 3x_3 \leq 90 \\
+	x_1 + x_2 \geq 10 \\
+	x_1 - x_2 - x_3 \leq -20 \\
+	x_1, x_2, x_3 \geq 0 
+	\end{aligned}
+	\] \pspace
+
+\sol First, observe that this maximization problem is not in standard form. However, this maximization problem cannot be placed in standard form: the inequality $x_1 + x_2 \geq 10$ is a `$\geq$' inequality and not a `$\leq$' inequality. However, multiplying both sides by $-1$, we obtain $-x_1 - x_2 \leq -10$, which has a negative number on the right-side of the inequality. Therefore, this is clearly a problem with mixed constraints. If an inequality can be placed in standard form, we are sure that it is. If not, we need be sure that each right-side of the inequalities is a non-negative number. Doing this, we obtain\dots
+	\[
+	\begin{aligned}
+	x_1 + 2x_2 + 3x_3 \leq 90 \\
+	x_1 + x_2 \geq 10 \\
+	-x_1 + x_2 + x_3 \geq 20 
+	\end{aligned}
+	\] 
+Now we introduce slack and surplus variables to obtain equalities: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrrrrrr}
+	$x_1$ & $+$ & $2x_2$ & $+$ & $3x_3$ & $+$ & $s_1$ & & & $=$ & $90$ \\
+	$x_1$ & $+$ & $x_2$ & $+$ & $0x_3$ & $+$ & & $-s_2$ & & $=$ & $10$ \\
+	$-x_1$ & $+$ & $x_2$ & $+$ & $x_3$ & $+$ & & & $-s_3$ & $=$ & $20$
+	\end{tabular}
+	\end{table} \par
+Moving everything to the right side of the function in $z= 2x_1 + x_2 - 3x_3$, we obtain $z - 2x_1 - x_2 + 3x_3= 0$. Adding this to the tableau, we obtain\dots \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrrrrrrrr}
+	&&$x_1$ & $+$ & $2x_2$ & $+$ & $3x_3$ & $+$ & $s_1$ & & & $=$ & $90$ \\
+	&&$x_1$ & $+$ & $x_2$ & $+$ & $0x_3$ & $+$ & & $-s_2$ & & $=$ & $10$ \\
+	&&$-x_1$ & $+$ & $x_2$ & $+$ & $x_3$ & $+$ & & & $-s_3$ & $=$ & $20$ \\
+	$z$ & $+$ & $-2x_1$ & $+$ & $-x_2$ & $+$ & $3x_3$ & $+$ & & & & $=$ & $0$
+	\end{tabular}
+	\end{table} \par
+This gives an initial simplex tableau: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr|r}
+	$1$ & $2$ & $3$ & $1$ & $0$ & $0$ & $90$ \\
+	$1$ & $1$ & $0$ & $0$ & $-1$ & $0$ & $10$ \\
+	$-1$ & $1$ & $1$ & $0$ & $0$ & $-1$ & $20$ \\ \hline
+	$-2$ & $-1$ & $3$ & $0$ & $0$ & $0$ & $0$ \\
+	\end{tabular}
+	\end{table}
+
+
+\end{document}

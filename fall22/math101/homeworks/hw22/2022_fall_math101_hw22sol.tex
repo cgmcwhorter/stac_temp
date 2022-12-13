@@ -1,0 +1,120 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{22: Due 12/07}{Try to learn something about everything and everything about something.}{Thomas Huxley}
+
+% Problem 1
+\problem{10} Factor each of the following quadratic functions:
+	\begin{enumerate}[(a)]
+	\item $x^2 - 64$
+	\item $2x^2 - 4x - 6$
+	\item $x^2 - 2x - 35$
+	\item $x^2 + 8x + 16$
+	\item $27 + 6x - x^2$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	x^2 - 64= (x - 8)(x + 8)
+	\] \pspace
+
+\item 
+	\[
+	2x^2 - 4x - 6= 2(x^2 - 2x - 3)= 2(x - 3)(x + 1)
+	\] \pspace
+
+\item 
+	\[
+	x^2 - 2x - 35= (x - 7)(x + 5)
+	\] \pspace
+
+\item 
+	\[
+	x^2 + 8x + 16= (x + 4)(x + 4)= (x + 4)^2
+	\] \pspace
+
+\item 
+	\[
+	27 + 6x - x^2= -(x^2 - 6x - 27)= -(x - 9)(x + 3)
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, use the discriminant to show that  $10x^2 + 33x - 7$ factors `nicely' then factor the polynomial. \pspace
+
+\sol The discriminant of a quadratic function $f(x)= ax^2 + bx + c$ is $D= b^2 - 4ac$. The function $f(x)= 10x^2 + 33x - 7$ is quadratic with $a= 10$, $b= 33$, and $c= -7$. But then $D= b^2 - 4ac= 33^2 - 4(10)(-7)= 1089 + 280= 1369= 37^2$. A quadratic function factors `nicely' if and only if the discriminant is a square. Because $D= 1369= 37^2$, the polynomial $10x^2 + 33x - 7$ factors `nicely.' To factor this polynomial, we find the roots of $10x^2 + 33x - 7$ using the quadratic formula, i.e. the solutions to $10x^2 + 33x - 7= 0$:
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-33 \pm \sqrt{33^2 - 4(10)(-7)}}{2(10)} \\
+	&= \dfrac{-33 \pm \sqrt{1089 + 280}}{20} \\
+	&= \dfrac{-33 \pm \sqrt{1369}}{20} \\
+	&= \dfrac{-33 \pm 37}{20} 
+	\end{aligned}
+	\]
+Therefore, the roots are $x= \frac{-33 - 37}{20}= \frac{-70}{20}= -\frac{7}{2}$ and $x= \frac{-33 + 37}{20}= \frac{4}{20}= \frac{1}{5}$. Now recall given a quadratic function $ax^2 + bx + c$ with roots $r_1$ and $r_2$, the function factors as $a(x - r_1)(x - r_2)$. But then we have\dots
+	\[
+	10x^2 + 33x - 7= 10 \left(x - \dfrac{-7}{2} \right) \left(x - \dfrac{1}{5} \right)= 10 \left(x + \dfrac{7}{2} \right) \left(x - \dfrac{1}{5} \right)= 2 \left(x + \dfrac{7}{2} \right) \cdot 5 \left(x - \dfrac{1}{5} \right)= (2x + 7)(5x - 1)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, solve the following equation using factoring and then verify your solution:
+	\[
+	x= 30 - x^2
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	x= 30 &- x^2 \\[0.3cm]
+	x^2 + x - 30&= 0 \\[0.3cm]
+	(x + 6)(x - 5)&= 0 
+	\end{aligned}
+	\]
+But then either $x + 6= 0$, which implies $x= -6$, or $x - 5= 0$, which implies $x= 5$. Therefore, the solutions are $x= -6, 5$. We can verify the solution $x= -6$:
+	\[
+	\begin{aligned}
+	x&= 30 - x^2 \\
+	-6 &\stackrel{?}{=} 30 - (-6)^2 \\
+	-6 &\stackrel{?}{=} 30 - 36 \\
+	-6&= -6 \\
+	&\;\text{\cmark}
+	\end{aligned}
+	\]
+and the solution $x= 5$:
+	\[
+	\begin{aligned}
+	x&= 30 - x^2 \\
+	5 &\stackrel{?}{=} 30 - 5^2 \\
+	5 &\stackrel{?}{=} 30 - 25 \\
+	5&= 5 \\
+	&\;\text{\cmark}
+	\end{aligned}
+	\]
+
+
+
+\end{document}

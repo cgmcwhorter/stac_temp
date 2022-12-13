@@ -1,0 +1,83 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{19: Due 11/30}{In the first place, god made idiots. That was for practice. Then he made school boards.}{Mark Twain}
+
+% Problem 1
+\problem{10} Suppose that we have distribution $N(1010, 80)$. Suppose we find the mean of a simple random sample of size 20, $\overline{X}$, from this distribution. Compute the following:
+	\begin{enumerate}[(a)]
+	\item $P(\overline{X}= 1010)$
+	\item $P(\overline{X} \leq 1000)$
+	\item $P(\overline{X} \geq 1000)$
+	\item $P(\overline{X} \leq 1100)$
+	\item $P(1000 \leq \overline{X} \leq 1100)$
+	\end{enumerate} \pspace
+
+\sol Because the distribution we are sampling from is normal, the Central Limit Theorem applies, despite the fact that the sample size $n= 20$ is `too small.' Therefore, the Central Limit Theorem gives that the distribution of group means, $\overline{X}$, is $N(\mu, \sigma/\sqrt{n})= N(1010, 80/\sqrt{20}) \approx N(1010, 17.889)$. \pspace
+
+\begin{enumerate}[(a)]
+\item The probability of $X$ being any one fixed value in a continuous distribution, e.g. the normal distribution, is always 0. Therefore, we have $P(\overline{X}= 1010)= 0$. \pspace 
+
+\item We have\dots
+	\[
+	z_{1000}= \dfrac{1000 - 1010}{17.885}= \dfrac{-10}{17.889} \approx -0.56 \squiggle 0.2877
+	\]
+Therefore, $P(\overline{X} \leq 1000)= 0.2877$. 
+
+\item We know that $P(\overline{X} \geq 1000)= 1 - P(\overline{X} \leq 1000)= 1 - 0.2877= 0.7123$. \pspace
+ 
+\item We have\dots
+	\[
+	z_{1100}= \dfrac{1100 - 1010}{17.885}= \dfrac{90}{17.889} \approx 5.03 \squiggle 1.00
+	\] 
+
+\item We know that $P(1000 \leq \overline{X} \leq 1100)= P(\overline{X} \leq 1100) - P(1000 \leq \overline{X})= 1.00 - 0.2877= 0.7123$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} A group of speedrunning gamers are in a team competition. The competition requires teams of five. Each runner completes the game as quickly as possible. The times of the five runners are then averaged and the team with lowest average completion time wins. Suppose that the times for an \textit{individual} to complete the game are normally distributed with mean 47~minutes and standard deviation 0.50~minutes. What average time would a team of five need to be in the top 1\% of teams? \pspace
+
+\sol The distribution of times for individuals was normal with mean 47~minutes and standard deviation 0.50~minutes, i.e. $N(47, 0.50)$ so that $\mu= 47$ and $\sigma= 0.50$. Because the distributions of times for individuals was normally distributed, by the Central Limit Theorem, the distribution of sample means is $N(\mu, \sigma/\sqrt{n})$. Because we are taking teams of size 5, we have $5$, we have $n= 5$. But then the distribution of times for teams of size 5 is $N(\mu, \sigma/\sqrt{n})= N(47, 0.50/\sqrt{5}) \approx N(47, 0.2236)$. \pspace
+
+To be in the top 1\% of teams, a team would have beat at least 99\% of the other teams. But then the $z$-score for such a team would have to have correspond to at least 0.99. The closest value for $z$ is then $z= 2.33$. But then we have\dots
+	\[
+	\begin{aligned}
+	z_x&= 2.33 \\
+	\dfrac{x - 47}{0.2236}&= 2.33 \\
+	x - 47&= 0.52 \\
+	x&= 47.52
+	\end{aligned}
+	\]
+Therefore, the team would have to have an average time of at least 47.52~minutes to be in the top 1\% of teams competing. 
+
+
+
+\newpage
+
+
+% Problem 3
+\problem{10} Recently the average SAT scores fell from an average of 1060 in 2021 to an average value of 1050 in 2022. While the drop in score seems small, this is highly unlikely to have occurred by `random chance' rather than there being some `outside' explanatory variable(s). In 2021, the SAT had an average score of 1060 with standard deviation 217. Assuming this distribution stayed constant, what is the probability that the 1.7~million SAT takes in 2022 would have an average score of 1050 of less? How does this explain how this could not happen by random chance? \pspace
+
+\sol In 2021, the SAT exam had an average score of $\mu= 1060$ with standard deviation $\sigma= 217$. [Though, we do not know that this distribution was normal.] By the Central Limit Theorem, the distribution of sample averages of size $n$ is $N(\mu, \sigma/\sqrt{n})$ if the sample size is `large enough', e.g. at least 30, or if the underlying distribution is normal. We do now know that the distribution of SAT scores in 2021 was normal. However, assuming that the average and standard deviation did not chance from 2021 to 2022, the sample size of 1.7~million is large enough for the Central Limit Theorem to apply. Therefore, the distribution of average SAT scores of sample size 1.7~million is $N(\mu, \sigma/\sqrt{n})= N(1060, 217/\sqrt{1700000}) \approx N(1060, 0.166431)$. Then the probability that a random sample of 1.7~million SAT takers had an average of 1050 or less is\dots
+	\[
+	z_{1050}= \dfrac{1050 - 1060}{0.166431}= \dfrac{-10}{0.166431}= -60.085 \squiggle 0
+	\]
+Therefore, there is an approximately 0\% chance of this happening by random chance. It is then more likely that there is some other explanation for the lower SAT scores, e.g. the average SAT scores have dropped, the SAT takers that year were a `poorer' group, etc. 
+
+
+\end{document}

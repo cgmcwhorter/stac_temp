@@ -1,0 +1,129 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{23: Due 12/12}{A man only learns in two ways: one by reading, and the other by association with smarter people.}{Will Rogers}
+
+% Problem 1
+\problem{10} Solve the following equations:
+	\begin{enumerate}[(a)]
+	\item $(x + 6)(x - 12)= 0$
+	\item $x^2 + 15x + 56= 0$
+	\item $81 - x^2= 0$
+	\item $9x= x^2 - 36$
+	\item $6x^2= x + 2$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know $(x + 6)(x - 12)= 0$ implies that either $x + 6= 0$, which means $x= -6$, or $x - 12= 0$, which implies that $x= 12$. Therefore, the solutions are $x= -6, 12$. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	x^2 + 15x + 56&= 0 \\
+	(x + 8)(x + 7)&= 0
+	\end{aligned}
+	\]
+But this implies that either $x + 8=0$, which implies $x= -8$, or $x + 7= 0$, which implies $x= -7$. Therefore, the solutions are $x= -8, -7$. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	81 - x^2&= 0 \\
+	(8 - x)(8 + x)&= 0 
+	\end{aligned}
+	\]
+But this implies that either $8 - x= 0$, which implies $x= 8$, or $8 + x= 0$, which implies $x= -8$. Therefore, the solutions are $x= -8, 8$. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	9x&= x^2 - 36 \\
+	x^2 - 9x + 36&= 0 \\
+	(x - 12)(x + 3)&= 0 
+	\end{aligned}
+	\]
+But this implies that either $x - 12= 0$, which implies $x= 12$, or $x + 3= 0$, which implies $x= -3$. Therefore, the solutions are $x= -3, 12$. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	6x^2&= x + 2 \\
+	6x^2 - x - 2&= 0 \\
+	(2x + 1)(3x - 2)&= 0 
+	\end{aligned}
+	\]
+But this implies that either $2x + 1= 0$, which implies $2x= -1$ so that $x= -\frac{1}{2}$, or $3x - 2= 0$, which implies $3x= 2$ so that $x= \frac{2}{3}$. Therefore, the solutions are $x= -\frac{1}{2}, \frac{2}{3}$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, factor the following polynomial: $8x^2 + 34x - 30$ \pspace
+
+\sol We know $f(x)= 8x^2 + 34x - 30$ is a quadratic function of the form $ax^2 + bx + c$ with $a= 8$, $b= 34$, and $c= -30$. If $f(x)$ has roots $r_1$, $r_2$, then $f(x)$ factors as $a(x - r_1)(x - r_2)$. We find the roots of $f(x)= 8x^2 + 34x - 30$, i.e. the solutions to $8x^2 + 34x - 30= 0$, using the quadratic formula:
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-34 \pm \sqrt{34^2 - 4(8)(-30)}}{2(8)} \\
+	&= \dfrac{-34 \pm \sqrt{1156 + 960}}{16} \\
+	&= \dfrac{-34 \pm \sqrt{2116}}{16} \\
+	&= \dfrac{-34 \pm 46}{16}
+	\end{aligned}
+	\]
+Therefore, the roots are $x= \frac{-34 - 46}{16}= \frac{-80}{16}= -5$ and $x= \frac{-34 + 46}{16}= \frac{12}{16}= \frac{3}{4}$. But then the polynomial $8x^2 + 34x - 30$ factors as\dots
+	\[
+	\begin{aligned}
+	8x^2 + 34x - 30&= a(x - r_1)(x - r_2) \\
+	&= 8 \big(x - (-5) \big) \left(x - \dfrac{3}{4} \right) \\
+	&= 8(x + 5) \left(x - \dfrac{3}{4} \right) \\
+	&= 2(x + 5) \cdot 4 \left(x - \dfrac{3}{4} \right) \\
+	&= 2(x + 5)(4x - 3)
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use the quadratic equation to factor the following polynomial: $120x^2 + 234x - 165$ \pspace
+
+\sol We know $f(x)=120x^2 + 234x - 165$ is a quadratic function of the form $ax^2 + bx + c$ with $a= 120$, $b= 234$, and $c= -165$. If $f(x)$ has roots $r_1$, $r_2$, then $f(x)$ factors as $a(x - r_1)(x - r_2)$. We find the roots of $f(x)= 120x^2 + 234x - 165$, i.e. the solutions to $120x^2 + 234x - 165= 0$, using the quadratic formula:
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-234 \pm \sqrt{234^2 - 4(120)(-165)}}{2(120)} \\
+	&= \dfrac{-234 \pm \sqrt{54756 + 79200}}{240} \\
+	&= \dfrac{-234 \pm \sqrt{133956}}{240} \\
+	&= \dfrac{-234 \pm 366}{240}
+	\end{aligned}
+	\]
+Therefore, the roots are $x= \frac{-234 - 366}{240}= \frac{-600}{240}= -\frac{5}{2}$ and $x= \frac{-234 + 366}{240}= \frac{132}{240}= \frac{11}{20}$. But then the polynomial $120x^2 + 234x - 165$ factors as\dots
+	\[
+	\begin{aligned}
+	120x^2 + 234x - 165&= a(x - r_1)(x - r_2) \\
+	&= 120 \left( x - \dfrac{-5}{2} \right) \left( x - \dfrac{11}{20} \right) \\
+	&= 120 \left( x + \dfrac{5}{2} \right) \left( x - \dfrac{11}{20} \right) \\
+	&= 3 \cdot 2 \left( x + \dfrac{5}{2} \right) \cdot 20 \left( x - \dfrac{11}{20} \right) \\
+	&= 3(2x + 5)(20x - 11)
+	\end{aligned}
+	\]
+
+
+\end{document}

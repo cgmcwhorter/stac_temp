@@ -180,64 +180,110 @@ The last approximation becomes more and more accurate the more games you play be
 \sol The statement is \textit{false}. The dot product of two vectors is \textit{not} simply the vector of the product of the components. Rather, the dot product of two vectors is the \textit{sum} of the product of the components of the vectors. We then have\dots
 	\[
 	\mathbf{u} \cdot \mathbf{v}= \sum_i u_i v_i= 1(-2) + 2(3) + 3(1)= -2 + 6 + 3= 7 
-	\]
+	\] \pvspace{1.5cm}
+
+
+
+% Quiz 19
+\quizsol \textit{True/False}: If $A$ is a $10 \times 8$ matrix and $B$ is a $8 \times 12$ matrix, then $AB$ is a $10 \times 12$ matrix. \pspace
+
+\sol The statement is \textit{true}. If $A$ is a $m \times n$ matrix and $B$ is a $r \times s$ matrix, we can form the matrix product $AB$ if and only if $n= r$. If so, the result will be a $m \times s$ matrix. Here, we have $m= 10$, $n= 8$ and $r= 8$, $s= 12$. Because $n= 8= r$, we can form the product $AB$. The result, will be a matrix of size $m \times s= 10 \times 12$. 
 
 
 
 
-% If $A$ is a $10 \times 8$ matrix and $B$ is a $8 \times 12$ matrix, then $AB$ is a $10 \times 12$ matrix. 
 
-
-
-%Suppose the matrix given below is the RREF form of an augmented matrix coming from a linear system of equations. Then the original system had 3 linear equations in 5 variables and the system has 3 free variables. 
-%	\[
-%	\begin{pmatrix}
-%	1 & 3 & 0 & 0 & 0 & 5 \\
-%	0 & 0 & 1 & 2 & 1 & -1 \\
-%	0 & 0 & 0 & 0 & 0 & 0 \\
-%	\end{pmatrix}
-%	\]
-
-
-
-%The region shown below is bounded. 
-%	\[
-%	\fbox{
-%	\begin{tikzpicture}[scale=0.8,every node/.style={scale=0.5}]
-%	\begin{axis}[
-%	grid=both,
-%	axis lines=middle,
-%	ticklabel style={fill=blue!5!white},
-%	xmin= -1, xmax=10,
-%	ymin= -1, ymax=10,
-%	xtick={0,2,4,6,8,10},
-%	ytick={0,2,4,6,8,10},
-%	minor tick = {-1,0,1,...,10},
-%	xlabel=\(x_1\),ylabel=\(x_2\),
-%	]
-%	\draw[line width=0.03cm] (10,2/3) -- (2,2) -- (0,4) -- (0,10);
-%	\draw[line width=0.01cm,fill= blue,opacity=0.1] (10,2/3) -- (2,2) -- (0,4) -- (0,10) -- (10,10) -- (10,2/3);
-%	\end{axis}
-%	\end{tikzpicture}
-%	}
-%	\]
+\newpage
 
 
 
 
-%\textit{Any} linear function on \textit{any} bounded, nonempty region has a maximum and minimum. 
+
+% Quiz 20
+\quizsol \textit{True/False}: Suppose the matrix given below is the RREF form of an augmented matrix coming from a linear system of equations. Then the original system had 3 linear equations in 5 variables and the system has 3 free variables. 
+	\[
+	\begin{pmatrix}
+	1 & 3 & 0 & 0 & 0 & 5 \\
+	0 & 0 & 1 & 2 & 1 & -1 \\
+	0 & 0 & 0 & 0 & 0 & 0 \\
+	\end{pmatrix}
+	\] \pspace
+
+\sol The statement is \textit{true}. Because there were 3 rows, we know that there were three linear equations under consideration. The last column corresponds to the `solutions' while the other columns corresponds to variables in the equation. Therefore, there were $6 - 1= 5$ original variables. The free variables correspond to non-pivot columns. We highlight the pivot columns below
+	\[
+	\begin{pmatrix}
+	\boxed{1} & 3 & 0 & 0 & 0 & 5 \\
+	0 & 0 & \boxed{1} & 2 & 1 & -1 \\
+	0 & 0 & 0 & 0 & 0 & 0 \\
+	\end{pmatrix}
+	\] 
+As there were 2 pivot columns, there must be $5 - 2= 3$~free variables. \pvspace{1.5cm}
 
 
 
-%The initial simplex tableau for a standard maximization problem is found below. This tableau implies that the original system had 3 inequalities and 5 variables. 
-%	\begin{table}[!ht]
-%	\centering
-%	\begin{tabular}{rrrrrr}
-%	$1$ & $0$ & $-3$ & $1$ & $0$ & $25$ \\
-%	$-$1 & $2$ & $3$ & $0$ & $1$ & $20$ \\
-%	$-1$ & $-1$ & $2$ & $0$ & $0$ & $0$ 
-%	\end{tabular}
-%	\end{table}
+% Quiz 21
+\quizsol \textit{True/False}: The region shown below is bounded. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=0.8,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -1, xmax=10,
+	ymin= -1, ymax=10,
+	xtick={0,2,4,6,8,10},
+	ytick={0,2,4,6,8,10},
+	minor tick = {-1,0,1,...,10},
+	xlabel=\(x_1\),ylabel=\(x_2\),
+	]
+	\draw[line width=0.03cm] (10,2/3) -- (2,2) -- (0,4) -- (0,10);
+	\draw[line width=0.01cm,fill= blue,opacity=0.1] (10,2/3) -- (2,2) -- (0,4) -- (0,10) -- (10,10) -- (10,2/3);
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\] \pspace
+
+\sol The statement is \textit{false}. Because there are points, $(x, y)$ with arbitrarily large coordinates, the region is unbounded. That is, there is no `ball' of fixed size which can enclose the region. Therefore, the region is unbounded. 
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Quiz 22
+\quizsol \textit{True/False}: \textit{Any} linear function on \textit{any} bounded, nonempty region has a maximum and minimum. \pspace
+
+\sol The statement is \textit{true}. This follows from the Fundamental Theorem of Linear Programming. The Fundamental Theorem of Linear Programming states that any linear function on a nonempty, bounded region has a maximum and minimum value. Furthermore, these maximum and minimum values occur at corner points for the region. \pvspace{1.5cm}
+
+
+
+% Quiz 23
+\quizsol \textit{True/False}: The initial simplex tableau for a standard maximization problem is found below. This tableau implies that the original system had 3 inequalities and 5 variables. \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrr}
+	$1$ & $0$ & $-3$ & $1$ & $0$ & $25$ \\
+	$-$1 & $2$ & $3$ & $0$ & $1$ & $20$ \\
+	$-1$ & $-1$ & $2$ & $0$ & $0$ & $0$ 
+	\end{tabular}
+	\end{table} \pspace
+
+\sol The statement is \textit{false}. First, we `split' the table as follows: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrr|r}
+	$1$ & $0$ & $-3$ & $1$ & $0$ & $25$ \\
+	$-$1 & $2$ & $3$ & $0$ & $1$ & $20$ \\ \hline
+	$-1$ & $-1$ & $2$ & $0$ & $0$ & $0$ 
+	\end{tabular}
+	\end{table} \par
+The last row corresponds to the function. All other rows correspond to inequalities in the original system of inequalities. Therefore, there were two inequalities in the original system (excluding the inequalities enforcing non-negativity of our variables). For each such inequality, we introduce a slack variable. Therefore, there are 2 slack variables. Each column, except for the last which corresponds to `solutions', corresponds to a variable. Therefore, there are $6 - 1= 5$ total variables. Because 2 of them are slack variables, there were $5 - 2= 3$ variables in the original system of inequalities. 
 
 
 

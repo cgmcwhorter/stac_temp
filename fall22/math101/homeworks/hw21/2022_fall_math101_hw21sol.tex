@@ -1,0 +1,119 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{21: Due 12/05}{Don't judge each day by the harvest you reap but by the seeds that you plant.}{Robert Louis Stevenson}
+
+% Problem 1
+\problem{10} Solve the following quadratic equation:
+	\[
+	x^2 - 18= 0
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	x^2 - 18&= 0 \\
+	x^2&= 18 \\
+	\sqrt{x^2}&= \pm\sqrt{18} \\
+	x&= \pm \sqrt{9 \cdot 2} \\
+	x&= \pm 3 \sqrt{2}
+	\end{aligned}
+	\]
+
+\begin{center} {\bfseries OR} \end{center} 
+
+	\[
+	\begin{aligned}
+	x^2 - 18&= 0 \\
+	(x - \sqrt{18})(x + \sqrt{18})&= 0 \\
+	(x - \sqrt{9 \cdot 2})(x + \sqrt{9 \cdot 2})&= 0 \\
+	(x - 3\sqrt{2})(x + 3\sqrt{2})&= 0
+	\end{aligned}
+	\]
+Therefore, either $x - 3\sqrt{2}= 0$, which implies $x= 3 \sqrt{2}$, or $x + 3\sqrt{2}= 0$, which implies $x= -3\sqrt{2}$. 
+
+\begin{center} {\bfseries OR} \end{center} 
+
+Because $x^2 - 18= x^2 + 0x - 18$, this is a quadratic function with $a= 1$, $b= 0$, and $c= -18$. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-0 \pm \sqrt{0^2 - 4(1)(-18)}}{2(1)} \\
+	&= \dfrac{\pm \sqrt{4(18)}}{2} \\
+	&= \dfrac{\pm 2 \sqrt{18}}{2} \\
+	&= \pm \sqrt{18} \\
+	&= \pm \sqrt{9 \cdot 2} \\
+	&= \pm 3 \sqrt{2}
+	\end{aligned}
+	\]
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use completing the square to solve the following quadratic equation:
+	\[
+	2x^2= 5x + 3
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	2x^2 - 5x - 3&= 0 \\
+	2 \left( x^2 - \dfrac{5}{2}\,x - \dfrac{3}{2} \right)&= 0 \\
+	2 \left( x^2 - \dfrac{5}{2}\,x + \left(\dfrac{1}{2} \cdot \dfrac{5}{2} \right)^2 - \left(\dfrac{1}{2} \cdot \dfrac{5}{2} \right)^2 - \dfrac{3}{2} \right)&= 0 \\
+	2 \left( x^2 - \dfrac{5}{2}\,x + \dfrac{25}{4} - \dfrac{25}{4} - \dfrac{3}{2} \right)&= 0 \\
+	2 \left( \left(x^2 - \dfrac{5}{2}\,x + \dfrac{25}{4} \right) - \dfrac{25}{4} - \dfrac{3}{2} \right)&= 0 \\
+	2 \left( \left(x - \dfrac{5}{2} \right)^2 - \dfrac{25}{4} - \dfrac{6}{4} \right)&= 0 \\
+	2 \left( \left(x - \dfrac{5}{2} \right)^2 - \dfrac{31}{4} \right)&= 0 \\
+	2 \left(x - \dfrac{5}{2} \right)^2 - \dfrac{31}{2}&= 0 \\
+	2 \left( x - \dfrac{5}{2} \right)^2&= \dfrac{31}{2} \\
+	\left(x - \dfrac{5}{2} \right)^2&= \dfrac{31}{4} \\
+	\sqrt{\left(x - \dfrac{5}{2} \right)^2}&= \pm \sqrt{\dfrac{31}{4}} \\
+	x - \dfrac{5}{2}&= \pm \dfrac{\sqrt{31}}{2} \\
+	x&= \dfrac{5}{2} \pm \dfrac{\sqrt{31}}{2} \\
+	x&= \dfrac{5 \pm \sqrt{31}}{2}
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use the discriminant of $f(x)= x^2 - 10x + 19$ to explain why there are no `nice' solutions to $f(x)= 0$. Then use the quadratic formula to find the solutions to $f(x)= 0$. \pspace
+
+\sol If $f(x)$ is a quadratic function, we know there are `nice' solutions to $f(x)= 0$ if and only if the discriminant of $f(x)$ is a perfect square. If $f(x)= ax^2 + bx + c$, the discriminant of $f(x)$ is $D= b^2 - 4ac$. But because $f(x)= x^2 - 10x + 19$ has $a= 1$, $b= -10$, and $c= 19$, we have\dots
+	\[
+	D= b^2 - 4ac= (-10)^2 - 4(1)19= 100 - 76= 24
+	\]
+Because $D= 24$ is not a perfect square (observe $4^2= 16 < 24 < 25= 5^2$), we know that there are no `nice' solutions to $f(x)= 0$. \pspace
+
+However, we can find the solutions to $f(x)= 0$ using the quadratic formula. Because $f(x)= x^2 - 10x + 19$ has $a= 1$, $b= -10$, and $c= 19$, we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-(-10) \pm \sqrt{(-10)^2 - 4(1)19}}{2(1)} \\
+	&= \dfrac{10 \pm \sqrt{100 - 76}}{2} \\
+	&= \dfrac{10 \pm \sqrt{24}}{2} \\
+	&= \dfrac{10 \pm \sqrt{4 \cdot 6}}{2} \\
+	&= \dfrac{10 \pm 2 \sqrt{6}}{2} \\
+	&= 5 \pm \sqrt{6}
+	\end{aligned}
+	\]
+
+
+\end{document}

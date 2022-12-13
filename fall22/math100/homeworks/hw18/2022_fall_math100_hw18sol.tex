@@ -1,0 +1,85 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{18: Due 11/28}{The only normal people are the ones you don't know very well.}{Alfred Adler}
+
+% Problem 1
+\problem{10} Consider the normal distribution $N(125, 18)$. Find the following:
+	\begin{enumerate}[(a)]
+	\item $P(X= 125)$
+	\item $P(X \leq 125)$
+	\item $P(X \leq 150)$
+	\item $P(X \geq 150)$
+	\item $P(125 \leq X \leq 150)$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The probability of $X$ being any one fixed value in a continuous distribution, e.g. the normal distribution, is always 0. Therefore, we have $P(X= 125)= 0$. \pspace
+
+\item We have\dots
+	\[
+	z_{125}= \dfrac{125 - 125}{18}= \dfrac{0}{18}= 0 \squiggle 0.50
+	\]
+Therefore, $P(X \leq 125)= 0.50$. \pspace
+
+\item We have\dots
+	\[
+	z_{150}= \dfrac{150 - 125}{18}= \dfrac{25}{18} \approx 1.38 \squiggle 0.9162
+	\]
+Therefore, $P(X \leq 150)= 0.9162$. \pspace
+
+\item We know that $P(X \geq 150)= 1 - P(X \leq 150)= 1 - 0.9162= 0.0838$. \pspace
+
+\item We know that $P(125 \leq X \leq 150)= P(X \leq 150) - P(125 \leq X)= 0.9162 - 0.50= 0.4162$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2 
+\problem{10} Suppose Anna D. and Elizabeth H. took the SAT and ACT, respectively. Anna scored 28 on the ACT while Elizabeth scored 2200 on the SAT. The ACT scores were normally distributed with mean 19.5 and standard deviation 6.7 while the SAT scores were normally distributed with mean 1500 and standard deviation 300. Who did better on their respective exam? Explain. \pspace
+
+\sol We know that each of them did better than the average. We can compare them by measuring how `unusual' their score was relative to their exam, i.e. how many standard deviations their scores are above the mean. This is the $z$-score. So we compute the $z$-score for each of them:
+	\[
+	\begin{aligned}
+	z_{\text{Anna}}&= \dfrac{28 - 19.5}{6.7}= \dfrac{8.5}{6.7} \approx 1.27 \\[0.3cm]
+	z_{\text{Eliz.}}&= \dfrac{2200 - 1500}{300}= \dfrac{700}{300} \approx 2.33
+	\end{aligned}
+	\]
+Because Elizabeth's $z$-score was larger than Anna's, Elizabeth's score was more `unusual.' Therefore, Elizabeth did better on her exam. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose last years SAT scores were normally distributed with mean 1010 and standard deviation 120. What is the lowest possible score that you could receive to be in the top 20\% of students taking the exam? \pspace
+
+\sol To be in the top 20\% of exam takers, you need to score better than at least 80\% of the people taking the exam. Then you need to do at least as well as the score whose $z$-score corresponds to 0.80. But then the $z$-score for this exam score, say $x$, corresponds to approximately 0.84. But then we have\dots
+	\[
+	\begin{aligned}
+	z_x&= 0.84 \\[0.3cm]
+	\dfrac{x - 1010}{120}&= 0.84 \\[0.3cm]
+	x - 1010&= 100.8 \\[0.3cm]
+	x&= 1110.8
+	\end{aligned}
+	\]
+Therefore, you need to score at least 1110.8 to be in the top 20\% of students taking the exam. 
+
+
+\end{document}

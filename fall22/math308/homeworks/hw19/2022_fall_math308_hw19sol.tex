@@ -1,0 +1,110 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{19: Due 12/06}{It is a part of probability that many improbable things will happen.}{Aristotle}
+
+% Problem 1
+\problem{10} The probabilities of several events in a finite probability space are given below:
+	\[
+	\begin{aligned}
+	P(A)&= 0.40 &\quad P(A \cap B)&= 0.10 \\
+	P(B)&= 0.25 & P(A \cap C)&= 0.05 \\
+	P(C)&= 0.70 & P(B \cap C)&= 0.00 \\
+	P(D)&= 0.65 & P(B \cup D)&= 0.75
+	\end{aligned}
+	\] 
+\begin{enumerate}[(a)]
+\item Find $P(A \cup B)$. 
+\item Assuming $C$ and $D$ are independent, find $P(C \cup D)$. 
+\item Assuming $A$ and $D$ are independent events, find $P(A \cap D)$.
+\item Find $P(A \;|\; B)$.
+\item Find $P(B \cap D)$. 
+\item Are $C$ and $D$ disjoint? Explain.
+\item Are $A$ and $C$ independent? Explain.
+\item Are $B$ and $C$ independent? Explain.
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Below are two charts giving information on survival/death for the April 15, 1912 sinking of the Titanic. \par
+        \begin{table}[h]
+        \centering
+        \scalebox{0.93}{%
+        \begin{tabular}{|c|c|c|c|c||c|} \hline
+         & Men & Women & Boys & Girls & Total \\ \hline 
+         Survived & 338 & 316 & 29 & 27 & 710 \\ \hline
+         Died & 1352 & 109 & 35 & 18 & 1514 \\ \hline \hline
+         Total & 1690 & 425 & 64 & 45 & 2224 \\ \hline
+        \end{tabular}} \hfill \scalebox{0.93}{\begin{tabular}{|c||c|c||c|} \hline
+        & Survived & Died & Total \\ \hline \hline
+        First Class Men & 57 & 118 & 175 \\ \hline
+        First Class Women & 140 & 4 & 144 \\ \hline
+        First Class Children & 5 & 1 & 6 \\ \hline
+        Second Class Men & 14 & 154 & 168 \\ \hline
+        Second Class Women & 80 & 13 & 93 \\ \hline
+        Second Class Children & 24 & 0 & 24 \\ \hline
+        Third Class Men & 75 & 387 & 462 \\ \hline
+        Third Class Women & 76 & 89 & 165 \\ \hline
+        Third Class Children & 27 & 52 & 79 \\ \hline
+        Crew (Men) & 192 & 693 & 885 \\ \hline
+        Crew (Women) & 20 & 3 & 23 \\ \hline \hline
+        Total & 710 & 1514 & 2224 \\ \hline
+        \end{tabular}}
+        \end{table} \par
+Let $S$ denote the set of people that survived, $D$ denote the people that died, $W$ denote the set of women, $M$ denote the set of men, $C$ denote the set of children, $F$ denote the set of first class passengers, $N$ denote the set of second class passengers, $T$ denote the set of third class passengers, and $R$ denote the set of crew members. State each of the following probabilities as complete sentence and find its probability. 
+	\begin{enumerate}[(a)]
+	\item $P(M \cap S)$
+	\item $P(W \cup F)$
+	\item $P(F \;|\; S)$
+	\item $P(C \cap T \cap D)$
+	\item $P\big( (N \cap S) \cup (R \cap D) \big)$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose a computer programmer has a choice between two algorithms to solve a problem. The first algorithm will run in under 5~hours 60\% of the time. The other algorithm will finish in under 5~hours 80\% of the time. However, there is a 5\% chance that the second algorithm will simply crash. 
+	\begin{enumerate}[(a)]
+	\item If you randomly select an algorithm, what is the probability that you will have a solution in under 5~hours.
+	\item If you randomly select an algorithm, what is the probability it crashes or does not produce a solution in under 5~hours?
+	\item If you randomly select an algorithm, what is the probability that was the first algorithm and it produced a solution in under 5~hours?
+	\item If you randomly select an algorithm and it produces a solution in more than 5 hours, what is the probability that it was the second algorithm?
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Below is a table giving a probability space along with a random variable $X$. Find $EX$.
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c||c|c|c|c|c|} \hline
+	$S$ & $1$ & $2$ & $3$ & $4$ & $5$ \\ \hline
+	$P(S)$ & $0.20$ & $0.15$ & $0.16$ & $0.46$ & $0.03$ \\ \hline
+	$X$ & $5$ & $-3$ & $4$ & $6$ & $0$ \\ \hline
+	\end{tabular}
+	\end{table}
+
+
+\end{document}
