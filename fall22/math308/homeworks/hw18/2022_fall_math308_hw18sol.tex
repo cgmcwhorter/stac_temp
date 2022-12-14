@@ -18,7 +18,19 @@
 	\item How many ways 5 people can be assigned to 8 tasks, where each person can only be assigned to a single task but a task may have more than one person assigned to it. [Ans: 32,768]
 	\item How many ways 5 people can be assigned to 8 tasks, where each person can only be assigned to a single task and each task may only have one person assigned to it. [Ans: 6,720]
 	\item How many ways can 5 people be assigned to 3 tasks, where each task must have at least one person assigned to it? [Ans: 150]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item This is the number of functions from the 5 people to the 8 tasks. This is $8^5= 32768$. \pspace
+
+\item This is the number of injections from the set of 5 people to the set of 8 tasks. This is $_{8}P_5= 6,720$. \pspace
+
+\item This is the number of surjections from the set of 5 people to the set of 3 tasks. This is\dots
+	\[
+	\sum_{k=0}^{3 - 1} (-1)^k \binom{3}{k} (3 - k)^5= \binom{3}{0} 3^5 - \binom{3}{1} 2^5 + \binom{3}{2} 1^5 - \binom{3}{3} 0^5= 243 - 96 + 3 - 0= 150
+	\]
+\end{enumerate}
 
 
 
@@ -33,7 +45,44 @@
 	\item Divisible by 2 and 3 but not by 5? [Ans: 133]
 	\item Divisible by 5 but not 2 nor 3? [Ans: 67]
 	\item Divisible by 2, 3, and 5? [Ans: 33]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Let $A$ be the set of multiples of 2, $B$ be the set of multiples of 3, and $C$ be the set of multiples of 5. 
+
+We then have\dots
+	\[
+	\begin{aligned}
+	|A|&= \lfloor \dfrac{1000}{2} \rfloor= 500 \\
+	|B|&= \lfloor \dfrac{1000}{3} \rfloor= 333 \\
+	|C|&= \lfloor \dfrac{1000}{5} \rfloor= 200 \\
+	|A \cap B|&= \lfloor \dfrac{1000}{6} \rfloor= 166 \\
+	|A \cap C|&= \lfloor \dfrac{1000}{10} \rfloor= 100 \\
+	|B \cap C|&= \lfloor \dfrac{1000}{15} \rfloor= 66 \\
+	|A \cap B \cap C|&= \lfloor \dfrac{1000}{30} \rfloor= 33 \\
+	\end{aligned}
+	\]
+
+\begin{enumerate}[(a)]
+\item This is 
+	\[
+	|A \cup B \cup C|= |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|= 500 + 333 + 200 - 166 - 100 - 66 + 33= 734
+	\]
+
+\item This is
+	\[
+	|(A \cap B) \setminus C|= |A \cap B| - |A \cap B \cap C|= 166 - 33= 133
+	\]
+
+\item This is
+	\[
+	|C \setminus (A \cup B)|= |C| - |C \cap (A \cup B)|= |C| - |C \cap A| - |C \cap B| + |C \cap A \cap B|= 200 - 100 - 66 + 33= 67
+	\]
+
+\item This is
+	\[
+	|A \cap B \cap C|= 33
+	\]
+\end{enumerate}
 
 
 
@@ -47,7 +96,16 @@
 	\item What is the coefficient of $x^4 y^{10}$ in $(x + y)^{14}$? [Ans: 1001]
 	\item What is the coefficient of $x^6 y^5$ in $(2x - 3y)^{11}$? [Ans: $-$7,185,024]
 	\item What is the coefficient of $x^{17} y z^2$ in $(x + y + z)^{20}$? [Ans: 3,420]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item By the binomial theorem, the coefficient is $\binom{14}{4}= 1001$. 
+
+\item Writing $X= 2x$ and $Y= -3y$, this is the coefficient of $X^6 Y^5$ in $(X + Y)^{11}$, which is $\binom{11}{6}$. But because $X^6= (2x)^6= 2^6 x^6$ and $Y^5= (-3y)^5= (-3)^5 y^5$, the coefficient is $2^6 \cdot (-3)^5 \cdot \binom{11}{6}= -7185024$. \pspace
+
+\item The coefficient is given by the generalized binomial theorem and is $\binom{20}{17,\, 1,\, 2}= \dfrac{20!}{17! 1! 2!}= 3420$. 
+\end{enumerate}
 
 
 
@@ -61,7 +119,24 @@
 	\item Find all the dearrangements of the set $S= \{ 1, 2, 3 \}$. 
 	\item How many dearrangements are there for a set with four elements? [Ans: 9]
 	\item Approximate how many dearrangements there are for a set with 10~elements. [Ans: 1,334,961]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The dearrangements are 231 and 312. \pspace
+
+\item The number of dearrangements are\dots
+	\[
+	4! \left(1 - \dfrac{1}{1!} + \dfrac{1}{2!} - \dfrac{1}{3!} + \dfrac{1}{4!} \right)= 4! - \dfrac{4!}{4!} + \dfrac{4!}{2!} - \dfrac{4!}{3!} + \dfrac{4!}{4!}= 0 + 12 - 4 + 1= 9 
+	\]
+total dearrangements. \pspace
+
+\item There are approximately
+	\[
+	D_{10} \approx \dfrac{n!}{e}= \dfrac{10!}{e} \approx 1334960.91612293 \approx 1334961
+	\]
+total dearrangements. 
+\end{enumerate}
 
 
 \end{document}
