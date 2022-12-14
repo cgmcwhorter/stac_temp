@@ -18,7 +18,16 @@
 	\item How many ways can you order either an appetizer, entr\'ees, or dessert? [Ans: 29]
 	\item How many ways can you order a meal, i.e. appetizer, entr\'ees, and dessert. [Ans: 720]
 	\item How many ways can you order either an appetizer and an entr\'ee, or an appetizer and a dessert? [Ans: 168]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item You can either choose an appetizer, entr\'ees, or dessert. There are 8 choices for appetizers, 15 choices for entr\'ees, and 6 choices for dessert. By the addition principle, there are then $8 + 15 + 6= 29$ total ways to choose one of an appetizer, entr\'ees, or dessert. \pspace
+
+\item You need to an appetizer, entr\'ees, and dessert. There are 8 choices for appetizers, 15 choices for entr\'ees, and 6 choices for dessert. By the multiplication principle, there are then $8 \cdot 15 \cdot 6= 720$ total ways to choose a meal, i.e. appetizer, entr\'ees, and dessert. \pspace
+
+\item You can order either an appetizer and an entr\'ee, or an appetizer and a dessert. There are 8 choices for appetizers, 15 choices for entr\'ees, and 6 choices for dessert. By the multiplication principle, there are $8 \cdot 15= 120$ ways to order an appetizer and an entr\'ee. Similarly, there are $8 \cdot 6= 48$ ways to order an appetizer and a dessert. By the addition principle, there are then $120 + 48= 168$ ways to order an appetizer and an entr\'ee, or an appetizer and a dessert. 
+\end{enumerate}
 
 
 
@@ -33,7 +42,18 @@
 	\item The number of possible president, vice president, secretary, and treasurer that can be elected from 486 people, assuming no individual can hold more than one role. [Ans: 55,102,398,120]
 	\item The number of possible passwords using 12~characters, assuming a character can be a digit or uppercase/lowercase letter. [Ans: 3,226,266,762,397,899,821,056]
 	\item The number of distinct possible arrangements of the letters of the word `syzygy.' [Ans: 120]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item This is the number of possible arrangements of all 15 individuals. Because a person can only finish in one place (we assume no ties), there is no repetition. Clearly, order matters for the placement order. Therefore, there are $_{15}P_{15}= 15!= 1307674368000$ total possible `finishing orders.' \pspace
+
+\item Only one person can be assigned to a role. Obviously, the order of assignment matters---interchanging them would change their roles. We need to then select 4 individuals from 486 people to fill four roles where order matters and no repetitions allowed. Therefore, there are $_{486}P_4= 486 \cdot 485 \cdot 484 \cdot 483=  55102398120$ total possible selections. \pspace
+
+\item There are 26 lowercase letters, 26 uppercase letters, and 10 digits. Therefore, there are $26 + 26 + 10= 62$ possible characters. Characters in a password can repeat. Clearly, the order of the letters matter because interchanging letters changes the password. Therefore, there are $62^{12}= 3226266762397899821056$ total possible passwords. \pspace
+
+\item There are a total of 6 letters. There are 3 repeating `y' letters. Therefore, there are $\dfrac{6!}{3!}= 120$ total distinct possible arrangements of the letters. 
+\end{enumerate}
 
 
 
@@ -48,7 +68,18 @@
 	\item How many 6 card hands can be dealt from a deck of 52 cards? [Ans: 20,358,520]
 	\item How many ways are there to select any four bills from a jar containing a large number of \$1, \$5, \$10, \$20, \$50, and \$100 bills? [Ans: 70]
 	\item How many nonnegative solutions $(x_1, x_2, x_3, x_4, x_5)$ are there to the equation $x_1 + x_2 + x_3 + x_4 + x_5= 100$? [Ans: 4,598,126]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because order is unimportant and there is no repetition, there is $\binom{20}{6}= 38760$ total possible committees. \pspace
+
+\item Because order is unimportant and there is no repetition (while a \textit{type} of card might repeat, e.g. 6 or red, the \textit{exact} card does not), there is a total of $\binom{52}{6}= 20358520$ possible poker hands. \pspace
+
+\item Because the order of selection is unimportant, repetition is allowed, and there are 6 types of bills, there are a total of $\binom{4 + 5 - 1}{4}= 70$ total possible selections. \pspace
+
+\item One must place one-hundred 1's into one of 5 `spots', namely the $x_i$. The order of placement is unimportant and repetition is allowed. Therefore, there are a total of $\binom{100 + 5 - 1}{100}= 4598126$ total solutions. 
+\end{enumerate}
 
 
 
@@ -63,6 +94,17 @@
 	\item How many ways can you choose a committee of 10 people with a designated representative for the committee from a collection of 50 people? [Ans: 102,722,781,700]
 	\item If 50 people are broken up into groups by assigning to them to 4 rooms with 35 seats each, does one of the rooms have to have at least 13 people? Does one of the rooms have to have at least 23 empty seats?
 	\item If you have a jury pool consisting of 14 men and 16 women, how many juries can be formed consisting of 5 men and 7 women? [Ans: 22,902,880]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item There are 11 letters with 2 repeating t letters and 2 repeating r letters. Because there have to be 4 letters between the u and g, there are 6 possible positions to place the u and g---in either order. There are then two possible ways to place the u and g. Then one need arrange the remaining 9 letters, with two letters repeating with two repetitions each. By the multiplication principle, there are then $6 \cdot 2 \cdot \dfrac{9!}{2! 2!}= 1088640$ total arrangements of the letters. \pspace
+ 
+\item First, one need form the committee. Because there is no repetition and the order is unimportant, there are $\binom{50}{10}$ total possible committees of 10 people. One then need choose a president for the committee. There are 10 possible ways to choose the president. By the multiplication principle, there are then $10 \cdot \binom{50}{10}= 102722781700$ choices. \pspace
+
+\item By the Generalized Pigeonhole Principle, there are at least one room with at least $\lceil \dfrac{50}{4} \rceil= 13$ people in it. Because there are 50 people and $35 \cdot 4= 140$ seats, there will be $140 - 50= 90$ empty sets. But again by the Pigeonhole Principle, there will be a room with at least $\lceil \dfrac{90}{4} \rceil= 23$ empty seats. \pspace
+
+\item The number of ways of selecting 5 of the men is $\binom{14}{5}$. The number of ways of choosing the 7 women is $\binom{16}{7}$. By the multiplication principle, there is then $\binom{14}{5} \cdot \binom{16}{7}= 22902880$ total choices of jury. 
+\end{enumerate}
 
 \end{document}
