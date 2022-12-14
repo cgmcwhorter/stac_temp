@@ -1,0 +1,73 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{10.5: Due 12/15}{To first understand recursion, one must first understand recursion.}{Stephen Hawking}
+
+% Problem 1
+\problem{10} Find the first five terms of the recurrence relations given below:
+	\begin{enumerate}[(a)]
+	\item $a_0= -1$, $a_{n + 1}= n a_n$
+	\item $b_0= 2$, $b_1= 1$, $b_{n + 1}= b_{n - 1} + (-1)^n b_n$
+	\item $c_0= 2$, $c_1= 2$, $c_n= c_{n - 1} c_{n - 2}$
+	\item $d_0= 1$, $d_1= 1$, $d_2= -1$, $d_{n + 1}= d_n + d_{n - 1} - d_{n - 2}$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} For each of the following recurrence relations, determine if the recurrence relation is linear or nonlinear. If the relation is linear, determine the degree of the recurrence relation. Determine also whether the recurrence relation is homogenous or not. Finally, determine whether the recurrence relation has constant coefficients or not. 
+	\begin{enumerate}[(a)]
+	\item $a_n= 5a_{n - 1}$
+	\item $b_n= b_{n - 1} + 2b_{n - 2} + n$
+	\item $c_n= c_{n - 1} c_{n - 2} - n^3$
+	\item $d_n= n d_{n - 1}$
+	\item $e_n= \sin(e_{n - 1}) + \frac{n}{n + 1}$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, find the solution to the recurrence relation given below:
+	\[
+	\begin{cases}
+	a_0= 5 \\
+	a_1= -3 \\
+	a_n= 3a_{n - 1} + 10 a_{n - 2}
+	\end{cases}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, find the solution to the recurrence relation given below:
+	\[
+	\begin{cases}
+	b_0= 1 \\
+	b_1= 1 \\
+	b_n= 3(2b_{n - 1} - 3b_{n - 2})	
+	\end{cases}
+	\]
+
+
+\end{document}
