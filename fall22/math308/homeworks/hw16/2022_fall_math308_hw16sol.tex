@@ -19,7 +19,30 @@
 	\item $\mathbf{v} - \mathbf{u}$
 	\item $\mathbf{u} + 2 \mathbf{v}$
 	\item $\mathbf{u} \cdot \mathbf{v}$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	-6 \mathbf{u}= -6 \begin{pmatrix} 1 \\ 0 \\ -3 \\ 2 \end{pmatrix}= \begin{pmatrix} -6 \\ 0 \\ 18 \\ -12 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\mathbf{v} - \mathbf{u}= \begin{pmatrix} 4 \\ -1 \\ 6 \\ -5 \end{pmatrix} - \begin{pmatrix} 1 \\ 0 \\ -3 \\ 2 \end{pmatrix}= \begin{pmatrix} 3 \\ -1 \\ 9 \\ -7 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\mathbf{u} + 2 \mathbf{v}=  \begin{pmatrix} 1 \\ 0 \\ -3 \\ 2 \end{pmatrix} + 2 \begin{pmatrix} 4 \\ -1 \\ 6 \\ -5 \end{pmatrix}=  \begin{pmatrix} 1 \\ 0 \\ -3 \\ 2 \end{pmatrix} + \begin{pmatrix} 8 \\ -2 \\ 12 \\ -10 \end{pmatrix}= \begin{pmatrix} 9 \\ -2 \\ 9 \\ -8 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\mathbf{u} \cdot \mathbf{v}= \begin{pmatrix} 1 \\ 0 \\ -3 \\ 2 \end{pmatrix} \cdot \begin{pmatrix} 4 \\ -1 \\ 6 \\ -5 \end{pmatrix}= 1(4) + 0(-1) + (-3)6 + 2(-5)= 4 + 0 - 18 - 10= -24
+	\]
+\end{enumerate}
 
 
 
@@ -39,7 +62,35 @@ Showing all your work, compute the following:
 	\item $3A + B$
 	\item $AC$
 	\item $B^T$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	4 \begin{pmatrix} 1 & 0 & -4 \\ -2 & 3 & 1 \end{pmatrix}= \begin{pmatrix} 4 & 0 & -16 \\ -8 & 12 & 4 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\begin{pmatrix} 1 & 0 & -4 \\ -2 & 3 & 1 \end{pmatrix} - \begin{pmatrix} 0 & 2 & -2 \\ 5 & 1 & 4 \end{pmatrix}= \begin{pmatrix} 1 & -2 & -2 \\ -7 & 2 & -3 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	3 \begin{pmatrix} 1 & 0 & -4 \\ -2 & 3 & 1 \end{pmatrix} + \begin{pmatrix} 0 & 2 & -2 \\ 5 & 1 & 4 \end{pmatrix}= \begin{pmatrix} 3 & 0 & -12 \\ -6 & 9 & 3 \end{pmatrix} + \begin{pmatrix} 0 & 2 & -2 \\ 5 & 1 & 4 \end{pmatrix}= \begin{pmatrix} 3 & 2 & -14 \\ -1 & -8 & 7 \end{pmatrix}
+	\]
+
+\item 
+	\[
+	\begin{pmatrix} 1 & 0 & -4 \\ -2 & 3 & 1 \end{pmatrix} \begin{pmatrix} 2 & 0 \\ -1 & 6 \\ 5 & 3 \end{pmatrix}= \begin{pmatrix} 1(2) + 0(-1) + (-4)5 & 1(0) + 0(6) + (-4)3 \\ -2(2) + 3(-1) + 1(5) & -2(0) + 3(6) + 1(3) \end{pmatrix}= \begin{pmatrix} -18 & -12 \\ -2 & 21 \end{pmatrix}
+	\]
+	
+\item 
+	\[
+	\begin{pmatrix} 0 & 2 & -2 \\ 5 & 1 & 4 \end{pmatrix}^T= \begin{pmatrix} 0 & 5 \\ 2 & 1 \\ -2 & 4 \end{pmatrix}
+	\]
+\end{enumerate}
 
 
 
@@ -58,7 +109,26 @@ Showing all your work and explaining your reasoning, answer the following:
         \item If $CA$ is defined, compute it. If not, explain why. 
         \item What is $a_{23}$? What is $b_{21}$?
         \item If $M= AC$, without explicitly computing $AC$, what is $m_{23}$?
-        \end{enumerate}
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	B^2= \begin{pmatrix} 2 & -1 \\ 0 & 3 \end{pmatrix}^2= \begin{pmatrix} 2 & -1 \\ 0 & 3 \end{pmatrix} \begin{pmatrix} 2 & -1 \\ 0 & 3 \end{pmatrix}= \begin{pmatrix} 2(2) + (-1)0 & 2(-1) + (-1)3 \\ 0(2) + 3(0) & 0(-1) + 3(3) \end{pmatrix}= \begin{pmatrix} 4 & -5 \\ 0 & 9 \end{pmatrix}
+	\end{aligned}
+	\]
+
+\item The product $CA$ is not defined. The product of two matrices, say $AB$, where $A$ is a $m \times n$ matrix and $B$ is a $r \times s$ matrix, is defined if and only if $n= r$. Here, we have $m= n= 3$ and $r= 2$ and $s= 3$. Because $n= 3 \neq 2= r$, the product is not defined. 
+
+\item We have $a_{23}= 3$ and $b_{21}= 1$. 
+
+\item We know $m_{23}$ is the dot product of the second row of $A$ with the third column of $C$. But then we have\dots
+	\[
+	m_{23}= 0(0) + (-1)0 + 3(3)= 0 + 0 + 9= 9
+	\]
+\end{enumerate}
 
 
 
