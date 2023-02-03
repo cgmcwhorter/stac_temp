@@ -35,6 +35,29 @@
 	\item On the plot below, sketch $M(d)$. 
 	\item Find how many miles he will have driven after 3 total days of driving.
 	\end{enumerate}
+	
+	\vfill
+	
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=1.2,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -0.5, xmax=5.2,
+	ymin= -100, ymax=2500,
+	xtick={0,1,2,3,4,5},
+	ytick={0,500,1000,...,2500},
+	minor x tick num = 1,
+	minor y tick num = 4,
+	xlabel=\(x\),ylabel=\(y\),
+	]
+%	\addplot[domain=-10.5:10.5,samples=2,line width=0.03cm] (x, 3/5*x - 3);
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\] 
 
 
 \end{document}
