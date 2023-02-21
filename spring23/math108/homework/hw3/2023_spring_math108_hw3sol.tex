@@ -1,0 +1,94 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 02/06}{A billion here, a billion there, and pretty soon you're talking about real money.}{Everett Dirksen}
+
+% Problem 1
+\problem{10} Suppose that the CPI in 2021 was approximately 278.802 while the CPI in 2022 was approximately 296.797. 
+	\begin{enumerate}[(a)]
+	\item Find the inflation rate from 2021 to 2022. 
+	\item Assuming that the CPI accurately reflects the prices of goods as a whole, how much would you estimate a good that cost \$69.99 in 2021 would cost in 2022?
+	\item Assuming that the inflation rate from 2021 to 2022 stayed constant, how much more do you estimate goods would cost in 2030 than in 2022?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\dfrac{296.797}{278.802}= 1.064544= 1 + 0.064544
+	\]
+Therefore, the inflation rate was approximately 6.45\%. \pspace
+
+\item We would expect the good would cost approximately 6.45\% more, i.e. that it would cost\dots
+	\[
+	\$89.99(1 + 0.064544)= \$89.99 (1.064544) \approx \$95.80
+	\] \pspace
+
+\item If the inflation rate stayed constant, the cost of goods would rise by approximately 6.45\% each year for the next 8~years. But then a good that cost $P$~dollars this year would then cost $P(1.064544)^8= P(1.64934)= P(1 + 0.64934)$. Therefore, goods would cost 64.93\% more in 2030 than in 2022. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Anita needs a short term loan to cover some temporary expense increases. She takes out a short-term, 5~month loan for \$1100 that earns 9.4\% annual simple interest. 
+	\begin{enumerate}[(a)]
+	\item How much will she owe in total at the end of the five months?
+	\item If Anita knows she will only be able to pay at most \$1300 at the end of the five months, what is the most she can take out on the loan now?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	F= P(1 + rt)= \$1100 \left(1 + 0.094 \cdot \frac{5}{12} \right)= \$1100(1.03917)= \$1143.08
+	\] 
+Therefore, she will owe \$1,1143.08 at the end of the five months. \pspace
+
+\item We have\dots
+	\[
+	P= \dfrac{F}{1 + rt}= \dfrac{\$1300}{1 + 0.094 \cdot \dfrac{5}{12}}= \dfrac{\$1300}{1.03917}= \$1251
+	\]
+Therefore, the most she can take out on the loan is \$1,251. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Emmanuel is taking out a loan to help purchase a new delivery truck to help expand his small business. He decides on a truck that costs \$67,049. There is a \$160 processing/service fee for the truck. After this is added, he will pay 7\% sales tax. He will take out a simple discount note to pay for this delivery truck. The note will have a period of 9~months at an annual interest rate of 8.3\%.
+	\begin{enumerate}[(a)]
+	\item How much will the truck cost in total?
+	\item What are the maturity and proceeds for this note?
+	\item How much does he owe at the end of the 9~months?
+	\item How much does he pay for the truck in the end, i.e. how much in total does he pay for the loan?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item After the \$160 processing/service fee, the truck costs $\$67049 + \$160= \$67209$. But then there is a 7\% sales tax, after which the price is $\$67209(1 + 0.07)= \$67209(1.07)= \$71931.63$. Therefore, the truck will cost \$71,913.63. \pspace
+
+\item The maturity for this loan is the loan amount, which will be the total amount for the truck. By (a), this is \$71,913.63. Emmanuel will receive this amount minus the discount (interest) for this loan. The discount is $D= Mrt= 71913.63(0.083) \frac{9}{12}= \$4476.62$. Then the amount Emmanuel receives is $\$71913.63 - \$4476.62= \$67437.01$. \pspace
+
+\item After 9~months, Emmanuel must pay back the original loan amount (he has already paid the discount, i.e. the interest), which is \$71,913.63. \pspace
+
+\item In total, he pays the loan plus the discount (the interest). Therefore, the total is $\$71913.63 + \$4476.62= \$76390.25$. 
+\end{enumerate}
+
+
+\end{document}

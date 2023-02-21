@@ -1,0 +1,138 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 02/08}{Don't look for the needle in the haystack. Just buy the haystack!}{John Bogle}
+
+% Problem 1
+\problem{10} Aaliyah is making her first big investment. She places \$24,000 with a company that promises a return equivalent to 4.5\% annual interest, compounded monthly.
+	\begin{enumerate}[(a)]
+	\item How much money will her investment be worth in 3~years?
+	\item How much interest has she made in her investment after 3~years?
+	\item If she had wants the investment to mature to \$29,000 in only 3~years, how much should she invest now?
+	\end{enumerate} \pspace
+
+\sol Note that this is a discrete compounded interest problem. We have a principal value of $P= \$24000$, an annual interest rate of $r= 0.045$, and that the interest is compounded 12~times per year, i.e. $k= 12$. 
+\begin{enumerate}[(a)]
+\item The amount in his account after 3~years is the future value of $P= 24000$. This is\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= 24000 \left(1 + \dfrac{0.045}{3} \right)^{12 \cdot 3}= 24000 (1.015)^{36}= 24000 (1.7091395)= \$41,019.35
+	\] \pspace
+
+\item Everything earned on the investment is either part of the investment or interest. The investment is worth \$24,000. Therefore, the interest must be $\$41019.35 - \$24000= \$17,019.35$. \pspace
+
+\item We are wondering how much she should have placed in the account initially, i.e. the principal value, so that after 3~years the amount in the account, $F$, is \$29,000. This is\dots
+	\[
+	P= \dfrac{F}{\left(1 + \dfrac{r}{k} \right)^{kt}}= \dfrac{\$29000}{\left(1 + \dfrac{0.045}{3} \right)^{12 \cdot 3}}= \dfrac{\$29000}{1.7091395}= \$16,967.60
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Jordan is taking out a loan for \$13,000. The agreement he negotiates with the bank is for a 5.3\% annual interest rate, compounded continuously. 
+	\begin{enumerate}[(a)]
+	\item How much will he owe after 5~years?
+	\item How much interest will he have been charged on the loan after 5~years?
+	\item If he knows that after 5~years he will have at most \$45,000 to pay back on the loan, what is the most he can afford to borrow initially? 
+	\end{enumerate} \pspace
+
+\sol Note that this is a continuous compounding interest problem. We have a principal value of \$13,000 and an annual interest rate of 0.053\%. 
+\begin{enumerate}[(a)]
+\item The amount in his account after 5~years is the future value of $P= 13000$. This is\dots
+	\[
+	F= Pe^{rt}= 13000 e^{0.053 \cdot 5}= 13000 e^{0.265}= 13000 (1.303430976) \approx \$16,944.60
+	\] \pspace 
+
+\item From (a), we know that he will owe \$16,944.60 in total. Because the loan was originally for \$13,000, the remainder must be interest. Therefore, he was charged $\$16,944.60 - \$13,000= \$3,944.60$ in interest. \pspace
+
+\item We are wondering the most he could borrow initially, i.e. the principal value, so that after 5~years the amount owed, $F$, is \$45,000. This is\dots
+	\[
+	P= \dfrac{F}{e^{rt}}= \dfrac{45000}{e^{0.053 \cdot 5}}= \dfrac{45000}{e^{0.265}}= \dfrac{45000}{1.303430976}= \$34,524.27
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} An investment firm promises that if you place your money with them that you will see returns of 9.7\% annual interest, compounded semiannually. You decide to place \$86,000 with this firm. 
+	\begin{enumerate}[(a)]
+	\item How long until your investment is worth \$100,000?
+	\item If instead they claimed the return was 9.7\% annual interest, compounded continuously, how long until your investment would be worth \$100,000?
+	\item Why is your answer in (b) a shorter time period than your answer in (a)?
+	\end{enumerate} \pspace
+
+\sol Note that this is a discrete compounded interest problem. We have a principal value of $P= \$86000$, an annual interest rate of $r= 0.097$, and that the interest is compounded 2~times per year, i.e. $k= 2$.
+
+\begin{enumerate}[(a)]
+\item We are now wondering how long until the investment is worth \$100,000, i.e. how long until the future value is \$100,000. This is\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(100000/86000)}{2 \ln \left(1 + \dfrac{0.097}{2} \right)}= \dfrac{\ln(1.16279)}{2\ln(1.0485)}= \dfrac{0.150822}{0.0947211}= 1.59227 \text{ years}
+	\] \pspace
+
+\item This changes to a continuous compounding interest model. We are still wondering how long until the investment is worth \$100,000. This is\dots
+	\[
+	t= \dfrac{\ln(F/P)}{r}= \dfrac{\ln(100000/86000)}{0.097}= \dfrac{0.150822}{0.097}= 1.55487 \text{ years}
+	\] \pspace
+
+\item The answer in (b) is shorter because the interest is being compounded continuously rather than merely twice per year. Therefore, the value of the investment accumulates more quickly and one 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} A bank offers two different loan packages. One package offers a rate of 10.2\% annual interest, compounded quarterly. The other package is for 10.1\% annual interest, compounded continuously. 
+	\begin{enumerate}[(a)]
+	\item `At face value', which appears to be the better offer?
+	\item Compute the effective interest rate for each package. Based on these interest rates, which is the better offer?
+	\item Compute the doubling time for each package. Based on these times, which is the better offer?
+	\item Explain the differences (if any) in your answers to (a), (b), and (c). 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item At face value, the package offering 10.1\% annual interest, compounded continuously seems like the better deal because it is the lower interest rate. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	r_{\text{eff}}&= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.102}{4} \right)^4 - 1= 1.1059682 - 1= 0.1059682 \\[0.3cm]
+	r_{\text{eff}}&= e^r - 1= e^{0.101} - 1= 1.1062766 - 1= 0.1062766
+	\end{aligned}
+	\]
+Therefore, the first package has an effective annual interest rate of 10.60\% while the second package as an effective annual interest of 10.63\%. Because the first loan package as a lower effective annual interest rate, the first package is a better deal. \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	t_D&= \dfrac{\ln(2)}{k \ln \left( 1 + \dfrac{r}{k} \right)}= \dfrac{\ln(2)}{4 \ln \left( 1 + \dfrac{0.102}{4} \right)}= \dfrac{\ln(2)}{4 \ln(1.0255)}= \dfrac{0.693147}{0.100721}= 6.88185 \\
+	t_D&= \dfrac{\ln(2)}{r}= \dfrac{0.693147}{0.101}= 6.86284
+	\end{aligned}
+	\]
+Therefore, the first package has a doubling time of 6.88~years while the second package has a doubling time of 6.86~years. Therefore, because the first package has a longer doubling time, the first package is the better deal. \pspace
+
+\item Both the answers from (a) and (b) agree that the first package is the better deal. However, because the second package has a lower nominal interest, it `at face value' seems to be the better deal.
+\end{enumerate}
+
+
+\end{document}

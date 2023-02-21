@@ -1,0 +1,121 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 02/13}{When I was young I used to think that money was the most important thing in life; now that I am old, I know it is.}{Oscar Wilde}
+
+% Problem 1
+\problem{10} Sue A. is taking out a loan to purchase a collection of vintage comics, which she hopes will rise in value so that later she can sell them for a profit. She takes out a loan for \$84,000 at 8.7\% annual interest, compounded monthly. The term of the loan will be 5~years. Find Sue's end of the month payments. How much will she pay in total? \pspace
+
+\sol This is an amortized loan because there are equal, regular payments. Because she is paying monthly and pays at the end of each month, this is an amortization coming from an ordinary annuity. Finally, because the interest compounding rate is equal to the payment rate, this is an amortization coming from a simple ordinary annuity. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.087}{12} \right)^{\text{12}/\text{12}} - 1= \dfrac{0.087}{12}= 0.00725
+	\]
+Because Sue is making monthly payments for 5~years, she will make a total of $12 \cdot 5= 60$ payments. But then we have\dots
+	\[
+	a_{\actuarialangle{n\,}\, i}= a_{\actuarialangle{60\,}\, 0.00725}= \dfrac{1 - (1 + 0.00725)^{-60}}{0.00725}= \dfrac{0.351718787}{0.00725}= 48.512936138 
+	\]
+But then the monthly payments will be\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n\,}\, i}}= \dfrac{84000}{a_{\actuarialangle{60\,}\, 0.00725}}= \dfrac{84000}{48.512936138}= \$1,731.50
+	\]
+Because Sue will make 60 equal payments of \$1,731.50, she will pay a total of $60 \cdot \$1731.50= \$103,890$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Herbert H. has just accepted a new job in a different school district. After searching for a new home, he finds the perfect one for \$225,000. He takes out a 30-year mortgage for this new home at 4.25\% annual interest, compounded quarterly. His mortgage payments will be at the end of each month. How much are his monthly payments? How much will he owe on the home after 10~years of payments? \pspace
+
+\sol This is an amortized loan because there are equal, regular payments. Because he is paying monthly and pays at the end of each month, this is an amortization coming from an ordinary annuity. Finally, because interest is compounded quarterly but Herbert makes monthly payments, this is an amortization coming from a general ordinary annuity. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.0425}{4} \right)^{\text{4}/\text{12}} - 1= (1.010625)^{1/3} - 1= 0.003529197
+	\]
+Because Herbert is making monthly payments for 30~years, he will make a total of $n= 12 \cdot 30= 360$ payments. But then we have\dots
+	\[
+	a_{\actuarialangle{n\,}\, i}= a_{\actuarialangle{360\,}\, 0.003529197}= \dfrac{1 - (1 + 0.003529197)^{-360}}{0.003529197}= \dfrac{0.718683312}{0.003529197}= 203.63933
+	\]
+But then the monthly payments will be\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n\,}\, i}}= \dfrac{225000}{a_{\actuarialangle{360\,}\, 0.003529197}}= \dfrac{225000}{203.63933}= \$1,104.89
+	\]
+After 10~years of payments, Herbert has made $m= 12 \cdot 10= 120$ payments. But then Herbert has $n - m= 360 - 120= 240$ payments to make. We have\dots
+	\[
+	a_{\actuarialangle{n - m\,}\, i}= a_{\actuarialangle{240\,}\, 0.003529197}= \dfrac{1 - (1 + 0.003529197)^{-240}}{0.003529197}= \dfrac{0.570664305}{0.003529197}= 161.698059
+	\]
+But then after 10~years of payments, Herbert still owes\dots
+	\[
+	\text{Amount Owed}= R\, a_{\actuarialangle{n - m\,}\, i}= 1104.89 (161.698059) \approx \$178,658.57
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Catherine F. is looking to purchase her first home. However, she is unsure what price of home she is able to afford. She discuses with a bank and finds that the best mortgage she is likely to qualify for is a 25~year, 5.6\% annual interest, compounded monthly. If she can only afford payments at the start of each month of at most \$4,600, what is the most expensive advertised price for a home she can afford? \pspace
+
+\sol Catherine's mortgage will be an amortized loan. Because the loan has equal, monthly payments, this amortization comes from an annuity. Because Catherine pays monthly at the start of each month, this amortization comes from an annuity due. Finally, because the interest is compounded at the same rate at which the payments are made, this amortization comes a simple annuity due. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.056}{12} \right)^{\text{12}/\text{12}} - 1= \dfrac{0.056}{12}= 0.004666667
+	\]
+Because she will make monthly payments for 25~years, she will make a total of $n= 12 \cdot 25= 300$ payments. But then we have\dots
+	\[
+	\begin{aligned}
+	d&= \dfrac{i}{1 + i}= \dfrac{0.004666667}{1 + 0.004666667}= 0.004644990 \\[0.3cm]
+	\ddot{a}_{\actuarialangle{300\,}\, 0.004666667}&= \dfrac{1 - (1 + i)^{-n}}{d}= \dfrac{1 - (1 + 0.004666667)^{-300}}{0.004644990}= \dfrac{0.752598699}{0.004644990}= 162.02375
+	\end{aligned}
+	\]
+Alternatively, we have\dots
+	\[
+	\begin{aligned}
+	a_{\actuarialangle{300\,}\, 0.004666667}&= \dfrac{1 - (1 + i)^{-n}}{i}= \dfrac{1 - (1 + 0.004666667)^{-300}}{0.004666667}= \dfrac{0.752598699}{0.004666667}= 161.271138266 \\[0.3cm]
+	\ddot{a}_{\actuarialangle{300\,}\, 0.004666667}&= (1 + i) a_{\actuarialangle{n\,}\, i}= (1 + 0.004666667) a_{\actuarialangle{300\,}\, 0.004666667}= (1.004666667) 161.271138266= 162.02375
+	\end{aligned}
+	\]
+But then the highest advertised home price Catherine can afford (neglecting down-payments, realtor fees, etc.) is\dots
+	\[
+	P= R\,\ddot{a}_{\actuarialangle{n\,}\, i}= 4600 \cdot \ddot{a}_{\actuarialangle{300\,}\, 0.004666667}= 4600 \cdot 162.02375= \$745,309.25
+	\]
+
+
+
+\newpage 
+
+
+
+% Problem 4
+\problem{10} Bitzi is purchased her home 20~years ago. When she originally purchased her home, she took out a 30-year mortgage at 4.71\% annual interest, compounded quarterly. She has made her beginning of the month payments of \$2,000 faithfully all this time. How much of her next payment actually goes towards repaying her loan? \pspace
+
+\sol Bitzi's mortgage will be an amortized loan. Because the loan has equal, monthly payments, this amortization comes from an annuity. Because Catherine pays monthly at the start of each month, this amortization comes from an annuity due. Finally, because the interest is compounded quarterly while the payments are monthly, this amortization comes from a general annuity due. The amount of Bitzi's next payment that will go towards the loan (and not the interest) is the payment against the principal. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.0471}{4} \right)^{\text{4}/\text{12}} - 1= (1.011775)^{1/3} - 1= 0.003909694
+	\]
+Because the mortgage is for 30~years and she makes monthly payments, she will make a total of $n= 12 \cdot 30= 360$ payments. Furthermore, because she has been making payments for 20~years, she has made a total of $m= 12 \cdot 20= 240$ payments. Therefore, she has $n - m= 360 - 240= 120$~payments remaining. Now observe that we have\dots
+	\[
+	\begin{aligned}
+	d&= \dfrac{i}{1 + i}= \dfrac{0.003909694}{1 + 0.003909694}= 0.003894468 \\[0.3cm]
+	\ddot{a}_{\actuarialangle{n - m\,}\, i}&= \ddot{a}_{\actuarialangle{120\,}\, 0.003909694}= \dfrac{1 - (1+ i)^{-n}}{d}= \dfrac{1 - (1 + 0.003909694)^{-120}}{0.003894468}= \dfrac{0.373902094}{0.003894468}= 96.008516 \\[0.3cm]
+	\ddot{a}_{\actuarialangle{n - m + 1\,}\, i}&=\ddot{a}_{\actuarialangle{121\,}\, 0.003909694}= \dfrac{1 - (1 + 0.003909694)^{-121}}{0.003894468}= \dfrac{0.376340412}{0.003894468}= 96.634614
+	\end{aligned}
+	\]
+But then the payment against the principal, PAP, is\dots
+	\[
+	\text{PAP}= R \left( \ddot{a}_{\actuarialangle{n - m + 1\,}\, i} - \ddot{a}_{\actuarialangle{n - m\,}\, i} \right)= 2000 (96.634614 - 96.008516)= 2000(0.626098) \approx \$1,252.20
+	\]
+
+
+\end{document}

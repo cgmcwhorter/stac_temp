@@ -12,20 +12,63 @@
 % Quiz 1
 \quizsol \textit{True/False}: Ethan is saving for a new car. The car he is saving for costs \$9,800. Over the next two months, the cost of the car rises by 8\% each month. Therefore, the car now costs 16\% more and thus costs $\$9800(0.16)= \$1568$ more than it did when he started saving. \pspace
 
-\sol The statement is \textit{false}. Repeated percent increase/decrease are not additive; that is, applying a $P$\% increase/decrease to a number $X$ a total of $n$ times is not the same thing as finding a $nP$\% increase/decrease. In this case, raising the price 8\% twice is not the same thing as raising the price by 16\%. The price increase after the first month is $\$9800(0.08)= \$784$. The new price is then $\$9800 + \$784= \$10584$. The price increase the second month is then $\$10584(0.08)= \$846.72$. The final price is then $\$10584 + \$846.72= \$11430.70$. [Note: One could compute this immediately via $\$9800(1.08)^2= \$9800(1.1664)= \$11430.70$.] But then the car costs $\$11430.70 - \$9800= \$1630.72$ more than when he bought it. Alternatively, we know that the original price was $\$9800$. After increasing the price twice by 8\%, the final price will be $\$9800(1.08)^2= \$9800(1.1664)$. We can recognize this as a 16.64\% increase from the original price. But this is $\$9800(0.1664)= \$1630.72$ increase in price. \pspace
+\sol The statement is \textit{false}. Repeated percent increase/decrease are not additive; that is, applying a $P$\% increase/decrease to a number $X$ a total of $n$ times is not the same thing as finding a $nP$\% increase/decrease. In this case, raising the price 8\% twice is not the same thing as raising the price by 16\%. The price increase after the first month is $\$9800(0.08)= \$784$. The new price is then $\$9800 + \$784= \$10584$. The price increase the second month is then $\$10584(0.08)= \$846.72$. The final price is then $\$10584 + \$846.72= \$11430.70$. [Note: One could compute this immediately via $\$9800(1.08)^2= \$9800(1.1664)= \$11430.70$.] But then the car costs $\$11430.70 - \$9800= \$1630.72$ more than when he bought it. Alternatively, we know that the original price was $\$9800$. After increasing the price twice by 8\%, the final price will be $\$9800(1.08)^2= \$9800(1.1664)$. We can recognize this as a 16.64\% increase from the original price. But this is $\$9800(0.1664)= \$1630.72$ increase in price. \pvspace{1.3cm}
+
 
 
 % Quiz 2
 \quizsol \textit{True/False}: Ellen has been hired as a financial analyst at a company. The previous analyst modeled the cost of producing one of their products as $C(q)= 43.27q + 13296$. Therefore, Ellen can deduce that the model predicted that the production cost of each item was $\$43.27$ and the fixed costs were $\$13296$. \pspace
 
-\sol The statement is \textit{true}. We know that the cost of production per unit (at a production level of $q$~items) is the rate of change of $C(q)$. Because $C(q)$ is linear, this is the slope of $C(q)$. The slope of $C(q)$ is $43.27$. Therefore, the item costs $\$43.27$ per item to produce, as claimed. Finally, we know that the fixed costs are the costs regardless the level of production. But then the fixed costs will be the costs associated with producing 0~units. This is $C(0)= 43.27(0) + 13296= 13296$. Therefore, the fixed costs are \$13,296, as claimed. 
+\sol The statement is \textit{true}. We know that the cost of production per unit (at a production level of $q$~items) is the rate of change of $C(q)$. Because $C(q)$ is linear, this is the slope of $C(q)$. The slope of $C(q)$ is $43.27$. Therefore, the item costs $\$43.27$ per item to produce, as claimed. Finally, we know that the fixed costs are the costs regardless the level of production. But then the fixed costs will be the costs associated with producing 0~units. This is $C(0)= 43.27(0) + 13296= 13296$. Therefore, the fixed costs are \$13,296, as claimed. \pvspace{1.3cm}
 
 
 
-% If the CPI last year was \$248.110 and this year it is \$251.608, then the inflation rate from last year to this year was 1.4\%. Moreover, if the inflation rate stays constant, in 5~years, goods will cost approximately 7.2\% more.
+% Quiz 3
+\quizsol \textit{True/False}: If the CPI last year was \$248.110 and this year it is \$251.608, then the inflation rate from last year to this year was 1.41\%. Moreover, if the inflation rate stays constant, in 5~years, goods will cost approximately 7.25\% more. \pspace
+
+\sol The statement is \textit{true}. We have $\dfrac{251.608}{248.110}= 1.014099= 1 + 0.014099$. Therefore, prices have increased by $1.4099\%$. Then if a good/service costs $\$P$ now and the rate of inflation stays constant in 5~years it will cost $P(1 + 0.014099)^5= P(1.014099)^5= P(1.07251)= P(1 + 0.07251)$. But then prices are $7.251\%$ more expensive in 5~years. \pvspace{1.3cm}
 
 
-% The expression $8000 \left(1 + \dfrac{0.051}{4} \right)^{12}$ could represent the amount of money in a savings account earning 5.1\% annual interest, compounded quarterly after 12~years if the savings account initially had \$8,000 deposited into it. 
+
+% Quiz 4
+\quizsol \textit{True/False}: The expression $8000 \left(1 + \dfrac{0.051}{4} \right)^{12}$ could represent the amount of money in a savings account earning 5.1\% annual interest, compounded quarterly after 12~years if the savings account initially had \$8,000 deposited into it. \pspace
+
+\sol The statement is \textit{false}. We know that if an initial amount $P$ accruing interest at an annual rate of $r$\% per year, compounded $k$ times per year for $t$ years, the final amount is given by $P \left(1 + \dfrac{r}{k} \right)^{kt}$. Writing the function above in this form, we have\dots
+	\[
+	8000 \left(1 + \dfrac{0.051}{4} \right)^{12}= 8000 \left(1 + \dfrac{0.051}{4} \right)^{4 \cdot 3}
+	\]
+Then here we have $P= \$8000$, $r= 0.051$ (a 5.1\% annual interest rate), $k= 4$ (compounded quarterly), and $t= 3$. Therefore, this could represent the final amount of an initial investment of \$8,000 at an annual interest rate of 5.1\%, compounded quarterly, invested for 3~years. \pvspace{1.3cm}
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: Terry has taken out a 5~year loan for 8.3\% annual interest, compounded monthly. The bank requires him to make equal monthly payments on the first of the month. Terry's loan is an example of a simple annuity. \pspace
+
+\sol The statement is \textit{false}. Because the number of payments each year matches the number of compounds each year, this is a simple annuity. Because payments are due at the start of each pay period, this is an annuity due. Therefore, this is a simple annuity due. \pvspace{1.3cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: Ann Euity has taken out a 30~year, fixed rate mortgage for a new \$250,000 home. The mortgage has a yearly annual interest of 6.87\%, compounded monthly. Her beginning of the month payments are \$1,632.14. After making her first payment, she owes $\$250000 - \$1632.14= \$248367.86$ on her mortgage. \pspace
+
+\sol The statement is \textit{false}. This is an amortized loan. In an amortized loan, the payment amount is fixed. But each payment goes towards paying off the loan \textit{and} the interest owed during that pay period simultaneously. Therefore, some portion of the initial payment should have gone towards paying off the interest due on the remaining loan amount for that month. But then the amount owed cannot decrease by the full amount of the monthly payment. The amount that the loan would decrease by would be the payment against the principal for that month, which is\dots
+	\[
+	\begin{aligned}
+	\text{PAP}&= R \left( \ddot{a}_{\actuarialangle{n - m + 1\,}\, i} - \ddot{a}_{\actuarialangle{n - m\,}\, i} \right) \\[0.3cm]
+	&=  1632.14 \left( \ddot{a}_{\actuarialangle{360 - 1 + 1\,}\, 0.005725} - \ddot{a}_{\actuarialangle{360 - 1\,}\, 0.005724} \right) \\[0.3cm]
+	&= 1632.14 (153.1728651 - 153.0440548) \\[0.3cm]
+	&= \$210.24
+	\end{aligned}
+	\]
+
+
+% If $A$ and $B$ are disjoint events with $P(A)= \frac{1}{3}$ and $P(B)= \frac{4}{5}$, then $P(A \text{ and } B)= P(A) \cdot P(B)= \frac{1}{3} \cdot \frac{4}{5}= \frac{4}{15}$. 
+
+
+
+
+
+
 
 
 

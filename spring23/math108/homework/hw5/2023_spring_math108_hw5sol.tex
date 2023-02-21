@@ -1,0 +1,123 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 02/13}{A penny saved is a penny earned.}{Benjamin Franklin}
+
+% Problem 1
+\problem{10} Claire is hoping to save for some basement renovations. Speaking with a contractor, they estimate that the desired renovations will cost approximately \$12,000. Claire sets aside money in a savings account that earns 1.2\% annual interest, compounded monthly. She plans on depositing money at the end of each month to save for the build. Claire hopes to have enough saved in 3~years. How much should Claire's monthly payments be? How much will she have earned in interest? \pspace
+
+\sol Because Claire is making regular, equal payments, this is an annuity. Because the payments are made monthly at the end of the month, this is an ordinary annuity. Finally, because the interest compounding rate is the same as the payment rate, this is a simple ordinary annuity. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.012}{12} \right)^{12/12} - 1= \dfrac{0.012}{12}= 0.001
+	\]
+The number of payments is $n= 12 \cdot 3= 36$. Now we have\dots
+	\[
+	s_{\actuarialangle{n\,}\, i}= s_{\actuarialangle{36\,}\, 0.001}= \dfrac{(1 + 0.001)^{36} - 1}{0.001}= \dfrac{1.036637199 - 1}{0.001}= \dfrac{0.036637199}{0.001}= 36.637199
+	\]
+We know that the payment amount is given by\dots
+	\[
+	R= \frac{F}{s_{\actuarialangle{n\,}\, i}}= \dfrac{12000}{s_{\actuarialangle{36\,}\, 0.001}}= \dfrac{12000}{36.637199} \approx \$327.54
+	\]
+Once she has saved the required \$12,000, everything in the account is either money Claire deposited or interest earned. We know that Claire made 36 equal payments of \$327.54. Therefore, she deposited $36 \cdot \$327.54= \$11,791.44$. Therefore, she earned $\$12000 - \$11791.44= \$208.56$ in interest. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Phil wants to expand his new reality business. To help finance his expansions, he negotiates a 4~year loan for \$450,000 at 8.2\% annual interest, compounded quarterly. He will make equal, end of the month payments to repay this loan. How much will these monthly payments be? How much will he pay in total on this loan? \pspace
+
+\sol Because Phil will make regular, equal payments, this is an annuity. Because the payments will be monthly and Phil will pay at the end of the month, this is an ordinary annuity. Finally, because the interest is compounded quarterly while the payments are monthly, this is a general ordinary annuity. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.082}{4} \right)^{4/12} - 1= (1.0205)^{1/3} - 1= 1.006787164 - 1= 0.006787164
+	\]
+We know that Phil will make a total of $n= 12 \cdot 4= 48$ payments. But then we have\dots
+	\[
+	a_{\actuarialangle{n\,}\, i}= a_{\actuarialangle{48\,}\, 0.006787164}= \dfrac{1 - (1 + 0.006787164)^{-48}}{0.006787164}= \dfrac{1 - 0.722756232}{0.006787164}= \dfrac{0.277243768}{0.006787164}= 40.848249
+	\]
+Therefore, the monthly payments are given by\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n\,}\, i}}= \dfrac{450000}{a_{\actuarialangle{48\,}\, 0.006787164}}= \dfrac{450000}{40.848249}= \$11,016.38
+	\]
+Because Phil will make 48 equal payments of \$11,016.38, Phil will pay a total of $48 \cdot \$11016.38= \$528,786.24$. 
+
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Luke is saving for a go-cart. He puts all the money he earns from his paper route---which is \$647---into a saving account at the start of each month. The account earns 2.6\% annual interest, compounded monthly. How much will he have saved after 2~years? How much did Luke deposit in total? \pspace
+
+\sol Because Luke is making regular, equal payments, this is an annuity. Because the payments are made monthly at the start of each month, this is an annuity due. Finally, because the interest compounding rate is equal to the payment rate, this is a simple annuity due. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.026}{12} \right)^{12/12} - 1= \dfrac{0.026}{12}= 0.002166667
+	\]
+The number of payments is $n= 12 \cdot 2= 24$. Now we have\dots
+	\[
+	\begin{aligned}
+	d&= \dfrac{i}{1 + i}= \dfrac{0.002166667}{1 + 0.002166667}= 0.002161983 \\[0.3cm]
+	\ddot{s}_{\actuarialangle{n\,}\, i}&= \dfrac{(1 + i)^n - 1}{d}= \dfrac{(1 + 0.002166667)^{24} - 1}{0.002161983}= \dfrac{1.053316498 - 1}{0.002161983}= 24.660924
+	\end{aligned}
+	\]
+Alternatively, we can compute\dots
+	\[
+	\begin{aligned}
+	s_{\actuarialangle{24\,}\, 0.002166667}&= \dfrac{(1 + i)^n - 1}{i}= \dfrac{(1 + 0.002166667)^{24} - 1}{0.002166667}= \dfrac{0.053316498}{0.002166667}= 24.607610676 \\[0.3cm]
+	\ddot{s}_{\actuarialangle{24\,}\, 0.002166667}&= (1 + i) s_{\actuarialangle{n\,}\, i}= (1 + 0.002166667) s_{\actuarialangle{24\,}\, 0.002166667}= (1.002166667) 24.607610676= 24.660924
+	\end{aligned}
+	\]
+But then the total amount he has saved is\dots
+	\[
+	F= R\, \ddot{s}_{\actuarialangle{n\,}\, i}= 647 \cdot \ddot{s}_{\actuarialangle{24\,}\, 0.002166667}= 647 \cdot 24.660924 \approx \$15,955.62
+	\]
+Because Luke made 24 monthly deposits of \$647, he deposited $24 \cdot 647= \$15,528$ in total. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Alex is taking out a loan to help pay for the textbooks for her college courses. She takes out a loan for \$4,000 at 5.3\% annual interest, compounded semiannually. She is required to make a payment at the start of each month. How much are Alex's monthly payments? How much will she pay in total for this loan? \pspace
+
+\sol Because Alex is making regular, equal payments, this is an annuity. Because the payments are made monthly at the start of each month, this is an annuity due. Finally, because the interest is compounded semiannually while the payments are made monthly, this is a general annuity due. First, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.053}{12} \right)^{4/12} - 1= (1.004416667)^{1/3} - 1= 0.001470060
+	\]
+The number of payments is $n= 12 \cdot 4= 48$. Now we have\dots
+	\[
+	\begin{aligned}
+	d&= \dfrac{i}{1 + i}= \dfrac{0.001470060}{1 + 0.001470060}= 0.001467902 \\[0.3cm]
+	\ddot{a}_{\actuarialangle{48\,}\, 0.001470060}&= \dfrac{1 - (1 + i)^{-n}}{d}= \dfrac{1 - (1 + 0.001470060)^{-48}}{0.001467902}= \dfrac{0.068082572}{0.001467902}= 46.38087
+	\end{aligned}
+	\]
+Alternatively, we can compute\dots
+	\[
+	\begin{aligned}
+	a_{\actuarialangle{48\,}\, 0.001470060}&= \dfrac{1 - (1 + i)^{-n}}{i}= \dfrac{1 - (1 + 0.001470060)^{-48}}{0.001470060}= \dfrac{0.068082572}{0.001470060}= 46.3127845 \\[0.3cm]
+	\ddot{a}_{\actuarialangle{48\,}\, 0.001470060}&= (1 + i) a_{\actuarialangle{n\,}\, i}= (1 + 0.001470060) a_{\actuarialangle{48\,}\, 0.001470060}= (1.001470060) 46.3127845= 46.38087
+	\end{aligned}
+	\]
+But then her monthly payments are\dots
+	\[
+	R= \dfrac{P}{\ddot{a}_{\actuarialangle{n\,}\, i}}= \dfrac{4000}{\ddot{a}_{\actuarialangle{48\,}\, 0.001470060}}= \dfrac{4000}{46.38087}= \$86.24
+	\]
+Because she will make 48 equal payments of \$86.24, Alex will pay a total of $48 \cdot \$86.24= \$4,139.52$. 
+
+
+\end{document}

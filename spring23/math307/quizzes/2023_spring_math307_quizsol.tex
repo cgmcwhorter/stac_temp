@@ -9,19 +9,73 @@
 \begin{document}
 \thispagestyle{title}
 
-TBA
+% Quiz 1
+\quizsol \textit{True/False}: Prunella is trying to find the cardinality of the set $\{ 1, 2, 1, 4, 1, 8 \}$. She counts how many numbers are in the set and finds that there are six numbers. Therefore, the cardinality of the set is 6. \pspace
 
-%% Quiz 1
-%\quizsol \textit{True/False}: Any function of one-variable which has a constant rate of change can be written in the form $f(x)= mx + b$ for some values $m$ and $b$. \pspace
-%
-%\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. The cardinality (or `size') of a set is the number of elements in a set. However, the order of elements of a set does not matter nor do repeats within a set. Therefore, the set $\{ 1, 2, 1, 4, 1, 8 \}$ is the same as the set $\{ 1, 2, 4, 8 \}$. The cardinality of this set is clearly 4. We may then more clearly define the cardinality of a set to be the number of \textit{distinct} elements of a set. Prunella is mistaken believing that the repeated 1s count towards the cardinality. \pvspace{1.3cm}
 
-% Prunella is trying to find the cardinality of the set $\{ 1, 2, 1, 4, 1, 8 \}$. She counts how many numbers are in the set and finds that there are six numbers. Therefore, the cardinality of the set is 6. 
 
-% If $A$ is a set with $5$ elements and $B$ is a set with $3$ elements, then $A - B$ is a set with $2$ elements. 
 
-% The number of ways of choosing three candle sticks from a collection of five to arrange on a mantle is $_5P_3= 5 \cdot 4 \cdot 3= 60$ possible arrangements. 
+% Quiz 2
+\quizsol \textit{True/False}: If $A$ is a set with $5$ elements and $B$ is a set with $3$ elements, then $A - B$ is a set with $2$ elements. \pspace
 
-% The number of possible ways of guessing the correct answers to a 10~question True/False exam is $_{10}C_{10}$. 
+\sol The statement is \textit{false}. It may be possible for some sets. For instance, if $A= \{ a, b, c, d, e \}$ and $B= \{ a, c, e \}$, then $A - B= \{ b, d \}$. Then $|A|= 5$, $|B|= 3$, and $|A - B|= 2$. However, this is not true for \textit{all} sets. For instance, if $A= \{ a, b, c, d, e \}$ and $B= \{ -5, 6, \text{`nice'} \}$, then $A - B= \{ a, b, c, d, e \}$. But then in this case, $|A|= 5$, $|B|= 3$, and $|A - B|= 5$. The cardinality of $A - B$ depends on how many elements of $A$ have been `removed' because they were elements of $B$. This could be 1, 2, or 3 elements depending on the cardinality of $A \cap B$. \pvspace{1.3cm}
+
+
+
+% Quiz 3
+\quizsol \textit{True/False}: The number of ways of choosing three distinct candle sticks from a collection of five to arrange on a mantle is $_5P_3= 5 \cdot 4 \cdot 3= 60$ possible choices of arrangements. \pspace
+
+\sol The statement is \textit{true}. We can count this directly. There are 5 possible candlesticks to choose for the far left position. This leaves 4 possible choices for the rightmost candlestick and then finally 3 possible choices for the middle candlestick. But then in total there are $5 \cdot 4 \cdot 3= 60$ total possible arrangements. Alternatively, we know the number of ways of arranging $k$ objects from a collection of $n$ distinct objects, with repetition not allowed, where the order of the arrangement matters, is given by $_n P_k$. Here, we have $n= 5$ and $k= 3$. But then we know the number of possible arrangements is $_5 P_3= \frac{5!}{(5 - 3)!}= \dfrac{5!}{2!}= \frac{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{2 \cdot 1}= 5 \cdot 4 \cdot 3= 60$. \pvspace{1.3cm}
+
+
+
+% Quiz 4
+\quizsol \textit{True/False}: The number of possible ways of guessing the correct answers to a 10~question True/False exam is $_{10}C_{10}$. \pspace
+
+\sol The statement is \textit{false}. We know that the order of the answer choices matters. We know also that $_{10}C_{10}$ represents a combination. For combinations, order is unimportant. Therefore, it is highly unlikely (but not strictly speaking impossible) that $_{10}C_{10}$ gives the correct count. We know each question has 2 possible answers. One must answer the first question, and the second, and the third, etc. There are 10 questions. Therefore, there are $2 \cdot 2 \cdot \cdots \cdot 2= 2^{10}= 1024$ total possible number of ways of answering (guessing) the answers for this collection of 10 true/false questions. \pvspace{1.3cm}
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: Harriet lives In Alkonost, AZ. There it is sunny 90\% of the time. Harriet is planning her weekend. She can expect that there is a $0.90 \cdot 0.90= 0.81$ probability, i.e. $81\%$ chance, that it is sunny both days. \pspace
+
+\sol The statement is \textit{false}. If $A$ and $B$ are events, then we know that $P(A \text{ and } B)= P(A) \cdot P(B)$, if $A$ and $B$ are independent. Recall two events are independent if and only if the occurrence or non-occurrence of an event changes the probability that the other event occurs/does not occur. If $A$ and $B$ are not independent, it may not be true that $P(A \text{ and } B)= P(A) \cdot P(B)$. Let $A$ be the event that it is sunny on Saturday and $B$ be the event that it is sunny on Sunday. Clearly, $A$ and $B$ are not independent events. For instance, if it is sunny/rainy one day, it is more/less likely to be sunny/rainy the next. Therefore, it may not be the case that there is a $0.90 \cdot 0.90= 0.81$ probability, i.e. $81\%$ chance, that it is sunny both days. Generally, $P(A \text{ and } B)= P(A) P(B \;|\; A)= P(B) P(A \;|\; B)$, whether or not $A$ and $B$ are independent. \pvspace{1.3cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: At a community college, 45\% of students have some experience with Excel, 55\% of students have some experience with Word, and 70\% of students have experience with at least one of them. Therefore, 15\% of students have experience only with Excel. \pspace
+
+\sol The statement is \textit{true}. If $A$ and $B$ are events, we know that $P(A \text{ or } B)= P(A) + P(B) - P(A \cap B)$. But then we know that $P(\text{Excel or Word})= P(\text{Excel}) + P(\text{Word}) - P(\text{Excel \& Word})$. But then we have $0.70= 0.45 + 0.55 - P(\text{Excel \& Word})$. Then $0.70= 1.00 - P(\text{Excel \& Word})$ so that $P(\text{Excel \& Word})= 0.30$. Finally, because every person that knows Excel either knows word or does not (and these are mutually exclusive), we know that $0.45= P(\text{Excel})= P(\text{Only Excel}) + P(\text{Excel and Word})= P(\text{Only Excel}) + 0.30$. But this shows that $P(\text{Only Excel})= 0.15$. Therefore, 15\% of students have experience only with Excel. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
