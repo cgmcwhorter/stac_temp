@@ -1,0 +1,148 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 02/15 (16)}{Your mind will answer most questions if you learn to relax and wait for the answer.}{William S. Burroughs}
+
+% Problem 1
+\problem{10} A website forces you to create a 7 character password using lower case letters, the digits 0--9, and the symbols @, \#, !, \%, and \&. 
+	\begin{enumerate}[(a)]
+	\item How many passwords are possible?
+	\item How many passwords are there consisting of only letters or only numbers?
+	\item How many passwords start and end in a vowel?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item There are 26~lower case letters, 26~upper case letters, 10~digits, and 5~symbols one can use for a character in the password. This is a total of $26 + 26 + 10 + 5= 67$ total characters. There are 67 possible characters for each of the password characters and the order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords is\dots
+	\[
+	67 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 67= 67^7= 6\,060\,711\,605\,323
+	\] \pspace
+
+\item If one can only use letters or numbers, then there are only $26 + 26 + 10= 62$ possible characters to choose from for each character of the password. There are 62 possible characters for each of the password characters and the order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords consisting only of letters or numbers is\dots
+	\[
+	62 \cdot 62 \cdot 62 \cdot 62 \cdot 62 \cdot 62 \cdot 62= 62^7= 3\,521\,614\,606\,208
+	\] \pspace
+
+\item There are 5 lower case vowels (a, e, i, o, u) and 5 upper case vowels (A, E, I, O, U). There are then $5 + 5= 10$ possible choices for the first and last character of the password. By (a), for the remaining 5 characters of the password, there are 67 characters from which to choose. The order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords starting and ending in a vowel is\dots
+	\[
+	10 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 10= 10^2 \cdot 67^5= 135\,012\,510\,700
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} There are 5 teams from different schools at a STEM competition. They are presenting different robots that they built as part of a summer project. The judges will rank the five teams and select a single winner.
+	\begin{enumerate}[(a)]
+	\item How many different ways can the judges rank the teams?
+	\item How many different ways can the judges choose the top three teams?
+	\item How many different ways can the judges choose a winner?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item No team can hold more than one ranking. The order of the selection matters, e.g. choosing one team for the first rank (winner) instead of another team results in a different ranking. From the 5 teams, one need choose all 5 of them to order, where order matters and repetition is not allowed. Therefore, the number of possible rankings for the teams is\dots
+	\[
+	_5P_5= 5!= 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1= 120
+	\] 
+Alternatively, there are 5 teams to choose for the winner, 4 remaining teams to choose from for second place, 3 remaining teams to choose from for third, 2 remaining teams to choose from for fourth, then only 1 remaining team to choose from for last place. This gives $5 \cdot 4 \cdot 3 \cdot 2 \cdot 1= 120$ total possible rankings. \pspace
+
+\item No team can hold more than one ranking. The order of the selection matters, e.g. choosing one team for the first rank (winner) instead of another team results in a different ranking. From the 5 teams, one need choose 3 of them to order, where order matters and repetition is not allowed. Therefore, the number of possible rankings for the teams is\dots
+	\[
+	_5P_3= \dfrac{5!}{(5 - 3)!}= \dfrac{5!}{2!}= \dfrac{5 \cdot 4 \cdot 3 \cdot 2!}{2!}= \dfrac{5 \cdot 4 \cdot 3 \cdot \cancel{2!}}{\cancel{2!}}= 5 \cdot 4 \cdot 3= 60
+	\]
+Alternatively, there are 5 teams to choose for the winner, 4 remaining teams to choose from for second place, and 3 remaining teams to choose from for third place. Therefore, there are $5 \cdot 4 \cdot 3= 60$ ways to choose the top three teams. \pspace
+
+\item There can only be one winner and there are 5 teams from which to choose. Therefore, there are 5 ways to choose the winner. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Javier is teaching the history of the American Revolution to students. He is assigning students to several different projects, which they will later present. He has a total of 8 different projects available and there are 18 students in the class.
+	\begin{enumerate}[(a)]
+	\item How many different ways can he select 5 of the projects that he has for this class?
+	\item How many different ways can he choose 3 different students to be assigned to one of his chosen projects?
+	\item How many ways can he designate two group leaders for a group of 4 students assigned to work on one of the projects?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item He cannot choose a project more than once and the order he selects the projects is unimportant. Therefore, the number of ways he can choose 5 projects from 8 projects, where order is unimportant and repetition is not allowed, is\dots
+	\[
+	_8C_5= \dfrac{8!}{5! (8 - 5)!}= \dfrac{8!}{5! 3!}= \dfrac{8 \cdot 7 \cdot 6 \cdot 5!}{5! 3!}= \dfrac{8 \cdot 7 \cdot 6 \cdot \cancel{5!}}{\cancel{5!} 3!}= \dfrac{8 \cdot 7 \cdot 6}{3 \cdot 2 \cdot 1}= \dfrac{\cancel{8}^4 \cdot 7 \cdot \cancel{6}^2}{\cancel{3} \cdot \cancel{2} \cdot 1}= 4 \cdot 7 \cdot 2= 56
+	\] \pspace
+
+\item He cannot choose a student more than once for the project and the order he selects the 3 students is unimportant. Therefore, the number of ways he can choose 3 students from 18 students to assign to a particular project, where order is unimportant and repetition is not allowed, is\dots
+	\[
+	\hspace{-1.2cm} _{18}C_3= \dfrac{18!}{3! (18 - 3)!}= \dfrac{18!}{3! 15!}= \dfrac{18 \cdot 17 \cdot 16 \cdot 15!}{3! 15!}= \dfrac{18 \cdot 17 \cdot 16 \cdot \cancel{15!}}{3! \cancel{15!}}= \dfrac{18 \cdot 17 \cdot 16}{3 \cdot 2 \cdot 1}= \dfrac{\cancel{18}^6 \cdot 17 \cdot \cancel{16}^8}{\cancel{3} \cdot \cancel{2} \cdot 1}= 6 \cdot 17 \cdot 8= 816
+	\] \pspace
+ 
+\item He cannot choose a student more than once to be the group leader for this group of 4 students and the order he selects the students is unimportant. Therefore, the number of ways he can choose 2 students from the 4 students on the project to be a group leader, where order is unimportant and repetition is not allowed, is\dots 
+	\[
+	_4C_2= \dfrac{4!}{2! (4 - 2)!}= \dfrac{4!}{2! 2!}= \dfrac{4 \cdot 3 \cdot 2!}{2! 2!}= \dfrac{4 \cdot 3 \cdot \cancel{2!}}{2! \cancel{2!}}= \dfrac{4 \cdot 3}{2 \cdot 1}= \dfrac{\cancel{4}^2 \cdot 3}{\cancel{2} \cdot 1}= 2 \cdot 3= 6
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Students in a film class are assigned to watch and write a report on 6 different films for a class. They have a large number of drama, comedy, horror, romance, mystery, and action films to choose from. They may choose any movies from the list of films that they are given. How many different ways can they select the genres for their six movies? \pspace
+
+\sol 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} A graduating class consists of 223 students---118~female students and 105~male students. They are forming a prom committee. 
+	\begin{enumerate}[(a)]
+	\item How many different prom committees of 6~people can be formed?
+	\item How many different prom committees of 6~people can be formed if the committee has to have a designed president and vice president with no person serving both roles. 
+	\item How many different committees having an equal number of male and female members can be formed?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Mitchell is counting the number of outfits that he can make using the 5 shirts and 5 pants that he owns. He asserts that he can make $5 + 5= 10$ different outfits. Is he correct? If so, explain why using the mathematical counting principles from this course. If not, explain why he is not correct and find a way of explaining this to him. \pspace
+
+\sol 
+
+
+\end{document}

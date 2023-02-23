@@ -1,0 +1,89 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 02/27 (28)}{The laws of probability, so true in general, so fallacious in particular.}{Edward Gibbon}
+
+% Problem 1
+\problem{10} The probabilities of several events in a finite probability space are given below:
+	\[
+	\begin{aligned}
+	P(A)&= 0.45 & P(A \;|\; C)&= 0.10 \\
+	P(B)&= 0.50 & P(B \cap C)&= 0.25 \\
+	P(C)&= 0.30 & P(A \cap B)&= 0.15
+	\end{aligned}
+	\] 
+\begin{enumerate}[(a)]
+\item Find $P(A \cup B)$.
+\item Find $P(B \;|\; C)$.
+\item Find $P(A \cap C)$.
+\item If $A$ and $C$ were independent, find $P(A \cap C)$.
+\item Using (c) and (d), determine if $A$ and $C$ are independent. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Dr. Graham's 5th grade class has created a table of the number of times a school in the district has delayed or cancelled school in the last decade based on the amount of snow they received the night before. Their results are summarized below.
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|l||c|c|c|c||c|} \hline
+	& 0" -- 0.9" & 1" -- 2.9" & 2.9" -- 4.9" & $\geq$ 5" & Total \\ \hline \hline
+	On-Time & 1200 & 800 & 350 & 5  & 2355 \\ \hline
+	Delayed & 26 & 54 & 875 & 1022 & 1977 \\ \hline
+	Canceled & 0 & 3 & 55 & 410 & 468 \\ \hline \hline
+	Total & 1226 & 857 & 1280 & 1437 & 4800 \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item What percentage of the time did schools cancel when it snowed?
+\item What percentage of the time that it snowed did they receive 1" -- 2.9"?
+\item On days when it snowed more than 5", what percentage of schools cancelled school?
+\item On days when schools delayed, what percentage of those days did it snow between 0" and 0.9"?
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Mr. Bobbert has a 4th grade class with 30 students. In this class, there are 18 students that like sports, 9 students that like video games, and 8 students that like both.
+	\begin{enumerate}[(a)]
+	\item Find the probability that a randomly selected student like sports or video games.
+	\item Find the probability that a randomly selected student only likes sports. 
+	\item Find the probability that a randomly selected student does not like sports nor video games.
+	\item If a student enjoys video games, find the probability that they also enjoy sports. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Ms. Streikert has a 6th grade English class. She finds that there is a 75\% chance that a student studies for an exam. If a student studies for an exam, there is an 90\% chance that they pass the exam. If a student does not study for an exam, there is a 85\% chance that they fail the exam. 
+	\begin{enumerate}[(a)]
+	\item Find the probability that a randomly selected student fails the exam.
+	\item Find the probability that a randomly selected student studies or passes the exam.
+	\item Find the probability that a randomly selected student both studies and fails the exam.
+	\item If a student fails the exam, find the probability that they did not study. 
+	\end{enumerate} 
+
+
+\end{document}

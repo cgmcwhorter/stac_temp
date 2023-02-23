@@ -3,14 +3,14 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
 % -------------------
 \begin{document}
 
-\homework{1: Due 02/13 (14)}{I am always doing that which I cannot do, in order that I may learn how to do it.}{Pablo Picasso}
+\homework{2: Due 02/13 (14)}{I am always doing that which I cannot do, in order that I may learn how to do it.}{Pablo Picasso}
 
 % Problem 1
 \problem{10} Define the following sets:
@@ -30,7 +30,35 @@ Describe the shapes found in the following sets:
 	\item $B \cup C$
 	\item $C \cap E^c$
 	\item $B \cap A \cap D$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The set $A \cap C$ is the collection of elements that are in \textit{both} $A$ and $C$. The elements of $A$ are blue geometric objects and the elements of $C$ are circles. But then $A \cap C$ consists of objects which are blue and circles. Therefore, we have\dots
+	\[
+	A \cap C= \{ \text{ blue circles } \}
+	\] \pspace
+
+\item The set $B \cap D$ is the collection of elements that are in \textit{both} $B$ and $D$. The elements of $B$ are triangles and the elements of $D$ are the set of `large' geometric objects. But then $B \cap D$ consists of objects that are triangles and that are `large' geometric objects. Therefore, we have\dots
+	\[
+	B \cap D= \{ \text{ large triangles } \}
+	\] \pspace
+ 
+\item The set $B \cup C$ is the collection of elements that are in $B$ or in $C$. The elements of $B$ are triangles and the elements of $C$ are circles. But then $B \cup C$ consists of triangles or circles. Therefore, we have\dots
+	\[
+	B \cup C= \{ \text{ triangles or circles } \}
+	\] \pspace
+
+\item The set $C \cap E^c$ is the collection of elements that are in $C$ and $E^c$. The elements of $C$ are circles and the elements of $E^c$ are elements that are not in $E$, i.e. geometric objects that are not colored red. But then $C \cap E^c$ consists of objects that are circles and are geometric objects that are not red. Therefore, we have\dots
+	\[
+	C \cap E^c= \{ \text{ circles that are not red } \} 
+	\] \pspace
+
+\item The set $B \cap A \cap D$ is the collection of elements that are in $B$, $A$, and $D$. The elements of $A$ are blue geometric objects. The elements of $B$ are triangles. The elements of $D$ are `large' geometric objects. But then $B \cap A \cap D$ consists of objects that are triangles and are blue geometric objects and are `large' geometric objects. Therefore, we have\dots
+	\[
+	B \cap A \cap D= \{ \text{ large blue triangles } \} 
+	\]
+\end{enumerate}
 
 
 
@@ -45,7 +73,40 @@ Describe the shapes found in the following sets:
 	\item Is $10 \in S$? Explain.
 	\item Find $S \cap U$.
 	\item What is the value of $|U - T|$?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item If $5 \in S$, then $n= 5$ and there is a $k$ such that $5= 3k + 1$ for some integer $k$. But then\dots
+	\[
+	\begin{aligned}
+	5&= 3k + 1 \\[0.3cm]
+	4&= 3k \\[0.3cm]
+	k&= \dfrac{4}{3}
+	\end{aligned}
+	\]
+But $k= \frac{4}{3}$ is not an integer. Therefore, $5 \notin S$. \pspace
+
+\item Let $k= 3$. Then $3(3) + 1= 9 + 1= 10 \in S$. Therefore, $10 \in S$. Alternatively, if $10 \in S$, then $n= 10$ and $10= 3k + 1$ for some integer $k$. But then\dots
+	\[
+	\begin{aligned}
+	10&= 3k + 1 \\[0.3cm]
+	9&= 3k \\[0.3cm]
+	k&= 3
+	\end{aligned}
+	\]
+Because $k= 3$ is an integer, we know that $10 \in S$. \pspace
+
+\item The objects of $S \cap U$ are the elements that are in \textit{both} $S$ and $U$. We know that $U= \{ 1, 2, 3, 4, 5, 6 \}$. The integers $3k$, where $k$ is an integer, are the multiples of 3. But then the numbers $3k + 1$ are the integers that are `1 above' a multiple of 3. Then the elements of $S \cap U$ are the elements of $U$ that are `1 above' a multiple of 3. Therefore, we have\dots
+	\[
+	S \cap U= \{ 1, 4 \} 
+	\]
+
+\item The set $U - T$ is the collection of elements of $U$ that are \textit{not} elements of $T$. The elements of $U$ are $\{ 1, 2, 3, 4, 5, 6 \}$. The elements of $T$ are even numbers. Therefore, the elements of $U - T$ are the elements of $\{ 1, 2, 3, 4, 5, 6 \}$ that are not even. Therefore, $U - T= \{ 1, 3, 5 \}$. We know $|U - T|$ is the cardinality, or size of the set $U - T$; that is, $|U - T|$ is the number of distinct elements of $U - T$. Therefore, we have\dots
+	\[
+	|U - T|= 3
+	\]
+\end{enumerate}
 
 
 
@@ -58,7 +119,14 @@ Describe the shapes found in the following sets:
 	\begin{enumerate}[(a)]
 	\item You define a set $S$ to be the set of grains of sand found in all the beaches across the world. You ask students whether or not $S$ is finite. Your class decides that the set $S$ is infinite. Are they correct? Explain. 
 	\item You ask your students whether the set $[1, 6)$ is finite or infinite. You break your students into groups. One of the groups states that because $[1, 6)= \{ 1, 2, 3, 4, 5, 6 \}$ that the set is finite. Are they correct? If they are correct, explain why. If they are not correct, state everything they have done incorrectly and give the correct answer. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item They are not correct. They are confusing `very large' with infinite. There are indeed many, many, \textit{many} grains of sand on planet Earth. Some estimates of the number of grains of sand on Earth are $7.5 \cdot 10^{18}$. In any case, while the number is large, it is still finite. \pspace
+
+\item First, the interval $[1, 6)$ is the set $[1, 6)= \{ x \colon 1 \leq x < 6 \}$; that is, $[1, 6)$ is the set of numbers greater than or equal to 1 but \textit{less than} 6. But then $6 \notin [1, 6)$ because $6 \not< 6$ (but it is true that $6 \leq 6$). They have included 6 in the set $[1, 6)$, which is incorrect. However, they forgot that while there are only a few `nice' numbers, i.e. integers, at least 1 but less than 6 (the integers 1, 2, 3, 4, 5), there are infinitely many numbers in the interval $[1, 6)$. For instance, $1.11341$, $5.003$, $\frac{14}{3}$, $\pi$, etc. are all in the interval $[1, 6)$. To `easily' see that $[1, 6)$ contains infinitely many numbers. Observe that $1.0, 1.1, 1.11, 1.111, \ldots$ are all distinct and in the interval $[1, 6)$. 
+\end{enumerate}
 
 
 
@@ -71,7 +139,32 @@ Describe the shapes found in the following sets:
 	\begin{enumerate}[(a)]
 	\item Students claim that $A \neq B$ because $A$ has more elements than $B$. Are they correct? Explain. 
 	\item Students claim that $B \not\subseteq C$ because the elements of $C$ appear in the reverse order of the elements of $B$. Are they correct? Explain. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Recall that a set is about the \textit{collection} of objects. Repetition or order of elements in a set does not matter. Then $A= \{ 1, 2, 3, 4, 2, 3 \}= \{ 1, 2, 3, 4 \}$. But this is exactly the set $B$. Therefore, $A= B$. The students have not understood that the order of the elements and repetition of elements of a set do not change the set. \pspace
+
+\item The order of the elements of a set does not matter. Therefore, $C= \{ 5, 4, 3, 2, 1 \}= \{ 1, 2, 3, 4, 5 \}$. Now $X \subseteq Y$ if every element of $X$ is an element of $Y$. Observe that each of the integers 1, 2, 3, and 4 are elements of $B$. The integers 1, 2, 3, and 4 are elements of $C$. But then every element of $B$ is an element of $C$. Therefore, $B \subseteq C$. The students have misunderstood the fact that the elements of a subset of another set need not appear in the same order in both sets. 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
