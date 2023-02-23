@@ -110,7 +110,20 @@ Alternatively, there are 5 teams to choose for the winner, 4 remaining teams to 
 % Problem 4
 \problem{10} Students in a film class are assigned to watch and write a report on 6 different films for a class. They have a large number of drama, comedy, horror, romance, mystery, and action films to choose from. They may choose any movies from the list of films that they are given. How many different ways can they select the genres for their six movies? \pspace
 
-\sol 
+\sol Students may repeat a genre, so repetitions are allowed. The order of the choice of films does not matter. For instance, if they choose a drama, four horror films, and a drama, that is the same collection of films as if they had chosen two dramas and then four horror films. Therefore, this is a combination with repetition allowed. The number of ways of choosing $n$ things from $r$ types is given by $\binom{n + r - 1}{n}= \binom{n + r - 1}{r - 1}$. [Alternatively, ${}_{n + r - 1}C_n= {}_{n + r - 1}C_{r - 1}$.] The students are selecting $n= 6$ films from $r= 6$ genres. Therefore, the number of possible ways they can select the genres is\dots
+	\[
+	\begin{aligned}
+	\binom{6 + 6 - 1}{6}&= \binom{11}{6} \\[0.3cm]
+	&= \dfrac{11!}{6! (11 - 6)!} \\[0.3cm]
+	&= \dfrac{11!}{6! 5!} \\[0.3cm]
+	&= \dfrac{11 \cdot 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6!}{6! 5!} \\[0.3cm]
+	&= \dfrac{11 \cdot 10 \cdot 9 \cdot 8 \cdot 7 \cdot \cancel{6!}}{\cancel{6!} 5!} \\[0.3cm]
+	&= \dfrac{11 \cdot 10 \cdot 9 \cdot 8 \cdot 7}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} \\[0.3cm]
+	&= \dfrac{11 \cdot \cancel{10}^2 \cdot \cancel{9}^3 \cdot \cancel{8}^{\cancel{2}^1} \cdot 7}{\cancel{5} \cdot \cancel{4} \cdot \cancel{3} \cdot \cancel{2} \cdot 1} \\[0.3cm]
+	&= 11 \cdot 2 \cdot 3 \cdot 7 \\[0.3cm]
+	&= 462
+	\end{aligned}
+	\]
 
 
 
@@ -128,9 +141,31 @@ Alternatively, there are 5 teams to choose for the winner, 4 remaining teams to 
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item Observe that repetition is not allowed; otherwise, there committee would not have 6 people. The order of the selection does not matter. Therefore, this is a combination. We are choosing 6 people from a collection of 223 students. Therefore, the number of prom committees is\dots
+	\[
+	\hspace{-1.5cm} _{223}C_6= \dfrac{223!}{6! (223 - 6)!}= \dfrac{223!}{6! 217!}= \dfrac{223 \cdot 222 \cdot 221 \cdot 220 \cdot 219 \cdot 218 \cdot \cancel{217!}}{6!\, \cancel{217!}}= \dfrac{114914121276240}{720}= 159\,602\,946\,217
+	\] \pspace
+
+\item First, we have to form the committee of 6 people. By (a), we know how many ways there are of doing this. We then have to choose a president and vice president from these 6 people. Repetition is not allowed because no person can serve both roles. The order of the selection matters because switching the choice switches the roles. This is then a permutation. From 6 people, we need choose 2 of them. The number of ways of choosing a president and vice president is then $_6P_2$. We know\dots
+	\[
+	_6P_2= \dfrac{6!}{(6 - 2)!}= \dfrac{6!}{4!}= \dfrac{6 \cdot 5 \cdot 4!}{4!}= \dfrac{6 \cdot 5 \cdot \cancel{4!}}{\cancel{4!}}= 6 \cdot 5= 30
+	\]
+We need form the committee \textit{and} choose a president and vice president. Therefore, the total number of ways of forming a committee of 6 people with a designated president and vice president is then\dots
+	\[
+	_{223}C_6 \cdot {}_6P_2= 159\,602\,946\,217 \cdot 30= 4\,788\,088\,386\,510
+	\] \pspace
+
+\item Observe that repetition is not allowed; otherwise, there committee would not have 6 people. The order of the selection does not matter. Therefore, this is a combination. The number of ways of choosing 3 women from 118~females is $_{118}C_3$. The number of ways of choosing 3 men from 105~males is $_{105}C_3$. We have\dots
+	\[
+	\begin{aligned}
+	_{118}C_3&= \dfrac{118!}{3! (118 - 3)!}= \dfrac{118!}{3! \,115!}= \dfrac{118 \cdot 117 \cdot 116 \cdot \cancel{115!}}{3! \, \cancel{115!}}= \dfrac{118 \cdot 117 \cdot 116}{3 \cdot 2 \cdot 1}= 266\,916 \\[0.3cm]
+	_{105}C_3&= \dfrac{105!}{3! (105 - 3)!}= \dfrac{105!}{3! \,102!}= \dfrac{105 \cdot 104 \cdot 103 \cdot \cancel{102!}}{3! \,\cancel{102!}}= \dfrac{105 \cdot 104 \cdot 103}{3 \cdot 2 \cdot 1}= 187\,460
+	\end{aligned}
+	\]
+We need choose 3 women from the 118~female students \textit{and} choose 3 men from the 105~males. Therefore, the number of different committees having an equal number of male and female members is\dots
+	\[
+	_{118}C_3 \cdot {}_{105}C_3= 266916 \cdot 187460= 50\,036\,073\,360
+	\]
 \end{enumerate}
 
 
@@ -142,7 +177,9 @@ Alternatively, there are 5 teams to choose for the winner, 4 remaining teams to 
 % Problem 6
 \problem{10} Mitchell is counting the number of outfits that he can make using the 5 shirts and 5 pants that he owns. He asserts that he can make $5 + 5= 10$ different outfits. Is he correct? If so, explain why using the mathematical counting principles from this course. If not, explain why he is not correct and find a way of explaining this to him. \pspace
 
-\sol 
+\sol Mitchell is not correct. For instance, he can choose any one of the pants and then he has 5 choices of shirts. This gives 5 outfits. He can choose another shirt and then have 5 choices of pants for another 5 outfits. This already gives a total of $5 + 5= 10$ pants and he still has not created outfits using the other 3 shirts. Repeating this process for each of the other 3 shirts yields another 5 outfits each. But then there are $5 + 5 + 5 + 5 + 5= 5 \cdot 5= 25$ outfits. \pspace
+
+We can describe forming an outfit by choosing a shirt \textit{and} choosing a pair of pants. Using the multiplication principle, because there are 5 shirt choices and 5 pant choices, there are a total of $5 \cdot 5= 25$ total possible outfits. 
 
 
 \end{document}
