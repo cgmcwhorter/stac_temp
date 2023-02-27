@@ -22,19 +22,19 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item There are 26~lower case letters, 26~upper case letters, 10~digits, and 5~symbols one can use for a character in the password. This is a total of $26 + 26 + 10 + 5= 67$ total characters. There are 67 possible characters for each of the password characters and the order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords is\dots
+\item There are 26~lower case letters, 10~digits, and 5~symbols one can use for a character in the password. This is a total of $26 + 10 + 5= 41$ total characters. There are 41 possible characters for each of the password characters and the order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords is\dots
 	\[
-	67 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 67= 67^7= 6\,060\,711\,605\,323
+	41 \cdot 41 \cdot 41 \cdot 41 \cdot 41 \cdot 41 \cdot 41= 41^7= 194\,754\,273\,881
 	\] \pspace
 
-\item If one can only use letters or numbers, then there are only $26 + 26 + 10= 62$ possible characters to choose from for each character of the password. There are 62 possible characters for each of the password characters and the order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords consisting only of letters or numbers is\dots
+\item If one can only use letters or numbers, then there are only $26 + 10= 36$ possible characters to choose from for each character of the password. There are 36 possible characters for each of the password characters and the order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords consisting only of letters or numbers is\dots
 	\[
-	62 \cdot 62 \cdot 62 \cdot 62 \cdot 62 \cdot 62 \cdot 62= 62^7= 3\,521\,614\,606\,208
+	36 \cdot 36 \cdot 36 \cdot 36 \cdot 36 \cdot 36 \cdot 36= 36^7= 78\,364\,164\,096
 	\] \pspace
 
-\item There are 5 lower case vowels (a, e, i, o, u) and 5 upper case vowels (A, E, I, O, U). There are then $5 + 5= 10$ possible choices for the first and last character of the password. By (a), for the remaining 5 characters of the password, there are 67 characters from which to choose. The order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords starting and ending in a vowel is\dots
+\item There are 5 lower case vowels (a, e, i, o, u). There are then 5 possible choices for the first and last character of the password. By (a), for the remaining 5 characters of the password, there are 41 characters from which to choose. The order of the characters matters (rearranging the characters results in a different password). Therefore, the number of possible passwords starting and ending in a vowel is\dots
 	\[
-	10 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 67 \cdot 10= 10^2 \cdot 67^5= 135\,012\,510\,700
+	5 \cdot 41 \cdot 41 \cdot 41 \cdot 41 \cdot 41 \cdot 5= 5^2 \cdot 41^5= 2\,896\,405\,025
 	\]
 \end{enumerate}
 
