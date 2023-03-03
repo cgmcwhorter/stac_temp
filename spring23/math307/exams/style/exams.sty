@@ -4,21 +4,22 @@
 \usepackage{
 	amsmath,			% Math Environments
 	amssymb,			% Extended Symbols
-	cancel,			% Use Cancellations
-	empheq,			% Boxed Multiline Equation
+%	cancel,			% Use Cancellations
+%	empheq,			% Boxed Multiline Equation
 	enumerate,		% Enumerate Environments
 	etoolbox,			% Define Boolean
 	float,				% Force Figure/Table Placement
 	graphicx,			% Include Images
-	longdivision,		% Use Long Division
+%	longdivision,		% Use Long Division
 	mathtools,			% Matrix Lines & Floor/Ceiling
 	multicol,			% Use Multi-columns
 	tabularx,			% Special Tabular Environment
-	tikz,				% Create Tikz Diagrams
-	tkz-euclide,		% Automate Graph Plots
-	venndiagram		% Use Venn Diagrams
+%	tikz,				% Create Tikz Diagrams
+%	tkz-euclide,		% Automate Graph Plots
+%	venndiagram		% Use Venn Diagrams
 }
-%\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[table,xcdraw]{xcolor}
 
 
 % -------------------
@@ -35,6 +36,9 @@
 \usetikzlibrary{calc,intersections}%,matrix,arrows,shapes.geometric,positioning,decorations.pathmorphing,patterns}
 \usepgfplotslibrary{fillbetween,statistics}
 
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
 
 % -------------------
 % Answer Hiding
