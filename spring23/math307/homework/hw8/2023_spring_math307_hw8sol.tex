@@ -1,0 +1,132 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{8: Due 03/01 (02)}{Statistically, the probability of any one of us being here is so small that you'd think the mere fact of existing would keep us all in a contented dazzlement of surprise.}{Lewis Thomas}
+
+% Problem 1
+\problem{10} The number of hours Elizabeth has spent on TokTik over the past few days is given below:
+	\[
+	0 \qquad 1 \qquad 6 \qquad 1 \qquad 3 \qquad 6 \qquad 2 \qquad 6 \qquad 9 \qquad 7 \qquad 8  
+	\] 
+
+\begin{enumerate}[(a)]
+\item Find the median of this dataset.
+\item Find the IQR of this dataset. 
+\item A 5-number summary for a dataset consists of the min, $Q_1$, median, $Q_3$, and max for the data. Find the 5-number summary for this dataset. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Putting the data in order, we have\dots
+	\[
+	0 \qquad 1 \qquad 1 \qquad 2 \qquad 3 \qquad 6 \qquad 6 \qquad 6 \qquad 7 \qquad 8 \qquad 9 
+	\]
+There are 11 numbers. Because $\frac{11}{2}= 5.5$, the median is the 6th number. But then the median is 6. \pspace
+
+\item The numbers less than the sixth number 6 that is the median are 0, 1, 1, 2, 3. The median of these numbers is 1. Therefore, we know that $Q_1= 1$. The numbers greater than the sixth number 6 that is the median are 6, 6, 7, 8, 9. The median of these numbers is 7. Therefore, we know that $Q_3= 7$. But then we have\dots
+	\[
+	\text{IQR}= Q_3 - Q_1= 7 - 1= 6
+	\] \pspace
+
+\item We know for this dataset that $\min= 0$ and $\max= 8$. We found the median in (a), which was 5.5. Finally, we computed $Q_1$ and $Q_3$ in (b) as 1 and 7, respectively. Therefore, the 5-number summary is\dots
+	\[
+	0 \qquad 1 \qquad 5.5 \qquad 7 \qquad 9 
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Will took the SAT and received a 1650 while Chris took the ACT and received a 23. Suppose that both the SAT and the ACT had scores which were normally distributed. Furthermore, suppose that the SAT had a mean score of 1500 and standard deviation 300 while the ACT had a mean score of 21 and standard deviation of 5. Relative to their own exams, who did better? Be sure to justify your answer. \pspace
+
+\sol Because the distribution of exam scores for both the SAT and the ACT were normally distributed, we can compare both Will's and Chris' exam scores relative to the other test takers on their exams using $z$-scores. But this will give a comparison between their scores, despite not having taken the same exam. We have\dots
+	\[
+	\begin{aligned}
+	z_{\text{Will}}&= \dfrac{x - \mu}{\sigma}= \dfrac{1650 - 1500}{300}= \dfrac{150}{300} \approx 0.50 \\[0.3cm]
+	z_{\text{Chris}}&= \dfrac{x - \mu}{\sigma}= \dfrac{23 - 21}{5}= \dfrac{2}{5} \approx 0.40 
+	\end{aligned}
+	\]
+Because $0.50= |z_{\text{Will}}| > |z_{\text{Chris}}|= 0.40$, Will did better on his own exam (relative to other test takers) than Chris did on his (relative to other test takers). 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} STACKS is a local college. At the school, GPAs are approximately normally distributed with mean 3.205 and standard deviation 0.27. 
+	\begin{enumerate}[(a)]
+	\item Find the percentage of students that have a GPA lower than 2.800.
+	\item Find the percentage of students that have a GPA greater than 3.500. 
+	\item Find the percentage of students that have a GPA between 2.800 and 3.500. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	z_{2.800}= \dfrac{2.800 - 3.205}{0.27}= \dfrac{-0.405}{0.27}= -1.50 \squiggle 0.0668
+	\] 
+Then we know that $P(X < 2.800)= 0.0668$. Therefore, 6.68\% of students have a GPA lower than 2.800. \pspace
+
+\item We have\dots
+	\[
+	z_{3.500}= \dfrac{3.500 - 3.205}{0.27}= \dfrac{0.295}{0.27}= 1.09 \squiggle 0.8621
+	\] 
+Then we know that $P(X < 3.500)= 0.8621$. But then we know that $P(X > 3.500)= 1 - P(X < 3.500)= 1 - 0.8621= 0.1379$. Therefore, 13.79\% of students have a GPA greater than 3.500. \pspace
+
+\item We have\dots
+	\[
+	P(2.800 < X < 3.500)= P(X < 3.500) - P(X < 2.800)= 0.8621 - 0.0668= 0.7953
+	\]
+Therefore, 79.53\% of students have a GPA between 2.800 and 3.500. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Margarita claims that you can generate a random sample of the numbers 2 through 12 by continuously rolling two die and taking the sum of the numbers that appear.\footnote{By a random sample of a finite set of numbers, we mean that the probability of all elements of the sample space are equal.} Explain why Margarita is incorrect. Be sure to include the concept of bias in your response. How would you help Margarita understand why she is wrong? \pspace
+
+\sol We can create a table of each of the possible sums of the numbers on the two die, as shown below. \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c|cccccc}
+	Roll & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+	1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
+	2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+	3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+	4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+	5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+	6 & 7 & 8 & 9 & 10 & 11 & 12
+	\end{tabular}
+	\end{table} \par
+We can see the sums of the dice repeating along the diagonals. There are 36 possible combinations of what appears on the dice. However, there are fewer possibilities for their sum. From this table, we can see that\dots
+	\[
+	\begin{aligned}
+	P(2)&= \dfrac{1}{36} &\qquad P(5)&= \dfrac{4}{36} &\qquad P(8)&= \dfrac{5}{36} &\qquad P(11)&= \dfrac{2}{36} \\[0.3cm]
+	P(3)&= \dfrac{2}{36} & P(6)&= \dfrac{5}{36} & P(9)&= \dfrac{4}{36} & P(12)&= \dfrac{1}{36} \\[0.3cm]
+	P(4)&= \dfrac{3}{36} & P(7)&= \dfrac{6}{36} & P(10)&= \dfrac{3}{36}
+	\end{aligned}
+	\]
+Therefore, not all of these combinations are equally likely. This shows that collecting a sample of numbers from 2 to 12 in this manner would result in bias because certain outcomes would be more likely (and hence likely appear more often) than others. 
+
+
+\end{document}

@@ -1,0 +1,169 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 02/27 (28)}{From principles is derived probability, but truth or certainty is obtained only from facts.}{Tom Stoppard}
+
+% Problem 1
+\problem{10} Joey is drawing marbles from a bag. The bag contains 50 marbles. Of these marbles, 25 are red, 10 are blue, and 15 are green. He will draw two random marbles sequentially from the bag. After drawing a marble, Joey will put the marble back in the bag.
+	\begin{enumerate}[(a)]
+	\item What is the probability that both marbles are red?
+	\item What is the probability that neither marble is red?
+	\item What is the probability that he draws a blue and green marble, in either order?
+	\item What is the probability that both marbles have the same color?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because the marbles are drawn randomly and placed back in the bag, each marble selection is independent. We know that the probability you select a red marble is $P(\text{red})= \frac{25}{25 + 10 + 15}= \frac{25}{50}= \frac{1}{2}$. But then we have\dots
+	\[
+	P(\text{both red})= P(\text{red}) \cdot P(\text{red})= \dfrac{1}{2} \cdot \dfrac{1}{2}= \dfrac{1}{4} \approx 0.25
+	\]
+
+\item Because the marbles are drawn randomly and placed back in the bag, each marble selection is independent. From (a), we know that the probability you draw a red marble is $P(\text{red})= \frac{1}{2}$. But then the probability you do not draw a red marble is $P(\text{not red})= 1 - P(\text{red})= 1 - \frac{1}{2}$. But then we have\dots
+	\[
+	P(\text{both not red})= P(\text{not red}) \cdot P(\text{not red})= \dfrac{1}{2} \cdot \dfrac{1}{2}= \dfrac{1}{4} \approx 0.25
+	\]
+
+\item Because the marbles are drawn randomly and placed back in the bag, each marble selection is independent. We know that the probability you select a blue marble is $P(\text{blue})= \frac{15}{25 + 10 + 15}= \frac{10}{50}= \frac{1}{5}$. We know that the probability you select a green marble is $P(\text{green})= \frac{15}{25 + 10 + 15}= \frac{15}{50}= \frac{3}{10}$. But then we have\dots
+	\[
+	\begin{aligned}
+	P(\text{blue then green})&= P(\text{blue}) \cdot P(\text{green})= \dfrac{1}{5} \cdot \dfrac{3}{10}= \dfrac{3}{50} \approx 0.06 \\[0.3cm]
+	P(\text{green then blue})&= P(\text{green}) \cdot P(\text{blue})= \dfrac{3}{10} \cdot \dfrac{1}{5}= \dfrac{3}{50} \approx 0.06
+	\end{aligned}
+	\]
+Therefore, we know\dots
+	\[
+	P(\text{blue and green})= P(\text{blue then green}) + P(\text{green then blue})= \dfrac{3}{50} + \dfrac{3}{50}= \dfrac{6}{50}= \dfrac{3}{25} \approx 0.12
+	\]
+
+\item Because the marbles are drawn randomly and placed back in the bag, each marble selection is independent. If both marbles have the same color, they are either both red, both blue, or both green. We know the probability that they are both red from (a). From (c), we know $P(\text{blue})= \frac{1}{5}$ and $P(\text{green})= \frac{3}{10}$. But then\dots
+	\[
+	\begin{aligned}
+	P(\text{both blue})&= P(\text{blue}) \cdot P(\text{blue})= \dfrac{1}{5} \cdot \dfrac{1}{5}= \dfrac{1}{25} \approx 0.04 \\[0.3cm]
+	P(\text{both green})&= (\text{blue}) \cdot P(\text{blue})= \dfrac{1}{5} \cdot \dfrac{1}{5}= \dfrac{1}{25} \approx 0.04
+	\end{aligned}
+	\]
+Therefore, we have\dots
+	\[
+	P(\text{same color})= P(\text{both red}) + P(\text{both blue}) + P(\text{both green})= \dfrac{1}{4} + \dfrac{1}{25} + \dfrac{1}{25}= \dfrac{33}{100} \approx 0.33
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} A standard deck of cards consists of 52 cards. There are 13 of each of the different suits of cards: hearts, diamonds, spades, and clubs. Each suit consists of cards numbered 2 through 10 along with the cards jack, queen, king, and ace. Hearts and diamonds are colored red while spades and clubs are colored black. Suppose that you will draw two random cards from the deck without replacement.
+	\begin{enumerate}[(a)]
+	\item What is the probability that you draw two aces?
+	\item What is the probability that you draw two black cards?
+	\item What is the probability that you draw two aces or two black cards?
+	\item What is the probability that both cards are from the same suit?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The probability that you draw the first ace is $P(\text{ace})= \frac{4}{52}= \frac{1}{13}$. However, after drawing the first ace there are only 3 aces left in the deck and 51 cards left in the deck. Therefore, the probability you draw the second ace is $P(\text{second ace})= \frac{3}{51}= \frac{1}{17}$. But then the probability of drawing two aces is\dots
+	\[
+	P(\text{both aces})= P(\text{ace}) \cdot P(\text{ace} \;|\; \text{first ace})= \dfrac{1}{13} \cdot \dfrac{1}{17}= \dfrac{1}{221} \approx 0.0045
+	\] \pspace
+
+\item The probability that you draw the first black card is $P(\text{black})= \frac{26}{52}= \frac{1}{2}$. However, after drawing the first black card there are only 25 black cards left in the deck and 51 cards left in the deck. Therefore, the probability you draw the second black card is $P(\text{second black})= \frac{25}{51}$. But then the probability of drawing two aces is\dots
+	\[
+	P(\text{both black})= P(\text{black}) \cdot P(\text{black} \;|\; \text{first black})= \dfrac{1}{2} \cdot \dfrac{25}{51}= \dfrac{25}{102} \approx 0.2451
+	\] \pspace
+
+\item We computed the probability of drawing two aces in (a) and the probability of drawing two black cards in (b). We need to know the probability of drawing two aces and two black cards. This is only possible if you draw both the black aces. The probability of drawing the first black ace is $\frac{2}{52}= \frac{1}{26}$. But then there is only 1 black ace left and 51 cards left in the deck. Then the probability of drawing the second black ace is $\frac{1}{51}$. Then the probability of drawing both black aces is $\frac{1}{26} \cdot \frac{1}{51}= \frac{1}{1326}$. Therefore, the probability of drawing two aces of two black cards is\dots
+	\[
+	\hspace{-1.5cm} P(\text{both aces or black})= P(\text{both aces}) + P(\text{both black}) - P(\text{both black aces})= \dfrac{1}{221} + \dfrac{25}{102} - \dfrac{1}{663}= \dfrac{329}{1326} \approx 0.2481
+	\] \pspace
+
+
+
+\item If you were going to draw both cards from the same suit, the first draw does not matter. What matters is that the second draw matches the suit of the first. Once you have drawn the first card, it is of some suit. You then need to draw from the remaining 12 cards in that suit out of the remaining 51 cards in the deck. But then the probability of drawing both cards from the same suit is\dots
+	\[
+	P(\text{same suit})= \dfrac{12}{51} \approx 0.2353
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose you are going to invite two of your friends to the movies. You decide that you are going to choose from your friends Alice, Susan, Sally, Bill, and Joe. Because you cannot decide, you will choose the friends that go with you randomly. 
+	\begin{enumerate}[(a)]
+	\item How many total ways could you choose the friends that go with you?
+	\item What is the probability that you go with Alice and Bill?
+	\item What is the probability that you go with only girls?
+	\item What is the probability that you go with one boy and one girl?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The order you choose the friends does not matter and you cannot repeat a selection of a friend (otherwise, you would not have two friends going with you). Therefore, this is a combination. The number of ways of choosing 2 friends from a total of 5 friends is $_5C_3$. This is\dots
+	\[
+	_5C_3= \dfrac{5!}{3!\, (5 - 3)!}= \dfrac{5!}{3!\, 2!}= \dfrac{5 \cdot 4 \cdot 3!}{3!\, 2 \cdot 1}= \dfrac{5 \cdot \cancel{4}^2 \cdot \cancel{3!}}{\cancel{3!}\, \cancel{2}}= 5 \cdot 2= 10 
+	\] \pspace
+
+\item There is only one way of going with Alice and Bill---by choosing Alice and Bill. Therefore, the probability is\dots
+	\[
+	P(\text{Alice and Bill})= \dfrac{1}{10}
+	\] \pspace
+
+\item You have three female friends. The order you choose the girls does not matter and you cannot repeat a selection of a girl (otherwise, you would not have two friends going with you). Therefore, this is a combination. The number of ways of choosing 2 of the 3 female friends is $_3C_2$. This is\dots
+	\[
+	_3C_2= \dfrac{3!}{2!\, (3 - 2)!}= \dfrac{3!}{2!\, 1!}= \dfrac{3 \cdot 2!}{2!}= \dfrac{3 \cdot \cancel{2!}}{\cancel{2!}}= 3
+	\]
+But then the probability that you bo with only girls is\dots
+	\[
+	P(\text{only girls})= \dfrac{3}{10}
+	\] 
+
+\item The order you choose the boy/girl does not matter and you cannot repeat a selection of a boy/girl. Therefore, this is a combination. To choose a boy and a girl, you must choose a boy and a girl. The number of ways of choosing 1 boy from the 2 boys is $_2C_1$ while the number of ways of choosing 1 girl from the 3 girls is $_3C_1$. We have\dots
+	\[
+	\begin{aligned}
+	_2C_1&= \dfrac{2!}{1!\, (2 - 1)!}= \dfrac{2!}{1! \, 1!}= 2!= 2 \\
+	_3C_1&= \dfrac{3!}{1!\, (3 - 1)!}= \dfrac{3!}{1!\, 2!}= \dfrac{3 \cdot \cancel{2!}}{1 \cdot \cancel{2!}}= 3
+	\end{aligned}
+	\]
+Then the number of ways of choosing a boy and girl to go with you is $_2C_1 \cdot _3C_1= 2 \cdot 3= 6$. Therefore, the probability of going with one boy and one girl is\dots
+	\[
+	P(\text{one boy, one girl})= \dfrac{6}{10}= \dfrac{3}{5} \approx 0.60
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Tina B. is trying to determine the probability that if you draw two cards from a deck of cards, one after the other, that they are both red. She states that because there are 26 red cards in a deck of cards, the probability you draw a red card is $\frac{26}{52}= \frac{1}{2}$. Tina then claims the probability that both the cards are red is then $\frac{1}{2} \cdot \frac{1}{2}= \frac{1}{4}$. Explain why Tina is wrong using the description of the card drawing. Explain why Tina is wrong using the statistical concept of independence. \pspace
+
+\sol Tina has correctly computed the probability of drawing a \textit{single} red card. However, because each card is removed from the deck and is not replaced, the probability that you draw a red card is not constant. The probability of drawing the first red card is indeed $\frac{26}{52}= \frac{1}{2}$. But after drawing this red card, there is one less red card (for a total of 25) and one less card in the deck (for a total of 51). Therefore, the probability of drawing the next red card is $\frac{25}{51}$. Therefore, the correct probability of drawing two red cards from the deck is\dots
+	\[
+	P(\text{two reds})= P(\text{first red}) \cdot P(\text{second red})= \dfrac{1}{2} \cdot \dfrac{25}{51}= \dfrac{25}{102} \approx 0.2451
+	\]
+Computing $P(\text{two reds})$ using $P(\text{red}) \cdot P(\text{red})$ assumes that the events of drawing a red for the first and second card are independent, which we see is not the case above. Computing the probability this way, we have\dots
+	\[
+	P(\text{two reds})= P(\text{first red}) \cdot P(\text{red} \;|\; \text{first red})= \dfrac{1}{2} \cdot \dfrac{25}{51}= \dfrac{25}{102} \approx 0.2451
+	\]
+
+
+\end{document}
