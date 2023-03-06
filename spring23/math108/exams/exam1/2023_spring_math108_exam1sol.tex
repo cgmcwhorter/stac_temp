@@ -1,0 +1,378 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 1}
+\renewcommand{\term}{Spring -- 2023}
+\newcommand{\examdate}{02/22/2023}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Suppose that the CPI for urban US cities in 2013 was 230.280 while it was 233.916 in 2014. 
+	\begin{enumerate}[(a)]
+	\item What was the inflation rate from 2013 to 2014?
+	\item Using (a), what would you predict a good that cost \$100 in 2013 would cost in 2014?
+	\item If in the inflation rate from (a) stayed constant, what would you predict a good that cost \$100 in 2013 would cost in 2023?
+	\end{enumerate} \pspace
+
+{\itshape 
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\dfrac{233.916}{230.280}= 1.0157894= 1 + 0.0157894
+	\]
+Therefore, the inflation rate was approximately 1.58\% from 2013 to 2014. \pspace
+
+\item Using (a), we expect the good to cost approximately 1.58\% more in 2014 than it did in 2013. But then we estimate that the good will cost\dots
+	\[
+	\$100(1 + 0.0157894)= \$100(1.0157894) \approx \$101.58
+	\]
+
+\item If the inflation rate remained constant, then we would expect the cost of a good to rise by approximately 1.58\% in cost each year. To find the predicted price next year from the price this year, we would then multiply the price by $1.0157894$. We do this for each of the 10~years that the good should rise in price. But then we estimate the price of a good in 2023 that cost \$100 in 2013 would be\dots
+	\[
+	\$100(1.0157894)^{10}= \$100(1.1695993) \approx \$116.96
+	\]
+Generally, if the cost was $P$ in 2013, the cost in 2023 would be $P(1.0157894)^{10}= P(1.1695993)= P(1 + 0.1695993)$ so that we expect goods in 2023 to cost approximately 16.96\% more than they cost in 2013. 
+\end{enumerate}
+}
+
+
+
+% Question 2
+\newpage
+\question[10] Pepe Roni owns an Asian fusion restaurant called 9021 Pho. One of the items on the menu has a daily revenue function given by $R(q)= 15.99q$ and a daily cost function given by $C(q)= 5.47q + 287.50$. 
+	\begin{enumerate}[(a)]
+	\item How much does each item cost to make?
+	\item What are the fixed costs for producing this item?
+	\item How much is this item sold for?
+	\item What is the minimum number of sales of this item that Pepe needs to make in order to turn a profit on its sale?
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item Because the cost function, $C(q)$, is linear, we know that the rate of change of $C(q)$, i.e. the slope, is the cost to produce each item. The slope of $C(q)$ is 5.47. Therefore, the cost to produce each item is \$5.47, i.e. the variable cost is \$5.47 per item. \pspace
+
+\item The fixed costs are the costs regardless the level of production. Clearly, there is no cost of production when you produce no items, so the only cost when producing no items is the fixed cost. The cost of producing no items is $C(0)$. We have\dots
+	\[
+	C(0)= 5.47(0) + 287.50= 0 + 287.50= 287.50 
+	\]
+Therefore, the fixed costs are \$287.50. \pspace
+
+\item Because the revenue function, $R(q)$, is linear, we know that the rate of change of $R(q)$, i.e. the slope, is the amount for which each item is sold. The slope of $R(q)$ is 15.99. Therefore, each item is sold for \$15.99. \pspace
+
+\item We know the break-even point is the point at which revenue, i.e. when $R(q)= C(q)$. But then we have\dots
+	\[
+	\begin{aligned}
+	R(q)&= C(q) \\[0.3cm]
+	15.99q&= 5.47q + 287.50 \\[0.3cm]
+	10.52q&= 287.50 \\[0.3cm]
+	q&\approx 27.32
+	\end{aligned}
+	\]
+One cannot sell 27.32 menu items. Selling less would in turn result in less profit. Therefore, the minimum amount of items one would need to sell is 28~items. 
+\end{enumerate}
+}
+
+
+
+% Question 3
+\newpage
+\question[10] Walter Malone is taking out a short term loan to help finance a used car. He makes an arrangement with a bank to take out a 7~month simple discount note for \$4,000 at 9.4\% annual interest. 
+	\begin{enumerate}[(a)]
+	\item What are the maturity and proceeds for this note?
+	\item How much does Walter pay in interest on this loan?
+	\item How much does Walter owe at the end of the 7~months?
+	\end{enumerate} \pspace
+
+{\itshape
+\sol
+\begin{enumerate}[(a)]
+\item The maturity, $M$, is the loan amount. Because the loan is for \$4,000, we know that $M= \$4000$. The proceeds is the amount received from the maturity after the loan interest, i.e. the discount $D$, is paid up-front. We know that $D= Mrt$, where $r$ is the annual interest rate and $t$ is the loan length in years. Therefore, we have\dots
+	\[
+	D= Mrt= \$4000 \cdot 0.094 \cdot \dfrac{7}{12} \approx \$219.33
+	\]
+But then the proceeds, $P$, is\dots
+	\[
+	P= M - D= \$4000 - \$219.33= \$3,\!780.67
+	\]
+
+\item The interest paid on the loan is the discount on the loan. But we found the discount, $D$, in (a). Therefore, the total interest paid on the loan is \$219.33. \pspace 
+
+\item Walter must pay the loan amount, \$4,000, and the interest on the loan, i.e. the discount of \$219.33. He pays the interest up-front. Therefore, at the end of the 7~months, Walter only need pay back the \$4,000 maturity. 
+\end{enumerate}
+}
+
+
+
+% Question 4
+\newpage
+\question[10] Abe Hines has taken out a loan to open up his dream business---a vape shop called `Darth Vaper.' The bank Abe negotiated with has offered him a loan of \$760,000 at 7.84\% annual interest, compounded monthly. Abe would have to pay the loan off over the next 15~years by making regular, end of the month payments.
+	\begin{enumerate}[(a)]
+	\item How much would Abe's monthly payment be?
+	\item How much would Abe pay in total on this loan?
+	\item How much interest would Abe pay in total on this loan?
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item Because Abe will make regular, equal monthly payments on a loan, this is an amortized loan from an annuity. Also, because the payments are made at the end of a payment period, this is an ordinary annuity. Finally, because the interest is compounded monthly and the payments are made monthly, this is a simple ordinary annuity. We need to find Abe's monthly payment. We know the present value of the loan is $P= \$760000$. The annual interest rate is $r= 0.0784$ and this rate is compounded $k= 12$~times per year. Because the loan is for 15~years and Abe will make monthly payments, he will make a total of $n= 12 \cdot 15= 180$~payments. Therefore, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.0784}{12} \right)^{12/12} - 1= \dfrac{0.0784}{12}= 0.006533333
+	\] \par\vspace{0.1cm}
+	\[
+	\hspace{-1.5cm} a_{\actuarialangle{n\,}\, i}= a_{\actuarialangle{180\,}\, 0.006533333}= \dfrac{1 - (1 + 0.006533333)^{-180}}{0.006533333}= \dfrac{1 - 0.309692629}{0.006533333}= \dfrac{0.690307371}{0.006533333}= 105.659296870
+	\] \par\vspace{0.1cm}
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{n\,}\, i}}= \dfrac{\$760000}{a_{\actuarialangle{180\,}\, 0.006533333}}= \dfrac{\$760000}{105.659296870} \approx \$7,\!192.93
+	\]
+Therefore, the monthly payments will be \$7,192.93. \pspace
+
+\item We know that Abe makes 180~equal payments of \$7,192.93. Therefore, the amount Abe pays in total is\dots
+	\[
+	\text{Total Paid}= \text{Number Payments} \cdot \text{Payment Amount}= 180 \cdot \$7192.93= \$1,\!294,\!727.40
+	\]
+
+\item Abe need only pay the loan principal and the interest. The principal is \$760,000. Everything else that Abe pays is interest. We computed the total amount Abe pays in (b). Therefore, the amount of interest Abe pays is\dots
+	\[
+	\text{Interest}= \text{Total Paid} - \text{Principal}= \$1,\!294,\!727.40 - \$760,\!000= \$534,\!727.40
+	\]
+\end{enumerate}
+}
+
+
+
+% Question 5
+\newpage
+\question[10] Lee Reese has invested money in a local company called `Pane in the Glass.' He has given the company \$12,000. The company promises a return on his investment of 3.7\% annual interest, compounded quarterly. 
+	\begin{enumerate}[(a)]
+	\item How much is Lee's investment worth after 3~years?
+	\item If Lee had wanted the investment to be worth \$20,000 after 5~years, how much should he have initially invested? 
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item This investment gathers interest via discrete compounded interest. We know the principal investment was $P= \$12000$. The annual interest rate is $r= 0.037$ and is compounded quarterly, i.e. $k= 4$ times per year. The amount that the investment is worth, i.e. its future value, after $t= 3$~years is\dots
+	\[
+	\hspace{-1.75cm} F= P \left(1 + \dfrac{r}{k} \right)^{kt}= \$12000 \left(1 + \dfrac{0.037}{4} \right)^{4 \cdot 3}= \$12000 (1.00925)^{12}= \$12000(1.116824923) \approx \$13,\!401.90
+	\] \pspace
+
+\item We want to know how much the initial investment, i.e. the principal $P$, should be so that after $t= 5$~years of earning interest the future amount, $F$, is \$20,000. The interest model is still discrete compounded interest with $r= 0.037$ and compounded quarterly, i.e. $k= 4$ times per year. The initial investment should then be\dots
+	\[
+	P= \dfrac{F}{\left(1 + \dfrac{r}{k} \right)^{kt}}= \dfrac{\$20000}{\left(1 + \dfrac{0.037}{4} \right)^{4 \cdot 5}}= \dfrac{\$20000}{(1.00925)^{20}}= \dfrac{\$20000}{1.202195676} \approx \$16,\!636.22
+	\]
+\end{enumerate}
+}
+
+
+
+ % Question 6
+\newpage
+\question[10] Donna Mite owns a hair salon called `Hairway to Heaven.' On average, each customer that visits the store spends approximately \$50.97. However, the average cost of serving that customer is approximately \$28.21. The salon has rent and utility costs of approximately \$518.35 to keep open per day. 
+	\begin{enumerate}[(a)]
+	\item Find the revenue function as a function of the number of daily customers. 
+	\item Find the cost function as a function of the daily number of customers. 
+	\item What is the minimal number of customers Donna needs to attract to the store each day to turn a profit? 
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item We know that each customer spends approximately \$50.97. If there are $d$~daily customers, then the company generates $50.97d$ in revenue. Therefore, we have revenue function\dots
+	\[
+	R(d)= 50.97d
+	\] \pspace
+
+\item We know that the cost of serving each customer is \$28.21. If there are $d$~daily customers, then the daily cost of directly serving the customers is $28.21d$. However, the store also costs \$518.35 to keep open each day---the fixed costs. Therefore, the total daily cost of operating the business is $28.21d + 518.35$. But then we have\dots
+	\[
+	C(d)= 28.21d + 518.35
+	\] \pspace
+
+\item This is the break-even point, i.e. the point at which revenue equals cost. But then we have\dots
+	\[
+	\begin{aligned}
+	R(d)&= C(d) \\[0.3cm]
+	50.97d&= 28.21d + 518.35 \\[0.3cm]
+	22.76d&= 518.35 \\[0.3cm]
+	d&\approx 22.77
+	\end{aligned}
+	\]
+Because you cannot serve a fraction of a customer and serving less customers results in less revenue, she must attract at least 23 customers to turn a profit. 
+\end{enumerate}
+}
+
+
+
+% Question 7
+\newpage
+\question[10] Herb Atake is saving for his children's college education. Upon the birth of his daughter 18~years ago, he placed \$85 at the start of each month into a savings account that earned 2.31\% annual interest, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item How much did Herb deposit in total?
+	\item How much is in the account?
+	\item How much interest did Herb earn?
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item We know that Herb makes monthly payments of \$85. He makes these payments each month for 18~years for a total of $12 \cdot 18= 216$~payments. Therefore, Herb has deposited a total of\dots
+	\[
+	\text{Total Deposited}= \text{Number Deposits} \cdot \text{Deposit Amount}= 216 \cdot \$85= \$18,\!360
+	\] \pspace
+
+\item Because Herb is making regular, equal payments, this is an annuity. Also, because the payments are monthly and he makes payments at the start of the month, this is an annuity due. Finally, because the interest is compounded monthly and the payments are made monthly, this is a simple annuity due. The annual interest rate is $r= 0.0231$ and this rate is compounded $k= 12$~times per year. Herb makes these monthly deposits for 18~years for a total of $n= 12 \cdot 18= 216$~payments. We want to know the future value of these monthly deposits. Therefore, we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.0231}{12} \right)^{12/12} - 1= \dfrac{0.0231}{12}= 0.001925
+	\]
+	\[
+	\begin{aligned}
+	\hspace{-0.75cm} s_{\actuarialangle{n\,}\, i}&= s_{\actuarialangle{216\,}\, 0.001925}= \dfrac{(1 + 0.001925)^{216} - 1}{0.001925}= \dfrac{1.514977073 - 1}{0.001925}= \dfrac{0.514977073}{0.001925}= 267.520557403 \\[0.3cm]
+	\hspace{-0.75cm} \ddot{s}_{\actuarialangle{n\,}\, i}&= (1 + i) s_{\actuarialangle{n\,}\, i}= (1 + 0.001925) s_{\actuarialangle{216\,}\, 0.001925}= (1.001925) 267.520557403= 268.035534476	
+	\end{aligned}
+	\]
+	\[
+	F= R \ddot{s}_{\actuarialangle{n\,}\, i}= \$85 \ddot{s}_{\actuarialangle{216\,}\, 0.001925}= \$85(268.035534476) \approx \$22,\!783.02
+	\] 
+Therefore, the account will have \$22,783.02. \pspace
+
+\item Everything in the account is either money that Herb deposited or interest that money in the account earned. From (a), we know that Herb deposited \$18,360. From (b), we know the amount in the account after the 18~years is \$22,783.02. Therefore, the amount of interest Herb earned was\dots
+	\[
+	\text{Interest Earned}= \text{Total Amount} - \text{Amount Deposited}= \$22,\!783.02 - \$18,\!360= \$4,\!423.02
+	\]
+\end{enumerate}
+}
+
+
+
+% Question 8
+\newpage
+\question[10] Kiki Cate has retired from her job at a small computer company called `Tech It Easy.' She has saved \$1.3~million for retirement. She has cashed out the retirement and placed it into an account which earns 3.15\% annual interest, compounded quarterly. She will live off this money by making regular, equal, end of the month withdrawals. She wants the money to last at least 20~years. What is the most Kiki can withdraw each month? \pspace
+
+{\itshape 
+\sol Because Kiki will make regular, equal withdrawals, this is an annuity. Also, because the withdrawals will be monthly at the end of each month, this is an ordinary annuity. Finally, because the interest is compounded quarterly and she will be making monthly deposits, this is a general ordinary annuity. The annual interest rate is $r= 0.0315$ and this rate is compounded $k= 4$~times per year. Kiki will make monthly withdrawals for 20~years for a total of $n= 12 \cdot 20= 240$~withdrawals. We wish to know the withdrawal amount, $R$, so that the value of these withdrawals is the total present \$1.3~million that Kiki has saved for retirement. Therefore, we have\dots
+	\[
+	\hspace{-0.5cm} i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.0315}{4} \right)^{4/12} - 1= (1.007875)^{1/3} - 1= 1.002618139 - 1= 0.002618139
+	\] \par\vspace{0.1cm}
+	\[
+	\hspace{-0.75cm} a_{\actuarialangle{n\,}\, i}= a_{\actuarialangle{240\,}\, 0.002618139}= \dfrac{1 - (1 + 0.002618139)^{-240}}{0.002618139}= \dfrac{1 - 0.533907736}{0.002618139}= \dfrac{0.466092264}{0.002618139}= 178.024262272
+	\] \par\vspace{0.1cm}
+	\[
+	R= \dfrac{F}{a_{\actuarialangle{n\,}\, i}}= \dfrac{\$1300000}{a_{\actuarialangle{240\,}\, 0.002618139}}= \dfrac{\$1300000}{178.024262272} \approx \$7,\!302.38
+	\] \pspace
+Therefore, the most Kiki can withdraw each month is \$7,302.38. 
+}
+
+
+
+
+% Question 9
+\newpage
+\question[10] Petra Fried has taken out a \$27,000 loan with a bank to go in on a business called `Amy's Winehouse' with her friend Amy. The bank charges Petra 8.91\% annual interest, compounded continuously. 
+	\begin{enumerate}[(a)]
+	\item How much will Petra owe the bank after 2~years?
+	\item How long until Petra owes the bank \$50,000? 
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item The loan gathers interest via continuous compounding. We know the principal loan was $P= \$27000$. The annual interest rate is $r= 0.0891$ and is compounded continuously. After $t= 2$~years, the amount that is owed on the loan, $F$, is\dots
+	\[
+	F= Pe^{rt}= \$27000 e^{0.0891 \cdot 2}= \$27000 e^{0.1782}= \$27000 (1.195064310) \approx \$32,\!266.74
+	\]
+Therefore, Petra will owe the bank \$32,266.74. \pspace
+
+\item We want to know the amount of time, $t$, it takes the principal $P= \$27000$ to accumulate enough interest so that the total amount owed in the future, $F$, is \$50,000. The interest is accumulating with annual interest rate $r= 0.0891$ and is compounded continuously. But then we have\dots
+	\[
+	t= \dfrac{\ln(F/P)}{r}= \dfrac{\ln(\$50000/\$27000)}{0.0891}= \dfrac{\ln(1.851851852)}{0.0891}= \dfrac{0.616186140}{0.0891} \approx 6.916
+	\]
+Therefore, Petra will owe \$50,000 after 6.916~years.
+\end{enumerate}
+}
+
+
+
+% Question 10
+\newpage
+\question[10] Rhoda Chamel has taken out a 30-year, \$335,000 mortgage to purchase her dream home. The mortgage rate Rhoda secured with the bank was 7.316\% annual interest, compounded monthly. Rhoda's end of the month payments will be \$2,300.31. 
+	\begin{enumerate}[(a)]
+	\item How much will Rhoda still owe on the house after 15~years of payments?
+	\item After 15~years of making payments, how much less will Rhoda owe after her next payment, i.e. how much of her next payment goes towards the principal? 
+	\end{enumerate} \pspace
+
+{\itshape
+\sol 
+\begin{enumerate}[(a)]
+\item Because Rhoda will make regular, equal monthly payments on a loan, this is an amortized loan from an annuity. Also, because the payments are made monthly at the end of the pay period, this is an ordinary annuity. Finally, because the interest is compounded monthly and the payments are made monthly, this is a simple ordinary annuity. The annual interest rate is $r= 0.07316$ and this rate is compounded $k= 12$~times per year. Because the mortgage is for 30~years and Rhoda will be making monthly payments, she makes a total of $30 \cdot 12= 360$~payments. We wish to know how must Rhoda still owes after making 10~years of payments, i.e. $m= 12 \cdot 10= 120$~payments (so that there are $n - m= 360 - 120= 240$~payments remaining), of $R= \$2300.31$. But then we have\dots
+	\[
+	\hspace{-0.5cm} i= \left(1 + \dfrac{r}{k} \right)^{\text{CY}/\text{PY}} - 1= \left(1 + \dfrac{0.07316}{12} \right)^{12/12} - 1= \dfrac{0.07316}{12}= 0.006096667
+	\] 
+	\[
+	\hspace{-2cm} a_{\actuarialangle{n - m\,}\, i}= a_{\actuarialangle{240\,}\, 0.006096667}= \dfrac{1 - (1 + 0.006096667)^{-240}}{0.006096667}= \dfrac{1 - 0.232524937}{0.006096667}= \dfrac{0.767475063}{0.006096667}= 125.884366491
+	\] 
+	\[
+	\text{Amount Owed}= R a_{\actuarialangle{n - m\,}\, i}= \$2300.31 a_{\actuarialangle{240\,}\, 0.006096667}= \$2300.31(125.884366491) \approx \$289,\!573.07
+	\] \pspace
+
+\item After 15~years of making payments, Rhoda has made $m= 12 \cdot 15= 180$~payments. We want to know how much of her next payment on the mortgage actually goes towards paying off the house, rather than goes towards paying the interest. This is the payment against the principal. We have\dots
+	\[
+	\begin{aligned}
+	\hspace{-2.5cm} a_{\actuarialangle{n - m + 1\,}\, i}&= a_{\actuarialangle{241\,}\, 0.006096667}= \dfrac{1 - (1 + 0.006096667)^{-241}}{0.006096667}= \dfrac{1 - 0.231115900}{0.006096667}= \dfrac{0.7688841}{0.006096667}= 126.115482443 \\
+	\hspace{-2.5cm} a_{\actuarialangle{n - m\,}\, i}&= a_{\actuarialangle{240\,}\, 0.006096667}= \dfrac{1 - (1 + 0.006096667)^{-240}}{0.006096667}= \dfrac{1 - 0.232524937}{0.006096667}= \dfrac{0.767475063}{0.006096667}= 125.884366491
+	\end{aligned}
+	\]
+But then\dots
+	\[
+	\begin{aligned}
+	\text{P.A.P.}&= R \left( a_{\actuarialangle{n-m+1\,}\, i} - a_{\actuarialangle{n-m\,}\, i} \right) \\
+	&= \$2300.31 \left( a_{\actuarialangle{241\,}\, 0.006096667} - a_{\actuarialangle{240\,}\, 0.006096667} \right) \\
+	&= \$2300.31 (126.115482443 - 125.884366491) \\
+	&= \$2300.31(0.231115952) \\
+	&\approx \$531.64
+	\end{aligned}
+	\]
+Therefore, Rhoda owes \$531.64 less on the house after her next payment. 
+\end{enumerate}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{questions}
+\end{document}
