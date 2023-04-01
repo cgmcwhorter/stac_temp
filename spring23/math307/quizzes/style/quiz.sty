@@ -59,6 +59,10 @@
 \pgfplotsset{compat=newest}
 %\usepgfplotslibrary{}
 
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
 
 
 % -------------------
