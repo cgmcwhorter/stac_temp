@@ -37,14 +37,14 @@
 	\[
 	8000 \left(1 + \dfrac{0.051}{4} \right)^{12}= 8000 \left(1 + \dfrac{0.051}{4} \right)^{4 \cdot 3}
 	\]
-Then here we have $P= \$8000$, $r= 0.051$ (a 5.1\% annual interest rate), $k= 4$ (compounded quarterly), and $t= 3$. Therefore, this could represent the final amount of an initial investment of \$8,000 at an annual interest rate of 5.1\%, compounded quarterly, invested for 3~years. \pvspace{1.3cm}
+Then here we have $P= \$8000$, $r= 0.051$ (a 5.1\% annual interest rate), $k= 4$ (compounded quarterly), and $t= 3$. Therefore, this could represent the final amount of an initial investment of \$8,000 at an annual interest rate of 5.1\%, compounded quarterly, invested for 3~years. \pvspace{1.5cm}
 
 
 
 % Quiz 5
 \quizsol \textit{True/False}: Terry has taken out a 5~year loan for 8.3\% annual interest, compounded monthly. The bank requires him to make equal monthly payments on the first of the month. Terry's loan is an example of a simple annuity. \pspace
 
-\sol The statement is \textit{false}. Because the number of payments each year matches the number of compounds each year, this is a simple annuity. Because payments are due at the start of each pay period, this is an annuity due. Therefore, this is a simple annuity due. \pvspace{1.3cm}
+\sol The statement is \textit{false}. Because the number of payments each year matches the number of compounds each year, this is a simple annuity. Because payments are due at the start of each pay period, this is an annuity due. Therefore, this is a simple annuity due. \pvspace{1.5cm}
 
 
 
@@ -59,20 +59,164 @@ Then here we have $P= \$8000$, $r= 0.051$ (a 5.1\% annual interest rate), $k= 4$
 	&= 1632.14 (153.1728651 - 153.0440548) \\[0.3cm]
 	&= \$210.24
 	\end{aligned}
+	\] 
+
+
+
+\newpage
+
+
+
+% Quiz 7
+\quizsol \textit{True/False}: If $A$ and $B$ are disjoint events with $P(A)= \frac{1}{3}$ and $P(B)= \frac{4}{5}$, then $P(A \text{ and } B)= P(A) \cdot P(B)= \frac{1}{3} \cdot \frac{4}{5}= \frac{4}{15}$. \pspace
+
+\sol The statement is \textit{false}. Recall that $P(A \text{ and } B)= P(A) \cdot P(B)$ if and only if the events $A$ and $B$ are independent, i.e. the occurrence or non-occurrence one does not change the probability that the other occurs. Recall that disjoint events can \textit{never} be independent. Disjoint events cannot occur at the same time. Therefore, if one event occurs, the other does not. Hence, disjoint events cannot be independent. Because $A$ and $B$ cannot occur at the same time, it is clear that $P(A \text{ and } B)= 0$. \pvspace{1.3cm}
+
+
+
+% Quiz 8
+\quizsol \textit{True/False}: If $A$ and $B$ are independent events with $P(A)= 0.40$ and $P(B)= 0.50$, then $P(A \text{ or } B)= 0.70$. \pspace
+
+\sol The statement is \textit{true}. Recall that\dots
+	\[
+	P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)
 	\]
+We know $P(A \text{ and } B)= P(A) \cdot P(B)$ if and only if the events $A$ and $B$ are independent, i.e. the occurrence or non-occurrence one does not change the probability that the other occurs. Because $A$ and $B$ are independent, we know that $P(A \text{ and } B)= P(A) \cdot P(B)= 0.40 \cdot 0.50= 0.20$. But then we have\dots
+	\[
+	P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)= 0.40 + 0.50 - 0.20= 0.70
+	\] \pvspace{1.3cm}
 
 
-% 7
-% If $A$ and $B$ are disjoint events with $P(A)= \frac{1}{3}$ and $P(B)= \frac{4}{5}$, then $P(A \text{ and } B)= P(A) \cdot P(B)= \frac{1}{3} \cdot \frac{4}{5}= \frac{4}{15}$. 
+
+% Quiz 9
+\quizsol \textit{True/False}: Fernando is playing a carnival game. After paying \$2, you spin a giant wheel and if it lands in the green region, you win \$20. However, the rest of the wheel is red and if you land in this region, you must pay \$1. There is only a 10\% chance you land in the green region. Fernando claims that playing this game, in the `long-run average', you make money playing this game. \pspace
+
+\sol The statement is \textit{false}. Because the wheel consists only of a red and green region and the probability of spinning green is 10\%, there is a 90\% chance that one spins red. If you spin green, you win \$20 having paid \$2 for a net gain of \$18. If you spin red, you lose \$1 having paid \$2 for a net loss of \$3. We can create a table of the possibilities for a spin, the spin's probability, and the net gain/loss from the spin. 
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|l|c|c|} \hline
+	& Green & Red \\ \hline
+	Probability & 0.10 & 0.90 \\ \hline
+	Amount & \$18 & $-$\$3 \\ \hline
+	\end{tabular}
+	\end{table}
+We can then compute the expected value for this game:
+	\[
+	EX= \sum x P(X= x)= \$18(0.10) + (-\$3)(0.90)= -\$0.90
+	\]
+Therefore, in the `long run', one loses an average of \$0.90 per game. Because this expected value is negative, in the `long run', you lose money playing this game. 
 
 
-%If $A$ and $B$ are independent events with $P(A)= 0.40$ and $P(B)= 0.50$, then $P(A \text{ or } B)= 0.70$.
 
-%Fernando is playing a carnival game. After paying \$2, you spin a giant wheel and if it lands in the green region, you win \$20. However, the rest of the wheel is red and if you land in this region, you must pay \$1. There is only a 10\% chance you land in the green region. Fernando claims that playing this game, in the `long-run average', you make money playing this game. 
+\newpage
 
-%If you fit a linear regression to a set of data and $R^2= 1$ for the regression, then the data was perfectly linear. 
 
-%The larger the value of $|z_x|$ is in a normal distribution, the more `unusual' the value $x$ is.
+
+% Quiz 10
+\quizsol \textit{True/False}: If you fit a linear regression to a set of data and $R^2= 1$ for the regression, then the data was perfectly linear. \pspace
+
+\sol The statement is \textit{true}. The coefficient of determination, $R^2$, is 1 if and only if the data is perfectly linear. In terms of the (Pearson) correlation coefficient, the data is perfectly linear if and only if $R= 1$ or $R= -1$. If $R= 1$, the data is perfectly linear and positively correlated. If $R= -1$, the data is perfectly linear and negatively correlated. \pvspace{1.3cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: The larger the value of $|z_x|$ is in a normal distribution, the more `unusual' the value $x$. \pspace
+
+\sol The statement is \textit{true}. For a normal distribution, we know that $z_x$ is the number of standard deviations $x$ is above or below the mean. Therefore, $|z_x|$ is the number of standard deviations $x$ is from the mean. The farther that $x$ is from the mean in a normal distribution, the less probable that one `sees' a value farther than $x$ from the mean. But then $x$ is more `unusual' compared to the majority of other values in the distribution. \pvspace{1.3cm} 
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: For the distribution $N(100, 10)$, we know $P(X \leq 85)= P(X \geq 115)$. \pspace
+
+\sol The statement is \textit{true}. Observe that $85$ is 1.5 standard deviations (that is $15$) below from the mean of $100$. Observe that also $115$ is also 1.5 standard deviations (that is $15$) above the mean of $100$. Because the normal distribution is symmetric, the probability of being less than 1.5 standard deviations below the mean must be the same as the probability of being 1.5 standard deviations above the mean. Alternatively, we can compute this directly:
+	\[
+	\begin{aligned}
+	z_{85}&= \dfrac{85 - 100}{10}= \dfrac{-15}{10}= -1.5 \squiggle 0.0668
+	z_{115}&= \dfrac{115 - 100}{10}= \dfrac{15}{10}= 1.5 \squiggle 0.9332
+	\end{aligned}
+	\]
+But then we have $P(X \leq 85)= 0.0668$ and $P(X \geq 115)= 1 - P(X \leq 115)= 1 - 0.9332= 0.0668$. \pvspace{1.3cm}
+
+
+
+% Quiz 13
+\quizsol \textit{True/False}: For a fixed probability $p$, as the number of observations $n$ gets larger and larger, the distribution $B(n, p)$ `looks' more like a normal distribution. \pspace
+
+\sol The statement is \textit{true}. For any fixed probability $p$, the larger the value of $n$, the closer the binomial distribution `resembles' a normal distribution. This is precisely what allows one to approximate a binomial distribution with a normal distribution for sufficiently large $n$. Below we illustrate this by plotting the binomial distribution $B(n, 0.50)$ for $n= 10$, $20$, and $50$ (illustrated in blue, yellow, and green, respectively). 
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width= 0.22\textwidth]{binomial.png}
+	\end{figure}
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: The larger the sample sized used in creating a confidence interval, the smaller the size of that confidence interval. \pspace
+
+\sol The statement is \textit{true}. This is intuitively true via the following argumentation: the larger the sample, the more likely that sample is to `resemble' the entire population. Then the sample mean should be `close' to the underlying population mean so that ones uncertainty in this estimation should be low. This results in a smaller confidence interval. To see this concretely, recall that the length of a confidence interval is twice the margin of error. The margin of error is $z^* \, \frac{\sigma}{\sqrt{n}}$. The larger the value of $n$, the larger the value of $\sqrt{n}$. But this in turn makes $\frac{1}{\sqrt{n}}$ smaller so that $z^* \, \frac{\sigma}{\sqrt{n}}$, i.e. the margin of error, smaller. This results in a smaller confidence interval. \pvspace{1.3cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: The normal distribution is a continuous distribution. Because the binomial distribution is a discrete distribution, the normal distribution cannot be used to approximate binomial probabilities. \pspace
+
+\sol The statement is \textit{false}. For any fixed probability $p$, the larger the value of $n$, the closer the binomial distribution `resembles' a normal distribution. This is precisely what allows one to approximate a binomial distribution with a normal distribution for sufficiently large $n$. Below we illustrate this by plotting the binomial distribution $B(n, 0.50)$ for $n= 10$, $20$, and $50$ (illustrated in blue, yellow, and green, respectively). 
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[width= 0.22\textwidth]{binomial.png}
+	\end{figure}
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

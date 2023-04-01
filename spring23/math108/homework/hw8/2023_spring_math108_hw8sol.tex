@@ -70,16 +70,16 @@ But then we have\dots \par
 But then we have\dots
 	\[
 	\begin{aligned}
-	s_x^2&= \dfrac{1}{n - 1} \sum (x_i - \overline{x})^2= \dfrac{1}{3} \cdot 2.75= 0.916667 \Longrightarrow s_x= \sqrt{0.916667}= 0.957427 \\[0.3cm]
-	s_y^2&= \dfrac{1}{n - 1} \sum (y_i - \overline{y})^2= \dfrac{1}{3} \cdot 6= 2 \Longrightarrow s_y= \sqrt{2}= 1.41421 \\[0.3cm]
-	r&= \dfrac{1}{n - 1} \sum \left( \dfrac{x_i - \overline{x}}{s_x} \right) \left( \dfrac{y_i - \overline{y}}{s_y} \right)= \dfrac{1}{n - 1} \cdot \dfrac{1}{s_x} \cdot \dfrac{1}{s_y} \sum (x_i - \overline{x})(y_i - \overline{y})= \dfrac{1}{3} \cdot \dfrac{1}{0.957427} \cdot \dfrac{1}{1.41421} \cdot 3= 0.738551
+	\hspace{-0.3cm} s_x^2&= \dfrac{1}{n - 1} \sum (x_i - \overline{x})^2= \dfrac{1}{3} \cdot 2.75= 0.916667 \Longrightarrow s_x= \sqrt{0.916667}= 0.957427 \\[0.3cm]
+	\hspace{-0.3cm} s_y^2&= \dfrac{1}{n - 1} \sum (y_i - \overline{y})^2= \dfrac{1}{3} \cdot 6= 2 \Longrightarrow s_y= \sqrt{2}= 1.41421 \\[0.3cm]
+	\hspace{-0.3cm} r&= \dfrac{1}{n - 1} \sum \left( \dfrac{x_i - \overline{x}}{s_x} \right) \left( \dfrac{y_i - \overline{y}}{s_y} \right)= \dfrac{1}{n - 1} \cdot \dfrac{1}{s_x} \cdot \dfrac{1}{s_y} \sum (x_i - \overline{x})(y_i - \overline{y})= \dfrac{1}{3} \cdot \dfrac{1}{0.957427} \cdot \dfrac{1}{1.41421} \cdot 3= 0.738551
 	\end{aligned}
 	\]
 This allows us to compute the coefficients for our model:
 	\[
 	\begin{aligned}
 	b_1&= r \, \dfrac{s_y}{s_x}= 0.738551 \cdot \dfrac{1.41421}{0.957427}= 1.09091 \\[0.3cm]
-	b_0&= \overline{y} - b_1 \overline{x}= 3 - 0.796018 (1.75)= 1.09091
+	b_0&= \overline{y} - b_1 \overline{x}= 3 - 1.09091 (1.75)= 1.09091
 	\end{aligned}
 	\]
 Therefore, the least square regression line is\dots
@@ -141,12 +141,12 @@ But then we can compute the model coefficients:
 	\[
 	\begin{aligned}
 	b_1&= r \, \dfrac{\sigma_y}{\sigma_x}= 0.962639 \cdot \dfrac{32.4618}{3.26556}= 9.56926 \\[0.3cm]
-	b_0&= \overline{y} - b_1 \overline{x}= 46.5248 - 9.56926(10.6639)= -55.5208
+	b_0&= \overline{y} - b_1 \overline{x}= 46.5248 - 9.56926(4.42726)= 4.1592
 	\end{aligned}
 	\]
 Therefore, the least square regression line is\dots
 	\[
-	\widehat{y}= b_1x + b_0= 9.56926x - 55.5208
+	\widehat{y}= b_1x + b_0= 9.56926x + 4.1592
 	\]
 
 

@@ -1,0 +1,85 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{9: Due 03/08}{One of the first things taught in introductory statistics textbooks is that correlation is not causation. It is also one of the first things forgotten.}{Thomas Sowell}
+
+% Problem 1
+\problem{10} Anwesh is comparing costs of homes in different areas. In a particular suburb, the house prices are approximately normally distributed with mean \$430,000 and standard deviation \$50,000. While in a particular rural area, the house prices are normally distributed with mean \$250,000 and standard deviation \$17,000. In which area would a house that costs \$290,000 cost more than the average house? Explain. In which area would a house that costs \$290,000 be more `unusual'? Explain. \pspace
+
+\sol Because the mean house cost in the suburbs is \$430,000 and the mean house cost in the rural area is \$250,000, a house that costs \$290,000 would cost more than the average house cost in the rural area but not in the suburbs. Because the house prices in the suburb and the city are normally distributed, we can compare the `unusualness' of house cost by using the $z$-score. We compute the $z$-score for a house that costs \$290,000 in the suburbs and in the rural area:
+	\[
+	\begin{aligned}
+	z_{\text{Suburb}}&= \dfrac{x - \mu}{\sigma}= \dfrac{\$290000 - \$430000}{\$50000}= \dfrac{-\$140000}{\$50000}= -2.80 \\[0.3cm]
+	z_{\text{Rural}}&= \dfrac{x - \mu}{\sigma}= \dfrac{\$290000 - \$250000}{\$17000}= \dfrac{\$40000}{\$17000}= 2.35
+	\end{aligned}
+	\]
+Because $|z_{\text{Suburb}}|= |-2.80| = 2.80 > 2.35 = |2.35|= z_{\text{Rural}}$, a house price of \$290,000 would be more `unusual' in the suburb (clearly, for being far below the average house price) than in the rural area. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose you have the normal distribution $N(224, 46.9)$. Let $X$ be a value randomly drawn from this distribution. Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $P(X= 220)$
+	\item $P(X < 200)$
+	\item $P(X < 300)$
+	\item $P(X > 300)$
+	\item $P(200 < X < 300)$
+	\item The value $Y$ that `marks' the largest 8\% of values for this distribution. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because the normal distribution is a continuous distribution, the probability of being any \textit{exact} value is zero. But then we have\dots
+	\[
+	P(X= 220)= 0
+	\]
+
+\item We have\dots
+	\[
+	z_{200}= \dfrac{200 - 224}{46.9}= \dfrac{-24}{46.9}= -0.51 \squiggle 0.3050
+	\]
+But then we have $P(X < 200)= 0.3050$.
+
+\item We have\dots
+	\[
+	z_{300}= \dfrac{300 - 224}{46.9}= \dfrac{76}{46.9}= 1.62 \squiggle 0.9474
+	\]
+But then we have $P(X < 300)= 0.9474$.
+
+\item From (c), we know that $P(X < 300)= $. But because we have a normal distribution and using complements, we have\dots
+	\[
+	P(X > 300)= 1 - P(X < 300)= 1 - 0.9474= 0.0526
+	\]
+
+\item We have\dots
+	\[
+	P(200 < X < 300)= P(X < 300) - P(X < 200)= 0.9474 - 0.3050= 0.6424
+	\]
+
+\item If $Y$ is a value that `marks' the largest 8\% of values for this distribution, then 92\% of values in the distribution are less than $Y$; that is, $P(X \geq Y)= 0.08$, or equivalently, $P(X \leq Y)= 0.92$. But then the $z$-score for $Y$ must be such that $z_Y \squiggle 0.92$. The closest value of $z$ we can find on the standard normal chart is $z= 1.405$. Therefore, we have $z_Y= 1.405$. But then\dots
+	\[
+	\begin{gathered}
+	z_Y= 1.405 \\[0.3cm]
+	\dfrac{Y - 224}{46.9}= 1.405 \\[0.3cm]
+	Y - 224= 65.8945 \\[0.3cm]
+	Y= 289.8945
+	\end{gathered}
+	\]
+\end{enumerate}
+
+
+\end{document}

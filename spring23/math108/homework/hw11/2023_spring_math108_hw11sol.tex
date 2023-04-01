@@ -1,0 +1,127 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{11: Due 03/31}{There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you.}{Charles Warner}
+
+% Problem 1
+\problem{10} A group of entomologists have discovered a new type of beetle and are trying to determine their average size. They assume that the beetle's size will vary like other beetles genetically similar, where the standard deviation in their length is 0.07~cm. They take a random sample of 50~beetles and find an average length of 1.9~cm. Find a 95\% confidence interval for the size of this beetle. \pspace
+
+\sol First, observe that we do not know that the distribution of beetle sizes is normally distributed. However, we have a sample size of $n= 50 \geq 30$. Therefore, we can apply the Central Limit Theorem. We have a sample average of $\overline{x}= 1.9 \text{ cm}$ and we assume $\sigma= 0.07 \text{ cm}$ for beetle size. For a 95\% confidence interval, 5\% of values are not inside this interval, leaving $95\% + \frac{5\%}{2}= 95\% + 2.5\%= 97.5\%$ of values `to the left' of the interval's largest value. The $z^*$ value corresponding to this percentage is $z^* \approx 1.96$. But then the margin of error (m.o.e.) is\dots
+	\[
+	\text{m.o.e.}= z^* \,\dfrac{\sigma}{\sqrt{n}}= 1.96 \cdot \dfrac{0.07 \text{ cm}}{\sqrt{50}}= 0.019 \text{ cm}
+	\]
+But then we have\dots
+	\[
+	\begin{aligned}
+	\overline{x} - \text{m.o.e.}&= 1.9 \text{ cm} - 0.019 \text{ cm}= 1.881 \text{ cm} \\[0.3cm]
+	\overline{x} + \text{m.o.e.}&= 1.9 \text{ cm} + 0.019 \text{ cm}= 1.919 \text{ cm}
+	\end{aligned}
+	\] \pspace
+Therefore, given this data, a 95\% confidence interval for the size of these beetles is\dots
+	\[
+	(1.881 \text{ cm}, 1.919 \text{ cm})
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose that you have a normal distribution $N(556, 62.8)$. Let $X$ denote a random sample from this distribution and let $\overline{X}$ denote the average value of a simple random sample of size 27. Compute the following:
+	\begin{enumerate}[(a)]
+	\item $P(X < 540)$
+	\item $P(X > 540)$
+	\item $P(\overline{X} < 540)$
+	\item $P(\overline{X} > 540)$
+	\end{enumerate} \pspace
+
+\sol Note that to find probabilities involving a random sample, $X$, from the distribution, we need only use the original distribution. However, to find probabilities involving a sample mean of a simple random sample, $\overline{X}$, we need the sampling distribution, i.e. make use of the Central Limit Theorem. A sample size of $n= 27 \leq 30$ is not sufficiently large to apply the Central Limit Theorem. However, the underlying distribution being sampled from is normally distributed. Therefore, the Central Limit Theorem applies. Observe that the sampling distribution is given by\dots
+	\[
+	N\left( \mu, \dfrac{\sigma}{\sqrt{n}} \right)= N\left( 556, \dfrac{62.8}{27} \right)= N\left( 556, \dfrac{62.8}{5.19615} \right)= N\left( 556, 12.0859 \right)
+	\] \pspace
+
+\begin{enumerate}[(a)]
+\item Using the underlying distribution, we have\dots
+	\[
+	z_{540}= \dfrac{x - \mu}{\sigma}= \dfrac{540 - 556}{62.8}= \dfrac{-16}{62.8}= -0.25 \squiggle 0.4013
+	\]
+Therefore, we have $P(X < 540)= 0.4013$. \pspace
+
+\item Using (a), we have\dots
+	\[
+	P(X > 540)= 1 - P(X < 540)= 1 - 0.4013= 0.5987
+	\] \pspace
+
+\item Using the sampling distribution for a sample of size 27, we have\dots
+	\[
+	z_{540}= \dfrac{x - \mu}{\sigma}= \dfrac{540 - 556}{12.0859}= \dfrac{-16}{12.0859}= -1.32 \squiggle 0.0934
+	\]
+Therefore, we have $P(\overline{X} < 540)= 0.0934$. \pspace
+
+\item Using (c), we have\dots
+	\[
+	P(\overline{X} > 540)= 1 - P(\overline{X} < 540)= 1 - 0.0934= 0.9066
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose that a certain drug is advertised as being 90\% effective at treating the symptoms of a certain chronic illness. To determine the validity of this claim, you perform a study on 150~people and count the number of people for which this drug is effective at alleviating their symptoms. Compute the following:
+	\begin{enumerate}[(a)]
+	\item The probability that the drug is effective for less than 130 of the test subjects.
+	\item The probability that the drug is effective for more than 140 of the test subjects.
+	\item The probability that the drug is effective for between 130 and 140 of the test subjects.
+	\item The probability that the drug is effective for less than 120 of the test subjects. 
+	\end{enumerate} \pspace
+
+\sol Observe that $np= 150(0.90)= 135 \geq 10$ and $n(1 - p)= 150(1 - 0.90)= 150(0.10)= 15 \geq 10$. Therefore, we can use the normal approximation to this binomial distribution. The mean and standard deviation of this normal approximation (for counts) are\dots
+	\[
+	\begin{aligned}
+	\mu&= np= 150(0.90)= 135 \\[0.3cm]
+	\sigma&= \sqrt{np(1 - p)}= \sqrt{150 \cdot 0.90 \cdot (1 - 0.90)}= \sqrt{13.5}= 3.67423
+	\end{aligned}
+	\] \pspace
+
+\begin{enumerate}[(a)]
+\item Using the normal approximation, we have\dots
+	\[
+	z_{130}= \dfrac{x - \mu}{\sigma}= \dfrac{130 - 135}{3.67423}= \dfrac{-5}{3.67423}= -1.36 \squiggle 0.0869
+	\]
+Therefore, $P(X < 130) \approx 0.0869$. \pspace
+
+\item Using the normal approximation, we have\dots
+	\[
+	z_{140}= \dfrac{x - \mu}{\sigma}= \dfrac{140 - 135}{3.67423}= \dfrac{5}{3.67423}= 1.36 \squiggle 0.9131
+	\]
+Therefore, we have $P(X > 140) \approx 1 - P(X < 140) \approx 1 - 0.9131= 0.0869$. \pspace
+
+\item Using (a) and (b), we have\dots
+	\[
+	P(130 < X < 140) \approx P(X < 140) - P(X < 130) \approx 0.9131 - 0.0869= 0.8262
+	\] \pspace
+
+\item Using the normal approximation, we have\dots
+	\[
+	z_{120}= \dfrac{x - \mu}{\sigma}= \dfrac{120 - 135}{3.67423}= \dfrac{-15}{3.67423}= -4.08 \squiggle \approx 0
+	\]
+Therefore, we have $P(X < 120) \approx 0$. 
+\end{enumerate}
+
+
+\end{document}

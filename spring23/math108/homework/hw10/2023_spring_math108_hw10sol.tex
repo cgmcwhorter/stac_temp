@@ -1,0 +1,163 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{10: Due 03/31}{We hang the petty thieves and appoint the great ones to public office.}{Aesop}
+
+% Problem 1
+\problem{10} Suppose you have a binomial distribution $B(11, 0.30)$. 
+	\begin{enumerate}[(a)]
+	\item Find the mean for this distribution. 
+	\item Find the standard deviation for this distribution. 
+	\item Find $P(X \geq 1)$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The mean for this binomial distribution is\dots
+	\[
+	\mu= np= 11(0.30)= 3.3
+	\] \pspace
+
+\item The standard deviation for this distribution is\dots
+	\[
+	\sigma= \sqrt{np(1 - p)}= \sqrt{11 \cdot 0.30 \cdot (1 - 0.30)}= \sqrt{2.31}= 1.51987
+	\] \pspace
+
+\item We have\dots
+	\[
+	P(X \geq 1)= 1 - P(X= 0)= 1 - 0.0198= 0.9802
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} A recent study has shown that 33\% of Americans are struggling to meet their mortgage payments. To test the findings of this study, you take a random survey of 80 Americans with mortgages and determine how many of them are struggling to make their mortgage payments. Let $X$ denote the number of Americans in this survey that struggle meeting their mortgage and assume that the recent study has correct findings. Compute the following:
+	\begin{enumerate}[(a)]
+	\item The probability that at most 20 of them struggle making mortgage payments. 
+	\item The probability that at least 20 of them struggle making mortgage payments. 
+	\item The probability that at least 30 of them struggle making mortgage payments. 
+	\item The probability that between 20 and 30 of them struggle making mortgage payments. 
+	\end{enumerate} \pspace
+
+\sol Observe that $np= 80(0.33)= 26.4 \geq 10$ and $n(1 - p)= 80(1 - 0.33)= 80(0.67)= 53.6 \geq 10$. Therefore, we can use the normal approximation to this binomial distribution. The mean and standard deviation of this normal approximation (for counts) are\dots
+	\[
+	\begin{aligned}
+	\mu&= np= 80(0.33)= 26.4 \\[0.3cm]
+	\sigma&= \sqrt{np(1 - p)}= \sqrt{80 \cdot (0.33) \cdot (1 - 0.33)}= \sqrt{17.688}= 4.20571
+	\end{aligned}
+	\] \pspace
+
+\begin{enumerate}[(a)]
+\item Using the normal approximation, we have\dots
+	\[
+	z_{20}= \dfrac{x - \mu}{\sigma}= \dfrac{20 - 26.4}{4.20571}= \dfrac{-6.4}{4.20571}= -1.52 \squiggle 0.0643
+	\]
+Therefore, we have $P(X \leq 20) \approx 0.0643$. \pspace
+
+\item Using the normal approximation and (a), we have\dots
+	\[
+	P(X \geq 20) \approx 1 - P(X \leq 20) \approx 1 - 0.0643= 0.9357
+	\] \pspace
+
+\item Using the normal approximation, we have\dots
+	\[
+	z_{30}= \dfrac{x - \mu}{\sigma}= \dfrac{30 - 26.4}{4.20571}= \dfrac{3.6}{4.20571}= 0.86 \squiggle 0.8051
+	\]
+But then $P(X \leq 30) \approx 0.8051$. Therefore, we have $P(X \geq 30) \approx 1 - P(X \leq 30) \approx 1 - 0.8051= 0.1949$. \pspace
+
+\item Using (a) and (c), we have\dots
+	\[
+	P(20 \leq X \leq 30) \approx P(X \leq 30) - P(X \leq 20) \approx 0.8051 - 0.0643= 0.7408
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} In investigating political discourse in the nation, a research group does a study of people's satisfaction with political discourse. They are interested in determining the percentage of people that believe political discourse is becoming less productive. The survey they conduct estimates that 67\% of people (from a sample of 850 people) believe that political discourse is no longer productive. Assuming that this is a good estimate of the actual percentage, determine the following:
+	\begin{enumerate}[(a)]
+	\item The probability that at most 65\% of them believe political discourse is no longer productive. 
+	\item The probability that at most 70\% of them believe political discourse is no longer productive. 
+	\item The probability that between 65\% and 70\% of them believe political discourse is no longer productive. 
+	\end{enumerate} \pspace
+
+\sol Observe that $np= 850(0.67)= 569.5 \geq 10$ and $n(1 - p)= 850(1 - 0.67)= 850(0.33)= 280.5 \geq 10$. Therefore, we can use the normal approximation to this binomial distribution. The mean and standard deviation of this normal approximation (for percentages) are\dots
+	\[
+	\begin{aligned}
+	\mu&= p= 0.67 \\[0.3cm]
+	\sigma&= \sqrt{\dfrac{p(1 - p)}{n}}= \sqrt{\dfrac{0.67( 1 - 0.67)}{850}}= \sqrt{0.000260118}= 0.0161282
+	\end{aligned}
+	\] \pspace
+
+\begin{enumerate}[(a)]
+\item Using the normal approximation, we have\dots
+	\[
+	z_{0.65}= \dfrac{x - \mu}{\sigma}= \dfrac{0.65 - 0.67}{0.0161282}= \dfrac{-0.02}{0.0161282}= -1.24 \squiggle 0.8925
+	\]
+Therefore, we have $P(\widehat{p} \leq 0.65) \approx 0.8925$. \pspace
+
+\item Using the normal approximation, we have\dots
+	\[
+	z_{0.70}= \dfrac{x - \mu}{\sigma}= \dfrac{0.70 - 0.67}{0.0161282}= \dfrac{0.03}{0.0161282}= 1.86 \squiggle 0.9686
+	\] 
+Therefore, we have $P(\widehat{p} \leq 0.70) \approx 0.9686$. \pspace
+
+\item Using (a) and (b), we have\dots
+	\[
+	P(0.65 \leq \widehat{p} \leq 0.70) \approx P(\widehat{p} \leq 0.70) - P(\widehat{p} \leq 0.65) \approx 0.9686 - 0.8925= 0.0761
+	\]
+\end{enumerate}
+
+
+
+\newcounter{mypagecount}
+\setcounter{mypagecount}{\value{page}}
+\clearpage
+  
+\newpage
+
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{\value{mypagecount}}
+ 
+{\itshape
+Note: One could do Problem~3 as follows: we first verify that one can use the normal approximation. Observe that $np= 850(0.67)= 569.5 \geq 10$ and $n(1 - p)= 850(1 - 0.67)= 850(0.33)= 280.5 \geq 10$. Therefore, we can use the normal approximation to this binomial distribution. The mean and standard deviation of this normal approximation (for counts) are\dots
+	\[
+	\begin{aligned}
+	\mu&= np= 850(0.67)= 569.5 \\[0.3cm]
+	\sigma&= \sqrt{np(1 - p)}= \sqrt{850 \cdot 0.67 \cdot 0.33}= \sqrt{187.835}= 13.7089
+	\end{aligned}
+	\] \pspace
+One then can convert the percentages in each part to counts: we know 65\% of 850 is 
+$850(0.65)= 552.5$ and 70\% of 850 is $850(0.70)= 595$. But then for the first part, using the normal approximation, we have\dots
+	\[
+	z_{552.5}= \dfrac{x - \mu}{\sigma}= \dfrac{552.5 - 569.5}{13.7089}= \dfrac{-17}{13.7089}= -1.24 \squiggle 0.8925
+	\]
+Therefore, we have $P(X \leq 552.5) \approx 0.8925$. For the second part, using the normal approximation, we have\dots
+	\[
+	z_{595}= \dfrac{x - \mu}{\sigma}= \dfrac{595 - 569.5}{13.7089}= \dfrac{25.5}{13.7089}= 1.86 \squiggle 0.9686
+	\]
+Therefore, we have $P(X \leq 595) \approx 0.9686$. Finally, for the last part, we use these previous two calculations to find\dots
+	\[
+	P(552.5 \leq X \leq 595) \approx P(X \leq 595) - P(X \leq 552.5) \approx 0.9686 - 0.8925= 0.0761
+	\]
+}
+\end{document}
