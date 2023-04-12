@@ -180,11 +180,57 @@ where for the last equality we have used the fact that $\sin^2(\theta) + \cos^2(
 
 
 
+% Quiz 14
+\quizsol \textit{True/False}: The function $f(x)= \cos x$ has a well-defined `global' inverse. \pspace
+
+\sol The statement is \textit{false}. This is immediately false because $\cos(0)= 1$ and $\cos(2\pi)= 1$ so that $\cos^{-1}(1)$ is not well defined. Alternatively, observe that the graph of $f(x)= \cos x$ fails the horizontal line test so that it cannot have a global inverse. \par
+
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=0.8,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -2.1*pi, xmax=2.1*pi,
+	ymin= -1.2, ymax=1.2,
+	xtick={-8,...,8},
+	ytick={-1.2,-1,...,1.2},
+	minor x tick num = 1,
+	minor y tick num = 1,
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\addplot[line width=0.03cm,domain= -2*pi:2*pi,samples=50,smooth] {cos(deg(x))};
+	
+	\draw[fill=black] (1,3) circle (0.1);
+	\draw[fill=black] (3,5) circle (0.1);
+	\draw[fill=black] (1,2) circle (0.1);
+	\draw[fill=black] (2,2) circle (0.1);
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\] \par
+Therefore, $f(x)= \cos x$ can only have an inverse on a restricted domain. In fact, the entirety of the range of $f(x)= \cos x$ is seen on the interval $[0, \pi]$ and $f(x)= \cos x$ is one-to-one on this interval. Therefore, $\cos^{-1}(x)$ is well defined on this interval. 
 
 
 
+\newpage
 
 
+
+% Quiz 15
+\quizsol \textit{True/False}: To solve the equation $\sqrt{2} (\sqrt{2} \cos x - 1)= 0$, we divide by $\sqrt{2}$, add 1, then divide by $\sqrt{2}$ to obtain $\cos x= \frac{1}{\sqrt{2}}$. Because the period of $\cos x$ is $2\pi$, we find the solutions in $[0, 2\pi]$, which are $x= \frac{\pi}{4}$ and $x= \frac{7\pi}{4}$. But then because the period of $\cos x$ is $2\pi$, the solutions are $x= \frac{\pi}{4} \pm 2k\pi$ and $x= \frac{7\pi}{4} \pm 2k \pi$. \pspace
+
+\sol The statement is \textit{true}. We can simply solve this equation:
+	\[
+	\begin{gathered}
+	\sqrt{2} (\sqrt{2} \cos x - 1)= 0 \\[0.3cm]
+	\sqrt{2} \cos x - 1= 0 \\[0.3cm]
+	\sqrt{2} \cos x= 1 \\[0.3cm]
+	\cos x= \dfrac{1}{\sqrt{2}}
+	\end{gathered}
+	\]
+We know that $\cos\left( \frac{\pi}{4} \right)= \frac{1}{\sqrt{2}}$ and $\cos\left( \frac{7\pi}{4} \right)= \frac{1}{\sqrt{2}}$. But because the period of $\cos x$ is $2\pi$, we know the solutions are $\frac{\pi}{4} \pm 2k\pi$ and $\frac{7\pi}{4} \pm 2k\pi$, where $k$ is an integer. 
 
 
 

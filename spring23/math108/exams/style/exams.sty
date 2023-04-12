@@ -14,6 +14,7 @@
 	graphicx,			% Include Images
 	mathtools,			% Matrix Lines
 	multicol,			% Use Multi-columns
+	subcaption,		% Use Subfigures/captions
 	tabularx,			% Special Tabular Environment
 	tikz,				% Create Tikz Diagrams
 	tkz-euclide		% Automate Graph Plots
@@ -34,6 +35,10 @@
 \usepackage{tikz-3dplot}
 \usetikzlibrary{calc,intersections}%,matrix,arrows,shapes.geometric,positioning,decorations.pathmorphing,patterns}
 \usepgfplotslibrary{fillbetween}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
 
 
 % -------------------
