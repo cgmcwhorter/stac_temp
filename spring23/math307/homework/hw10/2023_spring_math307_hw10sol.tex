@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -54,7 +54,17 @@
 	\node at (6.8,0.8) {$4x$};
 	\node at (7.5,0.2) {$x$};
 	\end{tikzpicture}
-	\]
+	\] \pspace
+
+\sol The above figure is a convex polygon. But the sum of the angles in any convex polygon with $n$-sides is $(n - 2) 180^\circ$. But then the sum of the angles in the above polygon is $(6 - 2) 180^\circ= 4 \cdot 180^\circ= 720^\circ$. But we know that the sum of the interior angles of the above polygon is $x + 2x + 5x + 5x + 4x + x$. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	x + 2x + 5x + 5x + 4x + x&= 720^\circ \\[0.3cm]
+	18x&= 720^\circ \\[0.3cm]
+	\dfrac{18x}{18}&= \dfrac{720^\circ}{18} \\[0.3cm]
+	x&= 40^\circ
+	\end{aligned}
+	\] 
 
 
 
@@ -66,8 +76,10 @@
 \problem{10} A simple closed curve is plotted below. Determine whether the red point is located on the interior or the exterior of the curve. Be sure to justify your answer.
 	\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{peanocurve.png}
-	\end{figure}
+	\includegraphics[width=0.5\textwidth]{peanocurvesol.png}
+	\end{figure} \pspace
+
+\sol We can draw a ray from the point in any direction. If the number of times the ray intersects the curve is odd, the point is in the interior. If the number of times the ray intersects the curve is even, the point is in the exterior. Drawing the ray shown above, the ray intersects only once. Therefore, the point is in the interior of the curve. 
 
 
 \end{document}
