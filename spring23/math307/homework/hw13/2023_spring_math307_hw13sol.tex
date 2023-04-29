@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -36,7 +36,17 @@ Find the following:
 	\item $|\overline{DE}|$
 	\item $\angle DFE$
 	\item $|\overline{EF}|$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item $\angle FED= 150^\circ$
+\item $|\overline{FD}|= 14$
+\item $\angle EDF= 23^\circ$
+\item $|\overline{DE}|= 9$
+\item $\angle DFE= 13^\circ$
+\item $|\overline{EF}|= 7$
+\end{enumerate}
 
 
 
@@ -45,7 +55,11 @@ Find the following:
 
 
 % Problem 2
-\problem{10} Does there exist a triangle with sides 5, 6, 12? If not, explain why. If so, construct. Do the same for a triangle with sides 5, 12, 13. 
+\problem{10} Does there exist a triangle with sides 5, 6, 12? If not, explain why. If so, construct. Do the same for a triangle with sides 5, 12, 13. \pspace
+
+\sol The sides of a triangle must obey the triangle inequality, i.e. for any sides $a$, $b$, $c$, of a triangle, we must have $a + b > c$. Furthermore, if given three positive numbers $a$, $b$, $c$, if any two of $a$, $b$, $c$ have sum greater than the other, then there exists a triangle with side lengths $a$, $b$, and $c$. \pspace
+
+There does not exist a triangle with sides 5, 6, and 12 because $5 + 6= 11 < 12$, which would violate the triangle inequality. However, because $5 + 12= 17 > 13$, $5 + 13= 18 > 12$, and $12 + 13= 25 > 5$. 
 
 
 
@@ -60,7 +74,9 @@ Find the following:
 	\item They draw another circle centered at $B$ with radius equal to the length of the line segment. 
 	\item They find the two intersection points of the circles from the previous two steps and connect them.
 	\end{itemize}
-The student then claims that the final line segment drawn is the perpendicular bisector of the line segment $\overline{AB}$. Is the student correct? If so, prove that this is the perpendicular bisector. If not, explain what they have done incorrectly. 
+The student then claims that the final line segment drawn is the perpendicular bisector of the line segment $\overline{AB}$. Is the student correct? If so, prove that this is the perpendicular bisector. If not, explain what they have done incorrectly. \pspace
+
+\sol Indeed, this construction yields the perpendicular bisector of the segment. One can easily verify that all `adjacent' triangles are congruent so that the segment splits the segment into two congruent parts and does so perpendicularly. 
 
 
 \end{document}

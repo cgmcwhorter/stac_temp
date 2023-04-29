@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -25,6 +25,16 @@
 	\node at (0.7,2.8) {$d$};
 	\node at (2.5,1.5) {$7$};
 	\end{tikzpicture}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	\dfrac{d + 7}{12}= \dfrac{7}{5} \\[0.3cm]
+	5d + 35= 84 \\[0.3cm]
+	5d= 49 \\[0.3cm]
+	d= \dfrac{49}{5} \approx 9.8
+	\end{gathered}
 	\]
 
 
@@ -53,7 +63,9 @@
 	\node at (0.6,0.2) {$4$};
 	\draw[line width=0.03cm] (-2,-2) -- (0,0) -- (4/3,0) -- (-2,-2);
 	\end{tikzpicture}
-	\]
+	\] \pspace
+
+\sol Because $\Delta ABC \sim \Delta DEF$, there is a $k$ such that if $S$ is the length of a side of $\Delta ABC$, then $s= kS$ is the length of a side of the corresponding side of $\Delta DEF$. But then we know that $8k= 4$, so that $k= \frac{4}{8}= \frac{1}{2}$. But then we know that $|\overline{ED}|= 20 \cdot \frac{1}{2}= 10$ and $|\overline{AC}|= 26 \cdot \frac{1}{2}= 13$. 
 
 
 
@@ -83,6 +95,23 @@
 \item Explain why $\Delta ADB \sim \Delta ABC$ and $\Delta BDC \sim \Delta ABC$. 
 \item Does (a) imply that $\Delta ADB \sim \Delta BDC$? Explain. 
 \item Find $h$. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Notice that $\Delta ADB$ and $\Delta ABC$ share $\angle BAD$ and both are right triangles. Therefore, they share two angles so that they are similar. Similarly, both $\Delta BDC$ and $\Delta ABC$ share $\angle DCB$ and are right triangles. Therefore, they share two angles so that they are similar. 
+
+\item If two triangles are similar to some triangle, they are similar to each other. Therefore, $\Delta ADB \sim \Delta BDC$. \pspace
+
+\item We have\dots
+	\[
+	\begin{gathered}
+	\dfrac{h}{4}= \dfrac{25}{h} \\[0.3cm]
+	h^2= 100 \\[0.3cm]
+	h= \sqrt{100} \\[0.3cm]
+	h= 10 
+	\end{gathered}
+	\]
 \end{enumerate}
 
 
