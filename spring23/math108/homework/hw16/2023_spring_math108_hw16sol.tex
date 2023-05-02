@@ -1,0 +1,74 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{16: Due 05/01}{Everyday life is like programming, I guess. If you love something, you can put beauty into it.}{Donald Knuth}
+
+% Problem 1
+\problem{10} Write down the initial simplex tableau for the following optimization problem:
+	\[
+	\begin{gathered}
+	\max z= 3.1x_1 - 4.7x_2 + 5.9x_3 \\
+	1.1x_1 - 5.7x_2 + 4.0x_3 \leq 10.4 \\
+	6.7x_1 - 0.8x_2 - 8.8x_3 \geq -8.8 \\
+	-9.1x_1 + 7.3x_2 - 9.1x_3 \leq 11.7 \\
+	x_1, x_2, x_3 \geq 0
+	\end{gathered}
+	\] 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose that the final simplex tableau associated to a maximization problem was the following: \par
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{rrrrrrrrr}
+	$1$ & $1.77$ & $0$ & $0$ & $0.74$ & $0$ & $0.26$ & $0.29$ & $208.57$ \\
+	$0$ & $0.57$ & $0$ & $1$ & $0.14$ & $0$ & $-0.14$ & $0.29$ & $28.57$ \\
+	$0$ & $2.51$ & $0$ & $0$ & $0.83$ & $1$ & $1.17$ & $-0.14$ & $605.71$ \\
+	$0$ & $0.09$ & $1$ & $0$ & $-0.03$ & $0$ & $0.03$ & $0.14$ & $34.29$ \\
+	$0$ & $3$ & $0$& $0$& $2$ & $0$ & $0$ & $2$ & $600$
+	\end{tabular}
+	\end{table} \par
+
+
+
+\begin{enumerate}[(a)]
+\item How many inequalities were considered?
+\item How many variables were there in the original inequalities?
+\item How many slack/surplus variables were introduced?
+\item What was the solution to this maximization problem?
+\end{enumerate} 
+
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Find the dual problem to the minimization problem below. 
+	\[
+	\begin{gathered}
+	\text{min } z= 2x_1 + 6x_2 \\
+	6x_1 + 5x_2 \leq 10 \\
+	x_1 + 3x_2 \leq 9 \\ 
+	x_1, x_2 \geq 0
+	\end{gathered}
+	\]
+
+
+\end{document}

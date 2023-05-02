@@ -1,0 +1,76 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{12: Due 03/31}{Taking on a challenge is a lot like riding a horse, isn't it? If you're comfortable while you're doing it, you're probably doing it wrong.}{Ted Lasso, Ted Lasso}
+
+% Problem 1
+\problem{10} Determine whether $(x_1, x_2)= (-1, 2)$ is a solution to the following system of equations:
+	\[
+	\begin{aligned}
+	4x_1 - 5x_2&= -14 \\[0.3cm]
+	3x_1 + 7x_2&= 17
+	\end{aligned}
+	\] \pspace
+
+\sol We test whether $(x_1, x_2)= (-1, 2)$ satisfies \textit{both} equations, i.e. whether $x_1= -1$ and $x_2= 2$ satisfy both equations. 
+	\[
+	\begin{aligned}
+	4x_1 - 5x_2&= -14 &\qquad\qquad 3x_1 + 7x_2&= 17 \\[0.3cm]
+	4(-1) - 5(2)&\stackrel{?}{=} -14 & 3(-1) + 7(2)&\stackrel{?}{=} 17 \\[0.3cm]
+	-4 - 10&\stackrel{?}{=} -14 & -3 + 14&\stackrel{?}{=} 17 \\[0.3cm]
+	-14&= -14 & 11&\neq 17 \\[0.3cm]
+	&\,\text{\cmark} & &\,\text{\xmark}
+	\end{aligned}
+	\]
+Because $(x_1, x_2)= (-1, 2)$ does not satisfy \textit{both} equations, it is not a solution to the system of equations. Note that if one directly solves for $x_1$, $x_2$, we find that the solution is $(x_1, x_2)= \left( \frac{17}{10}, \frac{104}{25} \right) \approx (1.7, 4.16)$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Show that $(x_1, x_2)= (3, 1)$ is a solution to the following system of equations:
+	\[
+	\begin{aligned}
+	x_1 + 6x_2&= 9 \\[0.3cm]
+	-5x_1 + 4x_2&= -11
+	\end{aligned}
+	\]
+Also, writing this system of equations as $A\mathbf{x}= \mathbf{b}$, determine $A$, $\mathbf{b}$, and the solution vector to this system. \pspace
+
+\sol To show that $(x_1, x_2)= (3, 1)$ is a solution to the system of equations, we show that $(x_1, x_2)= (3, 1)$ satisfy the equations, i.e. that $x_1= 3$ and $x_2= 1$ satisfy the system of equations. 
+	\[
+	\begin{aligned}
+	x_1 + 6x_2&= 9 &\qquad\qquad -5x_1 + 4x_2&= -11 \\[0.3cm]
+	3 + 6(1)&\stackrel{?}{=} 9 & -5(3) + 4(1)&\stackrel{?}{=} -11 \\[0.3cm]
+	3 + 6&\stackrel{?}{=} 9 & -15 + 4&\stackrel{?}{=} -11 \\[0.3cm]
+	9&= 9 & -11&= -11 \\[0.3cm]
+	&\,\text{\cmark} & &\,\text{\cmark}
+	\end{aligned}
+	\]
+Because $(x_1, x_2)= (3, 1)$ satisfies \textit{both} equations, it is a solution to the system of equations. \pspace
+
+Recall that that when written in vector form, i.e. $A\mathbf{x}= \mathbf{b}$, the matrix $A$ is the coefficient matrix (written column-by-column in the same order as the variable vector), $\mathbf{x}$ is the variable vector, and $\mathbf{b}$ is the constant vector. Because the variables in the equations are already properly aligned, we have\dots
+	\[
+	A= \begin{pmatrix} 1 & 6 \\ -5 & 4 \end{pmatrix} \qquad\qquad
+	\mathbf{x}= \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \qquad\qquad
+	\mathbf{b}= \begin{pmatrix} 9 \\ -11 \end{pmatrix}
+	\]
+Therefore, we can write the system of equations as\dots
+	\[
+	\begin{pmatrix} 1 & 6 \\ -5 & 4 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= \begin{pmatrix} 9 \\ -11 \end{pmatrix}
+	\]
+
+
+\end{document}
