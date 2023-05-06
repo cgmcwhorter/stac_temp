@@ -1,0 +1,408 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 104: Exam 3}
+\newcommand{\term}{Spring -- 2023}
+\newcommand{\examdate}{05/04/2023}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work.} 
+\scores
+%\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+
+% Question 1
+\newpage
+\question[10] Find the average rate of the function $f(x)= \dfrac{x + 1}{x - 3}$ on the interval $[-1, 4]$. \pspace
+
+\sol First, observe that\dots
+	\[
+	\begin{aligned}
+	f(-1)&= \dfrac{-1 + 1}{-1 - 3}= \dfrac{0}{-4}= 0 \\[0.3cm]
+	f(4)&= \dfrac{4 + 1}{4 - 3}= \dfrac{5}{1}= 5
+	\end{aligned}
+	\]
+The average value is simply the slope of the secant line through $\left(-1, f(-1) \right)$ and $\left(4, f(4) \right)$. But then the average value is\dots
+	\[
+	\text{Avg}_{[-1,4]} f(x)= m= \dfrac{\Delta y}{\Delta x}= \dfrac{f(4) - f(-1)}{4 - (-1)}= \dfrac{5 - 0}{4 + 1}= \dfrac{5}{5}= 1
+	\]
+
+
+
+% Question 2
+\newpage
+\question[10] Find the average rate of change of the function $f(x)= x^2 + x - 3$ on the interval $[a, a + h]$. \pspace
+
+\sol First, observe that\dots
+	\[
+	\begin{aligned}
+	f(a)&= a^2 + a - 3 \\[0.3cm]
+	f(a + h)&= (a + h)^2 + a - 3= (a^2 + 2ha + h^2) + (a + h) - 3= a^2 + 2ha + h^2 + a + h - 3
+	\end{aligned}
+	\]
+The average value is simply the slope of the secant line through $\left(a, f(a) \right)$ and $\left(a + h, f(a + h) \right)$. But then the average value is\dots
+	\[
+	\begin{aligned}
+	\text{Avg}_{[a, a+h]} f(x)= m= \dfrac{\Delta y}{\Delta x}&= \dfrac{f(a + h) - f(a)}{(a + h) - a} \\[0.3cm]
+	&= \dfrac{(a^2 + 2ha + h^2 + a + h - 3) - (a^2 + a - 3)}{(a + h) - a} \\[0.3cm]
+	&= \dfrac{a^2 + 2ha + h^2 + a + h - 3 - a^2 - a + 3}{a + h - a} \\[0.3cm]
+	&= \dfrac{\cancel{a^2} + 2ha + h^2 + \cancel{a} + h - \cancel{3} - \cancel{a^2} - \cancel{a} + \cancel{3}}{\cancel{a} + h - \cancel{a}} \\[0.3cm]
+	&= \dfrac{2ha + h^2 + h}{h} \\[0.3cm]
+	&= \dfrac{2\cancel{h}a + h^{\cancel{2}^1} + \cancel{h}}{\cancel{h}} \\[0.3cm]
+	&= 2a + h + 1
+	\end{aligned}
+	\]
+
+
+
+% Question 3
+\newpage
+\question[10] Factor the polynomial $x^3 + 3x^2 - 28x$ as completely as possible. \pspace
+
+\sol First, observe\dots
+	\[
+	x^3 + 3x^2 - 28x= x(x^2 + 3x - 28)
+	\]
+But then\dots \par
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 28} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot -28$ & $-27$ \\
+	$-1 \cdot 28$ & $27$ \\
+	$2 \cdot -14$ & $-12$ \\
+	$-2 \cdot 14$ & $12$ \\
+	$4 \cdot -7$ & $-3$ \\ \hline
+	\multicolumn{1}{|r}{$-4 \cdot 7$} & \multicolumn{1}{r|}{$3$} \\ \hline
+	\end{tabular}
+	\end{table}
+Then we have\dots
+	\[
+	x^3 + 3x^2 - 28x= x(x^2 + 3x - 28)= x(x - 4)(x + 7)
+	\]
+
+
+
+% Question 4
+\newpage
+\question[10] Factor the polynomial $2x^2 - 6x - 36$ as completely as possible. \pspace
+
+\sol First, observe\dots
+	\[
+	2x^2 - 6x - 36= 2(x^2 - 3x - 18)
+	\]
+So we need to factor $x^2 - 3x - 18$ (if possible). But we have\dots \par
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 18} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot -18$ & $-17$ \\
+	$-1 \cdot 18$ & $17$ \\
+	$2 \cdot -9$ & $-7$ \\
+	$-2 \cdot 9$ & $7$ \\ \hline
+	\multicolumn{1}{|r}{$3 \cdot -6$} & \multicolumn{1}{r|}{$-3$} \\ \hline
+	$-3 \cdot 6$ & $3$
+	\end{tabular}
+	\end{table}
+Then we have\dots
+	\[
+	2x^2 - 6x - 36= 2(x^2 - 3x - 18)= 2(x + 3)(x - 6)
+	\]
+
+
+
+% Question 5
+\newpage
+\question[10] Factor the polynomial $(16x^4 - 1)(x + 4) + (16x^4 - 1)(x - 3)$ as completely as possible. \pspace
+
+\sol Recall that the difference of perfect squares factors as follows: $a^2 - b^2= (a - b)(a + b)$. But if $a= 4x^2$, then $a^2= (4x^2)^2= 16x^4$, and if $b= 1$, then $b^2= 1$. But then using the factorization of the difference of perfect squares, we have\dots
+	\[
+	16x^4 - 1= (4x - 1)(4x + 1)
+	\]
+Therefore, we have\dots
+	\[
+	\begin{aligned}
+	(16x^4 - 1)(x + 4) + (16x^4 - 1)(x - 3)&= (16x^4 - 1) \left( (x + 4) + (x - 3) \right) \\[0.3cm]
+	&= (16x^4 - 1)(x + 4 + x - 3) \\[0.3cm]
+	&= (16x^4 - 1)(2x + 1) \\[0.3cm]
+	&= (4x - 1)(4x + 1)(2x + 1)
+	\end{aligned}
+	\]
+
+
+
+% Question 6
+\newpage
+\question[10] Use the quadratic formula to factor the polynomial $24x^2 + 77x + 60$. \pspace
+
+\sol If we have a quadratic polynomial $p(x)= ax^2 + bx + c$, we know that $p(x)$ factors as $p(x)= a(x - r_1)(x - r_2)$, where $r_1$, $r_2$ are the roots of $p(x)$. Therefore, we only need find the roots $r_1$, $r_2$, i.e. the solutions to $p(x)= 0$. To find these roots, we use the quadratic formula. For the polynomial $p(x)= 24x^2 + 77x + 60$, we have $a= 24$, $b= 77$, and $c= 60$. But then\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-77 \pm \sqrt{77^2 - 4(24)60}}{2(24)} \\[0.3cm]
+	&= \dfrac{-77 \pm \sqrt{5929 - 5760}}{48} \\[0.3cm]
+	&= \dfrac{-77 \pm \sqrt{169}}{48} \\[0.3cm]
+	&= \dfrac{-77 \pm 13}{48}
+	\end{aligned}
+	\]
+Therefore, we have roots\dots
+	\[
+	\begin{aligned}
+	r_1&= \dfrac{-77 - 13}{48}= \dfrac{-90}{48}= -\dfrac{15}{8} \\[0.3cm]
+	r_2&= \frac{-77 + 13}{48}= \frac{-64}{48}= -\frac{4}{3}
+	\end{aligned}
+	\]
+Therefore, the polynomial factors as\dots
+	\[
+	\begin{aligned}
+	24x^2 + 77x + 60&= a(x - r_1)(x - r_2) \\[0.3cm]
+	&= 24 \left(x - \dfrac{-15}{8} \right) \left(x - \dfrac{-4}{3} \right) \\[0.3cm]
+	&= 24 \left(x + \dfrac{15}{8} \right) \left(x + \dfrac{4}{3} \right) \\[0.3cm]
+	&= 8 \cdot 3 \left(x + \dfrac{15}{8} \right) \left(x + \dfrac{4}{3} \right) \\[0.3cm]
+	&= 8 \left(x + \dfrac{15}{8} \right) \cdot 3 \left(x + \dfrac{4}{3} \right) \\[0.3cm]
+	&= (8x + 15) (3x + 4)
+	\end{aligned}
+	\]
+
+
+
+% Question 7
+\newpage
+\question[10] Use the discriminant to explain why the polynomial $x^2 - 10x + 7$ does not factor over the integers. Use the quadratic formula to factor the polynomial. \pspace
+
+\sol Given a quadratic polynomial $p(x)= ax^2 + bx + c$, we can determine the `type' of factorization using the discriminant $D= b^2 - 4ac$. We know that if $D < 0$, the polynomial does not factor over the reals, and if $D \geq 0$, the polynomial factors over the reals. The polynomial factors `nicely' over the rational numbers or integers if and only if its discriminant is a perfect square rational or integer, respectively. If polynomial factors `nicely' over the complex numbers if and only if $D < 0$ and $|D|$ is a perfect square. So we need only compute the determinant. For the quadratic polynomial $p(x)= x^2 - 10x + 7$, we have $a= 1$, $b= -10$, and $c= 7$. But then we have\dots
+	\[
+	D= b^2 - 4ac= (-10)^2 - 4(1)7= 100 - 28= 72
+	\]
+Because $D= 72 > 0$, we know that $p(x)$ factors over the reals. However, because $72$ is not a perfect square (note that $8^2= 64 < 72 < 81= 9^2$), we know that $x^2 - 10x + 7$ does not factor over the integers. However, if we have a quadratic polynomial $p(x)= ax^2 + bx + c$, we know that $p(x)$ factors as $p(x)= a(x - r_1)(x - r_2)$, where $r_1$, $r_2$ are the roots of $p(x)$. Therefore, we only need find the roots $r_1$, $r_2$, i.e. the solutions to $p(x)= 0$. To find these roots, we use the quadratic formula.
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-10) \pm \sqrt{D}}{2(1)} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{72}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm 6 \sqrt{2}}{2} \\[0.3cm]
+	&= 5 \pm 3 \sqrt{2}
+	\end{aligned}
+	\]
+Therefore, the roots are $r_1= 5 - 3 \sqrt{2}$ and $r_2= 5 + 3\sqrt{2}$. Therefore, the polynomial factors as\dots
+	\[
+	x^2 - 10x + 7= a(x - r_1)(x - r_2)= \big(x - (5 - 3 \sqrt{2}) \big) \big(x - (5 + 3 \sqrt{2}) \big)
+	\]
+
+
+
+% Question 8
+\newpage
+\question[10] A polynomial, $p(x)$, of degree two has roots $x= -6$ and $x= 5$. Furthermore, the polynomial $p(x)$ is such that $p(4)= -30$. Find the polynomial $p(x)$. \pspace
+
+\sol Because the polynomial $p(x)$ has degree two, we know that $p(x)$ is a quadratic polynomial. If we have a quadratic polynomial $p(x)= ax^2 + bx + c$, we know that $p(x)$ factors as $p(x)= a(x - r_1)(x - r_2)$, where $r_1$, $r_2$ are the roots of $p(x)$. We are told that $p(x)$ has roots $x= -6$ and $x= 5$. But then we know that\dots
+	\[
+	p(x)= a(x - r_1)(x - r_2)= a \big(x - (-6) \big) (x - 5)= a (x + 6)(x - 5)
+	\]
+We need only find $a$. However, we are told that $p(4)= -30$. But then we have\dots
+	\[
+	\begin{aligned}
+	p(x)&= a (x + 6)(x - 5) \\[0.3cm]
+	p(4)&= a (4 + 6)(4 - 5) \\[0.3cm]
+	-30&= a (10)(-1) \\[0.3cm]
+	-30&= -10a \\[0.3cm]
+	a&= 3
+	\end{aligned}
+	\]
+Therefore, we know that\dots
+	\[
+	p(x)= 3(x + 6)(x - 5)
+	\]
+
+
+
+% Question 9
+\newpage
+\question[10] List all the possible rational roots for the polynomial $3x^5 + 8x^4 - 7x^2 + 9x - 6$. \pspace
+
+\sol Suppose we have a polynomial $p(x)= a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$, where all the $a_i$ are integers. By the Rational Root Theorem, if $p(x)$ has a rational root, it must be of the form\dots
+	\[
+	r= \pm \dfrac{\text{divisor of } |a_0|}{\text{divisor of } |a_n|}= \pm \dfrac{\text{divisor of `constant term'}}{\text{divisor of `leading coefficient'}}
+	\]
+First, we list out the divisors of the constant term, $6$, and the leading coefficient, $3$:
+	\[
+	\begin{aligned}
+	\mathbf{6}&\colon 1, 2, 3, 6 \\
+	\mathbf{3}&\colon 1, 3
+	\end{aligned}
+	\]
+But then we can `run through' the combinations systematically using divisors of the constant term as our `iterator':
+	\[
+	\begin{aligned}
+	\mathbf{1}&\colon \pm \dfrac{1}{1}= \pm 1,\quad \pm \dfrac{1}{3} \\[0.3cm]
+	\mathbf{2}&\colon \pm \dfrac{2}{1}= \pm 2,\quad \pm \dfrac{2}{3} \\[0.3cm]
+	\mathbf{3}&\colon \pm \dfrac{3}{1}= \pm 3,\quad \pm \dfrac{3}{3}= \pm 1 \\[0.3cm]
+	\mathbf{6}&\colon \pm \dfrac{6}{1}= \pm 6,\quad \pm \dfrac{6}{3}= \pm 2
+	\end{aligned}
+	\]
+Therefore, the \textit{possible} rational roots are\dots
+	\[
+	\pm \dfrac{1}{3}, \quad \pm \dfrac{2}{3}, \quad \pm 1, \quad \pm 2, \quad \pm 3, \quad \pm 6
+	\]
+
+\vfill
+
+Note: Trying any of these possible roots, $r$, never yields $p(r)= 0$. Therefore, the given polynomial has no rational roots. 
+
+
+
+% Question 10 
+\newpage
+\question[10] Find the quotient and remainder when $x^5 + 3x^4 + 2x^3 + 4x^2 - 30x + 13$ is divided by $x^2 + 3x - 2$. \pspace
+
+\sol We first `long divide'\dots
+	\[
+	\polylongdiv{x^5 + 3x^4 + 2x^3 + 4x^2 - 30x + 13}{x^2 + 3x - 2}
+	\]
+Therefore, the quotient is $x^3 + 4x - 8$ and the remainder is $2x - 3$. We can express this division in product form:
+	\[
+	x^5 + 3x^4 + 2x^3 + 4x^2 - 30x + 13= (x^3 + 4x - 8)(x^2 + 3x - 2) + 2x - 3
+	\]
+We can also express this division in quotient form:
+	\[
+	\dfrac{x^5 + 3x^4 + 2x^3 + 4x^2 - 30x + 13}{x^2 + 3x - 2}= x^3 + 4x - 8 + \dfrac{2x - 3}{x^2 + 3x - 2}
+	\]
+
+
+
+% Question 11
+\newpage
+\question[10] Being sure to simplify as much as possible, compute the following:
+	\[
+	\dfrac{9 - 5x}{x^2 + 7x - 8} - \dfrac{6x}{x - 1}
+	\] \pspace
+
+\sol After finding a common denominator, we can simply add the rational functions as with ordinary rationals:
+	\[
+	\begin{aligned}
+	\dfrac{9 - 5x}{x^2 + 7x - 8} - \dfrac{6x}{x - 1}&= \dfrac{9 - 5x}{(x - 1)(x + 8)} - \dfrac{6x}{x - 1} \\[0.3cm]
+	&= \dfrac{9 - 5x}{(x - 1)(x + 8)} - \dfrac{6x(x + 8)}{(x - 1)(x + 8)} \\[0.3cm]
+	&= \dfrac{9 - 5x}{(x - 1)(x + 8)} - \dfrac{6x^2 + 48x}{(x - 1)(x + 8)} \\[0.3cm]
+	&= \dfrac{(9 - 5x) - (6x^2 + 48x)}{(x - 1)(x + 8)} \\[0.3cm]
+	&= \dfrac{9 - 5x - 6x^2 - 48x}{(x - 1)(x + 8)} \\[0.3cm]
+	&= \dfrac{-6x^2 - 53x + 9}{{(x - 1)(x + 8)}}
+	\end{aligned}
+	\]
+
+
+
+% Question 12
+\newpage
+\question[10] Being sure to simplify as much as possible, compute the following:
+	\[
+	\dfrac{x^2 + 4x - 5}{x^2 + 5x + 4} \cdot \dfrac{x^2 + 4x + 3}{x^2 + 3x - 10}
+	\] \pspace
+
+\sol First, we factor the numerators and denominators to cancel wherever possible before multiplying the rational functions as with ordinary rationals:
+	\[
+	\begin{aligned}
+	\dfrac{x^2 + 4x - 5}{x^2 + 5x + 4} \cdot \dfrac{x^2 + 4x + 3}{x^2 + 3x - 10}&= \dfrac{(x + 5)(x - 1)}{(x + 1)(x + 4)} \cdot \dfrac{(x + 1)(x + 3)}{(x + 5)(x - 2)} \\[0.3cm]
+	&= \dfrac{\cancel{(x + 5)}(x - 1)}{\cancel{(x + 1)}(x + 4)} \cdot \dfrac{\cancel{(x + 1)}(x + 3)}{\cancel{(x + 5)}(x - 2)} \\[0.3cm]
+	&= \dfrac{x - 1}{x + 4} \cdot \dfrac{x + 3}{x - 2} \\[0.3cm]
+	&= \dfrac{(x - 1)(x + 3)}{(x + 4)(x - 2)}
+	\end{aligned}
+	\]
+
+
+
+% Question 13
+\newpage
+\question[10] Being sure to simplify as much as possible, compute the following:
+	\[
+	\dfrac{\;\;\dfrac{x^2 - 9}{x^2 + 6x}\;\;}{\;\;\dfrac{x^2 + x - 6}{x^2 + 4x - 12}\;\;}
+	\] \pspace
+
+\sol First, we transform the division into a product by the reciprocal. Then we factor the numerators and denominators to cancel wherever possible before multiplying the rational functions as with ordinary rationals:
+	\[
+	\begin{aligned}
+	\dfrac{\;\;\dfrac{x^2 - 9}{x^2 + 6x}\;\;}{\;\;\dfrac{x^2 + x - 6}{x^2 + 4x - 12}\;\;}&= \dfrac{x^2 - 9}{x^2 + 6x} \cdot \dfrac{x^2 + 4x - 12}{x^2 + x - 6} \\[0.3cm]
+	&= \dfrac{(x - 3)(x + 3)}{x(x + 6)} \cdot \dfrac{(x + 6)(x - 2)}{(x + 3)(x - 2)} \\[0.3cm]
+	&= \dfrac{(x - 3)\cancel{(x + 3)}}{x\cancel{(x + 6)}} \cdot \dfrac{\cancel{(x + 6)}\cancel{(x - 2)}}{\cancel{(x + 3)}\cancel{(x - 2)}} \\[0.3cm]
+	&= \dfrac{x - 3}{x} \cdot \dfrac{1}{1} \\[0.3cm]
+	&= \dfrac{x - 3}{x}
+	\end{aligned}
+	\]
+
+
+
+% Question 14
+\newpage
+\question[10] Find the domain of the function $f(x)= \dfrac{x^2 - 3x - 10}{x^2 - 4}$. Furthermore, identify any zeros, vertical asymptotes, horizontal asymptotes, and holes for the function $f(x)$. \pspace
+
+\sol The rational function $f(x)$ is defined anywhere the denominator is not zero. But if the denominator is zero, we have\dots
+	\[
+	\begin{aligned}
+	x^2 - 4&= 0 \\[0.3cm]
+	(x - 2)(x + 2)&= 0
+	\end{aligned}
+	\]
+But then either $x - 2=0$, which implies that $x= 2$, or $x + 2= 0$, which implies that $x= -2$. Therefore, the domain is the set of real numbers such that $x \neq -2, 2$. \pspace
+
+The zeros of $f(x)$ are the values in the domain such that $f(x)= 0$. But then we have\dots
+	\[
+	\begin{aligned}
+	\dfrac{x^2 - 3x - 10}{x^2 - 4}&= 0 \\[0.3cm]
+	x^2 - 3x - 10&= 0 \\[0.3cm]
+	(x - 5)(x + 2)&= 0
+	\end{aligned}
+	\]
+But then either $x - 5= 0$, which implies $x= 5$, or $x + 2= 0$, which implies $x= -2$. But $x= -2$ is not in the domain of $f(x)$. Therefore, the only zero of $f(x)$ is $x= 5$. \pspace
+
+The function $f(x)$ is a rational function. The degree of the numerator is two. The degree of the denominator is two. Because the degrees of the numerator and denominator are equal, the horizontal asymptote is the ratio of the leading coefficients of the numerator and denominator. Therefore, the horizontal asymptote is $y= \frac{1}{1}= 1$. \pspace
+
+To find the vertical asymptotes and holes of $f(x)$, we first `reduce' $f(x)$ for the values in its domain:
+	\[
+	\dfrac{x^2 - 3x - 10}{x^2 - 4}= \dfrac{(x - 5)(x + 2)}{(x - 2)(x + 2)}= \dfrac{(x - 5)\cancel{(x + 2)}}{(x - 2)\cancel{(x + 2)}}= \dfrac{x - 5}{x - 2}
+	\]
+The denominator of this reduced function vanishes when $x - 2= 0$, i.e. when $x= 2$. Therefore, $f(x)$ has a vertical asymptote at $x= 2$. Because the function $f(x)$ is not defined at $x= -2$ but the reduced function above is defined at $x= -2$, there is a hole at $x= -2$. We evaluate the reduced function above at $x= -2$:
+	\[
+	\dfrac{x - 5}{x - 2} \bigg|_{x= -2}= \dfrac{-2 - 5}{-2 - 2}= \dfrac{-7}{-4}= \dfrac{7}{4}
+	\]
+Therefore, $f(x)$ has a hole at $\left(-2, \frac{7}{4} \right)$. 
+
+
+
+% Question 15
+\newpage
+\question[10] Explain why the function $f(x)= \dfrac{3x^2 + 4x - 8}{x + 3}$ has a slant asymptote. Find the slant asymptote for this function. \pspace
+
+\sol The function $f(x)$ is a rational function. The degree of the numerator is two. The degree of the denominator is one. Because the degree of the numerator is exactly one greater than the degree of the denominator, the function $f(x)$ has a slant asymptote. To find this slant asymptote, we find the quotient of the division of the numerator by the denominator: 
+	\[
+	\polylongdiv{3x^2 + 4x - 8}{x + 3}
+	\]
+Therefore, the quotient is $3x - 5$ and the remainder is $7$. We can express this division in product form:
+	\[
+	3x^2 + 4x - 8= (3x - 5)(x + 3) + 7
+	\]
+We can also express this division in quotient form:
+	\[
+	\dfrac{3x^2 + 4x - 8}{x + 3}= 3x - 5 + \dfrac{7}{x + 3}
+	\]
+But then we can see that the slant asymptote is the line $y= 3x - 5$.
+
+
+\end{questions}
+\end{document}

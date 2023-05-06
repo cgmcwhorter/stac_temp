@@ -125,13 +125,13 @@ We indicate the pivot positions above. This yields $x_1= 208.57$, $x_3= 34.39$, 
 	\[
 	\begin{gathered}
 	\text{min } z= 2x_1 + 6x_2 \\
-	6x_1 + 5x_2 \leq 10 \\
-	x_1 + 3x_2 \leq 9 \\ 
+	6x_1 + 5x_2 \geq 10 \\
+	x_1 + 3x_2 \geq 9 \\ 
 	x_1, x_2 \geq 0
 	\end{gathered}
 	\] \pspace
 
-\sol First, we write the `matrix associated' to this minimization; that is, we create a matrix with rows corresponding to the equality version of the inequalities (with the exception of the non-negativity inequality) with the function being the last row. This yields matrix:
+\sol First, observe that the given minimization problem is in standard form; that is, the function is linear, all the inequalities are `$\geq$' a non-negative number, and the variables are non-negative. Now we write the `matrix associated' to this minimization; that is, we create a matrix with rows corresponding to the equality version of the inequalities (with the exception of the non-negativity inequality) with the function being the last row. This yields matrix:
 	\[
 	\begin{pmatrix}
 	6 & 5 & 10 \\
