@@ -1,0 +1,115 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	actuarialsymbol,	% Actuary Symbols
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	amsthm,			% Theorem Environments
+	enumerate,		% Enumerate Environments
+	etoolbox,			% Use Booleans
+	float,				% Force Table Placement
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	multicol,			% Use Multiple Columns
+	multirow,			% Use Multiple Rows
+	pifont,			% Checkmark
+}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+\usepackage{xcolor}
+
+% College Colors
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+\definecolor{quotegray}{RGB}{58,58,58}
+\definecolor{endquotegray}{RGB}{107,107,107}
+
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks 	= true,
+  	linkcolor  	= stacred,
+  	urlcolor   	= stacred
+}
+\renewcommand\UrlFont{\normalfont}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+
+% -------------------
+% Tikz
+% -------------------
+\usepackage{tikz}
+%\usetikzlibrary{}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+%\usepgfplotslibrary{}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+
+
+% -------------------
+% Header/Footer
+% -------------------
+\usepackage{fancyhdr}
+\fancypagestyle{title}{
+	%Headers
+	\fancyhead[L]{\Large\bfseries\course}
+	\fancyhead[C]{\Large\bfseries Quiz Solutions}
+	\fancyhead[R]{\Large\bfseries\semester}
+	\renewcommand{\headrulewidth}{0.2pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+
+\setlength{\parskip}{0.0cm}
+\setlength{\parindent}{0.0cm}
+\headheight=18pt
+\footskip=14pt
+
+\pagestyle{pages}
+
+
+% -------------------
+% Quiz Solution
+% -------------------
+\newcommand{\sol}{\noindent\textbf{Solution. }}
+\newcounter{quiz}
+\newcommand{\quizsol}{
+	\stepcounter{quiz}%
+	\noindent \textbf{Quiz \thequiz. }%
+}

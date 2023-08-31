@@ -1,0 +1,161 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 107: Exam 3}
+\newcommand{\term}{Winter -- 2022}
+\newcommand{\examdate}{01/21/2023}
+\newcommand{\timelimit}{Time Limit: `$\infty$'}
+
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Consider a finite probability space with\dots
+	\[
+	\begin{aligned}
+	P(A)&= 0.35 & & P(B \text{ and } D)&= 0.10 \\
+	P(B)&= 0.40 & & P(A \text{ and } C)&= 0.78 \\
+	P(C)&= 0.64 & & P(C \text{ and } D)&= 0.50 \\
+	P(D)&= 0.16
+	\end{aligned}
+	\]
+
+\begin{enumerate}[(a)]
+\item Assuming $A$ and $B$ are independent, find $P(A \text{ and } B)$. 
+\item Find $P(B \;|\; D)$.
+\item Find $P(A \text{ or } C)$.
+\item Are $C$ and $D$ independent events? Explain. 
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[10] Below is a summary of a survey of people about whether or not they preferred to shop in-person or online. \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{c|cc}
+	Age/Shopping & In-Person & Online \\ \hline
+	18 -- 30 & 17 & 34 \\
+	30 -- 50 & 54 & 61 \\
+	50$+$ & 40 & 22
+	\end{tabular}
+	\end{table} \par
+
+\begin{enumerate}[(a)]
+\item Find the percentage of people surveyed that preferred to shop in-person or were 18--30. 
+\item Find the percentage of people surveyed that were 50$+$ and preferred to shop in-person. 
+\item Find the percentage of people surveyed that preferred to shop online, if they were 30--50. 
+\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[10] Fifty people were surveyed about whether they had read any news online or in-print in the last month. Of these people, 27 said they had read news online, 11 said they read news in-print, and 5 said they read both. 
+	\begin{enumerate}[(a)]
+	\item Find the probability that a randomly selected person surveyed read news only online in the last month. 
+	\item Find the probability that a randomly selected person surveyed had read no news in the last month. 
+	\item Find the probability that a randomly selected person surveyed that read news online in the last month had also read news in-print in the last month. 
+	\end{enumerate}
+
+
+
+% Question 4
+\newpage
+\question[10] Suppose in a certain town, 51\% of people are women and 49\% are men. Of men, 56\% tend to lean conservative while only 52\% of women lean conservative. 
+	\begin{enumerate}[(a)]
+	\item Find the probability that a randomly selected person in the town leans conservative. 
+	\item Find the probability that a randomly selected person in the town is a woman or leans conservative. 
+	\item Find the probability that a randomly selected person in the town is a man, assuming they do not lean conservative. 
+	\end{enumerate}
+
+
+
+% Question 5
+\newpage
+\question[10] A certain professor's Wordle scores are given below: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{c||cccccc}
+	\# Guesses & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+	Times Occurred & 0 & 2 & 17 & 48 & 39 & 5 
+	\end{tabular}
+	\end{table}
+Find the average number of guesses it takes the professor to guess the word, i.e. the expected number of guesses. 
+
+
+
+% Question 6
+\newpage
+\question[10] Consider the following dataset: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{rrrrrrrrrrrrrrrrrrr}
+	& $-4$ && $10$ && $1$ && $8$ && $8$ && $21$ && $17$ && $2$ && $0$ \\ 
+	$6$ && $14$ && $-3$ && $9$ && $11$ && $20$ && $12$ && $13$ && $-6$ && $16$
+	\end{tabular}
+	\end{table} \par
+
+\begin{enumerate}[(a)]
+\item Find the 5-number summary. 
+\item Find the IQR. 
+\item Find $P_{40}$. 
+\end{enumerate}
+
+
+
+% Question 7
+\newpage
+\question[10] Consider the following dataset:
+	\begin{enumerate}[(a)]
+	\item Find the mean. 
+	\item Find the standard deviation. 
+	\end{enumerate}
+
+
+
+% Question 8
+\newpage
+\question[10] Suppose that the amount of time teenagers spend on their phone per week is normally distributed with mean 752 and standard deviation 279.
+	\begin{enumerate}[(a)]
+	\item Find the percentage of teens that spend less than 600~minutes on their phone.
+	\item Find the percentage of teens that spend more than 600~minutes on their phone. 
+	\item How many minutes would a teen need to spend on their phone to be in the top 20\% of teenagers in terms of the amount of time spent on their phone each week?
+	\end{enumerate}
+
+
+
+% Question 9
+\newpage
+\question[10] Suppose that a certain model of car gets, on average, 38.6~mpg. The standard deviation of this miles per gallon is 4.2~mpg. If you took a random sample of 45~cars, what is the probability that their average miles per gallon was less than 38~mpg? 
+
+
+
+% Question 10
+\newpage
+\question[10] Suppose that only 1\% of people can identify Moldova on a map. If you randomly surveyed 490~people, what is the probability that more than 8~people surveyed could identify Moldova on a map? 
+
+
+\end{questions}
+\end{document}

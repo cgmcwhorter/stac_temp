@@ -1,0 +1,162 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{1: Due 01/04}{I know three things will never be believed---the true, the probable, and the logical.}{John Steinbeck}
+
+% Problem 1
+\problem{10} Define the following propositions:
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rl}
+	$P$: & Bill took a Math course. \\
+	$Q$: & Susan is not a Biology major. \\
+	$R$: & Bill is a senior. \\
+	$S$: & Susan is a Sophomore. 
+	\end{tabular}
+	\end{table}
+Write the following logical propositions as a complete English sentence:
+	\begin{enumerate}[(a)]
+	\item $P \wedge Q$
+	\item $P \vee R$
+	\item $S \wedge \neg Q$
+	\item $R \to P$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The proposition $P \wedge Q$ is the statement, ``Bill took a Math course and Susan is not a Biology major.'' \pspace
+
+\item The proposition $P \vee R$ is the statement, ``Bill took a Math course or Bill is a senior.'' \pspace
+
+\item We know that $\neg Q$ is the statement, ``Susan is a Biology major.'' Therefore, the proposition $S \wedge \neg Q$ is the statement, ``Susan is a Sophomore and Susan is a Biology major.'' \pspace
+
+\item We know that $R \to P$ is the statement, ``If Bill is a Senior, then Bill took a Math course.'' 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Define the following logical statements:
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rl}
+	$P$: & The plant receives sunlight. \\
+	$Q$: & The plant lives. 
+	\end{tabular}
+	\end{table}
+Write the following as complete English sentences: 
+	\begin{enumerate}[(a)]
+	\item $P \to Q$
+	\item The inverse of $P \to Q$
+	\item The converse of $P \to Q$
+	\item The contrapositive of $P \to Q$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The proposition $P \to Q$ is the statement, ``If the plant receives sunlight, then the plant lives.'' \pspace
+
+\item Given an implication $A \to B$, the inverse of this implication is $\neg A \to \neg B$. Then the inverse of $P \to Q$ is $\neg P \to \neg Q$. We know that $\neg P$ is the statement, ``The plant does not receive sunlight,'' and $\neg Q$ is the statement, ``The plant does not live,'' i.e. the statement, ``The plant dies.'' Therefore, the inverse of $P \to Q$ is the statement, ``If the plant does not receive sunlight, then the plant dies.'' \pspace
+
+\item Given an implication $A \to B$, the converse of this implication is $B \to A$. Then the converse of $P \to Q$ is $Q \to P$. But then the converse of $P \to Q$ is the statement, ``If the plant lives, then the plant receives sunlight.'' \pspace
+
+\item Given an implication $A \to B$, the contrapositive of this implication is $\neg B \to \neg A$. Then the contrapositive of $P \to Q$ is $\neg Q \to \neg P$. We know that $\neg Q$ is the  statement, ``The plant does not live,'' i.e. the statement, ``The plant dies,'' and $\neg P$ is the statement, ``The plant does not receive sunlight.'' Therefore, the contrapositive of $P \to Q$ is the statement, ``If the plant dies, then the plant is not receiving sunlight.'' 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Construct the truth table for the following:
+	\begin{enumerate}[(a)]
+	\item $\neg (P \wedge Q) \to P$
+	\item $(P \vee \neg R) \wedge (Q \vee P)$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item \phantom{.} \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c||c|c||c}
+	$P$ & $Q$ & $P \wedge Q$ & $\neg(P \wedge Q)$ & $\neg(P \wedge Q) \to P$ \\ \hline
+	$T$ & $T$ & $T$ & $F$ & $T$ \\
+	$T$ & $F$ & $F$ & $T$ & $T$ \\
+	$F$ & $T$ & $F$ & $T$ & $F$ \\
+	$F$ & $F$ & $F$ & $T$ & $F$
+	\end{tabular}
+	\end{table}
+
+\item \phantom{.} \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c|c||c|c|c||c}
+	$P$ & $Q$ & $R$ & $\neg R$ & $P \vee \neg R$ & $Q \vee P$ & $(P \vee \neg R) \wedge (Q \vee P)$ \\ \hline
+	$T$ & $T$ & $T$ & $F$ & $T$ & $T$ & $T$ \\ 
+	$T$ & $T$ & $F$ & $T$ & $T$ & $T$ & $T$ \\
+	$T$ & $F$ & $T$ & $F$ & $T$ & $T$ & $T$ \\
+	$T$ & $F$ & $F$ & $T$ & $T$ & $T$ & $T$ \\
+	$F$ & $T$ & $T$ & $F$ & $F$ & $T$ & $F$ \\ 
+	$F$ & $T$ & $F$ & $T$ & $T$ & $T$ & $T$ \\ 
+	$F$ & $F$ & $T$ & $F$ & $F$ & $T$ & $F$ \\
+	$F$ & $F$ & $F$ & $T$ & $T$ & $F$ & $F$
+	\end{tabular}
+	\end{table}
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Show $\neg (P \vee \neg Q)$ is logically equivalent to $Q \wedge \neg P$. \pspace
+
+\sol To show two logical expressions are logically equivalent, we show that they have the same logical outputs for the same inputs, i.e. equivalent columns. We have\dots \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c||c|c||c||c|c}
+	$P$ & $Q$ & $\neg Q$ & $P \vee \neg Q$ & $\neg (P \vee \neg Q)$ & $\neg P$ & $Q \wedge \neg P$ \\ \hline 
+	$T$ & $T$ & $F$ & $T$ & $F$ & $F$ & $F$ \\
+	$T$ & $F$ & $T$ & $T$ & $F$ & $F$ & $F$ \\
+	$F$ & $T$ & $F$ & $F$ & $T$ & $T$ & $T$ \\
+	$F$ & $F$ & $T$ & $T$ & $F$ & $T$ & $F$
+	\end{tabular}
+	\end{table} \par
+Because the fifth and seventh columns corresponding to $\neg (P \vee \neg Q)$ and $Q \wedge \neg P$, respectively, we know that $\neg (P \vee \neg Q)$ is logically equivalent to $Q \wedge \neg P$, i.e. $\neg (P \vee \neg Q) \equiv Q \wedge \neg P$. \pspace
+
+Alternatively, we can use the properties of logic to show that $\neg (P \vee \neg Q)$ is logically equivalent to $Q \wedge \neg P$:
+	\[
+	\neg (P \vee \neg Q) \equiv \neg P \wedge \neg (\neg Q) \equiv \neg P \wedge Q \equiv Q \wedge \neg P
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Defining appropriate propositions, write the following using the defined propositions and logical connectives: {\itshape ``Jennifer has her license or if she does not have her license, then she is under 18.''} \pspace
+
+\sol Define $P$ to be the statement, ``Jennifer has her license.'' Define $Q$ to be the statement, ``Jennifer is under 18.'' Then the statement, ``Jennifer has her license or if she does not have her license, then she is under 18,'' can be represented by $P \vee (\neg P \to Q)$. 
+
+
+\end{document}

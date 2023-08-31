@@ -2,11 +2,13 @@
 % Packages
 % -------------------
 \usepackage{
-	enumerate,	% Enumerate Styles
-	float,			% Object Placements
-	graphicx,		% Include Images
-	lastpage,		% Reference Lastpage
-	microtype		% Improved Typesetting
+	%amsmath,
+	enumerate,
+	%float,
+	graphicx,
+	%hyperref,
+	lastpage,
+	%titling
 }
 
 
@@ -22,8 +24,8 @@
 % -------------------
 % New Stuff
 \usepackage{xcolor}
-\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
-\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+\definecolor{stacred}{HTML}{72263d} % 114, 38, 61
+\definecolor{stacgold}{HTML}{f5be49} % 245, 190, 73
 
 
 % -------------------
@@ -61,8 +63,6 @@
 	\fancyfoot[R]{}
 \renewcommand{\footrulewidth}{0.0pt}
 }
-
-% Head/Foot Height
 \headheight=14pt
 \footskip=14pt
 
@@ -79,7 +79,7 @@
 \thispagestyle{empty}
 \includegraphics[width=\textwidth]{college_title.png} \par\vspace{0.1cm}
 \Large\color{stacred} \coursenumber: \coursetitle \par
-\color{stacred} \semester\ \myyear\
+\color{stacred} \semester\ \myyear
 \end{center} \par\vspace{\baselineskip}%
 }
 

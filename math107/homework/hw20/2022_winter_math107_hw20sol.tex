@@ -1,0 +1,151 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{20: Due 01/20}{Facts are stubborn things, but statistics are pliable.}{Mark Twain} 
+
+% Problem 1
+\problem{10} What assumptions are required for the Central Limit Theorem to apply? \pspace
+
+\sol For the Central Limit Theorem to apply, the distribution needs to have a finite standard deviation and the sample must be a simple random sample. Furthermore, at least one of the following needs to be true:
+	\begin{itemize}
+	\item the underlying distribution needs to be normal.
+	\item the sample size needs to be `large.' 
+	\end{itemize}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose a sample, $X$, is drawn from a normal distribution with mean 220 and standard deviation 18. 
+	\begin{enumerate}[(a)]
+	\item Find $P(X \leq 200)$. 
+	\item Find the probability that a sample of size 8 will have an average less than 200. 
+	\end{enumerate} \pspace
+
+\sol The underlying distribution is normal with $\mu= 220$ and standard deviation $\sigma= 18$, i.e. the distribution is $N(220, 18)$. 
+
+\begin{enumerate}[(a)]
+\item We know $P(X \leq 200)$ is that the probability of the \textit{single} sample, $X$, is at most 200. We can use the $z$-score for 200 in the normal distribution $N(220, 18)$ to compute this. We have\dots
+	\[
+	z_{200}= \dfrac{x - \mu}{\sigma}= \dfrac{200 - 220}{18}= \dfrac{-20}{18} \approx -1.11 \squiggle 0.1335 
+	\]
+Therefore, $P(X \leq 200) \approx 0.1335$; that is, there is a 13.35\% chance that $X \leq 200$. \pspace
+
+\item Because we are asked about a probability of a \textit{sample} and not an `individual', we need the sampling distribution. This requires the Central Limit Theorem---so we need check that it applies. We know that the distribution has a finite standard deviation of 18. We assume that the sample is a simple random sample. The sample size $n= 8$ is not `large'; however, the underlying distribution is normal. Therefore, the Central Limit Theorem applies. Therefore, the distribution of averages of samples with size 8 is normal. In fact, the distribution is\dots
+	\[
+	N\left(\mu, \dfrac{\sigma}{\sqrt{n}} \right)= N\left(220, \dfrac{18}{\sqrt{8}} \right) \approx N\left(220, \dfrac{18}{2.82843} \right) \approx N\left(220, 6.36 \right)
+	\]
+We want to compute the probability that a sample of size 8 will have an average, $\overline{X}$, less than 200, i.e. $P(\overline{X} < 200)$. We can compute the $z$-score for $200$ in the normal distribution $N(220, 6.36)$ to compute this:
+	\[
+	z_{200}= \dfrac{x - \mu}{\sigma}= \dfrac{200 - 220}{6.36}= \dfrac{-20}{6.36} \approx -3.14 \squiggle 0.0008
+	\]
+Therefore, $P(\overline{X} < 200) \approx 0.0008$; that is, there is only a 0.08\% chance that a random sample of size 8 will have a sample average of less than 200. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} SAT scores in 2017 had mean 1060 and standard deviation 195.\footnote{\url{https://nces.ed.gov/programs/digest/d17/tables/dt17_226.40.asp}} If you randomly sampled 40 students, find\dots
+	\begin{enumerate}[(a)]
+	\item The probability that their average score was less than 1000. 
+	\item The probability that their average score was greater than 1100. 
+	\item The probability that their average score was between 1000 and 1100. 
+	\end{enumerate} \pspace
+
+\sol The underlying distribution has mean $\mu= 1060$ and standard deviation $\sigma= 195$. In each part, we are asked about the probability of a \textit{sample}, not an `individual.' Therefore, we need to know the sampling distribution. This requires the Central Limit Theorem---so we need check that it applies. We know that the distribution has a finite standard deviation of 195. We assume that the sample is a simple random sample. The underlying distribution is not known to be normal. However, the sample size $n= 40$ is `sufficiently large', i.e. $n= 40 \geq 30$. Therefore, the Central Limit Theorem applies. Therefore, the distribution of averages of samples with size 40 is normal. In fact, the distribution is\dots
+	\[
+	N\left(\mu, \dfrac{\sigma}{\sqrt{n}} \right)= N\left(1060, \dfrac{195}{\sqrt{40}} \right) \approx N\left(1060, \dfrac{195}{6.32456} \right) \approx N\left(1060, 30.83 \right)
+	\]
+
+\begin{enumerate}[(a)]
+\item We want to compute the probability that their average score was less than 1000, i.e. $P(\overline{X} < 1000)$. To find this, we can compute the $z$-score for 1000 in the normal distribution $N(1060, 30.83)$. We have\dots
+	\[
+	z_{1000}= \dfrac{x - \mu}{\sigma}= \dfrac{1000 - 1060}{30.83}= \dfrac{-60}{30.83} \approx -1.95 \squiggle 0.0256
+	\]
+Therefore, $P(\overline{X} < 1000) \approx 0.0256$, i.e. there is a 2.56\% chance that a random sample of 40 students will have an average SAT score of less than 1000. \pspace
+
+\item We want to compute the probability that their average score was greater than 1100, i.e. $P(\overline{X} > 1100)$. To find this, we can compute the $z$-score for 1100 in the normal distribution $N(1060, 30.83)$. We have\dots
+	\[
+	z_{1100}= \dfrac{x - \mu}{\sigma}= \dfrac{1100 - 1060}{30.83}= \dfrac{40}{30.83} \approx 1.30 \squiggle 0.9032
+	\]
+Therefore, $P(\overline{X} < 1100) \approx 0.9032$. We complement to find $P(\overline{X} > 1100)$:
+	\[
+	P(\overline{X} > 1100)= 1 - P(\overline{X} \leq 1100)= 1 - P(\overline{X} < 1100)= 1 - 0.9032= 0.0968
+	\]
+Therefore, $P(\overline{X} > 1100)= 0.0968$, i.e. there is a 9.68\% chance that a random sample of 40 students will have an average SAT score of greater than 1100. \pspace 
+
+\item We want to compute the probability that their average score was between 1000 and 1100, i.e. $P(1000 < \overline{X} < 1100)$. But we know\dots
+	\[
+	P(1000 < \overline{X} < 1100)= P(\overline{X} < 1100) - P(1000 < \overline{X})= 0.9032 - 0.0256= 0.8776
+	\]
+Therefore, $P(1000 < \overline{X} < 1100)= 0.8776$, i.e. there is a 87.76\% chance that a random sample of 40 students will have an average SAT score between 1000 and 1100. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose that 17\% of new cars will receive some minor repair after 2~years. If you take a simple random sample of 500~cars, find the probability that less than 60 of the cars will need a repair in their first two years. \pspace
+
+\sol We have a fixed number of observations, i.e. $n= 500$---namely, the 500 cars. Each new car will either receive some minor repair their first 2~years or not. The probability that they receive a minor repair is a fixed 17\%, i.e. $p= 0.17$; hence, the probability they do not receive a minor repair in their first 2~years is a fixed 83\%. We assume that whether or not a given new car requires a minor repair in their first 2~years is independent from the other new cars. [This is not likely to necessarily be the case!] Therefore, this is a binomial distribution with $n= 500$ and $p= 0.17$, i.e. $B(500, 0.17)$. \pspace
+
+We are asked to find the probability that less than 60 of the new cars will need a repair in their first two years, i.e. $P(X < 60)$. But then we would need to find\dots
+	\[
+	P(X < 60)= P(X= 0) + P(X= 1) + P(X= 2) + \cdots + P(X= 58) + P(X= 59) 
+	\]
+It would be better to see if we can approximate this binomial distribution with a normal distribution for an easier computation. We need to check whether the Central Limit Theorem applies to `allow' for this approximation; that is, we need to check $np \geq 10$ and $n(1 - p) \geq 10$:
+	\[
+	\begin{aligned}
+	np&= 500(0.17)= 85 \geq 10 \\
+	n(1 - p)&= 500(1 - 0.17)= 500(0.83)= 415 \geq 10
+	\end{aligned}
+	\]
+Therefore, the Central Limit Theorem applies and we can use the approximation. We know that if the normal approximation applies, then $B(n, p) \approx N \left(np, \sqrt{np (1 - p)} \right)$. We have\dots
+	\[
+	\begin{aligned}
+	B(500, 0.17) &\approx N \left(np, \sqrt{np (1 - p)} \right) \\
+	&= N \left(500(0.17), \sqrt{500 \cdot 0.17 \cdot (1 - 0.87)} \right) \\
+	&\approx N \left(85, \sqrt{500 \cdot 0.17 \cdot 0.83} \right) \approx N \left(85, \sqrt{70.55} \right) \\
+	&\approx N \left(85, 8.40 \right)
+	\end{aligned}
+	\]
+To compute $P(X < 60)$, we compute the $z$-score for 60 in the normal distribution $N(85, 8.40)$. We have\dots
+	\[
+	z_{60}= \dfrac{x - \mu}{\sigma}= \dfrac{60 - 85}{8.40}= \dfrac{-25}{8.40} \approx -2.98 \squiggle 0.0014
+	\]
+Therefore, $P(X < 60) \approx 0.0014$, i.e. there is a 0.14\% chance that less than 60 of the cars will need a minor repair in their first two years. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Watch The New York Times' video, \href{https://www.youtube.com/watch?v=jvoxEYmQHNM&t=1s&pp=ygUfbnl0IGJ1bm5pZXMgYW5kIHdyYW9uZ3MgY2VudHJhbA\%3D\%3D}{``Bunnies, Dragons and the `Normal' World: Central Limit Theorem''} on YouTube. Being as detailed as possible, comment on what you learned and how it relates to the course material. \pspace
+
+\sol \vfill
+
+\begin{center} {\itshape Solutions will vary.} \end{center} \vfill
+
+
+\end{document}
