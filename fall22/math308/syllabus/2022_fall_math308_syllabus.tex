@@ -10,6 +10,8 @@
 \newcommand{\coursesection}{}
 % Term
 \newcommand{\semester}{Fall}
+% Year
+\newcommand{\myyear}{2022}
 % Class Dates
 \newcommand{\classdates}{September 6 -- December 16}
 % Class Time
@@ -97,7 +99,7 @@
 % -----
 
 % Course Information
-\largeheader{0.3cm}{Course Information\label{course_info}}
+\largeheader{0.5cm}{Course Information\label{course_info}}
 
 
 
@@ -132,7 +134,7 @@
 % Course Description 
 \mysection{0.27}{Course Description\label{course_desc}}
 Logic, sets, Boolean Algebra, switching circuits, functions, computer arithmetic, methods of proof and mathematical induction. {\itshape Prerequisite: ``C'' grade or better in MATH~201 or MATH~109.}
-\sectionbreak
+\pspace
 
 
 
@@ -140,20 +142,21 @@ Logic, sets, Boolean Algebra, switching circuits, functions, computer arithmetic
 \mysection{0.27}{Course Objectives\label{course_obj}}
 After this course, among other things, students should be able to\dots
 	\begin{itemize} \itemsep=0.25ex
-	\item Construct truth tables as well as convert between written statements and compound statements. They should also understand predicates and quantified statements. They should also be able to determine truth values for these statements. 
-	\item Understand tautologies, fallacies, contradictions, and the rules of inference.
+	\item Construct truth tables as well as convert between written statements and compound statements. 
+	\item Understand predicates and quantified statements as well as be able to determine truth values for these statements. 
+	\item Understand tautologies, fallacies, contradictions, and the basic principals of inference. 
 	\item Understand the connection between truth tables and digital logic circuits.
 	\item Understand and explain the concept of proofs.
-	\item Explain and write basic proofs using induction.
-	\item Understand and compute with basic recursive methods.
-	\item Understand sets and the basic properties of sets. They should also be able to write basic proofs involving properties of sets. 
-	\item Understand functions and their properties.
-	\item Understand equivalence relations and work with basic examples of them.
-	\item Understand basic concepts in number theory, e.g. parity, primes, factorizations, division algorithms, congruences, etc. 
-	\item Compute permutations and combinations. Moreover, they should be work with applications of these concepts. 
-	\item Understand and perform basic probabilistic calculations, e.g. conditional probability and expected value.
-	\item Understand graphs and special types of graphs, especially trees. They should also understand basic algorithms associated with graphs. 
-	\item Perform basic matrix calculations and understand their connections to graphs.
+	\item Explain the principal of induction and write basic proofs using inductive reasoning.
+	\item Understand and use recursive principles, especially computing or solving recurrence relations.
+	\item Understand sets and their related topics, e.g. set operations, Cartesian products, set indexing, etc., as well as be able to write basic proofs involving properties of sets. 
+	\item Understand functions and their related properties, e.g. injectivity/surjectivity, inverses, etc. 
+	\item Understand the idea of equivalence relations/partitions, their relationship, and work with basic examples of them.
+	\item Understand basic concepts in number theory, e.g. parity, primes, factorizations, the division algorithm, congruences, etc., and their applications. 
+	\item Compute permutations and combinations, especially in applications to counting problems. 
+	\item Understand the fundamentals of probability, e.g. probability distributions, and perform basic probabilistic calculations, e.g. conditional probability and expected value.
+	\item Understand and use the basic language of graph theory, especially for trees. They should also learn and apply important graph theory concepts, e.g. walks, circuits, and various sorting/traversal algorithms. 
+	\item Perform basic matrix calculations and understand their connections to graphs and other topics. 
 	\item Understand and compute the complexity of algorithms.
 	\end{itemize}
 Furthermore, students should\dots
@@ -161,7 +164,7 @@ Furthermore, students should\dots
 	\item  Improve their ability to engage in mathematical thinking, reasoning, communication, and problem solving.
 	\item Develop a matured perspective on how to approach mathematical problems and concepts.
 	\item Be able to state ways Mathematics applies to real world problems.
-	\item Learn to properly utilize technology to explore, expand upon, or answer mathematical questions.
+	\item Learn to utilize technology to explore, expand upon, or answer mathematical questions.
 	\item Refine their cognitive skills by improving their ability to learn independently, approach problems imaginatively, solve problems methodically, and communicate solutions intelligibly.
 	\end{itemize}
 \sectionbreak
@@ -248,7 +251,7 @@ There will be a quiz \textit{every} class. Quizzes are meant to be short and sim
 
 % Discussions
 \mysection{0.18}{Discussions\label{discussions}}
-As part of the course grade, students will be required to meet with their instructor outside of class for a brief discussion---five to ten minutes---for a total of minimum of seven such meetings. These meetings may be scheduled with the instructor or occur during office hours. During this meeting, the instructor and student will discuss a topic from the previous week of course material. The discussion will consist of one or more of the following: giving an overview of the topic, stating definitions or theorems, providing examples or counterexamples to particular concepts, briefly solving a simple problem relating to the topic, addressing a common misconception, etc. Students will then be assigned a grade corresponding to their level of mastery related to the topic as demonstrated by this discussion. The topic of the discussion is chosen by the instructor. \pspace
+As part of the course grade, students will be required to meet with their instructor outside of class for a brief discussion---five to ten minutes---for a minimum of seven such meetings. These meetings may be scheduled with the instructor or occur during office hours. During this meeting, the instructor and student will discuss a topic from the previous week of course material. The discussion will consist of one or more of the following: giving an overview of the topic, stating definitions or theorems, providing examples or counterexamples to particular concepts, briefly solving a simple problem relating to the topic, addressing a common misconception, etc. Students will then be assigned a grade corresponding to their level of mastery related to the topic as demonstrated by this discussion. The topic of the discussion is chosen by the instructor. \pspace
 
 A student's `Discussion' grade will be graded based on seven of these discussions. Students may opt to participate in more than seven of these discussion sessions, in which case the highest seven discussion grades will be taken. While these discussions may occur at any point in a particular week---on a day and at a time agreed upon by the student and instructor---the topic will always be on a topic from the previous week. Students may not be graded on a discussion from topics from topics preceding the previous week unless it relates to the material from the previous week, e.g. notation or definitions learned earlier in the semester appearing in concepts from the previous week. There are no make-ups for these discussions. \pspace
 
@@ -266,7 +269,7 @@ You are encouraged to work with others on homeworks. Mathematics is a social act
 
 % Exams
 \mysection{0.18}{Exams\label{exams}}
-During the semester, there will be a total of 3 exams that are each worth 10\% of the course grade for a total of 30\%. Each of the three exams will be take-home exams, perhaps except for the last exam which will likely in an in-person exam scheduled the week of the exam. The exact guidelines may differ between the three exams. However, the content covered by an exam, the exam procedures, and the exam due date, will be announced the week of the exam. Typically, the exam will be released `that course week', e.g. Friday, Saturday, or Sunday. Students will be expected to solve the problems using the allotted exam time and submit their written exam solutions on Monday morning to their instructor. The anticipated closest-classes to an exam date can be found on the course schedule and are subject to change. \pspace
+During the semester, there will be a total of 3 exams, which are each worth 10\% of the course grade, for a total of 30\%. Each of the three exams will be take-home exams, perhaps except for the last exam which will likely be an in-person exam scheduled for some day the last week of classes. The exact guidelines may differ between the three exams. However, the content covered by an exam, the exam procedures, and the exam due date, will be announced the week of the exam. Typically, the exam will be released `that course week', e.g. Friday, Saturday, or Sunday. Students will be expected to solve the problems using the allotted exam time and submit their written exam solutions on Monday morning to their instructor. The anticipated closest-classes to an exam date can be found on the course schedule and are subject to change. \pspace
 
 While exams may be take-home, students are to strictly follow the procedures stated for each exam. Students are expected to take every exam without the use of any course materials or outside materials, unless otherwise instructed. Students may not use more than the allotted time on any exam. If you anticipate conflicts to taking the exam in the allotted time or turning in the exam by the required time, you should contact your instructor immediately. Certainly, if you are aware or should be aware of any issues to taking or submitting an exam before the exam is distributed, you should contact your instructor as soon as possible---certainly as least 24-hours in advance, if possible. Extensions on exams will not be granted except in extraordinary circumstances, determined by the instructor and issued on a case-by-case basis. \sectionbreak
 

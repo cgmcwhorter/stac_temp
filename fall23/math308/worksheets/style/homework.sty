@@ -1,0 +1,177 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	actuarialsymbol,	% Actuary Symbols
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	amsthm,			% Theorem Environments
+	arydshln,			% Matrix Lines
+	cancel,			% Use Cancel
+	caption,			% Remove 'Figure' Prefix
+	enumerate,		% Enumerate Environments
+	etoolbox,			% Use Booleans
+	float,				% Force Table Placement
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	mathtools,			% Matrix Lines
+	multicol,			% Use Multiple Columns
+	pifont,			% Use Checkmarks
+	textcomp,			% Euro Symbol
+	venndiagram		% Use Venn Diagrams
+}
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Colors
+% -------------------
+\usepackage{xcolor}
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+\definecolor{quotegray}{RGB}{58,58,58}
+\definecolor{endquotegray}{RGB}{107,107,107}
+
+
+% -------------------
+% Hyperref
+% -------------------
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks 	= true,
+  	linkcolor  	= stacred,
+  	urlcolor   	= stacred
+}
+\renewcommand\UrlFont{\normalfont}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+
+% -------------------
+% Tikz
+% -------------------
+\usepackage{tikz}
+\usetikzlibrary{patterns,decorations.markings,arrows, decorations.pathmorphing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+%\usepgfplotslibrary{}
+
+
+% -------------------
+% Answer Hiding
+% -------------------
+\newbool{hideans}
+\newcommand{\ansname}{
+\ifbool{hideans}{\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}}{\underline{\hspace{1.21cm}\itshape Caleb McWhorter --- Solutions \hspace{1.21cm}}}
+}
+%\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}
+%\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}
+
+
+% -------------------
+% Title & Problem Commands
+% -------------------
+\newbool{quotetype}
+\newcommand{\homework}[3]{%
+	\ifbool{quotetype}{%
+\noindent\begin{minipage}[t]{0.6\textwidth}
+	\noindent \textbf{Name:} \ansname \\
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW #1}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``#2''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape #3
+\end{minipage} \\[0.5cm]
+}{
+\noindent \textbf{Name:} \ansname \\
+\noindent\begin{minipage}[t]{0.3\textwidth}
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW #1}
+\end{minipage}%
+\begin{minipage}[t]{0.7\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``#2''} \par
+  	\raggedleft
+  	\color{quotegray}--\,\itshape #3
+\end{minipage} \\[0.5cm]
+	}
+}
+\newcommand{\prob}{\noindent\textbf{Problem: }}
+\newcounter{problem}
+\newcounter{totalpoints}
+\newcommand{\problem}[1]{
+	\stepcounter{problem}%
+	\mbox{\noindent\textbf{Problem \theproblem.} (#1pt)\addtocounter{totalpoints}{#1}}%
+}
+\newcommand{\sol}{\noindent\textbf{Solution. }}
+\newcommand{\pt}[1]{(#1pt)\addtocounter{totalpoints}{#1}}
+\newcommand{\printpoints}{{\Large\bfseries\vfill\hfill Total Points: \thetotalpoints}}
+\newcommand{\usol}[2]{\underline{\hspace{#1}{\itshape #2}\hspace{#1}}}
+\newcommand{\uans}[2]{\underline{\hspace{#1}#2\hspace{#1}}}
+
+
+% -------------------
+% Enumerate/Itemize Environments
+% -------------------
+\usepackage{calc}
+\usepackage[shortlabels]{enumitem}
+\newenvironment{enum}{%
+	\begin{enumerate}[label={(\alph*)},leftmargin=\widthof{(a)}+\labelsep]
+	}{%
+	\end{enumerate}
+}
+\newenvironment{2enumerate}{%
+	\begin{enumerate}[(a)]
+	\begin{multicols}{2}
+	}{%
+	\end{multicols}
+	\end{enumerate}
+}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\small\thepage \,of \pageref*{LastPage}}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+\setlength{\parskip}{0.0cm}
+\setlength{\parindent}{0.0cm}
+\headheight=14pt
+\footskip=14pt
+
+\pagestyle{pages}
+
+
+
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother

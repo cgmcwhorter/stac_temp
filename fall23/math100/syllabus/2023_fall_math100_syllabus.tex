@@ -10,8 +10,10 @@
 \newcommand{\coursesection}{}
 % Term
 \newcommand{\semester}{Fall}
+% Year
+\newcommand{\myyear}{2023}
 % Class Dates
-\newcommand{\classdates}{September 6 -- December 16}
+\newcommand{\classdates}{September 5 -- December 15}
 % Class Time
 \newcommand{\classtimes}{MW 1:00~pm -- 2:25~pm}
 % Classroom
@@ -43,7 +45,7 @@
 
 
 % Table of Contents
-\largeheader{0cm}{Table of Contents}
+\largeheader{0cm}{Table of Contents}{tablecontents}
 
 \begin{minipage}[t]{0.45\textwidth}
 {\bfseries\color{stacred} Course Information} \dotfill \pageref{course_info} \par
@@ -57,16 +59,16 @@
 \hspace{0.3cm} Grading Scale \dotfill \pageref{grade_scale} \par
 \hspace{0.3cm} Course Format \dotfill \pageref{course_form} \par
 \hspace{0.3cm} Attendance \& Participation \dotfill \pageref{attend} \par
-\hspace{0.3cm} Activities \dotfill \pageref{act} \par
+\hspace{0.3cm} Events \dotfill \pageref{events} \par
+\hspace{0.3cm} Project \dotfill \pageref{project} \par
 \hspace{0.3cm} Quizzes \dotfill \pageref{quiz} \par
 \hspace{0.3cm} Exams \dotfill \pageref{exams} \par
-\hspace{0.3cm} Project \dotfill \pageref{project} \par
-\hspace{0.3cm} Homework \dotfill \pageref{hw} \par
+\hspace{0.3cm} Homeworks \dotfill \pageref{hw} \par
 \hspace{0.3cm} Mathematics Help \dotfill \pageref{help} \par
-\hspace{0.3cm} Respect Policy \dotfill \pageref{respect}
+\hspace{0.3cm} Respect Policy \dotfill \pageref{respect} \par
+\hspace{0.3cm} Email Policy \dotfill \pageref{email_policy} 
 %
-\end{minipage}\hfill\begin{minipage}[t]{0.45\textwidth} \par
-\hspace{0.3cm} Email Policy \dotfill \pageref{email_policy} \par
+\end{minipage}\hfill\begin{minipage}[t]{0.45\textwidth} 
 \hspace{0.3cm} Electronic Device Policy \dotfill \pageref{electronic} \par
 \hspace{0.3cm} Mental Health \& Counseling Services \dotfill \pageref{mental_health} \par
 \hspace{0.3cm} Faith/Tradition Observances Policy \dotfill \pageref{faith} \par
@@ -82,12 +84,12 @@
 \hspace{0.3cm} Academic Accommodations for Students \par
 \hspace{0.6cm} with Disabilities Statement \dotfill \pageref{college_acadacc} \par
 \hspace{0.3cm} Sexual Misconduct Policy \dotfill \pageref{college_sexmisconduct} \par
-\hspace{0.3cm} COVID-19 Policies/Procedures \dotfill \pageref{college_healthsafety} \par
+\hspace{0.3cm} Illness and Absences \dotfill \pageref{college_illnessabsences} \par
 \hspace{0.3cm} Diversity and Inclusivity Statement \dotfill \pageref{college_inclusive} \par
+\hspace{0.3cm} Mental Health \& Wellness \dotfill \pageref{mental_wellness} \par
 {\bfseries\color{stacred} Course Schedule} \dotfill \pageref{schd} \par
 \hfill {\bfseries\color{stacred} Total Pages:} \pageref*{LastPage}
-\end{minipage}
-\sectionbreak
+\end{minipage} \pspace
 
 
 
@@ -98,12 +100,12 @@
 % -----
 
 % Course Information
-\largeheader{0.3cm}{Course Information\label{course_info}}
+\largeheader{0.3cm}{Course Information}{course_info}
 
 
 
 % Instructor Information
-\mysection{0.27}{Instructor Information\label{instr_info}}
+\mysection{0.27}{Instructor Information}{instr_info}
 \textit{Name:} \instructor \par
 \textit{Office:} \office \par
 \textit{Phone:} \phone \par
@@ -114,7 +116,7 @@
 
 
 % Class Information
-\mysection{0.27}{Class Information\label{class_info}}
+\mysection{0.27}{Class Information}{class_info}
 \textit{Dates:} \classdates \par
 \textit{Time:} \classtimes \par
 \textit{Classroom:} \classroom \par
@@ -124,34 +126,35 @@
 
 
 % Course Description 
-\mysection{0.27}{Course Description\label{course_desc}}
-Mathematical skills for students with fewer than two years of high school mathematics preparation or who are otherwise deficient in mathematics. A basic algebra course to prepare students for MATH~101.
-\sectionbreak
+\mysection{0.27}{Course Description}{course_desc}
+Mathematical skills for students with fewer than two years of high school mathematics preparation or who are otherwise deficient in mathematics. A basic algebra course to prepare students for MATH 101 College Algebra. The course does not satisfy General Education Quantitative Literacy requirements.
+\pspace
 
 
 
 % Course Objectives
-\mysection{0.27}{Course Objectives\label{course_obj}}
+\mysection{0.27}{Course Objectives}{course_obj}
 After this course, among other things, students should be able to\dots
-	\begin{itemize} \itemsep=0.3ex
-	\item Perform basic arithmetic computations.
-	\item Understand basic, set and function notation.
-	\item Compute percentages and percent increase/decrease.
-	\item Compute averages and weighted averages.
-	\item Compute course averages and GPAs.
-	\item Convert between different units.
-	\item Use rates in a real-world context. 
-	\item Understand and apply Fermi estimation.
-	\item Use notions of length, area, and volume. 
+	\begin{itemize} \itemsep=0.2ex
+	\item Perform and apply basic arithmetic computations.
+	\item Understand, compute, and apply functions to `real world' problems. 
+	\item Compute percentages and percent increase/decrease and apply them to `real world' problems.
+	\item Compute averages and weighted averages and understand their `real world' applications. 
+	\item Convert between different units and use these conversions in `real world' problems. 
+	\item Compute and apply rates in a real-world context. 
+	\item Understand and use Fermi estimation. 
+	\item Compute and apply lengths, areas, and volumes of geometric objects. 
 	\item Understand linear functions and their applications.
-	\item Compute taxes, discounts, and CPI.
-	\item Compute interest in real-world contexts. 
+	\item Understand and compute taxes, discounts, and CPI.
+	\item Understand and use break-even analysis and supply-demand curves. 
+	\item Understand, compute, and apply interest in real-world contexts. 
 	\item Understand and apply basic concepts in Probability. 
 	\item Compute and interpret expected values. 
 	\item Understand and apply basic concepts in Statistics. 
+	\item Understand the Central Limit Theorem and its implications. 
 	\item Understand and describe data sets in a statistical setting. 
-	\item Apply normal distributions to real-world problems.
-	\item Give a `layman' explanation of Data Science. 
+	\item Understand, compute, and apply normal distributions to real-world problems.
+	\item Give a `layman' explanation of concepts in data science and their real world implications. 
 	\end{itemize}
 Furthermore, students should\dots
 	\begin{itemize} \itemsep=0.3ex
@@ -166,10 +169,10 @@ Furthermore, students should\dots
 
 
 % Course Materials
-\mysection{0.22}{Course Materials\label{course_mat}}
-{\itshape\bfseries\color{stacred}Textbook.} The primary reference for course topics will be lecture notes and related materials provided by the instructor. However, students wishing to have a consistent standard reference are suggested to use the free open source textbook \textit{College Algebra} by Jay Abramson et al. found at \url{https://openstax.org/details/books/college-algebra}, the free open source textbook \textit{Applied Finite Mathematics} by Rupinder Sekhon found at \url{https://cnx.org/contents/8c-1jjEY@5.1:DjaX961v@2/Linear-Equations}, and \textit{Introductory Statistics} by. Barbara Illowsky, Susan Dean, et al. found at \href{https://openstax.org/details/books/introductory-statistics}{https://openstax.org/details/books/introductory-statistics}. \pspace
+\mysection{0.22}{Course Materials}{course_mat}
+{\itshape\bfseries\color{stacred}Textbook.} The primary reference for course topics will be lecture notes and related materials provided by the instructor. However, students wishing to have a consistent standard reference are suggested to use the free open source textbook \textit{College Algebra} by Jay Abramson et al. found at \url{https://openstax.org/details/books/college-algebra}, the free open source textbook \textit{Applied Finite Mathematics} by Rupinder Sekhon found at \url{https://archive.org/details/cnx-org-col10613}, and \textit{Introductory Statistics} by. Barbara Illowsky, Susan Dean, et al. found at \href{https://openstax.org/details/books/introductory-statistics}{https://openstax.org/details/books/introductory-statistics}. \pspace
 
-{\itshape\bfseries\color{stacred}Calculators.} The course will make use of the computational engine Mathematica via the WolframAlpha website: \url{https://www.wolframalpha.com}. Although WolframAlpha does have a paid account option for additional resources, the course will not make use of these features and students {\itshape will not} be required to setup an account or make any kind of payment. Furthermore, no calculators will be required for this course. Unless otherwise instructed, students may make use of a calculator (physical or digital) and any calculator (particularly graphing calculators) will suffice. 
+{\itshape\bfseries\color{stacred}Calculators.} The course may make use of the computational engine Mathematica via the WolframAlpha website: \url{https://www.wolframalpha.com}. Although WolframAlpha does have a paid account option for additional resources, the course will not make use of these features and students {\itshape will not} be required to setup an account or make any kind of payment. Furthermore, no calculators will be required for this course. Unless otherwise instructed, students may make use of a calculator (physical or digital) and any calculator (particularly graphing calculators) will suffice. 
 \sectionbreak
 
 
@@ -181,21 +184,20 @@ Furthermore, students should\dots
 % -----
 
 % Course Policies
-\largeheader{0.3cm}{Course Policies\label{course_polc}}
+\largeheader{0.3cm}{Course Policies}{course_polc}
 
 
 
 % Grading Components
-\mysection{0.27}{Grading Components\label{grade_comp}}
+\mysection{0.27}{Grading Components}{grade_comp}
 Course grades are determined by the following components: \par
 	\begin{table}[!ht]
         \begin{tabular}{clr}
-	& Participation & 5\% \\
-        & Activities & 5\% \\
+	& Events & 5\% \\
 	& Project & 10\% \\
-	& Quizzes & 10\% \\
+	& Quizzes & 15\% \\
 	& Exams & 30\% \\
-	& Homework & 40\% 
+	& Homeworks & 40\% 
         \end{tabular} 
         \end{table}
 \sectionbreak
@@ -203,7 +205,7 @@ Course grades are determined by the following components: \par
 
 
 % Grading Scale
-\mysection{0.18}{Grading Scale\label{grade_scale}}
+\mysection{0.18}{Grading Scale}{grade_scale}
 The grade scale is the standard St. Thomas Aquinas College grading scale and is as follows: \par
         \begin{table}[!ht]
         \centering
@@ -220,69 +222,57 @@ The grade scale is the standard St. Thomas Aquinas College grading scale and is 
 
 
 % Course Format
-\mysection{0.19}{Course Format\label{course_form}}
+\mysection{0.19}{Course Format}{course_form}
 The course consists of two lectures per week. Each class will begin with a quiz followed by lecture. These lectures will typically consist of a brief overview of a topic followed by time for individual or group problem solving from a daily class activity handout. However, due to the large number of course topics, not every concept or problem type can be covered during class. Students are expected to spend outside of class studying extra materials and solving additional problems. Therefore, students are highly encouraged to solve all the problems from each daily class activity---whether or not they are completed in class. Students are expected to typically spend approximately 3~hours per credit outside of class on course materials. However, some weeks this may be more or less. \sectionbreak
 
 
 
 % Attendance and Participation
-\mysection{0.36}{Attendance and Participation\label{attend}}
+\mysection{0.36}{Attendance and Participation}{attend}
 {\itshape\bfseries\color{stacred}Attendance.} It is essential to your success in this course that you attend each lecture and participate in class discussions. It is also a federal requirement that students who do not attend or stop attending a class be reported at the time of determination by the faculty that the student never attended or stopped attending the class. Therefore, you are expected to attend each lecture and to show up on time. Address any absence(s), anticipated or unanticipated, with the instructor as soon as possible. Should you anticipate an absence, you are to contact the instructor as soon as possible---at least twenty-four hours before the class, if possible.  Certain absences from lecture(s) may be excused, depending on the reason for the absence. Determinations are made on a case-by-case basis at the discretion of the instructor. The student should discuss the issue with the instructor as soon as possible; however, to excuse an absence, the reason(s) for missing lecture(s) must be documentable and presented, if requested. \pspace
 
-If you miss a lecture, you are responsible for any material covered, any work assigned, any course changes made, etc. during the class. Do not assume or expect the instructor to provide you with anything, particularly lecture notes, from the class(es) missed. {\itshape Four or more unexcused absences from lectures could result in receiving a grade penalty per additional absence or an `F' in the course.} Furthermore, excessive lateness will also count as an absence. If you are dismissed from lecture due to problems during the lecture, e.g. disruptive behavior or unauthorized cell phone use, then this dismissal will be recorded as an absence for the lecture. If you cannot attend a class due to a mandated quarantine, inform your instructor immediately so that arrangements can be made. In this case, the student may be required to participate in lectures virtually and submit assignments online. \pspace
+If you miss a lecture, you are responsible for any material covered, any work assigned, any course changes made, etc. during the class. Do not assume or expect the instructor to provide you with anything, particularly lecture notes, from the class(es) missed. {\itshape Four or more unexcused absences from lectures could result in receiving a grade penalty per additional absence or an `F' in the course.} Furthermore, excessive lateness will also count as an absence. If you are dismissed from lecture due to problems during the lecture, e.g. disruptive behavior or unauthorized cell phone use, then this dismissal will be recorded as an absence for the lecture. If you cannot attend a class due to illness, inform your instructor immediately so that arrangements can be made. In this case, the student may be required to participate in lectures virtually and submit assignments online. \pspace
 
 {\itshape\bfseries\color{stacred}Participation.} Students are expected to participate in the course---both inside and outside the classroom. Inside the classroom, this means attending class, paying attention, taking notes, asking and answering questions when appropriate, etc. However, course participation does not begin and end at the classroom door. Students are expected to review course material and complete course assignments. Typically, students can expect to spend approximately 3~hours per credit outside of class working for the course---although some weeks this could be more or less. \pspace
-
-Beyond classroom participation, students are expected to participate in the course by working on additional problems to further their learning. Additional problem sets will be distributed during lectures as well as on the course webpage. Students should attempt these problems to engage more with course concepts, practice their problem solving skills, prepare for their exams, etc. Therefore, there will be a weekly check whether students are working on these problems. This is simply a check---these problems will not be graded. Students will simply be accessed on whether they have completed and written solutions to at least half these problems. While this will often be accessed in-class, students may have to or be required to verify that they have completed these additional problems outside of class, i.e. during office hours or through a scheduled individual meeting with the instructor. Each such verification must occur by the Friday of that particular class week. Because one of the purposes of this grade component is encourage students to keep pace with the material, no make-ups will be given. Each such verification will be weighted equally in the participation grade. \pspace
 
 Students are highly encouraged to form study groups to help support themselves and their fellow students' learning. These groups can be used to review notes or additional resources, work on class activities, discuss homework problems, etc. However, these groups {\itshape should not} be used to simply solve problems for others or have others solve your problems for you. For instance, students may not `assign' homework problems to each other to solve in order to complete assignments. Using study groups in this or similar manners is an academic integrity violation that will be dealt with harshly. If you are unsure if what plan on doing or are doing in study groups is appropriate, discuss this with your instructor. At no time may students discuss any possible take-home exam---directly or indirectly---until the instructor has indicated that the exam period has passed. \sectionbreak
 
 
 
-% Activities
-\mysection{0.36}{Activities\label{act}} Because this is an introductory level course, many of the students will be Freshmen who are new to the college. As a small liberal arts college, we are committed to fostering a student-focused, inclusive, and engaging environment. We want to encourage community building that helps create holistic students that are well-prepared for their future careers. Therefore, this course should help to foster community building. Students will be required to attend at least 10~different approved college or community events by the end of the semester. These events could include convocation, seminars or other college presentations, sporting events, college social nights, community volunteerism events, etc. If you are unsure whether a particular activity is appropriate, consult with your instructor before assuming that it will be counted. Students must submit proof of attendance and participation for each of these events to the instructor. This could be a photo or video of event participation (including the student), a signed form/affidavit, etc. This proof of attendance and participation will be submitted to the instructor. The submission should include the name of the event and the day/time of the event. Students must attend at least ten such events by the end of the course. Each event will be weighted equally. Students are especially encouraged to attend events with others---especially from the course! While the same verification, e.g. the same photo of the students at the event, may be used by multiple students, each student need submit the verification separately. \pspace
-
-
-
-% Quizzes
-\mysection{0.18}{Quizzes\label{quiz}}
-There will be a quiz \textit{every} class. Quizzes are meant to be short and simple. These quizzes serve more as a method of gauging whether you are keeping up with the material. It is important that if you are late that you obtain a copy of the quiz immediately. Quiz solutions will often be discussed following the quiz. Because quiz solutions will often be discussed in class, no make-up quizzes will be given except under extraordinary circumstances determined on a case-by-case basis at the discretion of the instructor. Unless otherwise instructed, there are no calculators, computational devices, notes, or outside assistance of any kind allowed on quizzes. \pspace
-
-
-
-
-
-\newpage
-
-
-
-
-
-% Exams
-\mysection{0.18}{Exams\label{exams}}
-There will be three exams in this course, each worth 10\% of the total course grade for a total of 30\% of the course grade. The schedule of the exams can be found in the `Course Schedule' section of the syllabus. However, these exam dates are subject to change. Students should not make plans to leave campus before December~16th or otherwise have conflicts on that date. Each of the exams covers approximately the third of the course material proceeding the exam date. However, any course topics may appear on any exam. Students should be present, seated, and prepared for a scheduled exam before the exam begins. Students who are late should not expect extra exam time. Furthermore, students who miss an exam should not expect to receive a make-up exam. There will be no make-up exams except under extraordinary circumstances, e.g. in the case of an emergency. However, determinations for make-up exams or other substitutions, with possible grade deductions, are made at the discretion of the instructor on a case-by-case basis. Unless otherwise instructed, no devices or materials other than those provided by the instructor are allowed on any exam. Exams may involve out-of-class portions, which will be submitted at a time and manner specified in lecture. Furthermore, it may be possible that any exam will be a take-home exam. In this case, the exam procedure and schedule will be announced in advance during lecture. 
-\sectionbreak
+% Events
+\mysection{0.36}{Events}{events}
+Because this is an introductory level course, many of the students will be freshmen who are new to the college. As a small liberal arts college, St. Thomas Aquinas College is committed to fostering a student-focused, inclusive, and engaging environment. We want to encourage community building that helps create holistic students that are well-prepared for their future careers. Therefore, this course should help to foster community building. Students will be required to attend at least 10~different approved college or community events by the end of the semester. These events could include convocation, seminars or other college presentations, sporting events, college social nights, community volunteerism events, etc. If you are unsure whether a particular activity is appropriate, consult with your instructor before assuming that it will be counted. Students must submit proof of attendance and participation for each of these events to the instructor. This could be a photo or video of event participation (including the student), a signed form/affidavit, etc. This proof of attendance and participation will be submitted to the instructor via Canvas. The submission should include the name of the event, day/time of the event, and a brief description of the event. Students must attend at least ten such events by the end of the course. Each event will be weighted equally. Students are especially encouraged to attend events with others---especially from the course! While the same verification, e.g. the same photo of the students at the event, may be used by multiple students, each student need submit the verification separately. \pspace
 
 
 
 % Project
-\mysection{0.18}{Project\label{project}}
-There will be a project in this course. This project will involve both an individual and group component. Groups will consist of at least two students but no more than five students. As a group, students will choose a mathematical topic in Data Science to research. The project should discuss a way that Data Science is being used in modern society, especially focusing on the societal impact of Data Science. Therefore, the project should discuss the pros and cons of their particular application of Data Science. The project should include several relevant, recent examples of their particular application of Data Science. The project groups will prepare a presentation on their topic that will be given the last week of class. While each student is to help prepare the presentation, effort should be shared equally among the students. Furthermore, each student should participate equally in giving the presentation. These presentations are anticipated to occur on December~14th, so students should make no plans to leave campus before then or otherwise have conflicts on this date. \pspace
+\mysection{0.18}{Project}{project}
+Data science is a field at an intersection of Mathematics and Computer Science. Although `recognizable' data science has been around for about 50--60 years, the field has seen an explosion in the last 15~years. This is unlikely to change in the decade to come. From steaming service recommendations, predicting diseases and recommending treatments, generating text, images, music, and video, optimizing business decisions, summarizing and finding patterns in data, etc., data science is intertwined with nearly every aspect of society. Moreover, the effects and influences of this data science revolution are likely to grow over the next decade---for better or for worse. It is not fortuitous that the topics of this course are intertwined with the elementary aspects of data science. Contemporary students should be familiar with what data science is, why it is so ubiquitous, where it is being and might be used, the pros and cons of its use, and how to make use of current technology created by its practitioners in a way that would be attractive to future employers. \par\vspace{0.4cm}
 
-Additionally, each student will have to write a paper on their group topic. Unlike their presentations, each group member will write their paper individually and independently. Each student's paper topic must be the on the same broad topic/application of Data Science as their group presentation topic. However, the paper need not be and should not be substantially identical to the group presentation. Papers are only required to be at least two pages long, but no longer than five pages, and will be due at the beginning of presentations on December~14th. These papers should allow students to show off their own individual perspective, creativity, and talents. Therefore, students may substitute an approved creative project in place of a paper. This substitution, along with a suggested grading scale, must be approved by the instructor and be of equivalent workload to the paper.
+Therefore, each student in the course will produce some creative endeavor using data science related technologies of their choosing. Specifically, each student will have an ultimate product or goal in mind. They then find several technologies---open source, paid, or otherwise---to design, create, alter, implement, etc. their `product' or achieve their goal. The specifics of this aspect of the project are intentionally vague as each student may choose anything of interest or anything related to their career goals; however, the student should be sure that their project idea is manageably achievable given time constraints, technological skills, availability of programs or services, costs, etc. The project should make use of several distinctive technologies, e.g. computer programs, apps, websites, etc., in their product production or goal achievement. Furthermore, the project should not be a `single step' and instead involve several distinct, substantive processes; for example, an inappropriate project would be to choose to write a poem or short story and simply prompt ChatGPT, ``write me a poem or short story.'' The project may be \textit{somewhat} hypothetical in nature, so long as a solid proof of concept is demonstrated with at least one concrete example output. All work related to the project will be submitted via Canvas. However, if there are submission issues, then discuss this with the instructor as soon as possible. Finally, each student will give a 7--10 minute presentation of their project, where they will `pitch' their idea, overview their project, present their outputs, and discuss the societal implications of their project. This presentation might be thought of as a longer, more ethics focused, elevator pitch. \par\vspace{0.4cm}
+
+For example, a student might choose a project based on their career goal of running their own recruitment service. For example, their company might help connect computer engineers to start-ups, small businesses, big corporations, etc. in exchange for a fee. The student proposes an in-house software to make employees more productive by off-loading some of their initial work. Employees and clients would interact with some `front facing' part of the software whose output would be sent to some open source technology or paid service whose output comes back to the company employee. For example, while sitting with an employee, a client would enter their education, employment history, skills, etc. into a form on the company's website. The client would also provide a list of companies that they are interested in working for and the employee would also take their photo. This would all get stored in a company database. The program takes this text data from the database and submits it to a large language model, e.g. ChatGPT, to produce a r\'esum\'e and a cover letter to each of the client provided companies. The provided photo is submitted to an image AI to create professional headshots that will be included in the application. This is then all compiled and returned to the employee and client, in real-time, for them to discuss, review, and edit. Of course, thus far, the project is only hypothetical. The student does not need to develop the software, only give a proof of concept---easily done! The student can propose a hypothetical client---themself. They can enter their real or imagined education, employment history, skills, etc. into a spreadsheet along with a list of desired future employers. They also take a photo of themselves and add it to the spreadsheet. They then have a complete database. The student then takes all the text data and inputs it into ChatGPT with an appropriate prompt to create a r\'esum\'e, cover letter, and email targeted to those companies. They then take their photo from the spreadsheet and input it into \textit{fotor} or \textit{Aragon} to create professional headshots based on their likeness. Finally, they compile all of this into a PDF. Of course, the proposed software would automate this or a similar process. The student can then make some edits (with explanation) based on a hypothetical conversation between the employee and the client. Thus, the concept has been fully demonstrated! Observe that this project makes use of several different technologies: spreadsheets, ChatGPT, \textit{fotor}, etc, and there are several steps in the process of creating the application package. The student's presentation can discuss their proposal for this software, explain how they demonstrated proof of concept, present their outputs, and exhibit the final product. For the required societal impact analysis, the student might talk about how this could `level the playing field' for individuals whose first language is not English, cannot afford professional headshots, have not been instructed in how to create these types of documents, etc. However, the student could (and should) also discuss how this could easily lead to a tsunami of high quality `bot' applications by individuals (or actual bots) spamming employers, or how this approach might be caught by an AI detector, resulting in their client's applications being ignored or rejected. \par\vspace{0.4cm}
+
+Each student will work independently on a unique project that they propose. Before starting the project, students should submit their project proposal to the course instructor. Students cannot work on the same project. Project proposals are approved on a first-come, first-serve basis. Do not wait until the last minute to think of an idea and propose it to the instructor. Project proposals can be made to the instructor via email, during office hours, or through an individual appointment. If you are a struggling coming up with a proposal or experiencing difficulties with the project, do not hesitate or delay in discussing this with the course instructor. Projects will be submitted the last calendar week of the semester and project presentations will be the last week of classes. 
 \sectionbreak
- 
 
 
 
+% Quizzes
+\mysection{0.18}{Quizzes}{quiz}
+There will be a quiz \textit{every} class. Quizzes are meant to be short and simple. These quizzes serve more as a method of gauging whether you are keeping up with the material. It is important that if you are late that you obtain a copy of the quiz immediately. Quiz solutions will often be discussed following the quiz. Because quiz solutions will often be discussed in class, no make-up quizzes will be given except under extraordinary circumstances determined on a case-by-case basis at the discretion of the instructor. Unless otherwise instructed, there are no calculators, computational devices, notes, or outside assistance of any kind allowed on quizzes. \pspace
 
-\newpage
+
+
+% Exams
+\mysection{0.18}{Exams}{exams}
+There will be three exams in this course, each worth 10\% of the total course grade for a total of 30\% of the course grade. The schedule of the exams can be found in the `Course Schedule' section of the syllabus. However, these exam dates are subject to change. Students should not make plans to leave campus before December~15th or otherwise have conflicts on/before that date. Each of the exams covers approximately the third of the course material proceeding the exam date. However, any course topics may appear on any exam. Students should be present, seated, and prepared for a scheduled exam before the exam begins. Students who are late should not expect extra exam time. Furthermore, students who miss an exam should not expect to receive a make-up exam. There will be no make-up exams except under extraordinary circumstances, e.g. in the case of an emergency. However, determinations for make-up exams or other substitutions, with possible grade deductions, are made at the discretion of the instructor on a case-by-case basis. Unless otherwise instructed, no devices or materials other than those provided by the instructor are allowed on any exam. Exams may involve out-of-class portions, which will be submitted at a time and manner specified in lecture. Furthermore, it may be possible that any exam will be a take-home exam. In this case, the exam procedure and schedule will be announced in advance during lecture. 
+\pspace
 
 
 
-
-% Homework
-\mysection{0.18}{Homework\label{hw}}
+% Homeworks
+\mysection{0.18}{Homeworks}{hw}
 The only way to learn Mathematics is to do Mathematics! Therefore, there will be weekly homework assignments. In fact, students should anticipate being assigned homework {\itshape every} class---typically due the next class. It is essential for students to complete all of the assignments for the course. Working on homework is the best way of engaging with course concepts and gauging one's mastery of the material. Moreover, homework is an essential portion of the course grade. Assignments should be started as soon as possible. Do not delay working through homework; it is easier to keep up than it is to catch up. Students may request extensions on homework assignments. Requests for extensions should be submitted to the instructor in a timely fashion---do not delay! However, do not simply assume that you will be able to receive extra time on an assignment and plan your schedule carefully. Any extensions, due dates, and grade penalties for late assignments will be determined by the instructor on a student-by-student basis. \pspace
 
 You are encouraged to work with others on homeworks. Mathematics is a social activity! The purpose of working together on assignments is to engage with course topics, see different perspectives, ask questions, and have others look over your work. However, do not simply use others to do your assignments. You should also not allow other students to use you to complete their assignments. Of course, using online solutions is a violation of the St. Thomas Aquinas College academic integrity policies. If you are unsure of whether a particular resource is appropriate to use on an assignment, consult with your instructor first. \sectionbreak
@@ -290,32 +280,24 @@ You are encouraged to work with others on homeworks. Mathematics is a social act
 
 
 % Mathematics Help
-\mysection{0.24}{Mathematics Help\label{help}}
+\mysection{0.24}{Mathematics Help}{help}
 Be proactive about your success in the course! If you need help, there are many resources available to help you. Your first primary contact for help is the instructor. If you are struggling, attend office hours or send an email. The instructors office hours for this semester can be found below: \par
 	\begin{table}[!ht]
 	\centering
 	\begin{tabular}{l || l}
 	Mon. & 11:30~am -- 12:30~pm \\
-	Tues. & 4:00~pm -- 5:00~pm \\
+	Tues. & 11:30~am -- 12:30~pm \\
 	Wed. & 11:30~am -- 12:30~pm \\
-	Thurs. & 4:00~pm -- 5:00~pm \\
+	Thurs. & 11:30~am -- 12:30~pm \\
 	Fri. & 11:30~am -- 1:30~pm
 	\end{tabular}
 	\end{table}
-Do not wait to bring issues, course related or otherwise, to the attention of the instructor. If you cannot attend office hours, send an email to the instructor to try to make other arrangements. There are also a number of resources available to you at St. Thomas Aquinas College: Center for Student Success, Academic Recovery Program, Writing Center, etc. Students looking for extra mathematics help should consult with the Academic Services Office in Spellman~106, via email at \href{mailto:AcademicServices@stac.edu}{academicservices@stac.edu}, or on the web at \href{https://www.stac.edu/academics/academic-services}{https://www.stac.edu/academics/academic-services}. The Center for Student Success website is \url{https://www.stac.edu/academics/academic-services/center-student-success} and can be found at Spellman~111 or contacted at 845.398.4090. \sectionbreak
-
-
-
-
-
-\newpage
-
-
+Do not wait to bring issues, course related or otherwise, to the attention of the instructor. If you cannot attend office hours, send an email to the instructor to try to make other arrangements. There are also a number of resources available to you at St. Thomas Aquinas College: Center for Student Success, Academic Recovery Program, Writing Center, etc. Students looking for extra mathematics help should consult with the Academic Services Office in Spellman~106, via email at \href{mailto:AcademicServices@stac.edu}{academicservices@stac.edu}, or on the web at \href{https://stac.edu/academics/academic-services/}{https://stac.edu/academics/academic-services/}. The Center for Student Success website is \url{https://stac.edu/academics/academic-services/center-for-student-success/} and can be found at Spellman~111 or contacted at 845.398.4090. \sectionbreak
 
 
 
 % Respect Policy
-\mysection{0.19}{Respect Policy\label{respect}}
+\mysection{0.19}{Respect Policy}{respect}
 Learning requires a healthy academic environment. A key component to this is respecting everyone's time---especially giving everyone time to fail, ask questions, and learn. Therefore, everyone should abide by the following respect policies: 
 
 The instructor will respect student's time:
@@ -334,6 +316,16 @@ Students will respect the instructor's time:
 	\item They will read and follow course policies. 
 	\end{itemize} \pspace
 
+
+
+
+
+\newpage
+
+
+
+
+
 Students will respect each other's time:
 	\begin{itemize}
 	\item They will not be disruptive in class. If you need to call or text someone, take it outside of the classroom. 
@@ -345,54 +337,43 @@ Students will respect each other's time:
 
 
 
-%% COVID Discussion Policy
-%\mysection{0.31}{COVID Discussion Policy\label{covid_disc}}
-%At the time of writing, there have been over 94.1~million cases of COVID-19 in the United States with over 1,043,803 deaths; moreover, there have been over 600~million cases with 6.4~million deaths worldwide. It is an understatement to say that these are trying times not just for students, including their friends and family, but for our broader community. While many of us use humor to cope with difficult situations, we are often able to do so without great offense because we can choose our words and our actions to fit an audience with which we are familiar---be it friends or family. \pspace
-%
-%However, this luxury may not be available to us in the classroom. You will likely not know all your classmates and their circumstances. It is not unlikely that at least one of your classmates in at least one of your classes has lost an acquaintance, friend, or family member to COVID-19. Worse yet, because of social distancing, they may not have been able to properly mourn them. Even if a classmate has not lost someone, they or someone in their life may be experiencing financial hardships or other crises due to COVID-19. \pspace
-%
-%All students are expected to respect and protect each other by abiding by the college's vaccination and mask policies. But protecting the health of others is the minimum that one can do during a pandemic. We need to go beyond basic physical health and support our community's mental health. By enrolling in this course, you agree to refrain from making jokes or other trivialization of the COVID-19 pandemic while participating in the course, both online and in-person.
-%\sectionbreak
-
-
-
 % Email Policy
-\mysection{0.18}{Email Policy\label{email_policy}}
+\mysection{0.18}{Email Policy}{email_policy}
 All email communication in this course should be done using your @stac.edu email account. Similarly, any digital course access and file submissions should be made using your @stac.edu email account. Abiding by federal guidelines, emails coming from a non-STAC email may not receive a response. Emails should be properly written: contain appropriate subject line, possess an opening and closing address, be understandable and contain appropriate language, be grammatically correct, have appropriate font style and size, etc. Emails which do not follow these guidelines may not receive a response.
 \sectionbreak
 
 
 
 % Electronic Device Policy
-\mysection{0.31}{Electronic Device Policy\label{electronic}}
-Students are expected to complete the course without the use of calculators or other computational devices on assignments, quizzes, exams, etc., unless otherwise instructed. Any unauthorized use of such devices are considered a violation of the academic integrity policies. During the course, \href{http://www.wolframalpha.com/}{http://www.wolframalpha.com/}, \href{https://www.symbolab.com/}{https://www.symbolab.com/}, and Mathematica will be used to demonstrate concepts give students an opportunity to be able to check work. However, these should only be used as instructed, and never during a quiz or exam. All electronic devices should be turned off and put away during class unless otherwise instructed or given specific permission. Use of such devices can result in dismissal from class.
+\mysection{0.31}{Electronic Device Policy}{electronic}
+Students are expected to complete the course without the use of calculators or other computational devices on assignments, quizzes, exams, etc., unless otherwise instructed. Any unauthorized use of such devices are considered a violation of the academic integrity policies. During the course, \href{http://www.wolframalpha.com/}{http://www.wolframalpha.com/}, \href{https://www.symbolab.com/}{https://www.symbolab.com/}, and Mathematica may be used to demonstrate concepts give students an opportunity to be able to check work. However, these should only be used as instructed, and never during a quiz or exam. All electronic devices should be turned off and put away during class unless otherwise instructed or given specific permission. Use of such devices can result in dismissal from class.
 \sectionbreak
 
 
 
 % Mental Health & Counseling Services
-\mysection{0.49}{Mental Health and Counseling Services\label{mental_health}}
-If at any point during the semester, you feel overwhelmed with your class work, feel thoughts of depression/suicide, experience sexual assault/rape, experience problems with substance abuse or relationship abuse, or have any other struggles with physical/mental health, \underline{\bfseries\itshape please seek help}! The Counseling \& Psychological Services (CAPS) at St. Thomas Aquinas College is a resource offering assistance with any issue you might have. There is \underline{\bfseries\itshape never} any shame in seeking help. If you or someone you know is struggling with any of these issues, {\itshape speak out}! The CAPS website can be found at \href{https://www.stac.edu/student-life/counseling-psychological-services}{https://www.stac.edu/student-life/counseling-psychological-services}. CAPS is located in the upper level of the Romano Student Alumni Center and can be contacted at 845.398.4065. If you or someone you know is having issues with gender or sexual identity issues, CAPS is also there to create a safe space for those with marginalized genders and sexualities or those who might be struggling with these issues. Know that my office is a safe space and should you prefer any gender specific pronoun/name, please be sure to make me aware! Students may also make use of the College Health \& Wellness Services located in the McNelis Commons Residence Life Complex, Apartment~2B which can also be contacted at \href{mailto:stachealth@stac.edu}{stachealth@stac.edu} or 845.398.4242, as well as the Campus Ministry and Volunteer Services, directed by Nick Migliorino, located in the Romano Student Alumni Center and can be contacted at \href{mailto:nmiglior@stac.edu}{nmiglior@stac.edu} or 845.398.4084.
-\sectionbreak
+\mysection{0.49}{Mental Health and Counseling Services}{mental_health}
+If at any point during the semester, you feel overwhelmed with your class work, feel thoughts of depression/suicide, experience sexual assault/rape, experience problems with substance abuse or relationship abuse, or have any other struggles with physical/mental health, \underline{\bfseries\itshape please seek help}! The Counseling \& Psychological Services (CAPS) at St. Thomas Aquinas College is a resource offering assistance with any issue you might have. There is \underline{\bfseries\itshape never} any shame in seeking help. If you or someone you know is struggling with any of these issues, {\itshape speak out}! The CAPS website can be found at \href{https://stac.edu/student-life/counseling-psychological-services/}{https://stac.edu/student-life/counseling-psychological-services/}. CAPS is located in the upper level of the Romano Student Alumni Center and can be contacted at 845.398.4065. If you or someone you know is having issues with gender or sexual identity issues, CAPS is also there to create a safe space for those with marginalized genders and sexualities or those who might be struggling with these issues. Know that my office is a safe space and should you prefer any gender specific pronoun/name, please be sure to make me aware! Students may also make use of the College Health \& Wellness Services located in the McNelis Commons Residence Life Complex, Apartment~2B which can also be contacted at \href{mailto:stachealth@stac.edu}{stachealth@stac.edu} or 845.398.4242, as well as the Campus Ministry and Volunteer Services, directed by Nick Migliorino, located in the Romano Student Alumni Center and can be contacted at \href{mailto:nmiglior@stac.edu}{nmiglior@stac.edu} or 845.398.4084.
+\pspace
 
 
 
 % Faith/Tradition Observances Policy
-\mysection{0.44}{Faith/Tradition Observances Policy\label{faith}}
+\mysection{0.44}{Faith/Tradition Observances Policy}{faith}
 The instructor recognizes the diversity of faiths and traditions represented in the campus community. Students should have the right to observe religious holy days according to their faith and traditions. Accordingly, students may notify their instructor, no later than the end of the second week of classes, of any classes that they will be missing due to religious or traditional observances. Students following this guideline will be excused from these classes. Under this policy, students should have an opportunity to make up any examination, study, or work missed due to these observances or have an equitable and appropriate substitution made. All policy and procedural decisions are made at the discretion of the instructor on a student-by-student basis. 
-\sectionbreak
+\pspace
 
 
 
 % Use of Student Work
-\mysection{0.27}{Use of Student Work\label{std_work}}
+\mysection{0.27}{Use of Student Work}{std_work}
 In compliance with the federal Family Educational Rights and Privacy Act (FERPA), registration in this class is understood as permission for assignments prepared for this class to be used anonymously in the future for educational purposes.
 \sectionbreak
 
 
 
 % Course Materials Policy
-\mysection{0.30}{Course Materials Policy\label{copyright}}
+\mysection{0.30}{Course Materials Policy}{copyright}
 All course materials (defined to include, but not limited to, course handouts, video/audio lectures, assignments, quizzes, exams, etc.) are the intellectual property of the instructor or St. Thomas Aquinas College, unless the copyright is already explicitly held by some other individual, group, or other entity. Therefore, course materials are protected by United States copyright law, see Title~17~USC. Students in this course are permitted to download some course materials for personal use. \pspace
 
 However, students are not permitted to (in print, digitally, or otherwise) share, distribute, sell, or publish course materials, either in part or in whole, without the instructors explicit written and signed permission along with a personal usage code. Unauthorized reproduction or distribution of course materials is a violation of intellectual property law, and is a violation of the student code of conduct. The instructor, or agent acting on behalf of the instructor with written and signed permission, also reserves the right to delete or disable any link to any course materials. In enrolling in the course, the student agrees to abide by this course materials policy in perpetuity.
@@ -401,14 +382,14 @@ However, students are not permitted to (in print, digitally, or otherwise) share
 
 
 % Syllabus Policy
-\mysection{0.20}{Syllabus Policy\label{syllabus}}
+\mysection{0.20}{Syllabus Policy}{syllabus}
 The instructor reserves the right to revise, including substantially revise, the course syllabus at any time---with or without notification. By enrolling in this course, students agree to all the policies found in the syllabus. Wherever applicable, students also agree to follow syllabus policies in perpetuity, e.g. students may not provide unauthorized assistance, materials, etc. to students enrolled in future versions of this course. 
 \sectionbreak
 
 
 
 % Tips for Success
-\mysection{0.21}{Tips for Success\label{tips}}
+\mysection{0.21}{Tips for Success}{tips}
 \begin{itemize} \itemsep=0.3ex
 \item Be proactive about your success in the course.
 \item Do not procrastinate! Begin your assignments and studying early!
@@ -421,21 +402,14 @@ The instructor reserves the right to revise, including substantially revise, the
 
 
 
-
-
-\newpage
-
-
-
-
 % Important Dates
-\mysection{0.22}{Important Dates\label{imp_dates}}
+\mysection{0.22}{Important Dates}{imp_dates}
 \begin{itemize} \itemsep=0.3ex
-\item 09/13: Academic Add/Drop Deadline
-\item 10/08 -- 10/11: Study Days (No Classes)
-\item 10/21: Mid-semester
-\item 11/10: Academic Withdrawal Deadline
-\item 12/16: Last day of classes/exams
+\item 09/12: Academic Add/Drop Deadline
+\item 10/09 -- 10/10: Study Days (No Classes)
+\item 10/20: Mid-semester
+\item 11/09: Academic Withdrawal Deadline
+\item 12/15: Last day of classes/exams
 \end{itemize}
 \sectionbreak
 
@@ -448,10 +422,10 @@ The instructor reserves the right to revise, including substantially revise, the
 % -----
 
 % College Policies
-\largeheader{0.5cm}{College Policies\label{college_polc}}
+\largeheader{0.5cm}{College Policies}{college_polc}
 
 % Academic Integrity
-\mysection{0.25}{Academic Integrity\label{college_acadint}}
+\mysection{0.25}{Academic Integrity}{college_acadint}
 
 Academic integrity is a commitment to honesty, trust, fairness, respect, and responsibility within an academic community. An academic community of integrity advances the quest for truth and knowledge by requiring intellectual and personal honesty in learning, teaching, research, and service. Honesty begins with oneself and extends to others. Such a community also fosters a climate of mutual trust, encourages the free exchange of ideas, and enables all to reach their highest potential. \pspace
 
@@ -462,36 +436,26 @@ Academic integrity is essential to St. Thomas Aquinas College’s mission to edu
 
 
 % Academic Dishonesty
-\mysection{0.28}{Academic Dishonesty\label{college_acaddis}}
+\mysection{0.28}{Academic Dishonesty}{college_acaddis}
 
-Academic dishonesty is defined as any behavior that violates the principles outlined above. St. Thomas Aquinas College strictly prohibits academic dishonesty. Any violation of academic integrity policies that constitutes academic dishonesty will be subject to harsh penalties, ranging up to and including dismissal from the College.
+Academic dishonesty is defined as any behavior that violates the principles outlined above. St. Thomas Aquinas College strictly prohibits academic dishonesty. Any violation of academic integrity policies that constitutes academic dishonesty will be subject to harsh penalties, ranging up to and including dismissal from the College. \pspace
 
-For all Academic Integrity violations, faculty must file a Student Conduct Academic Dishonesty Report, which will be shared with the Dean of the appropriate School, the Provost, and the student. The student will also have to file a Student Academic Integrity Violation Report. Please view the full policy and the associated forms at \url{https://www.stac.edu/academics/academic-integrity-policy}. \sectionbreak
+For all Academic Integrity violations, faculty must file a Student Conduct Academic Dishonesty Report, which will be shared with the Dean of the appropriate School, the Provost, and the student. The student will also have to file a Student Academic Integrity Violation Report. Please view the full policy and the associated forms at \url{https://stac.edu/academics/registrar/academic-policies/}. \sectionbreak
 
 
 
 % Electronic Use Policy
-\mysection{0.27}{Electronic Use Policy\label{college_elecuse}}
+\mysection{0.27}{Electronic Use Policy}{college_elecuse}
 
 Faculty members at St. Thomas Aquinas College have the discretion to regulate the use of electronic devices in their classes, and students should not use such devices without the expressed permission of the professor. This policy covers cell phones, tablets, laptop computers, or any other device the use of which might constitute a distraction to the professor or to the other students in the class, as determined by the professor. Students with documented disabilities should discuss the use of laptops and/or other electronic devices with their professor at the beginning of the semester. \pspace
 
 When a professor designates a time during which electronic devices may be used, they are only to be used at the discretion of the faculty member and in accordance with the mission of the college. Professors may develop specific and reasonable penalties to deal with violations of these general policies. For more extreme cases of classroom disruption, refer to the College's Disruptive Student Policy. \pspace
 
-Please note that a browser lockdown system may be implemented in order to prevent cheating during assessments such as exams and quizzes. Faculty are expected to confirm that these systems will work with students’ laptops before requiring their use. \pspace
-
+Please note that a browser lockdown system may be implemented in order to prevent cheating during assessments such as exams and quizzes. Faculty are expected to confirm that these systems will work with students' laptops before requiring their use. \pspace
 
 {\itshape Recording of Lectures:} Class meetings that include course content or identifiable student information are protected by the Family Education Rights and Privacy Act (FERPA), found at \url{https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html}. At times throughout the semester, the faculty member may record their lecture. It is a best practice for faculty to notify participants that their session is going to be recorded. This recording \textit{\textbf{CANNOT}} be shared with anyone who is not enrolled in this specific course section. \pspace
 
-Students cannot personally record class sessions and then share them outside of the course, although they can maintain them for personal use. \sectionbreak
-
-
-
-% Academic Accommodations for Students with Disabilities Statement
-\mysection{0.83}{Academic Accommodations for Students with Disabilities Statement\label{college_acadacc}}
-
-St. Thomas Aquinas College values diverse types of learners and is committed to ensuring that each student is afforded equal access to participate in all learning experiences. If you have a learning difference or a disability---including a mental health, medical, or physical impairment---that would hinder your access to learning in this class, please contact Disability Services. They will confidentially explain the accommodation request process and the type of documentation that may be needed to determine your eligibility for reasonable accommodations. To learn more about academic accommodations for students with disabilities, please contact Anne Schlinck, Director of Disability Services, at \href{mailto:aschlinc@stac.edu}{aschlinc@stac.edu} or call/text 845.398.4087. Disability Services is located in Room~L102 in the lower level of Spellman Hall. \pspace
-
-If you have already been granted academic accommodations at St. Thomas Aquinas College, you have the right to receive the academic accommodations that are listed on your Letter of Accommodation. Please, understand that it is your responsibility as a student registered with Disability Services to provide your Letter of Accommodation to your instructor if you wish to use your accommodations in this course. If you will need to use your testing accommodations, please be sure to review the Disability Services Testing Accommodation Policies---Academic Year 2022--2023 found at \href{https://docs.google.com/document/d/1V5iUtgypiS8kClqhSLPde7AOSZPoLu6CsIDcpiEic2w/edit}{Disability Services Testing Accommodation Policies}. \sectionbreak
+Students cannot personally record class sessions and then share them outside of the course, although they can maintain them for personal use. \pspace
 
 
 
@@ -503,123 +467,112 @@ If you have already been granted academic accommodations at St. Thomas Aquinas C
 
 
 
+% Academic Accommodations for Students with Disabilities Statement
+\mysection{0.83}{Academic Accommodations for Students with Disabilities Statement}{college_acadacc}
+
+St. Thomas Aquinas College values diverse types of learners and is committed to ensuring that each student is afforded equal access to participate in all learning experiences. If you have a learning difference or a disability---including a mental health, medical, or physical impairment---that would hinder your access to learning in this class, please contact Disability Services. They will confidentially explain the accommodation request process and the type of documentation that may be needed to determine your eligibility for reasonable accommodations. To learn more about academic accommodations for students with disabilities, please contact Anne Schlinck, Director of Disability Services, at \href{mailto:aschlinc@stac.edu}{aschlinc@stac.edu} or call/text 845.398.4087. Disability Services is located in Room L102 in the lower level of Spellman Hall. \pspace
+
+If you've already been granted academic accommodations at St. Thomas Aquinas College, you have the right to receive the academic accommodations that are listed on your Letter of Accommodation. Please understand that it is your responsibility as a student registered with Disability Services to provide your Letter of Accommodation to your instructor if you wish to use your accommodations in this course. If you will need to use your testing accommodations, please be sure to review the Disability Services Testing Accommodation Policies - Academic Year 2023--2024 found at \href{https://docs.google.com/document/d/1V5iUtgypiS8kClqhSLPde7AOSZPoLu6CsIDcpiEic2w/edit?usp=sharing}{Disability Services Testing Accommodation Policies}. \sectionbreak
+
+
+
 % Gender- or Sex-Based Misconduct Policy
-\mysection{0.50}{Sexual Misconduct Policy\label{college_sexmisconduct}}
+\mysection{0.50}{Sexual Misconduct Policy}{college_sexmisconduct}
 
-Students should be aware that faculty members are required to report certain information to the STAC’s Title~IX Coordinator. If you inform your instructor about, or that person witnesses, gender- or sex-based misconduct, which includes sexual harassment, sexual assault, intimate partner or domestic violence, stalking, or any gender- or sex-based discrimination, the faculty member will keep the information as private as possible, but must bring it to the attention of STAC’s Title~IX Coordinator. \pspace
+Students should be aware that faculty members are responsible employees and are required to report certain information to STAC’s Title~IX Coordinator. If you inform your instructor about, or that person witnesses, gender- or sex-based misconduct, which includes sexual harassment, sexual assault, intimate partner or domestic violence, stalking, or any gender- or sex-based discrimination, the faculty member will keep the information as private as possible, but must bring it to the attention of STAC's Title~IX Coordinator. \pspace
 
-Students should also be aware that disclosing such experiences in course assignments does NOT put the College on notice and will NOT begin the process of STAC providing assistance or response to those experiences. If you would like to talk to the Title~IX Coordinator directly, you can contact Mr. Norman Huling (\href{mailto:nhuling@stac.edu}{nhuling@stac.edu}, 845.398.4068). Additionally, you also may report incidents or complaints to Title IX Deputy Coordinators, Ms. Nicole Ryan (\href{mailto:nryan@stac.edu}{nryan@stac.edu}, 845.398.4163) or Dr. Benjamin Wagner (\href{mailto:bwagner@stac.edu}{bwagner@stac.edu}, 845.398.4212), or you can contact the Office of Campus Safety and Security (845.398.4080). You can find more information at \url{www.stac.edu/titleix}. \pspace
+Students should also be aware that disclosing such experiences in course assignments does NOT put the College on notice and will NOT begin the process of STAC providing assistance or response to those experiences. \pspace
 
-Please remember that instances of gender- and sex-based misconduct that occur in virtual/online environments are covered by STAC’s Title~IX, Student Code of Conduct, and Faculty/Employee Conduct policies. If you would like to report a private concern to a confidential counseling resource who is not required to initiate a Title~IX report, you may contact the following people on a confidential basis: \pspace
+Please remember that instances of gender- and sex-based misconduct that occur in virtual/online environments are covered by STAC’s Title~IX, Student Code of Conduct, and Faculty/Employee Conduct policies. \pspace
 
-	\hfill\begin{minipage}[t]{0.49\textwidth}
+The College encourages individuals who experience, witness or become aware of alleged sexual misconduct to report the incident to the Title~IX Coordinator. The College will assist individuals in contacting law enforcement, if desired. The College also provides individuals the opportunity to discuss alleged incidents with a trained professional on campus with the assurance that the discussion will be confidential. \pspace
+
+The following reporting processes are:
+	\begin{itemize}
+	\item {\bfseries Non-Confidential Reporting Resources}: If you would like to talk to the Title~IX Coordinator directly, you can contact Mr. Norman Huling (\href{mailto:nhuling@stac.edu}{nhuling@stac.edu}, 845.398.4068). Additionally, you also may report incidents or complaints to Title~IX Deputy Coordinators, Ms. Nicole Ryan (\href{mailto:nryan@stac.edu}{nryan@stac.edu}, 845.398.4163) or Dr. Benjamin Wagner (\href{mailto:bwagner@stac.edu}{bwagner@stac.edu}, 845.398.4212), or you can contact the Office of Campus Safety and Security (845.398.4080). You can find more information at \url{www.stac.edu/titleix}.
+	
+	\item {\bfseries Confidential Reporting Resources}: If you would like to report  to a confidential counseling resource who is not required to initiate a Title~IX report, you may contact the following people on a confidential basis: 
+	
+	\hspace{0.30cm}\begin{minipage}[t]{0.41\textwidth}
 	{\bfseries Ms. Anne Walsh RN, BSN} \par
-	Director, Health and Wellness Services \par
+	Director, Health and Wellness \par
 	845.398.4242 \par
 	\href{mailto:awalsh@stac.edu}{awalsh@stac.edu}
-	\end{minipage}\begin{minipage}[t]{0.49\textwidth}
+	\end{minipage}\begin{minipage}[t]{0.30\textwidth}
 	{\bfseries Dr. Lou Muggeo} \par
-	Director, Counseling \& \par
-	Psychological Services \par
+	Psychologist \par
 	845.398.4174 \par
 	\href{mailto:lmuggeo@stac.edu}{lmuggeo@stac.edu}
-        \end{minipage} \pspace
-        \hfill\begin{minipage}[t]{0.49\textwidth} 
+        \end{minipage}\begin{minipage}[t]{0.30\textwidth} 
  	{\bfseries Dr. Alexa Gaydos} \par
-	Licensed Clinical Psychologist, \par
-	Counseling \& Psychological Services \par
+	Clinician \par
+	845.398.4065 \par
 	\href{mailto:agaydos@stac.edu}{agaydos@stac.edu}
-	\end{minipage}\begin{minipage}[t]{0.49\textwidth} 
-	{\bfseries Elysse Sellers, LCSW} \par
-	Licensed Clinical Social Worker, \par
-	Counseling \& Psychological Services \par
-	\href{mailto:esellers@stac.edu}{esellers@stac.edu}
-        \end{minipage} \pspace
- 
-The College also has an affiliation with the following organization, which will provide virtual office hours to STAC students weekly in addition to its other web-based programming: \pspace
- 
-        \hspace{0.3cm} {\bfseries Center for Safety and Change} \par
-        \hspace{0.3cm} \url{http://centerforsafetyandchange.org} \par
-        \hspace{0.3cm} 9 Johnsons Lane, New City, NY 10956 \par
-        \hspace{0.3cm} 845.634.3344
-\pspace
+        \end{minipage} 
+        
+        \begin{center}
+        \begin{minipage}[t]{0.45\textwidth} 
+	{\bfseries Center for Safety and Change} \par
+	\url{http://centerforsafetyandchange.org/} \par
+	9 Johnsons Lane, New City, NY 10956 \par
+	845.634.3344 \par \vspace{0.2cm}
+	{\itshape Academic Semester On-Campus Office Hours} \par
+	Thursdays, 1~p.m. -- 5~p.m. \par
+	Romano Student Alumni Center, Room~21
+        \end{minipage} 
+        \end{center}
+\end{itemize} \pspace
 
 
 
-% Classroom Health and Safety Protocols
-\mysection{0.49}{COVID-19 Related Policies and Procedures\label{college_healthsafety}}
+% Illness and Absences
+\mysection{0.49}{Illness and Absences}{college_illnessabsences}
 
-% Classroom Health and Safety Protocols
-\noindent {\bfseries Classroom Health and Safety Protocols}
-
-The health and safety of students, faculty, and staff on our campus is our top priority. In response to the ongoing COVID-19 pandemic, the STAC community will continue to work together to support compliance with recommended health and safety standards to optimize the learning experience while minimizing health risks.  
+For the health and safety of the campus community, students who are ill {\itshape should not attend classes}. If a student cannot attend classes due to illness, they should:
 
 	\begin{enumerate}[1.]
-	\item {\bfseries Follow quarantine and isolation guidelines.} If you feel ill, have recently tested positive for COVID-19, or have come into contact with someone who has tested positive for COVID-19, {\itshape do not} come to campus or leave your residence hall until you have been cleared to do so by STAC Health Services (\href{mailto:stachealth@stac.edu}{stachealth@stac.edu}). It is important that you always contact STAC Health Services in any of these circumstances and follow the quarantine and isolation instructions given. \href{https://timely.md/schools/index.html?school=stac&}{STAC Telehealth} can be used outside of normal business hours. Please also let your professor know if you cannot attend class. 
-
-	\item {\bfseries Mask policy.} Mask-wearing is optional on STAC’s campus except for in the STAC Health and Wellness Center, where masks must be worn; however, you must wear a mask if you are directed to do so under our isolation/quarantine policy. Please note that individual professors may encourage students to wear masks in their classrooms, but masks cannot be required. In the event of an increase in COVID cases on campus, the College may decide to return to a mask requirement. 
-
-	\item {\bfseries Minimize shared equipment.} Individuals should avoid sharing equipment where possible. However, if equipment does need to be shared, please wipe it down with provided disinfecting wipes in between users and maintain physical distancing as much as possible.
-
-	\item {\bfseries Disinfect your classroom space.} Students and faculty are encouraged to disinfect areas within their workspaces by cleaning these at the beginning and end of each class. This includes desk tops, seats, and equipment used during class. Disinfectant supplies will be provided. 
-
-	\item {\bfseries Practice good hand hygiene.} Individuals should wash their hands with soap and water for at least 20~seconds as often as possible or use personal hand sanitizers. Hand sanitizer stations are available throughout the campus.
-
-	\item {\bfseries Respect each other.} Show concern for each other's health and safety, and remember that this is a stressful time for everyone.
-	\end{enumerate} \pspace
-
-
-% COVID-19, Other Illness, and Absences
-\noindent {\bfseries COVID-19, Other Illness, and Absences} \par
-
-As stated above, for the health and safety of the campus community, students who are ill {\itshape should not attend classes}. Students in the following situations must contact Health Services as soon as possible: 
-
-	\begin{itemize}
-	\item Those who have tested positive for COVID-19 or are exhibiting COVID-19 related symptoms. 
-	\item Those who have been instructed to quarantine because of close contact with someone who has tested positive for COVID-19.
-	\end{itemize}
-
-If a student cannot attend classes for any of the above reasons, they should:
-
-	\begin{enumerate}[1.]
-	\item Communicate this change with their instructor(s) via email. Contact instructors as soon as possible, preferably within 24~hours.
+	\item Communicate this change with their instructor(s) via email. Contact instructors as soon as possible, preferably within 24 hours.
 	\item Keep up with coursework and participate in class activities as much as possible. Students are responsible for completing any work that they might miss due to illness, including assignments, quizzes, tests, and exams.
 	\item Reach out to the instructor if illness will require late submission or modifications of assignments; work with the instructor to reschedule exams and other critical academic activities before they are due.
-	\end{enumerate}
-\sectionbreak
+	\end{enumerate} \sectionbreak
 
 
 
 % Diversity and Inclusivity Statement
-\mysection{0.44}{Diversity and Inclusivity Statement\label{college_inclusive}}
+\mysection{0.44}{Diversity and Inclusivity Statement}{college_inclusive}
 
-St. Thomas Aquinas College is committed to creating an inclusive environment. Our community actively seeks the inclusion and full participation of individuals from groups that have historically experienced discrimination and prejudice. We are committed to a climate of mutual respect and inclusion, one in which diversity is a source of pride rather than a source of division. We encourage all persons---students, faculty, and staff alike---to reflect on their own experiences to explore the ways in which others' experiences can and do differ; the goal is to use this reflection to learn about different values, cultures, and ways of thinking. Ultimately, a just and equitable society will be easier to realize if we do not exclude those who are different from us and instead practice empathy and inclusivity. \pspace 
+St. Thomas Aquinas College is committed to creating an inclusive environment. Our community actively seeks the inclusion and full participation of individuals from groups that have historically experienced discrimination and prejudice. We are committed to a climate of mutual respect and inclusion, one in which diversity is a source of pride rather than a source of division. We encourage all persons---students, faculty, and staff alike---to reflect on their own experiences to explore the ways in which others’ experiences can and do differ; the goal is to use this reflection to learn about different values, cultures, and ways of thinking. Ultimately, a just and equitable society will be easier to realize if we do not exclude those who are different from us and instead practice empathy and inclusivity. \pspace
 
-To that end, if you experience or are aware of bias, mistreatment, or discrimination based on a person's (or your own) membership in a historically under-privileged or marginalized group, please contact one of the following individuals to share your concerns: \pspace
+To that end, if you experience or are aware of bias, mistreatment, or discrimination based on a person's (or your own) membership in a historically under-privileged or marginalized group, please report the incident \href{https://stac.edu/student-life/social-justice-equity/report-incident/}{here}, or contact one of the following individuals to share your concerns: \pspace
 
-	\hfill\begin{minipage}[t]{0.33\textwidth}
+	\hspace{2.5cm}\begin{minipage}[t]{0.49\textwidth}
 	{\bfseries Samantha Bazile} \par
 	Director of Admissions \& \par
 	Chief Diversity Officer \par
 	845.398.4104 \par
 	\href{mailto:sbazile@stac.edu}{sbazile@stac.edu}
-	 \end{minipage}\begin{minipage}[t]{0.33\textwidth}
-	{\bfseries Cindy Garvey} \par
-	Associate Director of \par
-	Financial Aid \par
-	845.398.4098 \par
-	\href{mailto:cgarvey@stac.edu}{cgarvey@stac.edu}
-	\end{minipage} 
-	\hfill\begin{minipage}[t]{0.33\textwidth}
-	{\bfseries Nicholas Migliorino} \par
-	Director of Student Engagement \par
-	845.398.4084 \par
-	\href{mailto:nmiglior@stac.edu}{nmiglior@stac.edu}
+	 \end{minipage}\begin{minipage}[t]{0.49\textwidth}
+	{\bfseries Ryan Gasser} \par
+	Associate Director, \par
+	Student Development \par
+	845.398.4108 \par
+	\href{mailto:rgasser@stac.edu}{rgasser@stac.edu}
 	\end{minipage}\hfill \pspace
 
 Faculty reserve the right to provide open and honest readings and discussions in their classes about personal and institutional biases and prejudices and other topics that may cause discomfort to some. \pspace
 
-More detailed information about the College's expectations and policies related to these matters can be found in the Student Handbook, specifically in the Student Code of Conduct, Section D: Harassment and Abuse, the Anti-Harassment Policy, and Rules and Regulations for Maintenance of Order.
+More detailed information about the College’s expectations and policies related to these matters can be found in the Student Handbook, specifically in the Student Code of Conduct, Section D: Harassment and Abuse, the Anti-Harassment Policy, and Rules and Regulations for Maintenance of Order. \sectionbreak
+
+
+
+% Mental Health & Wellness
+\mysection{0.44}{Mental Health \& Wellness}{mental_wellness}
+
+As a student, you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation. These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities. \pspace
+
+St. Thomas Aquinas College offers services to assist you with addressing these and other concerns you may be experiencing. If you or someone you know are suffering from any of the aforementioned conditions, you can learn more about the broad range of confidential mental health services available on campus via the Office of Student Development’s Health and Wellness Counseling and Psychological Services (CAPS) by visiting \url{https://www.stac.edu/student-life/counseling-psychological-services} or calling 845.398.4065. CAPS is located on the 2nd Floor of the Romano Student Alumni Center (RSAC). \pspace
+
+If you or someone you care about requires immediate assistance during the hours when CAPS is closed, you may reach out to Campus Safety at 845.398.4080. You can also reach an on-call mental health professional by dialing 988 on your phone or visiting the 24-hour emergency help service website at \url{https://988lifeline.org/}. \sectionbreak
 
 
 
@@ -634,30 +587,31 @@ More detailed information about the College's expectations and policies related 
 % -----
 % Course Schedule
 % -----
-\largeheader{0.3cm}{Course Schedule\label{schd}}
+\largeheader{0.3cm}{Course Schedule}{schd}
 The following is a \emph{tentative} schedule for the course and is subject to change. 
         \begin{table}[!ht]
         \centering
         \scalebox{1}{%
         \begin{tabular}{ll || ll}
         Date & Topic(s) & Date & Topic(s) \\ \hline 
-	09/05 & Labor Day (No Classes) & 10/26 & Mathematics of Finance \\
-	09/07 & Course Introduction & 10/31 & Probability \\
-	09/12 & Operations, Sets, Functions & 11/02 & Probability  \& Exam 2 \\
-	09/14 & Units, Conversions, Magnitudes & 11/07 & Probability \\
-	09/19 & (Weighted) Averages & 11/09 & Statistics \\
-	09/21 & Length, Area, Volumes, Distances & 11/14 & Statistics \\
-	09/26 & Percentages & 11/16 & Statistics \\
-	09/28 & Rates \& Fermi Estimation & 11/21 & Statistics \\
-	10/03 & Estimathon \& Exam 1 & 11/23 & Thanksgiving Break \\
-	10/05 & Linear Functions & 11/28 & Statistics \\
-	10/10 & Study Day (No Classes) & 11/30 & Statistics \\
-	10/12 & Linear Functions & 12/05 & Statistics \\
-	10/17 & Linear Functions & 12/07 & Statistics \\
-	10/19 & Mathematics of Finance & 12/12 & Data Science Day \\
-	10/24 & Mathematics of Finance & 12/14 & Papers/Presentations \& Exam 3 
+	09/06 & Arithmetic \& Percentages & 10/30 & Review \\
+	09/11 & Weighted Averages \& Unit Conversion & 11/01 & Data Science \\
+	09/13 & Geometry & 11/06 & Data Science \\
+	09/18 & Geometry \& Rates & 11/08 & Exam 2 \\
+	09/20 & Fermi Estimation & 11/13 & Probability \\
+	09/25 & Functions & 11/15 & Probability \\
+	09/27 & Linear Functions & 11/20 & Statistics \\
+	10/02 & Other Functions & 11/22 & Thanksgiving Break \\
+	10/04 & Review & 11/27 & Statistics \\
+	10/09 & Study Day & 11/29 & Statistics \\
+	10/11 & Exam 1 & 12/04 & Statistics \\
+	10/16 & Financial Mathematics & 12/06 & Review \\
+	10/18 & Financial Mathematics & 12/11 & Project Presentations \\
+	10/23 & Financial Mathematics & 12/13 & Exam 3 \\
+	10/25 & Financial Mathematics & 
         \end{tabular}
         }
         \end{table}
+
 
 \end{document}

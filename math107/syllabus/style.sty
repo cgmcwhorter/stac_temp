@@ -2,13 +2,11 @@
 % Packages
 % -------------------
 \usepackage{
-	%amsmath,
-	enumerate,
-	%float,
-	graphicx,
-	%hyperref,
-	lastpage,
-	%titling
+	enumerate,	% Enumerate Styles
+	float,			% Object Placements
+	graphicx,		% Include Images
+	lastpage,		% Reference Lastpage
+	microtype		% Improved Typesetting
 }
 
 
@@ -22,10 +20,20 @@
 % -------------------
 % Colors
 % -------------------
-% New Stuff
 \usepackage{xcolor}
+
+% College Colors
 \definecolor{stacred}{HTML}{72263d} % 114, 38, 61
-\definecolor{stacgold}{HTML}{f5be49} % 245, 190, 73
+\definecolor{stacgold}{HTML}{f3be48} % 243, 190, 72
+
+\definecolor{stacmaroon}{HTML}{5f082e} % 95, 8, 46
+\definecolor{staclightgold}{HTML}{fdbe7c} % 251, 222, 124
+
+\definecolor{stacwarmgray}{HTML}{423a2e} % 66, 58, 46
+\definecolor{stacrichblack}{HTML}{000100} % 0, 1, 0
+
+\definecolor{quotegray}{HTML}{3a3a3a} % 58, 58, 58
+\definecolor{endquotegray}{HTML}{6b6b6b} % 107, 107, 107
 
 
 % -------------------
@@ -63,6 +71,8 @@
 	\fancyfoot[R]{}
 \renewcommand{\footrulewidth}{0.0pt}
 }
+
+% Head/Foot Height
 \headheight=14pt
 \footskip=14pt
 
@@ -77,19 +87,19 @@
 \newcommand{\mytitle}[1]{%
 \begin{center}
 \thispagestyle{empty}
-\includegraphics[width=\textwidth]{college_title.png} \par\vspace{0.1cm}
-\Large\color{stacred} \coursenumber: \coursetitle \par
-\color{stacred} \semester\ \myyear
+\includegraphics[width=\textwidth]{stac_horzlogo.png} \par
+\huge\color{stacred} \coursenumber: \coursetitle \par
+\color{stacred} \semester\ \myyear\
 \end{center} \par\vspace{\baselineskip}%
 }
 
 % Section
-\newcommand{\mysection}[2]{%
+\newcommand{\mysection}[3]{%
 \begin{minipage}{\textwidth}
 \phantomsection
 	{%
 \large\bfseries\color{stacred}
-#2 \par\vspace{-0.62\baselineskip}
+#2\label{#3} \par\vspace{-0.62\baselineskip}
 \noindent\rule{#1\textwidth}{1.5pt} \par
 \vspace{-0.3cm}\noindent\rule{0.13\textwidth}{5.1pt}%
 	}%
@@ -100,7 +110,7 @@
 \newcommand{\lefthead}[1]{\noindent{\large\bfseries\color{stacred}#1}\par}
 
 % Large Header
-\newcommand{\largeheader}[2]{\phantomsection\noindent{\LARGE\bfseries\color{stacred}#2}\par\vspace{#1}}
+\newcommand{\largeheader}[3]{\phantomsection\noindent{\LARGE\bfseries\color{stacred}#2\label{#3}}\par\vspace{#1}}
 
 
 % -------------------
