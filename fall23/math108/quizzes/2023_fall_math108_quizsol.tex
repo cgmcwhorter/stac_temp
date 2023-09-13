@@ -1,0 +1,24 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,bmargin=1in,tmargin=1in]{geometry}
+\usepackage{style/quiz}
+\usepackage{style/commands}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\thispagestyle{title}
+
+% Quiz 1
+\quizsol \textit{True/False}: The product $189.75(1.08)$ can be interpreted as representing finding either 8\% of $189.75$ or increasing $189.75$ by 8\%. \pspace
+
+\sol The statement is false. To compute a \% of some number $N$, we need only compute $N \cdot \%_d$ and if we want to compute $N$ increased or decreased by a \%, we compute $N \cdot (1 \pm \%_d)$, where $\%_d$ is the percentage written as a decimal and we choose `$+$' if it is an increase and choose `$-$' if it is a decrease. So thinking of the product $189.75(1.08)$ as finding a percent of a number, we must have $\#= 189.75$ and $\%_d= 1.08$, i.e. $\%= 108\%$. Then one way of interpreting this is finding 108\% of 189.75---not the 8\% claimed in the quiz statement. Interpreting the product $189.75(1.08)$ as finding a percentage increase/decrease, it must be a percentage increase because $1.08 > 1$. Writing $1.08= 1 + 0.08$, we can see that $\%_d= 0.08$. Therefore, $189.75(1.08)$ can represent finding 189.75 increased by 8\%---which is what is claimed in the quiz statement. 
+
+
+
+
+
+
+
+
+\end{document}

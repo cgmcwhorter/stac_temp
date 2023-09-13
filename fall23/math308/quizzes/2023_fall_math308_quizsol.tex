@@ -10,9 +10,20 @@
 \thispagestyle{title}
 
 % Quiz 1
-\quizsol \textit{True/False}: The question. \pspace
+\quizsol \textit{True/False}: The expression $P \to Q$ is logically equivalent to $\neg P \vee Q$. \pspace
 
-\sol 
+\sol The statement is true. One method of seeing is this is to compute the truth table for $P \to Q$ and $\neg P \vee Q$ and see that the outputs of $P \to Q$ and $\neg P \vee Q$ match, no matter the inputs for $P, Q$. \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{ccccc}
+	$P$ & $Q$ & $P \to Q$ & $\neg P$ & $\neg P \vee Q$ \\ \hline 
+	$T$ & $T$ & $\mathbf{T}$ & $F$ & $\mathbf{T}$ \\
+	$T$ & $F$ & $\mathbf{F}$ & $F$ & $\mathbf{F}$ \\
+	$F$ & $T$ & $\mathbf{T}$ & $T$ & $\mathbf{T}$ \\
+	$F$ & $F$ & $\mathbf{T}$ & $T$ & $\mathbf{T}$
+	\end{tabular}
+	\end{table} \par
+As we can see, the third and fourth columns corresponding to $P \to Q$ and $\neg P \vee Q$, respectively, are the same, $P \to Q \equiv \neg P \vee Q$. Alternatively, $P \to Q$ will be logically equivalent to $\neg P \vee Q$ if they are always simultaneously true. We know for $P \to Q$ to be true, either $P$ must be false or $P, Q$ must both be true. Observe that if $P$ is false, then $\neg P$ is true so that $\neg P \vee Q$ is true. If $P, Q$ are true, then $\neg P \vee Q$ is true. Loosely, $P \to Q$ is true if either $P$ does not occur or if $Q$ occurs. But this is precisely $\neg P \vee Q$. In any case, it is true that $P \to Q \equiv \neg P \vee Q$. 
 
 
 
