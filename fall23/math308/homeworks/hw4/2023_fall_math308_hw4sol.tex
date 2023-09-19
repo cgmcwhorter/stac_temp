@@ -1,0 +1,86 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+\newcommand{\xor}{\,\underline{\vee}\,}
+
+% Logical Circuits
+\usepackage{circuitikz}
+\usetikzlibrary{shapes.gates.logic.US,shapes.gates.logic.IEC}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 09/21}{Most of the mistakes in thinking are inadequacies of perception rather than mistakes of logic.}{Edward de Bono}
+
+% Problem 1
+\problem{10} Suppose that $P(x)$ is a predicate with nonempty universe $\mathcal{U}$. Being sure to justify your answer, explain whether the following statements are true or false.
+	\begin{enumerate}[(a)]
+	\item There are values of $x$ for which $\forall x, P(x)$ is true and values for which the statement is false. 
+	\item If $\forall x, P(x)$ is false, then the statement $\exists x, \neg P(x)$ must be true. 
+	\item If $\exists x\, P(x)$ is true, then so is $\forall x\, P(x)$.
+	\end{enumerate} 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work and simplifying your logical expression as much as possible, negate the following quantified open statements:
+	\begin{enumerate}[(a)]
+	\item $\forall x\, \exists y\, \forall z P(x, y, z)$
+	\item $\exists x \big( \neg P(x) \wedge Q(x) \big)$
+	\item $\forall x \big( \neg P(x) \to Q(x) \big)$
+	\item $\exists y\, \forall x \big( P(x, y) \wedge \neg Q(x, y) \big)$
+	\item $\exists x \big( P(x) \to (1 < x \vee x \geq 3) \big)$
+	\end{enumerate} 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Being as clear and as detailed as possible, explain why $\forall\, x\, P(x) \wedge \forall\, x\, Q(x)$ does not imply $\forall\, x \, [P(x) \wedge Q(x)]$. 
+
+
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} A certain computer program has $n$ as an integer variable. Suppose that $A$ is an array of 10~integers values, i.e. $A$ is a `list' of the integer values $A[1], A[2], \ldots, A[10]$. Write the following as quantified open statements using $A[k]$:
+	\begin{enumerate}[(a)]
+	\item Every entry in the array is greater than 100.
+	\item There is an entry in the array that is negative. 
+	\item The value $A[10]$ is the largest value in the array.
+	\item There are two entries in the array that are the same. 
+	\end{enumerate} 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} A function $f(x)$ is said to be \textit{uniformly continuous} if for all $\epsilon > 0$, there exists $\delta > 0$ such that $|f(x) - f(y)| < \epsilon$ whenever $|x - y| < \delta$. 
+	\begin{enumerate}[(a)]
+	\item Write the definition of uniform continuity as a quantified statement. 
+	\item Find a quantified statement for a function to be \textit{not} uniformly continuous by negating your answer in (a). 
+	\item Write your answer in (b) as an English sentence. 
+	\end{enumerate}
+
+
+\end{document}
