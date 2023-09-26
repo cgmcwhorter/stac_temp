@@ -1,0 +1,235 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{2: Due 09/13}{I wasn't a failed DJ. I was pre-successful.}{Jason Mendoza, The Good Place}
+
+% Problem 1
+\problem{10} Your history class course grade is determined by the following components: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lr}
+	Homeworks & 25\% \\
+	Paper I & 10\% \\
+	Paper II & 10\% \\
+	Paper III & 10\% \\
+	Project & 30\% \\
+	Quizzes & 15\%
+	\end{tabular}
+	\end{table} \par
+Suppose that your homework average was 82\%, your grades on the papers were 68\%, 84\%, and 76\%, respectively, your project grade was 88\%, and your quiz average was 94\%. 
+	\begin{enumerate}[(a)]
+	\item Compute your course average.
+	\item If the project was a final project that had not yet occurred, i.e. you had not yet received the 88\%, but all the other course grades were as listed above, then what is your current course average?
+	\end{enumerate} 
+
+{\small
+\sol 
+\begin{enumerate}[(a)]
+\item The course average will be a weighted average where each course component grade is weighted by the amount of the course grade that component is worth. But then we have\dots
+	\[
+	\begin{aligned}
+	\text{Course Grade}=& \sum \text{Course Worth} \cdot \text{Component Grade} \\
+	&= 0.25 (82\%) + 0.10 (68\%) + 0.10 (84\%) + 0.10 (76\%) + 0.30 (88\%) + 0.15 (94\%) \\
+	&= 20.5\% + 6.8\% + 8.4\% + 7.6\% + 26.4\% + 14.1\% \\
+	&= 83.8\%
+	\end{aligned}
+	\]
+
+\item We can compute the percentage earned towards the course average thus far the same way we computed the course average in (a):
+	\[
+	\begin{aligned}
+	\text{Course Grade}=& \sum \text{Course Worth} \cdot \text{Component Grade} \\
+	&= 0.25 (82\%) + 0.10 (68\%) + 0.10 (84\%) + 0.10 (76\%) + 0.15 (94\%) \\
+	&= 20.5\% + 6.8\% + 8.4\% + 7.6\% + 14.1\% \\
+	&= 57.4\%
+	\end{aligned}
+	\]
+The percentage of the course grade counted thus far is $25\% + 10\% + 10\% + 10\% + 15\%= 70\%$. But then the work above shows that the student has earned 57.4\% from the 70\% of the course grade counted thus far. But then the students course average is\dots
+	\[
+	\text{Course Average}= \dfrac{\text{Percentage Earned}}{\text{Percentage Counted}}= \dfrac{0.574}{0.70}= 0.82 \squiggle 82\%
+	\]
+{\itshape Note. This was implicit in (a), where you have earned 83.8\% of the 100\% of the course grade counted thus far: $\text{Course Average}= \frac{\text{Percentage Earned}}{\text{Percentage Counted}}= \dfrac{0.838}{1.00}= 0.838 \squiggle 83.8\%$. Note also it is also possible to compute the average directly by treating this as a `true' weighted average: $\frac{\sum \text{weight} \cdot \text{value}}{\sum \text{weight}}$, which in our case would yield $\frac{57.4\%}{70\%}= 0.82 \squiggle 82\%$.}
+\end{enumerate}
+}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose you received the following grades this semester: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lrc}
+	Course & Credits & Grade \\ \hline
+	BIO 101: Human Biology & 3 & B \\
+	MATH 104: Precalculus & 4 & B+ \\
+	RELS 102: Religion and Society & 3 & A-- \\
+	ENG 207: Writing about World Mythology & 3 & B-- \\
+	ECON 102: Principles of Microeconomics & 3 & C+
+	\end{tabular}
+	\end{table} \par
+Given the following grade values, 
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lrclr}
+	Grade & Values & & Grade & Values \\ \hline
+	A & 4.0 & \hspace{1cm} & C+ & 2.3 \\
+	A-- & 3.7 & & C & 2.0 \\
+	B+ & 3.3 & & C-- & 1.7 \\
+	B & 3.0 & & D & 1.0 \\
+	B-- & 2.7 & & F & 0
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Compute your semester GPA. 
+\item If your previous GPA based on 67 credits was 3.308, what is your current overall GPA?
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item GPA is a weighted average where each letter grade earned is weighted by the number of credits for the corresponding course. But then we have\dots
+	\[
+	\begin{aligned}
+	\text{GPA}&= \dfrac{\sum \text{Credits} \cdot \text{Letter Grade}}{\sum \text{Credits}} \\
+	&= \dfrac{3(3.0) + 4(3.3) + 3(3.7) + 3(2.7) + 3(2.3)}{3 + 4 + 3 + 3 + 3} \\
+	&= \dfrac{9 + 13.2 + 11.1 + 8.1 + 6.9}{3 + 4 + 3 + 3 + 3} \\
+	&= \dfrac{48.3}{16} \\
+	&\approx 3.019
+	\end{aligned}
+	\]
+
+\item The new GPA will be the weighted average of the previous GPA with the current semester GPA, where each is weighted by the number of credits. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	\text{New GPA}&= \dfrac{\text{Previous Credits} \cdot \text{Previous GPA} + \text{Current Credits} \cdot \text{Current GPA}}{\text{Total Credits}} \\
+	&= \dfrac{67 \cdot 3.308 + 16 \cdot 3.019}{67 + 16} \\
+	&= \dfrac{221.636 + 48.304}{67 + 16} \\
+	&= \dfrac{269.94}{83} \\
+	&\approx 3.252
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, convert the following:
+	\begin{enumerate}[(a)]
+	\item 0.4 megagrams to centigrams
+	\item 87~oz to stones [1~oz = 28.35~g, 1~stone = 6.35~kg]
+	\item \$98 per hour to MXP per minute [\$0.057 = 1 MXP]
+	\item 6,000~ft$^2$ to mi$^2$ [5280~ft = 1~mi.]
+	\item 0.05 meters per square second to feet per square hour [0.3048~m = 1~ft]
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c}
+	0.4~Mg & 1000000~g & 100~cg \\ \hline
+		    & 1~Mg         & 1~g
+	\end{tabular}\;= 40,000,000~cg
+	\end{table} \pspace
+
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	87~oz & 28.35~g & 1~kg	   & 1~stone \\ \hline
+		  & 1~oz	    & 1000~g & 66.35~kg
+	\end{tabular}\;= 0.0371733233~stone
+	\end{table} \pspace
+
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c}
+	\$98 & 1~MXP & 1~hr \\ \hline
+	1~hr	& \$0.057 & 60~min
+	\end{tabular}\;= \$28.655 MXP per minute
+	\end{table} \pspace
+	
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c}
+	6000~ft$^2$ & 1~mi      & 1~mi \\ \hline
+			    & 5280~ft  & 5280~ft
+	\end{tabular}\;= 0.00021522~mi$^2$
+	\end{table} \pspace
+
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c|c|c}
+	0.05~m & 1~ft		& 60~s & 60~s	     & 60~min & 60~min \\ \hline
+	1~s$^2$ & 0.3048~m & 1~min & 1~min & 1~hr & 1~hr
+	\end{tabular}\;$\approx$ 2,125,984.25~ft/hr$^2$
+	\end{table}
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose you are talking with your friend who has moved to Germany. The conversation has drifted to NYC housing. Currently, the cost of space in NYC is approximately \$1,600 per square foot. 
+	\begin{enumerate}[(a)]
+	\item For your friend, convert this to Euros per square meter. [\texteuro 1= \$1.07; 1~ft = 0.3048~m]
+	\item Using (a), find the conversion factor from dollars per square foot to Euros per square meter. 
+	\item Use your answer from (b) to convert \$1,845 per square foot to Euros per square meter. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	\$1600	& \texteuro 1	& 1~ft		& 1~ft \\ \hline
+	1~ft$^2$   & \$1.07 		& 0.3048~m     & 0.3048~m
+	\end{tabular}\;= \texteuro 16,095.57 per square meter
+	\end{table} \pspace
+
+\item From the work above, we can see that the conversion factor is\dots
+	\[
+	\dfrac{1}{1.07} \cdot \dfrac{1}{0.3048} \cdot \dfrac{1}{0.3048}= 10.059729361
+	\] \pspace
+
+\item We have\dots 
+	\[
+	\$1845 \text{ per square foot } \cdot 10.059729361 \approx \text{\texteuro }18,560.20 \text{ per square meter}
+	\] \pspace
+We can also check this directly: \par \pspace
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	\$1845	& \texteuro 1	& 1~ft		& 1~ft \\ \hline
+	1~ft$^2$   & \$1.07 		& 0.3048~m     & 0.3048~m
+	\end{tabular}\;= \texteuro 18,560.2 per square meter
+	\end{table} \pspace
+\end{enumerate}
+
+
+\end{document}

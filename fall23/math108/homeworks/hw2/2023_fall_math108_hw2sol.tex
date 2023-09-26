@@ -1,0 +1,179 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{2: Due 09/12}{You only have to do a few things right in your life so long as you don’t do too many things wrong.}{Warren Buffett}
+
+% Problem 1
+\problem{10} Suppose that the revenue and cost function for a certain item are given by $R(q)= 45.99q$ and $C(q)= 11.13q + 576000$, respectively. 
+	\begin{enumerate}[(a)]
+	\item How much does the company sell each item for? How much does it cost to make each item?
+	\item What are the fixed costs for the production of this good?
+	\item What is the profit or loss if the company produces and sells ten-thousand of these items?
+	\item What is the break-even point? At least many items does this company need to sell in order to make a profit on this item?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Observe that both $R(q)$ and $C(q)$ are linear. Because $R(q)$ is linear, the price of each item is the slope of the revenue function, $R(q)$. Therefore, each item sells for \$45.99. Because $C(q)$ is linear, the cost to make each item is the slope of the cost function, $C(q)$. Therefore, the cost to make each item is \$11.13. \pspace
+
+\item The fixed costs are the costs regardless of the level of production. But then we know that the fixed costs are given by $C(0)$. We have $C(0)= 11.13(0) + 576000= 576000$. Therefore, the fixed costs are \$576,000. \pspace
+
+\item We know\dots
+	\[
+	\begin{aligned}
+	R(10000)&= 45.99(10000)= 459900
+	C(10000)&= 11.13(10000) + 576000= 111300 + 576000= 687300
+	\end{aligned}
+	\]
+Because the revenue, \$459,900, is less than the costs, \$687,300, the company is experiencing a loss. In fact, we know that $P(10000)= \$459900 - \$687300= -\$227400$, i.e. the company is experiencing a \$227,400 loss. \pspace
+
+\item To find the break-even point, we can solve $R(q)= C(q)$. But then we have\dots
+	\[
+	\begin{aligned}
+	R(q)&= C(q) \\
+	45.99q&= 11.13q + 576000 \\
+	34.86q&= 5760000 \\
+	q&= 16523.2
+	\end{aligned}
+	\]
+But then in order to turn a profit, the company must produce/sell at least 16,524 items. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Howard just started a small business cleaning service called \textit{Grossbusters}. For now, he is renting a truck for \$1,550 per month. On average, he charges \$110 per cleaning and uses approximately \$4.86 in supplies per cleaning. 
+	\begin{enumerate}[(a)]
+	\item What are the fixed and variable costs for Howard's cleaning service?
+	\item Find the cost function for Howard's business.
+	\item Find the revenue function for Howard's business.
+	\item Find the break-even point for Howard's business. What is the minimal amount of cleanings Howard must book per month to make a profit?
+	\item How many cleanings must Howard book each month to make a monthly profit of \$8,000 (translating to a yearly profit of \$96,000)? Does this seem feasible? 
+	\end{enumerate} 
+
+\sol 
+\begin{enumerate}[(a)]
+\item The fixed costs are the \$1,550 per month to rent the truck, while the variable costs are the \$4.86 used in supplies per cleaning, i.e. $4.86q$. \pspace
+
+\item We know $C(q)= \text{V.C.} + \text{F.C.}$. But then $C(q)= 4.86q + 1550$. \pspace
+
+\item We know that he charges \$110 per cleaning. Therefore, $R(q)= 110q$. \pspace
+
+\item To find the break-even point, one solves $R(q)= C(q)$ or computes $P(q)$ then solves $P(q)= 0$. In this instance, we use the latter method. First, we have\dots
+	\[
+	P(q)= R(q) - C(q)= 110q - (4.86q + 1550)= 110q - 4.86q - 1550= 105.14q - 1550
+	\]
+But then solving $P(q)= 0$, we have\dots
+	\[
+	\begin{aligned}
+	P(q)&= 0 \\
+	105.14q - 1550&= 0 \\
+	105.14q&= 1550 \\
+	q&= 14.7422
+	\end{aligned}
+	\]
+Therefore, Howard must perform at least 15~cleanings per month to make a profit. \pspace
+
+\item We need find $q$ such that $P(q)= 8000$. We found $P(q)$ in (d). But then, we have\dots 
+	\[
+	\begin{aligned}
+	P(q)&= 8000 \\
+	105.14q - 1550&= 8000 \\
+	105.14q&= 9550 \\
+	q&= 90.83
+	\end{aligned}
+	\]
+Therefore, to make a profit of at least \$8,000 per month, Howard must perform at least 91~cleanings per month. Working every day (assuming a month of 30~days), this yields 3.033~cleanings per day with an average time of approximately 2~hours 38~minutes per cleaning (assuming an 8~hour work day). If Howard only works 8~hours a day on weekdays, then this is 4.55 cleanings per day with an average time of 1~hour 45~minutes per cleaning. In either case, this seems feasible---so long as he can actually make the bookings. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose a company produces two items, $q_1$ and $q_2$, and has a cost function given by $C(q_1, q_2)= 56.20q_1 + 19.45q_2 + 7192$. 
+	\begin{enumerate}[(a)]
+	\item What are the fixed costs for producing these two items?
+	\item What is the total cost associated with producing 30 of the first item and 65 of the second item?
+	\item How much does it cost to produce the first item? How much does it cost to produce the second item?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know that the fixed costs are given by $C(0, 0)= 56.20(0) + 19.45(0) + 7192= 0 + 0 + 7192= 7192$. Therefore, the fixed costs are \$7,192. \pspace
+
+\item We have\dots
+	\[
+	C(30, 65)= 56.20(30) + 19.45(65) + 7192= 1686 + 1264.25 + 7192= 10142.25
+	\]
+Therefore, the total cost to produce 30 of the first item and 65 of the second item is \$10,142.25. From the work above, we can also see that it costs \$1,686 to produce the first item and \$1264.25 to produce the second item---ignoring the fixed costs. \pspace
+
+\item Because $C(q_1, q_2)$ is (affine) linear, we know that the cost to produce each item is the `slope' in the `direction' of each variable. Therefore, it costs \$56.20 per item to produce the first item and \$19.45 per item to produce the second item. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose that you have a revenue function given by $R(q)= 120q$ and a cost function given by $C(q)= 70q + 1600$. 
+	\begin{enumerate}[(a)]
+	\item What are the revenue and cost at a production/sale level of 80~units?
+	\item Without finding the profit function, find the break-even point for the production/sale of this item.
+	\item Find the profit function, $P(q)$.
+	\item Compute $P(80)$. Explain how you could use (a) to find $P(80)$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	R(80)&= 120(80)= 9600 \\
+	C(80)&= 70(80) + 1600= 7200
+	\end{aligned}
+	\] 
+Therefore, at a production/sale level of 80~units, the revenue is \$9,600 and the costs are \$7,200. \pspace
+
+\item To find the break-even point, we solve $R(q)= C(q)$. But then, we have\dots
+	\[
+	\begin{aligned}
+	R(q)&= C(q) \\
+	120q&= 70q + 1600 \\
+	50q&= 1600 \\
+	q&= 32
+	\end{aligned}
+	\]
+Therefore, the break-even point is a production/sale level of 32~units. \pspace
+
+\item We have\dots
+	\[
+	P(q)= R(q) - C(q)= 120q - (70q + 1600)= 120q - 70q - 1600= 50q - 1600
+	\] \pspace
+
+\item From (c), we know that $P(q)= 50q - 1600$. But then, we have\dots
+	\[
+	P(80)= 50(80) - 1600= 4000 - 1600= 2400
+	\]
+Therefore, at a production/sale level of 80~units, the profits are \$2,400. Observe that we could have found this in (a). From (a), we know that at a production/sale level of 80~units, the revenue and cost are \$9,600 and \$7,200, respectively. But then the profit is $\$9600 - \$7200= \$2400$. 
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,186 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 09/18}{I saw a lot of my body\dots and I didn't like it.}{David Rose, Schitt's Creek}
+
+% Problem 1
+\problem{10} Showing all your work, simplify the following as much as possible (express any denominators using negative powers):
+	\begin{enumerate}[(a)]
+	\item $ab(a^3 b^2)^0$
+	\item $x^4 y^9 x^{22} y^5$
+	\item $\dfrac{r^0 s^5}{r^4 s^3}$
+	\item $(x^8 y^{10}) \left( \dfrac{x^3}{y^8} \right)$
+	\item $\dfrac{r^{12} s^4 t^5}{s^3 r^{20} t^5}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	ab(a^3 b^2)^0= ab \cdot 1= ab
+	\] \pspace
+
+\item 
+	\[
+	x^4 y^9 x^{22} y^5= x^4 x^{22} \cdot y^9 y^5= x^{4+22} y^{9+5}= x^{26} y^{14}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{r^0 s^5}{r^4 s^3}= \dfrac{1 \cdot s^5}{r^4 s^3}= \dfrac{s^5}{r^4 s^3}= \dfrac{s^{\cancel{5}^{\,2}}}{r^4 \cancel{s^3}}= \dfrac{s^2}{r^4}= s^2 r^{-4}
+	\] \pspace
+
+\item 
+	\[
+	(x^8 y^{10}) \left( \dfrac{x^3}{y^8} \right)= \dfrac{x^8 x^3 y^{10}}{y^8}= \dfrac{x^{8+3} y^{10}}{y^8}= \dfrac{x^{11} y^{10}}{y^8}= \dfrac{x^{11} y^{\cancel{10}^{\,2}}}{\cancel{y^8}}= x^{11} y^2
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{r^{12} s^4 t^5}{s^3 r^{20} t^5}= \dfrac{\cancel{r^{12}} s^{\cancel{4}^{\,1}} \cancel{t^5}}{\cancel{s^3} r^{\cancel{20}^{\,8}} \cancel{t^5}}= \dfrac{s}{r^8}= s r^{-8}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, simplify the following as much as possible (do not express your answer using any negative powers): 
+	\begin{enumerate}[(a)]
+	\item $\dfrac{a^6 b^3}{a^{18} b^5}$
+	\item $\dfrac{x^6 y^9}{x^{-6} y^{16}}$
+	\item $\dfrac{r^{18} s^7 r^{-3} s^{-2}}{ r^{11} s^5}$
+	\item $\dfrac{a^0 b^{-5}}{a^{-8} b^7} \cdot \dfrac{b^3}{a^6}$
+	\item $\dfrac{x}{y} \left( \dfrac{x^3 y^{-11}}{x^{-5} y^{12}} \cdot \dfrac{x^{-4} y^9}{x^4 y^{-3}} \right)^0$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{a^6 b^3}{a^{18} b^5}= \dfrac{\cancel{a^6} \cancel{b^3}}{a^{\cancel{18}^{\,12}} b^{\cancel{5}^{\,2}}}= \dfrac{1}{a^{12} b^2}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{x^6 y^9}{x^{-6} y^{16}}= \dfrac{x^6 x^6 y^9}{y^{16}}= \dfrac{x^{6+6} y^9}{y^{16}}= \dfrac{x^{12} y^9}{y^{16}}= \dfrac{x^{12} \cancel{y^9}}{y^{\cancel{16}^{\,7}}}= \dfrac{x^{12}}{y^7}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{r^{18} s^7 r^{-3} s^{-2}}{ r^{11} s^5}= \dfrac{r^{18} r^{-3} s^7 s^{-2}}{r^{11} s^5}= \dfrac{r^{18-3} s^{7-2}}{r^{11} s^5}= \dfrac{r^{15} s^5}{r^{11} s^5}= \dfrac{r^{\cancel{15}^{\,4}} \cancel{s^5}}{\cancel{r^{11}} \cancel{s^5}}= r^4
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{a^0 b^{-5}}{a^{-8} b^7} \cdot \dfrac{b^3}{a^6}= \dfrac{b^{-5}}{a^{-8} b^7} \cdot \dfrac{b^3}{a^6}= \dfrac{b^{-5} b^3}{a^{-8} a^6 b^7}= \dfrac{b^{-5+3}}{a^{-8+6} b^7}= \dfrac{b^{-2}}{a^{-2} b^7}= \dfrac{a^2}{b^2 b^7}= \dfrac{a^2}{b^{2+7}}= \dfrac{a^2}{b^9}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{x}{y} \left( \dfrac{x^3 y^{-11}}{x^{-5} y^{12}} \cdot \dfrac{x^{-4} y^9}{x^4 y^{-3}} \right)^0= \dfrac{x}{y} \cdot 1= \dfrac{x}{y}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, simplify the following as much as possible (do not express your answer using any negative powers): 
+	\begin{enumerate}[(a)]
+	\item $\big( (x^2 y^3)^3 \big)^3$
+	\item $(r^3s)^6 (r^2s^9)^4$	
+	\item $(x^{-4} y^6)^{-2} (x^2 y^5)$
+	\item $b^6 \left( \dfrac{a^6 b^3}{a^{-3}} \right)^{-4}$
+	\item $(xy^2)^{-3} \left( \dfrac{(xy)^2}{xy^{-1}} \right)^{-1}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\big( (x^2 y^3)^3 \big)^3= (x^2 y^3)^9= x^{18} y^{27}
+	\] \pspace
+
+\item 
+	\[
+	(r^3s)^6 (r^2s^9)^4= (r^{18} s^6) (r^8 s^{36})= r^{18} r^8 s^6 s^{36}= r^{18+8} s^{6+36}= r^{26} s^{42}
+	\] \pspace
+
+\item 
+	\[
+	(x^{-4} y^6)^{-2} (x^2 y^5)= (x^8 y^{-12}) (x^2 y^5)= x^8 x^2 y^{-12} y^5= x^{8+2} y^{-12+5}= x^{10} y^{-7}= \dfrac{x^{10}}{y^7}
+	\] \pspace
+
+\item 
+	\[
+	b^6 \left( \dfrac{a^6 b^3}{a^{-3}} \right)^{-4}= b^6 \left( a^6 a^3 b^3 \right)^{-4}= b^6 (a^9 b^3)^{-4}= b^6 a^{-36} b^{-12}= a^{-36} b^6 b^{-12}= a^{-36} b^{-6}= \dfrac{1}{a^{36} b^6}
+	\] \pspace
+
+\item 
+	\[
+	(xy^2)^{-3} \left( \dfrac{(xy)^2}{xy^{-1}} \right)^{-1}= (x^{-3} y^{-6}) \cdot \dfrac{xy^{-1}}{(xy)^2}= x^{-3} y^{-6} \cdot \dfrac{x y^{-1}}{x^2 y^2}= \dfrac{x^{-3} x y^{-6} y^{-1}}{x^2 y^2}= \dfrac{x^{-2} y^{-7}}{x^2 y^2}= \dfrac{1}{x^2 x^2 y^2 y^7}= \dfrac{1}{x^4 y^9}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, simplify the following as much as possible:
+	\begin{enumerate}[(a)]
+	\item $\dfrac{(4x^2)^3 (3x^4)}{(6x^3)^4}$
+	\item $\left( - \dfrac{3x^{-2} y^7}{2x^3 y^5} \right)^{-2}$
+	\item $\left( \dfrac{x^6 y^3 \cdot (x^5y)^2}{x^{-4} y^{12}} \right)^3$
+	\item $\left( \dfrac{x^{r + s}}{x^{2r + 5}} \right)^4$
+	\item $(xy)^{-n} \cdot \dfrac{x^{n - 1} y^{m - 1}}{x^{2n} y^n}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{(4x^2)^3 (3x^4)}{(6x^3)^4}= \dfrac{4^3 x^6 \cdot 3 x^4}{6^4 x^{12}}= \dfrac{(2^2)^3 \cdot 3 \cdot x^6 x^4}{(2 \cdot 3)^4 x^{12}}= \dfrac{2^6 \cdot 3 \cdot x^{10}}{2^4 \cdot 3^4 x^{12}}= \dfrac{2^2 \cdot 1 \cdot 1}{1 \cdot 3^3 \cdot x^2}= \dfrac{4}{27x^2}
+	\] \pspace
+
+\item 
+	\[
+	\left( - \dfrac{3x^{-2} y^7}{2x^3 y^5} \right)^{-2}= \left( - \dfrac{2x^3 y^5}{3x^{-2} y^7} \right)^2= \dfrac{4 x^6 y^{10}}{9 x^{-4} y^{14}}= \dfrac{4 x^{10}}{9y^4}
+	\] \pspace
+
+\item 
+	\[
+	\left( \dfrac{x^6 y^3 \cdot (x^5y)^2}{x^{-4} y^{12}} \right)^3= \dfrac{x^{18} y^9 \cdot (x^5y)^6}{x^{-12} y^{36}}= \dfrac{x^{18} y^9 \cdot x^{30} y^6}{x^{-12} y^{36}}= \dfrac{x^{48} y^{15}}{x^{-12} y^{36}}= x^{48 - (-12)} y^{15 - 36}= x^{60} y^{-21}= \dfrac{x^{60}}{y^{21}}
+	\] \pspace
+
+\item 
+	\[
+	\left( \dfrac{x^{r + s}}{x^{2r + 5}} \right)^4= \dfrac{x^{4r + 4s}}{x^{8r + 20}}= x^{(4r + 4s) - (8r + 20)}= x^{4s + 4s - 8r - 20}= x^{4s - 4r - 20}
+	\] \pspace
+
+\item 
+	\[
+	\hspace{-2.5cm} (xy)^{-n} \cdot \dfrac{x^{n - 1} y^{m - 1}}{x^{2n} y^n}= x^{-n} y^{-n} \cdot \dfrac{x^{n - 1} y^{m - 1}}{x^{2n} y^n}= x^{-n} y^{-n} \cdot x^{n-1} y^{m-1} \cdot x^{-2n} y^{-n}= x^{-n + (n-1) - 2n} y^{-n + (m-1) - n}= x^{-2n - 1} y^{m - 2n - 1}
+	\]
+\end{enumerate}
+
+
+\end{document}
