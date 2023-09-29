@@ -82,6 +82,10 @@ Alternatively, we can convert each of the lengths of legs of the triangle to met
 	
 	\node at (3.5,0.25) {$46$~m};
 	\node at (6.5,1) {$26$~m};
+	
+	\node at (-0.5,1) {I};
+	\node at (3.5,1) {II};
+	\node at (7.5,1) {III};
 	\end{tikzpicture}
 	\]
 
@@ -89,15 +93,38 @@ Alternatively, we can convert each of the lengths of legs of the triangle to met
 \item Find the perimeter of the track.
 \item Find the area of the track.
 \item If you scale the track's size by a factor of two, what is the new perimeter and area?
-\item Suppose you were going to tile the interior rectangular portion of the track with special 2~m $\times$ 2~m tiles. How many would you need?
+\item Suppose you were going to tile the interior rectangular portion of the track with special 2~m $\times$ 2~m tiles. How many tiles would you need?
 \end{enumerate} \pspace
 
 \sol 
 \begin{enumerate}[(a)]
+\item The perimeter of the track is the distance around the track. This will be the distance along the upper and lower `straightaways' along with the two half circles. The distance around a circle is its circumference. The circumference of a circle is $C= \pi d$, where $d$ is the diameter of the circle. The diameter of the circles above is 26~m. However, each is only a half circle, i.e. $\frac{1}{2}C= \frac{\pi d}{2}$. Therefore, we have\dots\footnote{Observe that we can `combine' the half-circles into one full-circle and the two `straightaways' into one that is twice as long. But then the perimeter is $P= 2 \cdot 46 \text{ m} + \pi \cdot 26 \text{ m}= 92 \text{ m} + 26 \pi \text{ m}$.}
+	\[
+	P= 46 \text{ m} + \dfrac{\pi \cdot 26 \text{ m}}{2} + 46 \text{ m} + \dfrac{\pi \cdot 26 \text{ m}}{2}= 46 \text{ m} + 46 \text{ m} + 13\pi \text{ m} + 13 \pi \text{ m}= 92 \text{ m} + 26 \pi \text{ m} \approx 173.7 \text{ m}
+	\] \pspace
+
+\item Break the track into regions I, II, and III, as labeled in the diagram above. Region~II is a rectangle and regions~I and III are half-circles. The area of a rectangle is $A= \ell w$, where $\ell$ is the length and $w$ is the width. The area of a circle is $A= \pi r^2$, where $r$ is the radius of the circle. Then the area of a half-circle is $\frac{1}{2}A= \frac{\pi r^2}{2}$. The radii of half-circles I and II are clearly $r= \frac{d}{2}= \frac{26 \text{ m}}{2}= 13 \text{ m}$. Therefore, we have\dots\footnote{Just as with (a), we can `combine' the two half-circles into one full circle. But then the area is $A_{\text{track}}= A_{\text{circle}} + A_{\text{rectangle}}= \pi (13 \text{ m})^2 + 46 \text{ m} \cdot 26 \text{ m}= 169 \pi \text{ m}^2 + 1196 \text{ m}^2$.}
+	\[
+	\begin{gathered}
+	A_{\text{track}}= A_{\text{I}} + A_{\text{II}} + A_{\text{III}} \\
+	A_{\text{track}}= \dfrac{\pi \cdot (13 \text{ m})^2}{2} + 46 \text{ m} \cdot 26 \text{ m} + \dfrac{\pi \cdot (13 \text{ m})^2}{2} \\
+	A_{\text{track}}= \dfrac{169 \pi}{2} \text{ m}^2 + 1196 \text{ m}^2 + \dfrac{169 \pi}{2} \text{ m}^2 \\
+	A_{\text{track}}= 1196 \text{ m}^2 + 169 \pi \text{ m}^2 \\
+	A_{\text{track}} \approx 1,\!461.5 \text{ m}^2
+	\end{gathered}
+	\] \pspace
+
 \item 
-\item 
-\item 
-\item 
+
+
+
+
+
+
+
+
+
+\item From (b), we know the area of the interior rectangular portion is $A_{\text{II}}= 1196 \text{ m}^2$. Each title covers an area of 2~m $\times$ 2~m; that is, each tile covers an area of $2 \text{ m} \cdot 2 \text{ m}= 4 \text{ m}^2$. But then the minimum number of tiles required is $\dfrac{1196 \text{ m}^2}{4 \text{ m}^2}= 299$. Therefore, one will require 299~tiles. 
 \end{enumerate}
 
 
@@ -116,7 +143,7 @@ Alternatively, we can convert each of the lengths of legs of the triangle to met
 
 \sol 
 \begin{enumerate}[(a)]
-\item Because the barrel is approximately a cylinder, the volume of the barrel should be approximately the volume of the corresponding cylinder. We know that the volume of a cylinder is $V= \pi r^2 h$, where $r$ is the radius of the cylinder and $h$ is the height of the cylinder. Because the diameter of the barrel is 18~in, the radius of the barrel is $\frac{18 \text{ in}}{2}= 9 \text{ in}$. But then we have\dots
+\item Because the barrel is approximately a cylinder, the volume of the barrel should be approximately the volume of the corresponding cylinder. The volume of a cylinder is $V= \pi r^2 h$, where $r$ is the radius of the cylinder and $h$ is the height of the cylinder. Because the diameter of the barrel is 18~in, the radius of the barrel is $\frac{18 \text{ in}}{2}= 9 \text{ in}$. But then we have\dots
 	\[
 	V_{\text{barrel}} \approx \pi r^2 h= \pi \cdot (9 \text{ in})^2 \cdot 30 \text{ in}= \pi \cdot 81 \text{ in}^2 \cdot 30 \text{ in} \approx 7634.07 \text{ in}^3
 	\] \pspace
@@ -142,7 +169,9 @@ But then the total value of the barrel of whiskey is\dots
 	\[
 	\text{Total Value}= \text{Whiskey Value} + \text{Barrel Value}= \$75,060 + \$250= \$75,310
 	\]
-\end{enumerate}
+\end{enumerate} \vfill
+
+{\itshape Note. If one uses the number of whole bottles of whiskey in a barrel, there are only 166~bottles per barrel. But this gives a total whiskey value of $\$450/\text{ bottle} \cdot 166 \text{ bottles}= \$74,\!700$. This brings the total value of the whiskey barrel to $\text{Total Value}= \text{Whiskey Value} + \text{Barrel Value}= \$74,\!700 + \$250= \$74,\!950$.}
 
 
 \end{document}

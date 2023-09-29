@@ -245,14 +245,24 @@ If 1223 were composite, it would have a (prime) divisor between 2 and 34 (becaus
 % Problem 6
 \problem{10} Isabella has two large wood strips. One is 70~ft long and the other is 98~ft long. She needs to cut them down into boards. The size of the boards does not matter, so long as they are all of equal size. She has a `template' that will let her cut the wood to specific integer lengths, but it must be reset if you change the length---which is time consuming. To what length should she set the template in order to never have to reset it and cut each strip into pieces of equal length? \pspace
 
-\sol Suppose the length she can cut it into is $\ell$. Because she is cutting the pieces of wood into some integer number of pieces, each of length $\ell$, it must be that 70 and 98 are both multiples of $\ell$; that is, $\ell$ is a divisor of both 70 and 98. But then $\ell$ is a common divisor of 70 and 98. We can list the divisors of both 70 and 98:
+\sol Suppose that she can set the template to cut the wood to an integer length $\ell$. Because she is cutting the pieces of wood into some integer number of pieces, each of length $\ell$, it must be that 70 and 98 are both multiples of $\ell$; that is, $\ell$ is a divisor of both 70 and 98. But then $\ell$ is a common divisor of 70 and 98. We can list the divisors of both 70 and 98:
 	\[
 	\begin{aligned}
 	70&\colon \mathbf{1}, \mathbf{2}, 5, \mathbf{7}, 10, \mathbf{14}, 35, 70 \\
 	98&\colon \mathbf{1}, \mathbf{2}, \mathbf{7}, \mathbf{14}, 49, 98
 	\end{aligned} 
 	\]
-The common divisors are 1, 2, 7, and 14. Therefore, the possibilities for $\ell$ are 1, 2, 7, 14, and all are viable choices. To obtain the maximum number of pieces, she should choose $\ell= 1$~ft, which splits the 70~ft strip into 70~pieces, the 98~ft board into 98~pieces, for a total of 168~pieces of 1~ft length wood. If she wants to obtain the minimum number of pieces, she can choose $\ell= 14$~ft (the greatest common divisor), which splits the 70~ft strip into 5 pieces, the 98~ft board into 7~pieces, for a total of 12~pieces of 14~ft length wood. Note that choosing $\ell= 2$~ft cuts the boards into 35 and 49 pieces, respectively, for a total of 84~pieces of 2~ft length wood. Finally, choosing $\ell= 7$~ft cuts the boards into 10 and 14 pieces, respectively, for a total of 24~pieces of 7~ft length wood. We can summarize the data below: \par
+The common divisors are 1, 2, 7, and 14. Therefore, the possibilities for $\ell$ are 1, 2, 7, 14, and all are viable choices. \pspace
+
+$\ell= 1$~ft: Choosing $\ell= 1$~ft (the smallest possible divisor) obtains the maximum number of pieces. This splits the 70~ft strip into 70~pieces, the 98~ft board into 98~pieces, for a total of 168~pieces of 1~ft length wood. \pspace
+
+$\ell= 2$~ft: Choosing $\ell= 2$~ft splits the 70~ft strip into 35~pieces and the 98~ft strip into 49~pieces, for a total of 84~pieces of 2~ft length wood. \pspace
+
+$\ell= 7$~ft: Choosing $\ell= 7$~ft splits the 70~ft strip into 10~pieces and the 98~ft strip into 14~pieces, for a total of 24~pieces of 7~ft length wood. \pspace
+
+$\ell= 14$~ft: Choosing $\ell= 14$~ft (the greatest common divisor) obtains the minimum number of pieces. This splits the 70~ft strip into 5~pieces and the 98~ft board into 7~pieces, for a total of 12~pieces of 14~ft length wood. \pspace
+
+We can summarize the data below: \par
 	\begin{table}[h]
 	\centering
 	\begin{tabular}{r||c|c|c|c}

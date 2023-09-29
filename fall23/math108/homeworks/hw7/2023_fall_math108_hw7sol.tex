@@ -1,0 +1,95 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 09/28}{The people who did the collateralized mortgage obligations sold them to pension funds, then sold them short, then bought credit default swap insurance on them, are just amazing. They are a law unto themselves.}{Ben Stein}
+
+% Problem 1
+\problem{10} E.M. Perior wants to take out a loan for\dots let's call it a small construction project.\footnote{It'll be no moon.} He approaches PJMorgan \& Follow Bank for a loan to fund the project. After discussions with the bank, they offer him a \$3~trillion loan at 8.33\% annual interest, compounded monthly over a period of 24~years. Mr. Perior's payments will be due at the end of every month. ``Good\dots \textit{good},'' Mr. Perior stated as he accepted the terms. 
+	\begin{enumerate}[(a)]
+	\item What are E.M. Perior's monthly payments?
+	\item What is the total interest E.M. Perior will pay on this loan?
+	\end{enumerate} \pspace
+
+\sol Because payments on this loan are equal and made at regular intervals, this is an amortized loan. Because payments are made at the end of the month and because the number of payments per year is the same as the number of interest compounds per year, this amortized loan `comes from a simple ordinary annuity. The number of payments is $\text{PM}= \text{PY} \cdot t= 12 \cdot 24= 288$. The interest per payment period is $i= i_p= \frac{r}{k}= \frac{0.0833}{12} \approx 0.006941666666666667$. We know that the present value of the loan is $P= \$3000000000000$. 
+
+\begin{enumerate}[(a)]
+\item First, observe that\dots
+	\[
+	\hspace{-2.8cm} a_{\actuarialangle{288\,}\, i}= \dfrac{1 - (1 + 0.006941666666666667)^{-288}}{0.006941666666666667}= \dfrac{1 - 0.1363823343691812}{0.006941666666666667}= \dfrac{0.8636176656308188}{0.006941666666666667}= 124.41070813409152
+	\]
+But then we have\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{288\,}\, i}}= \dfrac{\$3000000000000}{124.41070813409152}= \$24,\!113,\!679,\!963.68
+	\]
+Therefore, the monthly payments will be approximately \$24.11~billion. \pspace
+
+\item We know that the total interest will be\dots
+	\[
+	\begin{aligned}
+	I&= \text{PM} \cdot R - P \\
+	&= 288 \cdot \$24,\!113,\!679,\!963.68 - \$3,\!000,\!000,\!000,\!000 \\
+	&= \$6,\!944,\!739,\!829,\!539.84 - \$3,\!000,\!000,\!000,\!000 \\
+	&= \$3,\!944,\!739,\!829,\!539.84
+	\end{aligned}
+	\]
+Therefore, the total interest paid on the loan will be approximately \$3.944~trillion. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Theo Guysel wants to take out a loan to self-publish his new book \textit{Oh, the Places You'll Go\dots after Repaying Student Loans}. Guysel takes out a loan for \$15,000 at 3.7\% yearly interest, compounded quarterly. The loan is for a period of 5~years with end of the quarter payments of \$824.97.
+	\begin{enumerate}[(a)]
+	\item How much does Guysel still owe after 3~years?
+	\item After 3~years, how much of Guysel's next payment will actually go towards paying off the loan? How much is paid in interest for this payment?
+	\end{enumerate} \pspace
+
+\sol Because payments on this loan are equal and made at regular intervals, this is an amortized loan. Because payments are made at the end of the quarter and because the number of payments per year is the same as the number of interest compounds per year, this amortized loan `comes from a simple ordinary annuity. The number of payments is $\text{PM}= \text{PY} \cdot t= 4 \cdot 5= 20$. The interest per payment period is $i= i_p= \frac{r}{k}= \frac{0.037}{4} \approx 0.00925$. We know that the present value of the loan is $P= \$15000$. 
+ 
+\begin{enumerate}[(a)]
+\item After 3~years, Guysel has made a total of $M= t \cdot \text{PY}= 3 \cdot 4= 12$~payments. Therefore, the number of payments remaining is $\text{PM} - M= 20 - 12= 8$. But then\dots
+	\[
+	\begin{aligned}
+	a_{\actuarialangle{8\,}\, 0.00925}= \dfrac{1 - (1 + 0.00925)^{-12}}{0.00925}= \dfrac{1 - 0.92898764}{0.00925}= \dfrac{0.07101236}{0.00925}= 7.67701189
+	\end{aligned}
+	\]
+But then we have\dots
+	\[
+	\text{Amount Owed}= R\, a_{\actuarialangle{8\,}\, 0.00925}= \$824.97 \cdot 7.67701189 \approx \$6,\!333.30
+	\] 
+Therefore, after 3~years worth of payments, Guysel still owes \$6,333.30. \pspace
+
+\item This is the payment against the principal. First, observe that we have\dots
+	\[
+	a_{\actuarialangle{\text{PM} - \text{M} + 1\,}\, i}= a_{\actuarialangle{9\,}\, 0.00925}= \dfrac{1 - (1 + 0.00925)^{-9}}{0.00925}= \dfrac{1 - 0.920473}{0.00925}= \dfrac{0.079527}{0.00925}= 8.5975135
+	\]
+But then we have\dots
+	\[
+	\text{P.A.P.}= R ( a_{\actuarialangle{9\,}\, 0.00925} - a_{\actuarialangle{8\,}\, 0.00925})= \$824.97 (8.5975135 - 7.67701189)= \$824.97 \cdot 0.92050161 \approx \$759.39
+	\]
+Therefore, after 3~years, Guysel's \$759.39 of his next payment of \$824.97 goes towards paying off the loan. The remaining \$65.58 is used to pay the interest due for that payment. 
+\end{enumerate}
+
+\vfill
+
+{\itshape Note. We can confirm that the end of the quarter payments are indeed \$824.97:
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{\text{PM}\,}\, i}}= \dfrac{\$15000}{a_{\actuarialangle{20\,}\, 0.00925}}= \dfrac{\$15000}{18.1825575} \approx \$824.9665
+	\]
+}
+
+
+\end{document}

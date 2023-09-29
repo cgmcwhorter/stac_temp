@@ -21,8 +21,32 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
+\item We know that $\text{Change Water}= rt$, where $r$ is the rate at which water is flowing in and $t$ is the time. The volume of the `rectangular' vat is $V= \ell w h$, where $\ell$ is the length, $w$ is the width, and $h$ is the height. But then $V= 15 \text{ ft} \cdot 10 \text{ ft} \cdot 4 \text{ ft}= 600 \text{ ft}^3$. At the start, the vat is halfway filled with water. So there is already $\frac{1}{2} V= \frac{1}{2} \cdot 600 \text{ ft}^3= 300 \text{ ft}^3$ of water in the vat at the start of the problem. This leaves $600 \text{ ft}^3 - 300 \text{ ft}^3= 300 \text{ ft}^3$ of volume left in the vat. We want $\text{Change Water}= 300 \text{ ft}^3$. Water is flowing in at a rate of $r= 9 \text{ ft}^3$ per minute. But then we have\dots
+	\[
+	\begin{gathered}
+	\text{Change Water}= rt \\
+	300 \text{ ft}^3= 9 \text{ ft}^3/\text{min} t \\
+	t= \dfrac{300 \text{ ft}^3}{9 \text{ ft}^3/\text{min}} \\
+	t \approx 33.33 \text{ min}
+	\end{gathered}
+	\]
+Therefore, it will take 33.33~min to fill the vat. \pspace
+
+\item We know that $\text{Change Water}= rt$, where $r$ is the rate at which water is flowing into the sphere and $t$ is the time. The spherical container is given by $V= \frac{4}{3} \pi r^3$, where $r$ is the radius of the sphere. The sphere is 8~ft across, i.e. its diameter is 8~ft. But then $r= \frac{8 \text{ ft}}{2}= 4 \text{ ft}$. Therefore, we have\dots
+	\[
+	V= \dfrac{4}{3} \pi r^3= \dfrac{4}{3} \cdot \pi \cdot (4 \text{ ft})^3= \dfrac{4}{3} \cdot \pi \cdot 64 \text{ ft}^3= \dfrac{256 \pi}{3} \text{ ft}^3 \approx 268.08 \text{ ft}^3
+	\]
+Therefore, we want $\text{Change Water}= 268.08 \text{ ft}^3$. But we want the sphere to fill up in the same amount of time it took to fill the container in (a). But then\dots
+	\[
+	\begin{aligned}
+	\text{Change Water}= rt \quad\Longrightarrow\quad r= \dfrac{\text{Change Water}}{t} \quad\Longrightarrow\quad r= \dfrac{268.08 \text{ ft}^3}{t}
+	\end{aligned}
+	\]
+From (a), we know that $t \approx 33.33 \text{ min}$. Therefore, we have\dots
+	\[
+	r= \dfrac{268.08 \text{ ft}^3}{t}= \dfrac{268.08 \text{ ft}^3}{33.33 \text{ min}}\approx 8.04 \text{ ft}^3/\text{min}
+	\]
+To fill the sphere in the same amount of time it took to fill the `rectangular' vat, water should flow into the sphere at a rate of $8.04 \text{ ft}^3/\text{min}$. 
 \end{enumerate}
 
 
@@ -34,7 +58,44 @@
 % Problem 2
 \problem{10} You plan on traveling to your summer cottage. The cottage is located 50~mi east and 30~mi north of where you live. If you will drive along a highway approximately straight toward the cottage at 65~mph, how long will it take you to arrive at the cottage? \pspace
 
-\sol 
+\sol We know that $d= vt$, where $d$ is the distance you will travel, $v$ is your velocity, and $t$ is the time it will take. First, we need to find the distance, $d$. Sketching the region and travel path, we obtain the following diagram:
+	\[
+	\begin{tikzpicture}
+	\node at (-0.7,-0.2) {Home};
+	\node at (3.8,5.2) {Cottage};
+	\node at (1.5,-0.3) {30~mi};
+	\node at (3.6,2.5) {50~mi};
+	\node at (1.1,2.6) {$d$};
+	
+	\draw[line width=0.03cm,dotted] (0,0) -- (3,0) -- (3,5);
+	\draw[line width=0.03cm] (0,0) -- (3,5);
+	\draw[line width=0.03cm] (2.7,0) -- (2.7,0.3) -- (3,0.3);
+	
+	\draw[fill=black] (0,0) circle (0.1);
+	\draw[fill=black] (3,5) circle (0.1);
+	\end{tikzpicture}
+	\]
+Using the Pythagorean Theorem, we know that $c^2= a^2 + b^2$, where $a, b$ are the legs of the right triangle and $c$ is the hypotenuse. Therefore, we have\dots
+	\[
+	\begin{aligned}
+	c^2&= a^2 + b^2 \\
+	d^2&= (30 \text{ mi})^2 + (50 \text{ mi})^2 \\
+	d^2&= 900 \text{ mi}^2 + 2500 \text{ mi}^2 \\
+	d^2&= 3400 \text{ mi}^2 \\
+	d&= \sqrt{3400 \text{ mi}^2} \\
+	d&\approx 58.31 \text{ mi}
+	\end{aligned}
+	\]
+Because you will travel at a constant rate of 65~mph, we know that $r= 65 \text{ mph}$. But then, we have\dots
+	\[
+	\begin{gathered}
+	d= vt \\[0.3cm]
+	58.31 \text{ mi}= 65 \text{ mph} \cdot t \\[0.3cm]
+	t= \dfrac{58.31 \text{ mi}}{65 \text{ mph}} \\[0.3cm]
+	t \approx 0.897 \text{ hrs}
+	\end{gathered}
+	\]
+Therefore, you will arrive at the cottage after 0.897~hours, i.e. after 53.8~minutes. 
 
 
 
@@ -45,7 +106,36 @@
 % Problem 3
 \problem{10} Suppose that one roofer can put a new roof on a house 1.3 times faster than another worker. If working together, they can roof a house in 6 days, how many days would it take the slower worker to roof a house working alone? \pspace
 
-\sol 
+\sol Let the rate of the slower roofer be $r_S$ and the rate of the faster roofer by $r_F$. Because the faster roofer works 1.3 times faster than the slower roofer, we know that $r_F= 1.3 r_S$. The rate of them working together is clearly the sum of the rates at which they work.\footnote{This is really an assumption rather than a fact.} Letting $r_T$ be the rate at which they work together, we know that $r_T= r_S + r_F$. We know that $\text{Number Roofs}= rt$, where $r$ is the rate at which one roofs and $t$ is the time. Working together, the workers roof one house in  6~days. But then we have\dots 
+	\[
+	\begin{aligned}
+	\text{Number Roots}&= rt \\
+	1 \text{ roof}&= 6\,r_T \\
+	1 \text{ roof}&= 6(r_S + r_F)
+	\end{aligned}
+	\]
+But we know that $r_F= 1.3 r_S$, so we have\dots
+	\[
+	\begin{aligned}
+	\text{Number Roots}&= rt \\
+	1 \text{ roof}&= 6 \text{ days} \cdot r_T \\
+	1 \text{ roof}&= 6 \text{ days} \cdot (r_S + 1.3r_S) \\
+	1 \text{ roof}&= 6 \text{ days} \cdot (2.3r_S) \\
+	1 \text{ roof}&= 13.8 \text{ days} \cdot r_S \\
+	r_S&= \dfrac{1}{13.8} \text{ roofs/day} \\
+	r_S&\approx 0.072 \text{ roofs/day}
+	\end{aligned}
+	\]
+But we need to know how many days it would take the slower roofer to roof a house working alone. Using the same approach as above, we have\dots
+	\[
+	\begin{gathered}
+	\text{Number Roots}= rt \\[0.3cm]
+	1 \text{ roof}= 0.072 \text{ roofs/day} \cdot t \\[0.3cm]
+	t= \dfrac{1 \text{ roof}}{0.072 \text{ roofs/day}} \\[0.3cm]
+	t\approx 13.9 \text{ days}
+	\end{gathered}
+	\]
+Therefore, it takes the slower roofer 13.9~days---nearly two weeks---to roof a house on their own. 
 
 
 
@@ -56,7 +146,21 @@
 % Problem 4
 \problem{10} Use a Fermi estimation to approximate how many hot dogs are sold at Yankee Stadium each year. Be sure to show your work and fully justify your reasoning. \pspace
 
-\sol 
+\sol There are many possible `correct', i.e. well-reasoned, answers. Here is one possible approach:\footnote{This solution will initially assume as much baseball knowledge as the instructor\dots none.} if we know the percentage of Yankee stadium attendees that buy at least one hot dog, knowing the number of attendees at a game, then we can estimate the number of hot dogs sold per Yankees' game. If we can estimate the number of Yankees' games per year, then we can estimate the number of hot dogs sold per year at Yankee stadium. That is, we shall estimate as follows:
+	\[
+	\text{\# Hot Dogs per Year} \approx \dfrac{\text{Hot Dog}}{\text{Person}} \cdot \dfrac{\text{People}}{\text{Game}} \cdot \dfrac{\text{Games}}{\text{Year}}
+	\]
+Notice the units of this work out to be hot dogs per year, as desired. Let's do a `first pass' estimate. Some people will buy no hot dogs; some will buy one; others will buy more than one. Say only 10\% of people at a game buy at least one hot dog. But of those, some will buy more than one. To account for this, let's simply pretend they instead share those extra hot dogs with others. We can then estimate that this increased percentage of people with a hot dog is approximately 15\% of people at the game. Clearly, the stadium will have at least 10,000 seats---it's a large stadium after all. But clearly, it will not have more than 100,000 seats. Having a minimum and maximum estimate, we might use a geometric mean to estimate the number of filled seats: $\sqrt{pq}= \sqrt{10000 \cdot 100000}= \sqrt{1000000000} \approx 31622.8$. Of course, they will likely not sell out the stadium. Certainly, they will fill at least half. Let's assume that they fill 75\% of those seats. Then there will be $31622.8 \cdot 0.75= 23717.1$ people at each game. It should be `obvious' that the stadium will host at least 10~games in a year. But they will not likely host more than 100 games in a year. Therefore, we can again use a geometric mean to approximate the number of games in a year: $\sqrt{pq}= \sqrt{10 \cdot 100}= \sqrt{1000} \approx 31.62$ games per year. But then we have\dots
+	\[
+	\text{\# Hot Dogs per Year} \approx \dfrac{\text{Hot Dog}}{\text{Person}} \cdot \dfrac{\text{People}}{\text{Game}} \cdot \dfrac{\text{Games}}{\text{Year}} \approx 0.15 \cdot 23717.1 \cdot 31.62 \approx 112,\!490 \text{ hot dogs/year}
+	\] \pspace
+
+Of course, we can do much better by looking up some values and making better assumptions. Taking into account `big eaters', children, etc., once `averaged out', it is more likely that approximately 20\% of people buy a hot dog at a game. We can look up the seating capacity of Yankee stadium---approximately 52,287. Let's assume they fill approximately 85\% of the total seats---being a popular team in a large city.\footnote{We assume the same `fill' for other events.} This gives a total of $52,\!287 \cdot 0.85 \approx 44,\!443.95$ people per `game.' There are 81 home games for major league baseball in a year. Assume there are other events each week at Yankee stadium beyond the baseball games---at least one for each baseball game. This gives a total of 162~events at Yankee stadium at which to sell hot dogs. Then we have\dots
+	\[
+	\text{\# Hot Dogs per Year} \approx \dfrac{\text{Hot Dog}}{\text{Person}} \cdot \dfrac{\text{People}}{\text{Game}} \cdot \dfrac{\text{Games}}{\text{Year}} \approx 0.20 \cdot 44,\!443.95 \cdot 162 \approx 1,\!439,\!984 \text{ hot dogs/year}
+	\] \pspace
+
+Trying to find values for the actual number of hot dogs sold, we do find a value of approximately 1.5~million (during baseball season)---according to \href{https://www.prnewswire.com/news-releases/hot-dog-data-shows-mlb-teams-that-sell-the-most-hot-dogs-win-the-most-games-301260502.html}{this article by the National Hog Dog and Sausage Council} and \href{https://www.qsrmagazine.com/news/nathans-famous-chosen-official-hot-dog-new-yankee-stadium}{this article about Nathan's Famous Inc. by QSR}. 
 
 
 \end{document}

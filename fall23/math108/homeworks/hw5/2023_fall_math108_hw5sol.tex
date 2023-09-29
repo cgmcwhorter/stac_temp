@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -18,7 +18,30 @@
 	\item Which loan appears to be the `better deal'? Explain. 
 	\item Compute the effective interest for both loan setups. Which loan setup is better? Explain. 
 	\item Compute the doubling time for both loan setups. Which loan setup is better? Explain.
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item At first glance, it appears that the loan that offers an annual interest rate of 2.9\%, compounded quarterly is the better deal because it has a higher interest rate---merely 2.89\%.\footnote{While the interest rate for the continuously compounded account is lower, one does receive interest more often. This accumulated interest may result in more yearly interest than in the quarterly compounded account. Investigating this is precisely the purpose of (b) and (c). The account deemed `better' in (b) and (c) should agree. Of course, in this context, by `better' we mean which earns money faster. Generally, which is `better' may depend on context.} \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	r_{\text{eff}}&= \left(1 + \dfrac{r}{k} \right)^k - 1=  \left(1 + \dfrac{0.029}{4} \right)^4 - 1= (1.00725)^4 - 1 \approx 1.0293169 - 1= 0.0293169 \\
+	r_{\text{eff}}&= e^r - 1= e^{0.0289} - 1 \approx 1.0293217 - 1= 0.0293217
+	\end{aligned}
+	\]
+Therefore, the effective interest for the compounded quarterly account is 2.9317\% while the effective interest for the continuously compounded account is 2.9322\%. Because the effective interest rate for the continuously compounded is larger, the continuously compounded interest account is `better.' \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	t_D&= \dfrac{\ln(2)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(2)}{4 \ln \left(1 + \dfrac{0.029}{4} \right)}= \dfrac{\ln(2)}{4 \ln(1.00725)} \approx \dfrac{0.693147}{0.0288954} \approx 23.9881 \text{ years} \\
+	t_D&= \dfrac{\ln(2)}{r} \approx \dfrac{0.693147}{0.0289} \approx 23.9843 \text{ years}
+	\end{aligned}
+	\]
+Therefore, the doubling time for the compounded quarterly account is 23.9881~years while the doubling time for the continuously compounded account is 23.9843~years. Because the doubling time for the continuously compounded account is less than that for the quarterly compounded account, the continuously compounded account is `better.' 
+\end{enumerate}
 
 
 
@@ -31,7 +54,22 @@
 	\begin{enumerate}[(a)]
 	\item How long until Leonard has enough money for the laser?
 	\item How long until Leonard doubled his money?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We need to find how long it will take the principal $P= \$600$ in the account to earn sufficient interest for the account to have $F= \$895.99$. We know that the interest is compounded continuously at an annual rate of $r= 0.031$. But then\dots
+	\[
+	t= \dfrac{\ln(F/P)}{r}= \dfrac{\ln(\$895.99/\$600)}{0.031} \approx \dfrac{\ln(1.49332)}{0.031} \approx \dfrac{0.401002}{0.031} \approx 12.93 \text{ years}
+	\]
+Therefore, it will take Leonard approximately 12.93~years, i.e. 12~years, 11~months, and 4.9~days, to contain the necessary \$895.99. \pspace
+
+\item We need to find how long it will take the principal $P= \$600$ in the account to earn sufficient interest for the account to have $F= 2P= 2 \cdot \$600= \$1200$, i.e. the doubling time. We know that the interest is compounded continuously at an annual rate of $r= 0.031$. But then\dots
+	\[
+	t_D= \dfrac{\ln(2)}{r} \approx \dfrac{0.693147}{0.031} \approx 22.36 \text{ years}
+	\]
+Therefore, it will take Leonard approximately 22.36~years, i.e. 22~years, 4~months, and 9.7~days, to double his initial investment of \$600. 
+\end{enumerate}
 
 
 
@@ -44,7 +82,22 @@
 	\begin{enumerate}[(a)]
 	\item How long until the account value has doubled?
 	\item How long until the account contains \$1,000,000?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We need to find how long it will take the principal $P= \$11460$ in the account to earn sufficient interest for the account to have $F= 2P= 2 \cdot \$11460= \$22920$, i.e. the doubling time. We know the annual interest rate of $r= 0.052$ is compounded semiannually, i.e. twice per year, so that $k= 2$. But then\dots
+	\[
+	t_D= \dfrac{\ln(2)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(2)}{2 \ln \left(1 + \dfrac{0.052}{2} \right)}= \dfrac{\ln(2)}{2 \ln(1.026)} \approx \dfrac{0.693147}{0.0513355} \approx 13.50 \text{ years}
+	\]
+Therefore, it will take Penny 13.5~years to have doubled her initial investment of \$11,460. \pspace
+
+\item We need to find how long it will take the principal $P= \$11460$ in the account to earn sufficient interest for the account to have $F= \$1000000$, i.e. the doubling time. We know the annual interest rate of $r= 0.052$ is compounded semiannually, i.e. twice per year, so that $k= 2$. But then\dots 
+	\[
+	t_D= \dfrac{\ln(F/P)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(\$1000000/\$11460)}{2 \ln \left(1 + \dfrac{0.052}{2} \right)} \approx \dfrac{\ln(87.26)}{2 \ln(1.026)} \approx \dfrac{4.46889}{0.0513355} \approx 87.05 \text{ years}
+	\]
+Therefore, it will take Penny 87.05~years for her initial investment of \$11,460 to have grown to \$1,000,000. 
+\end{enumerate}
 
 
 \end{document}

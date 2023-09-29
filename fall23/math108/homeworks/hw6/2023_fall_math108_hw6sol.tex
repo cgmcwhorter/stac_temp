@@ -1,0 +1,171 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 09/26}{I've got all the money I'll ever need, if I die by four o'clock.}{Henny Youngman}
+
+% Problem 1
+\problem{10} For an annuity with a period of 23~years, quarterly payments, and a 4.56\% annual interest, compounded monthly, compute the following:
+	\begin{enumerate}[(a)]
+	\item $s_{\actuarialangle{\text{PM}\,}\, i}$
+	\item $a_{\actuarialangle{\text{PM}\,}\, i}$
+	\item $\ddot{s}_{\actuarialangle{\text{PM}\,}\, i}$
+	\item $\ddot{a}_{\actuarialangle{\text{PM}\,}\, i}$
+	\end{enumerate} \pspace
+
+\sol Observe that the number of payments per year is not the same as the number of interest compounds per year. Therefore, the annuity must be a general annuity. We need compute the $i$ for such an annuity. There are $\text{PY}= 4$~payments per year, and $k= 12$ because the interest is compounded monthly, i.e. twelve times per year. The total number of payments made is then $\text{PM}= \text{PY} \cdot t= 4 \cdot 23= 92$. The annual interest rate is $r= 0.0456$. Then we have\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0456}{12} \right)^{12/4} - 1= 1.0038^3 - 1= 1.01144337 - 1= 0.01144337
+	\] \pspace
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	s_{\actuarialangle{\text{PM}\,}\, i}= s_{\actuarialangle{92\,}\, 0.01144337}= \dfrac{(1 + 0.01144337)^{92} - 1}{0.01144337}= \dfrac{2.8485551 - 1}{0.01144337}= \dfrac{1.8485551}{0.01144337}= 161.539398
+	\] \pspace
+
+\item 
+	\[
+	a_{\actuarialangle{\text{PM}\,}\, i}= a_{\actuarialangle{92\,}\, 0.01144337}= \dfrac{1 - (1 + 0.01144337)^{-92}}{0.01144337}= \dfrac{1 - 0.351055176}{0.01144337}= \dfrac{0.648944824}{0.01144337}= 56.709241
+	\] \pspace
+
+\item Using (a), we have\dots
+	\[
+	\ddot{s}_{\actuarialangle{\text{PM}\,}\, i}= \ddot{s}_{\actuarialangle{92\,}\, 0.01144337}= (1 + 0.01144337)\, s_{\actuarialangle{92\,}\, 0.01144337}= 1.01144337 \cdot 161.539398= 163.3879531
+	\] \pspace
+
+\item Using (b), we have\dots
+	\[
+	\ddot{a}_{\actuarialangle{\text{PM}\,}\, i}= \ddot{a}_{\actuarialangle{92\,}\, 0.01144337}= (1 + 0.01144337)\, a_{\actuarialangle{92\,}\, 0.01144337}= 1.01144337 \cdot 56.709241= 57.3581858
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Paige Turner is saving enough money to self publish her book, \textit{A LARP Guide to Friends}. She deposits \$240 at the end of every month into a savings account that earns 5.25\% annual interest, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item How much will she have saved after 3~years?
+	\item If her account had \$8,700 in it before she made her deposits, how much money would be in the account after the 3~years?
+	\item What should her monthly deposits have been, if she had wanted to save at least \$13,000 by the end of the 3~years? [Do not include the \$8,700 in her account from (b).]
+	\end{enumerate} \pspace
+
+\sol Because Paige is making equal, regular payments into an account, this is an annuity. Furthermore, because the payments occur at the end of every month and the number of payments per year is the same as the number of interest compounds per year, this is a simple ordinary annuity. We know the monthly payment is $R= \$240$. The annual interest rate is $r= 0.0525$, and $k= 12$ because the interest rate is compounded monthly, i.e. twelve times per year. But then the interest per payment is $i= i_p= \frac{r}{k}= \frac{0.0525}{12}= 0.004375$. The number of payments made is $\text{PM}= \text{PY} \cdot t= 12 \cdot 3= 36$. 
+
+\begin{enumerate}[(a)]
+\item We need to find the future value of all the deposits and their interest. First, observe\dots
+	\[
+	s_{\actuarialangle{36 \,}\, 0.004375}= \dfrac{(1 + 0.004375)^{36} - 1}{0.004375}= \dfrac{1.1701787 - 1}{0.004375}= \dfrac{0.1701787}{0.004375}= 38.8979886
+	\]
+But then the future value is\dots
+	\[
+	F= R\, s_{\actuarialangle{36 \,}\, 0.004375}= \$240 \cdot 38.8979886 \approx \$9,\!335.52
+	\] \pspace
+
+\item The \$8,700 earns 5.25\% annual interest, compounded monthly. But then after 3~years, this \$8,700 has increased in value to\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= \$8700 \left(1 + \dfrac{0.0525}{12} \right)^{12 \cdot 3}= \$8700 (1.004375)^{36}= \$8700 \cdot 1.170178698 \approx \$10,\!180.55
+	\]
+From (a), we know that the total amount of her monthly \$240 deposits and their interest after the 3~years is \$9,335.52. Therefore, the total amount of money in the account is\dots
+	\[
+	\text{Account Value}= \$9,\!335.52 + \$10,\!180.55= \$19,\!516.07
+	\] \pspace
+
+\item She wants the future value of her deposits plus their interest to be $F= \$13000$. But then\dots
+	\[
+	R= \dfrac{F}{s_{\actuarialangle{36 \,}\, 0.004375}}= \dfrac{\$13000}{38.8979886} \approx \$334.21
+	\]
+Therefore, Paige should make monthly deposits of \$334.21. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Jed Knight has just won a \$13,000,000 lottery. He would like to retire to an isolated swamp home in Florida. He deposits the winnings into an account that earns 4.7\% annual interest, compounded monthly. Given that he is already 65, he estimates that he will only live another 20~years. Jed live off his winnings by withdrawing money at the end of every month off of which to live.
+	\begin{enumerate}[(a)]
+	\item  What is the largest amount he can withdraw each month to last him the rest of his life?
+	\item Suppose instead he withdraws the money at the start of every month. What is the largest amount that he can withdraw monthly? 
+	\end{enumerate} \pspace
+
+\sol Because Jed will be making equal, regular withdrawals, this is an annuity. Because the withdrawals are made at the end of the month and the number of withdrawals per year is equal to the number of interest compounds per year, this is a simple ordinary annuity. We know that Jed presently has $P= \$13000000$. The annual interest rate is $r= 0.047$, and $k= 12$ because the interest is compounded monthly, i.e. twelve times per year. The interest rate per period is $i= i_p= \frac{r}{k}= \frac{0.047}{12}= 0.003916667$. He assumes he will make a maximum of $\text{PM}= \text{PY} \cdot t= 12 \cdot 20= 240$ total withdrawals. 
+
+
+
+\begin{enumerate}[(a)]
+\item We wish to find Jed's monthly withdrawal amount. First, we have\dots
+	\[
+	a_{\actuarialangle{240\,}\, 0.003916667}= \dfrac{1 - (1 + 0.003916667)^{-240}}{0.003916667}= \dfrac{1 - 0.391345671}{0.003916667}= \dfrac{0.608654329}{0.003916667}= 155.4010921
+	\]
+We know that\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{240\,}\, 0.003916667}}= \dfrac{\$13000000}{155.4010921}= \$83,\!654.50
+	\]
+Therefore, Jed can withdraw at most \$83,654.50 each month in order for the money to last at least 20~years. \pspace
+
+\item The only thing that changes is that in this scenario, this is an annuity due. But then\dots
+	\[
+	\ddot{a}_{\actuarialangle{240\,}\, 0.003916667}= (1 + 0.003916667) a_{\actuarialangle{240\,}\, 0.003916667}= 1.003916667 \cdot 155.4010921= 156.0097464
+	\]
+This gives us\dots
+	\[
+	R= \dfrac{P}{\ddot{a}_{\actuarialangle{240\,}\, 0.003916667}}= \dfrac{\$13000000}{156.0097464}= \$83,\!328.13
+	\]
+Therefore, Jed could withdraw at most \$83,328.13 at the start of each month in order for the money to last at least 20~years. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Shay is having trouble finding dates. He decides the solution to his problem is to purchase a replica of the 1966 Batmobile. He immediately begins saving for the car by putting aside \$820 on the first of the month, every 3~months, for 5~years. The account he deposits the money into earns 4.21\% annual interest, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item How much will Shay have saved after the 5~years?
+	\item If he needed to save \$110,000 for the car, what is the amount he should have been depositing? 
+	\end{enumerate} \pspace
+
+\sol Because Shay will make regular, equal payments, this is an annuity. Because payments will be made at the start of every quarter, i.e. every 3~months, and the number of payments per year is not equal to the number of interest compounds per year, this is a general annuity due. He will make regular quarter payments of $R= \$820$ for $t= 5$~years. Shay will make $\text{PY}= 4$~payments per year, and he will make a total of $\text{PM}= \text{PY} \cdot t= 4 \cdot 5= 20$ payments. The annual interest rate is $r= 0.0421$, and $k= 12$ because the interest is compounded monthly. The interest rate per payment period is\dots
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0421}{12} \right)^{12/4} - 1= (1.00350833)^3 - 1= 1.01056196 - 1= 0.01056196
+	\] \pspace
+
+\begin{enumerate}[(a)]
+\item We need to find the future value of the deposits plus their accumulated interest. First, observe\dots
+	\[
+	\begin{aligned}
+	s_{\actuarialangle{20\,}\, 0.01056196}&= \dfrac{(1 + 0.01056196)^{20} - 1}{0.01056196}= \dfrac{1.23384023 - 1}{0.01056196}= \dfrac{0.23384023}{0.01056196}= 22.1398519 \\[0.3cm]
+	\ddot{s}_{\actuarialangle{20\,}\, 0.01056196}&= (1 + 0.01056196) s_{\actuarialangle{20\,}\, 0.01056196}= 1.01056196 \cdot 22.1398519= 22.37369213
+	\end{aligned}
+	\]
+But then after the 5~years, the account will have\dots
+	\[
+	F= R\, \ddot{s}_{\actuarialangle{20\,}\, 0.01056196}= \$820 \cdot 22.37369213 \approx \$18,\!346.43
+	\] \pspace
+
+\item In the future, after the 5~years of payments, Shay wants to have $F= \$110000$ in the account. Observe\dots
+	\[
+	R= \dfrac{F}{\ddot{s}_{\actuarialangle{20\,}\, 0.01056196}}= \dfrac{\$110000}{22.37369213}= \$4,\!916.49
+	\]
+Therefore, Shay should deposit at least \$4,916.49 at the start of every quarter in order to have \$110,000 saved after 5~years. 
+\end{enumerate}
+
+
+\end{document}
