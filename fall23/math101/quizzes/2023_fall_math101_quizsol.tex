@@ -3,6 +3,8 @@
 \usepackage{style/quiz}
 \usepackage{style/commands}
 
+\usepackage{cancel} 	% Use Cancels
+
 % -------------------
 % Content
 % -------------------
@@ -10,7 +12,94 @@
 \thispagestyle{title}
 
 % Quiz 1
-\quizsol \textit{True/False}: 
+\quizsol \textit{True/False}: The integer 45 has prime factorization $45= 3 \cdot 15$, which shows that 3 and 15 are divisors of 45. Furthermore, we know that 1 is a multiple of 45. \pspace
+
+\sol The statement is \textit{false}. While it is true that $45= 3 \cdot 15$ is a \textit{factorization} of 45, it is not a \textit{prime factorization} of 45 because $15= 3 \cdot 5$. The prime factorization of 45 is $45= 3^2 \cdot 5$. It is true that if $45= 3 \cdot 15$, then 3 and 15 are divisors of 45. Finally, while 1 is a divisor of 45 because $45= 45 \cdot 1$, 1 is not a multiple of 45 because there is not an integer $k$ such that $1= 45k$. \pvspace{1.3cm}
+
+
+
+% Quiz 2
+\quizsol \textit{True/False}: $\dfrac{\frac{2a}{b}}{\frac{4a}{bc}}= 8c$ \pspace
+
+\sol The statement is \textit{false}. We have\dots
+	\[
+	\dfrac{\;\;\dfrac{2a}{b}\;\;}{\dfrac{4a}{bc}}= \dfrac{2a}{b} \cdot \dfrac{bc}{4a}= \dfrac{\cancel{2} \cancel{a}}{\cancel{b}} \cdot \dfrac{\cancel{b}c}{\cancel{4}^{\,2} \cancel{a}}= \dfrac{c}{2}
+	\] \pvspace{1.3cm}
+
+
+
+% Quiz 3
+\quizsol \textit{True/False}: The expression $\dfrac{(x y^3)^{-2}}{(x^{-3} y^8)^2}$ when fully simplified is $\dfrac{x^4}{y^{22}}$. \pspace
+
+\sol The statement is \textit{true}. We have\dots
+	\[
+	\dfrac{(x y^3)^{-2}}{(x^{-3} y^8)^2}= \dfrac{x^{-2} y^{-6}}{x^{-6} y^{16}}= \dfrac{x^6}{x^2 y^6 y^{16}}= \dfrac{x^6}{x^2 y^{22}}= \dfrac{x^4}{y^{22}}
+	\] \pvspace{1.3cm}
+
+
+
+% Quiz 4
+\quizsol \textit{True/False}: $\left( \dfrac{(x^2 y^3)^4}{x^{-3} y^8} \right)^{-1/2}= \dfrac{1}{y^2 \sqrt[11]{x^2}}$ \pspace
+
+\sol The statement is \textit{true}. We have\dots
+	\[
+	\hspace{-1.7cm} \left( \dfrac{(x^2 y^3)^4}{x^{-3} y^8} \right)^{-1/2}= \left( \dfrac{x^{-3} y^8}{(x^2 y^3)^4} \right)^{1/2}= \left( \dfrac{x^{-3} y^8}{x^8 y^{12}} \right)^{1/2}= \left( \dfrac{y^8}{x^3 x^8 y^{12}} \right)^{1/2}= \left( \dfrac{y^8}{x^{11} y^{12}} \right)^{1/2}= \left( \dfrac{1}{x^{11} y^4} \right)^{1/2}= \dfrac{1}{x^{11/2} y^{4/2}}= \dfrac{1}{y^2 \sqrt{x^{11}}}
+	\]
+Therefore, the quiz statement is false. The quiz statement has $\sqrt[11]{x^2}= x^{2/11}$ instead of $\sqrt{x^{11}}= x^{11/2}$. 
+
+
+
+\newpage
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: The real number $0.123412341234\ldots$ is a rational number; therefore, one can find integers $a, b$ such that $\frac{a}{b}= 0.123412341234\ldots$. \pspace
+
+\sol The statement is \textit{true}. A rational number is a real number of the form $\frac{a}{b}$, where $a, b$ are integers and $b \neq 0$. Equivalently, a rational number is a real number whose decimal expansion either terminates or repeats. Because the decimal expansion of $0.123412341234\ldots$ repeats, it must be that $0.123412341234\ldots$ is rational. Therefore, there must be integers $a, b$ such that $\frac{a}{b}= 0.123412341234\dots$. In fact, if $N= 0.123412341234\dots$, we have\ldots
+	\begin{table}[!ht]
+	\centering\small
+	\begin{tabular}{rccc}
+	& $10000N$ & $=$ & $1234.123412341234\overline{1234}$ \\ 
+	$-$ & $N$ & $=$ & $\phantom{123}0.123412341234\overline{1234}$ \\ \hline
+	& $9999N$ & $=$ & $1234$ \\[0.1cm]
+	& $N$ & $=$ & $\frac{1234}{9999}$
+	\end{tabular}
+	\end{table} \pvspace{1.3cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: Suppose a course has grade components of homework (50\%), quizzes (10\%), a midterm (20\%), and a final (20\%). If you had a 80\% homework average, 75\% quiz average, and received a 60\% on the midterm, then your average is\dots
+	\[
+	0.50(80\%) + 0.10(75\%) + 0.20(60\%)= 40\% + 7.5\% + 12\%= 59.5\%
+	\] \pspace
+
+\sol The statement is \textit{false}. One's course average is a weighted average where each percentage earned is weighted by the components worth. But then\dots
+	\[
+	\text{Course Average}= \dfrac{\sum w_i x_i}{\sum w_i}= \dfrac{0.50 \cdot 0.80 + 0.10 \cdot 0.75 + 0.20 \cdot 0.60}{0.50 + 0.10 + 0.20}= \dfrac{0.40 + 0.075 + 0.12}{0.80}= \dfrac{0.595}{0.80}= 0.74375
+	\] \pvspace{1.3cm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

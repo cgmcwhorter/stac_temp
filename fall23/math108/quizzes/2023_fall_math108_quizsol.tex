@@ -12,7 +12,73 @@
 % Quiz 1
 \quizsol \textit{True/False}: The product $189.75(1.08)$ can be interpreted as representing finding either 8\% of $189.75$ or increasing $189.75$ by 8\%. \pspace
 
-\sol The statement is false. To compute a \% of some number $N$, we need only compute $N \cdot \%_d$ and if we want to compute $N$ increased or decreased by a \%, we compute $N \cdot (1 \pm \%_d)$, where $\%_d$ is the percentage written as a decimal and we choose `$+$' if it is an increase and choose `$-$' if it is a decrease. So thinking of the product $189.75(1.08)$ as finding a percent of a number, we must have $\#= 189.75$ and $\%_d= 1.08$, i.e. $\%= 108\%$. Then one way of interpreting this is finding 108\% of 189.75---not the 8\% claimed in the quiz statement. Interpreting the product $189.75(1.08)$ as finding a percentage increase/decrease, it must be a percentage increase because $1.08 > 1$. Writing $1.08= 1 + 0.08$, we can see that $\%_d= 0.08$. Therefore, $189.75(1.08)$ can represent finding 189.75 increased by 8\%---which is what is claimed in the quiz statement. 
+\sol The statement is \textit{false}. To compute a \% of some number $N$, we need only compute $N \cdot \%_d$ and if we want to compute $N$ increased or decreased by a \%, we compute $N \cdot (1 \pm \%_d)$, where $\%_d$ is the percentage written as a decimal and we choose `$+$' if it is an increase and choose `$-$' if it is a decrease. So thinking of the product $189.75(1.08)$ as finding a percent of a number, we must have $\#= 189.75$ and $\%_d= 1.08$, i.e. $\%= 108\%$. Then one way of interpreting this is finding 108\% of 189.75---not the 8\% claimed in the quiz statement. Interpreting the product $189.75(1.08)$ as finding a percentage increase/decrease, it must be a percentage increase because $1.08 > 1$. Writing $1.08= 1 + 0.08$, we can see that $\%_d= 0.08$. Therefore, $189.75(1.08)$ can represent finding 189.75 increased by 8\%---which is what is claimed in the quiz statement. \pvspace{1.3cm}
+
+
+
+% Quiz 2
+\quizsol \textit{True/False}: Suppose $R(x)$, $C(x)$, and $P(x)$ are revenue, cost, and profit functions. If $C(x) < R(x)$, then the company is making a profit and $P(x) > 0$. \pspace
+
+\sol The statement is \textit{false}. If $C(x) < R(x)$, i.e. $R(x) > C(x)$, then the costs are less than the revenue; equivalently, the revenue is greater than the costs. But then the company should be making a profit, i.e. $P(x) > 0$. Alternatively, recalling that $P(x)= R(x) - C(x)$, if $R(x) > C(x)$, then $P(x)= R(x) - C(x) > 0$. But then the statement of the quiz is true. \pvspace{1.3cm}
+
+
+
+% Quiz 3
+\quizsol \textit{True/False}: If Prunella takes out a simple discount note with maturity \$5,000 for 3~months at 8.9\% annual interest, then she receives \$4,888.75 from the bank and pays a total of \$111.25 in interest. \pspace
+
+\sol The statement is \textit{true}. We know that Prunella will receive the loan amount minus the interest. Observe that $\$4888.75 + \$111.25= \$5000$, which supports the claim in the quiz. We can verify this directly. The total interest paid on the loan, i.e. the discount, is $D= Mrt= \$5000(0.089) \frac{3}{12} \approx \$111.25$. Prunella then receives $\$5000 - \$111.25= \$4888.75$. Therefore, the statement of the quiz is true. At the end of the 3~months, Prunella owes the bank the full \$5,000 maturity of the loan---having paid the \$111.25 in interest up-front. In total, Prunella pays $\$5000 + \$111.25= \$5111.25$ for the loan. \pvspace{1.3cm}
+
+
+
+% Quiz 4
+\quizsol \textit{True/False}: If you invest \$9,000 at 3.3\% annual interest, compounded monthly, then the amount of money in the account after 2~years is given by $\$9000 \left(1 + \dfrac{0.33}{12} \right)^{12} \approx \$12,463.05$. \pspace
+
+\sol The statement is \textit{false}. If one begins with a principal $P$ that earns an annual interest rate $r$, compounded $k$ times per year for $t$ years, then the final amount is $F= P \left(1 + \frac{r}{k} \right)^{kt}$. Here, the principal is $P= \$9000$, the annual interest rate is $r= 0.033$, $t= 2$~years, and $k= 12$ because the interest is compounded monthly. But then we have\dots
+	\[
+	F= P \left(1 + \frac{r}{k} \right)^{kt}= \$9000 \left(1 + \dfrac{0.033}{12} \right)^{12 \cdot 2}= \$9000 (1.00275)^{24}= \$9000 (1.06812996) \approx \$9,\!613.17
+	\]
+Therefore, the quiz statement is false. Observe they have $r= 0.33$ instead of $r= 0.033$. Furthermore, the exponent is the number of compounds per year, $k= 12$, rather than the total number of compounds $kt= 12 \cdot 2= 24$. \pvspace{1.1cm}
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: The greater the amount of money you place into an account earning 2.03\% yearly interest, compounded quarterly, the greater the effective interest. \pspace
+
+\sol The statement is \textit{false}. We know the effective interest for an account with principal $P$ earning an annual interest rate $r$, compounded $k$ times per year is given by $\left(1 + \frac{r}{k} \right)^k - 1$. Observe that this does not depend on $P$. Therefore, the effective interest is independent of the amount of money in an account. This makes sense because the effective interest is an annual interest \textit{rate} and should be independent of account amounts. Of course, the greater the amount in the account, the greater the amount of interest earned; however, this does not affect the \textit{rate} at which this amount was earned---the effective interest. As an aside, in this case, the effective interest rate is\dots
+	\[
+	r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.0203}{4} \right)^4 - 1= 1.005075^4 - 1= 1.0204551 - 1= 0.0204551
+	\] \pvspace{1cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: You save for a new car by making deposits of \$500 at the start of every month into a savings account. The account earns 1.7\% annual interest. This is an example of a simple annuity-immediate. \pspace
+
+\sol The statement is \textit{false}. The payments are made at the start of every month, i.e. at the start of every payment period. Therefore, this is an annuity due. The account earns interest annually but the deposits are made monthly. Therefore, this is a general annuity due. This shows the quiz statement is false. \pvspace{1.1cm}
+
+
+
+% Quiz 7
+\quizsol \textit{True/False}: If you had an amortized loan for \$150,000 at 9.4\% annual interest, compounded monthly with monthly payments over 30~years, then the minimum payments would have to be at least $\frac{\$150000}{12 \cdot 30}= \frac{\$150000}{360} \approx \$416.67$. \pspace
+
+\sol The statement is \textit{true}. If one makes monthly payments over 30~years, a total of $12 \cdot 30= 360$ payments are made. If the loan had no interest and only the principal was expected to be repaid using 360~equal payments, then each payment would have to be $\frac{\$150000}{12 \cdot 30}= \frac{\$150000}{360} \approx \$416.67$. Clearly, the loan will have interest so that payments will have to be at least this amount; that is, \$416.67 is the absolute smallest amount the monthly payments could be to repay this loan. In fact, this bound is not very `sharp.' For instance, if the payments were at the end of each month, then the monthly payments would be\dots
+	\[
+	R= \dfrac{P}{a_{\actuarialangle{360\,}\, 0.00783333}}= \dfrac{\$150000}{119.966236} \approx \$1,\!250.35
+	\]
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
 
 
 

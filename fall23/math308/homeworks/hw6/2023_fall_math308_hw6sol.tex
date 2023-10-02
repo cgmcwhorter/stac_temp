@@ -1,0 +1,84 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 10/05}{I know that the great Hilbert said, `We will not be driven out of the paradise Cantor has created for us,' and I reply, `I see no reason for walking in!' \,}{Richard Hamming}
+
+% Problem 1
+\problem{10} Let $A$ and $B$ be sets. For each of the following sets, compute the \textit{complement} of the given set. Be sure to show all your work and simplify your set expression as much as possible. 
+	\begin{enumerate}[(a)]
+	\item $(A \Delta B) \cup B^c$
+	\item $(A \cup B^c) \cap (A \cap B)^c$
+	\item$A - (A - B)$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Let $X= \{ a, \{ b \}, \{ a, b \} \}$. 
+	\begin{enumerate}[(a)]
+	\item Compute $\mathcal{P}(X)$. What is the cardinality of this set?
+	\item Determine whether the following are true or false---no justification is necessary:
+		\begin{multicols}{2}
+		\begin{enumerate}[(i)]
+		\item $\varnothing \in X$
+		\item $\varnothing \subseteq X$
+		\item $a \in X$
+		\item $\{ a \} \in X$
+		\item $\{ a \} \subseteq X$
+		% 
+		\item $\varnothing \in \mathcal{P}(X)$
+		\item $\mathcal{P}(X) \subseteq \mathcal{P}(X)$
+		\item $\{ a, b \} \in \mathcal{P}(X)$
+		\item $\{ a, b \} \subseteq \mathcal{P}(X)$
+		\item $\{ \{ a, b \} \} \subseteq \mathcal{P}(X)$
+		\end{enumerate}
+		\end{multicols}
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} For integers $n$, let $X_n= (n, n + 1)$, and for natural numbers $m$, let $Y_m= \left[ \frac{1}{m}, m \right)$. Compute the following:
+	\begin{enumerate}[(a)]
+	\item $\displaystyle \bigcup_{i= -1}^2 X_i$
+	\item $\displaystyle \bigcap_{k=2}^5 Y_k$
+	\item $\displaystyle \bigcup_{n \in \mathbb{Z}} X_n$
+	\item $\displaystyle \bigcup_{m \in \mathbb{N}} Y_m$
+	\item $\displaystyle \left( \bigcup_{m \in \mathbb{N}} Y_m \right)^c$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Let $A= \{ -1, 0, 1 \}$, $B= \{ a, b \}$, and $C= \{ \sqrt{2}, \pi \}$. 
+	\begin{enumerate}[(a)]
+	\item Compute $A \times B$.
+	\item Is $A \times B= B \times A$? Explain. 
+	\item Compute $\mathcal{P}(B \times C)$.
+	\item If $X= \varnothing$, what is $X \times Y$ for any set $Y$?
+	\item If $X, Y$ are sets and $X \times Y= Y \times X$, is it necessarily true that $X= Y$? Explain. [Hint: Use part (d).]
+	\end{enumerate}
+
+
+\end{document}

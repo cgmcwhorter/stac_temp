@@ -1,0 +1,114 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% Venn Diagrams
+\usepackage{venndiagram}
+\newcommand{\blank}[1]{\underline{\hspace{#1}}} % Blank Underline
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 10/05}{Since, as is well known, God helps those who help themselves, presumably the Devil helps all those, and only those, who don't help themselves. Does the Devil help himself?}{Douglas Hofstadter}
+
+% Problem 1
+\problem{10} For each of the following, if a Venn diagram is given, then express the shaded region as a set or set operation, and if a set operation is given, express the given set with a Venn diagram:
+	\begin{2enumerate}
+	\item 
+		\[
+		\begin{venndiagram2sets}[tikzoptions={scale=1}]
+		\fillNotAorB
+		\fillB
+		\end{venndiagram2sets}
+		\]
+	
+	\item $(A \cap B) \cup (A \cup B)^c$
+	
+	\item 
+		\[
+		\begin{venndiagram3sets}[tikzoptions={scale=1}]
+		\fillACapB
+		\fillACapC
+		\fillBCapC
+		\end{venndiagram3sets}
+		\]
+	
+	\item $(A \setminus C) \cap B$
+	\end{2enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} We shall create a new mathematical term: let $A, B$ be sets. We say $A$ is a \textit{pseudo-subset} of $B$, written $A \sqsubset B$, if there is an element of $A$ that is also an element of $B$ and also an element of $A$ that is not an element of $B$. 
+	\begin{enumerate}[(a)]
+	\item We know if $S$ is a set, then $\varnothing \subseteq S$. Is the same true for \textit{pseudo-subsets}? That is, do we have $\varnothing \sqsubset S$ for all sets $S$? Explain. 
+	\item If $A$ is a \textit{pseudo-subset} of $B$, are $A$ and $B$ disjoint? Explain. 
+	\item Express the definition of being a \textit{pseudo-subset} as a quantified logical statement. 
+	\item If what it means for $A \not\sqsubset B$ by negating your expression in (c). Write this quantified statement as a complete English sentence. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Below is a partial proof of the fact that if $A, B, C$ are sets, then $A \cap (B - C)= (A \cap B) - (A \cap C)$. By filling in the missing portions, complete the partial proof below so that it is a correct, logically sound proof with `no gaps.' \pspace
+
+\noindent \textbf{Proposition.} If $A, B, C$ are sets, then $A \cap (B - C)= (A \cap B) - (A \cap C)$. \pspace
+
+\textit{Proof.} To prove that $A \cap (B - C)= (A \cap B) - (A \cap C)$, we need to show \blank{3cm} and \pspace
+
+\underline{\hspace{3cm}}. \pvspace{2\baselineskip}
+
+If $A \cap (B - C)= \varnothing$ or $(A \cap B) - (A \cap C)= \varnothing$, then $\varnothing= A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$ and $\varnothing= (A \cap B) - (A \cap C) \subseteq A \cap (B - C)$, respectively. Assume neither $A \cap (B - C)$ nor $(A \cap B) - (A \cap C)$ are empty. \pvspace{3\baselineskip}
+
+$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$: Let $x \in $ \blank{3cm}. Then \blank{3cm} and \pspace
+
+\underline{\hspace{3cm}}. Because $x \in B - C$, we know that \blank{3cm} and \blank{3cm}. \pspace
+
+But then $x \in A$ and $x \in B$ so that \blank{3cm}. Now $x \in A$ but $x \notin$ \blank{3cm} so that \pspace
+
+$x \notin$ \blank{3cm}. This shows that $x \in (A \cap B) - (A \cap C)$. Therefore, \blank{3cm}. \pvspace{3\baselineskip}
+
+$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$: Let $x \in (A \cap B) - (A \cap C)$. Then $x \in$ \blank{3cm} \pspace
+
+and $x \notin A \cap C$. Because $x \in A \cap B$, we know that $x \in$ \blank{3cm} and $x \in$ \blank{3cm}. \pspace
+
+Because $x \notin A \cap C$, we know that $x \notin$ \blank{3cm} or $x \notin$ \blank{3cm}. But because \pspace
+
+$x \in A$, it must be that $x \notin$ \blank{3cm}. Because $x \in B$ and $x \notin C$, we know that \pspace
+
+$x \in$ \blank{3cm}. But then $x \in$ \blank{3cm}  and $x \in$ \blank{3cm}, so that \pspace
+
+$x \in A \cap (B - C)$. Therefore, \blank{3cm}. \pvspace{3\baselineskip}
+
+Because \blank{3cm} and \blank{3cm}, we know that $A \cap (B - C)= (A \cap B) - (A \cap C)$. \qed
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Let $A, B$ be sets, not necessarily nonempty. Complete the following parts:
+	\begin{enumerate}[(a)]
+	\item Is possible for $A - B= B - A$? Explain. 
+	\item If $A \not\subseteq B$, does this imply that $A$ is a proper subset of $B$? Explain. 
+	\item If $A, B$ are not disjoint, does this imply there is an element $x \in A$ and $x \in B$? Explain.
+	\item Is it possible for $A \subseteq A^c$? Explain. 
+	\end{enumerate}
+
+
+\end{document}
