@@ -12,10 +12,132 @@
 % -------------------
 \begin{document}
 
-\homework{XXXXXX: Due 10/12}{
+\homework{9: Due 10/12}{We will always have STEM with us. Some things will drop out of the public eye and will go away, but there will always be science, engineering, and technology. And there will always, always be mathematics.}{Katherine Johnson}
 
 % Problem 1
-\problem{10} 
+\problem{10} For each of the following functions, determine whether the function is injective, surjective, or bijective. Be sure to fully justify your answer.
+	\begin{enumerate}[(a)]
+	\item $f: \mathbb{R} \to \mathbb{R}$, $f(x)= 7 - 3x$
+	\item $g: \mathbb{R} \to \mathbb{R}^{\geq 0}$, $g(x)= x^2 + 1$
+	\item $h: \mathbb{R}^2 \to \mathbb{R}^2$, $h(x, y)= (x - 2y, -2x + 4y)$
+	\item $k: [0, \infty) \to \mathbb{R}$, $k(x)= 6 - x^2$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Let $A= B= \mathbb{R}$. Consider the function $f: A \to B$ given by $f(x)= x^2 - 4x + 7$.
+	\begin{enumerate}[(a)]
+	\item Sketch a graph of $f(x)$. Be sure your graph includes an interval around the vertex of $f(x)$.
+	\item Is $f(x)$ injective? Explain. [Hint: $f(x)= (x - 2)^2 + 3$.]
+	\item Is $f(x)$ surjective? Explain. [Hint: $f(x)= (x - 2)^2 + 3$.]
+	\item Do your responses in (b) and (c) change if $A= [2, \infty)$? Explain. 
+	\item Do your responses in (b) and (c) change if $B= [3, \infty)$? Explain. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Let $X= \{ 1, 2, 3, 4, 5 \}$, $Y= \{ 1, 2, 3, 4 \}$, and $A= \{ 1, 2, 3 \}$. If $S$ is a set and $\phi: S \to S$ is a function, we say that $s \in S$ is a \textit{fixed point} for $\phi$ if $\phi(s)= s$. Recall that a function $\psi: \mathbb{R} \to \mathbb{R}$ is \textit{strictly increasing} if $\psi(x) < \psi(y)$ for all $x, y \in \mathbb{R}$ with $x < y$.
+	\begin{enumerate}[(a)]
+	\item Determine a function $F: A \to Y$ that is nondecreasing with no fixed point. Be sure to fully specify the function and justify that $F$ has the required properties. 
+	\item Determine a function $G: X \to Y$ such that $G \big|_A= F$ and $G$ is neither surjective nor injective but so that $G$ does have a fixed point. Be sure to fully specify the function and justify that $G$ has the required properties. 
+	\item Is $G$ a strictly increasing function? Explain. 
+	\end{enumerate}
+	
+%	\[
+%	\begin{tikzpicture}
+%	\node at (2.5,2) {$F$};
+%	% Ellipses
+%	\draw[line width=0.03cm] (0,0) circle (1 and 2);
+%	\draw[line width=0.03cm] (5,0) circle (1 and 2);
+%	
+%	% Nodes
+%	\draw[fill=black] (0,1.5) circle (0.07);
+%	\draw[fill=black] (0,0.75) circle (0.07);
+%	\draw[fill=black] (0,0) circle (0.07);
+%	\draw[fill=black] (0,-0.75) circle (0.07);
+%	\draw[fill=black] (0,-1.5) circle (0.07);
+%	
+%	\draw[fill=black] (5,1.5) circle (0.07);
+%	\draw[fill=black] (5,0.50) circle (0.07);
+%	\draw[fill=black] (5,-0.5) circle (0.07);
+%	\draw[fill=black] (5,-1.5) circle (0.07);
+%	
+%	
+%	% Arrow
+%	\draw[line width=0.04cm,->] (0,1.5) -- (4.9,0.50);
+%	\draw[line width=0.04cm,->] (0,0.75) -- (4.9,-1.5);
+%	\draw[line width=0.04cm,->] (0,0) -- (4.9,1.5);
+%	\draw[line width=0.04cm,->] (0,-1.5) -- (4.9,0.5);
+%
+%	
+%	% Labels
+%	\node at (-0.3,1.5) {$1$};
+%	\node at (-0.3,0.75) {$2$};
+%	\node at (-0.3,0) {$3$};
+%	\node at (-0.3,-0.75) {$4$};
+%	\node at (-0.3,-1.5) {$5$};
+%	
+%	\node at (5.3,1.5) {$1$};
+%	\node at (5.3,0.5) {$2$};
+%	\node at (5.3,-0.5) {$3$};
+%	\node at (5.3,-1.5) {$4$};
+%	\end{tikzpicture}
+%	\]
+
+
+
+\newpage
+% Problem 
+\problem{10} Below is a partial proof of the fact that if $f: X \to Y$ is a function and $A, B \subseteq Y$, then $f^{-1}(A \cup B)= f^{-1}(A) \cup f^{-1}(B)$. By filling in the missing portions, complete the partial proof below so that it is a correct, logically sound proof with `no gaps.' \pspace
+
+\noindent \textbf{Proposition.} If $f: X \to Y$ is a function and $A, B \subseteq Y$, then $f^{-1}(A \cup B)= f^{-1}(A) \cup f^{-1}(B)$. \pspace
+
+\textit{Proof.} To prove that $f^{-1}(A \cup B)= f^{-1}(A) \cup f^{-1}(B)$, we need to show \blank{5cm} \pspace
+
+and \blank{5cm}. \pvspace{2\baselineskip}
+
+
+Clearly, if $f^{-1}(A \cup B)= \varnothing$, then $f^{-1}(A \cup B) \subseteq f^{-1}(A) \cup f^{-1}(A) \cup f^{-1}(B)$. Similarly, if $f^{-1}(A) \cup f^{-1}(A) \cup f^{-1}(B)= \varnothing$, then $f^{-1}(A) \cup f^{-1}(A) \cup f^{-1}(B) \subseteq f^{-1}(A \cup B)$. Assume neither $f^{-1}(A \cup B)$ nor $f^{-1}(A) \cup f^{-1}(A) \cup f^{-1}(B)$ are empty. \pvspace{2\baselineskip}
+
+$f^{-1}(A \cup B) \subseteq f^{-1}(A) \cup f^{-1}(A) \cup f^{-1}(B)$: Let $x \in$ \blank{3cm}. But then $f(x) \in A \cup B$. This \pspace
+
+implies that either $f(x) \in$ \blank{3cm} or $f(x) \in$ \blank{3cm}. \pspace
+
+Case 1, $f(x) \in$ \blank{3cm}: If $f(x) \in A$, then \blank{3cm} $\in f^{-1}(A)$. But then $x \in$ \blank{3cm}. \pspace
+
+Case 2, $f(x) \in B$: If \blank{3cm} $\in B$, then $x \in f^{-1}(B)$. But then $x \in f^{-1}(A) \cup f^{-1}(B)$. \pspace
+
+Therefore, if $x \in f^{-1}(A \cup B)$, we know that $x \in$ \blank{5cm}. This shows that \pspace \blank{5cm}. \pvspace{2\baselineskip}
+
+$f^{-1}(A) \cup f^{-1}(A) \cup f^{-1}(B) \subseteq f^{-1}(A \cup B)$: Suppose that \blank{5cm}. This implies \pspace
+
+that $x \in f^{-1}(A)$ or $f^{-1}(B)$. \pspace
+
+Case 1, \blank{3cm}: If $x \in f^{-1}(A)$, then $f(x) \in$ \blank{3cm}. But then $x \in$ \blank{3cm}. \pspace This shows that $x \in f^{-1}(A \cup B)$.
+
+
+
+
+
+Case 2, $x \in f^{-1}(B)$: If $x \in f^{-1}(B)$, then $f(x) \in$ \blank{3cm}. But then $x \in B$. This shows \pspace that $x \in$ \blank{3cm}. \pvspace{2\baselineskip}
+
+But then if $x \in$ \blank{5cm}, we know that $x \in f^{-1}(A \cup B)$. This shows that \pspace \blank{5cm} \pvspace{2\baselineskip}
+
+\newpage
+
+Because \blank{5cm} and \blank{5cm}, we know that \pspace $f^{-1}(A \cup B)= f^{-1}(A) \cup f^{-1}(B)$. \qed 
+
+
 
 
 \end{document}

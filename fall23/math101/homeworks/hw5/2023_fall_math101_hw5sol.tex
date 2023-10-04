@@ -1,0 +1,151 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% Fraction Long Division
+\usepackage{longdivision}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 09/25}{I turned myself into a pickle, Morty! I'm Pickle Rick!}{Rich Sanchez, Rick \& Morty}
+
+% Problem 1
+\problem{10} Express each of the following decimal numbers as a rational number in simplest form and express each of the rational numbers as a decimal number:
+	\begin{enumerate}[(a)]
+	\item $0.85$
+	\item $\frac{5}{12}$
+	\item $1.12$
+	\item $\frac{11}{6}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	0.85= \dfrac{85}{100}= \dfrac{5 \cdot 17}{2^2 \cdot 5^2}= \dfrac{17}{2^2 \cdot 5}= \dfrac{17}{20}
+	\] \pspace
+
+\item 
+	\[
+	\longdivision{5}{12} % Compare to \intlongdivision
+	\] \pspace
+ 
+\item 
+	\[
+	1.12= \dfrac{112}{100}= \dfrac{2^4 \cdot 7}{2^2 \cdot 5^2}= \dfrac{2^2 \cdot 7}{5^2}= \dfrac{28}{25}
+	\] \pspace
+ 
+\item 
+	\[
+	\longdivision{11}{6} % Compare to \intlongdivision
+	\]  
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, express the number $0.\overline{2023}$ as a rational number. \pspace
+
+\sol Suppose that $N= 0.\overline{2023}= 0.2023202320232023\overline{2023}$. We have\dots
+	\begin{table}[!ht]
+	\centering\small
+	\begin{tabular}{rccc}
+	& $10000N$ & $=$ & $2023.2023202320232023\overline{2023}$ \\ 
+	$-$ & $N$ & $=$ & $\phantom{202}0.2023202320232023\overline{2023}$ \\ \hline
+	& $9999N$ & $=$ & $2023$ \\[0.1cm]
+	& $N$ & $=$ & $\frac{2023}{9999}$
+	\end{tabular}
+	\end{table} \par
+
+	\[
+	0.\overline{2023}= \dfrac{2023}{9999}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Perform the following operations in $\mathbb{C}$:
+	\begin{enumerate}[(a)]
+	\item $(\frac{2}{3} + 5i) + (\frac{1}{2} - \frac{3}{4} i)$
+	\item $(15 + 6i) - (9 - 4i)$
+	\item $(6 - 3i)(8 + 5i)$
+	\item $\dfrac{5 - 7i}{4 + 3i}$
+	\item $(1 + 2i) (\overline{1 + 2i})$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\left(\frac{2}{3} + 5i \right) + \left(\frac{1}{2} - \frac{3}{4} i \right)= \left( \dfrac{2}{3} + \dfrac{1}{2} \right) + \left( 5i - \dfrac{3}{4} \,i \right)= \left( \dfrac{4}{6} + \dfrac{3}{6} \right) + \left( \dfrac{20}{4}\,i - \dfrac{3}{4} \,i \right)= \dfrac{7}{6} + \dfrac{17}{4}\,i
+	\] \pspace
+
+\item 
+	\[
+	(15 + 6i) - (9 - 4i)= 15 + 6i - 9 + 4i= (15 - 9) + (6i + 4i)= 6 + 10i
+	\] \pspace
+
+\item 
+	\[
+	(6 - 3i)(8 + 5i)= 48 + 30i - 24i - 15 i^2= 48 + 30i - 24i - 15(-1)= 48 + 30i - 24i + 15= 63 + 6i
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{5 - 7i}{4 + 3i}= \dfrac{5 - 7i}{4 + 3i} \cdot \dfrac{4 - 3i}{4 - 3i}= \dfrac{20 - 15i - 28i + 21i^2}{16 - 12i + 12i - 9i^2}= \dfrac{(20 - 21) + (-15i - 28i)}{(16 + 9) + (-12i + 12i)}= \dfrac{-1 - 43i}{25}= -\frac{1}{25} - \frac{43}{25}\,i
+	\] \pspace
+
+\item 
+	\[
+	(1 + 2i) (\overline{1 + 2i})= (1 + 2i)(1 - 2i)= 1 - 2i + 2i - 4i^2= 1 - 4(-1)= 1 + 4= 5
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Every quadratic equation $ax^2 + bx + c= 0$ has exactly two (not necessarily distinct) solutions when the solutions are allowed to be complex numbers. Without explicitly solving the equation, verify that the two solutions to $x^2 - 2x + 5= 0$ are $x_0= 1 \pm 2i$; that is, substitute both $x= 1 + 2i$ and $x= 1 - 2i$ into $x^2 - 2x + 5$ and show that one obtains a zero for this function in each case. \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	(x^2 - 2x + 5) \bigg|_{x= 1 + 2i}&= (1 + 2i)^2 - 2(1 + 2i) + 5 \\
+	&= (1 + 2i + 2i + 4i^2) - 2(1 + 2i) + 5 \\
+	&= (1 + 4i - 4) - 2 - 4i + 5 \\
+	&= -3 + 4i - 2 - 4i + 5 \\
+	&= (-3 - 2 + 5) + (4i - 4i) \\
+	&= 0 
+	\end{aligned}
+	\] 
+and also\dots
+	\[
+	\begin{aligned}
+	(x^2 - 2x + 5) \bigg|_{x= 1 - 2i}&= (1 - 2i)^2 - 2(1 - 2i) + 5 \\
+	&= (1 - 2i - 2i + 4i^2) - 2(1 - 2i) + 5 \\
+	&= (1 - 4i - 4) - 2 + 4i + 5 \\
+	&= -3 - 4i - 2 + 4i + 5 \\
+	&= (-3 - 2 + 5) + (-4i + 4i) \\
+	&= 0 
+	\end{aligned}
+	\] 
+
+
+\end{document}
