@@ -1,0 +1,212 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 10/02}{I see the muscle shirt came today. Muscles coming tomorrow? Did ya' get a tracking number? Oh, I hope he got a tracking number.}{Daryl, Letterkenny}
+
+% Problem 1
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 83\% of 1,295
+	\item 3\% of 920
+	\item 99\% of 67
+	\item 165\% of 81
+	\item 20\% of 45.30
+	\end{enumerate} \pspace
+
+\sol We use the fact that to find a \% of a number $N$, ones computes $N \cdot \%_d$, where $\%_d$ is the percentage written as a decimal. 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\text{83\% of 1,295}= 1295(0.83)= 1074.85
+	\] \pspace
+
+\item 
+	\[
+	\text{3\% of 920}= 290(0.03)= 8.7
+	\] \pspace
+
+\item 
+	\[
+	\text{99\% of 67}= 67(0.99)= 66.33
+	\] \pspace
+
+\item 
+	\[
+	\text{165\% of 81}= 81(1.65)= 133.65
+	\] \pspace
+
+\item 
+	\[
+	\text{20\% of 45.30}= 45.30(0.20)= 9.06
+	\] 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 560 increased by 4\%
+	\item 357 decreased by 23\%
+	\item 993 decreased by 95\%
+	\item 55 increased by 105\%
+	\item 89.4 increased by 224\%
+	\end{enumerate} \pspace
+
+\sol We use the fact that to increase or decrease a number $N$ by a percentage \%, ones computes $N(1 \pm \%_d)$, where $\%_d$ is the percentage as a decimal and one chooses `$+$' if a percentage increase and `$-$' if a percentage decrease. 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\text{560 increased by 4\%}= 560 (1 + 0.04)= 560(1.04)= 582.4
+	\] \pspace
+
+\item 
+	\[
+	\text{357 decreased by 23\%}= 357 (1 - 0.23)= 357(0.77)= 274.89
+	\] \pspace
+
+\item 
+	\[
+	\text{993 decreased by 95\%}= 993(1 - 0.95)= 993(0.05)= 49.65
+	\] \pspace
+
+\item 
+	\[
+	\text{55 increased by 105\%}= 55(1 + 1.05)= 55(2.05)= 112.75
+	\] \pspace
+
+\item 
+	\[
+	\text{89.4 increased by 224\%}= 89.4(1 + 2.24)= 89.4(3.24)= 289.656
+	\] 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Your biology class course grade is determined by the following components: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lr}
+	Homeworks & 30\% \\
+	Labs & 20\% \\
+	Midterm & 20\% \\
+	Final & 20\% \\
+	Project & 10\% \\
+	\end{tabular}
+	\end{table} \par
+Suppose that your homework average was 86\%, your lab average was 75\%, your midterm average was 68\%, your final grade was 81\%, and your project grade was 92\%. 
+	\begin{enumerate}[(a)]
+	\item Compute your course average.
+	\item If the final exam had not yet occurred, i.e. you had not yet received the 81\%, but all the other course grades were as listed above, then what is your current course average?
+	\end{enumerate} 
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	\text{Overall Course Average}&= \dfrac{\sum w_i x_i}{\sum w_i} \\[0.3cm]
+	&= \dfrac{0.30 \cdot 0.86 + 0.20 \cdot 0.75 + 0.20 \cdot 0.68 + 0.20 \cdot 0.81 + 0.10 \cdot 0.92}{0.30 + 0.20 + 0.20 + 0.20 + 0.10} \\[0.3cm]
+	&= \dfrac{0.30 \cdot 0.86 + 0.20 \cdot 0.75 + 0.20 \cdot 0.68 + 0.20 \cdot 0.81 + 0.10 \cdot 0.92}{1} \\[0.3cm]
+	&= 0.258 + 0.15 + 0.136 + 0.162 + 0.092 \\[0.3cm]
+	&= 0.798 \\[0.3cm]
+	&= 79.8\%
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\text{Current Course Average}&= \dfrac{\sum w_i x_i}{\sum w_i} \\[0.3cm]
+	&= \dfrac{0.30 \cdot 0.86 + 0.20 \cdot 0.75 + 0.20 \cdot 0.68 + 0.10 \cdot 0.92}{0.30 + 0.20 + 0.20 + 0.10} \\[0.3cm]
+	&= \dfrac{0.30 \cdot 0.86 + 0.20 \cdot 0.75 + 0.20 \cdot 0.68 + 0.10 \cdot 0.92}{0.80} \\[0.3cm]
+	&= \dfrac{0.258 + 0.15 + 0.136 + 0.092}{0.80} \\[0.3cm]
+	&= \dfrac{0.636}{0.80} \\[0.3cm]
+	&= 0.795 \\[0.3cm]
+	&= 79.5\%
+	\end{aligned}
+	\]  
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose you received the following grades this semester: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lrc}
+	Course & Credits & Grade \\ \hline
+	CS 320: Ethics in a Technological Society & 3 & C+ \\
+	CS 380: Networking & 4 & B+ \\
+	CS485: Web Programming & 3 & B-- \\
+	CS 424: Data Mining & 3 & A-- \\
+	ECON 101: Principles of Macroeconomics & 3 & A\phantom{--}
+	\end{tabular}
+	\end{table} \par
+Given the following grade values, 
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lrclr}
+	Grade & Values & & Grade & Values \\ \hline
+	A & 4.0 & \hspace{1cm} & C+ & 2.3 \\
+	A-- & 3.7 & & C & 2.0 \\
+	B+ & 3.3 & & C-- & 1.7 \\
+	B & 3.0 & & D & 1.0 \\
+	B-- & 2.7 & & F & 0
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Compute your semester GPA. 
+\item If your previous GPA based on 76 credits was 3.012, what is your current overall GPA?
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	\text{Semester GPA}&= \dfrac{\sum w_i x_i}{\sum w_i} \\
+	&= \dfrac{3 \cdot 2.3 + 4 \cdot 3.3 + 3 \cdot 2.7 + 3 \cdot 3.7 + 3 \cdot 4.0}{3 + 4 + 3 + 3 + 3} \\
+	&= \dfrac{6.9 + 13.2 + 8.1 + 11.1 + 12}{16} \\
+	&= \dfrac{51.3}{16} \\
+	&\approx 3.206
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\text{Overall GPA}&= \dfrac{\text{Previous Credits} \cdot \text{Previous GPA} + \text{Semester Credits} \cdot \text{Semester GPA}}{\text{Overall Credits}} \\
+	&= \dfrac{76 \cdot 3.012 + 16 \cdot 3.206}{76 + 16} \\
+	&= \dfrac{228.912 + 51.296}{92} \\
+	&= \dfrac{280.208}{92} \\
+	&\approx 3.046
+	\end{aligned}
+	\]
+\end{enumerate}
+
+
+\end{document}

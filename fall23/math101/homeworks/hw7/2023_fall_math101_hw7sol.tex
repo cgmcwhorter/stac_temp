@@ -1,0 +1,206 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 10/02}{If we hit that bullseye, the rest of the dominoes should fall like a house of cards. Checkmate.}{Zapp Brannigan, Futurama}
+
+% Problem 1
+\problem{10} Express the following decimal numbers in scientific notation:
+	\begin{enumerate}[(a)]
+	\item $5$
+	\item $10.3$
+	\item $0.000000123$
+	\item $159000000$
+	\item $0.4$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	5= 5 \cdot 10^0
+	\] \pspace
+
+\item 
+	\[
+	10.3= 1.03 \cdot 10^1
+	\] \pspace
+ 
+\item 
+	\[
+	0.000000123= 1.23 \cdot 10^{-7}
+	\] \pspace
+ 
+\item 
+	\[
+	159000000= 1.59 \cdot 10^8
+	\] \pspace
+ 
+\item 
+	\[
+	0.4= 4 \cdot 10^{-1}
+	\] 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Express the following numbers in scientific notation as decimal numbers:
+	\begin{enumerate}[(a)]
+	\item $5.23 \cdot 10^5$
+	\item $1.3 \cdot 10^0$
+	\item $9.7 \cdot 10^{-8}$
+	\item $4.0 \cdot 10^3$
+	\item $5.782 \cdot 10^{10}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	5.23 \cdot 10^5= 523,\!000
+	\] \pspace
+
+\item 
+	\[
+	1.3 \cdot 10^0= 1.3
+	\] \pspace
+
+\item 
+	\[
+	9.7 \cdot 10^{-8}= 0.000000097
+	\] \pspace
+
+\item 
+	\[
+	4.0 \cdot 10^3= 4,\!000
+	\] \pspace
+
+\item 
+	\[
+	5.782 \cdot 10^{10}= 57,\!820,\!000,\!000
+	\] 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work and expressing the result in scientific notation with three significant figures, convert the following:
+	\begin{enumerate}[(a)]
+	\item 0.008 megagrams to centigrams
+	\item 120~oz to stones [1~oz = 28.35~g, 1~stone = 6.35~kg]
+	\item 3~gallons to milliliters [1~gal = 3.785~L]
+	\item 2.16 $\cdot$ 10$^9$~ft$^3$ to mi$^3$ [5,280~ft = 1~mi.]
+	\item 3.72 meters per square second to feet per square minute [0.3048~m = 1~ft]
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item \phantom{.}\par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c}
+	0.008~Mg & $10^6$~g & 100~cg \\ \hline
+			&     1~Mg	    & 1~g
+	\end{tabular} = 800,\!000~cg = $8.00 \cdot 10^5$~cg
+	\end{table} \pspace
+
+\item \phantom{.}\par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	120~oz & 28.35~g & 1~kg & 1~stone \\ \hline
+		    & 1~oz 	     & 1000~g & 6.35~kg
+	\end{tabular} = 0.535748~stone $\approx 5.36 \cdot 10^{-1}$~stone
+	\end{table} \pspace
+ 
+\item \phantom{.}\par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	$2.16 \cdot 10^9$~ft$^3$ & 1~mi & 1~mi & 1~mi \\ \hline
+						& 5280~ft & 5280~ft & 5280~ft
+	\end{tabular} = 0.0146741~mi$^3= 1.47 \cdot 10^{-2}$~mi$^3$
+	\end{table} \pspace
+ 
+\item \phantom{.}\par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c}
+	3~gal & 3.785~L & 1000~ml \\ \hline
+		& 1~gal	  & 1~L
+	\end{tabular} = 11,355~ml = $1.14 \cdot 10^4$~ml
+	\end{table} \pspace
+ 
+\item \phantom{.}\par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	3.72~m   & 1~ft		 & 60~s & 60~s \\ \hline
+	1~s$^2$ & 0.3048~m & 1~min & 1~min
+	\end{tabular} = 43,937.01~ft/min$^2$ = $4.39 \cdot 10^4$~ft/min$^2$
+	\end{table}  
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose you are talking with your friend who has moved to Italy. The conversation has drifted to Miami housing. Currently, the cost of space in Miami is approximately \$464 per square foot. 
+	\begin{enumerate}[(a)]
+	\item For your friend, convert this to Euros per square meter. [\texteuro 1= \$1.07; 1~ft = 0.3048~m]
+	\item Using (a), find the conversion factor from dollars per square foot to Euros per square meter. 
+	\item Use your answer from (b) to convert \$500 per square foot to Euros per square meter. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	\$464	& \texteuro 1	& 1~ft		& 1~ft \\ \hline
+	1~ft$^2$   & \$1.07 		& 0.3048~m     & 0.3048~m
+	\end{tabular}\;= \texteuro 4,667.71 per square meter
+	\end{table} \pspace
+
+\item From the work above, we can see that the conversion factor is\dots
+	\[
+	\dfrac{1}{1.07} \cdot \dfrac{1}{0.3048} \cdot \dfrac{1}{0.3048}= 10.059729361
+	\] \pspace
+
+\item We have\dots 
+	\[
+	\$500 \text{ per square foot } \cdot 10.059729361 \approx \text{\texteuro } 5,029.86 \text{ per square meter}
+	\] \pspace
+We can also check this directly: \par \pspace
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{c||c|c|c}
+	\$500	& \texteuro 1	& 1~ft		& 1~ft \\ \hline
+	1~ft$^2$   & \$1.07 		& 0.3048~m     & 0.3048~m
+	\end{tabular}\;= \texteuro 5,029.86 per square meter
+	\end{table} \pspace
+\end{enumerate}
+
+
+\end{document}
