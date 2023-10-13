@@ -1,0 +1,139 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{8: Due 10/12}{The study of Mathematics, like the Nile, begins in minuteness but ends in magnificence.}{Charles Caleb Colton}
+
+% Problem 1
+\problem{10} Let $A= \{ 2, 6, 8, 10 \}$, $B$ be the set of nonnegative even numbers that are at most 10, and $C$ be the set of perfect squares less than 10. Define $f: A \to \mathbb{Z}$ and $g: B \setminus C \to \mathbb{Z}$ via $x \to \frac{15(x + 8)}{x}$ and $x \mapsto \frac{5(x^2 - 16x + 88)}{4}$, respectfully. Fully justifying your answer, determine whether $f \equiv g$. \pspace
+
+\sol To show that two functions $f, g$ are equal, i.e. $f = g$ or $f \equiv g$, we need to show that they have the same domain, the same codomain, and their outputs are the same everywhere on their `common domain.'\footnote{Note: This is not the same as the two functions having the same image. For example, take $A= \{ 1, 2 \}$ and $B= \{ a, b \}$. Define $f, g: A \to B$ via $f(1)= a$, $f(2)= b$, and $g(1)= b$ and $g(2)= a$. Clearly, $f, g$ have the same domain and codomains. The image of both $f$ and $g$ are the same---namely, the set $\{ a, b \}$, but observe $a= f(1) \neq g(1)= b$ and $b= f(2) \neq g(2)= a$.} \pspace
+
+{\itshape Equal Domains, $A= B$:} We need to show $A= B$ that is, we need to show that $A$ and $B$ have all the same elements. We know that $A= \{ 2, 6, 8, 10 \}$. Now $B$ is the set of nonnegative even numbers less than 10, i.e. $B= \{ 0, 2, 4, 6, 8, 10 \}$. Furthermore, $C$ is the set of perfect squares less than 10, i.e. $C= \{ 0, 4, 9 \}$. But then $B \setminus C= \{ 2, 6, 8, 10 \}$. Therefore, $A= B \setminus C$. \pspace
+
+{\itshape Equal Codomains, $\mathbb{Z}= \mathbb{Z}$:} It is immediately clear that $f$ and $g$ have the same codomain---namely, $\mathbb{Z}$. \pspace
+
+{\itshape Equivalent on their Common Domain:} To check whether $f$ and $g$ have the same outputs for every element of their `common domain', we can simply compute $f, g$ for the values in $\{ 2, 6, 8, 10 \}$:
+	\[
+	\begin{aligned}
+	f(2)&= \dfrac{15(2 + 8)}{2}= \dfrac{150}{2}= 75 \qquad\qquad& g(2)&= \frac{5(2^2 - 16(2) + 88)}{4}= \dfrac{300}{4}= 75 \\
+	f(6)&= \dfrac{15(6 + 8)}{6}= \dfrac{210}{6}= 35 & g(6)&= \frac{5(6^2 - 16(6) + 88)}{4}= \dfrac{140}{4}= 35 \\
+	f(8)&= \dfrac{15(8+ 8)}{8}= \dfrac{240}{8}= 30 & g(8)&= \frac{5(8^2 - 16(8) + 88)}{4}= \dfrac{120}{4}= 30 \\
+	f(10)&= \dfrac{15(10 + 8)}{10}= \dfrac{270}{10}= 27 & g(10)&= \frac{5(10^2 - 16(10) + 88)}{4}= \dfrac{140}{4}= 35
+	\end{aligned}
+	\]
+Observe that $f(2)= g(2)= 75$, $f(6)= g(6)= 35$, and $f(8)= g(8)= 30$. However, $f(10)= 27 \neq 35= g(10)$. Therefore, $f$ and $g$ do not agree on their `common domain.' \pspace
+
+Because $f$ and $g$ do not agree on their `common domain', $f$ and $g$ are not equal, i.e. $f \not\equiv g$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Define the following real-valued functions:
+	\[
+	\begin{aligned}
+	f(x)&= 2x - 1 &\qquad j(x)&= \dfrac{x - 1}{x + 2} \\
+	g(x)&= x^2 + x + 1 & k(x)&= \sin(\pi x) \\
+	h(x)&= x 2^x & \ell(x)&= 1 - x^2
+	\end{aligned}
+	\]
+Showing all your work, for each of the following, either compute the function at the specified value or find a general rule for the given function operation:
+	\begin{enumerate}[(a)]
+	\item $(f + g)(0)$
+	\item $(j - \ell)(2)$
+	\item $(gk)(5)$
+	\item $\left( \dfrac{f}{j} \right) (3)$
+	\item $(h \circ k)(1)$
+	\item $(2f + \ell)(x)$
+	\item $(fg)(x)$
+	\item $\left( \dfrac{h}{f} \right)(x)$
+	\item $(k \circ \ell)(x)$
+	\item $(\ell \circ g \circ f)(x)$
+	\end{enumerate} \pspace
+
+\sol
+
+\begin{enumerate}[(a)]
+\item $(f + g)(0)$
+\item $(j - \ell)(2)$
+\item $(gk)(5)$
+\item $\left( \dfrac{f}{j} \right) (3)$
+\item $(h \circ k)(1)$
+\item $(2f + \ell)(x)$
+\item $(fg)(x)$
+\item $\left( \dfrac{h}{f} \right)(x)$
+\item $(k \circ \ell)(x)$
+\item $(\ell \circ g \circ f)(x)$
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Let $f: \mathbb{R} \to \mathbb{R}$ be given by $x \mapsto x^2 + 4x - 5$.
+	\begin{enumerate}[(a)]
+	\item Determine $f(-5)$.
+	\item Compute $f([0,1])$.
+	\item Is $16 \in \im f$? Explain. 
+	\item Determine $f^{-1}(0)$.
+	\item Find the domain, codomain, and range for $f(x)$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Being sure to justify your answer, complete the following:
+	\begin{enumerate}[(a)]
+	\item Let $f: \mathbb{R} \to \mathbb{R}$ be given by $f(x)= 5 - x^2$. Is $f$ an increasing function? Explain. Is $f$ a decreasing function? Explain. 
+	\item Let $g: \mathbb{R} \to \mathbb{R}$ be given by $g(x)= 5x - 8$. Is $g$ a positive function? Explain. Is $g$ a negative function? Explain. 
+	\item Let $g$ be as in (b) and define $A= [2, \infty)$ and $B= (-\infty, 0)$. Is $g \big|_A$ a positive function? Explain. Is $g \big|_B$ a negative function? Explain. 
+	\item Let $h: \mathbb{R} \to \mathbb{R}$ be given by\dots
+		\[
+		h(x)= 
+		\begin{cases}
+		1 - x, & x < 2 \\
+		3x + 5, & x \geq 2
+		\end{cases}
+		\]
+	Find the largest possible interval $S \subseteq \mathbb{R}$ such that $h \big|_S$ is a nondecreasing function. Is $h$ monotone on $S$? Is $h$ strictly monotone on $S$?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+\end{document}
