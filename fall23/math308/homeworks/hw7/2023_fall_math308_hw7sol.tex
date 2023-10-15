@@ -3,11 +3,12 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % Venn Diagrams
 \usepackage{venndiagram}
 \newcommand{\blank}[1]{\underline{\hspace{#1}}} % Blank Underline
+\newcommand{\ansun}[2]{\underline{\hspace{#1}#2\hspace{#1}}} % Answer Underline
 
 % -------------------
 % Content
@@ -39,7 +40,29 @@
 		\]
 	
 	\item $(A \setminus C) \cap B$
-	\end{2enumerate}
+	\end{2enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item $B \cup A^c= (A - B)^c= (A \cap B) \cup (B - A) \cup (A \cup B)^c$
+
+\item $(A \cap B) \cup (A \cap C) \cup (B \cap C)$
+
+\item 
+	\[
+	\begin{venndiagram2sets}[tikzoptions={scale=0.8}]
+	\fillACapB
+	\fillNotAorB
+	\end{venndiagram2sets}
+	\]
+
+\item 
+	\[
+	\begin{venndiagram3sets}[tikzoptions={scale=0.8}]
+	\fillACapBNotC
+	\end{venndiagram3sets}
+	\]
+\end{enumerate}
 
 
 
@@ -54,7 +77,29 @@
 	\item If $A$ is a \textit{pseudo-subset} of $B$, are $A$ and $B$ disjoint? Explain. 
 	\item Express the definition of being a \textit{pseudo-subset} as a quantified logical statement. 
 	\item If what it means for $A \not\sqsubset B$ by negating your expression in (c). Write this quantified statement as a complete English sentence. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item It is \textit{not} true that $\varnothing \sqsubset S$ for all sets $S$. If $A \sqsubset B$, then there must be an element of $A$ that is an element of $B$ and an element of $A$ that is not in $B$. However, there are no elements in $\varnothing$. Therefore, $\varnothing \not\sqsubset S$ for all sets $S$. \pspace
+
+\item If $A \sqsubset B$, then there exists $a_0 \in A$ such that $a_0 \in B$ and there exists and element $a_1 \in A$ such that $a_1 \notin B$. But then $a_0 \in A$ and $a_0 \in B$, which implies that $a_0 \in A \cap B$. But then $A \cap B \neq \varnothing$. Therefore, $A$ and $B$ are not disjoint. \pspace
+
+\item If $A \sqsubset B$, then there exists $a_0 \in A$ such that $a_0 \in B$ and there exists and element $a_1 \in A$ such that $a_1 \notin B$. But then a quantified logical statement that defines $A$ being a pseudo-subset of $B$ is\dots\footnote{There are several quantified statements that can serve as the definition of being a pseudo-subset. One of the simplest involves some work with the definition. If there is an element in $A$ and also an element of $B$, there is an element in $A \cap B$. If there is an element of $A$ that is also not an element of $B$, there is an element in $A - B$. But then we can quantify the definition of a pseudo-subset as follows: $(\exists x)(x \in A \cap B) \wedge (\exists y)(y \in A - B)$.}
+	\[
+	(\exists a_0) [a_0 \in A \wedge a_0 \in B] \wedge (\exists a_1) [a_1 \in A \wedge a_1 \notin B]
+	\]
+
+\item Negating our quantified expression in (c), we have\dots
+	\[
+	\begin{aligned}
+	\hspace{-1.3cm} \neg \bigg( (\exists a_0) [a_0 \in A \wedge a_0 \in B] \wedge (\exists a_1) [a_1 \in A \wedge a_1 \notin B] \bigg) &\equiv \neg \big( (\exists a_0) [a_0 \in A \wedge a_0 \in B] \big) \vee \neg \big( (\exists a_1) [a_1 \in A \wedge a_1 \notin B] \big) \\
+	&\equiv (\forall a_0) \neg [a_0 \in A \wedge a_0 \in B] \vee (\forall a_1) \neg [a_1 \in A \wedge a_1 \notin B] \\
+	&\equiv (\forall a_0) [a_0 \notin A \vee a_0 \notin B] \vee (\forall a_1) [a_1 \notin A \vee a_1 \in B]
+	\end{aligned}
+	\]
+Directly `translated' to English, this quantified expression is, ``For all $a_0$, either $a_0 \notin A$ or $a_0 \notin B$, or for all $a_1$, either $a_1 \notin A$ or $a_1 \in B$.''\footnote{A simpler quantified statement for the definition of \textit{not} being a pseudo-subset negates the alternative quantified statement given in (c). If we negate $(\exists x)(x \in A \cap B) \wedge (\exists y)(y \in A - B)$, we obtain $(\forall x)(x \notin A \cap B) \vee (\forall y)(y \notin A - B)$. Stated as an English sentence, we see that this is, ``For all $x$, $x \notin A \cap B$ or for all $x$, $x \notin A - B$.'' Alternatively, we can state this as, ``Either $A$ and $B$ are disjoint or there are no elements that are in $A$ but not $B$.''}
+\end{enumerate}
 
 
 
@@ -67,33 +112,15 @@
 
 \noindent \textbf{Proposition.} If $A, B, C$ are sets, then $A \cap (B - C)= (A \cap B) - (A \cap C)$. \pspace
 
-\textit{Proof.} To prove that $A \cap (B - C)= (A \cap B) - (A \cap C)$, we need to show \blank{3cm} and \pspace
-
-\underline{\hspace{3cm}}. \pvspace{2\baselineskip}
+\textit{Proof.} To prove that $A \cap (B - C)= (A \cap B) - (A \cap C)$, we need to show \ansun{0cm}{$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$} \pspace and \ansun{0cm}{$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$}. \pvspace{2\baselineskip}
 
 If $A \cap (B - C)= \varnothing$ or $(A \cap B) - (A \cap C)= \varnothing$, then $\varnothing= A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$ and $\varnothing= (A \cap B) - (A \cap C) \subseteq A \cap (B - C)$, respectively. Assume neither $A \cap (B - C)$ nor $(A \cap B) - (A \cap C)$ are empty. \pvspace{3\baselineskip}
 
-$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$: Let $x \in $ \blank{3cm}. Then \blank{3cm} and \pspace
+$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$: Let $x \in $ \ansun{0.45cm}{$A \cap (B - C)$}. Then \ansun{1.0cm}{$x \in A$} and \pspace \ansun{0.45cm}{$x \in (B - C)$}. Because $x \in B - C$, we know that \ansun{1.0cm}{$x \in B$} and \ansun{1cm}{$x \notin C$}. \pspace But then $x \in A$ and $x \in B$ so that \ansun{0.65cm}{$x \in A \cap B$}. Now $x \in A$ but $x \notin$ \ansun{1.35cm}{$C$} so that \pspace $x \notin$ \ansun{1cm}{$A \cap C$}. This shows that $x \in (A \cap B) - (A \cap C)$. Therefore, \ansun{0cm}{$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$}. \pvspace{3\baselineskip}
 
-\underline{\hspace{3cm}}. Because $x \in B - C$, we know that \blank{3cm} and \blank{3cm}. \pspace
+$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$: Let $x \in (A \cap B) - (A \cap C)$. Then $x \in$ \ansun{1cm}{$A \cap B$} \pspace and $x \notin A \cap C$. Because $x \in A \cap B$, we know that $x \in$ \ansun{1.33cm}{$A$} and $x \in$ \ansun{1.33cm}{$B$}. \pspace Because $x \notin A \cap C$, we know that $x \notin$ \ansun{1.33cm}{$A$} or $x \notin$ \ansun{1.33cm}{$C$}. But because \pspace $x \in A$, it must be that $x \notin$ \ansun{1.33cm}{$C$}. Because $x \in B$ and $x \notin C$, we know that \pspace $x \in$ \ansun{0.95cm}{$B - C$}. But then $x \in$ \ansun{1.33cm}{$A$}  and $x \in$ \ansun{0.95cm}{$B - C$}, so that \pspace $x \in A \cap (B - C)$. Therefore, \ansun{0cm}{$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$}. \pvspace{3\baselineskip}
 
-But then $x \in A$ and $x \in B$ so that \blank{3cm}. Now $x \in A$ but $x \notin$ \blank{3cm} so that \pspace
-
-$x \notin$ \blank{3cm}. This shows that $x \in (A \cap B) - (A \cap C)$. Therefore, \blank{3cm}. \pvspace{3\baselineskip}
-
-$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$: Let $x \in (A \cap B) - (A \cap C)$. Then $x \in$ \blank{3cm} \pspace
-
-and $x \notin A \cap C$. Because $x \in A \cap B$, we know that $x \in$ \blank{3cm} and $x \in$ \blank{3cm}. \pspace
-
-Because $x \notin A \cap C$, we know that $x \notin$ \blank{3cm} or $x \notin$ \blank{3cm}. But because \pspace
-
-$x \in A$, it must be that $x \notin$ \blank{3cm}. Because $x \in B$ and $x \notin C$, we know that \pspace
-
-$x \in$ \blank{3cm}. But then $x \in$ \blank{3cm}  and $x \in$ \blank{3cm}, so that \pspace
-
-$x \in A \cap (B - C)$. Therefore, \blank{3cm}. \pvspace{3\baselineskip}
-
-Because \blank{3cm} and \blank{3cm}, we know that $A \cap (B - C)= (A \cap B) - (A \cap C)$. \qed
+Because \ansun{0cm}{$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$} and \ansun{0cm}{$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$} we know that \pspace $A \cap (B - C)= (A \cap B) - (A \cap C)$. \qed
 
 
 
@@ -108,7 +135,22 @@ Because \blank{3cm} and \blank{3cm}, we know that $A \cap (B - C)= (A \cap B) - 
 	\item If $A \not\subseteq B$, does this imply that $A$ is a proper subset of $B$? Explain. 
 	\item If $A, B$ are not disjoint, does this imply there is an element $x \in A$ and $x \in B$? Explain.
 	\item Is it possible for $A \subseteq A^c$? Explain. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Yes, it is possible that $A - B= B - A$. For instance, if $A= \varnothing= B$, then clearly $A - B= \varnothing$ and $B - A= \varnothing$. But then $A - B= B - A$. However, the case where $A= \varnothing= B$ is a special case of the general statement: $A - B= B - A$ if and only if $A= B$. We shall prove this. \pspace
+
+Suppose that $A - B= B - A$. Then every element of $A - B$ is also an element of $B - A$. Suppose that $x \in A - B$, then $x \in A$ and $x \notin B$. Because $x \in A - B= B - A$, it must also be that $x \in B - A$. But if $x \in B - A$, then $x \in B$ and $x \notin A$. Thus, we have $x \in A$ and $x \notin A$, and $x \in B$ and $x \notin B$, which are clearly impossible. Suppose that $x \in B - A$. Then $x \in B$ and $x \notin A$. Because $x \in B - A= A - B$, it must also be that $x \in A - B$. But if $x \in A - B$, then $x \in A$ and $x \notin B$. Thus, we have $x \in A$ and $x \notin A$, and $x \in B$ and $x \notin B$, which are clearly impossible. Therefore, if $A - B= B - A$, then $A - B= \varnothing B - A$. If $A - B= \varnothing$, then there is no element $x$ such that $x \in A$ and $x \notin B$. But then every element of $A$ must also be an element of $B$, i.e. $A \subseteq B$. Similarly, if $B - A= \varnothing$, then there is no element $x$ such that $x \in B$ and $x \notin A$. But then every element of $B$ must also be an element of $A$, i.e. $B \subseteq A$. Because $A \subseteq B$ and $B \subseteq A$, $A= B$. \pspace
+
+For the other direction, suppose that $A= B$. Then $A - B= A - A= \varnothing$ and $B - A= B - B= \varnothing$. Therefore, $A - B= \varnothing= B - A$. 
+
+\item No, $A \not\subseteq B$ does not imply that $A$ is a proper subset of $B$. If $A$ is a proper subset of $B$, then for all $a \in A$, we also have $a \in B$.\footnote{There is another requirement. Namely, there exists $b \in B$ such that $b \notin A$, which we will not need to disprove the given statement.} If $A \not\subseteq B$, then there exists $a \in A$ such that $a \notin B$. But then $A$ cannot be a proper subset of $B$. \pspace
+
+\item Yes, if $A$ and $B$ are not disjoint, there is an element such that $x \in A$ and $x \in B$. If $A$ and $B$ are disjoint, then $A \cap B= \varnothing$. But then if $A$ and $B$ are not disjoint, $A \cap B \neq \varnothing$. Then there exists $x \in A \cap B$, which implies that $x \in A$ and $x \in B$. \pspace
+
+\item Yes, it possible that $A \subseteq A^c$. If $A= \varnothing$, then it must be that $A$ is a subset of \textit{any} set. In particular, $A= \varnothing \subseteq A^c= \varnothing^c= \mathcal{U}$, where $\mathcal{U}$ is the universe. However, if $A$ is nonempty, then it is impossible that $A \subseteq A^c$. Suppose that $A$ is nonempty. Then there exists $x \in A$. But then if $A \subseteq A^c$, then $x \in A$ and $x \in A^c$. Because $x \in A^c$, we know that $x \notin A$, contradicting the fact that $x \in A$. So if $A \subseteq A^c$, it must be that $A$ is empty, i.e. $A= \varnothing$. 
+\end{enumerate}
 
 
 \end{document}

@@ -52,11 +52,13 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item There are many possible solutions, depending on the choices for the propositions $P$, $Q$, and $R$. For instance, 
+\item There are many possible solutions, depending on the choices for the propositions $P$, $Q$, and $R$. For instance, choose $P$ to be the proposition ``I study,'' $Q$ to be the proposition ``I take the exam,'' and $R$ to be the proposition ``I pass.'' The logical expression $P \to (\neg Q \vee R)$ is the statement, ``If I study, then either I do not take the exam or I pass the exam.'' \pspace
 
-\item 
-\item 
-\item 
+\item Let $R$ be the proposition ``You succeed,'' $P$ be the proposition ``You believe,'' and $Q$ be the proposition ``You work hard.'' The statement, ``You will succeed, if you believe and work hard,'' which can also be equivalently stated as, ``If you believe and work hard, then you will succeed,'' can be expressed as a logical statement as $P \wedge Q \to R$. \pspace
+
+\item Let $Q$ be the proposition ``I buy a new TV,'' $P$ be the proposition ``I buy a game station.'' Then the logical expression $Q \wedge (\neg P \vee Q)$ written as a complete English sentence is, ``I buy a new TV, and I do not buy a new game station or I buy a new TV.'' \pspace
+
+\item Let $P$ be the proposition ``I pay rent,'' $Q$ be the proposition ``I lose my job,'' and $R$ be the proposition ``I starve.'' The statement, ``I pay rent, or I lose my job and starve,'' can be expressed as a logical statement as $P \vee (Q \wedge R)$. 
 \end{enumerate}
 
 
@@ -75,9 +77,44 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item One method of determining if the given expression is a tautology, contradiction, or neither, we can simply construct a truth table for $\neg (P \to \neg Q) \wedge \neg Q$: \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{cc|ccc|c}
+	$P$ & $Q$ & $\neg Q$ & $P \to \neg Q$ & $\neg (P \to \neg Q)$ & $\neg (P \to \neg Q) \wedge \neg Q$ \\ \hline
+	$T$ & $T$ & $F$ & $F$ & $T$ & $F$ \\
+	$T$ & $F$ & $T$ & $T$ & $F$ & $F$ \\
+	$F$ & $T$ & $F$ & $T$ & $F$ & $F$ \\
+	$F$ & $F$ & $T$ & $T$ & $F$ & $F$
+	\end{tabular}
+	\end{table} \par
+Because the logical expression $\neg (P \to \neg Q) \wedge \neg Q$ is false, independent on the truth values for $P, Q$, the expression $\neg (P \to \neg Q) \wedge \neg Q$ is a contradiction. \pspace
+
+We can simplify the given expression to determine whether it is a tautology, contradiction, or neither:
+	\[
+	\neg (P \to \neg Q) \wedge \neg Q \equiv \big(P \wedge \neg (\neg Q) \big) \wedge \neg Q \equiv (P \wedge Q) \wedge \neg Q \equiv P \wedge (Q \wedge \neg Q) \equiv P \wedge F_0 \equiv F_0
+	\]
+Therefore, the statement $\neg (P \to \neg Q) \wedge \neg Q$ must be a contradiction. \pspace
+
+\item We construct the truth table for $\neg (P \to \neg Q)$ and $P \wedge Q$: \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{cc|ccc|c}
+	$P$ & $Q$ & $\neg Q$ & $P \to \neg Q$ & $\neg (P \to \neg Q)$ & $P \wedge Q$ \\ \hline
+	$T$ & $T$ & $F$ & $F$ & $T$ & $T$ \\
+	$T$ & $F$ & $T$ & $T$ & $F$ & $F$ \\
+	$F$ & $T$ & $F$ & $T$ & $F$ & $F$ \\
+	$F$ & $F$ & $T$ & $T$ & $F$ & $F$
+	\end{tabular}
+	\end{table} \par
+Because the columns for $\neg (P \to \neg Q)$ and $P \wedge Q$ have the same outputs for any given inputs of $P, Q$, we know that $\neg (P \to \neg Q)$ and $P \wedge Q$ are logically equivalent, i.e. $\neg (P \to \neg Q) \equiv P \wedge Q$. \pspace
+
+
+\item We have\dots
+	\[
+	\neg \big(P \vee \neg (P \wedge Q) \big) \equiv \neg P \wedge (P \wedge Q) \equiv (\neg P \wedge P) \wedge Q \equiv F_0 \wedge Q \equiv F_0
+	\]
+But then $\neg \big(P \vee \neg (P \wedge Q) \big)$ is a contradiction. Because all contradictions are logically equivalent, it must be that $\neg \big(P \vee \neg (P \wedge Q) \big)$ is logically equivalent to $\neg (P \to \neg Q) \wedge \neg Q$.
 \end{enumerate}
 
 
@@ -97,10 +134,23 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item Suppose one chooses $x= 1$. Then the statement is, ``If $1 > 4$, then $1 > 2$,'' which is a true statement because $1 \not> 4$. [Recall that $F_0 \to P$ is true for all propositions $P$.] If one chooses $x= 10$, then the statement is, ``If $100 > 4$, then $10 > 2$.'' This is a true statement because this is equivalent to $T_0 \to T_0$, which is true. However, if one chooses $x= -3$, then the given statement is, ``If $9 > 4$, then $-3 > 2$,'' which is equivalent to $T_0 \to F_0$. Hence, the statement is false when $x= -3$. \pspace
+
+Generally, the given statement will be true when $x \geq -2$ and false for all other values of $x$. Assume that $x$ is a real number. If $x^2 > 4$, then $x^2 - 4 > 0$. But $x^2 - 4= (x - 2)(x + 2)$, so that $(x - 2)(x + 2) > 0$. This implies that either $x - 2 > 0$ and $x + 2 > 0$, or $x - 2 < 0$ and $x + 2 < 0$. This is equivalent to $x > 2$ and $x > -2$, or $x < 2$ and $x < -2$. But these are in turn equivalent to $x > 2$ or $x < -2$. Alternatively, suppose that $x < -2$ or $x > 2$. We can from the fact that $x < -2 < 0$ and $x > 2 > 0$, that `squaring' the inequalities, we obtain $x^2 > 4$.\footnote{There is a lot of nuance here. Why the observation that $x < -2 < 0$ and $x > 2 > 0$? What is meant by `squaring' here and why is this a `valid' operation? Making these steps clear are a good exercise.} But then we know that $x^2 > 4$ if and only if $-2 < x$ and $x > 2$. But then $x^2 > 4$ is false whenever $-2 \leq x \leq 2$. However, if $x^2 > 4$ is false, then ``if $x^2 > 4$, then $x > 2$'' is true. So the statement, ``If $x^2 > 4$, then $x > 2$,'' is true whenever $-2 \leq x \leq 2$. Clearly, if $x > 2$, then $x^2 > 4$ and $x > 2$. But then, ``If $x^2 > 4$, then $x > 2$,'' is true. Finally, if $x < -2$, we know that $x^2 > 4$, but clearly $x \not> 2$. Therefore, in this case, ``If $x^2 > 4$, then $x > 2$,'' is false. Therefore, the statement, ``If $x^2 > 4$, then $x > 2$,'' is true if and only if $x \geq -2$. 
+
+\item For a given fixed $x$, let $P$ be the proposition $P: x^2 > 4$ and $Q$ be the proposition $Q: x > 2$. Then the statement, ``If $x^2 > 4$, then $x > 2$,'' can be written as the logical expression $P \to Q$. \pspace
+
+\item The negation of $P \to Q$ is $\neg (P \to Q) \equiv P \wedge \neg Q$. The converse of $P \to Q$ is $Q \to P$. Finally, the contrapositive of $P \to Q$ is $\neg Q \to \neg P$. \pspace
+
+\item We know the negation is $P \wedge \neg Q$. Observe that $\neg Q: x \leq 2$. Written as an English sentence, the negation is the statement, ``$x^2 > 4$ and $x \leq 2$.'' The converse is $Q \to P$. Written as an English sentence, this is the statement, ``If $x > 2$, then $x^2 > 4$.'' The contrapositive was $\neg Q \to \neg P$. We know that $\neg P: x^2 \leq 4$. But written as a complete English sentence, the contrapositive is, ``If $x \leq 2$, then $x^2 \leq 4$.'' 
+
+
+
+
+
+
+
+
 \end{enumerate}
 
 

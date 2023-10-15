@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -18,7 +18,53 @@
 	\item $(A \Delta B) \cup B^c$
 	\item $(A \cup B^c) \cap (A \cap B)^c$
 	\item$A - (A - B)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We use the fact that $A \Delta B= (A \cup B) - (A \cap B)= (A \cap B^c) \cup (B \cap A^c)$. 
+	\[
+	\begin{aligned}
+	\big( (A \Delta B) \cup B^c \big)^c&= (A \Delta B)^c \cap (B^c)^c \\
+	&= (A \Delta B)^c \cap B \\
+	&= \big( (A \cap B^c) \cup (B \cap A^c) \big)^c \cap B \\
+	&= (A \cap B^c)^c \cap (B \cap A^c)^c \cap B \\
+	&= (A^c \cup B) \cap (B^c \cup A) \cap B \\
+	&= \left[ (A^c \cup B) \cap B \right] \cap (B^c \cup A) \\
+	&= B \cap (B^c \cup A) \\
+	&= (B \cap B^c) \cup (B \cap A) \\
+	&= \varnothing \cup (A \cap B) \\
+	&= A \cap B
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\big( (A \cup B^c) \cap (A \cap B)^c \big)^c&= (A \cup B^c)^c \cup (A \cap B) \\
+	&= (A^c \cap B) \cup (A \cap B) \\
+	&= \big( (A^c \cap B) \cup A \big) \cap \big( (A^c \cap B) \cup B \big) \\
+	&= \big( (A^c \cap B) \cup A \big) \cap B \\
+	&= \big( (A^c \cup A) \cap (B \cup A) \big) \cap B \\
+	&= \big( \mathcal{U} \cap (B \cup A) \big) \cap B \\
+	&= (B \cup A) \cap B \\
+	&= B
+	\end{aligned}
+	\] 
+
+\item We use the fact that $A - B= A \cap B^c$.
+	\[
+	\begin{aligned}
+	\big( A - (A - B) \big)^c&= \big( A \cap (A - B)^c \big)^c \\
+	&= A^c \cup (A - B) \\
+	&= A^c \cup (A \cap B^c) \\
+	&= (A^c \cup A) \cap (A^c \cup B^c) \\
+	&= \mathcal{U} \cap (A^c \cup B^c) \\
+	&= A^c \cup B^c \\
+	&= (A \cap B)^c
+	\end{aligned}
+	\] 
+\end{enumerate}
 
 
 
@@ -48,6 +94,40 @@
 		\end{multicols}
 	\end{enumerate}
 
+\sol
+\begin{enumerate}[(a)]
+\item 
+ It would be useful to write $S$ and compute $\mathcal{P}(S)$:
+	\[
+	\mathcal{P}(X)= 
+	\left\{
+	\begin{matrix}
+	\varnothing, \\
+	\{ a \}, & \{ \{ b \} \}, & \{ \{ a, b \} \}, \\
+	\{ a, \{ b \} \}, & \{ a, \{ a, b \} \}, & \{ \{ b \}, \{ a, b \} \}, \\
+	X= \{ a, \{ b \}, \{ a, b \} \}
+	\end{matrix}
+	\right\}
+	\] \pspace
+
+\item 
+	\begin{multicols}{2}
+	\begin{enumerate}[(i)]
+	\item \textit{F}
+	\item \textit{T}
+	\item \textit{T}
+	\item \textit{F}
+	\item \textit{T}
+	% 
+	\item \textit{T}
+	\item \textit{T}
+	\item \textit{F}
+	\item \textit{F}
+	\item \textit{F}
+	\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+
 
 
 \newpage
@@ -62,7 +142,16 @@
 	\item $\displaystyle \bigcup_{n \in \mathbb{Z}} X_n$
 	\item $\displaystyle \bigcup_{m \in \mathbb{N}} Y_m$
 	\item $\displaystyle \left( \bigcup_{m \in \mathbb{N}} Y_m \right)^c$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item $\displaystyle \bigcup_{i= -1}^2 X_i= (-1, 0) \cup (0, 1) \cup (1, 2) \cup (2, 3)$
+\item $\displaystyle \bigcap_{k=2}^5 Y_k= [ \tfrac{1}{2}, 2)$
+\item $\displaystyle \bigcup_{n \in \mathbb{Z}} X_n= \mathbb{R} - \mathbb{Z}$
+\item $\displaystyle \bigcup_{m \in \mathbb{N}} Y_m= (0, \infty)$
+\item $\displaystyle \left( \bigcup_{m \in \mathbb{N}} Y_m \right)^c= (0, \infty)^c= (-\infty, 0]$
+\end{enumerate}
 
 
 
@@ -78,7 +167,57 @@
 	\item Compute $\mathcal{P}(B \times C)$.
 	\item If $X= \varnothing$, what is $X \times Y$ for any set $Y$?
 	\item If $X, Y$ are sets and $X \times Y= Y \times X$, is it necessarily true that $X= Y$? Explain. [Hint: Use part (d).]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	A \times B= 
+	\left\{
+	\begin{matrix}
+	(-1, a), & (-1, b), \\
+	(0, a), & (0, b), \\
+	(1, a), & (1, b)
+	\end{matrix}
+	\right\}
+	\] \pspace
+
+\item No, $A \times B \neq B \times A$. For instance, $(-1, a) \in A \times B$ because $-1 \in A$ and $a \in B$; however, $(-1, a) \notin B \times A$ because $-1 \notin B$, $a \notin A$. In fact, we have\dots
+	\[
+	B \times A= 
+	\left\{
+	\begin{matrix}
+	(a, -1), & (a, 0), & (a, 1), \\
+	(b, -1), & (b, 0), & (b, 1)
+	\end{matrix}
+	\right\}
+	\] \pspace
+
+\item First, observe that we have $B \times C= \{ (a, \sqrt{2}), (a, \pi), (b, \sqrt{2}), (b, \pi) \}$. But then we have\dots
+	\[
+	\hspace{-1.5cm} \mathcal{P}(B \times C)= 
+	\left\{
+	\begin{matrix}
+	\varnothing, \\ \\
+	\{ (a, \sqrt{2}) \}, & \{ (a, \pi) \}, & \{ (b, \sqrt{2}) \}, & \{ (b, \pi) \}, \\ \\
+	\{ (a, \sqrt{2}), (a, \pi) \}, & \{ (a, \sqrt{2}), (b, \sqrt{2}) \}, & \{ (a, \sqrt{2}), (b, \pi) \}, \\
+	\{ (a, \pi), (b, \sqrt{2}) \}, & \{ (a, \pi), (b, \pi) \}, \\
+	\{ (b, \sqrt{2}), (b, \pi) \}, \\ \\
+	\{ (a, \sqrt{2}), (a, \pi), (b, \sqrt{2}) \}, & \{ (a, \sqrt{2}), (a, \pi), (b, \pi) \}, \\
+	\{ (a, \sqrt{2}), (b, \sqrt{2}), (b, \pi) \}, \\
+	\{ (a, \pi), (b, \sqrt{2}), (b, \pi) \}, \\ \\
+	B \times A=  \{ (a, \sqrt{2}), (a, \pi), (b, \sqrt{2}), (b, \pi) \}
+	\end{matrix}
+	\right\}
+	\] \pspace
+
+\item If $X= \varnothing$, then $X \times Y= \varnothing$. We know that $X \times Y= \{ (x, y) \colon x \in X, y \in Y \}$. But if $X= \varnothing$, then there is no $x \in X$. Then there can be no $(x, y) \in X \times Y$, which proves that $X \times Y= \varnothing$. This holds mutatis mutandis for $Y= \varnothing$. Therefore, for all sets $X$, $X \times \varnothing= \varnothing$ and $\varnothing \times X= \varnothing$. \pspace
+
+\item We know from (d) that if $X= \varnothing$, then $X \times Y= \varnothing= Y \times X$ for all sets $Y$. But then taking $Y$ to be any nonempty set, we see that if $X= \varnothing$, then $X \times Y= \varnothing= Y \times X$ but $X= \varnothing \neq Y$. Therefore, it is not true that if $X \times Y= Y \times X$ that $X= Y$. \pspace
+
+However, if $X, Y$ are nonempty sets and $X \times Y= Y \times X$ does imply that $X= Y$. To see this, suppose that $X, Y$ are nonempty sets with $X \times Y= Y \times X$. Choose any $x \in X$ and $y \in Y$. By definition, $(x, y) \in X \times Y$. But $X \times Y= Y \times X$ so that $(x, y) \in Y \times X$. This implies that $x \in Y$ and $y \in X$. Therefore, for all $x \in X, y \in Y$, if $x \in X$, then $x \in Y$, which implies that $X \subseteq Y$, and if $y \in Y$, then $y \in X$, which implies that $Y \subseteq X$. Because $X \subseteq Y$ and $Y \subseteq X$, we know that $X= Y$. Obviously, $X \times Y= Y \times X$, if $X= Y= \varnothing$. 
+\end{enumerate}
 
 
 \end{document}

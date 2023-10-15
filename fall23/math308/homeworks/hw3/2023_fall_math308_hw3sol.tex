@@ -7,7 +7,6 @@
 
 \newcommand{\xor}{\,\underline{\vee}\,}
 
-
 % -------------------
 % Content
 % -------------------
@@ -16,20 +15,35 @@
 \homework{3: Due 09/21}{Insanity is often the logic of an accurate mind overtasked.}{Oliver Wendell Holmes, Sr.}
 
 % Problem 1
-\problem{10} Let the universe for $x$ be the set of integers. Let $P(x)$ be the predicate $P(x) \colon 10 - x < 5$ and $Q(x)$ be the predicate $Q(x) \colon x$ is a positive even integer less than 10.
+\problem{10} Let the universe for $n$ be the set of integers. Let $P(n)$ be the predicate $P(n) \colon 10 - n < 5$ and $Q(n)$ be the predicate $Q(n) \colon n$ is a positive even integer less than 10.
 	\begin{enumerate}[(a)]
-	\item Find at least two values for which $P(x)$ is true and two values for which $P(x)$ is false. Do the same for $Q(x)$. 
-	\item Find the truth set for $P(x)$ and find the truth set for $Q(x)$.
-	\item Is it true that there is a unique $x$ in the domain such that $P(x) \wedge Q(x)$ is true? Explain.
+	\item Find at least two values for which $P(n)$ is true and two values for which $P(n)$ is false. Do the same for $Q(n)$. 
+	\item Find the truth set for $P(n)$ and find the truth set for $Q(n)$.
+	\item Is it true that there is a unique $n$ in the domain such that $P(n) \wedge Q(n)$ is true? Explain.
 	\item Would your answer in (c) change if the universe were instead the set of integers greater than 6? Explain. 
 	\end{enumerate} \pspace
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item We know that $P(n)$ for $n= 6, 7$ because $P(6): 4= 10 - 6 < 5$ and $P(7): 3= 10 - 7 < 5$ are true. We know that $P(n)$ is false for $n= -1, 5$ because $P(-1): 11= 10 - (-1) < 5$ and $P(5): 5= 10 - 5 < 5$ are false. \pspace
+
+We know that $Q(n)$ is true for $n= 2, 8$ because $Q(2):$ 2 is a positive even integer less than 10 and $Q(8):$ 8 is a positive even integer less than 10 are both true statements. We know that $Q(n)$ is false for $n= 0, 5$ because $Q(0):$ 0 is a positive even integer less than 10 and $Q(5):$ 5 is a positive even integer less than 10 are both false (0 is not positive and 5 is not even). \pspace
+
+\item If $P(n)$ is true, then $10 - n < 5$, where $n$ is an integer. But then $-n < -5$, which implies $n > 5$. But then the truth set for $P(n)$ is\dots
+	\[
+	P_T= \{ n \in \mathbb{Z} \colon n > 5 \}
+	\]
+This also shows that the `false set' for $P$ is $P_F= \{ n \in \mathbb{Z} \colon n \leq 5 \}$. \pspace
+
+If $Q(n)$ is true, then $n$ is a positive even integer less than 10. But then it is immediate that the truth set is\dots
+	\[
+	Q_T= \{ 2, 4, 6, 8 \}
+	\]
+This shows that the `false set' for $Q$ is $Q_F= \{ n \in \mathbb{Z} \colon n \leq 1 \} \cup \{ 3, 5, 7 \} \cup \{ n \in \mathbb{Z} \colon n \geq 9 \}$. \pspace
+
+\item Observe that $6, 8 \in P_T$ and $6, 8 \in Q_T$. But then $P(6)$ and $Q(6)$ are both true so that $P(6) \wedge Q(6)$ is true. Similarly, because $P(8)$ and $Q(8)$ are both true, $P(8) \wedge Q(8)$ is true. But then $P(n) \wedge Q(n)$ is true for $n= 6, 8$. Therefore, there is not a unique value such that $P(n) \wedge Q(n)$ is true. \pspace
+
+\item If the universe were the set of integers greater than 6, rather than all integers, we can simply intersect the integers greater than 6 with our truth sets to find the values where $P(n)$ and $Q(n)$ are true for this universe. But $P_T':= P_T \cap \mathbb{Z}^{> 6}= \{ n \in \mathbb{Z} \colon n > 6 \}$ and $Q_T':= Q_T \cap \mathbb{Z}^{> 6}= \{ 8 \}$. But then clearly the only value in both $P_T'$ and $Q_T'$ is 8. Therefore, in this case, there is a unique integer such that $P(n) \wedge Q(n)$ is true, i.e. $n= 8$. 
 \end{enumerate}
 	
 	
@@ -60,11 +74,25 @@ Write the open sentences below as complete English sentences as `simply' as poss
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item The quantified statement $(\exists x) \big( Q(x) \wedge R(x) \big)$ written as an English sentence is, ``There exists an integer $x$ such that $x$ is odd and $x$ is a perfect square.'' Alternatively, this is the statement, ``There is an odd perfect square.'' \pspace
+
+The statement is true. For instance, 1 is an odd perfect square because 1 is odd and $1= 1^2$. Generally, the square of any odd number will be an odd perfect square. \pspace
+
+\item The quantified statement $(\forall x) \big( P(x) \vee Q(x) \big)$ written as an English sentence is, ``For all integers $x$, $x$ is even or $x$ is odd.'' Alternatively, this is the statement, ``All integers are even or odd.'' \pspace
+
+The statement is true. All integers are indeed even or odd. To see this, recall that we can express the division of the integer $b$ by an integer $a$ as $b= qa + r$, where $q$ is the quotient (an integer) and $r$ is the remainder ($r$ is an integer and $0 \leq r < a$). Given any integer $N$, express the division of $N$ by 2 as $N= 2q + r$, where $q, r$ are integers and $0 \leq r < 2$. But then $r= 0$ or $r= 1$. If $r= 0$, then $N= 2q$, so that $N$ is even. If not, then $r= 1$ and $N= 2q + 1$ is odd. Therefore, all integers are even or odd. \pspace
+
+\item The quantified statement $(\exists! x) \big( P(x) \wedge S(x) \big)$ written as an English sentence is, ``There exists a unique integer $x$ such that $x$ is prime and $x$ is even.'' Alternatively, this is the statement, ``There exists a unique even prime number.'' \pspace
+
+This statement is true. The only even prime number is 2. Any positive even integer, $N \neq 2$, can be written as $N= 2a$ for some integer $a \neq 1$. But then $N$ is divisible by 2 and $a$ so that $N$ cannot be prime. Therefore, 2 is the only even prime number. \pspace
+
+\item The quantified statement $(\forall x) \big( P(x) \to S(x) \big)$ written as an English sentence is, ``For all integers $x$, if $x$ is even, then $x$ is prime.'' \pspace
+
+This statement is false. For instance, consider the integer $x= 4$. Clearly, $x$ is even but $x= 4$ is not prime. But then the statement, ``If $x$ is even, then $x$ is prime,'' is not true for all integers $x$. Therefore, the statement, ``For all integers $x$, if $x$ is even, then $x$ is prime,'' is false. \pspace
+
+\item The quantified statement $(\exists x) \big(R(x) \wedge W(x) \big)$ written as an English sentence is, ``There exists an integer $x$ such that $x$ is a perfect square and $1 \leq x \leq 10$.'' Alternatively, this is the statement, ``There exists a perfect square between 1 and 10.'' \pspace
+
+This statement is true. For instance, if $x= 1$, then $1= 1^2$ is a perfect square and $1 \leq 1 \leq 10$. Alternatively, if $n= 4$, then $4= 2^2$ is a perfect square and $1 \leq 4 \leq 10$. In fact, the statement, ``$x$ is a perfect square and $1 \leq x \leq 10$,'' is true for $x= 1, 4, 9$. But then the statement, ``There exists an integer $x$ such that $x$ is a perfect square and $1 \leq x \leq 10$,'' is true. 
 \end{enumerate}
 
 
@@ -79,17 +107,44 @@ Write the open sentences below as complete English sentences as `simply' as poss
 	\item For exists an integer $n$ such that $5 - 6n= 10$.
 	\item For all real numbers $y$, there exists $x$ such that $2x + 3y= 4$.
 	\item There exists $x$ such that for any integer $y$, $2x + 3y= 4$. 
-	\item For all real numbers, if $x$ is nonnegative, then $x$ has a well defined square root. 
+	\item For all real numbers, if $x$ is nonnegative, then $x$ has a square root. 
 	\item Multiplication of real numbers is commutative. 
 	\end{enumerate} \pspace
 
 \sol 
 \begin{enumerate}[(a)]
 \item 
+	\[
+	(\exists n \in \mathbb{Z}) [5 - 6n= 10]
+	\]
+The statement is false. If there were such an $n$, then $5 - 6n= 10$. But then $-6n= 5$ so that $n= -\frac{5}{6}$. But $-\frac{5}{6} \notin \mathbb{Z}$. Therefore, there can be no such integer. \pspace
+
 \item 
+	\[
+	(\forall y \in \mathbb{R}) (\exists x \in \mathbb{R}) [2x + 3y= 4]
+	\]
+The statement is true. Given a $y_0 \in \mathbb{R}$, define $x_0:= \frac{4 - 3y_0}{2}$. But then\dots
+	\[
+	2x_0 + 3y_0= 2 \cdot \dfrac{4 - 3y_0}{2} + 3y_0= (4 - 3y_0) + 3y_0= 4
+	\] \pspace
+
 \item 
+	\[
+	(\exists x \in \mathbb{R}) (\forall y \in \mathbb{R}) [2x + 3y= 4]
+	\]
+The statement is false. Suppose that such an $x$ existed; label this $x$ as $x_0$. Because $2x_0 + 3y= 4$ must hold for all $y$, choose $y= 0$. Then $2x_0= 4$, so that $x_0= 2$. But $2x_0 + 3y= 4$ must also hold for $y= 1$. But we know that $x_0= 2$. Then $2x_0 + 3y= 2(2) + 3(1)= 7 \neq 4$, a contradiction. Therefore, such an $x_0$ cannot exist. \pspace
+
 \item 
+	\[
+	(\forall x \in \mathbb{R}) (\exists y \in \mathbb{R}) [x \geq 0 \to x= y^2] \equiv (\forall x \in \mathbb{R}) \big[x \geq 0 \to (\exists y \in \mathbb{R}) [x= y^2] \big]
+	\]
+The statement is true. A rigorous proof that such an $x$ exists is rather extensive, involving elementary real analysis. However, we do know that nonnegative real numbers have a square root. Assuming that we can form $y= \sqrt{x}$, where $\sqrt{\square}$ has domain $\square \geq 0$. But then given $x \geq 0$, choose $y:= \sqrt{x}$. But then $x= y^2= (\sqrt{x})^2= x$, as desired. \pspace
+
 \item 
+	\[
+	(\forall x, y \in \mathbb{R}) (xy = yx)= (\forall x \in \mathbb{R}) (\forall y \in \mathbb{R}) [xy= yx]
+	\]
+The statement is true. This is one of the axioms of the real numbers, so we assume it to be true.\footnote{In reality, we assume this is true for some more elementary mathematical object, e.g. the integers. We then prove it for the reals for some suitable definition of the real numbers, e.g. equivalent classes of Cauchy sequences. But going through this process is beyond our scope.}
 \end{enumerate}
 
 
@@ -107,8 +162,15 @@ Write the open sentences below as complete English sentences as `simply' as poss
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
+\item The quantified statement $\forall x \big( R(x) \to S(x) \big)$ as an English sentence is, ``For all real numbers $x$, if $x^2 + x < 6$, then $-3 < x < 2$.'' \pspace
+
+This statement is true. Let $x$ be a real number such that $x^2 + x < 6$. But then we have $x^2 + x - 6 < 0$. This implies $(x - 2)(x + 3) < 0$. We must either then have $x - 2 > 0$ and $x + 3 < 0$, or $x - 2 < 0$ and $x + 3 > 0$. But these imply that $x > 2$ and $x < -3$, or $x < 2$ and $x > -3$. Obviously, $x$ cannot be both greater than 2 and less than $-3$. Therefore, it must be that $x < 2$ and $x > -3$, i.e. $-3 < x < 2$. \pspace
+
+\item The contrapositive of the given statement is $\forall x \big(\neg S(x) \to \neg R(x) \big)$. Now $\neg R(x): x^2 + x \geq 6$ and $\neg S(x): x \leq -3 \vee 2 \leq x$. But then written as a complete English sentence, the contrapositive is,  ``For all real numbers $x$, if $x \leq -3$ or $2 \leq x$, then $x^2 + x \geq 6$. Because a quantified conditional statement and its contrapositive have the same truth value, by (a), we know that this statement is true. \pspace
+
+The converse of the given statement is $\forall x \big( S(x) \to R(x) \big)$. Written as a complete English sentence, this is the statement, ``For all real numbers $x$, if $-3 < x < 2$, then $x^2 + x < 6$.'' While a quantified statement and its converse need not have the same truth value, in this case, both the original quantified statement and its converse are true. Suppose that $x$ is a real number such that $-3 < x < 2$. This implies that $-3 < x$ and $x < 2$. But then we know that $0 < x + 3$ and $0 < 2 - x$. But then $(x + 3)(2 - x) > 0$. We have $(x + 3)(2 - x)= 6 - x - x^2 > 0$. This finally implies that $x^2 + x < 6$. \pspace
+
+The negation of the given statement is $\neg [\forall x \big( R(x) \to S(x) \big) ] \equiv \exists x [ R(x) \wedge \neg S(x) ]$. Written as a quantified English sentence, this is the statement, ``There exists a real number $x$ such that $x^2 + x < 6$, and $x \leq -3$ or $2 \leq x$. From (a), we know that the original quantified statement is true; therefore, the negation of the original quantified statement is false. But then this statement is false. In fact, there exists no such $x$ because from the work above, we see that $x^2 + x < 6$ if and only if $-3 < x < 2$. 
 \end{enumerate}
 
 

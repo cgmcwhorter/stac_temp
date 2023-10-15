@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -18,7 +18,16 @@
 	\item There are values of $x$ for which $\forall x, P(x)$ is true and values for which the statement is false. 
 	\item If $\forall x, P(x)$ is false, then the statement $\exists x, \neg P(x)$ must be true. 
 	\item If $\exists x\, P(x)$ is true, then so is $\forall x\, P(x)$.
-	\end{enumerate} 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item This statement is false. For the predicates we shall soon subsequently define, let their universe be $\mathcal{U}:= \mathbb{R}$. Consider the predicate $P(x) \colon x^2 \geq 0$. Because the square of every real number is nonnegative, $P(x)$ is true for all $x \in \mathbb{R}$. Now define the predicate $Q(x) \colon x^2 < 0$. Because the square of every real number is nonnegative, $Q(x)$ is false for all $x \in \mathbb{R}$. Finally, define the predicate $R(x) \colon x > 0$. Clearly, $R(x)$ is true for all $x > 0$ and false for all $x \leq 0$. But the predicates $P(x), Q(x), R(x)$ show us that predicates can be true for all possible values of their free variables, always false for all possible values of their free variables, or can be true or false depending on the choice of the free variables. However, once we quantify a predicate, the resulting logical statement is always true or false (but not both). For instance, $\forall x\, P(x)$ is true, $\forall x\, Q(x)$ is false, $\forall x\, R(x)$ is false, and $\exists x\, R(x)$ is true. \pspace
+
+\item This statement is true. If $\forall x\, P(x)$ is false, then it is not the case that $P(x)$ is true for any value of $x$. But then there must be an $x$, say $x_0$, such that $P(x_0)$ is false. Then we know that $\neg P(x_0)$ is true. But then there exists an $x$, namely $x_0$, such that $\neg P(x)$ is true. Therefore, $\exists x, \neg P(x)$ is true. Alternatively, by assumption, we know that $\forall x, P(x)$ is false. Therefore, its negation is true. But $T_0 \equiv \neg [ \forall x, P(x)] \equiv \exists x, \neg P(x)$. Therefore, $\exists x, \neg P(x)$ is true. \pspace
+
+\item This statement is false. If $\exists x\, P(x)$ is true, then we know there is an $x$ such that $P(x)$ is true. However, this does not imply that $P(x)$ is true \textit{for all} $x$. The logical statement $\forall x\, P(x)$ may be true or false. Let the universe for $P(x)$ be $\mathcal{U}:= \mathbb{R}$. If $P(x)$ is the predicate $P(x) \colon x^2 \geq 0$, then certainly $\exists x\, P(x)$ is true. For instance, if $x= 0$, then $P(0) \colon 0= 0^2 \geq 0$ is true. Moreover, it is the case (as we have described above) that $\forall x\, P(x)$ is true because the square of any real number is nonnegative. However, if $P(x)$ is the predicate $P(x) \colon x \geq 0$, then $\exists x\, P(x)$ is true because $P(1) \colon 1= 1^2 > 0$ is true. However, $\forall x\, P(x)$ is false. For instance, $P(-1) \colon -1 \geq 0$ is false. 
+\end{enumerate}
 
 
 
@@ -34,7 +43,47 @@
 	\item $\forall x \big( \neg P(x) \to Q(x) \big)$
 	\item $\exists y\, \forall x \big( P(x, y) \wedge \neg Q(x, y) \big)$
 	\item $\exists x \big( P(x) \to (1 < x \vee x \geq 3) \big)$
-	\end{enumerate} 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\neg \big[ \forall x\, \exists y\, \forall z P(x, y, z) \big] \equiv \exists x\, \neg \big[ \exists y\, \forall z P(x, y, z) \big] \equiv \exists x\, \forall y\, \neg \big[ \forall z P(x, y, z) \big] \equiv \exists x\, \forall y\, \exists z [ \neg P(x, y, z) ]
+	\] \pspace
+
+\item 
+	\[
+	\neg \big[ \exists x \big( \neg P(x) \wedge Q(x) \big) \big] \equiv \forall x\, \neg \big[ \big( \neg P(x) \wedge Q(x) \big) \big] \equiv \forall x\, \big( \neg (\neg P(x) ) \vee \neg Q(x) \big) \equiv \forall x\, \big( P(x) \vee \neg Q(x) \big)
+	\] \pspace
+
+\item 
+	\[
+	\neg \big[ \forall x \big( \neg P(x) \to Q(x) \big) \big] \equiv \exists x\, \neg \big[ \big( \neg P(x) \to Q(x) \big) \big] \equiv \exists x\, \big( \neg P(x) \wedge \neg Q(x) \big)
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	\neg \big[ \exists y\, \forall x \big( P(x, y) \wedge \neg Q(x, y) \big) \big] &\equiv \forall y\, \neg \big[ \forall x \big( P(x, y) \wedge \neg Q(x, y) \big) \big] \\
+	&\equiv \forall y\, \exists x\, \neg \big[ \big( P(x, y) \wedge \neg Q(x, y) \big) \big] \\
+	&\equiv \forall y\, \exists x\, \big( \neg P(x, y) \vee \neg ( \neg Q(x, y) ) \big) \\
+	&\equiv \forall y\, \exists x\, \big( \neg P(x, y) \vee Q(x, y) \big) 
+	\end{aligned}
+	\]
+
+\item 
+	\[
+	\begin{aligned}
+	\neg \big[ \exists x \big( P(x) \to (1 < x \vee x \geq 3) \big) \big] &\equiv \forall x\, \neg \big[ \big( P(x) \to (1 < x \vee x \geq 3) \big) \big] \\
+	&\equiv \forall x\,  \big( P(x) \wedge \neg (1 < x \vee x \geq 3) \big) \\
+	&\equiv \forall x\,  \big( P(x) \wedge  \big[ \neg (1 < x) \wedge \neg (x \geq 3) \big] \big) \\
+	&\equiv \forall x\,  \big( P(x) \wedge  \big[ (1 \geq x) \wedge (x < 3) \big] \big) \\
+	&\equiv \forall x\,  \big( P(x) \wedge  \big[ (x \leq 1) \wedge (x < 3) \big] \big) \\
+	&\equiv \forall x\,  \big( P(x) \wedge  x \leq 1 \big)
+	\end{aligned}
+	\]
+\end{enumerate}
 
 
 
@@ -43,9 +92,9 @@
 
 
 % Problem 3
-\problem{10} Being as clear and as detailed as possible, explain why $\forall\, x\, P(x) \wedge \forall\, x\, Q(x)$ does not imply $\forall\, x \, [P(x) \wedge Q(x)]$. 
+\problem{10} Being as clear and as detailed as possible, explain why $\forall x\, P(x) \wedge\, \forall x\, Q(x)$ implies $\forall x \, [P(x) \wedge Q(x)]$. \pspace
 
-
+\sol We want to show $\forall x P(x) \wedge \forall x Q(x) \to \forall x [P(x) \wedge Q(x)]$. If $\forall x P(x) \wedge \forall x Q(x)$ is false, then the statement is clearly true. So assume that $\forall x\, P(x) \wedge \forall x\, Q(x)$ is true. This implies that $\forall x\, P(x)$ and $\forall x\, Q(x)$ is true. From the fact that $\forall x P(x)$ is true, we know that $P(x)$ is true no matter the choice of free variable $x$. Similarly, from the fact that $\forall x\, Q(x)$ is true, we know that $Q(x)$ is true no matter the choice of free variable $x$. But then no matter the choice of free variable $x$, $P(x)$ and $Q(x)$ are both true, which implies that $P(x) \wedge Q(x)$ is true. But then $P(x) \wedge Q(x)$ is true no matter the choice of free variable $x$. Therefore, $\forall x [P(x) \wedge Q(x)]$ is true.
 
 
 
@@ -60,7 +109,31 @@
 	\item There is an entry in the array that is negative. 
 	\item The value $A[10]$ is the largest value in the array.
 	\item There are two entries in the array that are the same. 
-	\end{enumerate} 
+	\end{enumerate} \pspace
+
+\sol Throughout this problem, we shall take the universe to be $\mathcal{U}:= \{ 1, 2, \ldots, 10 \}$. 
+
+\begin{enumerate}[(a)]
+\item An entry in the array is $A[k_0]$ for some choice of $k_0$ from $\mathcal{U}$. If $A[k_0]$ is greater than 100, we can write $A[k_0] > 100$. But then we can quantify the given statement as\dots
+	\[
+	(\forall k) (A[k] > 100)
+	\] \pspace
+
+\item An entry in the array is $A[k_0]$ for some choice of $k_0$ from $\mathcal{U}$. If $A[k_0]$ is negative, we can write $A[k_0] < 100$. But then we can quantify the given statement as\dots
+	\[
+	(\exists k) (A[k] < 0)
+	\] \pspace
+ 
+\item An entry in the array is $A[k_0]$ for some choice of $k_0$ from $\mathcal{U}$. If $A[10]$ is the largest value in the array, then no matter the choice of $k_0$, we would have $A[k_0] \leq A[10]$.\footnote{We need `$\leq$' here because if we choose $k_0= 10$, then $A[k_0] < A[10]$ would be false.} But then we can quantify the given statement as\dots
+	\[
+	(\forall k) ( A[k] \leq A[10] )
+	\] \pspace
+ 
+\item An entry in the array is $A[k_0]$ for some choice of $k_0$ from $\mathcal{U}$. We can choose another element in the array by choosing $j_0$ from $\mathcal{U}$, then $A[j_0]$ is another element of the array. If $A[k_0]$ and $A[j_0]$ are the same, we could write $A[k_0]= A[j_0]$. However, it might be that we chose $k_0= j_0$. But then $A[k_0]$ and $A[j_0]$ are the same element of the array. If we want two distinct elements of the array to be the same, we want $A[k_0] \neq A[j_0]$ and $k_0 \neq j_0$. But then we can quantify the given statement as\dots
+	\[
+	(\exists k)(\exists j) \big( A[k]= A[j] \wedge k \neq j \big)
+	\]  
+\end{enumerate}
 
 
 
@@ -74,7 +147,29 @@
 	\item Write the definition of uniform continuity as a quantified statement. 
 	\item Find a quantified statement for a function to be \textit{not} uniformly continuous by negating your answer in (a). 
 	\item Write your answer in (b) as an English sentence. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The definition of a function $f: \mathbb{R} \to \mathbb{R}$ being uniformly continuous is\dots
+	\[
+	(\forall \epsilon > 0) (\exists \delta > 0) (\forall x, y \in \mathbb{R}) \big[\, |x - y| < \delta \to |f(x) - f(y)| < \epsilon \,\big]
+	\]
+
+\item Negating our expression in (a), we have\dots
+	\[
+	\begin{aligned}
+	\neg \bigg[ (\forall \epsilon > 0) (\exists \delta > 0) (\forall x, y \in \mathbb{R}) \big[\, &|x - y| < \delta \to |f(x) - f(y)| < \epsilon \,\big] \bigg] \\
+	&\equiv (\exists \epsilon > 0) \neg \bigg[ (\exists \delta > 0) (\forall x, y \in \mathbb{R}) \big[\, |x - y| < \delta \to |f(x) - f(y)| < \epsilon \,\big] \bigg] \\
+	&\equiv (\exists \epsilon > 0) (\forall \delta > 0) \neg \bigg[ (\forall x, y \in \mathbb{R}) \big[\, |x - y| < \delta \to |f(x) - f(y)| < \epsilon \,\big] \bigg] \\
+	&\equiv (\exists \epsilon > 0) (\forall \delta > 0) (\exists x, y \in \mathbb{R}) \neg \bigg[ \big[\, |x - y| < \delta \to |f(x) - f(y)| < \epsilon \,\big] \bigg] \\
+	&\equiv (\exists \epsilon > 0) (\forall \delta > 0) (\exists x, y \in \mathbb{R}) \big[\, |x - y| < \delta \wedge \neg \big( |f(x) - f(y)| < \epsilon \big) \,\big] \\ 
+	&\equiv (\exists \epsilon > 0) (\forall \delta > 0) (\exists x, y \in \mathbb{R}) \big[\, |x - y| < \delta \wedge |f(x) - f(y)| \geq \epsilon \,\big] \\ 
+	\end{aligned}
+	\] \pspace
+
+\item Writing the final quantified logical expression in (b) as a complete English sentence, we know that a function $f: \mathbb{R} \to \mathbb{R}$ is not uniformly continuous ``if there exists $\epsilon > 0$ such that for all $\delta > 0$, there exist $x, y \in \mathbb{R}$ such that $|x - y| < \delta$ and $|f(x) - f(y)| \geq \epsilon$.'' 
+\end{enumerate}
 
 
 \end{document}
