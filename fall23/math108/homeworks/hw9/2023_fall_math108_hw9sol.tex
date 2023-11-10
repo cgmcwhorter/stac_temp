@@ -1,0 +1,46 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{9: Due 10/24}{I like to play blackjack. I'm not addicted to gambling. I'm addicted to sitting in a semicircle.}{Mitch Hedberg}
+
+% Problem 1
+\problem{10} Suppose you play a game where you roll a loaded die. The probabilities for this die are (partially) given below. If you roll an even number, you win \$1. If you roll a one, you lose \$5. If you roll a three, you lose \$2. Finally, if you roll a five, you win/lose nothing. 
+	\begin{table}[!ht]
+	\centering 
+	\begin{tabular}{|c||c|c|c|c|c|c|} \hline 
+	$n$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\ \hline 
+	$P(n)$ & $\phantom{\dfrac{00}{00}}$ & $\dfrac{2}{12}$ & $\dfrac{3}{12}$ & $\dfrac{1}{12}$ & $\dfrac{1}{12}$ & $\dfrac{4\rule{0pt}{2.9ex}}{12\rule[-1.3ex]{0pt}{0pt}}$ \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Find $P(1)$. 
+\item Find the probability that if you roll the die three times, you win \$1 each time. 
+\item Find the average amount you win per game. 
+\item Should you play this game? Explain.
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Suppose you are designing a game to `reallocate' money from your friends to an account that you control\dots You will have them roll a four-sided dice---each side equally likely to occur. If they roll a four, neither of you wins money. If they roll a two or three, you will pay them \$2 or \$3, respectively. If they roll a one, they will flip a fair coin. If the coin is heads, they win/lose nothing. However, if the coins is tails, they will pay you some amount of money. 
+	\begin{enumerate}[(a)]
+	\item Find the amount your friend must pay you if they roll a one and then flip a tails so that you will not lose money at this game. 
+	\item If your friend plays this game one-hundred times, are you guaranteed to make money? Explain. 
+	\end{enumerate}
+
+
+\end{document}
