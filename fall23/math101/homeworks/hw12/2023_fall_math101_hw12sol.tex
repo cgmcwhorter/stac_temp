@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,39 @@
 	\item Find the $y$-intercept of this function.
 	\item Find the $x$-intercept of this function.
 	\item Does the graph of this function contain the point $(6, -8)$? Explain. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Given a linear function $y= mx + b$, we know that $m$ is the slope and $b$ is the $y$-intercept. We have $\ell(x)= \frac{13 - 11x}{5}= \frac{13}{5} - \frac{11}{5}\,x$. Therefore, the slope is $m= -\frac{11}{5}$. 
+
+\item From (a), we know that $\ell(x)= \frac{13 - 11x}{5}= \frac{13}{5} - \frac{11}{5}\,x$. Therefore, the $y$-intercept is $\frac{13}{5}$, i.e. the point $(0, \frac{13}{5})$. Equivalently, we know the $y$-intercept is the value of the function when $x= 0$. But then we have $\ell(0)= \frac{13 - 11(0)}{5}= \frac{13 - 0}{5}= \frac{13}{5}$, i.e. the $y$-intercept is $(0, \frac{13}{5})$. \pspace
+
+\item The $x$-intercept(s) occurs at the $x$-value(s) when the output is 0. But then\dots
+	\[
+	\ell(x)= 0 
+	\frac{13 - 11x}{5}= 0 \\
+	13 - 11x= 0 \\
+	13= 11x \\
+	x= \frac{13}{11} \approx 1.18182
+	\]
+That is, the $x$-intercept is the point $(\frac{13}{11}, 0)$. \pspace
+
+\item If the graph of $\ell$ contains the point $(6, -8)$, then $\ell(6)= -8$. But we have\dots
+	\[
+	\ell(6)= \dfrac{13 - 11(6)}{5}= \dfrac{13 - 66}{5}= -\dfrac{53}{5} \approx -10.6 \neq -8
+	\]
+Therefore, the graph of $\ell$ does not contain the point $(6, -8)$. Alternatively, the graph of $\ell$ contains the point $(6, -8)$ if the point satisfies the equation of $\ell$. But then\dots
+	\[
+	\begin{gathered}
+	\ell(x)= \dfrac{13 - 11x}{5} \\
+	\ell(6) \stackrel{?}{=} \dfrac{13 - 11(6)}{5} \\
+	-8 \stackrel{?}{=} \dfrac{13 - 66}{5} \\
+	-8 \neq -\dfrac{53}{5}
+	\end{gathered}
+	\]
+Therefore, the graph of $\ell$ does not contain the point $(6, -8)$. 
+\end{enumerate}
 
 
 
@@ -31,7 +63,32 @@
 \problem{10} Solve the following equation and verify that your solution is correct:
 	\[
 	9 - 3(x + 1)= \dfrac{6 - x}{2}
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	9 - 3(x + 1)= \dfrac{6 - x}{2} \\[0.3cm]
+	9 - 3x - 3= \dfrac{6 - x}{2} \\[0.3cm]
+	6 - 3x= \dfrac{6 - x}{2} \\[0.3cm]
+	2(6 - 3x)= 2 \left( \dfrac{6 - x}{2} \right) \\[0.3cm]
+	12 - 6x= 6 - x \\[0.3cm]
+	12= 6 + 5x \\[0.3cm]
+	5x= 6 \\[0.3cm]
+	x= \dfrac{6}{5}
+	\end{gathered}
+	\] \pspace
+We can now verify this solution:
+	\[
+	\begin{gathered}
+	9 - 3(x + 1)= \dfrac{6 - x}{2} \\
+	9 - 3 \left( \dfrac{6}{5} + 1 \right) \stackrel{?}{=} \dfrac{6 - \frac{6}{5}}{2} \\[0.3cm]
+	9 - 3 \cdot \dfrac{11}{5} \stackrel{?}{=} \dfrac{\frac{24}{5}}{2} \\[0.3cm]
+	9 - \dfrac{33}{5} \stackrel{?}{=} \dfrac{24}{5} \cdot \dfrac{1}{2} \\[0.3cm]
+	\dfrac{12}{5}= \dfrac{12}{5}
+	\end{gathered}
 	\]
+Therefore, the solution $x= \frac{6}{5}$ is correct. 
 
 
 
@@ -42,8 +99,31 @@
 % Problem 3
 \problem{10} Solve the following equation:
 	\[
-	5\sqrt{2} x + 8= -3(1 - 2x)
-	\] 
+	5\sqrt{2}\, x + 8= -3(1 - 2x)
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	5\sqrt{2}\, x + 8= -3(1 - 2x) \\[0.3cm]
+	5\sqrt{2}\,x + 8= -3 + 6x \\[0.3cm]
+	5\sqrt{2}\,x - 6x + 8= -3 \\[0.3cm]
+	5\sqrt{2}\,x - 6x= -11 \\[0.3cm]
+	(5\sqrt{2} - 6)x= -11 \\[0.3cm]
+	x= \dfrac{-11}{5 \sqrt{2} - 6} \\[0.3cm]
+	x= \dfrac{11}{6 - 5\sqrt{2}} \approx -10.2701
+	\end{gathered}
+	\] \pspace
+We can also numerically verify this solution:
+	\[
+	\begin{gathered}
+	5\sqrt{2}\, x + 8= -3(1 - 2x) \\[0.3cm]
+	5\sqrt{2} (-10.2701) + 8 \stackrel{?}{=} -3( 1 - 2 \cdot -10.2701) \\[0.3cm]
+	-72.6206 + 8 \stackrel{?}{=} -3 (1 - (-20.5402)) \\[0.3cm]
+	-64.6206 \stackrel{?}{=} -3(21.5402) \\[0.3cm]
+	-64.6206= -64.6206
+	\end{gathered}
+	\] \pspace
 
 
 
@@ -52,7 +132,9 @@
 
 
 % Problem 4
-\problem{10} Find the equation of the line perpendicular to the line $y= \pi$ with $x$-intercept $\sqrt{2}$. 
+\problem{10} Find the equation of the line perpendicular to the line $y= \pi$ with $x$-intercept $\sqrt{2}$. \pspace
+
+\sol The line $y= \pi$ is horizontal. Because the line in question is perpendicular to a horizontal line, the line must be vertical. Therefore, the line has the form $x= a$ for some number $a$. We know that the $x$-intercept of the line is $\sqrt{2}$, I.e. the point $(\sqrt{2}, 0)$. But then it must be that $x= \sqrt{2}$. 
 
 
 \end{document}

@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,27 @@
 	\item What are the proceeds for this loan?
 	\item At the end of the 10~months, how much does Robert owe the bank?
 	\item How much does Robert pay in total for this loan?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The maturity is the loan amount, which is \$37,000. The discount is the interest that is paid up-front. We know that $D= Mrt$. But then we have\dots
+	\[
+	D= Mrt= \$37,\!000 (0.102)\, \frac{10}{12}= \$3,\!145.00
+	\] \pspace
+
+\item The proceeds are the amount received from the bank after the up-front interest is paid. But then the proceeds, $P$, are $P= M - D$. Therefore, \dots
+	\[
+	P= M - D= \$37,\!000 - \$3,\!145.00= \$33,\!855
+	\] \pspace
+
+\item Robert only ever has to pay the bank the loan amount (the maturity, $M$) and any interest on the loan. However, the interest (the discount, $D$) is paid up-front. Therefore, at the end of the 10~months, Robert only owes the loan amount---\$37,000. \pspace
+
+\item Robert only ever pays the loan amount (the maturity, $M$) and any interest on the loan (the discount, $D$). Therefore, the total amount paid on this loan is\dots
+	\[
+	\text{Total}= M + D= \$37,\!000 + \$3,\!145.00= \$40,\!145
+	\]
+\end{enumerate}
 
 
 
@@ -33,7 +53,28 @@
 	\item How much will be in the account after 9~years?
 	\item How much interest has the account earned after 9~years?
 	\item How long would it take the account to have \$50,000?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol This savings account compounds interest discretely. We know that the annual interest rate is $r= 0.0057$ and that the interest is compounded $k= 12$~times per year. We know that Inna has invested $P= \$7,\!800$. 
+\begin{enumerate}[(a)]
+\item The amount in the account after $t= 9$~years, $F$, is\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= \$7,\!800 \left(1 + \dfrac{0.0057}{12} \right)^{12 \cdot 9}= \$7,\!800 (1.000475)^{108}= \$7,\!800 (1.05262582)= \$8,\!210.48
+	\] 
+Therefore, the account will have \$8,210.48 after 9~years. \pspace
+
+\item The only money in the account is money Inna placed in the account (the principal, $P$) and interest earned. Therefore, we must have\dots
+	\[
+	\text{Interest Earned}= \$8,\!210.48 - \$7,\!800= \$410.48
+	\]
+Therefore, Inna has earned \$410.48 in interest after 9~years. \pspace
+
+\item We know that the time (in years), $t$, it takes a principal $P$ to increase to a future value $F$ at an annual interest rate $r$, compounded $k$~times per year is given by $t= \frac{\ln(F/P)}{k \ln(1 + \frac{r}{k})}$. But then\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln(1 + \frac{r}{k})}= \dfrac{\ln(\$50,\!000/\$7,\!800)}{12 \ln(1 + \frac{0.0057}{12})}= \dfrac{\ln(6.410256410)}{12 \ln(1.000475)}= \dfrac{1.8578993}{0.00569865} \approx 326.024
+	\]
+Therefore, it will take 326.02~years for the account to have \$50,000. 
+\end{enumerate}
 
 
 
@@ -47,7 +88,24 @@
 	\item What is the nominal interest rate?
 	\item What is the effective interest rate for this loan?
 	\item If Annita will take out the loan for 4~years and will not be able to pay back more than \$11,000, what is the most she can take out now? That is, what is the amount that she could borrow now so that after 4~years, she would owe \$11,000?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The nominal interest rate is the advertised interest rate, which is 11.43\%. \pspace
+
+\item For discrete compounded interest, we know the effective annual interest rate is given by $(1 + \frac{r}{k})^k - 1$, where $r$ is the nominal interest rate and $k$ is the number of interest compounds per year. But then\dots
+	\[
+	r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.1143}{12} \right)^{12} - 1= (1.009525)^{12} - 1= 1.120482144 - 1= 0.120482144
+	\]
+Therefore, the effective interest rate is 12.05\%. \pspace
+
+\item The initial investment (principal), $P$, required to grow to a future value, $F$, after $t$~years at an annual interest rate $r$, compounded $k$~times per year is given by $P= \frac{F}{\left(1 + \frac{r}{k} \right)^{kt}}$. But then\dots
+	\[
+	P= \dfrac{F}{\left(1 + \frac{r}{k} \right)^{kt}}= \dfrac{\$11,\!000}{\left(1 + \dfrac{0.1143}{12} \right)^{12 \cdot 4}}= \dfrac{\$11,\!000}{(1.009525)^{48}}= \dfrac{\$11,\!000}{1.576230621} \approx \$6,\!978.67
+	\]
+Therefore, the most Annita can borrow right now is \$6,978.67. 
+\end{enumerate}
 
 
 \end{document}

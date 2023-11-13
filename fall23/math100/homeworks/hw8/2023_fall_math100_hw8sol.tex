@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 % -------------------
 % Content
@@ -19,7 +19,37 @@
 	\item Predict the current cost of a good that cost \$459.99 last year. 
 	\item If the inflation rate in (a) was constant every year, what will be the percentage increase in the cost of goods in 100~years compared to this year?
 	\item Suppose that the current cost of a cup of coffee is \$3.50. If the inflation rate for the past 50~years was the rate computed in (a), what was the cost of a cup of coffee 50~years ago?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know that $\text{New CPI}= \text{Old CPI} \cdot (1 + \text{Inf. Rate})$. But then $1 + \text{Inf. Rate}= \frac{\text{New CPI}}{\text{Old CPI}}$. But then\dots
+	\[
+	1 + \text{Inf. Rate}= \dfrac{\text{New CPI}}{\text{Old CPI}}= \dfrac{304.3}{292.7}= 1.0396310215237445 \approx 1.0396
+	\]
+Therefore, the inflation rate was 3.96\%. \pspace
+
+\item If the inflation represents the true percentage increase in price, then we know $\text{New Price}= \text{Old Price} (1 + \text{Inf. Rate})$. But then\dots
+	\[
+	\text{New Price}= \$459.99 (1 + 0.0396310215237445)= \$459.99 (1.0396310215237445) \approx \$478.22
+	\] \pspace
+
+\item If we increase a number \# by $\%_d$ a total of $n$ times, the result is $\#(1 + \%_d)^n$, where $\%_d$ is the percentage increase written as a decimal. Then if a good costs $P$ now, the price after 100 years of 3.96\% annual inflation will be\dots
+	\[
+	\hspace{-1.2cm} P(1 + 0.0396310215237445)^{100}= P(1.0396310215237445)^{100}= P(48.74420509385)= P(1 + 47.74420509385)
+	\]
+We can recognize this as a 4,774.42\% increase in price. \pspace
+
+\item Let the price of a cup of coffee 50~years ago be $P$. Using the logic in (c), we know that the price after 50~years of 3.96\% inflation will be $P(1 + 0.0396310215237445)^{50}= P(1.0396310215237445)^{50}$. But we know this final price must be \$3.50. So we have\dots
+	\[
+	\begin{gathered}
+	\$3.50= P(1.0396310215237445)^{50} \\
+	\$3.50= 6.981705027702761 P \\
+	P= \dfrac{\$3.50}{6.981705027702761} \\
+	P \approx \$0.50
+	\end{gathered}
+	\]
+\end{enumerate}
 
 
 
@@ -28,7 +58,7 @@
 
 
 % Problem 2
-\problem{10} The 2023~federal tax brackets are given below. The standard deduction for single filers for the year 2023 is \$13,850. Compute the federal taxes in 2023 for a single filer taking the standard deduction that made \$135,000 that year. 
+\problem{10} The 2023~federal tax brackets are given below. The standard deduction for single filers for the year 2023 is \$13,850. Compute the federal taxes in 2023 for a single filer taking the standard deduction that made \$135,000 that year. \par
 	\begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|} \hline
@@ -41,7 +71,17 @@
 	35\% & \$231,251 -- \$578,125 \\ \hline
 	37\% & $\geq$ \$578,126 \\ \hline
 	\end{tabular}
-	\end{table}
+	\end{table} \pspace
+
+\sol We know the taxable income is their net income minus their deduction. Therefore, this person's taxable income is $\$135,\!000 - \$13,\!850= \$121,\!150$. This individual's federal tax is then the tax rate applied to the amount of income in each tax bracket. Therefore, this individual's federal tax liability is\dots
+	\[
+	\begin{aligned}
+	\text{Fed. Tax}&= 0.10(\$11,\!000 - \$0) + 0.12 (44,\!725 - \$11,\!000) + 0.22(\$95,\!375 - \$44,\!725) + 0.24(\$121,\!150 - \$95,\!375) \\[0.3cm]
+	&= 0.10(\$11,\!000) + 0.12(\$33,\!725) + 0.22(\$50,\!650) + 0.24(\$25,\!775) \\[0.3cm]
+	&= \$1,\!100 + \$4,\!047 + \$11,\!143 + \$6,\!186 \\[0.3cm]
+	&= \$22,\!476
+	\end{aligned}
+	\]
 
 
 
@@ -54,7 +94,22 @@
 	\begin{enumerate}[(a)]
 	\item How much will the account have after 5~years?
 	\item How much should you have invested to have the \$8,000 after 5~years?
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know that $F= P(1 + rt)$, where $F$ is the future value, $P$ is the present value (principal), $r$ is the annual interest rate, and $t$ is the number of years. But then we have\dots
+	\[
+	F= P(1 + rt)= \$5,\!000 (1 + 0.113 \cdot 5)= \$5,\!000 (1 + 0.565)= \$5,\!000(1.565) \approx \$2,\!825
+	\] 
+Therefore, the account will have \$2,825 after 5~years. \pspace
+
+\item We know $P= \frac{F}{1 + rt}$, where $P$ is the present value (principal), $F$ is the future value, $r$ is the annual interest rate, and $t$ is the number of years. But then we have\dots
+	\[
+	P= \dfrac{F}{1 + rt}= \dfrac{\$8,\!000}{1 + 0.113 \cdot 5}= \dfrac{\$8,\!000}{1 + 0.565}= \dfrac{\$8,\!000}{1.565} \approx \$5,\!111.82
+	\]
+Therefore, you should have invested \$5,111.82 to have \$8,000 after 5~years. 
+\end{enumerate}
 
 
 \end{document}
