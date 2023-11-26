@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{false} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 \newcommand{\blank}[1]{\underline{\hspace{#1}}} % Blank Underline
 
@@ -18,9 +18,28 @@
 \problem{10} Lord of the Wings is a food truck that has a number of offerings: 8 types burgers, 6~types of wings, 5~types of fries, 3~types of wraps, and 4~types of sides. 
 	\begin{enumerate}[(a)]
 	\item How many ways can you order one thing from the menu? [Ans: 26]
-	\item How many ways can you order two different things from the menu? [Ans: 650]
+	\item How many ways can you order two different things from the menu? [Ans: 325]
 	\item If you will order a meal consisting of a burger/wing/wrap, a fry, and a side, how many possible orders are there? [Ans: 228]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Let $S_1$ be the set of burgers, $S_2$ be the set of wings, $S_3$ be the set of fries, $S_4$ be the set of wraps, and $S_5$ be the set of sides. We know $|S_1|= 8$, $|S_2|= 6$, $|S_3|= 5$, $|S_4|= 3$, and $|S_5|= 4$. Let $S$ be the set of distinct items on the menu, i.e. $S= S_1 \cup S_2 \cup S_3 \cup S_4 \cup S_5$. Because the $S_i$ are disjoint, we have $|S|= \sum |S_i|= 26$. 
+
+\begin{enumerate}[(a)]
+\item Because we must choose a burger, wing, fry, wrap, or side and the $S_i$ are pairwise disjoint, by the Addition Principle, the number of choices is\dots
+	\[
+	\sum |S_i|= |S_1| + |S_2| + |S_3|+ |S_4| + |S_5|= 8 + 6 + 5 + 3 + 4= 26
+	\] \pspace
+
+\item The order of the choices does not matter---what matters is the over all choice of items. Because the items must be different, repetition in the selection is not allowed. Therefore, we can count this using combinations. This is the number of ways of selecting 2 objects from 26 possible objects, i.e. $_{26}C_2= \binom{26}{2}$. We have\dots
+	\[
+	\binom{26}{2}= \dfrac{26!}{2! (26 - 2)!}= \dfrac{26!}{2! 24!}= \dfrac{26 \cdot 25 \cdot \cancel{24!}}{2 \cdot \cancel{24!}}= \dfrac{26 \cdot 25}{2}= 325
+	\] \pspace
+
+\item We must select a burger/wing/wrap, and then a fry, and then a side. Let $M= S_1 \cup S_2 \cup S_4$. Because $S_1$, $S_2$, and $S_4$ are disjoint, the Addition Principle states that there are $|M|= |S_1| + |S_2| + |S_4|= 8 + 6 + 3= 17$~ways of selecting a burger, wing, or wrap. But then the Multiplication Principle states that the number of ways of selecting a burger/wing/wrap, and then a fry, and then a side is\dots
+	\[
+	|M| \cdot |S_3| \cdot |S_5|= 17 \cdot 5 \cdot 4= 340
+	\]
+\end{enumerate}
 
 
 
@@ -36,7 +55,36 @@
 	\item $7!$
 	\item $_{9} C_{7}$
 	\item $\binom{10}{2,5,3}$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Recall that $n!= n \cdot (n - 1) \cdot (n - 2) \cdot \cdots \cdot 2 \cdot 1$, $_nP_r:= \dfrac{n!}{(n - r)!}= n \cdot (n - 1) \cdot \cdots \cdot (n - r + 1)$, $_nCk= \binom{n}{k}:= \dfrac{n!}{k! (n - k)!}$, and if $n_1 + n_2 + \cdots + n_k= n$, then $\binom{n}{n_1, n_2, \ldots, n_k}:= \dfrac{n!}{n_1! n_2! \cdots n_k!}$. 
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\binom{12}{3}= \dfrac{12!}{3! (12 - 3)!}= \dfrac{12!}{3!\, 9!}= \dfrac{12 \cdot 11 \cdot 10 \cdot \cancel{9!}}{(3 \cdot 2) \cdot \cancel{9!}}= \dfrac{\cancel{12}^2 \cdot 11 \cdot 10}{\cancel{6}}= 2 \cdot 11 \cdot 10= 220
+	\] \pspace
+
+\item 
+	\[
+	_{120}P_5= \dfrac{120!}{(120 - 5)!}= \dfrac{120!}{115!}= 120 \cdot 119 \cdot 118 \cdot 117 \cdot 116= 22,\!869,\!362,\!880
+	\] \pspace
+
+\item 
+	\[
+	7!= 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1= 5,\!040
+	\] \pspace
+
+\item 
+	\[
+	_9C_7= \dfrac{9!}{7! (9 - 7)!}= \dfrac{9!}{7! \, 2!}= \dfrac{9 \cdot 8 \cdot \cancel{7!}}{\cancel{7!} \, 2}= \dfrac{9 \cdot \cancel{8}^4}{\cancel{2}}= 9 \cdot 4= 36
+	\] \pspace
+
+\item 
+	\[
+	\binom{10}{2,5,3}= \dfrac{10!}{2! \, 5! \, 3!}= \dfrac{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot \cancel{5!}}{2 \cdot \cancel{5!} \cdot (3 \cdot 2)}= \dfrac{10 \cdot 9 \cdot \cancel{8}^4 \cdot 7 \cdot \cancel{6}}{\cancel{2} \cdot \cancel{6}}= 10 \cdot 9 \cdot 4 \cdot 7= 2,\!520
+	\]
+\end{enumerate}
 
 
 
@@ -49,9 +97,34 @@
 	\begin{enumerate}[(a)]
 	\item How many possible hands can you begin with? [Ans: 20,358,520]
 	\item How many ways can you be dealt exactly two face cards? [Ans: 6,031,740]
-	\item How many ways can you be dealt at most one face card? [Ans: 8,554,104]
+	\item How many ways can you be dealt at most one face card? [Ans: 11,734,476]
 	\item How many ways can you be dealt cards in ascending order of `value', e.g. 6, 7, 8, 9, 10, jack? [Ans: 32,768]
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The order of the cards does not matter as we can always re-arrange them in our hand and the overall `hand' is the same. There is no repetition in the cards dealt. [While the type of card may be repeated, e.g. hearts, 4s, etc., the card cannot be repeated, i.e. suit \textit{and} number/face.] Therefore, we simply need count the number of combinations of six cards from a total of 52 unique cards. This is\dots
+	\[
+	_{52}C_6= \binom{52}{6}= 20,\!358,\!520
+	\] \pspace
+
+\item The order of the cards does not matter as we can always re-arrange them in our hand and the overall `hand' is the same. There is no repetition in the cards dealt. [While the type of card may be repeated, e.g. hearts, 4s, etc., the card cannot be repeated, i.e. suit \textit{and} number/face.] So we can count this by assuming the two face cards are dealt first. Then we need count the number of ways of being dealt two face cards \textit{and} then being dealt four non-face cards. The Multiplication Principle states that we then need multiply the number of ways of being dealt two face cards by the number of ways of being dealt four non-face cards. The number of ways of being dealt two face cards is the number of ways of choosing two face cards from the $4 \cdot 3= 12$ face cards, i.e. $_{12}C_2$. The number of ways of being dealt two face cards is the number of ways of choosing four non-face cards from the $52 - 12= 40$ non-face cards, i.e. $_{40}C_4$. But then the number of ways of being dealt two face cards is\dots
+	\[
+	_{12}C_2 \cdot {}_{40}C_4= 66 \cdot 91,\!390= 6,\!031,\!740
+	\] \pspace
+
+\item The order of the cards does not matter as we can always re-arrange them in our hand and the overall `hand' is the same. There is no repetition in the cards dealt. [While the type of card may be repeated, e.g. hearts, 4s, etc., the card cannot be repeated, i.e. suit \textit{and} number/face.] So we can count this by assuming the face card (if one is dealt at all) is dealt first. Because one cannot be dealt no face cards and one face card at the same time, the Addition Principle says that the number of ways of being dealt at most one face card is the number of ways of being dealt no face cards plus the number of ways of being dealt exactly one face card. 
+
+To count the number of ways of being dealt no face cards, one need to choose six of the $52 - 12= 40$ non-face cards, i.e. $_{40}C_6$. To count the number of ways of being dealt exactly one face card, assume that we are dealt a face card and then five non-face cards. The Multiplication Principle then gives the number of ways of being dealt exactly one face card is the number of ways of being dealt one face card times the number of ways of being dealt five non-face cards. The number of ways of being dealt one face card is the number of ways of choosing one of the $4 \cdot 3= 12$ face cards, i.e. $_{12}C_1$. The number of ways of being dealt five non-face cards is the number of ways of choosing five non-face cards from the $52 - 12= 40$ non-face cards, i.e. $_{40}C_5$. Therefore, the number of ways of being dealt exactly one face card is $_{12}C_1 \cdot {}_{40}C_5$. But then the number ways you can be dealt at most one face card is\dots
+	\[
+	_{40}C_6 + _{12}C_1 \cdot {}_{40}C_5= 3,\!838,\!380 + 12 \cdot 658,\!008= 3,\!838,\!380 + 7,\!896,\!096= 11,\!734,\!476
+	\] \pspace
+
+\item The order of the cards clearly matters. There is no repetition in the cards dealt. [While the type of card may be repeated, e.g. hearts, 4s, etc., the card cannot be repeated, i.e. suit \textit{and} number/face.] Once we know the first card, the rest of the `types' of cards is fixed, e.g. if a 5 is dealt first, the remaining cards dealt (in order) must be 6, 7, 8, 9, and 10. Clearly, by the Multiplication Principle, the number of ways of being dealt cards in ascending order of `value' is the number of ways of selecting a possible starting card (so that six cards can be dealt) times the number of ways of selecting the first card, times the number of ways of selecting the second cards, \dots, times the number of ways of selecting the sixth card. Because six cards must be dealt in ascending order, there are 8 possible choices of `type' of starting card, i.e. 2, 3, 4, 5, 6, 7, 8, or 9. Once a starting card is chosen, there are four possible choices for \textit{each} of the remaining cards, e.g. if a 4 must be dealt first, there are four possible choices for the four (4 hearts, 4 diamonds, 4 spades, 4 clubs) and four choices for each of the remaining cards. Therefore, the number of ways that you can be dealt cards in ascending order of `value' is\dots
+	\[
+	8 \cdot 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4= 8 \cdot 4^6= 8 \cdot 4096= 32,\!768
+	\]
+\end{enumerate}
 
 
 \end{document}

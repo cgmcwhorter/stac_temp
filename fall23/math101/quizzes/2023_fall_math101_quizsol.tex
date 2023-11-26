@@ -73,7 +73,7 @@ Therefore, the quiz statement is false. The quiz statement has $\sqrt[11]{x^2}= 
 \quizsol \textit{True/False}: Suppose a course has grade components of homework (50\%), quizzes (10\%), a midterm (20\%), and a final (20\%). If you had a 80\% homework average, 75\% quiz average, and received a 60\% on the midterm, then your average is\dots
 	\[
 	0.50(80\%) + 0.10(75\%) + 0.20(60\%)= 40\% + 7.5\% + 12\%= 59.5\%
-	\] \pspace
+	\] 
 
 \sol The statement is \textit{false}. One's course average is a weighted average where each percentage earned is weighted by the components worth. But then\dots
 	\[
@@ -81,17 +81,118 @@ Therefore, the quiz statement is false. The quiz statement has $\sqrt[11]{x^2}= 
 	\] \pvspace{1.3cm}
 
 
-%The real number $0.1 \cdot 10^3$ is in scientific notation.
-%The surface area of a box that is open at the top with dimensions 1~ft $\times$ 8~in $\times$ 5~in is $\text{SA}= 12 \cdot 8 + 2(8 \cdot 5) + 2(12 \cdot 5)= 296 \text{ in}^2$.
-%The relation with domain $\mathbb{R}^3$ and codomain $\mathbb{R}$ given by $f(x,y,z)= x^2yz - yz^2 + 6$ is a function. 
-%If $\psi$ is a function and $\psi(4)= 10= \psi(-2)$, then $\psi^{-1}$ exists and $\psi^{-1}(10)= 4$. 
-%The point $(-\frac{1}{2}, 3)$ is on the graph of $f(x)= 4x + 5$. 
-%There exists a function, $f$, with $x$-intercepts $-1, 0, 1$ such that $f^{-1}$ exists. 
 
-%If you are driving down the highway at 65~mph from Albany to NYC, then your distance from NYC is given by a linear function. 
-%There exists a horizontal line that is perpendicular to $y= 5x - 3$. 
+% Quiz 7
+\quizsol \textit{True/False}: The real number $0.1 \cdot 10^3$ is in scientific notation. \pspace
 
-% Three lines, none of which are parallel to the others, must intersect at a distinct point. 
+\sol The statement is \textit{false}. A number in scientific notation is a real number in the form $R \cdot 10^n$, where $1 \leq |R| < 10$ and $n$ is an integer. Observe that the given number is of the form $R \cdot 10^n$ with $R= 0.1$ and $n= 3$. But because $R= 0.1 < 1$, this number is not in scientific notation. Correctly written in scientific notation, the number $0.1 \cdot 10^3= 0.1 \cdot 1000= 100$ is $1 \cdot 10^2$. \pvspace{1.3cm}
+
+
+
+% Quiz 8
+\quizsol \textit{True/False}: The surface area of a box that is open at the top with dimensions 1~ft $\times$ 8~in $\times$ 5~in is $\text{SA}= 12 \cdot 8 + 2(8 \cdot 5) + 2(12 \cdot 5)= 296 \text{ in}^2$. \pspace
+
+\sol The statement is \textit{true}. We know that the surface area of a `box' is $\text{SA}= 2\ell w + 2 \ell h + 2 wh$. Because the box is open at the top, there is no surface area at the top of the box. The top of the box has surface area $\ell w$. But then the surface area of the described box is $\text{SA}= 2\ell w + 2 \ell h + 2 wh - \ell w= \ell w + 2 \ell h + 2 wh$. When one computes lengths, areas, volumes, etc., one need be sure that one is consistent with units. So we either have $\ell= 12 \text{ in}$, $w= 8 \text{ in}$, and $h= 5 \text{ in}$ or $\ell= 1 \text{ ft}$, $w= \frac{8}{12} \text{ ft}$, and $h= \frac{5}{12} \text{ ft}$. In the former case, we have\dots
+	\[
+	\text{SA}= \ell w + 2 \ell h + 2 wh= 12 \text{ in} \cdot 8 \text{ in} + 2(12 \text{ in}) 5 \text{ in} + 2(8 \text{ in}) 5 \text{ in}= 96 \text{ in}^2 + 120 \text{ in}^2 + 80 \text{ in}^2= 296 \text{ in}^2
+	\]
+In the latter case, we have\dots
+	\[
+	\text{SA}= \ell w + 2 \ell h + 2 wh= 1 \text{ ft} \cdot \frac{8}{12} \text{ ft} + 2(1 \text{ ft}) \cdot \frac{5}{12} \text{ ft} + 2 \left( \frac{8}{12} \text{ ft} \right) \frac{5}{12} \text{ ft}= \dfrac{2}{3} \text{ ft}^2 + \dfrac{5}{6} \text{ ft}^2 + \dfrac{5}{9} \text{ ft}^2= \dfrac{37}{18} \text{ ft}^2 \approx 2.05556 \text{ ft}^2
+	\]
+We can then convert this to square inches: $\frac{37}{18} \text{ ft}^2= \frac{37}{18} \text{ ft}^2 \cdot \frac{12 \text{ in}}{1 \text{ ft}} \cdot \frac{12 \text{ in}}{1 \text{ ft}}= 296 \text{ in}^2$. \pvspace{1.3cm}
+
+
+
+% Quiz 9
+\quizsol \textit{True/False}: The relation with domain $\mathbb{R}^3$ and codomain $\mathbb{R}$ given by $f(x,y,z)= x^2yz - yz^2 + 6$ is a function. \pspace
+
+\sol The statement is \textit{true}. For each given input $(x, y, z)$, there is only one possible output---namely the one obtained by `plugging in' for $x, y, z$ and following order of operations. For instance, $f(1, -1, 6)= 1^2 (-1)6 - (-1) 6^2 + 6= -6 + 36 + 6= 36$. \pvspace{1.3cm}
+
+
+
+% Quiz 10
+\quizsol \textit{True/False}: If $\psi$ is a function and $\psi(4)= 10= \psi(-2)$, then $\psi^{-1}$ exists and $\psi^{-1}(10)= 4$. \pspace
+
+\sol The statement is \textit{false}. Recall that $\psi^{-1}(10)$ is the collection of values, $x$, such that $\psi(x)= 10$. Certainly, $x= 4$ is such a value because $\psi(4)= 10$. However, $x= -2$ is also a possible value because $\psi(-2)= 10$. But then we know that $\psi^{-1}(10)$ cannot be well-defined as a function because $\psi$ does not have a single possible value for $\psi^{-1}(10)$. \pvspace{1.3cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: The point $(-\frac{1}{2}, 3)$ is on the graph of $f(x)= 4x + 5$. \pspace
+
+\sol The statement is \textit{true}. If the point $(-\frac{1}{2}, 3)$ is on the graph of $f(-\frac{1}{2})= 3$. We know that $f \left( -\frac{1}{2} \right)= 4 \cdot -\frac{1}{2} + 5= -2 + 3= 3$. Therefore, $(-\frac{1}{2}, 3)$ is on the graph of $f(x)$. Alternatively, if the point $(-\frac{1}{2}, 3)$ is on the graph of $f(x)$, then it satisfies the equation given by $f(x)$. But then\dots
+	\[
+	\begin{gathered}
+	f(x)= 4x + 5 \\
+	f \left( -\dfrac{1}{2} \right) \stackrel{?}{=} 4 \cdot -\dfrac{1}{2} + 5 \\
+	3 \stackrel{?}{=} -2 + 5 \\
+	3= 3
+	\end{gathered}
+	\]
+ Therefore, $(-\frac{1}{2}, 3)$ is on the graph of $f(x)$. \pvspace{1.3cm}
+ 
+
+
+% Quiz 12
+\quizsol \textit{True/False}: There exists a function, $f$, with $x$-intercepts $-1, 0, 1$ such that $f^{-1}$ exists. \pspace
+
+\sol The statement is \textit{false}. If $f(x)$ is a function with $x$-intercepts $-1, 0, 1$, then $f(-1)= 0$, $f(0)= 0$, and $f(1)= 0$. Recall that $f^{-1}(y)$ is the set of $x$-values for which $f(x)= y$. Observe then that $f^{-1}$ cannot be a function because $f^{-1}(0)$ is not well-defined because $f(-1)= f(0)= f(1)= 0$; that is, $f^{-1}(0)$ could be $-1, 0, 1$ so that $f^{-1}(0)$ is not well-defined. \pvspace{1.3cm}
+
+
+
+% Quiz 13
+\quizsol \textit{True/False}: If you are driving down the highway at 65~mph from Albany to NYC, then your distance from NYC is given by a linear function. \pspace
+
+\sol The statement is \textit{true}. A linear function satisfies at least one of the following: (i) $f(x)$ has the form $y= mx + b$, (ii) a function with a constant rate of change, or (iii) a function whose graph is a line. Because you are driving at a constant rate of speed, your distance to NYC is decreasing at a constant rate. But then your distance to NYC must be a linear function. Alternatively, let $D(t)$ is your distance to NYC in $t$~hours and let your initial distance to NYC be $D_0$~miles. Then $D(t)= D_0 - 65t$. But then $D(t)$ has the form $y= mx + b$ with $y= D(t)$, $x= t$, $m= -65$, and $b= D_0$. Therefore, $D(t)$ is a linear function. \pvspace{1.3cm}
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: There exists a horizontal line that is perpendicular to $y= 5x - 3$. \pspace
+
+\sol The statement is \textit{false}. A line perpendicular to a horizontal line must be vertical. All vertical lines have the form $x= x_0$ for some number $x_0$. Clearly, $y= 5x - 3$ does not have the form $x= x_0$ so that it cannot be perpendicular to a horizontal line. Alternatively, perpendicular lines have negative reciprocal slopes. A line perpendicular to $y= 5x - 3$, which has slope 5, must have slope $-\frac{1}{5}$. But horizontal lines, i.e. lines of the form $y= y_0$ for some $y_0$ (which can be written $y= 0x + y_0$), have slope 0. As $0 \neq -\frac{1}{5}$, $y= 5x - 3$ cannot be perpendicular to a horizontal line. \pvspace{1.3cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: Three lines, none of which are parallel to the others, must intersect at a distinct point. \pspace
+
+\sol The statement is \textit{false}. Certainly, because each line is not parallel to any of the other two lines, each pair of lines intersect. However, this only means that each pair of lines need intersect \textit{not} that all the lines intersect at the \textit{same} point. But then either of the two possibilities shown below are possible, so that it need not be the case that all the lines intersect at the same point. 
+	\[
+	\begin{tikzpicture}
+	\draw[line width=0.03cm,->] (-2,0) -- (2,0);
+	\draw[line width=0.03cm,->] (0,-2) -- (0,2);
+	\draw[line width= 0.05cm] (-2,1.3) -- (2,1.7);
+	\draw[line width= 0.05cm] (-2,2) -- (2,-0.6);
+	\draw[line width= 0.05cm] (-2,-1.8) -- (1.5,2);
+	\end{tikzpicture}
+	\qquad \qquad
+	\begin{tikzpicture}
+	\draw[line width=0.03cm,->] (-2,0) -- (2,0);
+	\draw[line width=0.03cm,->] (0,-2) -- (0,2);
+	\draw[line width= 0.05cm] (1.125, 2) -- (-0.875,-2);
+	\draw[line width= 0.05cm] (-2,0) -- (2,1.2);
+	\draw[line width= 0.05cm] (2,-1.5) -- (-0.333,2);
+	\end{tikzpicture}
+	\]
+
+
+
+\newpage
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: The quadratic function $f(x)= 6 - (x + 2)^2$ is convex and has vertex $(2, 6)$. \pspace
+
+\sol The statement is \textit{false}. The vertex form of a quadratic function $f(x)= ax^2 + bx + c$ is $f(x)$ written in the form $f(x)= a_0(x - P)^2 + Q$, where $a_0= a$ and $(P, Q)$ is the vertex of $f(x)$. Observe that $f(x)= 6 - (x + 2)^2= -(x + 2)^2 + 6= -\big(x - (-2) \big)^2 + 6$. But then $(P, Q)= (-2, 6)$, so that the vertex is $(-2, 6)$, and $a= -1 < 0$. We know a quadratic function $f(x)= ax^2 + bx + c$ is convex if $a > 0$ and is concave if $a < 0$. Therefore, $f(x)$ is a quadratic function with vertex $(-2, 6)$ and is concave. The given statement incorrectly identifies the $x$-coordinate of the vertex as $2$, rather than $-2$ (the $x$-value that makes the $(x + 2)^2$ term vanish) and also mistakes $a= 1$ rather than $a= -1$ so that the quadratic function is identified as being convex rather than concave. 
+
+
+
+
+
+
 
 
 

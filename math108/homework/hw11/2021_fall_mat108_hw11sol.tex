@@ -51,12 +51,12 @@
 
 \item 
 	\[
-	\begin{aligned}
-	P(B \text{ or }D)&= P(B) + P(D) - P(B \text{ and }D) \\
-	0.71&= 0.21 + 0.55 - P(B \text{ and }D) \\
-	P(B \text{ and }D)&= 0.76 - 0.71 \\
-	P(B \text{ and }D)&= 0.05
-	\end{aligned}
+	\begin{gathered}
+	P(B \text{ or }D)= P(B) + P(D) - P(B \text{ and }D) \\
+	0.71= 0.21 + 0.55 - P(B \text{ and }D) \\
+	P(B \text{ and }D)= 0.76 - 0.71 \\
+	P(B \text{ and }D)= 0.05
+	\end{gathered}
 	\]
 
 \item If $C$ and $D$ were disjoint, then $P(C \text{ or }D)= P(C) + P(D)= 0.73 + 0.55= 1.28 > 1$, which is impossible. Therefore, $C$ and $D$ cannot be disjoint. 
@@ -84,27 +84,28 @@
         \item Find the probability that a randomly selected employees only performs audits as part of their job.
         \item Find the probability that an employee that performs audits also performs algorithmic trading as part of their job. 
         \item Find the probability that a randomly selected employee performs both audits and algorithmic trading as part of their job. 
-        \end{enumerate} \pspace
+        \end{enumerate} 
 
 \sol
 \begin{enumerate}[(a)]
 \item 
 	\[
-	\begin{aligned}
-	P(\text{Algo. or Audit})&= \dfrac{34 + 3 + 13}{66}= \dfrac{50}{66} \approx 0.7576 \quad \textit{OR} \\
-	P(\text{Algo. or Audit})&= P(\text{Algo.}) + P(\text{Audit}) - P(\text{Algo. and Audit})= \dfrac{37}{66} + \dfrac{16}{66} - \dfrac{3}{66}= \dfrac{50}{66} \approx 0.7576
-	\end{aligned}
+	P(\text{Algo. or Audit})= \dfrac{34 + 3 + 13}{66}= \dfrac{50}{66} \approx 0.7576
 	\]
+		\begin{center} OR \end{center}
+	\[
+	P(\text{Algo. or Audit})= P(\text{Algo.}) + P(\text{Audit}) - P(\text{Algo. and Audit})= \dfrac{37}{66} + \dfrac{16}{66} - \dfrac{3}{66}= \dfrac{50}{66} \approx 0.7576
+	\] 
 
 \item 
 	\[
 	P(\text{neither Algo. nor Audit})= \dfrac{16}{66} \approx 0.2424
-	\]
+	\] 
 
 \item 
 	\[
 	P(\text{only Audit})= \dfrac{13}{66} \approx 0.1970
-	\]
+	\] 
 
 \item 
 	\[
@@ -118,13 +119,13 @@
 \end{enumerate}
 
 	\[
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=0.75]
 	\draw (0,0) rectangle (9,6);
 	\draw (3.5,3) circle (2);
 	\draw (5.5,3) circle (2);
 	
-	\node at (3.5,5.2) {Algo.};
-	\node at (5.5,5.2) {Audit}; 
+	\node at (3.3,5.4) {Algo.};
+	\node at (5.8,5.4) {Audit}; 
 	
 	\node at (2.5,3) {34};
 	\node at (4.5,3) {3};
@@ -147,9 +148,9 @@
 \problem{10} A construction company places bids on various construction projects. The company underbids 30\% of the time. If they underbid, they get the job 80\% of the time. If they do not underbid, they fail to get the job 90\% of the time. 
 	\begin{enumerate}[(a)]
 	\item Find the probability that they underbid and get the job.
-	\item Find the probability that they get the job if they make a bid. 
+	\item Find the probability that they get the job, if they make a bid. 
 	\item Find the probability that they get the job or underbid. 
-	\item Find probability that they did not underbid if they got the job. 
+	\item Find probability that they did not underbid, if they got the job. 
 	\end{enumerate} \pspace
 
 \sol
@@ -157,26 +158,27 @@
 \item 
 	\[
 	P(\text{Under and Get})= 0.24 
-	\]
+	\] \pspace
 
 \item 
 	\[
-	P(\text{Get})= 0.24 + 0.63= 0.87
-	\]
+	P(\text{Get})= 0.24 + 0.07= 0.31
+	\] \pspace
 
 \item 
 	\[
-	\begin{aligned}
-	P(\text{Get or Underbid})&= 0.24 + 0.06 + 0.63= 0.93 \quad \textit{OR} \\
-	P(\text{Get or Underbid})&= P(\text{Get}) + P(\text{Under}) - P(\text{Get and Under})= (0.24 + 0.63) + 0.30 - 0.24= 0.93
-	\end{aligned}
+	P(\text{Get or Underbid})= 0.24 + 0.06 + 0.07= 0.37
 	\]
+		\begin{center} OR \end{center}
+	\[
+	P(\text{Get or Underbid})= P(\text{Get}) + P(\text{Under}) - P(\text{Get and Under})= (0.24 + 0.07) + (0.24 + 0.06) - 0.24= 0.37
+	\] \pspace
 
 \item 
 	\[
-	P(\text{Not Under} \;|\; \text{Got})= P(\text{Over} \;|\; \text{Got})= \dfrac{P(\text{Over and Got})}{P(\text{Got})}= \dfrac{0.63}{0.24 + 0.63}= \dfrac{0.63}{0.87}= 0.7241
+	P(\text{Not Under} \;|\; \text{Got})= P(\text{Over} \;|\; \text{Got})= \dfrac{P(\text{Over and Got})}{P(\text{Got})}= \dfrac{0.07}{0.24 + 0.07}= \dfrac{0.07}{0.31}= 0.2258
 	\]
-\end{enumerate}
+\end{enumerate} \pspace
 
 		\[
 		\begin{tikzpicture}[scale= 1.0]
@@ -188,12 +190,12 @@
 		\def\Down{$0.70$}
 		\def\UpUp{$0.80$}
 		\def\UpDown{$0.20$}
-		\def\DownUp{$0.90$}
-		\def\DownDown{$0.10$}
+		\def\DownUp{$0.10$}
+		\def\DownDown{$0.90$}
 		\def\first{$0.24$}
 		\def\second{$0.06$}
-		\def\third{$0.63$}
-		\def\fourth{$0.07$}
+		\def\third{$0.07$}
+		\def\fourth{$0.63$}
 		
 		\node at (1,1) {\FirstUpLabel};	
 		\node at (1,-1) {\FirstDownLabel};	

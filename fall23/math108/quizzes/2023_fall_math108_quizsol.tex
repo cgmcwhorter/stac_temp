@@ -72,23 +72,107 @@ Therefore, the quiz statement is false. Observe they have $r= 0.33$ instead of $
 
 
 
-%If $A, B$ are independent events with nonzero probability, then $P(A \text{ and } B)= P(A) \cdot P(B)$, $P(A)= P(A \;|\; B)$, and $P(B)= P(B \;|\; A)$.
+% Quiz 8
+\quizsol \textit{True/False}: If $A, B$ are independent events with nonzero probability, then $P(A \text{ and } B)= P(A) \cdot P(B)$, $P(A)= P(A \;|\; B)$, and $P(B)= P(B \;|\; A)$. \pspace
 
-%You survey 150 people about their movie likes/dislikes and 58 say they like horror, 73 say they like comedy, with 13 saying they like both, then the probability a randomly selected person likes horror or comedy is $\frac{58 + 73 + 13}{150}= \frac{144}{150} \approx 0.96$. 
-%If $S= \{ s_1, s_2, \ldots, s_n \}$ is a finite sample space and $f$ is a random variable on $S$, then the expected value of $f$ is simply the average value of the numbers $f(s_1), f(s_2), \ldots, f(s_n)$. 
-
-% Suppose you are playing a game with finite sample space $S$. The payouts for events in the sample space are given by a random variable, $X$. If the expected value of $X$ is positive, i.e. E$X > 0$, then you always make money playing this game. 
-
-%Let $x, y$ be random samples drawn from a normal distribution. If $z_x= -3.87$ and $z_y= 1.15$, then $y > x$ but $x$ is the more `unusual' value. 
+\sol The statement is \textit{true}. Two events $A, B$ are called independent if and only if $P(A \text{ and } B)= P(A) \cdot P(B)$. Therefore, the first statement of the quiz must be true. If $A$ and $B$ are independent, then the occurrence or non-occurrence of $A$ does not affect the probability of $B$ and vice versa. We know that $P(A \;|\; B)$ is the probability of $A$ given that $B$ occurs. But if $A, B$ are independent, then $B$'s occurrence does not change the probability that $A$ occurs. But then $P(A \;|\; B)= P(A)$. Similarly, $P(B \;|\; A)= P(B)$. We can see this directly from the definition of $A$ and $B$ being independent: $P(A \text{ and } B)= P(A) \cdot P(B)$. If this is true, then\dots
+	\[
+	P(A \;|\; B)= \dfrac{P(A \text{ and } B)}{P(B)}= \dfrac{P(A) P(B)}{P(B)}= P(A), \qquad P(B \;|\; A)= \dfrac{P(B \text{ and } A)}{P(A)}= \dfrac{P(B) P(A)}{P(A)}= P(B)
+	\] \pvspace{1.3cm}
 
 
-%You take a random sample of 1,000 Democrats about whether they support Congress's immigration policies. The count of those that do not support Congress's immigration policies will be given by a binomial distribution. 
 
-%Consider a binomial distribution $B(n, p)$. The larger the value of $n$, the more the binomial distribution ``looks like'' the normal distribution $N\big(np, \sqrt{np(1 - p)}\, \big)$. 
+% Quiz 9
+\quizsol \textit{True/False}: You survey 150 people about their movie likes/dislikes and 58 say they like horror, 73 say they like comedy, with 13 saying they like both, then the probability that a randomly selected person likes horror or comedy is $\frac{58 + 73 + 13}{150}= \frac{144}{150} \approx 0.96$. \pspace
 
-%The margin of error for a confidence interval is $z^* \frac{\sigma}{\sqrt{n}}$ and the larger the sample size, the smaller the margin of error. 
+\sol The statement is \textit{false}. If one finds the number of people that enjoy horror or comedy by adding $58 + 73 + 13= 144$, then one has counted the 13~people that like horror and comedy once in the 58~people that enjoy horror and then again when one includes the 73~people that enjoy comedy. To avoid overcounting, one need \textit{subtract} the 13~people that enjoy both. So the probability that a randomly selected person likes horror or comedy is $\frac{58 + 73 - 13}{150}= \frac{116}{150} \approx 0.7733$. Alternatively, one can apply the rules of probability:
+	\[
+	P(\text{horror or comedy})= P(\text{horror}) + P(\text{comedy}) - P(\text{horror and comedy})= \dfrac{58}{150} + \dfrac{73}{150} - \dfrac{13}{150}= \frac{116}{150} \approx 0.7733
+	\] \pvspace{1.3cm}
 
-%Let $\mathbf{u}= \langle 0, -1, 5, 4 \rangle$ and $\mathbf{v}= \langle 1, 9, 2, -3 \rangle$. Then $\mathbf{u} \cdot \mathbf{v}= \langle 0, -9, 10, -12 \rangle$. 
+
+
+% Quiz 10
+\quizsol \textit{True/False}: If $S= \{ s_1, s_2, \ldots, s_n \}$ is a finite sample space and $f$ is a random variable on $S$, then the expected value of $f$ is simply the average value of the numbers $f(s_1), f(s_2), \ldots, f(s_n)$. \pspace
+
+\sol The statement is \textit{false}. For example, consider flipping a biased coin with probability $\frac{99}{100}$ of heads and $\frac{1}{100}$ of tails. Suppose you win \$100 if flip tails and \$0 if you flip heads. That is, we have $S= \{ \text{H}, \text{T} \}$ and the random variable $f(\text{H})= 0$ and $f(\text{T})= 100$. Clearly, `the majority' of the time you win nothing. On average, every 100 flips you win \$100. So we expect an average winning of \$1. But if we average these two outputs, we obtain $\frac{\$0 + \$100}{2}= \frac{\$100}{2}= \$50$. Recall that the expected value, or mean, of a discrete random variable is $\sum f(X) P(x= X)$; that is, we weight the value by the probability of seeing that value. The example above shows that these need not always align. \pvspace{1.3cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: Suppose you are playing a game with finite sample space $S$. The payouts for events in the sample space are given by a random variable, $X$. If the expected value of $X$ is positive, i.e. E$X > 0$, then you always make money playing this game. \pspace
+
+\sol The statement is \textit{false}. Suppose you win \$1,000,000 if you flip a heads on a fair coin and lose \$1 if you flip a tails. You flip the coin once and obtain tails. You have just lost money despite the fact that the expected value is\dots
+	\[
+	EX= \sum f(X) P(x= X)= \$1,\!000,\!000 \cdot \dfrac{1}{2} + (-\$1) \cdot \dfrac{1}{2}= \$499,\!999.50
+	\]
+The expected value only says what occurs \textit{on average in the `long run.'} So what we do expect is that having flipped the coin `sufficient' times, say 1,000 or 10,000 or millions, etc., of times that the average amount won/lost per would be \$499,999.50. One can then estimate the expected amount won/lost by computing \$499,999.50$n$, where $n$ is the number of games. So E$X > 0$ only means that one expects the average amount won per game in the long run to be positive. The expected value does not make a explicit prediction about what happens in a particular sequence of trials. \pvspace{1.3cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: Let $x, y$ be random samples drawn from a normal distribution. If $z_x= -3.87$ and $z_y= 1.15$, then $y > x$ but $x$ is the more `unusual' value. \pspace
+
+\sol The statement is \textit{true}. 
+
+
+% Quiz 13
+\quizsol \textit{True/False}: You take a random sample of 1,000 Democrats about whether they support Congress's immigration policies. The count of those that do not support Congress's immigration policies will be given by a binomial distribution. \pspace
+
+\sol The statement is \textit{true}. 
+
+% Quiz 14
+\quizsol \textit{True/False}: Consider a binomial distribution $B(n, p)$. The larger the value of $n$, the more the binomial distribution ``looks like'' the normal distribution $N\big(np, \sqrt{np(1 - p)}\, \big)$. \pspace
+
+\sol The statement is \textit{true}. 
+
+
+% Quiz 15
+\quizsol \textit{True/False}: The margin of error for a confidence interval is $z^* \frac{\sigma}{\sqrt{n}}$ and the larger the sample size, the smaller the margin of error. \pspace
+
+\sol The statement is \textit{true}. 
+
+
+% Quiz 16
+\quizsol \textit{True/False}: Let $\mathbf{u}= \langle 0, -1, 5, 4 \rangle$ and $\mathbf{v}= \langle 1, 9, 2, -3 \rangle$. Then $\mathbf{u} \cdot \mathbf{v}= \langle 0, -9, 10, -12 \rangle$. \pspace
+
+\sol The statement is \textit{false}. There is no multiplication for vectors. The dot product of two vectors produces a scalar, i.e. a real number. We know that $\mathbf{u} \cdot \mathbf{v}= \sum_i u_i v_i$; that is, the dot product of two vectors is the sum of the product of the components. Therefore, we have\dots
+	\[
+	\mathbf{u} \cdot \mathbf{v}= \langle 0, -1, 5, 4 \rangle \cdot \langle 1, 9, 2, -3 \rangle= 0(1) + (-1)9 + 5(2) + 4(-3)= 0 - 9 + 10 - 12= -11
+	\] \pvspace{1.3cm}
+
+
+
+% Quiz 17
+\quizsol \textit{True/False}: There is no linear system of equations with exactly 2,023 solutions. \pspace
+
+\sol The statement is \textit{true}. A linear system of equations either has no solutions, one solution, or infinitely many solutions. But then there can be no linear system of equations with exactly 2,023 solutions.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

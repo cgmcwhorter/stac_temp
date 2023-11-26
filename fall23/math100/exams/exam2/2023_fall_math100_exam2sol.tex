@@ -1,0 +1,242 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 100: Exam 1}
+\newcommand{\term}{Fall -- 2023}
+\newcommand{\examdate}{11/08/2023}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Ryker is a muckbanger and his YerbTurd channel has taken off. Over the last year, he made \$187,000. He is preparing his 2023 federal tax burden. Ryker will take the 2023 standard deduction for single filers of \#13,850. What will Ryker pay in federal taxes? 
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|} \hline
+	Tax Rate & Taxable Income \\ \hline \hline
+	10\% & Up to \$11,000 \\ \hline
+	12\% & \$11,001 -- \$44,725 \\ \hline
+	22\% & \$44,726 -- \$95,375 \\ \hline
+	24\% & \$95,376 -- \$182,100 \\ \hline
+	32\% & \$182,101 -- \$231,250 \\ \hline
+	35\% & \$231,251 -- \$578,125 \\ \hline
+	37\% & $\geq$ \$578,126 \\ \hline
+	\end{tabular}
+	\end{table} \pspace
+
+\sol First, we need find Ryker's taxable income. This is his net income minus the standard deductible: $\$187,\!000 - \$13,\!850= \$173,\!150$. Ryker's federal tax is then the tax rate applied to each dollar made at the income level `at which the dollar was made.' Therefore, Ryker's federal tax owed is\dots
+	\[
+	\begin{gathered}
+	0.10(\$11,\!000) + 0.12(\$44,\!725 - \$11,\!000) + 0.22(\$95,\!375 - \$44,\!725) + 0.24(\$173,\!150 -\$95,\!375) \\[0.3cm]
+	0.10(\$11,\!000) + 0.12(\$33,\!725) + 0.22(\$50,\!650) + 0.24(\$77,\!775) \\[0.3cm]
+	\$1,\!100 + \$4,\!047 + \$11,\!143 + \$18,\!666 \\[0.3cm]
+	\$34,\!956
+	\end{gathered}
+	\]
+
+
+
+% Question 2
+\newpage
+\question[10] Cashanova is a local savings bank for the average pre-millionaire. Their savings account offer an annual interest rate of 5.75\%, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item What is the nominal interest rate for Cashanova's savings account?
+	\item What is the effective interest rate for Cashanova's savings account?
+	\end{enumerate} \pspace
+
+\sol Because the interest is compound at discrete time periods, this is a discrete compounded interest problem. We know the nominal interest rate is $r= 0.0575$ and that the interest is compounded monthly, i.e. $k= 12$~times per year. \pspace
+
+\begin{enumerate}[(a)]
+\item The nominal interest rate is the advertised interest rate which is 5.75\%. \pspace
+\item The effective interest rate is given by\dots
+	\[
+	\hspace{-2cm} r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^k - 1= \left(1 + \dfrac{0.0575}{12} \right)^{12} - 1= 1.004791666666667^{12} - 1= 1.0590398313 - 1= 0.0590398313
+	\]
+Therefore, the effective interest rate was 5.90\%. 
+\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[10] It was 1984 and inflation was on the rise. The CPI in 1983 was 105.313, whereas the CPI in 1984 was 111.039. 
+	\begin{enumerate}[(a)]
+	\item Find the inflation rate from 1983 to 1984.
+	\item If an item cost \$0.94 in 1984, assuming the inflation rate from (a) remains the same, estimate the cost of the item today. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item If the inflation rate is $r_d$, where $r_d$ is the inflation rate written as a decimal, $P$ is the current CPI, and $F$ is next year's CPI, then we know that $F= P(1 + r)$; that is, the next year's CPI is the current CPI increased by $r$. But then 
+	\[
+	\begin{gathered}
+	F= P(1 + r) \\
+	111.039= 105.313(1 + r) \\
+	1.0543713= 1 + r \\
+	r= 0.0543713
+	\end{gathered}
+	\]
+Therefore, the inflation rate from 1983 to 1984 was 5.437\%. Alternatively, we know that the inflation rate is given by\dots
+	\[
+	\text{Inflation Rate}= \dfrac{\text{New CPI}}{\text{Old CPI}} - 1= \dfrac{111.039}{105.313} - 1= 1.0543713 - 1= 0.0543713 \squiggle 5.437\%
+	\] \pspace
+
+\item To find the result of a number $N$ increased or decreased by a percentage $\%$ repeatedly a total of $n$ times, we compute $N(1 \pm \%_d)^n$, where $\%_d$ is the percentage written as a decimal, $n$ is the number of times the percentage increase/decrease is applied, and we choose `$+$' if a percentage increase and `$-$' if a percentage decrease. If the inflation rate remains constant, we increase the price initial item price of \$0.94 by the inflation rate from (a)---$\%_d= 0.0543713$---every year from 1984 until today. Because this is the year 2023, this is a total of $2023 - 1984= 39$~years. But then we have\dots
+	\[
+	N(1 \pm \%_d)^n= \$0.94(1 + 0.0543713)^{39}= \$0.94(1.0543713)^{39}= \$0.94(7.88405164) \approx \$7.41
+	\]
+Therefore, if the inflation rate from 1983 to 1984 had remained constant until today, we would estimate a cup of coffee costing \$0.94 in 1984 would cost \$7.41 today. 
+\end{enumerate}
+	
+	
+
+% Question 4
+\newpage
+\question[10] Warren T. is saving to replace his washer/dryer should they ever break. He places \$150 in an account that earns 1.03\% annual interest, compounded continuously. The money sits there for 8~years until the current washer/dryer break. How much is in the account? \pspace
+
+\sol Because Warren simply placed the money into an account that earns interest compounded continuously, this is a compounded continuously interest problem. We want the future value, $F$, after the principal of $P= \$150$ has accrued interest for 8~years---with an annual interest rate of $r= 0.0103$. We have\dots
+	\[
+	F= Pe^{rt}= \$150 e^{0.0103 \cdot 8}= \$150 e^{0.0824}= \$150(1.0858901) \approx \$162.88
+	\]
+Therefore, the account will have \$162.88. 
+
+
+
+% Question 5
+\newpage
+\question[10] You are going to take out a loan so that you can travel across the United States to the Grand Canyon to see the faces of the presidents. The bank offers you a simple discount note for \$1,500 at 8.4\% annual interest for a period of 6~months. 
+	\begin{enumerate}[(a)]
+	\item What is the discount for this loan?
+	\item Find the maturity and proceeds for this loan. 
+	\item How much do you owe the bank at the end of the six months?
+	\end{enumerate} \pspace
+
+\sol This is a simple discount note. The maturity for this note, $M$, is \$1,500. The period of this loan is 6~months, i.e. $t= \frac{6}{12}= 0.5$~years, at an annual interest rate of $r= 0.084$. 
+        \begin{enumerate}[(a)]
+        \item The discount is the interest paid on the loan---which in a simple discount note is paid up-front. We know that the interest, i.e. the discount, is given by $D= Mrt$. But then\dots
+        		\[
+		D= Mrt= \$1,\!500 (0.084) 0.5= \$63
+		\] \pspace
+	
+        \item The maturity is the pre-discount loan amount, which is \$1,500. The proceeds is the money received after the up-front interest, i.e. discount, has been paid. Therefore, the proceeds are\dots
+        		\[
+		P= M - D= \$1,\!500 - \$63= \$1,\!447
+		\] \pspace
+	
+        \item One only ever need pay back the loan amount and any interest charged on the loan. The interest on the loan is the discount, which from (a) is \$63. For a simple discount note, the interest is paid up-front. Therefore, at the end of the loan period, one only need pay back the maturity of \$1,500.\footnote{This implies that $\$1,\!500 + \$63= \$1,\!563$ is paid in total on this loan. However, \$63 is paid up front, while the remaining \$1,500 is paid at the end of the loan term.}
+        \end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[10] Your favorite anime, \textit{Attack on Behemoth}, just ended. You have the entire manga collection, currently worth \$275. You estimate that the value of the collection will increase by 5\% in value every four months. How long until the collection is worth \$1,000? \pspace
+
+\sol Because this manga collection will increase in value every four months by the same percentage, we can consider this a discrete compounded interest problem. The collection increases in value every 4~months, i.e. three times per year---which implies $k= 3$. But then treating this as a discrete compounded interest problem, the nominal interest would be $3 \cdot 5\%= 15\%$ per year, i.e. $r= 0.15$. We want to know how long until the principal value of $P= \$275$ increases to a future value of $F= \$1,\!000$. But then we have\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(\$1,\!000/\$275)}{3 \ln \left(1 + \dfrac{0.15}{3} \right)}= \dfrac{\ln(3.63636364)}{3 \ln(1.05)}= \dfrac{1.2909842}{0.146370493} \approx 8.82
+	\]
+Therefore, it will take approximately 8.82~years for the collection to be worth \$1,000. \pspace
+
+\begin{center} {\bfseries OR} \end{center} \pspace
+
+The collection is increasing in value by 5\% every 4~months. So we are increasing the \$275 value by 5\% repeatedly. To find the result of a number $N$ increased or decreased by a percentage $\%$ repeatedly a total of $n$ times, we compute $N(1 \pm \%_d)^n$, where $\%_d$ is the percentage written as a decimal, $n$ is the number of times the percentage increase/decrease is applied, and we choose `$+$' if a percentage increase and `$-$' if a percentage decrease. In this case, we have a percentage increase and we know that $N= \$275$ and $\%_d= 0.05$. But then we have\dots
+	\[
+	\begin{gathered}
+	F= N(1 + \%_d)^n \\
+	\$1,\!000= \$275 (1 + 0.05)^n \\
+	\$1,\!000= \$275 (1.05)^n \\
+	3.63636364= (1.05)^n \\
+	\ln(3.63636364)= \ln(1.05)^n \\
+	\ln(3.63636364)= n \ln(1.05) \\
+	1.2909842= 0.048790164 n \\
+	n \approx 26.46
+	\end{gathered}
+	\]
+Then the collection has increased in value 26.46 times. Because the value increases every 4~months, i.e. 3~times per year, this means the collection will be worth \$1,000 in $\frac{26.46}{3} \approx 8.82$~years. 
+
+
+
+% Question 7
+\newpage
+\question[10] April begins a business selling paintings of people walking other people's dogs. The studio she rents costs \$3,600 per month to rent. It costs her \$8.20 to make each painting; however, each painting sells for \$150. Find the minimum number of paintings she must make and sell each month to turn a profit. \pspace
+
+\sol April must pay the monthly rent of \$3,600. If she makes $p$~paintings in a month and each costs her \$8.20 to make a painting, then she spends $8.20p$ per month on paintings. Therefore, April's total cost each month to maintain her studio is $C(p)= 8.20 + 3600$. If she sells each painting for \$150 and makes/sells $p$~paintings per month, then she makes a revenue of $R(p)= 150p$ per month. We find the break-even point for April's business, i.e. the point at which revenue equals cost. But then we have\dots
+	\[
+	\begin{gathered}
+	R(p)= C(p) \\
+	150p= 8.20p + 3600 \\
+	141.8p= 3600 \\
+	p \approx 25.39
+	\end{gathered}
+	\]
+Observe that $C(p)$ and $R(p)$ are linear functions. Then any amount of sales above this break-even point, $p_0$, will result in a profit (so long as $R(p) > C(p)$ when $p > p_0$).\footnote{$R(26)= 150(26)= \$3,\!900$ and $C(26)= 8.20(26) + 3600= \$3,\!813.20$, so that $R(26) > C(26)$. We could also equivalently check that the slope of $R(p)$, $m_R$, is greater than the slope of $C(p)$, $m_C$. Observe that $m_R= 150 > 8.20= m_C$.} But then the minimum amount of paintings needing to be made/sold to turn a profit is 26~paintings. 
+
+
+
+% Question 8
+\newpage
+\question[10] You are saving to spend on a lavish meal at Hell's Kitchen in the hopes that you can watch Gordon Ramsay yell at someone. You place \$20 at the end of the month into an account that earns 2.3\% annual interest, compounded monthly. After 18~months, how much have you saved? \pspace
+
+\sol Because you are making regular, equal deposits, this is an annuity. Because the deposits occur at the end of the month, this is an annuity immediate (or an ordinary annuity). Finally, because the number of compounds per year equals the number of deposits per year, this is a simple annuity immediate (or a simple ordinary annuity). The regular payments are $R= \$20$~per month. The account earns $r= 0.023$ annual interest, compounded monthly, i.e. $k= 12$~times per year. Then the interest per period, $i_p$, is $i_p= \frac{r}{k}= \frac{0.023}{12}= 0.00191667$. We want to know the future value of these regular deposits and the interest earned, $F$. After 18~months, a total of $\text{PM}= 18$~payments have been made.\footnote{Because you have made 18~payments of \$20, you must have saved a minimum of $18 \cdot \$20= \$360$.} But then we have\dots
+	\[
+	\begin{aligned}
+	F&= R\, \dfrac{(1 + i_p)^{\text{PM}} - 1}{i_p} \\[0.3cm]
+	&= \$20 \cdot \dfrac{(1 + 0.00191667)^{18} - 1}{0.00191667} \\[0.3cm]
+	&= \$20 \cdot \dfrac{1.00191667^{18} - 1}{0.00191667} \\[0.3cm]
+	&= \$20 \cdot \dfrac{1.035067911 - 1}{0.00191667} \\[0.3cm]
+	&= \$20 \cdot \dfrac{0.035067911}{0.00191667} \\[0.3cm]
+	&= \$20 \cdot 18.29626957 \\[0.3cm]
+	&\approx   \$365.93
+	\end{aligned}
+	\]
+Therefore, after 18~months, you have saved \$365.93.
+
+
+
+% Question 9
+\newpage
+\question[10] When you were born, your meemaw placed \$8,000 into an account that earned 4.1\% annual interest, compounded monthly. Now 18~years later, she is going to empty the account to give to you for your high school graduation. How much money will you receive? \pspace
+
+\sol Because interest is broken applied monthly, this is discrete compounded interest. The principal amount in the account was $P= \$8,\!000$. The annual interest rate of $r= 0.041$ was compounded monthly, i.e. $k= 12$~times per year. We are wondering what the is future value, $F$, of the principal after $t= 18$~years earning interest under this model. But then we have\dots
+	\[
+	\hspace{-1.5cm} F= P \left(1 + \dfrac{r}{k} \right)^{kt}= \$8,\!000 \left(1 + \dfrac{0.041}{12} \right)^{12 \cdot 18}= \$8,\!000 (1.0034166667)^{216}= \$8,\!000 (1.041779301) \approx \$8,\!334.23
+	\]
+Therefore, you will receive \$8,334.23. 
+
+
+
+% Question 10
+\newpage
+\question[10] While watching \textit{Hope Floats}, you come up with a brilliant idea---invest in cryptocurrency. You hear that HuskyCoin offers an annual return in value equivalent to 3.9\% annual interest, compounded continuously. If you want to have \$10,000 in two years, how much money should you invest in the totally non-scam coin now? \pspace
+
+\sol Clearly, this is a compound continuously interest problem. We want to know how much we should invest now, i.e. the principal $P$, so that compounding continuously at an annual interest rate of $r= 0.039$ for $t= 2$~years will result in a future value of $F= \$10,\!000$. But then we have\dots
+	\[
+	P= \dfrac{F}{e^{rt}}= \dfrac{\$10,\!000}{e^{0.039 \cdot 2}}= \dfrac{\$10,\!000}{e^{0.078}}= \dfrac{\$10,\!000}{1.08112266} \approx \$9,\!249.64
+	\]
+Therefore, you should invest \$9,249.64 in HuskyCoin now. 
+
+
+\end{questions}
+\end{document}

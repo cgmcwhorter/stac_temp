@@ -20,7 +20,7 @@
 	\item $\displaystyle \sum_{k=0}^5 (5k - 3)$
 	\item $\displaystyle \sum_{\substack{k= -2 \\ k \neq 0}}^3 \dfrac{k + 1}{k}$
 	\item $\displaystyle \prod_{j=1}^4 2j$
-	\item $\displaystyle \prod_{n=2}^\infty \left(1 - \dfrac{1}{n^2} \right)$ \quad [Hint: Combine terms, then split the product.]
+	\item $\displaystyle \prod_{n=2}^\infty \left(1 - \dfrac{1}{n^2} \right)$ \quad [Hint: Combine terms, factor, then write out some terms.]
 	\item $\displaystyle \sum_{k=1}^\infty \dfrac{1}{k^2 + 3k}$ \quad [Hint: Use partial fractions, then write out some terms.]
 	\end{enumerate}
 
@@ -70,15 +70,17 @@ Showing all your work, compute the following:
 \problem{10} A \textit{neural network} is a computational model resembling how the human brain works and they are used to create predictive models in data science. There are many types of neural networks: feed-forward neural networks, recurrent neural networks, convolutional neural networks, etc. 
 	\begin{enumerate}[(a)]
 	\item Watch 3Blue1Brown's ``\href{https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&ab_channel=3Blue1Brown}{But what is a neural network?}'' and then comment about what you learned and how it relates to the course material. 
-	\item Using sigmoid function $\sigma(x)= \frac{1}{1 + e^{-x}}$, bias vectors $\mathbf{b}_1= \begin{pmatrix} 1.5 \\ -0.4 \end{pmatrix}$ and $\mathbf{b}_2= \begin{pmatrix} 0.3 \\ 2.0 \end{pmatrix}$, and initial input $\mathbf{a}= \begin{pmatrix} 3 \\ -1 \end{pmatrix}$, compute the output of the single hidden layer neural network given below. 
+	\item Using the (logistic) sigmoid function $\sigma(x)= \frac{1}{1 + e^{-x}}$, bias vectors $\mathbf{b}_1= \begin{pmatrix} 1.5 \\ -0.4 \end{pmatrix}$ and $\mathbf{b}_2= \begin{pmatrix} 0.3 \\ 2.0 \end{pmatrix}$, and initial input $\mathbf{a}= \begin{pmatrix} 3 \\ -1 \end{pmatrix}$, compute the output of the single hidden layer neural network given below. 
 		\[
 		\begin{tikzpicture}[scale=1.1]
 		% Input Layer
 		\draw[line width=0.03cm] (0,0.2) circle (0.3);
 		\draw[line width=0.03cm] (0,1.2) circle (0.3);
+		
 		% Hidden Layer
 		\draw[line width=0.03cm] (2,0) circle (0.3);
 		\draw[line width=0.03cm] (2,1.5) circle (0.3);
+		
 		% Output Layer
 		\draw[line width=0.03cm] (4,0.2) circle (0.3);
 		\draw[line width=0.03cm] (4,1.2) circle (0.3);

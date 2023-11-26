@@ -3,7 +3,7 @@
 \usepackage{../style/homework}
 \usepackage{../style/commands}
 \setbool{quotetype}{true} % True: Side; False: Under
-\setbool{hideans}{true} % Student: True; Instructor: False
+\setbool{hideans}{false} % Student: True; Instructor: False
 
 \newcommand{\blank}[1]{\underline{\hspace{#1}}} % Blank Underline
 
@@ -22,7 +22,27 @@
 	\item Is $(-2, 1) \sim (1, 1)$? Explain. 
 	\item Is this relation symmetric? Explain. 
 	\item Is this relation reflective? Explain. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item A relation $\sim$ on a set $\mathcal{R}$ is an equivalence relation, if for all $x, y \in \mathcal{R}$,
+	\begin{enumerate}[(i)]
+	\item {\itshape Reflexive}: $x \sim x$
+	\item {\itshape Symmetric}: if $x \sim y$, then $y \sim x$. 
+	\item {\itshape Transitive}: if $x \sim y$ and $y \sim z$, then $x \sim z$. 
+	\end{enumerate} \pspace
+
+\item We know that $(a, b) \sim (c, d)$ if and only if $a + c= b + d$. Observe that $4= 1 + 3= 0 + 4= 4$. Therefore, $(1, 0) \sim (3, 4)$. \pspace
+
+\item We know that $(a, b) \sim (c, d)$ if and only if $a + c= b + d$. Observe that $-1= -2 + 1 \neq 1 + 1= 2$. Therefore, $(-2, 1) \not\sim (1, 1)$. \pspace 
+
+\item A relation on a set $\mathcal{R}$, $(\mathcal{R}, \sim)$, is symmetric if and only if for all $x, y \in \mathcal{R}$, if $x \sim y$, then $y \sim x$. Assume $(a, b) \sim (c, d)$. We then know that $a + c= b + d$. But $a + c= c + a$ and $b + d= d + b$. Then we know that $c + a= d + b$, which implies that $(c, d) \sim (a, b)$. \pspace
+
+\item This reflection is \textit{not} reflective. Recall that a relation on a set $\mathcal{R}$, $(\mathcal{R}, \sim)$, is reflexive if $x \sim x$ for all $x \in \mathcal{R}$. Consider $(0, 1) \in \mathbb{Z} \times \mathbb{Z}$. We do not have $(0, 1) \sim (0, 1)$, so that $(\sim, \mathbb{Z} \times \mathbb{Z})$ is not reflective and thus not an equivalence relation. We know $(0, 1) \not\sim (0, 1)$ because $0= 0 + 0 \neq 1 + 1= 2$. 
+
+Generally, let $(a, b) \in \mathbb{Z} \times \mathbb{Z}$. If $(a, b) \sim (a, b)$, then $2a= a + a= b + b= 2b$. This implies that $2a= 2b$, so that $a= b$. Therefore, if $(a, b) \sim (a, b)$, then $a= b$. Conversely, consider $(a, a) \in \mathbb{Z} \times \mathbb{Z}$. We know that $(a, a) \sim (a, a)$ because $2a= a + a= a + a= 2a$. Therefore, $(a, b) \sim (a, b)$ if and only if $a= b$. 
+\end{enumerate}
 
 
 
@@ -37,7 +57,38 @@
 	\item $\displaystyle \sum_{k=0}^{200} k^2$
 	\item $\displaystyle \sum_{k=100}^{200} k$
 	\item $\displaystyle \sum_{k=0}^{150} (2k - 3)$
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol Let $\{ a_k \}, \{ b_k \}$ be sequences and $c \in \mathcal{R}$. Recall the following formulas: 
+	\[
+	\hspace{-1.75cm} \sum_{k= a}^b (a_k + b_k)= \sum_{k= a}^b a_k + \sum_{k=a}^b b_k, \quad \sum_{k= a}^b ca_k= c \sum_{k= a}^b a_k, \qquad \sum_{k= a}^b c= (b - a + 1)c, \quad \sum_{k=0}^n k= \dfrac{n(n + 1)}{2}, \quad \sum_{k=0}^n k^2= \dfrac{n(n + 1)(2n + 1)}{6}
+	\] 
+
+\begin{enumerate}[(a)]
+\item Using the third formula from above, we have\dots
+	\[
+	\sum_{k= -3}^{100} 5= 5 \big( 100 - (-3) + 1 \big)= 5 \cdot 104= 520
+	\] 
+
+\item Using the last formula above, we have\dots
+	\[
+	\sum_{k=0}^{200} k^2= \dfrac{n (n + 1)(2n + 1)}{6} \bigg|_{n= 200}= \dfrac{200 (200 + 1)(2 \cdot 200 + 1)}{6}= \dfrac{200 \cdot 201 \cdot 401}{6}= 2,\!686,\!700
+	\] 
+
+\item Index shifting the summation and applying the first, fourth, and third formulae above, we have\dots
+	\[
+	\hspace{-2.5cm} \sum_{k=100}^{200} k= \sum_{k=0}^{100} (k + 100)= \sum_{k=0}^{100} k  + \sum_{k=0}^{100} 100= \dfrac{n(n + 1)}{2} \bigg|_{n= 100} + 100(100 - 0 + 1)= \dfrac{100(101)}{2} + 100(101)= 5,\!050 + 10,\!100= 15,\!150
+	\] 
+Alternatively, we can use the fact that for $a, b \in \mathbb{N}$ with $a < b$, we have $\sum_{k= 0}^b a_k= \sum_{k= 0}^a a_k + \sum_{k= a}^b a_k$, i.e. $\sum_{k= a}^b a_k= \sum_{k= 0}^b a_k - \sum_{k= 0}^a a_k$. Using this observation and the fourth formula above, we have\dots
+	\[
+	\sum_{k=100}^{200} k= \sum_{k=0}^{200} k - \sum_{k=0}^{99} k= \dfrac{n(n + 1)}{2} \bigg|_{n= 200} - \dfrac{n(n + 1)}{2} \bigg|_{n= 99}= \dfrac{200(201)}{2} - \dfrac{99(100)}{2}= 20,\!100 - 4,\!950= 15,\!150
+	\]
+
+\item Applying the first, second, fourth, and third formulae from above, we have\dots
+	\[
+	\hspace{-2.5cm} \sum_{k=0}^{150} (2k - 3)= \sum_{k=0}^{150} 2k - \sum_{k=0}^{150} 3= 2 \sum_{k=0}^{150} k - \sum_{k=0}^{150} 3= 2 \cdot \dfrac{n(n + 1)}{2} \bigg|_{n=150} - 3 (150 - 0 + 1)= 2 \cdot 11,\!325 - 3 \cdot 151= 22,\!650 - 453= 22,\!197
+	\]
+\end{enumerate}
 
 
 
@@ -49,6 +100,27 @@
 \problem{10} Showing all your work, find a closed-form expression for the following sum:
 	\[
 	\sum_{k=2}^n (2k^2 - k + 4n)
+	\] \pspace
+
+\sol Let $\{ a_k \}, \{ b_k \}$ be sequences and $c \in \mathcal{R}$. Recall the following formulas: 
+	\[
+	\hspace{-1.75cm} \sum_{k= a}^b (a_k + b_k)= \sum_{k= a}^b a_k + \sum_{k=a}^b b_k, \quad \sum_{k= a}^b ca_k= c \sum_{k= a}^b a_k, \qquad \sum_{k= a}^b c= (b - a + 1)c, \quad \sum_{k=0}^n k= \dfrac{n(n + 1)}{2}, \quad \sum_{k=0}^n k^2= \dfrac{n(n + 1)(2n + 1)}{6}
+	\] 
+Index shifting the summation and using the formulae above, we have\dots
+	\[
+	\begin{aligned}
+	\sum_{k=2}^n (2k^2 - k + 4n)&= \sum_{k=0}^{n-2} \big( 2(k + 2)^2 - (k + 2) + 4n \big) \\[0.3cm]
+	&= \sum_{k=0}^{n-2} \big( 2(k^2 + 4k + 4) - (k + 2) + 4n \big) \\[0.3cm]
+	&= \sum_{k=0}^{n-2} \big( 2k^2 + 8k + 8 - k - 2 + 4n \big) \\[0.3cm]
+	&= \sum_{k=0}^{n-2} \big( 2k^2 + 7k + (6 + 4n) \big) \\[0.3cm]
+	&= \sum_{k=0}^{n-2} 2k^2 + \sum_{k=0}^{n-2} 7k + \sum_{k=0}^{n-2} (6 + 4n) \\[0.3cm]
+	&= 2 \sum_{k=0}^{n-2} k^2 + 7 \sum_{k=0}^{n-2} k + \sum_{k=0}^{n-2} (4n + 6) \\[0.3cm]
+	&= 2 \cdot \dfrac{N(N + 1)(2N + 1)}{6} \bigg|_{N= n - 2} + 7 \cdot \dfrac{N(N + 1)}{2} \bigg|_{N= n - 2} + (4n + 6) \cdot \big( (n - 2) - 0 + 1 \big) \\[0.3cm]
+	&= 2 \cdot \dfrac{(n - 2)(n - 1) \big(2 (n - 2) + 1 \big)}{6} + 7 \cdot \dfrac{(n - 2)(n - 1)}{2} + (4n + 6) (n - 1) \\[0.3cm]
+	&= \dfrac{(n - 2)(n - 1)(2n - 4 + 1)}{3} + \dfrac{7(n - 2)(n - 1)}{2} + (4n + 6)(n - 1) \\[0.3cm]
+	&= \dfrac{(n - 2)(n - 1)(2n - 3)}{3} + \dfrac{7(n - 2)(n - 1)}{2} + (4n + 6)(n - 1) \\[0.3cm]
+	&= \dfrac{4n^3 + 27n^2 - 25n - 6}{6}
+	\end{aligned}
 	\]
 
 
