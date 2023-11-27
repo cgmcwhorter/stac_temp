@@ -7,6 +7,13 @@
 \usepackage{circuitikz}
 \usetikzlibrary{shapes.gates.logic.US,shapes.gates.logic.IEC}
 
+\DeclareMathOperator{\im}{im}
+\usepackage{cancel}		% Use Cancellations
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
 % -------------------
 % Content
 % -------------------
@@ -140,89 +147,109 @@ Alternatively, we have\dots
 Clearly, if $x$ is a negative real, $x \notin [n, \infty)$ for all $n \in \mathbb{N}$, so that $x \notin \displaystyle \bigcap_{n \in \mathbb{N}} [n, \infty)$. If $x$ were a nonnegative real in $\displaystyle \bigcap_{n \in \mathbb{N}} [n, \infty)$, then $x \in [n, \infty)$ for all $n \in \mathbb{N}$. But again, choosing $n \in \mathbb{N}$ with $x < n$ shows that $x \notin [n, \infty)$. But then $x \notin \displaystyle \bigcap_{n \in \mathbb{N}} [n, \infty)$. But this shows\dots 
 	\[
 	\displaystyle \left( \bigcup_{n \in \mathbb{N}} [0, n) \right)^c= (-\infty, 0) \cup \bigcap_{n \in \mathbb{N}} [n, \infty)= (-\infty, 0) \cup \varnothing= (-\infty, 0)
-	\]
-
-
-
-
-
+	\] \pvspace{1.3cm}
 
 
 
 % Quiz 8
-\quizsol \textit{True/False}: Let $A$ be the set of perfect squares. Let $f: A \to \mathbb{Z}$ be the relation given as follows: if $b$ is an integer such that $a= b^2$, then $f(a)= b$. The relation $f$ is a function. 
+\quizsol \textit{True/False}: Let $A$ be the set of perfect squares. Let $f: A \to \mathbb{Z}$ be the relation given as follows: if $b$ is an integer such that $a= b^2$, then $f(a)= b$. The relation $f$ is a function. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. Take $a= 4 \in \mathbb{Z}$. Taking $b= 2$, we have $b^2= 2^2= 4= a$ so that $f(4)= 2$. However, taking $b= -2$, we also have $b^2= (-2)^2= 4= a$ so that $f(4)= -2$. Therefore, $f(4)$ is not well defined. Generally, let $z \in \mathbb{Z}$ with $z \neq 0$ and define $a:= z^2$. But then $z \neq -z$ (because $z \neq 0$) and $a= z^2$ and $a= (-z)^2$. But then $f(a)$ is not well defined. Therefore, this relation cannot be a function. \pvspace{1.3cm}
+
+
+
+\newpage
 
 
 
 % Quiz 9
-\quizsol \textit{True/False}: Let $X, Y$ be sets and $f: X \to Y$ be a function. Then $f$ is surjective to its image; that is, defining $\widetilde{f}: X \to \text{im } f$ via $\widetilde{f}(x):= f(x)$ for all $x \in X$, the function $\widetilde{f}$ is onto. \pspace
+\quizsol \textit{True/False}: Let $X, Y$ be sets and $f: X \to Y$ be a function. Then $f$ is surjective to its image; that is, defining $\widetilde{f}: X \to \im f$ via $\widetilde{f}(x):= f(x)$ for all $x \in X$, the function $\widetilde{f}$ is onto. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. Recall that a function $f: X \to Y$ is surjective if for all $y \in Y$, there exists $x \in X$ such that $f(x)= y$. Consider $y \in \im f$. By the definition of $\im f$, $y= f(x_0)$ for some $x_0 \in X$. But then $f(x_0)= y$ so that for all $y \in \im f$, there exists $x \in X$ such that $f(x)= y$. Therefore, $f: X \to \im f$ is surjective. \pvspace{1.3cm}
 
 
 
 % Quiz 10
 \quizsol \textit{True/False}: Let $A, B, C$ be sets and $f: A \to B, g: B \to C$ be functions. If $f$ is not injective, then $g \circ f$ is \textit{never} injective. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. Recall that if $f: A \to B$ is injective, then if $f(x)= f(y)$, then $x= y$. Therefore, if $f$ is not injective, then there must be $x, y \in A$ such that $x \neq y$ but $f(x)= f(y)$. But then $(g \circ f)(x)= g \big( f(x) \big)= g \big( f(y) \big)= (g \circ f)(y)$ but $x \neq y$. Therefore, $g \circ f$ cannot be injective. \pvspace{1.3cm}
+
 
 
 % Quiz 11
 \quizsol \textit{True/False}: If $A, B$ are $n \times n$ diagonal matrices, then $AB= BA$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. Generally, if $A$ and $B$ are matrices, $AB$ and $BA$ may not even be defined. Furthermore, even if one of $AB, BA$ is defined, the other need not be defined. Even if $A, B$ are square $n \times n$ matrices---so that $AB$ and $BA$ are defined---they are generally not equal. However, recall that the $(i,j)$-entry of the matrix product $AB$ is the dot product of the $i$th row of $A$ with the $j$th column of $B$. Suppose that these are $\mathbf{a}, \mathbf{b}$, respectively. But then $(AB)_{i,j}= \sum a_r b_s$. However, unless $r= i$, $a_r= 0$ and unless $s= j$, $b_s= 0$. But then unless $i= j$, $(AB)_{i, j}$ is zero. Therefore, $AB$ must be a diagonal matrix. Similarly, $BA$ is a diagonal matrix. But observe $(AB)_{ii}= \sum a_r b_s= a_i b_i= b_i a_i= \sum b_r a_s= (BA)_{ii}$. Therefore, $AB$ and $BA$ are diagonal matrices that are equal along their diagonal. Therefore, $AB= BA$. \pvspace{1.3cm}
+
 
 
 % Quiz 12
 \quizsol \textit{True/False}: The relation $\mathbb{Z}$ given by $x \sim y$ if and only if $x < y$ is an equivalence relation. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. Recall that a relation $\sim$ on a set $\mathcal{R}$ is an equivalence relation if it satisfies the following: (i) Reflexivity: $x \sim x$ for all $x \in \mathcal{R}$, (ii) Symmetric: for all $x, y \in \mathcal{R}$, if $x \sim y$, then $y \sim x$, (iii) Transitive: for all $x, y, z \in \mathcal{R}$, if $x \sim y$ and $y \sim z$, then $x \sim z$. Let $x \in \mathbb{Z}$. We know that $x \not\sim x$ because $x \not< x$. But then $\sim$ is not reflexive so that $\sim$ is not an equivalence relation. Furthermore, we know that $\sim$ is not symmetric: if $x \sim y$, then $x < y$ so that $y \not< x$, which implies $y \not\sim x$. However, $\sim$ is transitive: if $x \sim y$ and $y \sim z$, then $x < y$ and $y < z$. But then $x < y < z$ so that $x < z$, which implies $x \sim z$. \pvspace{1.3cm}
+
+
+
+\newpage
+
 
 
 % Quiz 13
 \quizsol \textit{True/False}: Let $a, b \in \mathbb{Z}$ with $a \neq 0$. Then $a \mid b$ if and only if expressing $\frac{b}{a}$ with the division algorithm is given by $b= qa$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. If $a \mid b$, then there exists $k \in \mathbb{Z}$ such that $b= ka$. The Division Algorithm states that given $a, b \in \mathbb{Z}$ with $a \neq 0$, there exist unique $q, r \in \mathbb{Z}$ with $0 \leq r < |b|$ such that $b= qa + r$. But then given that $b= ka$, it must be that $q= k$ and $r= 0$. But then $b= qa$. Alternatively, if the Division Algorithm expresses $b$ as $b= qa$, as $q \in \mathbb{Z}$, there exists $k$ (namely $q$) such that $b= ka$. This implies that $a \mid b$. \pvspace{1.3cm}
+
 
 
 % Quiz 14
 \quizsol \textit{True/False}: The hex number 51e0 in base-10 is $\text{51e0}= 0 \cdot 16^0 + 13 \cdot 16^1 + 1 \cdot 16^2 + 5 \cdot 16^3= 20944$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. If the base-$b$ integer $N= a_n a_{n-1}\cdots a_1 a_0$ is written in base-10, then $N= a_0 \cdot b^0 + a_1 \cdot b^1 + \cdots + a_{n-1} \cdot b^{n-1} + a_n \cdot b^n$. We then, recalling in base-16 that $\text{e}= 14$, have\dots
+	\[
+	\text{51e0}_{16}= 0 \cdot 16^0 + 14 \cdot 16^1 + 1 \cdot 16^2 + 5 \cdot 16^3= 20960
+	\]
+The problem with the given expression is that $\text{e} \neq 13$. \pvspace{1.3cm}
+
 
 
 % Quiz 15
 \quizsol \textit{True/False}: $16^{20232024} \equiv 1 \mod 17$ \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. Observe that $16= 17 - 1 \equiv 0 - 1= -1 \mod 17$. But then we have $16^{20232024} \equiv (-1)^{20232024} = 1 \mod 17$. \pvspace{1.3cm}
+
 
 
 % Quiz 16
 \quizsol \textit{True/False}: The number ways of lining up three people from a total of eight people is $_8P_3= 8 \cdot7 \cdot 6= 336$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. The order of the choices matters---a different choice order creates a different lineup. There can be no repetition in choices because then there would not be three people lined up. But then the number of ways of of choosing and lining up 3 people from a total of 8 people is\dots
+	\[
+	_8P_3= \dfrac{8!}{(8 - 3)!}= \dfrac{8!}{5!}= \dfrac{8 \cdot 7 \cdot 6 \cdot \cancel{5!}}{\cancel{5!}}= 8 \cdot 7 \cdot 6= 336
+	\] \pvspace{1.3cm}
+
 
 
 % Quiz 17
 \quizsol \textit{True/False}: The number of ways of selecting 3 movies to watch from a choice of five genres is $\binom{8}{3}$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. The order of the choices does not matter---in the end any order of selection is the same collection of genres. Repetition is allowed in the selection. The number of ways of selecting $n$ objects from $r$ indistinguishable types, where order is unimportant, is $\binom{n + r - 1}{n}= \binom{n + r - 1}{r - 1}$. But then the number of ways of selecting $n= 3$ movies from $r= 5$ genres is\dots
+	\[
+	\binom{3 + 5 - 1}{3}= \binom{3 + 5 - 1}{5 - 1}= \binom{7}{4}= 35
+	\] \pvspace{1.3cm}
+
 
 
 % Quiz 18
 \quizsol \textit{True/False}: If there are 14 weeks in a semester and 16 homework assignments, there must be a week where at least two homeworks were due. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{true}. The Pigeonhole Principle states that if $n$ objects are distributed across $m$ bins, there must be a bin with at least $\ceil*{\frac{n}{m}}$. But then distributing 16 homework assignments across 14 weeks, there must be a week with at least $\ceil*{\frac{16}{14}}= \ceil*{1.14}= 2$ homework assignments due. Alternatively, if this were false, then every week would have at most one homework assignment due. But then one would have only assigned $1 \cdot 14= 14$ assignments. One week must receive at least one of the two remaining assignments so that there is a week with at least two assignments due. \pvspace{1.3cm}
 
 
 
 % Quiz 19
 \quizsol \textit{True/False}: Let $(\Omega, \mathcal{C}, \mathcal{P})$ be a finite probability space and $E_1, E_2 \in \mathcal{C}$ with $P(E_1) \neq 0 \neq P(E_2)$. If $P(E_1 \cup E_2)= P(E_1) + P(E_2)$, then $P(E_1 \cap E_2) \neq P(E_1) \cdot P(E_2)$. \pspace
 
-\sol The statement is \textit{true}. 
-
+\sol The statement is \textit{true}. We know that for any two events $E_1, E_2$ in a probability space, $P(E_1 \cup E_2)= P(E_1) + P(E_2) - P(E_1 \cap E_2)$. But then if $P(E_1 \cup E_2)= P(E_1) + P(E_2)$, it must be that $P(E_1 \cap E_2)= 0$. Because this is a finite probability space, it must then be that $E_1 \cap E_2= \varnothing$, i.e. $E_1$ and $E_2$ are disjoint. Disjoint events are never independent. But if $E_1, E_2$ are not independent, then $P(E_1 \cap E_2) \neq P(E_1) \cdot P(E_2)$. 
 
 
 
