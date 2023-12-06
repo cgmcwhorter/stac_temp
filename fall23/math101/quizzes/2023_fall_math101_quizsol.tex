@@ -186,8 +186,52 @@ We can then convert this to square inches: $\frac{37}{18} \text{ ft}^2= \frac{37
 % Quiz 16
 \quizsol \textit{True/False}: The quadratic function $f(x)= 6 - (x + 2)^2$ is convex and has vertex $(2, 6)$. \pspace
 
-\sol The statement is \textit{false}. The vertex form of a quadratic function $f(x)= ax^2 + bx + c$ is $f(x)$ written in the form $f(x)= a_0(x - P)^2 + Q$, where $a_0= a$ and $(P, Q)$ is the vertex of $f(x)$. Observe that $f(x)= 6 - (x + 2)^2= -(x + 2)^2 + 6= -\big(x - (-2) \big)^2 + 6$. But then $(P, Q)= (-2, 6)$, so that the vertex is $(-2, 6)$, and $a= -1 < 0$. We know a quadratic function $f(x)= ax^2 + bx + c$ is convex if $a > 0$ and is concave if $a < 0$. Therefore, $f(x)$ is a quadratic function with vertex $(-2, 6)$ and is concave. The given statement incorrectly identifies the $x$-coordinate of the vertex as $2$, rather than $-2$ (the $x$-value that makes the $(x + 2)^2$ term vanish) and also mistakes $a= 1$ rather than $a= -1$ so that the quadratic function is identified as being convex rather than concave. 
+\sol The statement is \textit{false}. The vertex form of a quadratic function $f(x)= ax^2 + bx + c$ is $f(x)$ written in the form $f(x)= a_0(x - P)^2 + Q$, where $a_0= a$ and $(P, Q)$ is the vertex of $f(x)$. Observe that $f(x)= 6 - (x + 2)^2= -(x + 2)^2 + 6= -\big(x - (-2) \big)^2 + 6$. But then $(P, Q)= (-2, 6)$, so that the vertex is $(-2, 6)$, and $a= -1 < 0$. We know a quadratic function $f(x)= ax^2 + bx + c$ is convex if $a > 0$ and is concave if $a < 0$. Therefore, $f(x)$ is a quadratic function with vertex $(-2, 6)$ and is concave. The given statement incorrectly identifies the $x$-coordinate of the vertex as $2$, rather than $-2$ (the $x$-value that makes the $(x + 2)^2$ term vanish) and also mistakes $a= 1$ rather than $a= -1$ so that the quadratic function is identified as being convex rather than concave. \pvspace{1.3cm}
 
+
+
+% Quiz 17
+\quizsol \textit{True/False}: Let $ax^2 + bx + c$ be a quadratic function. If $x_0= -\frac{b}{2a}$, then the vertex occurs at $\big(x_0, f(x_0) \big)$ and the minimum or maximum output of $f(x)$ is $f(x_0)$---depending on the value of $a$. \pspace
+
+\sol The statement is \textit{true}. The location of the vertex is given by $x_0= -\frac{b}{2a}$. The $y$-coordinate of the vertex must be given by the function value at $x_0$ which is $f(x_0)$. But then the vertex is $\big(x_0, f(x_0) \big)$. We know that the $y$-coordinate of the vertex is the either the minimum or maximum output of $f$ depending on whether $f$ opens upwards or downwards, respectively. If $a > 0$, then the parabola opens upwards and $f(x_0)$ is a minimum. If $a < 0$, then the parabola opens downwards and $f(x_0)$ is a maximum. We can see that the vertex is $\big(x_0, f(x_0) \big)$ via the following argument: note that
+	\[
+	\begin{aligned}
+	f(x_0)&= f \left(-\frac{b}{2a} \right) \\ 
+	&= a \left(-\frac{b}{2a} \right)^2 + b \left(-\frac{b}{2a} \right) + c \\
+	&= a \cdot \dfrac{b^2}{4a^2} - \dfrac{b^2}{2a} + c \\
+	&= \dfrac{b^2}{4a} - \dfrac{b^2}{2a} + c \\
+	&= \dfrac{b^2}{4a} - \dfrac{2b^2}{4a} + \dfrac{4ac}{4a} \\
+	&= \dfrac{b^2 - 2b^2 + 4ac}{4a} \\
+	&= \dfrac{-b^2 + 4ac}{4a} \\
+	&= \dfrac{4ac - b^2}{4a}
+	\end{aligned}
+	\]
+But then we have\dots
+	\[
+	\begin{aligned}
+	ax^2 + bx + c&= a \left(x^2 + \dfrac{b}{a} \,x + \dfrac{c}{a} \right) \\
+	&= a \left(x^2 + \dfrac{b}{a} \,x + \dfrac{b^2}{2^2a^2} - \dfrac{b^2}{2^2a^2} + \dfrac{c}{a} \right) 
+	\end{aligned}
+	\]
+	\[
+	\begin{aligned}
+	&= a \left( \left(x + \dfrac{b}{2a} \right)^2 - \dfrac{b^2}{2^2a^2} + \dfrac{c}{a} \right) \\
+	&= a \left(x + \dfrac{b}{2a} \right)^2 - \dfrac{b^2}{2^2a} + c \\
+	&= a \left(x - \dfrac{-b}{2a} \right)^2 - \dfrac{b^2}{4a} + c \\
+	&= a \left(x - \dfrac{-b}{2a} \right)^2 - \dfrac{b^2}{4a} + \dfrac{4ac}{4a} \\
+	&= a \left(x - \dfrac{-b}{2a} \right)^2 + \dfrac{4ac - b^2}{4a} \\
+	&= a \left(x - \dfrac{-b}{2a} \right)^2 + f(x_0)
+	\end{aligned}
+	\]
+We see that this is the vertex form of the quadratic function $f(x)$ with vertex $(-\frac{b}{2a}, f(x_0))= \big(x_0, f(x_0) \big)$. \pvspace{1.3cm}
+
+
+
+
+%Let $f(x)= ax^2 + bx + c$ be a quadratic function. There will only be a distinct solution to the equation $f(x)= 0$ if the discriminant of $f(x)$ is zero. 
+
+
+% For any polynomial $ax^2 + bx + c$, there exists a factorization $(x - r_1)(x - r_2)$, where $r_1, r_2$ are rational numbers.
 
 
 

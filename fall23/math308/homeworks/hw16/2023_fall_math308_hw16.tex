@@ -1,0 +1,92 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+\newcommand{\blank}[1]{\underline{\hspace{#1}}} % Blank Underline
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{16: Due 12/12}{Life is a school of probability.}{Walter Bagehot}
+
+% Problem 1
+\problem{10} Let $(\Omega, P(\Omega), \mathcal{P})$ be a finite probability space and let $A, B, C, D \in P(\Omega)$. 
+	\[
+	\begin{aligned}
+	P(A)&= 0.56 &\qquad\qquad P(D)&= 0.28 \\
+	P(B)&= 0.71 & P(B \cap C)&= 0.09 \\
+	P(C)&= 0.30 & P(A \cap C)&= 0.12
+	\end{aligned}
+	\]
+
+\begin{enumerate}[(a)]
+\item Assuming $C$ and $D$ are independent, compute $P(C \cup D)$.
+\item Are $A$ and $B$ disjoint? Explain. 
+\item Are $B$ and $C$ independent? Explain.
+\item Compute $P(A \;|\; C)$. 
+\item If $E_1, E_2 \in P(\Omega)$, is it possible that $P(E_1 \cap E_2) \geq \min \big( P(E_1), P(E_2) \big)$? Explain.
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} You advising administrators for a local elementary school about suggested educational changes they can make to improve student performance. Below is some of the data on their students' performance on state exams last year, broken down by grade. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|c||c|c|c|c|} \hline
+	& 1st & 2nd & 3rd & 4th \\ \hline
+	Excellent & 34 & 45 & 39 & 55 \\ \hline
+	Satisfactory & 67 & 55 & 58 & 71 \\ \hline
+	Unsatisfactory & 56 & 41 & 34 & 31 \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item What percentage of these students are in 4th grade?
+\item What percentage of these students were rated Excellent or Satisfactory? 
+\item What percentage of 4th graders were rated Satisfactory?
+\item What percentage of Satisfactory students were 4th graders?
+\item Does grade level and underperformance on state exams, i.e. being rated unsatisfactory, appear to be independent events? Explain. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} A community college is analyzing the midterm grades of their first semester freshmen. Out of 525 freshmen, the registrar reports that 121 students have failed a class within their major, 139 have failed a class outside their major, and that 72 students failed at least one class in and outside of their major. 
+	\begin{enumerate}[(a)]
+	\item Find the probability that a randomly selected freshman failed a class. 
+	\item Find the probability that a randomly selected freshman did not fail a class.
+	\item Find the probability that a randomly selected freshman failed a class within their major if they failed a class outside their major. 
+	\item Find the probability that a randomly selected freshman failed a class outside their major but did not fail a class within their major. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} You have been hired to do analysis for a marketing firm. From the company records, when consumers see an advertisement for their products, there is a 8\% chance that the consumer will visit their website. Of those consumers that visit their website, 34\% will make a purchase. Of those people that made a purchase, 62\% will spend between \$1 and \$100, 27\% will spend between between \$101 and \$300, and the rest will spend at least \$301. 
+	\begin{enumerate}[(a)]
+	\item What percentage of people that are advertised to will spend at least \$101 on the site?
+	\item What percentage of people that are advertised to will spend less than \$101 on the site?
+	\item What percentage of people that are advertised to will spend any money on the site?
+	\item What is the minimum expected revenue the company should expect to make (on average) if they advertise to 20,000 individuals? 
+	\end{enumerate}
+
+
+\end{document}

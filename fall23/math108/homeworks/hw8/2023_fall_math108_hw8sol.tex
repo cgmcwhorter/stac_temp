@@ -31,11 +31,25 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
-\item 
+\item We know that $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$. If $A, B$ are independent, then $P(A \text{ and } B)= P(A) P(B)$. But then $P(A \text{ and } B)= P(A) P(B)= 0.45 \cdot 0.20= 0.09$. But then\dots
+	\[
+	P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)= 0.45 + 0.20 - 0.09= 0.56
+	\] \pspace
+
+\item Because $C$ and $D$ are disjoint, $P(C \text{ and } D)= 0$. But then\dots
+	\[
+	P(C \text{ or } D)= P(C) + P(D) - P(C \text{ and } D)= 0.85 + 0.10 - 0= 0.95
+	\]
+Generally, if events $E$ and $F$ are disjoint, $P(E \text{ or } F)= P(E) + P(F)$. \pspace
+
+\item If $B$ and $C$ were disjoint, then $P(B \text{ or } C)= P(B) + P(C)$. But then $P(B \text{ or } C)= 0.20 + 0.85= 1.05 > 1$, which is impossible. Therefore, $B$ and $C$ cannot be disjoint. \pspace
+
+\item If $A$ and $C$ were independent, then $P(A \text{ and } C)= P(A) P(C)$. But then $P(A \text{ and } C)= 0.01 \neq 0.3825= 0.45 \cdot 0.85= P(A) P(C)$. Therefore, $A$ and $C$ are not independent. \pspace
+
+\item We know that\dots
+	\[
+	P(B \;|\; C)= \dfrac{P(B \text{ and } C)}{P(B)}= \dfrac{0.10}{0.20}= 0.50
+	\]
 \end{enumerate}
 
 
@@ -62,6 +76,22 @@
 \item 
 \item 
 \end{enumerate}
+
+	\[
+	\begin{tikzpicture}
+	\draw (0,0) rectangle (9,6);
+	\draw (3.5,3) circle (2);
+	\draw (5.5,3) circle (2);
+	
+	\node at (3.5,5.3) {Electric};
+	\node at (5.7,5.3) {SUV}; 
+	
+	\node at (2.5,3) {42};
+	\node at (4.5,3) {3};
+	\node at (6.5,3) {123};
+	\node at (8,1) {292};
+	\end{tikzpicture}
+	\]
 
 
 
@@ -90,13 +120,41 @@ Given the data above, answer the following:
 	\item Are freshmen status and failing the course independent events? Explain. 
 	\end{enumerate} \pspace
 
-\sol 
+\sol First, we should find the totals for each row/column:
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{lcccc}
+	& Pass & Fail & Withdraw & {\itshape Total} \\ \cline{2-4} 
+	\multicolumn{1}{l|}{Freshmen} & \multicolumn{1}{c|}{41} & \multicolumn{1}{c|}{14} & \multicolumn{1}{c|}{6} & 61 \\ \cline{2-4} 
+	\multicolumn{1}{l|}{Sophomore} & \multicolumn{1}{c|}{56} & \multicolumn{1}{c|}{11} & \multicolumn{1}{c|}{3} & 70 \\ \cline{2-4} 
+	\multicolumn{1}{l|}{Junior} & \multicolumn{1}{c|}{18} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{1} & 22 \\ \cline{2-4} 
+	\multicolumn{1}{l|}{Senior} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{0} & 3 \\ \cline{2-4}
+	{\itshape Total} & 118 & 28 & 10 & 156
+	\end{tabular}
+	\end{table}
+
 \begin{enumerate}[(a)]
 \item 
+	\[
+	P(\text{failed})= \dfrac{28}{156}= \dfrac{7}{39} \approx 0.1795
+	\]
+
 \item 
+	\[
+	P(\text{soph or withd})= \dfrac{70 + 10 - 3}{156}= \dfrac{77}{156} \approx 0.4936
+	\]
+
 \item 
+	\[
+	P(\text{junior and fail})= \dfrac{3}{156}= \dfrac{1}{52} \approx 0.0192
+	\]
+
 \item 
-\item 
+	\[
+	P(\text{fail} \;|\; \text{fresh})= \dfrac{P(\text{fail and fresh})}{P(\text{fresh})}= \dfrac{14}{61} \approx 0.2295
+	\]
+
+\item If they were independent, then $P(\text{fresh and fail})= P(\text{fresh}) P(\text{fail})$. But $P(\text{fresh and fail})= \frac{14}{156}= 0.0897 \neq 0.0702= \frac{61}{156} \cdot \frac{28}{156}= P(\text{fresh}) P(\text{fail})$. Therefore, they are not independent. Alternatively, if they were independent, then $P(\text{fail} \;|\; \text{fresh})= P(\text{fail})$. But by (a) and (d), $P(\text{fail} \;|\; \text{fresh})= 0.2295 \neq 0.1795= P(\text{fail})$.
 \end{enumerate}
 
 
@@ -121,6 +179,50 @@ Given the data above, answer the following:
 \item 
 \item 
 \end{enumerate}
+
+		\[
+		\begin{tikzpicture}[scale= 1.0]
+		\def\FirstUpLabel{CS}
+		\def\FirstDownLabel{NCS}
+		\def\SecondUpLabel{Job}
+		\def\SecondDownLabel{NJob}
+		\def\Up{$0.04$}
+		\def\Down{$0.96$}
+		\def\UpUp{$0.85$}
+		\def\UpDown{$0.15$}
+		\def\DownUp{$0.70$}
+		\def\DownDown{$0.30$}
+		\def\first{$0.0340$}
+		\def\second{$0.0060$}
+		\def\third{$0.6720$}
+		\def\fourth{$0.2880$}
+		
+		\node at (0.5,1) {\FirstUpLabel};	
+		\node at (0.7,-1) {\FirstDownLabel};	
+		\node at (1.8,0.6) {\Up};
+		\node at (1.8,-0.6) {\Down};
+		\draw[thick] (0,0) -- (2.5,1.5);
+		\draw[thick] (0,0) -- (2.5,-1.5);
+		
+		\node at (3.25,2.3) {\SecondUpLabel};
+		\node at (3.75,0.7) {\SecondDownLabel};
+		\node at (4,1.8) {\UpUp};
+		\node at (4.1,1.2) {\UpDown};
+		\node at (5.75,2.5) {\first};
+		\node at (5.75,0.5) {\second};
+		\draw[thick] (2.5,1.5) -- (5,2.5);
+		\draw[thick] (2.5,1.5) -- (5,0.5);
+
+		\node at (3.25,-0.7) {\SecondUpLabel};
+		\node at (3.75,-2.3) {\SecondDownLabel};
+		\node at (4.1,-1.2) {\DownUp};
+		\node at (4.1,-1.8) {\DownDown};
+		\node at (5.75,-0.5) {\third};	
+		\node at (5.75,-2.5) {\fourth};	
+		\draw[thick] (2.5,-1.5) -- (5,-0.5);
+		\draw[thick] (2.5,-1.5) -- (5,-2.5);
+		\end{tikzpicture}
+		\]
 
 
 \end{document}

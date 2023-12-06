@@ -151,24 +151,33 @@ The expected value only says what occurs \textit{on average in the `long run.'} 
 % Quiz 17
 \quizsol \textit{True/False}: There is no linear system of equations with exactly 2,023 solutions. \pspace
 
-\sol The statement is \textit{true}. A linear system of equations either has no solutions, one solution, or infinitely many solutions. But then there can be no linear system of equations with exactly 2,023 solutions.  
+\sol The statement is \textit{true}. A linear system of equations either has no solutions, one solution, or infinitely many solutions. But then there can be no linear system of equations with exactly 2,023 solutions. \pvspace{1.3cm}
+
+
+
+% Quiz 18
+\quizsol \textit{True/False}: If matrix below is the RREF of an augmented matrix coming from a system of equations, then the original system of equations had only one solution: $(x, y)= (2, -3)$.
+	\[
+	\begin{pmatrix}
+	1 & 0 & 2 \\
+	0 & 1 & -3 \\
+	0 & 0 & 0 
+	\end{pmatrix}
+	\] \pspace
+
+\sol The statement is \textit{true}. There are three rows to the matrix so that the original system of equations had three equations. Each column of the matrix---except the last column---corresponds to a variable in the original system of equations. Therefore, the original system of equations has two variables: $x_1, x_2$. From the RREF, we see that $x_1= 2$ and $x_2= -3$. But then all the variables have a fixed value so that the original system of equations has a unique solution---namely $(x_1, x_2)= (2, -3)$. The bottom zero row of the RREF corresponds to the fact that the original system of three equations had a redundant equation---meaning that only two of the equations were necessary to arrive at the solution $(x_1, x_2)= (2, -3)$. \pvspace{1.3cm}
+
+
+
+% Quiz 19
+\quizsol \textit{True/False}: If one performs a linear regression and finds $r= 0.80$, then the variables are positively correlated and the coefficient of determination is $0.64$. \pspace
+
+\sol 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+%Any linear function on a nonempty, bounded region has a maximum and a minimum value and these values are obtained at a corner point for the region. 
 
 
 
