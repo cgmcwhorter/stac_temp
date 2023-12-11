@@ -13,12 +13,40 @@
 \homework{12: Due 11/06}{I know of scarcely anything so apt to impress the imagination as the wonderful form of cosmic order expressed by the [Central Limit Theorem]. The law would have been personified by the Greeks and deified, if they had known of it.}{Sir Francis Galton}
 
 % Problem 1
-\problem{10} Your engineering firm has been hired to do quality control analysis for a chip manufacturer. The company requests you analyze their rate of defective chips to minimize any potential harms to their brand. After testing 38 chips, you determine that approximately 4.6\% of the chips have some type of minor defect. Suppose that the standard deviation of the production rate of the chips is known to be $\sigma= 0.012$. 
+\problem{10} Your engineering firm has been hired to do quality control analysis for a chip manufacturer. The company requests you analyze their rate of defective chips to minimize any potential harms to their brand. After testing 38 chips, you determine that approximately 4.6\% of the chips have some type of minor defect. 
 	\begin{enumerate}[(a)]
-	\item Assuming that the average defect rate in the chips is 4.6\%, find the probability that a same of 38~chips contains a defect percentage of less than 4\%.
-	 \item Assuming that the average defect rate in the chips is 4.6\%, find the probability that a same of 38~chips contains a defect percentage of more than 4.5\%. 
-	 \item Construct a 97\% confidence interval for the true average defect rate in the chips. 
-	\end{enumerate}
+	\item Assuming that the average defect rate in the chips is 4.6\%, find the probability that a sample of 38~chips contains a defect percentage of less than 4\%.
+	 \item Assuming that the average defect rate in the chips is 4.6\%, find the probability that a sample of 38~chips contains a defect percentage of more than 4.5\%. 
+	 \item Construct a 97\% confidence interval for the true average defect rate in the chips if you find a sample of 38~chips with a defect rate of 6\%. 
+	\end{enumerate} \pspace
+
+\sol Each chip in a sample is either defective nor not. The number of chips in a sample is fixed. We assume the defect chance in each chip is the same---a 4.6\% chance. We assume the sample has been taken so that the samples are independent. Therefore, the distribution of the percentage of chips in a sample is given by a binomial distribution, $B(n, p)= B(38, 0.046)$. We assume that the sample was a simple random sample. Because $np= 38(0.046)
+
+
+because $n= 38 \geq 30$, the Central Limit Theorem applies (even though the distribution of the number of defective chips is not known to be normally distributed). We can then use the normal approximation to the binomial distribution. The distribution of the number of defective chips in a sample of size 38 is given by $N \left(p, \sqrt{\frac{p(1 - p)}{n}} \right)= N(0.046, \sqrt{\frac{0.046(1 - 0.046)}{38}})= N(0.046, 0.033983)$. 
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	z_{0.04}= \dfrac{0.04 - 0.046}{0.033983}= \dfrac{-0.006}{0.033983}= -0.176 \squiggle \dfrac{0.4325 + 0.4286}{2}= \dfrac{0.8611}{2}= 0.43055 
+	\] 
+Therefore, $P(\hat{p} < 0.04)= 0.43055$. \pspace
+
+\item 
+	\[
+	z_{0.045}= \dfrac{0.045 - 0.046}{0.033983}= \dfrac{-0.001}{0.033983}= -0.03 \squiggle 0.4880
+	\] 
+But then $P(\hat{p} > 0.045)= 1 - P(\hat{p} < 0.045)= 1 - 0.4880= 0.512$. \pspace
+
+\item We want the interval to capture 97\% of values. This leaves 3\% for the remaining possible values not inside this interval. Because the normal distribution is symmetric, this leaves 1.5\% for each `end' of the distribution. Therefore, the upper value will be greater than $97\% + 1.5\%= 98.5\%$ of values. Therefore, this upper value will have a $z$-value which corresponds to 98.5\%. This implies that $z^*= 2.17$. 
+	\[
+	\hat{p} \pm z^* \sqrt{\dfrac{\hat{p} (1 - \hat{p})}{n}} \\
+	0.06 \pm 2.17 \cdot \sqrt{\dfrac{0.06 (1 - 0.06)}{38}} \\
+	0.06 \pm 2.17 \cdot \sqrt{0.00148421} \\
+	0.06 \pm 0.00322 
+	\]
+Therefore, based on this data, we are 97\% certain that the true defective rate for these chips is in the interval $(0.0568, 0.0632)$. 
+\end{enumerate}
 
 
 
@@ -33,7 +61,15 @@
 	\item Find the probability that less than 650 of those phone calls was spam or a scam.
 	\item Find the probability that less than 500 of those phone calls was spam or a spam.
 	\item Find the probability that between 650 and 700 of those phone calls was spam or a scam.  
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol The number of people in the sample is fixed. Each individual sampled either received a spam phone call or not. We assume that the probability of receiving a spam phone call for each individual is fixed. We assume also that the sampled individuals were independent. Therefore, the number of spam phone calls received by individuals is given by a binomial distribution $B(n, p)= B(1200, 0.55)$. We assume that the sample was a simple random sample of size $n= 1200$. Because $n= 1200 \geq 30$, the Central Limit Theorem applies. Therefore, we can approximate this 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
 
 
 \end{document}

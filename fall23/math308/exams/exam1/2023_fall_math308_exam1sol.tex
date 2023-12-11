@@ -42,7 +42,36 @@
 	\item Show that these two expressions are logically equivalent by constructing the truth table for both expressions. 
 	\item Show that $\neg (P \wedge Q) \equiv (P \to \neg Q) \vee (\neg P \wedge \neg Q)$ by `simplifying' the expression $(P \to \neg Q) \vee (\neg P \wedge \neg Q)$. 
 	\item Without computing the truth table for $P \wedge Q \Leftrightarrow (P \to \neg Q) \vee (\neg P \wedge \neg Q)$, determine whether this expression is a tautology, contradiction, or neither. Explain how you came to your conclusion. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Constructing the truth tables for $\neg (P \wedge Q)$ and $(P \to \neg Q) \vee (\neg P \wedge \neg Q)$, we have\dots
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{cc||cc|ccccc}
+	$P$ & $Q$ & $P \wedge Q$ & $\neg (P \wedge Q)$ & $\neg P$ & $\neg Q$ & $P \to \neg Q$ & $\neg P \wedge \neg Q$ & $(P \to \neg Q) \vee (\neg P \wedge \neg Q)$ \\ \hline 
+	$T$ & $T$ & $T$ & $\mathbf{F}$ & $F$ & $F$ & $F$ & $F$ & $\mathbf{F}$ \\
+	$T$ & $F$ & $F$ & $\mathbf{T}$ & $F$ & $T$ & $T$ & $F$ & $\mathbf{T}$ \\
+	$F$ & $T$ & $F$ & $\mathbf{T}$ & $T$ & $F$ & $T$ & $F$ & $\mathbf{T}$ \\
+	$F$ & $F$ & $F$ & $\mathbf{T}$ & $T$ & $T$ & $T$ & $T$ & $\mathbf{T}$ \\
+	\end{tabular}
+	\end{table}
+Because the fourth and last column (the bolded columns) have the same output for each input of $P, Q$, we know that $\neg (P \wedge Q) \equiv (P \to \neg Q) \vee (\neg P \wedge \neg Q)$. \pspace
+
+\item We use the fact that $A \to B \equiv \neg A \vee B$, the associativity of $\vee$, the absorption law $A \vee (A \wedge B) \equiv A$, and finally De Morgan's Law $\neg (A \wedge B) \equiv \neg A \vee \neg B$:
+	\[
+	\begin{aligned}
+	(P \to \neg Q) \vee (\neg P \wedge \neg Q)&\equiv (\neg P \vee \neg Q) \vee (\neg P \wedge \neg Q) \\
+	&\equiv \neg P \vee \neg Q \vee (\neg P \wedge \neg Q) \\
+	&\equiv \neg P \vee \big(\neg Q \vee (\neg P \wedge \neg Q) \big) \\
+	&\equiv \neg P \vee \neg Q \\
+	&\equiv \neg (P \wedge Q)
+	\end{aligned}
+	\] \pspace
+
+\item We know from (a) that $\neg (P \wedge Q) \equiv (P \to \neg Q) \vee (\neg P \wedge \neg Q)$. This shows that $\neg (P \wedge Q)$ and $(P \to \neg Q) \vee (\neg P \wedge \neg Q)$ have the same logical outputs for each input of $P, Q$. Now $\neg (P \wedge Q)$ and $\neg \big( \neg (P \wedge Q) \big) \equiv P \wedge Q$ must have opposite outputs for each input of $P, Q$. But then $P \wedge Q$ and $(P \to \neg Q) \vee (\neg P \wedge \neg Q)$ will have opposite logical outputs for each input $P, Q$. Therefore, the biconditional $P \wedge Q \Leftrightarrow (P \to \neg Q) \vee (\neg P \wedge \neg Q)$ will be false for each input of $P, Q$. This shows that $P \wedge Q \Leftrightarrow (P \to \neg Q) \vee (\neg P \wedge \neg Q)$ is a contradiction. 
+\end{enumerate}
 
 
 
@@ -50,7 +79,7 @@
 \newpage
 \question[10] Consider the digital logic circuit given below. We shall find a simpler circuit that has the same `behavior', i.e. input-output table, as the given circuit. 
 	\[
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=0.80]
 	\node (p) at (0,4) {}; \node[left] at (p) {$P$}; % P
 	\node (q) at (0,2) {}; \node[left] at (q) {$Q$}; % Q
 	\node (r) at (0,0) {}; \node[left] at (r) {$R$}; % R
@@ -82,6 +111,80 @@
 \item Find the logic expression corresponding to this circuit. 
 \item Simplify the logical expression in (a) as much as possible.
 \item Construct the digital logic circuit corresponding to your answer in (b).
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We label each input/output on the circuit diagram. 
+	\[
+	\begin{tikzpicture}
+	\node (p) at (0,4) {}; \node[left] at (p) {$P$}; % P
+	\node (q) at (0,2) {}; \node[left] at (q) {$Q$}; % Q
+	\node (r) at (0,0) {}; \node[left] at (r) {$R$}; % R
+	
+	\node[not gate US, draw, line width= 0.03cm] at (1,0) (not1) {}; % lower NOT
+	\node[and gate US, draw, line width= 0.03cm] at (2.75,1.8997) (and1) {}; % middle AND
+	\node[not gate US, draw, line width= 0.03cm] at (2,2.8) (not2) {}; % middle NOT
+	\node[and gate US, draw, line width= 0.03cm] at (2.18,4.063) (and2) {}; % upper AND
+	\node[not gate US, draw, line width= 0.03cm] at (3.5,4.063) (not3) {}; % upper NOT
+	\node[or gate US, draw, line width= 0.03cm] at (5,2) (or1) {}; % OR
+	\node[and gate US, draw, line width= 0.03cm] at (7,2.69997) (and3) {}; % right AND
+	
+	\draw[line width= 0.03cm] (r) |- (not1.input); % r to lower NOT
+	\draw[line width= 0.03cm] (q) -- (1.2,2) |- (and1.input 1); % q to middle AND
+	\draw[line width= 0.03cm] (not1) -- ([xshift=0.5cm]not1.output) |- (and1.input 2); % lower NOT to AND
+	\draw[line width= 0.03cm] (1.2,2) |- (not2.input); % q to middle NOT
+	\draw[line width= 0.03cm] (p) |- (and2.input 1); % p to upper AND
+	\draw[line width= 0.03cm] (1.2,2) |- (and2.input 2); % q to upper AND
+	\draw[line width= 0.03cm] (and2.output) |- (not3.input); % upper AND to upper NOT
+	\draw[line width= 0.03cm] (and1.output) -- ([xshift=0.6cm]and1.output) |- (or1.input 2); % middle AND to OR
+	\draw[line width= 0.03cm] (not3.output) -- ([xshift=0.3cm]not3.output) |- (or1.input 1); % upper NOT to OR
+	\draw[line width= 0.03cm] (or1.output) -- ([xshift=0.6cm]or1.output) |- (and3.input 2); % OR to right AND
+	\draw[line width= 0.03cm] (not2.output) -- (4.16,2.8) to[crossing] (4.4,2.8) |- (and3.input 1); % middle NOT to right AND
+	\draw[line width= 0.03cm] (and3.output) -- ([xshift=0.6cm]and3.output); % output wire
+	
+	\node at (1.5,4.35) {\scriptsize $P$}; 
+	\node at (1.5, 3.75) {\scriptsize $Q$};
+	\node at (1.5, 3) {\scriptsize $Q$};
+	\node at (0.4, -0.2) {\scriptsize $R$};
+	\node at (1.9,-0.2) {\scriptsize $\neg R$};
+	\node at (2.2, 2.2) {\scriptsize $Q$};
+	
+	\node at (2.25, 1.4) {\scriptsize $\neg R$};
+	\node at (2.9, 4.35) {\scriptsize $P \wedge Q$};
+	\node at (2.9, 3) {\scriptsize $\neg Q$};
+	\node at (3.9, 1.7) {\scriptsize $Q \wedge \neg R$};
+	
+	\node at (4.55, 4.25) {\scriptsize $\neg (P \wedge Q)$};
+	
+	\node at (7,1.8) {\scriptsize $\big( \neg (P \wedge Q) \big) \vee (Q \wedge \neg R)$};
+	\node at (10.3,2.7) {\scriptsize $\neg Q \wedge \left( \big( \neg (P \wedge Q) \big) \vee (Q \wedge \neg R) \right)$};
+	\end{tikzpicture}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\neg Q \wedge \left( \big( \neg (P \wedge Q) \big) \vee (Q \wedge \neg R) \right)&\equiv \neg Q \wedge \left( (\neg P \vee \neg Q) \vee (Q \wedge \neg R) \right) \\
+	&\equiv \neg Q \wedge \left( \neg P \vee \neg Q \vee (Q \wedge \neg R) \right) \\
+	&\equiv \neg Q \wedge \left( \neg P \vee \left( (\neg Q \vee Q) \wedge (\neg Q \vee \neg R) \right) \right) \\
+	&\equiv \neg Q \wedge \left(\neg P \vee \left( T_0 \wedge (\neg Q \vee \neg R) \right) \right) \\
+	&\equiv \neg Q \wedge \left(\neg P \vee (\neg Q \vee \neg R) \right) \\
+	&\equiv (\neg Q \wedge \neg P) \vee \left(\neg Q \wedge (\neg Q \vee \neg R) \right) \\
+	&\equiv (\neg Q \wedge \neg P) \vee \neg Q \\
+	&\equiv \neg Q
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{tikzpicture}
+	\node (q) at (0,0) {}; \node[left] at (q) {$Q$}; % Q
+	\node[not gate US, draw, line width= 0.03cm] at (0.75,0) (not1) {}; % NOT
+	\draw[line width= 0.03cm] (q) |- (not1.input); % Q to NOT
+	\draw[line width= 0.03cm] (not1) -- ([xshift=0.5cm]not1.output); % NOT Output
+	\end{tikzpicture}
+	\]
 \end{enumerate}
 
 
@@ -97,6 +200,26 @@
 \item Write the quantified statement above as a complete English sentence. 
 \item Determine whether the given quantified statement is true or false. Be sure to justify your answer. 
 \item Write the negation, converse, and contrapositive of the given quantified statement as complete English sentences. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item For all integers $z$, there exists a rational number $q$ such that if $z \neq 0$, then $qz= 1$. \pspace
+
+\item The statement is true. If $z= 0$, take $q$ to be any rational number. Because $z= 0$, $z \neq 0$ is false, which implies that $z \neq 0 \to qz= 1$ is true. If $z \neq 0$, define $q:= \frac{1}{z}$, which is possible because $z \neq 0$. But then $z \neq 0$ and $qz= \frac{1}{z} \cdot z= 1$. Therefore, $z \neq 0 \to qz= 1$ is true. Every $z \in \mathbb{Z}$ is either zero or nonzero. For each such $z$, we have found at least one rational number $q$ such that $z \neq 0 \to qz= 1$ is true. Therefore, the quantified statement is true. The statement given is the statement that every nonzero integer has a multiplicative inverse which is rational. \pspace
+
+\item First, recall that $\neg (P \to Q) \equiv P \wedge \neg Q$. But then\dots
+	\[
+	\neg P(z, q) \equiv \neg (z \neq 0 \to qz =1) \equiv \neg (z \neq 0) \wedge (qz = 1) \equiv (z= 0) \wedge (qz= 1)
+	\]
+
+{\itshape Negation:} The negation of the quantified statement is\dots
+	\[
+	\neg (\forall z)(\exists q) P(z, q) \equiv (\exists z) \neg (\exists q) P(z, q) \equiv (\exists z) (\forall q) \neg P(z, q) \equiv (\exists z) (\forall q) \left[ (z= 0) \wedge (qz= 1) \right]
+	\]
+As an English sentence, this is the statement, ``There exists an integer $z$ such that for all integers $q$, $z= 0$ and $qz= 1$.'' Because the original quantified statement was true, this negation clearly must be false. 
+
+
 \end{enumerate}
 
 
@@ -156,7 +279,19 @@
 	\item Is $(3, 11)$ on the graph of $\Phi$? Explain. 
 	\item Is $\Phi$ a decreasing function? Explain.  
 	\item Is $\Phi$ a negative function? Explain. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item If $7 \in \im \Phi$, then there exists $x_0 \in \mathbb{R}$ such that $\Phi(x_0)= 7$. But then\dots
+	\[
+	\begin{gathered}
+	\Phi(x)= 7 \\
+	2x_0^2 + 11x_0 - 6= 7 \\
+	2x_0^2 + 11x_0 - 13= 0 
+	\end{gathered}
+	\]
+\end{enumerate}
 
 \newpage 
 \begin{center} {\itshape --- Continued Space for Problem~7 ---} \end{center}
@@ -171,7 +306,16 @@
 	\item Is the function $f: \mathbb{R}^2 \to \mathbb{R}$ given by $f(x, y)= x^2 + y^3 - 7$ injective?
 	\item Is the function $g: \mathbb{R} \to (-\infty, 10]$ given by $x \mapsto 10 - (x - 3)^2$ surjective?
 	\item Is the function $h: \mathbb{R} \to \mathbb{R}$ given by $h(x)= \pi x - \sqrt{2}$ bijective? 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+
+\item 
+
+\item The function $h(x)= \pi x - \sqrt{2}$ is a linear function, i.e. a function of the form $mx + b$ with $m= \pi$ and $b= -\sqrt{2}$. Because $m= \pi \neq 0$, $h(x)$ is not constant. All non-constant linear functions are injective and surjective---hence bijective. Therefore, $h(x)$ is a bijective function. 
+\end{enumerate}
 
 
 

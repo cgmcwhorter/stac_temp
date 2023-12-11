@@ -1,0 +1,110 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{15: Due 12/06}{There should be no such thing as boring mathematics.}{Edsger Dijkstra}
+
+% Problem 1
+\problem{10} Complete the square in $12x - 31 - x^2$ to find the vertex form of this quadratic function. \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	12x - 31 - x^2 \\[0.3cm]
+	-x^2 + 12x - 31 \\[0.3cm]
+	-(x^2 - 12x + 31) \\[0.3cm]
+	-\left(x^2 - 12x + \left( \frac{-12}{2} \right)^2 - \left( \frac{-12}{2} \right)^2 + 31 \right) \\[0.3cm]
+	-\left(x^2 - 12x + 36 - 36 + 31 \right) \\[0.3cm]
+	-\left( (x^2 - 12x + 36) + (-36 + 31) \right) \\[0.3cm]
+	-\left( (x - 6)^2 - 5 \right) \\[0.3cm]
+	-(x - 6)^2 + 5 \\[0.3cm]
+	5 - (x - 6)^2 
+	\end{gathered}
+	\]
+Therefore, the vertex form is $5 - (x - 6)^2$, which implies the vertex is $(6, 5)$. Because $a= -1 < 0$, this quadratic function opens downwards. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use the `evaluation method' to find the vertex form of the quadratic function $3x^2 + 6x - 7$. \pspace
+
+\sol A quadratic function $f(x)= ax^2 + bx + c$ has vertex located at $x_0= -\frac{b}{2a}$. The $y$-coordinate of the vertex is then $y_0= f(x_0)$. For the quadratic function $3x^2 + 6x - 7$, we have $a= 3$, $b= 6$, and $c= -7$. Now $x_0= -\frac{b}{2a}= -\frac{6}{2(3)}= -\frac{6}{6}= -1$. The $y$-coordinate of the vertex is then $f(-1)= 3(-1)^2 + 6(-1) - 7= 3(1) - 6 - 7= 3 - 6 - 7= -10$. Therefore, the vertex is $(-1, -10)$. We know that for this quadratic function, $a= 3$. The vertex form of a quadratic function is $a(x - P)^2 + Q$, where $(P, Q)$ is the vertex. Therefore, the vertex form of this quadratic function is\dots
+	\[
+	3x^2 + 6x - 7= 3 \big(x - (-1) \big)^2 + (-10)= 3(x + 1)^2 - 10
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use completing the square to solve the following quadratic equation: 
+	\[
+	x(x + 2)= 7
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	x(x + 2)= 7 \\[0.3cm]
+	x^2 + 2x= 7 \\[0.3cm]
+	x^2 + 2x + \left( \dfrac{2}{2} \right)^2= 7 + \left( \dfrac{2}{2} \right)^2 \\[0.3cm]
+	x^2 + 2x + 1= 7 + 1 \\[0.3cm]
+	(x + 1)^2= 8 \\[0.3cm]
+	\sqrt{(x + 1)^2}= \sqrt{8} \\[0.3cm]
+	x + 1= \pm \sqrt{8} \\[0.3cm]
+	x= -1 \pm \sqrt{8} \\[0.3cm]
+	x= -1 \pm \sqrt{4 \cdot 2} \\[0.3cm]
+	x= -1 \pm 2 \sqrt{2}
+	\end{gathered}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Use the quadratic formula to solve the following quadratic equation:
+	\[
+	x^2= 2(5x - 11)
+	\]
+
+\sol The quadratic formula solves quadratic equations of the form $f(x)= 0$, where $f(x)$ is a quadratic function. We first need find a $f(x)$. We have\dots
+	\[
+	\begin{gathered}
+	x^2= 2(5x - 11) \\[0.3cm]
+	x^2= 10x - 22 \\[0.3cm]
+	x^2 - 10x + 22= 0 
+	\end{gathered}
+	\]
+Let $f(x)= x^2 - 10x + 22$. This is a quadratic function, i.e. a function of the form $ax^2 + bx + c$, with $a= 1$, $b= -10$, and $c= 22$. But then the quadratic function gives the solutions are\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-10) \pm \sqrt{(-10)^2 - 4(1)22}}{2(1)} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{100 - 88}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{12}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{4 \cdot 3}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm 2 \sqrt{3}}{2} \\[0.3cm]
+	&= 5 \pm \sqrt{3}
+	\end{aligned}
+	\]
+
+
+\end{document}

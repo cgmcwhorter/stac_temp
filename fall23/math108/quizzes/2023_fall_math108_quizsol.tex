@@ -172,27 +172,46 @@ The expected value only says what occurs \textit{on average in the `long run.'} 
 % Quiz 19
 \quizsol \textit{True/False}: If one performs a linear regression and finds $r= 0.80$, then the variables are positively correlated and the coefficient of determination is $0.64$. \pspace
 
-\sol 
+\sol The statement is \textit{true}. The (Pearson) correlation coefficient, $r$, determines whether the variables are positively or negatively correlated. If $r > 0$, the variables are positively correlated. If $r < 0$, the variables are negatively correlated. If $r= 0$, the variables are not correlated. Furthermore, the coefficient of determination, $r^2$, gives the `percentage' linearity; that is, $r^2$ gives the percentage of variability in the data explained by the model. We have $r^2= (0.80)^2= 0.64$. \pvspace{1.3cm}
 
 
 
+% Quiz 20
+\quizsol \textit{True/False}: Any linear function on a nonempty, bounded region has a maximum and a minimum value and these values are obtained at a corner point for the region. \pspace
 
-%Any linear function on a nonempty, bounded region has a maximum and a minimum value and these values are obtained at a corner point for the region. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\sol The statement is \textit{true}. This is the Fundamental Theorem of Linear Programming. For instance, the function $z= -2x_! + 5x_2$ on the region given by $-x_1 + x_2 \leq 4$, $4x_1 + x_2 \leq 24$, and $x_1, x_2 \geq 0$ meets these criterion: $z$ is a linear function in $x_1, x_2$, the region (shown below) is bounded, and the region is nonempty. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=0.8,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -1, xmax=10,
+	ymin= -1, ymax=10,
+	xtick={0,2,4,6,8,10},
+	ytick={0,2,4,6,8,10},
+	minor tick = {-1,0,1,...,10},
+	xlabel=\(x_1\),ylabel=\(x_2\),
+	]
+	\draw[line width=0.03cm] (0,0) -- (0,4) -- (4,8) -- (6,0) -- (0,0);
+	\draw[line width=0.01cm,fill= blue,opacity=0.1] (0,0) -- (0,4) -- (4,8) -- (6,0) -- (0,0);
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\]
+Therefore, we only need evaluate the function on the corner points. 
+	\begin{table}[!ht]
+	\centering
+	\begin{tabular}{l|l}
+	$(x, y)$ & $z= -2x + 5y$ \\ \hline
+	$(0, 0)$ & $z= 0 + 0= 0$ \\
+	$(0, 4)$ & $z= 0 + 20= 20$ \\
+	$(4, 8)$ & $z= -8 + 40= 32$ \\
+	$(6, 0)$ & $z= -12 + 0= -12$
+	\end{tabular}
+	\end{table} \par	
+Therefore, the minimum value for $z$ is $-12$ and occurs at $(x_1, x_2)= (6, 0)$, and the maximum value for $z$ is $32$ and occurs at $(x_1, x_2)= (4, 8)$. However, a linear function on a nonempty, \textit{unbounded} region may or may not have a maximum or a minimum value. 
 
 
 

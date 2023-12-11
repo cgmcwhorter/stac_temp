@@ -227,19 +227,35 @@ We see that this is the vertex form of the quadratic function $f(x)$ with vertex
 
 
 
+% Quiz 18
+\quizsol \textit{True/False}: Let $f(x)= ax^2 + bx + c$ be a quadratic function. There will only be a distinct solution to the equation $f(x)= 0$ if the discriminant of $f(x)$ is zero. \pspace
 
-%Let $f(x)= ax^2 + bx + c$ be a quadratic function. There will only be a distinct solution to the equation $f(x)= 0$ if the discriminant of $f(x)$ is zero. 
+\sol The statement is \textit{true}. Recall that the discriminant of a quadratic function $f(x)= ax^2 + bx + c$ is $D= b^2 - 4ac$. If $D < 0$, then $f(x)$ has two distinct, complex solutions. If $D > 0$, then $f(x)$ has two distinct real solutions. If $D= 0$, then $D$ has one distinct, rational solution. The exact solution(s) to a quadratic function are given by the quadratic formula:
+	\[
+	x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}= \dfrac{-b \pm \sqrt{D}}{2a}
+	\]
+From the quadratic formula, we can also see that the nature of the roots depends only on $D$:
+	\[
+	\begin{aligned}
+	D < 0&\colon x= \dfrac{-b \pm \sqrt{D}}{2a} \Longrightarrow x= \dfrac{-b \pm \sqrt{|D|} \, i}{2a}= \dfrac{-b}{2a} \pm \dfrac{\sqrt{|D|}}{2a} \, i \\[0.3cm]
+	D > 0&\colon x= \dfrac{-b \pm \sqrt{D}}{2a} \Longrightarrow x= \dfrac{-b}{2a} \pm \dfrac{1}{2a} \, \sqrt{D} \\[0.3cm]
+	D= 0&\colon x= \dfrac{-b \pm \sqrt{D}}{2a} \Longrightarrow x= \dfrac{-b}{2a}
+	\end{aligned}
+	\] \pvspace{1.3cm}
 
 
-% For any polynomial $ax^2 + bx + c$, there exists a factorization $(x - r_1)(x - r_2)$, where $r_1, r_2$ are rational numbers.
+
+% Quiz 19
+\quizsol \textit{True/False}: For any polynomial $ax^2 + bx + c$, there exists a factorization $(x - r_1)(x - r_2)$, where $r_1, r_2$ are rational numbers. \pspace
+
+\sol The statement is \textit{false}. Observe that there can never be an expression of the form $(x - r_1)(x - r_2)$ for the quadratic function $2x^2 + 3x + 1$ because $a= 2$ while $(x - r_1)(x - r_2)= x^2 - (r_1 + r_2)x + r_1r_2$ has $a= 1$. Furthermore, if every quadratic function could be expressed as $(x - r_1)(x - r_2)$, every quadratic function would have rational roots $r_1, r_2$. However, we know that not all quadratic functions have rational roots---or even real roots. We can determine the nature of the roots from the discriminant of $ax^2 + bx + c$, which is $D= b^2 - 4ac$. If $D < 0$, then $f(x)$ has two distinct, complex solutions. If $D > 0$, then $f(x)$ has two distinct real solutions. If $D= 0$, then $D$ has one distinct, rational solution. Therefore, the polynomial $ax^2 + bx + c$ will have an expression of the form $(x - r_1)(x - r_2)$ if and only if $D > 0$ and $a= 1$. 
 
 
 
 
 
 
-
-
+A polynomial of degree 10 can have five distinct zeros with exactly two of those roots having multiplicity at least three.
 
 
 

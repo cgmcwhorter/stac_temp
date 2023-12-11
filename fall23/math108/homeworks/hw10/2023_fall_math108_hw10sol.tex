@@ -17,7 +17,21 @@
 	\begin{enumerate}[(a)]
 	\item Give an argument why Crybaby Cannon could be considered the better wrestler. 
 	\item Give an argument why Buzz Sawyer could be considered the better wrestler.
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item One can argue that because the Crybaby Cannon has a win percentage of only 88.5\%, while Buzz Sawyer has a win percentage of 87.6\%, Crybaby Cannon should be considered the better wrestler because he has a higher win percentage. \pspace
+
+\item One can argue that the players should be judged relative to the other wrestlers in their league. For instance, a 100\% win percentage against amateur wrestlers likely is `worth less' than a win percentage of even 80\% against professional wrestlers. To compare the `unusualness' of values in a normal distribution, one can use the $z$-score. We have\dots
+	\[
+	\begin{aligned}
+	z_{\text{Crybaby}}&= \dfrac{88.5\% - 72.4\%}{6.2\%}= \dfrac{16.1\%}{6.2\%} \approx 2.60
+	z_{\text{Buzz}}&= \dfrac{87.6\% - 81.5\%}{2.1\%}= \dfrac{6.1\%}{2.1\%} \approx 2.90
+	\end{aligned}
+	\]
+Because Buzz's $z$-score is larger, Buzz's win percentage is more `unusual' (relative to his league). So he is much more above average (relative to his league) than the Crybaby Cannon is in his league. Buzz could be considered the better wrestler using this argument. 
+\end{enumerate}
 
 
 
@@ -29,12 +43,47 @@
 \problem{10} Let $D$ be a distribution such that $D \sim N(67.2, 4.7)$. Suppose that $X$ is a random value sampled from the distribution $D$. Showing all your work, compute the following:
 	\begin{enumerate}[(a)]
 	\item $P(X < 73)$
-	\item $P(63 > X)$
+	\item $P(X= 63)$
 	\item $P(X > 61)$
 	\item $P(61 < X < 73)$
 	\item The probability that $X$ is exactly the average value for the distribution $D$. 
 	\item The value $X$ such that $X$ is the smallest value to be in the largest 7\% of values for this distribution. 
-	\end{enumerate}
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item
+	\[
+	z_{73}= \dfrac{x - \mu}{\sigma}= \dfrac{73 - 67.2}{4.7}= \dfrac{5.8}{4.7} \approx 1.23 \squiggle 0.8907
+	\] \pspace
+
+\item For any continuous distribution, $P(X= \#)= 0$. But then $P(X= 63)= 0$. \pspace
+
+\item 
+	\[
+	z_{61}= \dfrac{x - \mu}{\sigma}= \dfrac{61 - 67.2}{4.7}= \dfrac{-6.2}{4.7} \approx -1.32 \squiggle 0.0934
+	\] 
+But then $P(X < 61)= 0.0934$, which implies $P(X > 61)= 1 - P(X < 61)= 1 - 0.0934= 0.9066$. \pspace
+
+\item We have\dots
+	\[
+	P(61 < X < 73)= P(X < 73) - P(X < 61)= 0.8907 - 0.0934= 0.7973
+	\] \pspace
+
+\item For any continuous distribution, $P(X= \#)= 0$. But then $P(X= 67.2)= 0$. \pspace
+
+\item If $X$ is the smallest value that is in the largest 7\% of values, then it is greater than 93\% of the values in the distribution. But then $P(x < X)= 0.93$. This implies that $z_X \squiggle 0.93$. But then it must be that $z_X \approx 1.475$. But we know that\dots
+	\[
+	\begin{gathered}
+	z_X= \dfrac{X - \mu}{\sigma} \\
+	1.475= \dfrac{X - 67.2}{4.7} \\
+	X - 67.2= 6.9325 \\
+	X \approx 74.13
+	\end{gathered}
+	\]
+
+
+\end{enumerate}
 
 
 \end{document}

@@ -14,6 +14,8 @@
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
+\usetikzlibrary{decorations.markings}
+
 % -------------------
 % Content
 % -------------------
@@ -253,17 +255,41 @@ The problem with the given expression is that $\text{e} \neq 13$. \pvspace{1.3cm
 
 
 
+% Quiz 20
+\quizsol \textit{True/False}: There exists an undirected graph $G= (V, E)$ such that $\deg G= 1,\!489$. \pspace
+
+\sol The statement is \textit{false}. The Handshake Theorem states that the degree of an undirected graph is $\deg G= 2 |E(G)|$; that is, the degree of an undirected graph is twice the number of edges in the graph. This is because each vertex is counted twice when coming the degree (an edge is either a loop---which contributes twice to the degree---or is counted once for each of its endpoints). Therefore, the degree of an undirected graph must be even. There is no undirected graph $G$ with degree 1,489. \pvspace{1.3cm}
 
 
 
-%There exists an undirected graph $G= (V, E)$ such that $\deg G= 1,\!489$. 
+% Quiz 21
+\quizsol \textit{True/False}: A graph $G$ is undirected if and only if the adjacency matrix of $G$, $A_G$, is symmetric, i.e. $A_G^T= A_G$. \pspace
+
+\sol The statement is \textit{false}. It is true that every undirected graph has a symmetric adjacency matrix. This is because every edge joining $v_i$ to $v_j$ is also an edge connecting $v_j$ to $v_i$. But then $a_{ij}= a_{ji}$ in the adjacency matrix, i.e. $A_G^T= A_G$. However, if the adjacency matrix of a graph is symmetric, the graph need not be undirected. For instance, the graph below has the symmetric adjacency matrix also given below. \par
+	\[
+	\begin{gathered}
+	\begin{tikzpicture}
+	\begin{scope}[decoration={
+	markings,
+	mark=at position 0.55 with {\arrow{>}}}
+	]    
+	\draw[fill=black] (0,0) circle (0.1);
+	\draw[fill=black] (1.5,0) circle (0.1);
+	
+	\draw[line width=0.03cm,postaction={decorate}] (0,0) to[bend right=30] (1.5,0);
+	\draw[line width=0.03cm,postaction={decorate}] (1.5,0) to[bend right=30] (0,0);
+	\end{scope}
+	\end{tikzpicture} \\[0.3cm]
+	A_G= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+	\end{gathered}
+	\] \pvspace{1.3cm}
 
 
 
-% A graph $G$ is undirected if and only if the adjacency matrix of $G$, $A_G$, is symmetric, i.e. $A_G^T= A_G$.
+% Quiz 22
+\quizsol \textit{True/False}: If the degree of a graph $G$ is odd, then there exists an Euler circuit for $G$. \pspace
 
-
-
+\sol The statement is \textit{false}. For an undirected graph, we know that $G$ has an Euler circuit if and only if every vertex has positive even degree. But then the degree of $G$ is even. The degree of a graph cannot be odd without there being a vertex which has odd degree. But then the graph could not have an Euler circuit.\footnote{A fortiori, by the Handshake Theorem, the degree of an undirected graph is even. So a graph with odd degree cannot exist so that no such Euler circuit can exist.} For a directed graph, the graph has an Euler circuit if and only if $\deg^+ v= \deg^- v$ for all vertices in the graph. Because the degree of a directed graph is the degree of the underlying undirected graph, the total degree of the graph is even. But then there is no directed graph $G$ with odd degree, so that there can be no Euler circuit on such a (nonexistent) graph. 
 
 
 

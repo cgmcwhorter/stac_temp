@@ -1,0 +1,144 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{17: Due 12/11}{Mathematics is a language.}{Josiah Willard Gibbs}
+
+% Problem 1
+\problem{10} Showing all your work, factor the following quadratic expression:
+	\[
+	12x^2 - x - 20
+	\] \pspace
+
+\sol We find factors of $12 \cdot 20= 240$ that add to $-1$. Because $-20 < 0$, the factors must have opposite signs. 
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 240} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot -240$ & $-239$ \\
+	$-1 \cdot 240$ & $239$ \\
+	$2 \cdot -120$ & $-118$ \\
+	$-2 \cdot 120$ & $118$ \\
+	$3 \cdot -80$ & $-77$ \\
+	$-3 \cdot 80$ & $77$ \\
+	$4 \cdot -60$ & $-56$ \\
+	$-4 \cdot 60$ & $56$ \\
+	$5 \cdot -48$ & $-43$ \\
+	$-5 \cdot 48$ & $43$ \\
+	$6 \cdot -40$ & $-34$ \\
+	$-6 \cdot 40$ & $34$ \\
+	$8 \cdot -30$ & $-22$ \\
+	$-8 \cdot 30$ & $22$ \\
+	$10 \cdot -24$ & $-14$ \\
+	$-10 \cdot 24$ & $14$ \\
+	$12 \cdot -20$ & $-8$ \\
+	$-12 \cdot 20$ & $8$ \\ \hline
+	\multicolumn{1}{|r}{$15 \cdot -16$} & \multicolumn{1}{r|}{$-1$} \\ \hline
+	$-15 \cdot 16$ & $1$ 
+	\end{tabular}
+	\end{table}
+But then we have\dots
+	\[
+	12x^2 - x - 20= 12x^2 + 15x - 16x - 20= (12x^2 + 15x) + (-16x - 20)= 3x(4x + 5) - 4(4x + 5)= (3x - 4)(4x + 5)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use the quadratic formula to factor the following polynomial:
+	\[
+	1968x^2 - 18458x + 11495
+	\] \pspace
+
+\sol If the roots of $f(x)= ax^2 + bx + c$ are $r_0, r_1$, then we know that $f(x)= a(x - r_0)(x - r_1)$. So we need to find the roots of the given quadratic function. The polynomial $1968x^2 - 18458x + 11495$ has $a= 1968$, $b= -18458$, and $c= 11495$. But then\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-18458) \pm \sqrt{(18458)^2 - 4(1968)11495}}{2(1968)} \\[0.3cm]
+	&= \dfrac{18458 \pm \sqrt{340697764 - 90488640}}{3936} \\[0.3cm]
+	&= \dfrac{18458 \pm \sqrt{250209124}}{3936} \\[0.3cm]
+	&= \dfrac{18458 \pm 15818}{3936}
+	\end{aligned}
+	\] \pspace
+Therefore, the roots are $x= \frac{18458 - 15818}{3936}= \frac{2640}{3936}= \frac{55}{82}$ and $x= \frac{18458 + 15818}{3936}= \frac{34276}{3936}= \frac{209}{24}$. Therefore, we have\dots
+	\[
+	1968x^2 - 18458x + 11495= 1968 \left(x - \dfrac{55}{82} \right) \left(x - \dfrac{209}{24} \right)= 82 \left(x - \dfrac{55}{82} \right) \cdot 24 \left(x - \dfrac{209}{24} \right)= (82x - 55)(24x - 209)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Find all the real zeros of the following polynomial:
+	\[
+	x^6 - 16x^2
+	\] \pspace
+
+\sol The zeros of a function, $f(x)$, are the $x$-values such that $f(x)= 0$. Recall the difference of perfect squares: $a^2 - b^2= (a - b)(a + b)$. We have\dots
+	\[
+	\begin{aligned}
+	x^6 - 16x^2&= 0 \\[0.3cm]
+	x^2(x^4 - 16)&= 0  \\[0.3cm]
+	x^2(x^2 - 4)(x^2 + 4)&= 0  \\[0.3cm]
+	x^2(x - 2)(x + 2)(x^2 + 4)&= 0 
+	\end{aligned}
+	\]
+But then either $x^2= 0$, which implies $x= 0$ or $x - 2= 0$, which implies $x= 2$ or $x + 2= 0$, which implies $x= -2$ or $x^2 + 4= 0$, which implies that $x^2= -4$. The equation $x^2= -4$ has no real solutions. However, over the complex numbers, we know that $x^2= -4$ implies $x= \sqrt{-4}= \pm \sqrt{4} i= \pm 2i$. Therefore, the zeros of the polynomial are\dots
+	\[
+	-2, \quad 0, \quad 2, \quad -2i, \quad 2i 
+	\]
+Equivalently, the zeros are $0, \pm 2, \pm 2i$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	\dfrac{x + 1}{x - 3}= \dfrac{3x}{x + 2}
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{aligned}
+	\dfrac{x + 1}{x - 3}&= \dfrac{3x}{x + 2} \\[0.3cm]
+	(x + 1)(x + 2)&= 3x(x - 3) \\[0.3cm]
+	x^2 + 3x + 2&= 3x^2 - 9x \\[0.3cm]
+	2x^2 - 12x - 2&= 0 \\[0.3cm]
+	x^2 - 6x - 1&= 0 
+	\end{aligned}
+	\] \pspace
+Clearly, this polynomial does not factor. Therefore, we use the quadratic formula with $a= 1$, $b= -6$, and $c= -1$. 
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-6) \pm \sqrt{(-6)^2 - 4(1)(-1)}}{2(1)} \\[0.3cm]
+	&= \dfrac{6 \pm \sqrt{36 + 4}}{2} \\[0.3cm]
+	&= \dfrac{6 \pm \sqrt{40}}{2} \\[0.3cm]
+	&= \dfrac{6 \pm \sqrt{4 \cdot 10}}{2} \\[0.3cm]
+	&= \dfrac{6 \pm 2 \sqrt{10}}{2} \\[0.3cm]
+	&= 3 \pm \sqrt{10}
+	\end{aligned}
+	\] \pspace
+Therefore, the solutions are $x= 3 - \sqrt{10}$ and $x= 3 + \sqrt{10}$. 
+
+
+\end{document}

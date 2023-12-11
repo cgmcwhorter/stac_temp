@@ -1,0 +1,120 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{16: Due 12/12}{Linear programming can be viewed as part of a great revolutionary development which has given mankind the ability to state general goals and to lay out a path of detailed decisions to take in order to 'best' achieve its goals when faced with practical situations of great complexity.}{George Dantzig}
+
+% Problem 1
+\problem{10} Find the initial simplex tableau corresponding to the linear programming problem shown below:
+	\[
+	\begin{gathered}
+	\hspace{-0.7cm} \max z= 4x_1 - x_2 + 5x_3 \\
+	\begin{cases}
+	x_1 + 7x_3 \leq 20 \\
+	x_1 - 5x_2 + 9x_3 \geq -20 \\
+	-x_1 + x_2 - 5x_3 \geq30
+	x_1, x_2, x_3 \geq 0
+	\end{cases}
+	\end{gathered}
+	\] \pspace
+
+\sol 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Below is the initial simplex tableau corresponding to a linear programming maximization problem. Find the initial maximization problem. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rrrrrrrr}
+	$7$ & $9$ & $0$ & $1$ & $1$ & $0$ & $0$ & $21$ \\
+	$-1$ & $9$ & $4$ & $2$ & $0$ & $-1$ & $0$ & $37$ \\
+	$1$ & $0$ & $-1$ & $3$ & $0$ & $0$ & $1$ & $46$ \\
+	$-5$ & $4$ & $-6$ & $1$ & $0$ & $0$ & $0$ & $0$ \\
+	\end{tabular}
+	\end{table} \pspace
+
+\sol 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Below is the final simplex tableau for a linear programming maximization problem. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rrrrrrrrrrrr}
+	$0$ & $9.3$ & $0$ & $0$ & $-3.31$ & $1$ & $-1.23$ & $-0.11$ & $0.45$ & $0$ & $0$ & $26.79$ \\
+	$1$ & $0.39$ & $0$ & $0$ & $3.08$ & $0$ & $0.31$ & $0.18$ & $-0.14$ & $0$ & $0$ & $27.37$ \\
+	$0$ & $0.68$ & $1$ & $0$ & $-0.77$ & $0$ & $-0.08$ & $0.05$ & $0.07$ & $0$ & $0$ & $5.1$ \\
+	$0$ & $-0.36$ & $0$ & $1$ & $0.08$ & $0$ & $0.31$ & $-0.07$ & $0.11$ & $0$ & $0$ & $28.87$ \\
+	$0$ & $-3.99$ & $0$ & $0$ & $-6.46$ & $0$ & $0.15$ & $-1.97$ & $1.24$ & $1$ & $0$ & $61.06$ \\
+	$0$ & $-1.79$ & $0$ & $0$ & $-3.15$ & $0$ & $0.38$ & $-1.37$ & $0.29$ & $0$ & $1$ & $31.27$ \\
+	$0$ & $2.78$ & $0$ & $0$ & $9.62$ & $0$ & $3.46$ & $0.34$ & $0.47$ & $0$ & $0$ & $355.67$
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item How many inequalities were considered?
+\item How many variables were there in the original inequalities?
+\item How many slack/surplus variables were introduced?
+\item What was the solution to this maximization problem?
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Below is the final simplex tableau for a linear programming minimization problem. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rrrrr}
+	$0$ & $1$ & $0.5$ & $-0.25$ & $0.25$ \\
+	$1$ & $0$ & $-0.25$ & $0.38$ & $0.63$ \\
+	$0$ & $0$ & $4.75$ & $1.38$ & $13.63$
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item How many inequalities were considered?
+\item How many variables were there in the original inequalities?
+\item How many slack/surplus variables were introduced?
+\item What was the solution to this minimization problem?
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+\end{document}

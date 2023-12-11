@@ -71,25 +71,46 @@ Generally, if events $E$ and $F$ are disjoint, $P(E \text{ or } F)= P(E) + P(F)$
 \sol 
 \begin{enumerate}[(a)]
 \item 
+	\[
+	\hspace{-1.75cm} P(\text{State or Federal})= P(\text{State}) + P(\text{Federal}) - P(\text{State \& Federal})= \dfrac{109}{227} + \dfrac{80}{227} - \dfrac{38}{227}= \dfrac{71 + 38 + 42}{227}= \dfrac{151}{227} \approx 0.6652
+	\] \pspace
+
 \item 
+	\[
+	P(\text{State and Federal})= \dfrac{38}{227} \approx 0.1674
+	\] \pspace
+
 \item 
+	\[
+	P(\text{Neither State nor Federal})= 1 - P(\text{State or Federal})= 1 - \dfrac{151}{227}= \dfrac{76}{227} \approx 0.3363
+	\] \pspace
+
 \item 
+	\[
+	P(\text{Only State})= P(\text{State}) - P(\text{State \& Federal})= \dfrac{109}{227} - \dfrac{38}{227}= \dfrac{42}{227} \approx 0.1850
+	\] \pspace
+
 \item 
+	\[
+	P(\text{Federal} \;|\; \text{State})= \dfrac{P(\text{Federal \& State})}{P(\text{State})}= \dfrac{38/227}{109/227}= \dfrac{38}{109} \approx 0.3486
+	\]
 \end{enumerate}
 
+	\vfill
+	
 	\[
-	\begin{tikzpicture}
+	\begin{tikzpicture}[scale=0.69]
 	\draw (0,0) rectangle (9,6);
 	\draw (3.5,3) circle (2);
 	\draw (5.5,3) circle (2);
 	
-	\node at (3.5,5.3) {Electric};
-	\node at (5.7,5.3) {SUV}; 
+	\node at (3.5,5.3) {State};
+	\node at (5.7,5.3) {Federal}; 
 	
-	\node at (2.5,3) {42};
-	\node at (4.5,3) {3};
-	\node at (6.5,3) {123};
-	\node at (8,1) {292};
+	\node at (2.5,3) {71};
+	\node at (4.5,3) {38};
+	\node at (6.5,3) {42};
+	\node at (8,1) {76};
 	\end{tikzpicture}
 	\]
 
@@ -175,10 +196,25 @@ Given the data above, answer the following:
 \sol 
 \begin{enumerate}[(a)]
 \item 
+	\[
+	P(\text{Job})= 0.0340 + 0.6720= 0.7060
+	\] \pspace
+
 \item 
+	\[
+	P(\text{CS \& Job})= 0.0340
+	\] \pspace
+
 \item 
+	\[
+	P(\text{Job or Not CS})= 0.0340 + 0.6720 + 0.2880= 0.994
+	\] \pspace
+
 \item 
-\end{enumerate}
+	\[
+	P(\text{CS})= 0.0340 + 0.0060= 0.04
+	\]
+\end{enumerate} \pspace
 
 		\[
 		\begin{tikzpicture}[scale= 1.0]

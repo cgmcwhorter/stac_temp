@@ -1,0 +1,133 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\DeclareMathOperator{\disc}{disc}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{16: Due 12/11}{I hope that seeing the excitement of solving this problem will make mathematicians realize that there are lots and lots of other problems in mathematics which are going to be just as challenging in the future.}{Andrew Wiles}
+
+% Problem 1
+\problem{10} Without explicitly solving the quadratic equation, determine whether how many distinct solutions the equation has and whether the solutions are rational, real, or complex. Be sure to justify your answer.
+	\[
+	4x(5 - x)= 11
+	\] \pspace
+
+\sol We can determine the nature of solutions for a quadratic equation of the form $f(x)= 0$, where $f(x)$ is a quadratic function, using the determinant of $f(x)$. We have\dots
+	\[
+	\begin{aligned}
+	4x(5 - x)= 11 \\
+	20x - 4x^2= 11 \\
+	0= 4x^2 - 20x + 11
+	\end{aligned}
+	\]
+Let $f(x)= 4x^2 - 20x + 11$. This is a quadratic function, i.e. a function of the form $ax^2 + bx + c$, with $a= 4$, $b= -20$, and $c= 11$. The discriminant of $f(x)$ is\dots
+	\[
+	\disc f(x)= b^2 - 4ac= (-20)^2 - 4(4)11= 400 - 176= 224
+	\]
+Because $\disc f(x)= 224 > 0$, this equation has two distinct, real solutions. However, because $224$ is not a perfect square, the solutions are not rational. In fact, the solutions to the equation are\dots
+	\[
+	x= \dfrac{5 \pm 2 \sqrt{6}}{2}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Without explicitly factoring the function $f(x)= x^2 - 2x + 26$ factors `nicely' over the integers, reals, or complex numbers. Be sure to justify your answer. \pspace
+
+\sol We can determine the nature of the factorization of a quadratic function $ax^2 + bx + c$ using the discriminant of the function. For the quadratic function $f(x)= x^2 - 2x + 26$, we have $a= 1$, $b= -2$, and $c= 26$. But then\dots
+	\[
+	\disc f(x)= b^2 - 4ac= (-2)^2 - 4(1)26= 4 - 104= -100
+	\]
+Because $\disc f(x)= -100 < 0$, $f(x)$ does not factor over the real numbers. However, because $\disc f(x)= -10^2$ is the negative of a perfect square, $f(x)$ factors `nicely' over the complex numbers. In fact, 
+	\[
+	x^2 - 2x + 26= \big(x - (1 - 5i) \big) \big(x - (1 + 5i) \big)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Solve the following quadratic equation. Be sure to fully justify your answer and show all your work. Verify your answer(s).
+	\[
+	2x^2= 3 - 5x
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	2x^2= 3 - 5x \\[0.3cm]
+	2x^2 + 5x - 3= 0 
+	\end{gathered}
+	\]
+Using factoring, we have\dots
+	\[
+	\begin{gathered}
+	2x^2 + 5x - 3= 0 \\[0.3cm]
+	(2x - 1)(x + 3)= 0 
+	\end{gathered}
+	\]
+But then $2x - 1= 0$, which implies $x= \frac{1}{2}$, or $x + 3= 0$, which implies $x= -3$. \pspace
+
+Alternatively, we can use the quadratic formula: the function has $a= 2$, $b= 5$, and $c= -3$ so that\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-5 \pm \sqrt{5^2 - 4(2)(-3)}}{2(2)} \\[0.3cm]
+	&= \dfrac{-5 \pm \sqrt{25 + 24}}{4} \\[0.3cm]
+	&= \dfrac{-5 \pm \sqrt{49}}{4} \\[0.3cm]
+	&= \dfrac{-5 \pm 7}{4}
+	\end{aligned}
+	\]
+Therefore, the solutions are $x= \frac{-5 - 7}{4}= \frac{-12}{4}= -3$ and $x= \frac{-5 + 7}{4}= \frac{2}{4}= \frac{1}{2}$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Solve the following equation. Be sure to fully justify your answer and show all your work.
+	\[
+	x= \dfrac{10x - 19}{x}
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	x= \dfrac{10x - 19}{x} \\[0.3cm]
+	x^2= 10x - 19 \\[0.3cm]
+	x^2 - 10x + 19= 0 
+	\end{gathered}
+	\]
+Because $b^2 - 4ac= (-10)^2 - 4(1)19= 100 - 76= 24$ is not a perfect square, this quadratic function does not factor `nicely.' However, we can use the quadratic formula: the function has $a= 1$, $b= -10$, and $c= 19$ so that\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-10) \pm \sqrt{(-10)^2 - 4(1)19}}{2(1)} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{100 - 76}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{24}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm \sqrt{4 \cdot 6}}{2} \\[0.3cm]
+	&= \dfrac{10 \pm 2 \sqrt{6}}{2} \\[0.3cm]
+	&= 5 \pm \sqrt{6}
+	\end{aligned}
+	\]
+Therefore, the solutions are $x= 5 - \sqrt{6}$ and $x= 5 + \sqrt{6}$. 
+ 
+
+\end{document}

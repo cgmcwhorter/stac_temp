@@ -1,0 +1,86 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 12/11}{The normal distribution describes the manner in which many phenomena vary around a central value that represents their most probable outcome.}{Leonard Mlodinow}
+
+% Problem 1
+\problem{10} Suppose that Jasmin and Jafar are basketball players. The scores of players in Jasmin's women's league are normally distributed with mean 71.9 and standard deviation 5.4. The scores of playesr in Jafar's men's league are also normally distributed with mean 112 and standard deviation 6.9. If Jasmin scored 83 baskets in her season and Jafar scored 124 baskets in his season, relative to other players in their league, who is the `better' player? Explain. \pspace
+
+\sol We should measure the `goodness' of a player by how well they perform relative to the competition. For normal distributions, one can measure the `unusualness' of a value in the distribution by using the $z$-score. Observe that we have\dots
+	\[
+	\begin{aligned}
+	z_{\text{Jasmin}}&= \dfrac{x - \mu}{\sigma}= \dfrac{83 - 71.9}{5.4}= \dfrac{11.1}{5.4} \approx 2.06
+	z_{\text{Jafar}}&= \dfrac{x - \mu}{\sigma}= \dfrac{124 - 112}{6.9}= \dfrac{12}{6.9} \approx 1.74
+	\end{aligned}
+	\]
+Because both $z$-score are positive, both their scoring values are above the average. However, because Jasim's $z$-score is larger, Jasmin's scoring amount is more `unusually' above average than Jafar's. Therefore, using this metric, Jasmin is the better player. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider the distribution $N(782.3,49.6)$. Suppose that a random variable $X$ is chosen from this distribution. Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $P(X > 856.4)$
+	\item $P(X < 856.4)$
+	\item $P(X < 771.8)$
+	\item $P(771.8 < X < 856.4)$
+	\item $P(X= 800)$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	z_{856.4}= \dfrac{856.4 - 782.3}{49.6}= \dfrac{74.1}{49.6}= 1.49 \squiggle 0.9319
+	\]
+Then $P(X < 856.4)= $. Therefore, $P(X > 856.4)= 1 - P(X < 856.4)= 1 - 0.9319= 0.0681$. \pspace
+
+\item From (a), we know that $P(X < 856.4)= 0.9319$. \pspace
+
+\item 
+	\[
+	z_{771.8}= \dfrac{771.8 - 782.3}{49.6}= \dfrac{-10.5}{49.6}= -0.21 \squiggle 0.4168
+	\]
+Therefore, $P(X < 771.8)= 0.4168$. \pspace
+
+\item We know $P(771.8 < X < 856.4)= P(X < 856.4) - P(X < 771.8)= 0.9319 - 0.4168= 0.5151$. \pspace
+
+\item For any continuous distribution, we know $P(X= \#)= 0$. Because the normal distribution is continuous, we know that $P(X= 800)= 0$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} The Graduate Record Examination (GRE) is an exam required by many institutions for students applying to graduate school. According to reports from ETS---the organization that runs the GRE, the scores for a particular GRE exam had mean 151.3 with standard deviation 8.7. Assuming that the scores for this exam were normally distributed, what was the minimum score required on this exam to be in the top 20\% of exam scores? \pspace
+
+\sol Let $X$ be the minimum score required to be in the top 20\% of exam takers. This means that at least 80\% of exam takers score at most this score in the exam. But then we know that $z_X \squiggle 0.80$. Examining a $z$-table, we see that this implies that $z_X \approx 0.84$. But then\dots
+	\[
+	\begin{gathered}
+	z_X= 0.84 \\[0.3cm]
+	\dfrac{X - \mu}{\sigma}= 0.84 \\[0.3cm]
+	\dfrac{X - 151.3}{8.7}= 0.84 \\[0.3cm]
+	X - 151.3= 7.308 \\[0.3cm]
+	X= 158.608
+	\end{gathered}
+	\]
+Therefore, one needs to obtain a score of at least 158.6 to be in the top 20\% of exam takers. 
+
+
+\end{document}
