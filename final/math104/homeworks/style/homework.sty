@@ -1,0 +1,197 @@
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	etoolbox,			% Use Booleans
+	microtype,			% Improved Typography
+}
+%	amsthm,			% Theorem Environments
+%	caption,			% Remove 'Figure' Prefix
+%	float,				% Force Table Placement
+%	graphicx,			% Include Images
+
+
+
+% -------------------
+% Course Information
+% -------------------
+\newcommand{\course}{MATH 308}
+\newcommand{\semester}{Fall 2023}
+
+
+
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+
+% -------------------
+% Colors
+% -------------------
+\usepackage{xcolor}
+
+% College Colors
+\definecolor{stacred}{HTML}{73233c} % 115, 35, 60
+\definecolor{stacgold}{HTML}{fdbe57} % 253, 190, 87
+
+% Quote Colors
+\definecolor{quotegray}{HTML}{595959} % 89, 89, 89
+
+
+
+% -------------------
+% Hyperref
+% -------------------
+%\usepackage[breaklinks = true]{hyperref}
+%\hypersetup{
+%	colorlinks 	= true,
+%  	linkcolor  	= stacred,
+%  	urlcolor   	= stacred
+%}
+
+
+
+% -------------------
+% Tikz
+% -------------------
+%\usepackage{tikz}
+%\usetikzlibrary{}
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=newest}
+%%\usepgfplotslibrary{}
+
+
+
+% -------------------
+% Enumerate/Itemize Environments
+% -------------------
+\usepackage{enumerate}
+%\newenvironment{2enumerate}{%
+%	\begin{enumerate}[(a)]
+%	\begin{multicols}{2}
+%	}{%
+%	\end{multicols}
+%	\end{enumerate}
+%}
+%\newenvironment{3enumerate}{%
+%	\begin{enumerate}[(a)]
+%	\begin{multicols}{3}
+%	}{%
+%	\end{multicols}
+%	\end{enumerate}
+%}
+
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% Paragraph Spacing & Head/Foot Height
+\setlength{\parskip}{0.0cm}
+\setlength{\parindent}{0.0cm}
+\headheight = 14pt
+\footskip = 14pt
+
+% Default Page Style
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\small\thepage \,of \pageref{LastPage}}
+	\renewcommand{\footrulewidth}{0.0pt}
+}
+\pagestyle{pages}
+
+
+
+% -------------------
+% Title Commands
+% -------------------
+
+% Name Line 
+\newbool{hideans}
+\newcommand{\ansname}{
+	\ifbool{hideans}{%
+	\underline{\hspace{1.15cm}\phantom{Caleb McWhorter --- Solutions }\hspace{1.15cm}}%
+	}{%
+	\underline{\hspace{1.238cm}\itshape Caleb McWhorter --- Solutions \hspace{1.238cm}}%
+	}
+}
+
+% First Page Title
+\newbool{quotetype}
+\newcommand{\homework}[3]{%
+	\ifbool{quotetype}{%
+\noindent\begin{minipage}[b]{0.56\textwidth}
+	\noindent \textbf{Name:} \hspace{-0.35cm} \ansname \\
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW #1}
+\end{minipage}%
+\begin{minipage}[b]{0.44\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``#2''} \par
+  	\raggedleft
+  	\color{quotegray}--- \itshape #3
+\end{minipage} \par\vspace{0.5cm}
+}{
+\noindent \textbf{Name:} \ansname \\
+\noindent\begin{minipage}[t]{0.27\textwidth}
+  	\textbf{\course} \par
+	\textbf{\semester} \par
+ 	\textbf{HW #1}
+\end{minipage}%
+\begin{minipage}[t]{0.73\textwidth}
+	\raggedright
+  	{\color{quotegray} \itshape ``#2''} \par
+  	\raggedleft
+  	\color{quotegray}--- \itshape #3
+\end{minipage} \par\vspace{0.5cm}
+	}
+}
+
+
+
+% -------------------
+% Problem/Solution Commands
+% -------------------
+
+% Unnumbered Problem
+\newcommand{\prob}{\noindent\mbox{\textbf{Problem. }}}
+
+% Counted Problem
+\newcounter{problem}
+\newcommand{\problem}[1]{
+	\stepcounter{problem}%
+	\if \ifnum #1 = 0 \noindent\mbox{\textbf{Problem \theproblem.}} %
+	\else \ifnum #1 = 1 \noindent\mbox{\textbf{Problem \theproblem.} (#1pt)} %
+	\else \noindent\mbox{\textbf{Problem \theproblem.} (#1pts)} %
+	\fi
+    \fi
+}
+
+% Solution
+\newcommand{\sol}{\noindent\textbf{Solution. }}
+
+
+
+% -------------------
+% General Commands
+% -------------------
+\newcommand\ds{\displaystyle} % Shortened displaystyle
+\newcommand{\pspace}{\par\vspace{\baselineskip}} % Par then linebreak
+\newcommand{\pvspace}[1]{\par\vspace{#1}} % Par then vpsace
+\newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup} % Unnumbered Footnote
