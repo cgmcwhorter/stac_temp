@@ -1,0 +1,65 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+\begin{document}
+
+\homework{1: Due 02/01}{And I knew exactly what to do\dots but in a much more real sense, I had no idea what to do.}{Michael Scott, The Office}
+
+% Problem 1
+\problem{10} Showing all your work and fully justifying your reasoning, compute the following:
+	\begin{2enumerate}
+	\item $\ds \lim_{x \to -6} \dfrac{x^2 + 3x - 18}{x^2 + 5x - 6}$
+	\item $\ds \lim_{n \to \infty} \dfrac{2n^2 - 35n + 17}{6n^2 + 19n - 49}$
+	\item $\dfrac{d}{dx} \, \ln \left(x \cos x \right)$
+	\item $\ds \int_0^1 \dfrac{x}{x + 1} \;dx$
+	\end{2enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Recall that a sequence $\{ a_n \}$ is increasing if $a_{n+1} \geq a_n$ for all $n$ and the sequence is decreasing if $a_{n+1} \leq a_n$ for all $n$. A sequence $\{ a_n \}$ is called bounded if there exists $M \in \mathbb{R}$ such that $|a_n| \leq M$ for all $n$. The \textit{Monotone Convergence Theorem} states the following: if $\{ a_n \}$ is a bounded sequence that is either increasing or decreasing, i.e. is `monotone', then $\{ a_n \}$ converges. Now consider the sequence with $a_0= 2$ and given recursively via\dots
+	\[
+	a_{n+1}= \dfrac{1}{2} \left( a_n + \dfrac{5}{a_n} \right)
+	\]
+
+\begin{enumerate}[(a)]
+\item Compute $a_1, a_2, a_3$. 
+\item Compare your values in (a) to $\sqrt{5}$. What might you conjecture?
+\item Explain why the Monotone Convergence Theorem implies that $\{ a_n \}$ has a limit. 
+\item By (c), we know $L:= \ds \lim_{n \to \infty} a_n$ exists. Taking the limit in both sides of the recursive definition for $\{ a_n \}$, show that $L= \sqrt{5}$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} The Intermediate Value Theorem states the following: if $f(x)$ is continuous on $[a, b]$ and $f(a) < c < f(b)$, then there exists an $x_0 \in (a, b)$ such that $f(x_0)= c$. Consider the function $f(x)= x^2 - 3x + 4$ on the interval $[-1, 5]$. 
+	\begin{enumerate}[(a)]
+	\item Give a sketch of $f(x)$ on the interval $[-1, 5]$. 
+	\item Explain why $f(x)$ is continuous. 
+	\item Explain why there is a $x_0 \in [-1, 5]$ such that $f(x_0)= 4$. 
+	\item Find the $x_0 \in [-1, 5]$ such that $f(x_0)= 4$. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} The Mean Value Theorem states the following: if $f(x)$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then there exists $c \in (a, b)$ such that $f(b) - f(a)= f'(c) \big( b - a \big)$. Consider the function $f(x)= x^3 + x^2 - 4x - 5$. Find the values $c \in [-1, 4]$ that satisfy the Mean Value Theorem. 
+
+
+\end{document}
