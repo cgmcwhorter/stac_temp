@@ -1,0 +1,106 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{10: Due 03/04}{I hate these nerds! Just 'cause I'm stupider than them they think they're smarter than me.}{Hubert J. Farnsworth, Futurama}
+
+% Problem 1
+\problem{10} Let $f(x)$ be the function given by $f(x)= 4x - 5$. 
+	\begin{enumerate}[(a)]
+	\item Find a value in the range of $f$. Be sure to justify why the value is in the range. 
+	\item Compute $f(-1)$. Is $(-1, -9)$ on the graph of $f$? Explain. 
+	\item Is there an $x$ such that $f(x)= 11$? Explain. 
+	\item Is $2 \in f^{-1}(0)$? Explain. 
+	\item Assuming $f^{-1}$ exists, what is $f(f^{-1}(\sqrt{2}))$ and $f^{-1}(f(\sqrt{2}))$?
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider the relation $f$ plotted below. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=1.5,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -10.5, xmax=10.5,
+	ymin= -10.5, ymax=10.5,
+	xtick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	ytick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	minor tick = {-10,-9,...,10},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\addplot[line width= 0.02cm,samples=100,domain= -10.5:-7] ({x},{(x + 7)^2}); 
+	\addplot[line width= 0.02cm,samples=100,domain= -7:0] ({x},{4/7*x + 4}); 
+	\addplot[line width= 0.02cm,samples=100,domain= 0:10.5] ({x},{-x^2/10 + 4}); 
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\] 
+
+\begin{enumerate}[(a)]
+\item Compute $f(-9)$ and $f(10)$. 
+\item Is $f(x)$ a function? Explain. 
+\item Does $f(x)$ have an inverse? If so, sketch the inverse. If not, explain why. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, verify that $g(x)= \frac{1 - x}{5}$ is the inverse function for $f(x)= 1 - 5x$. Also, compute $g(6)$. What does the value of $g(6)$ tell you about the function $f(x)$? 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} A relation $\phi$ is plotted below. 
+	\[
+	\fbox{
+	\begin{tikzpicture}[scale=1.5,every node/.style={scale=0.5}]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -10.5, xmax=10.5,
+	ymin= -10, ymax=25,
+	xtick={-10,-8,-6,-4,-2,0,2,4,6,8,10},
+	ytick={-10,-8,...,25},
+	minor tick = {-10,-9,...,25},
+	xlabel=\(x\),ylabel=\(y\),
+	]
+	\addplot[line width= 0.02cm,samples=200,domain= -10.5:10.5] ({x},{-1.56755*x - 0.529734*x^2 + 0.0728113*x^3 + 0.039114*x^4 +  0.00344758*x^5 - 0.000794827*x^6 - 0.000120631*x^7 + 0.00000498369*x^8 + 0.000000848123*x^9}); 
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\] 
+Using the plot above, answer the following:
+	\begin{enumerate}[(a)]
+	\item Compute $\phi(5)$.
+	\item Find the $y$-intercept for $\phi(x)$. 
+	\item Find the $x$-intercepts for $\phi(x)$. 	
+	\item As accurately as possible, compute the preimage of $-5$, i.e. $\phi^{-1}(-5)$. 
+	\item Explain why (d) implies that $\phi$ does not have an inverse function. 
+	\end{enumerate}
+
+
+\end{document}

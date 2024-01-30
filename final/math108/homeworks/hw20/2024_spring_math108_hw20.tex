@@ -1,0 +1,101 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+\usepackage{float}	% Force Table Placement
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{20: Due 04/24}{Okay. No hard feelings, but I hate you. Not joking. Bye.}{Gina Linetti, Brooklyn 99}
+
+% Problem 1
+\problem{10} Find the initial simplex tableau corresponding to the linear programming problem shown below:
+	\[
+	\begin{gathered}
+	\max z= 6x_1 + 9 x_2 \\
+	\begin{cases}
+	x_1 + x_2 \leq 100 \\
+	-x_1 + 7x_2 \geq 10 \\
+	-6x_1 + x_2 \leq -70 \\
+	x_1 + 7x_2 \leq 80 \\
+	x_1, x_2 \geq 0
+	\end{cases}
+	\end{gathered}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Below is the initial simplex tableau corresponding to a linear programming maximization problem. Find the initial maximization problem. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	$4$ & $-1$ & $2$ & $1$ & $0$ & $0$ & $82$ \\
+	$-1$ & $5$ & $9$ & $0$ & $1$ & $0$ & $55$ \\
+	$7$ & $-1$ & $4$ & $0$ & $0$ & $1$ & $68$ \\
+	$-2$ & $-3$ & $-1$ & $0$ & $0$ & $0$ & $0$ 
+	\end{tabular}
+	\end{table}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Below is the final simplex tableau for a linear programming maximization problem. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rrrrrrrrr}
+	$0$ & $1$ & $0$ & $0$ & $0.03$ & $0.12$ & $-0.1$ & $0.04$ & $8.89$ \\
+	$0$ & $0$ & $1$ & $0$ & $-0.05$ & $0.03$ & $0.01$ & $0.05$ & $2.19$ \\
+	$0$ & $0$ & $0$ & $1$ & $0.05$ & $-0.01$ & $0.05$ & $0.02$ & $7.31$ \\
+	$1$ & $0$ & $0$ & $0$ & $0.01$ & $-0.06$ & $-0.03$ & $0.1$ & $1.27$ \\
+	$0$ & $0$ & $0$ & $0$ & $0.25$ & $0.86$ & $0.18$ & $0.6$ & $123.14$
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item How many inequalities were considered?
+\item How many variables were there in the original inequalities?
+\item How many slack/surplus variables were introduced?
+\item What was the solution to this maximization problem?
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Below is the final simplex tableau for a linear programming minimization problem. \par
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{rrrrrrr}
+	$3$ & $9$ & $0$ & $1$ & $0$ & $2$ & $5$ \\
+	$0$ & $-5$ & $0$ & $0$ & $1$ & $-1$ & $2$ \\
+	$1$ & $4$ & $1$ & $0$ & $0$ & $1$ & $2$ \\
+	$5$ & $48$ & $0$ & $0$ & $0$ & $15$ & $30$
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item How many inequalities were considered?
+\item How many variables were there in the original inequalities?
+\item How many slack/surplus variables were introduced?
+\item What was the solution to this minimization problem?
+\end{enumerate}
+
+
+\end{document}

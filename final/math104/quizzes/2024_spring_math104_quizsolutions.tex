@@ -10,9 +10,26 @@
 \thispagestyle{title}
 
 % Quiz 1
-\quizsol \textit{True/False}: The statement below is true. \pspace
+\quizsol \textit{True/False}: The expression $12 \div 6 \cdot 2 + (-1)^3$ is the same as $\frac{12}{6 \cdot 2} + (-1)^3$ and both are equal to $0$. \pspace
 
-\sol The statement is \textit{true}. 
+\sol The statement is \textit{false}. We can compute both, following order of operations (PEMDAS, applied carefully left-to-right), and show that the expressions evaluate to different values:
+	\[
+	\begin{gathered}
+	12 \div 6 \cdot 2 + (-1)^3 \\
+	12 \div 6 \cdot 2 - 1 \\
+	2 \cdot 2 - 1 \\
+	4 - 1 \\
+	3
+	\end{gathered} \hspace{4cm}
+	\begin{gathered}
+	\tfrac{12}{6 \cdot 2} + (-1)^3 \\
+	\tfrac{12}{6 \cdot 2} - 1 \\
+	\tfrac{12}{12} - 1 \\
+	1 - 1 \\
+	0
+	\end{gathered}
+	\]
+For these two expressions to be the same, the first needs a set of parentheses around the $6 \cdot 2$: $12 \div (6 \cdot 2) + (-1)^3$.
 
 
 
