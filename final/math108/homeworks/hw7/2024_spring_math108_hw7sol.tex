@@ -1,0 +1,91 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\usepackage{actuarialsymbol}	% Actuary Symbols
+\newcommand{\actS}[2]{s_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s
+\newcommand{\actSD}[2]{\ddot{s}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s dot
+\newcommand{\actA}[2]{a_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a
+\newcommand{\actAD}[2]{\ddot{a}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a dot
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{7: Due 02/14}{[David] The cedar planks out behind the motel, are they being used for something, or are they up for grabs? [Stevie] How do you know it's cedar? [David] Um, I bought a cologne once, in Japan, that's supposed to smell like the aftermath of a car crashing into a cedar tree.}{David Rose \& Stevie Budd, Schitt's Creek}
+
+% Problem 1
+\problem{10} Lue Zcar is going through a midlife crises and decides to buy a new luxury sports car. He asks his assistant to organize the loan. Lue's assistant organizes the loan, securing a \$354,750 loan at 6.42\% annual interest, compounded monthly over a period of 10~years. Mr. Zcar's payments will occur at the end of each month. 
+	\begin{enumerate}[(a)]
+	\item What are Lue's monthly payments?
+	\item What is the total interest Lue will pay on this loan?
+	\end{enumerate} \pspace
+
+\sol Because this is a loan with regular, equal payments, this is an amortization. Because the payments are made at the end of each month, this is an amortization based on an ordinary annuity. Because the number of payments per year, $\text{PY}= 12$, is equal to the number of compounds per year, $k= 12$, this is an amortization based on a simple ordinary annuity. The nominal interest rate is $r= 0.0642$. Because this is a simple annuity, we have $i= \frac{r}{k}= \frac{0.0642}{12}= 0.00535$. Mr. Zcar will make a total of $\text{PM}= 12 \cdot 10= 120$~payments. 
+
+\begin{enumerate}[(a)]
+\item We want to know Lue's monthly payments so that after 10~years, he will pay off the loan's present amount of \$354,750 in the future. We have\dots
+	\[
+	\actA{120}{i}= \dfrac{1 - (1 + i)^{-120}}{i}= \dfrac{0.47285981005588773}{0.00535}= 88.385011
+	\] 
+But then\dots
+	\[
+	R= \dfrac{P}{\actA{120}{i}}= \dfrac{\$354,\!750}{88.385011} \approx \$4,\!013.69 
+	\]
+Therefore, Lue's monthly payment will be \$4,013.69. \pspace
+
+\item Lue will make 120~payments of \$4,013.69. Therefore, in total, Lue will pay $\$4,\!013.69 \cdot 120= \$481,\!642.80$. Lue only ever pays back the loan amount and the interest. As the loan amount was \$354,750. The amount of interest Lue pays is $\$481,\!642.80 - \$354,\!750= \$126,\!892.80$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Sara Bellum is a neurobiologist looking to fund her lab. She approaches a local businessman, Faisal, for support. As he wants to support the sciences, he offers her very favorable terms: \$540,000 at 2.99\% annual interest, compounded semiannually for a period of 10~years. Determine to pay back the loan quickly, Sara will make equal, start of the month payments of \$5,194.33.
+	\begin{enumerate}[(a)]
+	\item How much does Sara still owe after 5~years of payments?
+	\item At the end of 5~years, how much of Sara's payments actually go toward the loan? How much is paid in interest for this payment?
+	\end{enumerate} \pspace
+
+\sol Because this is a loan with regular, equal payments, this is an amortization. Because the payments are made at the start of each month, this is an amortization based on an annuity due. Because the number of payments per year, $\text{PY}= 12$, is not equal to the number of compounds per year, $k= 2$, this is an amortization based on a general annuity due. The nominal interest rate is $r= 0.0299$. Because this is a general annuity, we have to convert the interest:
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0299}{2} \right)^{2/12} - 1= 1.01495^{1/6} - 1= 1.0024762859767522 - 1= 0.0024762859767522
+	\]
+Sara will make a total of $\text{PM}= 12 \cdot 10= 120$~payments. 
+
+\begin{enumerate}[(a)]
+\item We want to know how much Sara owes after making a total of $12 \cdot 5= 60$~payments. We have\dots
+	\[
+	\begin{aligned}
+	\actA{120 - 60}{i}= \actA{60}{i}= \dfrac{1 - (1 + i)^{-60}}{i}= \dfrac{0.13790818663526738}{0.0024762859767522}= 55.691543 \\[0.3cm]
+	\actAD{120 - 60}{i}= \actAD{60}{i}= (1 + i) \actA{60}{i}= (1.0024762859767522) 55.691543= 55.829451
+	\end{aligned}
+	\] 
+But then\dots
+	\[
+	\text{A.O.}= R \actAD{60}{i}= \$5,\!194.33 (55.829451) \approx \$289,\!996.59
+	\]
+Therefore, after 5~years of payments, Sara still owes \$289,996.59. \pspace
+
+\item We want to know how much of Sara's payments at the end of 5~years is going towards the loan, i.e. the payment against the principal. We have\dots
+	\[
+	\begin{aligned}
+	\actA{120 - 60 + 1}{i}&= \actA{61}{i}= \dfrac{1 - (1 + i)^{-61}}{i}= \dfrac{0.14003769922122156}{0.0024762859767522}= 56.551505 \\[0.3cm]
+	\actAD{120 - 60 + 1}{i}&= \actAD{61}{i}= (1 + i) \actA{61}{i}= (1.0024762859767522) 56.551505= 56.691543
+	\end{aligned}
+	\]
+But then\dots
+	\[
+	\text{P.A.P.}= R \left( \actAD{61}{i} - \actAD{60}{i} \right)= \$5,\!194.33 (56.691543 - 55.829451) \$5,\!194.33 (0.862092)= \$4,\!477.99
+	\]
+Therefore, after 5~years of payments, \$4,477.99 of Sara's payments goes towards paying off the loan. Because the entirety of the payment either goes towards the principal or the interest, it must be that the rest of the payment goes towards the interest. Therefore, after 5~years of payments, Sara pays $\$5,\!194.33 - \$4,\!477.99= \$716.34$ in interest. 
+\end{enumerate}
+
+
+\end{document}

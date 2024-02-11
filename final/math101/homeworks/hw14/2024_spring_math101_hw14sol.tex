@@ -1,0 +1,122 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 03/27}{You think you're pretty clever, don't you? I happen to know that every word in your book was published years ago. Perhaps you've read the dictionary!}{Dick Solomon, Third Rock from the Sun}
+
+% Problem 1
+\problem{10} Find the inverse of the linear function $\ell(x)= 6x - 1$. Use this inverse function to solve the equation $\ell(x)= 10$. \pspace
+
+\sol Writing $\ell(x)= 6x - 1$ using $y$, we have $y= 6x - 1$. To find the inverse of this linear function, we reverse the roles of $x$ and $y$ and solve for $y$. But then we have\dots
+	\[
+	\begin{gathered}
+	x= 6y - 1 \\[0.3cm]
+	x + 1= 6y \\[0.3cm]
+	y= \dfrac{x + 1}{6}
+	\end{gathered}
+	\]
+Therefore, $\ell^{-1}(x)= \dfrac{x + 1}{6}$. We can use this to solve the equation $\ell(x)= 10$ by using the fact that $(\ell^{-1} \circ \ell)(x)= x$:
+	\[
+	\begin{gathered}
+	\ell(x)= 10 \\[0.3cm]
+	\ell^{-1} \big( \ell(x) \big)= \ell^{-1}(10) \\[0.3cm]
+	x= \ell^{-1}(10) \\[0.3cm]
+	x= \dfrac{10 + 1}{6} \\[0.3cm]
+	x= \dfrac{11}{6}
+	\end{gathered}
+	\] \pspace
+We can validate this solution: 
+	\[
+	\ell \left( \dfrac{11}{6} \right)= 6 \cdot \dfrac{11}{6} - 1= 11 - 1= 10
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Explain why the lines $\ell_1(x)= 5x - 1$ and $\ell_2(x)= 2 - 3x$ intersect. Find their point of intersection. \pspace
+
+\sol The slope of $\ell_1(x)$ is $m_1= 5$ and the slope of $\ell_2$ is $m_2= -3$. Because $m_1= 5 \neq -3= m_2$, we know that the lines are not parallel. Therefore, the lines must intersect. If $x_0$ is the $x$-coordinate of their intersection, we know that $\ell_1(x_0)= \ell_2(x_0)$ (because their $y$-coordinate must be the same). But then\dots
+	\[
+	\begin{gathered}
+	\ell_1(x_0)= \ell_2(x_0) \\[0.3cm]
+	5x_0 - 1= 2 - 3x_0 \\[0.3cm]
+	8x_0= 3 \\[0.3cm]
+	x_0= \dfrac{3}{8}
+	\end{gathered}
+	\] \pspace
+We then have\dots
+	\[
+	\ell_1 \left( \dfrac{3}{8} \right)= 5 \cdot \dfrac{3}{8} - 1= \dfrac{15}{8} - 1= \dfrac{7}{8}
+	\] \pspace
+Therefore, the lines intersect at the point $\left( \frac{3}{8}, \frac{7}{8} \right)$. 
+
+
+
+\newpage
+
+ 
+
+% Problem 3
+\problem{10} Find the $x$ and $y$-intercept for the line $y= \dfrac{6x - 11}{3}$. \pspace
+
+\sol The $y$-intercept of a curve is the point where the curve intersects the $y$-axis. The $y$-axis is the line where $x= 0$. But then\dots
+	\[
+	y= \dfrac{6(0) - 11}{3}= \dfrac{0 - 11}{3}= -\dfrac{11}{3}
+	\]
+Therefore, the $y$-intercept is $-\frac{11}{3}$, i.e. the point $\left(0, -\frac{11}{3} \right)$. \pspace
+
+The $x$-intercept of a curve is the point where the curve intersects the $x$-axis. The $x$-axis is the line where $y= 0$. But then\dots
+	\[
+	\begin{gathered}
+	0= \dfrac{6x - 11}{3} \\[0.3cm]
+	0= 6x - 11\\[0.3cm]
+	6x= 11 \\[0.3cm]
+	x= \dfrac{11}{6}
+	\end{gathered}
+	\] \pspace
+Therefore, the $x$-intercept is $\frac{11}{6}$, i.e. the point $\left( \frac{11}{6}, 0 \right)$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Let $\ell(x)$ be the linear function given by $\ell(x)= 5x + c$, where $c$ is some constant. Find the value of $c$ such that $\ell(x)$ contains the point $(5, -4)$. What is the $x$-intercept of this line? \pspace
+
+\sol If $\ell(x)$ contains the point $(5, -4)$, when $x= 5$ then $y= -4$. But then\dots
+	\[
+	\begin{gathered}
+	\ell(x)= 5x + c \\[0.3cm]
+	\ell(5)= 5(5) + c \\[0.3cm]
+	-4= 25 + c \\[0.3cm]
+	c= -29
+	\end{gathered}
+	\]
+Therefore, $\ell(x)= 5x - 29$. \pspace
+
+The $x$-intercept of a curve is the point where the curve intersects the $x$-axis. The $x$-axis is the line where $y= 0$. But then if $x_0$ is a $y$-intercept of $\ell(x)$, we have\dots
+	\[
+	\begin{gathered}
+	\ell(x_0)= 5x_0 - 29 \\[0.3cm]
+	0= 5x_0 - 29 \\[0.3cm]
+	5x_0= 29 \\[0.3cm]
+	x_0= \dfrac{29}{5}
+	\end{gathered}
+	\]
+Therefore, the $x$-intercept of $\ell(x)$ is $x_0= \frac{29}{5}$, i.e. the point $\left( \frac{29}{5}, 0 \right)$. 
+
+
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\usepackage{cancel} % Use Cancel
+\usepackage{longdivision} % Fraction Long Division
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{5: Due 02/07}{I don't wanna have to bring this up\dots But it's my turn to take a selfish.}{David Rose, Schitt's Creek}
+
+% Problem 1
+\problem{10} Express each of the following decimal numbers as a rational number in simplest form and express each of the rational numbers as a decimal number:
+	\begin{enumerate}[(a)]
+	\item $\frac{1}{11}$
+	\item $1.12$
+	\item $\frac{71}{5}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\longdivision{1}{11} % Compare to \intlongdivision
+	\] \pspace
+
+\item 
+	\[
+	1.12= \dfrac{112}{100}= \dfrac{4 \cdot 28}{4 \cdot 25}= \dfrac{\cancel{4} \cdot 28}{\cancel{4} \cdot 25}= \dfrac{28}{25}
+	\] \pspace
+
+\item 
+	\[
+	\longdivision{71}{5} % Compare to \intlongdivision
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, express the number $0.\overline{123}$ as a rational number. \pspace
+
+\sol Suppose that $N= 0.\overline{123}= 0.123123123123\overline{123}$. We have\dots
+	\begin{table}[!ht]
+	\centering\small
+	\begin{tabular}{rccc}
+	& $1000N$ & $=$ & $123.123123123123\overline{123}$ \\ 
+	$-$ & $N$ & $=$ & $\phantom{12}0.123123123123\overline{123}$ \\ \hline
+	& $999N$ & $=$ & $123$ \\[0.1cm]
+	& $N$ & $=$ & $\frac{123}{999}$ \\[0.1cm]
+	& $N$ & $=$ & $\frac{\cancel{3} \cdot 41}{\cancel{3} \cdot 333}$ \\[0.1cm]
+	& $N$ & $=$ & $\frac{41}{333}$ 
+	\end{tabular}
+	\end{table} \par
+
+	\[
+	0.\overline{123}= \dfrac{41}{333}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Perform the following operations in $\mathbb{C}$:
+	\begin{enumerate}[(a)]
+	\item $(6 - 8i) + (4 + 2i)$
+	\item $(13 - i) - (15 - 8i)$
+	\item $(5 + i)(6 - 2i)$
+	\item $\dfrac{1 + 2i}{3 + i}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(6 - 8i) + (4 + 2i)= (6 + 4) + (-8i + 2i)= 10 - 6i
+	\] \pspace
+
+\item 
+	\[
+	(13 - i) - (15 - 8i)= (13 - 15) + \big(-i - (-8i) \big)= -2 + 7i
+	\] \pspace
+
+\item 
+	\[
+	(5 + i)(6 - 2i)= 5 \cdot 6 + 5 \cdot -2i + i \cdot 6 + i \cdot -2i= 30 - 10i + 6i - 2i^2= 30 - 4i - 2(-1)= 32 - 4i
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{1 + 2i}{3 + i}= \dfrac{1 + 2i}{3 + i} \cdot \dfrac{3 - i}{3 - i}= \dfrac{(1 + 2i)(3 - i)}{3^2 + 1^2}= \dfrac{3 - i + 6i - 2i^2}{9 + 1}= \dfrac{3 + 5i - 2(-1)}{10}= \dfrac{5 + 5i}{10}= \frac{1}{2} + \frac{1}{2}\, i
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Every quadratic equation $ax^2 + bx + c= 0$ has exactly two (not necessarily distinct) solutions when the solutions are allowed to be complex numbers. For instance, the equation $2x^2 - 20x + 68= 0$ has as its solutions $5 \pm 3i$. Verify that $5 - 3i$ is a solution to this equation. \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	2x^2 - 20x + 68 \bigg|_{x= 5 - 3i} \\[0.3cm]
+	2(5 - 3i)^2 - 20(5 - 3i) + 68 \\[0.3cm]
+	2(5 - 3i)(5 - 3i) + (-100 + 60i) + 68 \\[0.3cm]
+	2(25 - 15i - 15i + 9i^2) + (-100 + 60i) + 68 \\[0.3cm]
+	2 \big(25 - 30i + 9(-1) \big) + (-100 + 60i) + 68 \\[0.3cm]
+	2 (16 - 30i) + (-100 + 60i) + 68 \\[0.3cm]
+	(32 - 60i) + (-100 + 60i) + 68 \\[0.3cm]
+	(32 - 100 + 68) + (-60i + 60i) \\[0.3cm]
+	0 + 0i \\[0.3cm]
+	0
+	\end{gathered}
+	\]
+
+
+\end{document}

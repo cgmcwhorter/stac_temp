@@ -1,0 +1,174 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{2: Due 01/29}{All wish to possess knowledge, but few, comparatively speaking, are willing to pay the price.}{Decimus Junius Juvenalis}
+
+% Problem 1
+\problem{10} Suppose that the revenue and cost function for a certain item are given by $R(q)= 67.99q$ and $C(q)= 13.47q + 495000$, respectively. 
+	\begin{enumerate}[(a)]
+	\item How much does the company sell each item for? How much does it cost to make each item?
+	\item What are the fixed costs for the production of this good?
+	\item What is the profit or loss if the company produces and sells ten-thousand of these items?
+	\item What is the break-even point? At least many items does this company need to sell in order to make a profit on this item?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Both $R(q)$ and $C(q)$ are linear. Therefore, the amount each item sells for and the cost to produce each item requires to make are the slopes of $R(q)$ and $C(q)$, respectively. Therefore, each item sells for \$67.99 and costs \$13.47 to make. \pspace
+
+\item The fixed costs are the costs not associated with the amount of production, i.e. the costs when one still has even when producing nothing. But this must be $C(0)= 13.47(0) + 495000= 0 + 495000= \$495,\!000$. \pspace
+
+\item We know the profit is revenue minus any associated costs. We have\dots
+	\[
+	\begin{aligned}
+	R(10,\!000)&= 67.99(10000)= \$679,\!900 \\
+	C(10,\!000)&= 13.47(10000) + 495000= \$629,\!700 \\
+	P(10,\!000)&= R(10,\!000) - C(10,\!000)= \$679,\!900 - \$629,\!700= \$50,\!200
+	\end{aligned}
+	\]
+Therefore, if the company produces and sells 10,000 items, the company has a profit of \$50,200. \pspace
+
+\item The break-even point is the point where revenue is equal to cost, i.e. where the profit is 0. But then\dots
+	\[
+	\begin{gathered}
+	R(q)= C(q) \\
+	67.99q= 13.47q + 495000 \\
+	54.52q= 495000 \\
+	q= 9,\!079.24
+	\end{gathered}
+	\]
+Therefore, to turn a profit, the company must make and sell at least 9,080~items. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Leslie owns a wine and spirit store called \textit{Planet of the Grapes}. She rents the building for \$24,730 per month. The average bottle of wine or spirit at her store sells for \$11.56. The average cost of ordering, stocking, and selling these wines/spirits is \$5.21 per bottle. 
+	\begin{enumerate}[(a)]
+	\item What are the fixed and variable costs for Leslie's business?
+	\item Find the cost function for Leslie's business.
+	\item Find the revenue function for Leslie's business.
+	\item Find the break-even point for Leslie's business. 
+	\item What is the minimal average amount of bottles Leslie must sell per month to make a profit?
+	\item How many bottles must Leslie sell each month on average to make a profit of \$15,000 (translating to a yearly profit of \$180,000)? Does this seem feasible?	
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The fixed costs are the costs not associated with the level of production. In this case, this is the \$24,730 in rent Leslie pays each month. The variable costs are the costs associated with production. Each bottle costs \$5.21, on average, to order, stock, and sell. Therefore, if $q$ bottles are sold, the variable costs would be $5.21q$. \pspace
+
+\item We know the costs are the total of the variable and fixed costs. Therefore, $C(q)= \text{V.C.} + \text{F.C.}= 5.21q + 24730$. 
+
+\item Because each bottle sells for an average of \$11.56, if Leslie sells $q$ bottles, the amount of money brought in would be $11.56q$. Therefore, $R(q)= 11.56q$. \pspace
+
+\item The break-even point is the point where revenue and cost are equal. But then\dots
+	\[
+	\begin{gathered}
+	R(q)= C(q) \\
+	11.56q= 5.21q + 24730 \\
+	6.35q= 24730 \\
+	q= 3,\!894.49
+	\end{gathered}
+	\]
+
+\item From (d), we can see that the minimal average number of bottles Leslie has to sell each month to make a profit is 3,895. 
+
+\item We know that $P(q)= R(q) - C(q)= 11.56q - (5.21q + 24730)= 11.56q - 5.21q - 24730= 6.35q - 24730$. To make a profit of \$15,000, we require\dots
+	\[
+	\begin{gathered}
+	P(q)= \$15000 \\
+	6.35q - 24730= 15000 \\
+	6.35q= 39730 \\
+	q= 6,\!256.69
+	\end{gathered}
+	\]
+Therefore, at least 6,257~bottles would need to be sold. If the store was open from 8~am to 10~pm, seven days a week for a month (31~days), this would mean that on average 2.06~bottles were sold every hour. This seems like a reasonable rate---even though the sales would not be distributed as described. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Suppose a company produces two items, $q_1$ and $q_2$, and has a cost function given by $C(q_1, q_2)= 7.23 q_1 + 82.56 q_2 + 15721.12$. 
+	\begin{enumerate}[(a)]
+	\item What are the fixed costs for producing these two items?
+	\item What is the total cost associated with producing 30 of the first item and 65 of the second item?
+	\item How much does it cost to produce the first item? How much does it cost to produce the second item?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The fixed costs are the costs not associated with the amount of production, i.e. the costs when one still has even when producing nothing. But this is $C(0, 0)= 7.23(0) + 82.56(0) + 15721.12= 0 + 0 + 15721.12= \$15,\!721.12$. \pspace
+
+\item This is precisely\dots
+	\[
+	C(30, 65)= 7.23 (30) + 82.56 (65) + 15721.12= 216.90 + 5366.40 + 15721.12= \$21,\!304.42
+	\] \pspace
+
+\item Because the function $C(q_1, q_2)$ is `linear' in $q_1, q_2$, the cost to produce the items are the `slopes' for each of the variables. But then it costs \$7.23 per item to produce the first item and \$82.56 per item to produce the second item. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Suppose that you have a revenue function given by $R(q)= 89q$ and a cost function given by $C(q)= 45q + 7200$. 
+	\begin{enumerate}[(a)]
+	\item What are the revenue and cost at a production/sale level of 60~units?
+	\item Without finding the profit function, find the break-even point for the production/sale of this item.
+	\item Find the profit function, $P(q)$.
+	\item Compute $P(60)$. Explain how you could use (a) to find $P(60)$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	R(60)&= 89(60)= \$5,\!340 \\[0.3cm]
+	C(60)&= 45(60) + 7200= 2700 + 7200= \$9,\!900
+	\end{aligned}
+	\] \pspace
+
+\item We simply set $R(q)= C(q)$. But then\dots
+	\[
+	\begin{gathered}
+	R(q)= C(q) \\
+	89q= 45q + 7200 \\
+	44q= 7200 \\
+	q= 163.636
+	\end{gathered}
+	\] \pspace
+
+\item The profit function is the difference of the revenue and cost functions:
+	\[
+	P(q)= R(q) - C(q)= 89q - (45q + 7200)= 89q - 45q - 7200= 44q - 7200
+	\] \pspace
+
+\item We have\dots
+	\[
+	P(60)= 44(60) - 7200= 2640 - 7200= -\$4,\!560
+	\] \pspace
+Alternatively, from (a), we know that $R(60)= \$5,\!340$ and $C(60)= \$9,\!900$. But then $P(60)= \$5,\!340 - \$9,\!900= -\$4,\!560$. 
+\end{enumerate}
+
+
+\end{document}

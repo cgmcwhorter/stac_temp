@@ -1,0 +1,124 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{13: Due 03/25}{All right, let's not just dismiss that out of hand. What about a bomb? In my experience with the Air Force, that was very often the right answer. Very, very often.}{General Mark R. Naird, Space Force}
+
+% Problem 1
+\problem{10} Consider the linear function $\ell(x)= \dfrac{5x - 7}{-3}$. 
+	\begin{enumerate}[(a)]
+	\item Find the slope of this function.
+	\item Find the $y$-intercept of this function.
+	\item Find the $x$-intercept of this function.
+	\item Does the graph of this function contain the point $(2, 0)$? Explain. 
+	\end{enumerate} \pspace
+
+\sol We have $\ell(x)= \dfrac{5x - 7}{-3}= -\dfrac{5}{3}\, x + \dfrac{7}{3}$. 
+
+\begin{enumerate}[(a)]
+\item The slope of $\ell(x)$ is $m= -\frac{5}{3}$. \pspace
+
+\item The $y$-intercept of $\ell(x)$ is $b= \frac{7}{3}$. \pspace
+
+\item The $x$-intercept is the $x$-value where $\ell(x)= 0$. But then\dots
+	\[
+	\begin{gathered}
+	\ell(x)= 0 \\[0.3cm]
+	 \dfrac{5x - 7}{-3}= 0 \\[0.3cm]
+	 5x - 7= 0 \\[0.3cm]
+	 5x= 7 \\[0.3cm]
+	 x= \frac{7}{5}
+	\end{gathered}
+	\] \pspace
+
+\item If the line $\ell(x)$ contains the point $(2, 0)$, then $\ell(2)= 0$. But we know that the $x$-intercept of the line $\ell(x)$ is $x= \frac{7}{5}$ from (c). Therefore, the line does not contain the point $(2, 0)$. Alternatively, we have $\ell(2)= \frac{5(2) - 7}{-3}= \frac{10 - 7}{-3}= \frac{3}{-3}= -1 \neq 0$. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Solve the following equation and verify that your solution is correct:
+	\[
+	-2(5 - x) + 15= \dfrac{8x + 1}{2}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	-2(5 - x) + 15= \dfrac{8x + 1}{2} \\[0.3cm] 
+	2 \cdot \left( -2(5 - x) + 15 \right)= 2 \left( \dfrac{8x + 1}{2} \right) \\[0.3cm]
+	-4(5 - x) + 30= 8x + 1 \\[0.3cm]
+	-20 + 4x + 30= 8x + 1 \\[0.3cm]
+	4x + 10= 8x + 1 \\[0.3cm]
+	9= 4x \\[0.3cm]
+	x= \dfrac{9}{4}
+	\end{gathered}
+	\] \pspace
+Now we verify this solution:
+	\[
+	\begin{gathered}
+	-2(5 - x) + 15= \dfrac{8x + 1}{2} \\[0.3cm]
+	-2 \left(5 - \dfrac{9}{4} \right) + 15 \stackrel{?}{=} \dfrac{8 \cdot \frac{9}{4} + 1}{2} \\[0.3cm] 
+	-2 \cdot \dfrac{11}{4} + 15 \stackrel{?}{=} \dfrac{18 + 1}{2} \\[0.3cm]
+	-\dfrac{11}{2} + 15 \stackrel{?}{=} \dfrac{19}{2} \\[0.3cm]
+	\dfrac{19}{2}= \dfrac{19}{2}
+	\end{gathered}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Solve the following equation:
+	\[
+	\sqrt{2}\, (x - \sqrt{8})= \pi x + 5
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	\sqrt{2}\, (x - \sqrt{8})= \pi x + 5 \\[0.3cm]
+	\sqrt{2} \,x - \sqrt{16}= \pi x + 5 \\[0.3cm]
+	\sqrt{2} \,x - 4= \pi x + 5 \\[0.3cm]
+	\sqrt{2}\,x - \pi x= 9 \\[0.3cm]
+	(\sqrt{2} - \pi)x= 9 \\[0.3cm]
+	x= \dfrac{9}{\sqrt{2} - \pi}
+	\end{gathered}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Find the $x$-intercept of the line perpendicular to the line $y= \frac{2}{3}x + 5$ that contains the point $(-1, 6)$. \pspace
+
+\sol Because the line $y= \frac{2}{3}\,x + 5$ is not horizontal, the line perpendicular to it is not vertical. Perpendicular lines have negative reciprocal slopes. The slope of $y= \frac{2}{3}\,x + 5$ is $\frac{2}{3}$. Therefore, the slope of the line in question is $m= -\frac{3}{2}$. The line contains the point $(-1, 6)$. Using the point-slope form, we have\dots
+	\[
+	\begin{gathered}
+	y= y_0 + m(x - x_0) \\[0.3cm]
+	y= 6 - \dfrac{3}{2} \big(x - (-1) \big) \\[0.3cm]
+	y= 6 - \dfrac{3}{2}\,x - \dfrac{3}{2} \\[0.3cm]
+	y= -\dfrac{3}{2}\,x + \dfrac{9}{2} \\[0.3cm]
+	y= \dfrac{3x + 9}{2} 
+	\end{gathered}
+	\]
+
+
+\end{document}

@@ -1,0 +1,124 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{18: Due 04/17}{The problem is, if all you care about in the world is the velvet rope, you will always be unhappy, no matter which side you're on.}{Tahani Al-Jamil, The Good Place}
+
+% Problem 1
+\problem{10} The following matrix is the `RREF' of an augmented matrix coming from a system of equations. Did this system of equations have a solution? If the system of equations had a solution, find all the possible solutions. If the system did not have a solution, explain why. 
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 0 & 1 \\
+	0 & 1 & 1 & 0 & 2 \\
+	0 & 0 & 0 & 1 & 1 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 
+	\end{pmatrix}
+	\] \pspace
+
+\sol Each of the columns of the matrix corresponds to a variable---except for the last column which corresponds to the `other' side of the equalities. There are then $5 - 1= 4$~variables. We mark the pivot columns of the matrix: 
+	\[
+	\begin{pmatrix}
+	\boxed{1} & 0 & 0 & 0 & 1 \\
+	0 & \boxed{1} & 1 & 0 & 2 \\
+	0 & 0 & 0 & \boxed{1} & 1 \\
+	0 & 0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 0 
+	\end{pmatrix}
+	\]
+Therefore, $x_1, x_2, x_4$ will be `fixed.' We then take $x_3$ to be a free variable. The first row tells us that $x_1= 0$. The third row tells us that $x_4= 1$. The second row tells us that $x_2 + x_3= 2$, which implies that $x_2= 2 - x_3$. Therefore, the solutions are all of the form:
+	\[
+	\begin{cases}
+	x_1= 1 \\
+	x_2= 2 - x_3 \\
+	x_3 \colon \text{free} \\
+	x_4= 1 
+	\end{cases}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Consider the matrix\dots
+	\[
+	M= \begin{pmatrix} 1 & 8 \\ 1 & 4 \end{pmatrix}
+	\] 
+
+\begin{enumerate}[(a)]
+\item Compute $\det M$. 
+\item Does $M^{-1}$ exist? Explain. If $M^{-1}$ exists, find $M^{-1}$. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Recall that $\det \begin{pmatrix} a & b \\ c & d \end{pmatrix}= ad - bc$. But then\dots
+	\[
+	\det \begin{pmatrix} 1 & 8 \\ 1 & 4 \end{pmatrix}= 1(4) - 8(1)= 4 - 8= -4
+	\]
+
+\item Recall that if $A$ is a square matrix, then $A^{-1}$ exists if and only if $\det A \neq 0$. Because $\det M= -4 \neq 0$, we know that $M^{-1}$ exists. If $A$ is a two-by-two matrix whose inverse exists, then\dots
+	\[
+	A= \begin{pmatrix} a & b \\ c & d \end{pmatrix} \Longrightarrow A^{-1}= \dfrac{1}{\det A} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+	\]
+But then\dots
+	\[
+	M^{-1}= \dfrac{1}{-4} \begin{pmatrix} 4 & -8 \\ -1 & 1 \end{pmatrix}= \begin{pmatrix} -1 & 2 \\ \frac{1}{4} & -\frac{1}{4} \end{pmatrix} 
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use `the method of inverses' to solve the following system of linear equations:
+	\[
+	\begin{aligned}
+	2x - 9y&= -15 \\
+	-7x + 4y&= 25
+	\end{aligned}
+	\] \pspace
+
+\sol We write this system in the form $A \mathbf{x}= \mathbf{b}$, where $A$ is the coefficient matrix, $\mathbf{x}$ is the vector of variables, and $\mathbf{b}$ is the constant vector. Then this system of equations is equivalent to the matrix system\dots
+	\[
+	\underbrace{
+	\begin{pmatrix}
+	2 & -9 \\
+	-7 & 4
+	\end{pmatrix}}_{A}
+	\underbrace{\begin{pmatrix} x \\ y \end{pmatrix}}_{\mathbf{x}}= 
+	\underbrace{\begin{pmatrix} -15 \\ 25 \end{pmatrix}}_{\mathbf{b}}
+	\]
+Observe that $\det A= 2(4) - (-7)(-9)= 8 - 63= -55$. Because $\det A= -55 \neq 0$, we know that $A^{-1}$ exists. We have\dots
+	\[
+	A^{-1}= \dfrac{1}{-55} \begin{pmatrix} 4 & 9 \\ 7 & 2 \end{pmatrix}
+	\]
+But then\dots
+	\[
+	\begin{gathered}
+	\begin{pmatrix} 2 & -9 \\ -7 & 4 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}= \begin{pmatrix} -15 \\ 25 \end{pmatrix} \\[0.3cm]
+	\dfrac{1}{-55} \begin{pmatrix} 4 & 9 \\ 7 & 2 \end{pmatrix} \begin{pmatrix} 2 & -9 \\ -7 & 4 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}= \dfrac{1}{-55} \begin{pmatrix} 4 & 9 \\ 7 & 2 \end{pmatrix} \begin{pmatrix} -15 \\ 25 \end{pmatrix} \\[0.3cm]	
+	A^{-1}A \begin{pmatrix} x \\ y \end{pmatrix}= 
+	-\dfrac{1}{55} \begin{pmatrix} 4(-15) + 9(25) \\ 7(-15) + 2(25) \end{pmatrix} \\[0.3cm]
+	\begin{pmatrix} x \\ y \end{pmatrix}= -\dfrac{1}{55} \begin{pmatrix} -60 + 225 \\ -105 + 50 \end{pmatrix} \\[0.3cm]
+	\begin{pmatrix} x \\ y \end{pmatrix}= -\dfrac{1}{55} \begin{pmatrix} 165 \\ -55 \end{pmatrix} \\[0.3cm]
+	\begin{pmatrix} x \\ y \end{pmatrix}= \begin{pmatrix} -3 \\ 1 \end{pmatrix}
+	\end{gathered}
+	\] \pspace
+Therefore, the solution to the system is $(x, y)= (-3, 1)$. 
+
+
+\end{document}

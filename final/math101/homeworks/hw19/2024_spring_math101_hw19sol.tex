@@ -1,0 +1,127 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{19: Due 04/22}{A million dollars isn't cool. You know what's cool? A billion dollars.}{Sean Parker, The Social Network}
+
+% Problem 1
+\problem{10} Showing all your work, factor the following quadratic expression:
+	\[
+	2x^2 - 5x - 3
+	\] \pspace
+
+\sol We find factors of $2 \cdot 3= 6$ that add to $-5$. Because $-3 < 0$, the factors must have opposite signs. 
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 6} \pvspace{0.2cm}
+	\begin{tabular}{rr} \hline
+	\multicolumn{1}{|r}{$1 \cdot -6 \colon$} & \multicolumn{1}{r|}{$-5$} \\ \hline
+	$-1 \cdot 6 \colon$ & $5$ \\
+	$2 \cdot -3 \colon$ & $-1$ \\
+	$-2 \cdot 3 \colon$ & $1$ 
+	\end{tabular}
+	\end{table}
+But then we have\dots
+	\[
+	2x^2 - 5x - 3= 2x^2 + x - 6x - 3= (2x^2 + x) + (-6x - 3)= x(2x + 1) - 3(2x + 1)= (2x + 1)(x - 3)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use the quadratic formula to factor the following polynomial:
+	\[
+	253x^2 - 7x - 98
+	\] \pspace
+
+\sol If the roots of $f(x)= ax^2 + bx + c$ are $r_0, r_1$, then we know that $f(x)= a(x - r_0)(x - r_1)$. So we need to find the roots of the given quadratic function. The polynomial $253x^2 - 7x - 98$ has $a= 253$, $b= -7$, and $c= -98$. But then\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-7) \pm \sqrt{(-7)^2 - 4(253)(-98)}}{2(253)} \\[0.3cm]
+	&= \dfrac{7 \pm \sqrt{49 + 99176}}{506} \\[0.3cm]
+	&= \dfrac{7 \pm \sqrt{99225}}{506} \\[0.3cm]
+	&= \dfrac{7 \pm 315}{506}
+	\end{aligned}
+	\] \pspace
+Therefore, the roots are $x= \frac{7 - 315}{506}= \frac{-308}{506}= -\frac{14}{23}$ and $x= \frac{7 + 315}{506}= \frac{322}{506}= \frac{7}{11}$. Therefore, we have\dots
+	\[
+	253x^2 - 7x - 98= 253 \left(x - \dfrac{-14}{23} \right) \left(x - \dfrac{7}{11} \right)= 23 \left(x + \dfrac{14}{23} \right) \cdot 11 \left(x - \dfrac{7}{11} \right)= (23x + 14) (11x - 7)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Find all the real zeros of the following polynomial:
+	\[
+	x^5 - 9x
+	\] \pspace
+
+\sol We make use of the difference of perfect squares, i.e. $x^2 - y^2= (x - y)(x + y)$. We have\dots
+	\[
+	\begin{gathered}
+	x^5 - 9x= 0 \\
+	x (x^4 - 9)= 0 \\
+	x(x^2 - 3)(x^2 + 3)= 0
+	\end{gathered}
+	\]
+But then either $x= 0$, or $x^2 - 3= 0$, or $x^2 + 3= 0$. The fact case clearly implies $x= 0$. In the second case, we know that $x^2= 3$, so that $x= \pm \sqrt{3}$. In the last case, we would have $x^2= -3$, so that there are no real solutions. [The solutions to $x^2= -3$ are $\pm i \sqrt{3}$.] Therefore, the real zeros of $x^5 - 9x$ are $-\sqrt{3}, 0, \sqrt{3}$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, solve the following equation:
+	\[
+	\dfrac{x + 1}{x - 2}= \dfrac{6x}{x - 4}
+	\] \pspace
+
+\sol Cross multiplying, we have\dots
+	\[
+	\begin{gathered}
+	\dfrac{x + 1}{x - 2}= \dfrac{x}{x - 4} \\
+	(x + 1)(x - 4)= 6x(x - 2) \\
+	x^2 - 4x + x - 4= 6x^2 - 12x \\
+	x^2 - 3x - 4= 6x^2 - 12x \\
+	0= 5x^2 - 9x + 4
+	\end{gathered}
+	\]
+We now factor $5x^2 - 9x + 4$. We find factors of $5 \cdot 4= 20$ that add to $-9$. Because $4 > 0$, the factors must have the same signs. 
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 20} \pvspace{0.2cm}
+	\begin{tabular}{rr} 
+	$1 \cdot 20 \colon$ & $21$ \\
+	$-1 \cdot -20 \colon$ & $-21$ \\
+	$2 \cdot 10 \colon$ & $12$ \\
+	$-2 \cdot -10 \colon$ & $-12$ \\
+	$4 \cdot 5 \colon$ & $9$ \\ \hline
+	\multicolumn{1}{|r}{$-4 \cdot -5 \colon$} & \multicolumn{1}{r|}{$-9$} \\ \hline
+	\end{tabular}
+	\end{table}
+But then we have\dots
+	\[
+	5x^2 - 9x + 4= 5x^2 - 4x - 5x + 4= (5x^2 - 4x) + (-5x + 4)= x(5x - 4) - (5x - 4)= (5x - 4)(x - 1)
+	\]
+But then we know that $0= (5x - 4)(x - 1)$. This implies that either $5x - 4= 0$, which implies that $x= \frac{4}{5}$, or $x - 1= 0$, which implies that $x= 1$. Therefore, the solutions are $x= \frac{4}{5}, 1$. 
+
+
+\end{document}

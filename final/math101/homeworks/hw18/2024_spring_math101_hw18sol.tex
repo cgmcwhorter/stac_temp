@@ -1,0 +1,139 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\DeclareMathOperator{\disc}{disc}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{18: Due 04/17}{If you don't learn from your mistakes, there's no sense making them.}{Herbert V. Prochnow}
+
+% Problem 1
+\problem{10} Without explicitly solving the quadratic equation, determine whether how many distinct solutions the equation has and whether the solutions are rational, real, or complex. Be sure to justify your answer.
+	\[
+	x^2= 36 - 5x
+	\] \pspace
+
+\sol We can determine the nature of solutions for a quadratic equation of the form $f(x)= 0$, where $f(x)$ is a quadratic function, using the discriminant of $f(x)$. We have\dots
+	\[
+	\begin{gathered}
+	x^2= 36 - 5x \\
+	x^2 + 5x - 36= 0
+	\end{gathered}
+	\]
+Let $f(x)= x^2 + 5x - 36$. This is a quadratic function, i.e. a function of the form $ax^2 + bx + c$, with $a= 1$, $b= 5$, and $c= -36$. The discriminant of $f(x)$ is\dots
+	\[
+	\disc f(x)= b^2 - 4ac= 5^2 - 4(1)(-36)= 25 + 144= 169
+	\]
+Because $\disc f(x)= 169 > 0$, this equation has two distinct, real solutions. Moreover, because $169= 13^2$ is a perfect square, the solutions are rational (in fact, they are integers). One can show that the solutions are $x= -9$, $4$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Without explicitly factoring the function $f(x)= x^2 - 8x + 5$ factors `nicely' over the integers, reals, or complex numbers. Be sure to justify your answer. \pspace
+
+\sol We can determine the nature of the factorization of a quadratic function $ax^2 + bx + c$ using the discriminant of the function. For the quadratic function $f(x)= x^2 - 8x + 5$, we have $a= 1$, $b= -8$, and $c= 5$. But then\dots
+	\[
+	\disc f(x)= b^2 - 4ac= (-8)^2 - 4(1)5= 64 - 20= 44
+	\]
+Because $\disc f(x)= 44 > 0$, $f(x)$ factors over the real numbers. However, because $\disc f(x)= 44$ is not a perfect square, $f(x)$ does not factor `nicely' over the real numbers. In fact, 
+	\[
+	x^2 - 8x + 5= \big(x - (4 - \sqrt{11})\, \big) \big(x - (4 + \sqrt{11})\, \big)
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Find the roots for the function $f(x)= 2x^2 - 7x + 1$. Be sure to fully justify your answer and show all your work. \pspace
+
+\sol To find the roots of $f(x)$, we need to solve the equation $f(x)= 0$. Using the fact that for $f(x)$, we have $a= 2$, $b= -7$, and $c= 1$, one can show that $\disc f(x)= 41$. Because this is not a perfect square over the real or complex numbers, $f(x)$ does not factor `nicely.' We then need either complete the square or use the quadratic formula. Using the quadratic formula, we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-(-7) \pm \sqrt{(-7)^2 - 4(2)1}}{2(2)} \\
+	&= \dfrac{7 \pm \sqrt{49 - 8}}{4} \\
+	&= \dfrac{7 \pm \sqrt{41}}{4}
+	\end{aligned}
+	\]
+Therefore, the roots of $f(x)$ are $x= \frac{7 - \sqrt{41}}{4} \approx 0.149219$ and $x= \frac{7 + \sqrt{41}}{4} \approx 3.35078$. \pspace
+
+Alternatively, we can complete the square to solve the equation $f(x)= 0$. Using this approach, we have\dots
+	\[
+	\begin{gathered}
+	2x^2 - 7x + 1= 0 \\
+	2x^2 - 7x= -1 \\
+	x^2 - \dfrac{7}{2}\, x=  -\dfrac{1}{2} \\
+	x^2 - \dfrac{7}{2}\, x + \left( \dfrac{1}{2} \cdot -\dfrac{7}{2} \right)^2=  -\dfrac{1}{2} + \left( \dfrac{1}{2} \cdot -\dfrac{7}{2} \right)^2 \\
+	x^2 - \dfrac{7}{2}\, x + \left( -\dfrac{7}{4} \right)^2=  -\dfrac{1}{2} + \left( -\dfrac{7}{4} \right)^2 \\
+	x^2 - \dfrac{7}{2}\, x + \dfrac{49}{16}= -\dfrac{1}{2} + \dfrac{49}{16} \\
+	\left(x - \dfrac{7}{4} \right)^2= \dfrac{41}{16} \\
+	\sqrt{\left(x - \dfrac{7}{4} \right)^2}= \sqrt{\dfrac{41}{16}} \\
+	x - \dfrac{7}{4}= \pm \dfrac{\sqrt{41}}{\sqrt{16}} \\
+	x= \dfrac{7}{4} \pm \dfrac{\sqrt{41}}{4} \\
+	x= \dfrac{7 \pm \sqrt{41}}{4}
+	\end{gathered}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Solve the following equation. Be sure to fully justify your answer and show all your work.
+	\[
+	x(x + 1)= -3
+	\] \pspace
+
+\sol By completing the square, we have\dots
+	\[
+	\begin{gathered}
+	x(x + 1)= -3 \\
+	x^2 + x= -3 \\
+	x^2 + x + \left( \dfrac{1}{2} \right)^2= -3 + \left( \dfrac{1}{2} \right)^2 \\
+	x^2 + x + \dfrac{1}{4}= -3 + \dfrac{1}{4} \\
+	\left(x + \dfrac{1}{2} \right)^2= - \dfrac{11}{4} \\
+	\sqrt{\left(x + \dfrac{1}{2} \right)^2}= \sqrt{- \dfrac{11}{4}} \\
+	x + \dfrac{1}{2}= \pm i\, \sqrt{\dfrac{11}{4}} \\
+	x + \dfrac{1}{2}= \pm i\, \dfrac{\sqrt{11}}{\sqrt{4}} \\
+	x= - \dfrac{1}{2} \pm i\, \dfrac{\sqrt{11}}{2} \\
+	x= \dfrac{-1 \pm i \sqrt{11}}{2}
+	\end{gathered}
+	\]
+Therefore, the roots are $x= \frac{-1 - i \sqrt{11}}{2}$ and $x= \frac{-1 + i \sqrt{11}}{2}$. \pspace
+
+Alternatively, this equation is equivalent to\dots
+	\[
+	\begin{gathered}
+	x(x + 1)= -3 \\
+	x^2 + x= -3 \\
+	x^2 + x + 3= 0 
+	\end{gathered}
+	\]
+This is a quadratic equation of the form $f(x)= 0$, where $f(x)$ is the quadratic function $f(x)= x^2 + x + 3$, i.e. a quadratic function of the form $ax^2 + bx + c$ with $a= 1$, $b= 1$, and $c= 3$. Using the quadratic equation, we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-1 \pm \sqrt{1^2 - 4(1)3}}{2(1)} \\
+	&= \dfrac{-1 \pm \sqrt{1 - 12}}{2} \\
+	&= \dfrac{-1 \pm \sqrt{-11}}{2} \\
+	&= \dfrac{-1 \pm i \sqrt{11}}{2}
+	\end{aligned}
+	\]
+
+
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{17: Due 04/15}{Why would you sow secretly? Why would you prune privately? Why would you cull clandestinely? Hidden hoe-ing and whatnot?}{Barbara Howard, Abbott Elementary}
+
+% Problem 1
+\problem{10} Find the augmented matrix to the corresponding system of equations:
+	\[
+	\begin{gathered}
+	x + y + z - w= 15 \\
+	2x - 3y + 14w= -12 \\
+	-x + 5y + 8z= 27 \\
+	x - y + z - w= 8
+	\end{gathered}
+	\] \pspace
+
+\sol First, we order the variables as $x$, $y$, $z$, and then $w$. We also make sure each equality has all variables present. This gives us the following system of equations:
+	\[
+	\begin{gathered}
+	x + y + z - w= 15 \\
+	2x - 3y + 0z + 14w= -12 \\
+	-x + 5y + 8z + 0w= 27 \\
+	x - y + z - w= 8
+	\end{gathered}
+	\]
+Therefore, the augmented matrix is\dots
+	\[
+	\begin{pmatrix}
+	1 & 1 & 1 & -1 & 15 \\
+	2 & -3 & 0 & 14 & -12 \\
+	-1 & 5 & 8 & 0 & 27 \\
+	1 & -1 & 1 & -1 & 8
+	\end{pmatrix}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} The matrix below is the initial augmented matrix for a system of linear equations. Find the system of linear equations. 
+	\[
+	\begin{pmatrix}
+	-4 & 1 & 12 \\
+	3 & 7 & -11
+	\end{pmatrix}
+	\] \pspace
+
+\sol Each column corresponds to a variable in the system---except the last column that corresponds to the `other side' of the equalities. Therefore, there are $3 - 1= 2$ variables in the system, which we will label $x$ and $y$. Therefore, the system of equations must be\dots
+	\[
+	\begin{aligned}
+	-4x + y&= 12 \\
+	3x + 7y&= -11
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} The following matrix is the RREF of an augmented matrix coming from a system of equations. Did this system of equations have a solution? If the system of equations had a solution, find all the possible solutions. If the system did not have a solution, explain why. 
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & -5 \\
+	0 & 0 & 1 & 12
+	\end{pmatrix}
+	\] \pspace
+
+\sol Each of the columns of the matrix corresponds to a variable---except for the last column which corresponds to the `other' side of the equalities. There are then $4 - 1= 3$~variables. From the first row, we see that $x_1= 0$. From the second row, we see that $x_2= -5$. From the third row, we see that $x_3= 12$. Therefore, the unique solution is $(x_1, x_2, x_3)= (0, -5, 12)$, i.e. \dots
+	\[
+	\begin{cases}
+	x_1= 0 \\
+	x_2= -5 \\
+	x_3= 12
+	\end{cases}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} The following matrix is the RREF of an augmented matrix coming from a system of equations. Did this system of equations have a solution? If the system of equations had a solution, find all the possible solutions. If the system did not have a solution, explain why. 
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 0 & 6 \\
+	0 & 1 & 0 & 0 & -7 \\
+	0 & 0 & 1 & 0 & 2 \\
+	0 & 0 & 0 & 0 & -1 \\
+	\end{pmatrix}
+	\] \pspace
+
+\sol The last row of the matrix implies that $0= -1$. Therefore, there is no solution to the system of equations.  
+
+
+\end{document}

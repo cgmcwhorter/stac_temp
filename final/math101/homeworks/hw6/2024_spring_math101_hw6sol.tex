@@ -1,0 +1,125 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 02/12}{I don't know, Marge. Trying is the first step towards failure.}{Homer Simpson, The Simpsons}
+
+% Problem 1
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 86\% of 920
+	\item 4\% of 77
+	\item 180\% of 9
+	\end{enumerate} \pspace
+
+\sol We use the fact that to find a \% of a number $N$, ones computes $N \cdot \%_d$, where $\%_d$ is the percentage written as a decimal. 
+ 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\text{86\% of 920}= 920(0.86)= 791.2
+	\]
+
+\item 
+	\[
+	\text{4\% of 77}= 77(0.04)= 3.08
+	\] \pspace
+
+\item 
+	\[
+	\text{180\% of 9}= 9(1.80)= 16.2
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 600 decreased by 45\%
+	\item 88 increased by 34\%
+	\item 1,450 increased by 111\%
+	\end{enumerate} \pspace
+
+\sol We use the fact that to increase or decrease a number $N$ by a percentage \%, ones computes $N(1 \pm \%_d)$, where $\%_d$ is the percentage as a decimal and one chooses `$+$' if a percentage increase and `$-$' if a percentage decrease. \pspace
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\text{600 decreased by 45\%}= 600 (1 - 0.45)= 600(0.55)= 330
+	\] \pspace
+
+\item 
+	\[
+	\text{88 increased by 34\%}= 88 (1 + 0.34)= 88(1.34)= 117.92
+	\] \pspace
+
+\item 
+	\[
+	\text{1,450 increased by 111\%}= 1,\!450 (1 + 1.11)= 1450(2.11)= 3,\!059.5
+	\] 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Your biology class course grade is determined by the following components: \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{lr}
+	Homeworks & 60\% \\
+	Quizzes & 5\% \\
+	Midterm & 15\% \\
+	Final & 20\% \\
+	\end{tabular}
+	\end{table} \par
+Suppose that your homework average was 91\%, your quiz average was 81\%, your midterm average was 79\%, and your final exam average was 86\%.
+	\begin{enumerate}[(a)]
+	\item Compute your course average.
+	\item If the final exam had not yet occurred, i.e. you had not yet received the 86\%, but all the other course grades were as listed above, then what is your current course average?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	\text{Overall Course Average}&= \dfrac{\sum w_i x_i}{\sum w_i} \\[0.3cm]
+	&= \dfrac{0.60 \cdot 0.91 + 0.05 \cdot 0.81 + 0.15 \cdot 0.79 + 0.20 \cdot 0.86}{0.60 + 0.05 + 0.15 + 0.20} \\[0.3cm]
+	&= \dfrac{0.546 + 0.0405 + 0.1185 + 0.172}{0.60 + 0.05 + 0.15 + 0.20} \\[0.3cm]
+	&= \dfrac{0.877}{1} \\[0.3cm]
+	&= 0.877 \\[0.3cm]
+	&= 87.7\%
+	\end{aligned}
+	\] \pspace
+
+\item We have\dots
+	\[
+	\begin{aligned}
+	\text{Current Course Average}&= \dfrac{\sum w_i x_i}{\sum w_i} \\[0.3cm]
+	&= \dfrac{0.60 \cdot 0.91 + 0.05 \cdot 0.81 + 0.15 \cdot 0.79}{0.60 + 0.05 + 0.15 + 0.20} \\[0.3cm]
+	&= \dfrac{0.546 + 0.0405 + 0.1185}{0.60 + 0.05 + 0.15} \\[0.3cm]
+	&= \dfrac{0.705}{0.80} \\[0.3cm]
+	&= 0.88125 \\[0.3cm]
+	&= 88.125\%
+	\end{aligned}
+	\]  
+\end{enumerate}
+
+
+\end{document}

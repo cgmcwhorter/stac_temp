@@ -12,8 +12,62 @@
 % Quiz 1
 \quizsol \textit{True/False}: There must be a solution to the equation $x \left( e^{2x} - 2 \right)= 15$.  \pspace
 
-\sol The statement is \textit{true}. The equation $x \left( e^{2x} - 2 \right)= 15$ has a solution if and only if the equation $x \left( e^{2x} - 2 \right) - 15= 0$ has a solution. But the equation $x \left( e^{2x} - 2 \right) - 15= 0$ has a solution if and only if the function $f(x)= x \left( e^{2x} - 2 \right) - 15$ has a root. The function $f(x)$ is a continuous function---being the composition, sum/difference, and product of continuous functions. We know that $f(0)= 0 (1 - 2) - 15= -15 < 0$. Furthermore, there are clearly values for which $f(x)$ is positive because $\ds \lim_{x \to \infty} f(x)= \infty$. But then by the Intermediate Value Theorem, there must be a value $x_0 \in [-15, \infty)$ such that $f(x_0)= 0$. This proves that $f(x)$ has a root; equivalently, that $x \left( e^{2x} - 2 \right)= 15$ has a solution. 
+\sol The statement is \textit{true}. The equation $x \left( e^{2x} - 2 \right)= 15$ has a solution if and only if the equation $x \left( e^{2x} - 2 \right) - 15= 0$ has a solution. But the equation $x \left( e^{2x} - 2 \right) - 15= 0$ has a solution if and only if the function $f(x)= x \left( e^{2x} - 2 \right) - 15$ has a root. The function $f(x)$ is a continuous function---being the composition, sum/difference, and product of continuous functions. We know that $f(0)= 0 (1 - 2) - 15= -15 < 0$. Furthermore, there are clearly values for which $f(x)$ is positive because $\ds \lim_{x \to \infty} f(x)= \infty$. But then by the Intermediate Value Theorem, there must be a value $x_0 \in [-15, \infty)$ such that $f(x_0)= 0$. This proves that $f(x)$ has a root; equivalently, that $x \left( e^{2x} - 2 \right)= 15$ has a solution. \pvspace{1.3cm}
 
+
+
+% Quiz 2
+\quizsol \textit{True/False}: The linearization of a function $f(x)$ (if it exists) is an example of a truncated Taylor series for $f(x)$. \pspace
+
+\sol The statement is \textit{true}. The linearization of a function at $x= a$ (if it exists) is the tangent line at $x= a$. If $f(x)$ is differentiable on an open interval containing $x= a$, we know the tangent line is $\ell(x)= f(a) + f'(a) \big(x - a \big)$. If $f(x)$ is smooth on an open interval containing $x= a$, its Taylor series is given by\dots
+	\[
+	\sum_{k=0}^\infty \dfrac{f^{(k)}(a)}{k!} \, (x - a)^k= \dfrac{f^{(0)}(a)}{0!} \, (x - a)^0 + \dfrac{f^{(1)}(a)}{1!} \, (x - a)^1 + \dfrac{f^{(2)}(a)}{2!} \, (x - a)^2 + \cdots
+	\]
+Truncating this series at the first derivative, this is\dots
+	\[
+	\dfrac{f^{(0)}(a)}{0!} \, (x - a)^0 + \dfrac{f^{(1)}(a)}{1!} \, (x - a)^1= \dfrac{f(a)}{1} \cdot 1 + \dfrac{f'(a)}{1} \, (x - a)= f(a) + f'(a) \big(x - a \big)
+	\]
+But this is precisely the tangent line of $f(x)$ at $x= a$. \pvspace{1.3cm}
+
+
+
+% Quiz 3
+\quizsol \textit{True/False}: Suppose $f(x)$ has a Taylor series which converges to $f$ on $(-1, 3]$ and converges to $f$ at $x= -5$. Then the center was $x_0= 1$ and there must be at least one other value outside $(-1, 3]$ for which the Taylor series converges. \pspace
+
+\sol The statement is \textit{true}. Because the Taylor series converges to $f(x)$ on the interval $(-1, 3]$, the center of the Taylor series must be $x_0= \frac{3 + (-1)}{2}= \frac{2}{2}= 1$. Because the Taylor series converges to $f(x)$ on $(-1, 3]$, the radius of convergence is at least $\frac{3 - (-1)}{2}= \frac{4}{2}= 2$. We know that the Taylor series converges for all values less than the radius of convergence from its center and diverges for values greater than its radius of convergence from the center. What happens at a distance equal to the radius of convergence from the center varies. Because the Taylor series converges at $x= -5$, the radius of convergence must then be at least $1 - (-5)= 6$. But then the Taylor series converges for at least all the values in $(-5, 7)$. In particular, there is at least one other value outside $(-1, 3]$ for which the Taylor series converges. \pvspace{1.3cm}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Quiz 4
+\quizsol \textit{True/False}: The Intermediate Value Theorem and Mean Value Theorem apply to the function $f(x)= |x|$ on $[-1, 1]$. \pspace
+
+\sol The statement is \textit{false}. Recall that the Intermediate Value Theorem states that if $f(x)$ is continuous on $[a, b]$ and $c$ is a value between $f(a)$ and $f(b)$, there exists $x_0 \in [a, b]$ such that $f(x_0)= c$. The Mean Value Theorem states that if $f(x)$ is continuous on $[a, b]$ and differentiable on $(a, b)$, there exists $c \in (a, b)$ such that $f(b) - f(a)= f'(c) \big(b - a \big)$. The function $f(x)= |x|$ is given by\dots
+	\[
+	|x|= 
+	\begin{cases}
+	x, & x \geq 0 \\
+	-x, & x < 0
+	\end{cases}
+	\]
+Clearly, $x$ and $-x$ are everywhere continuous (they are polynomials) and $\ds \lim_{x \to 0^-} f(x)= \lim_{x \to 0^-} -x= 0$, $\lim_{x \to 0^+} f(x)= \lim_{x \to 0^+} x= 0$, and $f(0)= 0$, the function $f(x)= |x|$ is continuous on $[-1, 1]$. Therefore, the Intermediate Value Theorem applies to $f(x)$ for any value in $\text{range}_{[-1,1]} f(x)$, i.e. on the interval $[0, 1]$. While the function $f(x)= |x|$ is continuous on $[-1, 1]$, it is not differentiable on $(-1, 1)$. We know that $|x|$ is differentiable on $(-1, 1) \setminus \{ 0 \}$, i.e. $|x|$ is not differentiable at $x= 0$. To see that the theorem fails, consider the case with $a= -1$ and $b= 1$. Then $f(b) - f(a)= f(1) - f(-1)= 1 - 1= 0$. We have $f'(c) \big(b - a \big)= f'(x_0) \big(1 - (-1) \big)= 2f'(c)$. Then we must have $f'(c)= 0$. But where $f'(x)$ exists, we either have $f'(x)= 1$ or $f'(x)= -1$. Therefore, it is impossible that $f'(c)= 0$. \pvspace{1.3cm}
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: IEEE floating point numbers are a special type of binary representation for real numbers. While these numbers cannot represent all real numbers for a fixed bit length, they represent all real numbers in their range and have the same arithmetic operations as the real numbers they represent. \pspace
+
+\sol The statement is \textit{false}. Because only a finite number of bits are used to track the sign, exponent, and significand, the system can only store finitely many discrete values. In particular, fixing a number of bits, even in the interval containing all the representable floating point numbers, $[r_{\text{min}}, r_{\text{max}}]$, not every real number in this interval is representable. For floating point numbers, we can perform all the same basic arithmetic operations, i.e. addition, subtraction, multiplication, division, etc. However, these operations do not have the same properties as their real number counterparts due to rounding/truncation. For instance, addition of floating point numbers need not be associative: if $x, y, z \in \mathbb{F}$, we need not have\dots
+	\[
+	x + (y + z)= (x + y) + z
+	\]
 
 
 

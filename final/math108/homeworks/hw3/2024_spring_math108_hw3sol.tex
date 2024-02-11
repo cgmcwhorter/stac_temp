@@ -1,0 +1,78 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 01/31}{[Waitress] Aww, honey there are other fish in the sea. [Sally] I don't wanna hear the specials, lady!}{Waitress \& Sally Solomon, Third Rock from the Sun}
+
+% Problem 1
+\problem{10} Suppose that the CPI in 2023 was approximately 290.503. According to the US Bureau of Labor Statistics, the current CPI is 300.728.
+	\begin{enumerate}[(a)]
+	\item Find the inflation rate from 2023 to 2024. 
+	\item If the inflation rate in (a) continues from 2024 to 2025, estimate the cost of a good next year that costs \$69.99 this year,
+	\item If the inflation rate in (a) remains constant each year, what will the increase in prices be from 2024 to 2030? What percent more will goods cost in 2030 than 2024?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because the current CPI is greater than the CPI last year, we know there has been inflation. We know also that the inflation rate is\dots
+	\[
+	\left| \dfrac{\text{Current CPI}}{\text{Former CPI}} - 1 \right|= \left| \dfrac{300.728}{290.503} - 1 \right|= |1.03519757 - 1|= 0.03519757
+	\]
+Therefore, the inflation rate was 3.52\%. \pspace
+
+\item If we want to compute $N$ increased or decreased by a \%, we compute $N \cdot (1 \pm \%_d)$, where $\%_d$ is the percentage written as a decimal and we choose `$+$' if it is a percentage increase and choose `$-$' if it is a percentage decrease. Assuming an inflation rate of 3.52\%, we expect a percentage increase of 3.52\%. But then, assuming a constant inflation rate, we approximate that the cost of the good next year will be\dots
+	\[
+	\$69.99 (1 + 0.0352)= \$69.99 (1.0352)= \$72.4536 \approx \$72.45
+	\] \pspace
+
+\item If we apply the same percentage increase or decrease $n$ times in a row, we multiply by $(1 \pm \%_d)$ a total of $n$ times. Therefore, if we want to compute $N$ increased or decreased by a \% a total of $n$ times, we compute $P(1 + \%_d)^n$. But then the $(1 + \%_d)^n$ factor represents the percentage increase or decrease resulting from applying a percentage increase/decrease of $\%_d$ a total of $n$ times. Assuming a constant inflation rate of 3.52\% over the six years from 2024 to 2030, we have\dots
+	\[
+	(1 + 0.0352)^6= (1.0352)^6= 1.230681= 1 + 0.230681
+	\]
+Therefore, we can recognize this as representing a 23.07\% increase, i.e. prices will increase 23.07\% from 2024 to 2030. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Patrick runs a chard stand. Chard being\dots chard, Patrick needs to take out a loan to help pay for dancers to advertise his product at the local farmer's market to drive up sales. The local bank offers a simple discount note for \$5,600 over a period of 8~months at 8.7\% annual interest. 
+	\begin{enumerate}[(a)]
+	\item What is the maturity for this simple discount note?
+	\item What is the discount for this note?
+	\item What is the interest Patrick pays on this loan?
+	\item How much does Patrick receive from the bank?
+	\item At the end of the 8~months, how much does Patrick owe the bank?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The maturity for a simple discount note is the requested loan amount. Therefore, the maturity is $M= \$5,\!600$. \pspace
+
+\item The discount for a simple discount note is the interest paid (up-front) on the loan. But this is\dots
+	\[
+	D= Mrt= \$5,\!600 (0.087)\, \tfrac{8}{12}= \$324.80
+	\] 
+
+\item The interest paid on the loan is the discount on the note. But from (b), we know that this is \$324.80. \pspace
+
+\item Patrick receives the full maturity minus the discount (interest) that is paid up-front. Therefore, the amount received (the proceeds) are\dots
+	\[
+	P= M - D= \$5,\!600 - \$324.80= \$5,\!275.20
+	\]
+
+\item Patrick only ever has to pay back the amount borrowed plus interest. However, the interest (discount) is paid up-front. Therefore, at the end of the 8~months, Patrick need only pay back the amount borrowed---\$5,600. 
+\end{enumerate}
+
+
+\end{document}

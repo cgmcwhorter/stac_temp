@@ -1,0 +1,96 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{4: Due 02/07}{Oh my! It smells like Granda's house at Christmas. That's when we found her dead on the toilet.}{Kenneth Parcell, 30 Rock}
+
+% Problem 1
+\problem{10} Eileen Bach sells propane and propane accessories. She wants to start a YouTube channel where she reviews grills. Of course, she will then have to regularly purchase grills. She wants to review a grill per week and post it to her channel. Eileen estimates that the average grill will cost her \$720. After she is done, she thinks that she will be able to re-sell the grill at a 40\% discount. She plans on saving for 3~months worth of reviews by making a single deposit into an account that earns 1.13\% annual interest, compounded every other month for a period of a year and a half. 
+	\begin{enumerate}[(a)]
+	\item At the end of the month, how much should Eileen estimate that she has net spent on grills?
+	\item How much should she deposit into the account? 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item She will need to purchase a grill per week. So Eileen will need to purchase 4~grills per month. This will cost an average of $\$720 \cdot 4= \$2,\!880$. She then resells the grill for 40\% off; that is, she recovers 60\% of the value of the grills she purchased. But then she only actually loses, i.e. spends, 40\% of the \$2,880. Therefore, on average, she spends a net of \$1,152 each month. \pspace
+
+\item Eileen wants to save for three months of reviews. From (a), each month should cost her a net of \$1,152, on average. Therefore, she wants to save $\$1,\!152 \cdot 3= \$3,\!456$. So we want to know how much she should invest now, i.e. the principal $P$, so that after $t= 1.5$~years of earning interest at a nominal annual interest rate of $r= 0.013$, compounded $k= 6$~times per year, she will have a future amount of $F= \$3,\!456$. This is\dots
+	\[
+	P= \dfrac{F}{\left(1 + \dfrac{r}{k} \right)^{kt}}= \dfrac{\$3,\!456}{\left(1 + \dfrac{0.0113}{6} \right)^{6 \cdot 1.5}}= \dfrac{\$3,\!456}{1.001883333^9}= \dfrac{\$3,\!456}{1.0170782497}= \$3,\!397.97
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Susan Flaye has taken out a loan to afford the best possible broom she can to join her local adult Quidditch league. The loan was for \$870 at 9.55\% annual interest, compounded quarterly. She has not made any payments on the loan for the past 2~years. Though Susan has performed fantastically on her team---leading them to over 13 victories---how much does Susan currently owe on her loan? \pspace
+
+\sol Because no payments are made on the loan and it is simply accruing discrete compounded interest, this is a discrete compounded interest problem. The interest has a nominal interest rate of $r= 0.0955$ and is compounded $k= 4$~times per year. We want to know the future value, $F$, of the principal $P= \$870$ after having earned interest for $t= 2$~years. This is\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= \$870 \left(1 + \dfrac{0.0955}{4} \right)^{4 \cdot 2}= \$870 (1.023875)^8= \$870(1.2077457323)= \$1,\!050.74
+	\] \pspace
+Therefore, after 2~years, Susan owes \$1,050.74. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Ty Coon is saving to build a roller coaster park. Though he has investors and can take out loans, he wants to have at least \$26~million saved to bring to the table on his own when the park opens. Ty will deposit money into an account that earns 2.9\% annual interest, compounded continuously. The money will sit for 3~years while the park is being constructed. What is the minimum amount that Ty should deposit now to have at least \$26~million at the end of the three years? \pspace
+
+\sol This is a continuous compound interest problem. We know that the nominal annual interest rate is $r= 0.029$. We want to know the principal, $P$, that Ty should deposit now such that the future value of this deposit, $F$, after 3~years is \$26~million. This is\dots
+	\[
+	P= \dfrac{F}{e^{rt}}= \dfrac{\$26,\!000,\!000}{e^{0.029 \cdot 3}}= \dfrac{\$26,\!000,\!000}{e^{0.087}}= \dfrac{\$26,\!000,\!000}{1.09089667972}= \$23,\!833,\!604.49
+	\] \pspace
+Therefore, Ty should deposit \$23,833,604.49 right now. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Justin Caese has invested in his future by purchasing the world's largest Pog collection. He currently estimates that the collection is worth \$5,600 and that the value increases each month by 1.17\%.
+	\begin{enumerate}[(a)]
+	\item How much is the collection worth in 10~years?
+	\item How long until the collection is worth \$100,000?
+	\end{enumerate} \pspace
+
+\sol The collection's value is increasing in value every month but is not being `artificially' altered. Therefore, this is a discrete compounded interest problem. We can view this as having annual interest which is compounded monthly with an interest rate per period of 1.17\%. Then the nominal interest would be $12 \cdot 1.17\%= 14.04\%$. \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We want to know the future value, $F$, of this collection after 10~years. This is a total of $12 \cdot 10= 120$~monthly increases of 1.17\%. Computing this as an iterative percentage increase, we have\dots
+	\[
+	P(1 + i_p)^n= \$5,\!600 (1 + 0.0117)^{120}= \$5,\!600 (1.0117)^{120}= \$5,\!600 (4.03840619)= \$22,\!615.07
+	\]
+Alternatively, treating this as a discrete compounded interest problem with $r= 14.04\%$, $k= 12$, and $t= 10$, we have\dots
+	\[
+	F= P \left(1 + \dfrac{r}{k} \right)^{kt}= \$5,\!600 \left(1 + \dfrac{0.1404}{12} \right)^{12 \cdot 10}= \$5,600 (1.0117)^{120}= \$5,\!600 (4.03840619)= \$22,\!615.07
+	\] 
+Therefore, after 10~years, the collection will be worth \$22,615.07. \pspace
+
+\item We want to know the amount of time that it takes the initial value of $P= \$5,\!600$ to grow to a future value of $F= \$100,\!000$. Treating this as as a discrete compounded interest problem with $r= 14.04\%$, $k= 12$, and $t= 10$, we have\dots
+	\[
+	t= \dfrac{\ln(F/P)}{k \ln \left(1 + \dfrac{r}{k} \right)}= \dfrac{\ln(17.85714286)}{12 \ln \left(1 + \dfrac{0.1404}{12} \right)}= \dfrac{\ln(17.85714286)}{12 \ln(1.0117)}= \dfrac{2.8824035884}{0.13958501}= 20.65 \text{ years}
+	\]
+Therefore, it will take 20.65~years to reach a value of \$100,000. 
+\end{enumerate}
+
+
+\end{document}

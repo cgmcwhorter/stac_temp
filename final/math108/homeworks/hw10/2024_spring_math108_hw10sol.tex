@@ -1,0 +1,76 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{10: Due 03/04}{If you have a problem with the majestic Canadian Goose, then you have a problem with me.}{Wayne, Letterkenny}
+
+% Problem 1
+\problem{10} Suppose you play a game with a larger spinner. The spinner has four possible outcomes given by numbered regions on the spinner. However, these regions are not all the same size. The probability that the spinner lands on a particular region is given in the table below. If the spinners lands on one, you win \$10. If the spinner lands on two, you win \$1. If you spin a three or four, you lose \$5 or \$8, respectively. 
+	\begin{table}[!ht]
+	\centering 
+	\begin{tabular}{|c||c|c|c|c|} \hline 
+	$n$ & $1$ & $2$ & $3$ & $4$ \\ \hline 
+	$P(n)$ & $\phantom{\dfrac{4\rule{0pt}{2.9ex}}{12\rule[-1.3ex]{0pt}{0pt}}}$ & $\dfrac{4}{9}$ & $\dfrac{2}{9}$ & $\dfrac{1}{9}$ \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item Find $P(1)$.
+\item Find the probability that if spin three times, you lose money each time. 
+\item Find the average amount you win per game.
+\item Should you play this game? Explain. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We know the sum of the probabilities of all possible (elementary) events must be 1---because something must happen. But then\dots
+	\[
+	1= P(1) + P(2) + P(3) + P(4)= P(1) + \dfrac{4}{9} + \dfrac{2}{9} + \dfrac{1}{9}= P(1) + \dfrac{7}{9}
+	\]
+Therefore, $P(1)= 1 - \frac{7}{9}= \frac{2}{9}$. \pspace 
+
+\item You only lose money if you spin a three or four. These two events are disjoint. We know that $P(3 \text{ or } 4)= P(3) + P(4)= \frac{2}{9} + \frac{1}{9}= \frac{3}{9}= \frac{1}{3}$. Assuming the spins are independent, we know\dots
+	\[
+	P(\text{3 or 4 three times})= P(3 \text{ or } 4) \cdot P(3 \text{ or } 4) \cdot P(3 \text{ or } 4)= \dfrac{1}{3} \cdot \dfrac{1}{3} \cdot \dfrac{1}{3}= \dfrac{1}{27} \approx 0.037037
+	\] \pspace
+
+\item This is the expected value. We have\dots
+	\[
+	\text{EX}= \sum x P(X= x)= \$10 \cdot \dfrac{2}{9} + \$1 \cdot \dfrac{4}{9} + (-\$5) \cdot \dfrac{2}{9} + (-\$8) \cdot \dfrac{1}{9}= \dfrac{6}{9}= \dfrac{2}{3} \approx \$0.67
+	\] \pspace
+
+\item Because the expected value is positive, on average in the long run, one makes an average of \$0.67 per game. Because this is positive, one should play this game (in the long run). 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Your firm is trying to determine whether to invest in increased advertisements. If they decide to increase their advertisements, they plan on spending at least an additional \$25,000 in advertising. A colleague in sales estimates that if they increase advertising, there is a 8\% chance there is no increase in sales, a 29\% that there is an increase in sales of between \$1 and \$15,000, a 48\% chance they increase sales between \$15,001 and \$30,000, and a 15\% chance they increase sales between \$30,001 and \$40,000 with no chance that they increase sales more than \$40,000. Based on these estimates, should the firm take out additional advertising? Be sure to justify your answer. \pspace
+
+\sol We can create a table of the possible increase in sales along with their associated probability. \par
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{l|ccccc}
+	Sales Increase & \$0 & \$1--\$15,000 & \$15,001--\$30,000 & \$30,001--\$40,000 & $>$ \$40,000 \\ \hline 
+	Probability & 0.08 & 0.29 & 0.48 & 0.15 & 0.00
+	\end{tabular}
+	\end{table} \par
+But then by increasing advertising, the \textit{most} one could expect on average for sales to increase by\dots
+	\[
+	\text{EX}= \sum x P(X= x)= \$0(0.08) + \$15,\!000 (0.29) + \$30,\!000 (0.48) + \$40,\!000 (0.15) + 0= \$24,\!750
+	\]
+But then based on these estimates, even in the best case scenario, the firm will spend more on increasing advertising than the resulting estimated probable maximum increase in sales. Therefore, at this time, the firm should not increase their spending in advertising. 
+
+
+\end{document}

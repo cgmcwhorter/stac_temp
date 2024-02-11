@@ -2,7 +2,6 @@
 \usepackage[lmargin=1in,rmargin=1in,bmargin=1in,tmargin=1in]{geometry}
 \usepackage{quiz}
 
-
 % -------------------
 % Content
 % -------------------
@@ -12,10 +11,46 @@
 % Quiz 1
 \quizsol \textit{True/False}: The integer 131313 is prime. \pspace
 
-\sol The statement is \textit{false}. We know that an integer $N$ is divisible by 3 if and only if the sum of its digits is divisible by 3. We know that $1 + 3 + 1 + 3 + 1 + 3= 12$ is divisible by 3. Therefore, 131313 cannot be prime. In fact, $131313= 3 \cdot 43771= 3 \cdot 7 \cdot 13 \cdot 37$. 
+\sol The statement is \textit{false}. We know that an integer $N$ is divisible by 3 if and only if the sum of its digits is divisible by 3. We know that $1 + 3 + 1 + 3 + 1 + 3= 12$ is divisible by 3. Therefore, 131313 cannot be prime. In fact, $131313= 3 \cdot 43771= 3 \cdot 7 \cdot 13 \cdot 37$. \pvspace{1.3cm}
 
 
 
+% Quiz 2
+\quizsol \textit{True/False}: Every rational number can be written as $\frac{a}{b}$, where $\gcd(a, b)= 1$. \pspace
+
+\sol The statement is \textit{true}. By definition, a rational number $r$ is a number of the form $\frac{a}{b}$, where $a, b$ are integers and $b \neq 0$. Therefore, we can clearly write every rational number in the form $\frac{a}{b}$. Now can we impose the restriction that $\gcd(a, b)= 1$? Yes! By cancelling common factors from $a, b$, we can assure that the fraction is reduced, i.e. $\gcd(a, b)= 1$. In fact, we can always divide the numerator and denominator by $\gcd(a, b)$. After, we have $\gcd(a, b)= 1$. For instance, take $\frac{10}{15}$. We have $\gcd(10, 15)= 5$. But then $\frac{10}{15} \cdot \frac{1/5}{1/5}= \frac{2}{3}$ is reduced. \pvspace{1.3cm}
+
+
+
+% Quiz 3
+\quizsol \textit{True/False}: $\dfrac{(x^2)^3 x^5}{x^4}= x^6$ \pspace
+
+\sol The statement is \textit{false}. Recall that $x^a \cdot x^b= x^{a + b}$, $(x^a)^b= x^{ab}$, and $\frac{x^a}{x^b}= x^{a - b}$. We then have\dots
+	\[
+	\dfrac{(x^2)^3 x^5}{x^4}= \dfrac{x^6 \cdot x^5}{x^4}= \dfrac{x^{11}}{x^4}= x^7
+	\]
+The mistake made was adding the powers in $(x^2)^3$ to obtain $x^5$ rather than multiplying the powers to obtain the correct $x^6$. \pvspace{1.3cm}
+
+
+
+% Quiz 4
+\quizsol \textit{True/False}: $\sqrt{\sqrt[3]{x^2}}= x^{2/5}$ \pspace
+
+\sol The statement is \textit{false}. Recall that $\sqrt[n]{x^m}= x^{m/n}$ and $(x^a)^b= x^{ab}$. We then have\dots
+	\[
+	\sqrt{\sqrt[3]{x^2}}= \sqrt{x^{2/3}}= (x^{2/3})^{1/2}= x^{\frac{2}{3} \cdot \frac{1}{2}}= x^{1/3}= \sqrt[3]{x}
+	\]
+The mistake made was adding the denominators rather than multiplying the powers correctly, i.e. $\sqrt{\sqrt[3]{x^2}}= \big( (x^2)^{1/3} \big)^{1/2}= (x^2)^{1/5}= x^{2/5}$, which is incorrect. \pvspace{1.3cm}
+
+
+
+% Quiz 5
+\quizsol \textit{True/False}: $(1 - 3i)(2 + 5i)= 17 - i$ \pspace
+
+\sol The statement is \textit{true}. Recall that $i^2= -1$. Then we have\dots
+	\[
+	(1 - 3i)(2 + 5i)= 1(2) + 1(5i) - 3i(2) - 3i(5i)= 2 + 5i - 6i - 15i^2= 2 - i - 15(-1)= 2 - i + 15= 17 - i
+	\]
 
 
 

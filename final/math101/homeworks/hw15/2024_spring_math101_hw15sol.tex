@@ -1,0 +1,109 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{15: Due 04/08}{Sometimes I think I have felt everything I'm ever gonna feel. And from here on out, I'm not gonna feel anything new. Just lesser versions of what I've already felt.}{Theodore Twombly, Her}
+
+% Problem 1
+\problem{10} Solve the following system of equations:
+	\[
+	\begin{aligned}
+	2x + y&= 1 \\
+	3x - y&= -11
+	\end{aligned}
+	\] \pspace
+
+\sol There are two elementary approaches: \pspace
+
+\noindent {\itshape Substitution.} Solving for $y$ in the first equation, we have $y= 1 - 2x$. Using this in the second equation, we have\dots
+	\[
+	\begin{gathered}
+	3x - y= -11 \\[0.3cm]
+	3x - (1 - 2x)= -11 \\[0.3cm]
+	3x - 1 + 2x= -11 \\[0.3cm]
+	5x= -10 \\[0.3cm]
+	x= -2
+	\end{gathered}
+	\]
+But then we have $y= 1 - 2x= 1 - 2(-2)= 1 + 4= 5$. Therefore, the lines intersect at the point $(x, y)= (-2, 5)$. \pspace
+
+\noindent {\itshape Elimination.} We add the two equations to eliminate $y$. This obtains $5x= -10$, which immediately implies $x= -2$. Using this in the first equation, we have\dots
+	\[
+	\begin{gathered}
+	2x + y= 1 \\[0.3cm]
+	2(-2) + y= 1 \\[0.3cm]
+	-4 + y= 1 \\[0.3cm]
+	y= 5
+	\end{gathered}	
+	\]
+Therefore, the lines intersect at $(x, y)= (-2, 5)$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Solve the following system of equations:
+	\[
+	\begin{cases}
+	4x + 6y= 6 \\
+	5x + 2y= 13
+	\end{cases}
+	\]
+
+\sol There are two elementary approaches: \pspace
+
+\noindent {\itshape Substitution.} Solving for $x$ in the first equation, we have\dots
+	\[
+	\begin{aligned}
+	4x + 6y= 6 \\
+	4x= 6 - 6y \\
+	x= \dfrac{6 - 6y}{4} \\
+	x= \dfrac{3 - 3y}{2}
+	\end{aligned}
+	\] 
+Using this in the second equation, we have\dots
+	\[
+	\begin{gathered}
+	5x + 2y= 13 \\
+	5 \cdot \dfrac{3 - 3y}{2} + 2y= 13 \\
+	\dfrac{15 - 15y}{2} + 2y= 13 \\
+	2 \left( \dfrac{15 - 15y}{2} + 2y \right)= 2 \cdot 13 \\
+	15 - 15y + 4y= 26 \\
+	15 - 11y= 26 \\
+	-11y= 11 \\
+	y= -1
+	\end{gathered}
+	\]
+But then we have $x= \frac{3 - 3(-1)}{2}= \frac{3 + 3}{2}= \frac{6}{2}= 3$. Therefore, the lines intersect at the point $(x, y)= (3, -1)$. \pspace
+
+\noindent {\itshape Elimination.} We multiply the second equation by $-3$. This gives us the following system of equations:
+	\[
+	\begin{cases}
+	4x + 6y= 6 \\
+	-15x - 6y= -39
+	\end{cases}
+	\]
+Adding these equations, we obtain $-11x= -33$. But then $x= \frac{-33}{-11}= 3$. Using this in the first equation, we have\dots
+	\[
+	\begin{gathered}
+	4x + 6y= 6 \\
+	4(3) + 6y= 6 \\
+	12 + 6y= 6 \\
+	6y= -6 \\
+	y= -1
+	\end{gathered}
+	\]
+Therefore, the lines intersect at $(x, y)= (3, -1)$. 
+
+
+\end{document}

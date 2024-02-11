@@ -1,0 +1,106 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{8: Due 02/26}{If you really want something in this life, you have to work for it---now quiet, they're about to announce the lottery numbers!}{Homer Simpson}
+
+% Problem 1
+\problem{10} Define what it means for two events $A, B$ to be disjoint---give both the mathematical and `colloquial' definition. Give an example of disjoint events and give an example of non-disjoint events. \pspace
+
+\sol Two events are disjoint if they cannot occur at the same time. Mathematically, two events $A, B$ are disjoint if and only if $A$ and $B$ have nothing in common, i.e. $A \cap B= \varnothing$. For finite probability spaces, this is equivalent to $P(A \text{ and } B)= 0$; however, for probability spaces with infinitely many possible events, it is possible that $P(A \text{ and } B)= 0$ but $A$ and $B$ can occur at the same time. \pspace
+
+For example, if one flips a coin 10~times, then the event of flipping at least 6 heads and the event of flipping at least 6 tails are disjoint because they cannot occur at the same time. For a non-example, the event of flipping at least two heads and the event of flipping at least two tails are not disjoint---flipping five of each is an example of both occurring simultaneously. \pspace
+
+As another example, take the event of voting for one particular congressional candidate. One cannot vote for more than one candidate. Therefore, the event of voting for any particular candidate is disjoint from the event of voting for any other particular candidate. However, the event of donating to any particular charity need not be disjoint to the event of donating to another particular charity---some individuals donate to more than one charity. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Define what it means for two events $A, B$ to be independent---give both the mathematical and `colloquial' definition. Give an example of independent events and give an example of non-independent events. \pspace
+
+\sol Two events are independent if the occurrence or non-occurrence of one does not chance the likelihood of the occurrence or non-occurrence of the other. Mathematically, events $A$ and $B$ are independent if $P(A \text{ and } B)= P(A) P(B)$; that is, the probability of the events occurring simultaneously is the product of their probabilities. \pspace
+
+For example, consider the events of it raining in Brunei and the event of you seeing a raven that day. The occurrence or non-occurrence of one should not change the probability that the other occurs or not. However, the events of it raining yesterday and the event of it raining today are not independent. If it rains today, it makes the probability of it also raining tomorrow more or less likely. \pspace
+
+As another example, imagine flipping a coin 10 times. The event of flipping at least 2 heads is not independent from the event of flipping at least 4 heads. Once one occurs, the other is either more likely or has already occurred. In fact, disjoint events can never be independent. For example, the events of flipping a heads or tail are disjoint---one cannot flip both a head and a tail on any one particular flip. Generally, because disjoint events cannot occur at the same time, once one occurs, we know the other has not. But then the occurrence or nonoccurrence of the other affects the likelihood of the other. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} If $A, B$ are events, explain what $P(A \;|\; B)$ means. Give an example with explicit events $A, B$. Explain why $P(A \text{ and } B) \leq P(A)$. \pspace
+
+\sol We know that $P(A \;|\; B)$ is the probability that $A$ occurs once $B$ has already occurred. If $P(B) \neq 0$, we know that $P(A \;|\; B)= \dfrac{P(A \text{ and } B)}{P(B)}$. For example, suppose a bag contains 2 blue and 3 red marbles. What is the probability that one draws a blue marble if one just drew a blue marble. Because drawing a blue marble makes drawing the less one more/less likely, these events are not independent. It would then not be correct to say that this probability is $P(B \text{ and } B)= \frac{2}{5} \cdot \frac{2}{5}= \frac{4}{25}= 0.16$. However, we have $P(B \;|\; B)= \frac{P(B \text{ and } B)}{P(B)}= \frac{\frac{2}{5} \cdot \frac{1}{4}}{\frac{2}{5}}= \frac{1}{4}$, which matches one's intuition: after drawing a blue marble, there are four marbles left and only one of them is blue so that the probability of drawing the last blue is $\frac{1}{4}$. \pspace
+
+We know that $P(A \text{ and } B) \leq P(A)$ because if $A$ and $B$ occur, then certainly $A$ occurs. Therefore, the requirement that $B$ also occur means the event that $A$ and $B$ occur could only be at most as often as $A$ occurs. We are not requiring additional criterion---that $B$ also occur. This should only make the event we hope to observe, $A$ and $B$, no more likely than $A$. We can show this mathematically: $P(A \text{ and } B)= P(A) P(B \;|\; A)$. But $P(B \;|\; A) \leq 1$ so that $P(A \text{ and } B)= P(A) P(B \;|\; A) \leq P(A) \cdot 1= P(A)$. Mutatis mutandis, we can prove $P(A \text{ and } B) \leq P(B)$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} The probabilities of several events in a finite probability space are given below:
+	\[
+	\begin{aligned}
+	P(A)&= 0.83 &\qquad\qquad P(D)&= 0.15 \\
+	P(B)&= 0.49 & P(A \text{ and } B)&= 0.24 \\
+	P(C)&= 0.32 & P(B \text{ and } D)&= 0.17 
+	\end{aligned}
+	\] 
+
+\begin{enumerate}[(a)]
+\item Assuming that $A$ and $C$ are independent, find $P(A \text{ or } C)$.
+\item Assuming $B$ and $C$ are disjoint, find $P(B \text{ or } C)$.
+\item Are $A$ and $B$ disjoint? Explain.
+\item Are $B$ and $D$ independent? Explain. 
+\item Find $P(A \;|\; B)$.
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item Because $A$ and $C$ are independent, we know that $P(A \text{ and } C)= P(A) P(C)= 0.83 \cdot 0.32= 0.2656$. But then\dots
+	\[
+	P(A \text{ or } C)= P(A) + P(C) - P(A \text{ and } C)= 0.83 + 0.32 - 0.2656= 0.8844
+	\] \pspace
+
+\item If $B, C$ are disjoint, then $P(B \text{ or } C)= P(B) + P(C)$ because $P(B \text{ and } C)= 0$. But then\dots
+	\[
+	P(B \text{ or } C)= P(B) + P(C)= 0.49 + 0.32= 0.81
+	\] \pspace
+
+\item If $A$ and $B$ were disjoint, then $P(A \text{ or } B)= P(A) + P(B)$. But then\dots
+	\[
+	P(A \text{ or } B)= 0.83 + 0.49= 1.32
+	\]
+This is impossible. Therefore, it cannot be that $A$ and $B$ are disjoint. Alternatively, because $P(A \text{ and } B)= 0.24 \neq 0$, $A$ and $B$ cannot be disjoint events. \pspace 
+
+\item If $B$ and $D$ were disjoint events, then $P(B \text{ and } D)= P(B) P(D)$. But\dots
+	\[
+	P(B \text{ and } D)= 0.17 \neq 0.0735= 0.49 \cdot 0.15= P(B) P(D)
+	\] 
+Therefore, $B$ and $D$ cannot be independent events. \pspace
+
+\item Because $P(B) \neq 0$, we have\dots
+	\[
+	P(A \;|\; B)= \dfrac{P(A \text{ and } B)}{P(B)}= \dfrac{0.24}{0.49}= 0.489796
+	\]
+\end{enumerate}
+
+
+\end{document}

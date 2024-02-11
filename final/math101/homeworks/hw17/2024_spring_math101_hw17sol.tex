@@ -1,0 +1,103 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{17: Due 04/15}{I can talk to animals. Well, not talk to them; I can take commands from them.}{Kenneth Parcell, 30 Rock}
+
+% Problem 1
+\problem{10} Complete the square in $x^2 + 8x + 6$ to find the vertex form of this quadratic function. \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	x^2 + 8x + 6 \\[0.3cm]
+	x^2 + 8x + \left( \dfrac{8}{2} \right)^2 - \left( \dfrac{8}{2} \right)^2 + 6 \\[0.3cm]
+	x^2 + 8x + 4^2 - 4^2 + 6 \\[0.3cm]
+	(x^2 + 8x + 16) - 16 + 6 \\[0.3cm]
+	(x + 4)^2 - 10 
+	\end{gathered}
+	\] \pspace
+Therefore, the vertex form is $(x + 4)^2 - 10$, which implies that the vertex is $(-4, -10)$. Because $a= 1 > 0$, this quadratic function opens upwards. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Use the `evaluation method' to find the vertex form of the quadratic function $2x^2 + 12x - 14$. \pspace
+
+\sol A quadratic function $f(x)= ax^2 + bx + c$ has vertex located at $x_0= -\frac{b}{2a}$. The $y$-coordinate of the vertex is then $y_0= f(x_0)$. For the quadratic function $2x^2 + 12x - 14$, we have $a= 2$, $b= 12$, and $c= -14$. Now $x_0= -\frac{b}{2a}= -\frac{12}{2(2)}= -\frac{12}{4}= -3$. The $y$-coordinate of the vertex is then $f(-3)= 2(-3)^2 + 12(-3) - 14= 2(9) + 12(-3) - 14= 18 - 36 - 14= -32$. Therefore, the vertex is $(-3, -32)$. We know that for this quadratic function, $a= 2$. The vertex form of a quadratic function is $a(x - P)^2 + Q$, where $(P, Q)$ is the vertex. Therefore, the vertex form of this quadratic function is\dots
+	\[
+	2x^2 + 12x - 14= 2 \big(x - (-3) \big)^2 + (-32)= 2(x + 3)^2 - 32
+	\] 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use completing the square to solve the following quadratic equation: 
+	\[
+	x(x - 6)= 7
+	\] \pspace
+
+\sol We have\dots
+	\[
+	\begin{gathered}
+	x(x - 6)= 7 \\[0.3cm]
+	x^2 - 6x= 7 \\[0.3cm]
+	x^2 - 6x + \left( \dfrac{-6}{2} \right)^2= 7 + \left( \dfrac{-6}{2} \right)^2 \\[0.3cm]
+	x^2 - 6x + (-3)^2= 7 + (-3)^2 \\[0.3cm]
+	x^2 - 6x + 9= 7 + 9 \\[0.3cm]
+	(x - 3)^2= 16 \\[0.3cm]
+	\sqrt{(x - 3)^2}= \sqrt{16} \\[0.3cm]
+	x - 3= \pm 4 \\[0.3cm]
+	x= 3 \pm 4
+	\end{gathered}
+	\] \pspace
+Therefore, the solutions are $x= 3 - 4= -1$ and $x= 3 + 4= 7$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Use the quadratic formula to solve the following quadratic equation:
+	\[
+	x(5 - x)= 3
+	\] \pspace
+
+\sol First, observe that this equation is equivalent to\dots
+	\[
+	\begin{gathered}
+	x(5 - x)= 3 \\[0.3cm]
+	5x - x^2= 3 \\[0.3cm]
+	0= x^2 - 5x + 3
+	\end{gathered}
+	\]
+To find the solutions for this quadratic equation (and hence the original), we need to find the zeros of $x^2 - 5x + 3$. This is a quadratic function with $a= 1$, $b= -5$, and $c= 3$. But then we have\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\[0.3cm]
+	&= \dfrac{-(-5) \pm \sqrt{(-5)^2 - 4(1)3}}{2(1)} \\[0.3cm]
+	&= \dfrac{5 \pm \sqrt{25 - 12}}{2} \\[0.3cm]
+	&= \dfrac{5 \pm \sqrt{13}}{2}
+	\end{aligned}
+	\] \pspace 
+Therefore, the solutions to the original equation are $x= \frac{5 - \sqrt{13}}{2} \approx 0.697224$ and $x= \frac{5 + \sqrt{13}}{2} \approx 4.30278$. 
+
+
+\end{document}

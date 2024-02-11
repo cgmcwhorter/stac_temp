@@ -1,0 +1,53 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\newcommand{\squiggle}{\rightsquigarrow}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{14: Due 03/27}{I got Luke a video game but it's about Math so I guess we're those kind of uncles.}{Mitchell Pritchett, Modern Family}
+
+% Problem 1
+\problem{10} Researchers are trying to determine how much households are spending on streaming services each year. They take a simple random sample of 76~individuals and ask them how much they spend on streaming services each year. They find an average of \$396 per year. Construct a 88\% confidence interval for the amount that households spend on streaming services on average each year. [Assume that it is known that $\sigma= \$60$.] \pspace
+
+\sol The sample is a simple random sample and the sample size $n= 76$ is `sufficiently large', i.e. $n \geq 30$. Therefore, the Central Limit Theorem applies. A 88\% confidence interval is then given by $\overline{x} \pm z^* \frac{\sigma}{\sqrt{n}}$. If the confidence interval captures 88\% of the values, this leaves 12\% of the values outside this interval, i.e. 6\% for each end. Therefore, $z^*$ corresponds to $0.88 + 0.06= 0.94$. We find that $z^* \approx 1.555$. But then\dots
+	\[
+	\begin{gathered}
+	\overline{x} \pm z^* \frac{\sigma}{\sqrt{n}} \\[0.3cm]
+	\$396 \pm 1.555 \cdot \dfrac{\$60}{\sqrt{76}} \\[0.3cm]
+	\$396 \pm 1.555(\$6.88247) \\[0.3cm]
+	\$396 \pm \$10.70
+	\end{gathered}
+	\] \pspace
+Therefore, based on this sample, there is an 88\% chance that the average amount spent on streaming services per year by a household is \$385.30 and \$406.70. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Economists are examining the effects of recent high inflation. They take a large survey of 15,000 individuals. It is estimated that because of recent inflation, 56\% of households have experienced some type of financial hardship over the last year. Use the normal approximation to the binomial distribution to find the probability that between 8,260 and 8,536 individuals surveyed have experienced some type of financial hardship over the last year. \pspace
+
+\sol We assume that the sample was a simple random sample. Because $np= 15000(0.56)= 8400 \geq 10$ and $n(1 - p)= 15000(1 - 0.56)= 15000(0.44)= 6600 \geq 10$, the normal approximation to the binomial distribution is appropriate. We know that the binomial distribution in this case is $B(n, p)= B(15000, 0.56)$. The normal approximation states that $B(n, p)= B(15000, 0.56) \approx N \big(np, \sqrt{np(1 - p)} \big)= N \big(15000(0.56), \sqrt{15000(0.56)(1- 0.56)} \big)= N(8400, \sqrt{3696})= N(8400, 60.79)$. We have\dots
+	\[
+	\begin{aligned}
+	z_{8260}&= \dfrac{8260 - 8400}{60.79}= \dfrac{-140}{60.79}= -2.30 \squiggle 0.0107 \\[0.3cm]
+	z_{8536}&= \dfrac{8536 - 8400}{60.79}= \dfrac{136}{60.79}= 2.24 \squiggle 0.9875
+	\end{aligned}
+	\]
+But then, we have\dots
+	\[
+	P(8260 \leq X \leq 8536) \approx P(X \leq 8536) - P(X \leq 8260)= 0.9875 - 0.0107= 0.9768
+	\]
+Therefore, there is a 97.68\% chance that between 8,260 and 8,536 individuals surveyed have experienced some type of financial hardship over the last year. 
+
+
+\end{document}

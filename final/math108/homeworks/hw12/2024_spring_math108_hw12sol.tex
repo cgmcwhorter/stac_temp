@@ -1,0 +1,107 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\newcommand{\squiggle}{\rightsquigarrow}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{12: Due 03/18}{Society is never gonna make any progress until we all learn to pretend to like each other.}{Turanga Leela, Futurama}
+
+% Problem 1
+\problem{10} A company is examining their sales history across the past few decades. Thirty years ago, the company's yearly sales were normally distributed with mean \$12.4~million with standard deviation \$2.7~million. In that decade, the company experienced a year where they only had \$3.1~million in sales. A decade ago, the company's sales were normally distributed with mean \$45.0~million and standard deviation \$8.6~million. During that decade, the company had a year where they had \$73.1~million in sales. Which was more unusual, their sales slump about 30~years ago or their sales boom about 10~years ago? Explain. \pspace
+
+\sol Because of the fact that in both cases the sales were normally distributed, we can compare the `unusualness' of scores by using their associated $z$-score. The greater the magnitude of the $z$-score, the more `unusual' the score. We have\dots
+	\[
+	\begin{aligned}
+	|z_{3.1}|&= \left| \dfrac{3.1 - 12.4}{2.7} \right| = \left| \dfrac{-9.3}{2.7} \right|= |-3.44|= 3.44 \\[0.3cm]
+	|z_{73.1}|&= \left| \dfrac{73.1 - 45}{8.6} \right|= \left| \dfrac{28.1}{8.6} \right|= |3.27|= 3.27
+	\end{aligned}
+	\]
+Because $3.44 > 3.27$, the sales slump thirty years ago was more unusual (relative to the sales during that time) than the sales boom 10~years ago (relative to the sales during that time). 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} A local municipality is trying to determine how to allocate state and federal funds to local parks. Looking at historical data, they find that one of their local beaches has a summer visitor guest total that is normally distributed with mean 43,360 and standard deviation 4,271. 
+	\begin{enumerate}[(a)]
+	\item What is the probability that the beach will see between 38,000 and 50,000 visitors this summer?
+	\item What is the probability that the beach will see less than 35,000 visitors this summer?
+	\item What is the probability that the beach will see more than 50,000 visitors this summer? 
+	\end{enumerate} \pspace
+
+\sol We are told that the number of visitors is normally distributed with mean 43,360 and standard deviation 4,271, i.e. $N(\mu, \sigma)= N(43360, 4271)$. 
+
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{aligned}
+	z_{38000}&= \dfrac{38000 - 43360}{4271}= \dfrac{-5360}{4271}= -1.25 \squiggle 0.1056 \\[0.3cm]
+	z_{50000}&= \dfrac{50000 - 43360}{4271}= \dfrac{6640}{4271}= 1.55 \squiggle 0.9394
+	\end{aligned}
+	\]
+Therefore, 
+	\[
+	P(38000 < X < 50000)= P(X < 50000) - P(X < 38000)= 0.9394 - 0.1056= 0.8338
+	\] \pspace
+
+\item We have\dots
+	\[
+	z_{35000}= \dfrac{35000 - 43360}{4271}= \dfrac{-8360}{4271}= -1.96 \squiggle 0.0250 
+	\] \pspace
+
+\item We know that $z_{50000}= 1.55 \squiggle 0.9394$, i.e. $P(X < 50000)= 0.9394$. But then\dots
+	\[
+	P(X > 50000)= 1 - P(X < 50000)= 1 - 0.9394= 0.0606
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Government workers are examining smartphone usage in teenagers. They survey parents across the 50~states about their children's phone usage. The survey finds that the reported daily hours of smartphone use by teens is approximately normally distributed with mean four hours and standard deviation 2.1~hours. 
+	\begin{enumerate}[(a)]
+	\item What percentage of teenagers use their phone more than 6~hours per day.
+	\item At least how long do the top 10\% of daily teenage smartphone users spend on their phone each day?
+	\end{enumerate} \pspace
+
+\sol We are told that phone usage is normally distributed with mean 4 and standard deviation 2.1, i.e. $N(\mu, \sigma)= N(4, 2.1)$. 
+
+\begin{enumerate}[(a)]
+\item This is $P(X > 6)$. We have\dots
+	\[
+	z_6= \dfrac{6 - 4}{2.1}= \dfrac{2}{2.1}= 0.95 \squiggle 0.8289
+	\]
+But then\dots
+	\[
+	P(X > 6)= 1 - P(X < 5)= 1 - 0.8289= 0.1711
+	\] 
+That is, 17.11\% of teenagers use their phone more than 6~hours per day. \pspace
+
+\item Let $h$ be the minimum number of hours required to be in the top 10\% of phone users. To be in the top 10\% of users, one must use the phone more than 90\% of users. But then $z_h \squiggle 0.90$. From a $z$-score chart, we can see that it must be that $z_h \approx 1.28$. But then\dots
+	\[
+	\begin{gathered}
+	z_h \approx 1.28 \\[0.3cm]
+	\dfrac{h - 4}{2.1} \approx 1.28 \\[0.3cm]
+	h - 4 \approx 2.688 \\[0.3cm]
+	h \approx 6.688
+	\end{gathered}
+	\]
+Therefore, the minimum number of hours required to be in the top 10\% of phone users is 6.688~hours. 
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,101 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\usepackage{cancel} % Use Cancel
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due 01/31}{And I knew exactly what to do\dots but in a much more real sense, I had no idea what to do.}{Michael Scott, The Office}
+
+% Problem 1
+\problem{10} Showing all your work, simplify the following as much as possible (express any denominators using negative powers):
+	\begin{enumerate}[(a)]
+	\item $\dfrac{x^5 y^3}{x^3 y^9}$
+	\item $\dfrac{(x^2 y^{-3})^4}{x^0 y^2}$
+	\item $\dfrac{(x^8 y^3)^0 x y^7}{(x^2)^3 y}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{x^5 y^3}{x^3 y^9}= \dfrac{x^{\cancel{5}^{\,2}} \cancel{y^3}}{\cancel{x^3} y^{\cancel{9}^{\,6}}}= \dfrac{x^2}{y^6}= x^2 y^{-6}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{(x^2 y^{-3})^4}{x^0 y^2}= \dfrac{x^8 y^{-12}}{1 \cdot y^2}= \dfrac{x^8}{y^{12} y^2}= \dfrac{x^8}{y^{14}}= x^8 y^{-14}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{(x^8 y^3)^0 x y^7}{(x^2)^3 y}= \dfrac{1 \cdot x y^7}{x^6 y}= \dfrac{\cancel{x} y^{\cancel{7}^{\,6}}}{x^{\cancel{6}^{\,5}} \cancel{y}}= \dfrac{y^6}{x^5}= y^6 x^{-5}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Showing all your work, simplify the following as much as possible (do not express your answer using any negative powers): 
+	\begin{enumerate}[(a)]
+	\item $\dfrac{x^{-2} y z^6}{x y^{-6} z^5}$
+	\item $\dfrac{(x y^{-2})^{-1}}{x^3 y^{-7}}$
+	\item $\left( \dfrac{x^5 y^{-4}}{(x^{-4} y^3)^{-8}} \right)^0$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{x^{-2} y z^6}{x y^{-6} z^5}= \dfrac{y^6 y z^6}{x^2 x z^5}= \dfrac{y^7 z^6}{x^3 z^5}= \dfrac{y^7 z^{\cancel{6}^{\,1}}}{x^3 \cancel{z^5}}= \dfrac{y^7 z}{x^3}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{(x y^{-2})^{-1}}{x^3 y^{-7}}= \dfrac{x^{-1} y^2}{x^3 y^{-7}}= \dfrac{y^7 y^2}{x^1 x^3}= \dfrac{y^9}{x^4}
+	\] \pspace
+
+\item 
+	\[
+	\left( \dfrac{x^5 y^{-4}}{(x^{-4} y^3)^{-8}} \right)^0= 1
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, simplify the following as much as possible (do not express your answer using any negative powers): 
+	\[
+	\dfrac{\left( (x y z)^5 x z^{-4} \right)^2 x^{-5}}{x y^{-3} z^{-2}}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	\dfrac{\left( (x y z)^5 x z^{-4} \right)^2 x^{-5}}{x y^{-3} z^{-2}} \\[0.3cm]
+	\dfrac{\big( x^5 y^5 z^5 x z^{-4} \big)^2 x^{-5}}{x y^{-3} z^{-2}} \\[0.3cm]
+	\dfrac{ \big(x^6 y^5 z^1 \big)^2 x^{-5}}{x y^{-3} z^{-2}} \\[0.3cm]
+	\dfrac{x^{12} y^{10} z^2 x^{-5}}{x y^{-3} z^{-2}} \\[0.3cm]
+	\dfrac{x^7 y^{10} z^2 y^3 z^2}{x} \\[0.3cm] 
+	\dfrac{x^7 y^{13} z^4}{x} \\[0.3cm]
+	\dfrac{x^{\cancel{7}^{\,6}} y^{13} z^4}{\cancel{x}} \\[0.3cm]
+	x^6 y^{13} z^4
+	\end{gathered}
+	\]
+
+
+\end{document}

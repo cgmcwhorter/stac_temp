@@ -1,0 +1,163 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+\usepackage{actuarialsymbol}	% Actuary Symbols
+\newcommand{\actS}[2]{s_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s
+\newcommand{\actSD}[2]{\ddot{s}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s dot
+\newcommand{\actA}[2]{a_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a
+\newcommand{\actAD}[2]{\ddot{a}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a dot
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{6: Due 02/14}{Look. There's something you should know about me. I've been trying to hide it but, it's time I told someone the truth. I know it's gonna sound crazy but\dots here it goes\dots I'm awkward.}{Ryan Newman, Wilfred}
+
+% Problem 1
+\problem{10} For an annuity with a period of 15~years, quarterly payments, and a 8.91\% annual interest, compounded monthly, compute the following:
+	\begin{enumerate}[(a)]
+	\item $\actS{\text{PM}}{i}$
+	\item $\actA{\text{PM}}{i}$
+	\item $\actS{\text{PM}}{i}$
+	\item $\actAD{\text{PM}}{i}$
+	\end{enumerate} \pspace
+
+\sol Because payments are made 4~times a year for a period of 15~years, the number of payments is $\text{PM}= \text{PY} \cdot t= 4 \cdot 15= 60$. Because the number of payments per year (4~payments) is not equal to the number of compounds per year ($k= 12$~compounds), this is a general annuity. The annual interest rate is $r= 0.0891$. So we must convert the interest: 
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0891}{12} \right)^{12/4} - 1= (1.007425)^3 - 1= 1.0224408012198907 - 1= 0.0224408012198907
+	\]
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\actS{60}{i}= \dfrac{(1 + i)^{60} - 1}{i}= \dfrac{2.7869565238189304}{0.0224408012198907}= 124.191489
+	\] \pspace
+
+\item 
+	\[
+	\actA{60}{i}= \dfrac{1 - (1 + i)^{-60}}{i}= \dfrac{0.7359357062299842}{0.0224408012198907}= 32.794538 
+	\] \pspace
+
+\item 
+	\[
+	\actSD{60}{i}= (1 + i) \actS{60}{i}= (1.0224408012198907) 124.191489= 126.978446 
+	\] \pspace
+
+\item 
+	\[
+	\actAD{60}{i}= (1 + i) \actA{60}{i}= (1.0224408012198907) 32.794538= 33.530474
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Colin DaCoupe is saving his money to be able to afford to take his friends to Hell's Kitchen in Las Vegas. He deposits \$54 at the end of every month into a savings account that earns 2.31\% annual interest, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item How much will he have saved after 16~months?
+	\item What should have Colin deposited each month if he had wanted to save at least \$1,000 by the end of the 16~months?
+	\end{enumerate} \pspace
+
+\sol Because Colin is making regular, equal deposits, this is an annuity. Because the payments of $R= \$54$ are made at the end of each payment period, this is an ordinary annuity. Finally, because the number of payments per year, $\text{PY}= 12$, is equal to the number of compounds per year, $k= 12$, this is a simple ordinary annuity. The nominal annual interest rate is $r= 0.0231$. Because this is a simple annuity, we have $i= \frac{r}{k}= \frac{0.0231}{12}= 0.001925$. 
+
+\begin{enumerate}[(a)]
+\item We want the future value of Colin's payments after $t= \frac{16}{12}= 1.33333$~years. Colin has then made a total of $\text{PM}= 12 \cdot \frac{16}{12}= 16$~payments. We have\dots
+	\[
+	\actS{16}{i}= \dfrac{(1 + i)^{16} - 1}{i}= \dfrac{0.0312486947712336}{0.001925}= 16.233088
+	\]
+But then Colin will have saved\dots
+	\[
+	F= R \actS{16}{i}= \$54(16.233088) \approx \$876.59
+	\] \pspace
+
+\item We know to know what the monthly payments, $R$, should be such that the future value of these payments would be \$1,000. But we have\dots
+	\[
+	R= \dfrac{F}{\actS{16}{i}}= \dfrac{\$1,\!000}{16.233088} \approx \$61.60
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Sue Flay's parents saved money from their bistro to set up a small trust fund for when Sue turned 18. When Sue finally reached that milestone, the account had \$62,000. The money was transferred into an account that earns 2.84\% annual interest, compounded monthly. Sue wants to supplement her income using her trust fund. She plans on taking out equal amounts at the start of the month, every three months. Sue wants the trust fund to last 15~years. 
+	\begin{enumerate}[(a)]
+	\item  What is the amount that Sue should withdraw?
+	\item If Sue instead withdraws the money at the end of each month, what is the amount she should withdraw? 
+	\end{enumerate} \pspace
+
+\sol Because Sue will make regular, equal withdrawals, this is an annuity. Because the withdrawals will be made at the start of each payment period, this is an annuity due. Finally, because the number of withdrawals per year, $\text{PY}= 4$, is not equal to the number of compounds per year, $k= 12$, this is a general ordinary annuity. Sue will make a total of $\text{PM}= 4 \cdot 15= 60$~withdrawals over 15~years. The nominal annual interest rate is $r= 0.0231$. Because this is a general annuity, we must convert the interest:
+	\[
+	i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0284}{12} \right)^{12/4} - 1= (1.002366667)^3 - 1= 1.0071168176 - 1= 0.0071168176 
+	\]
+
+\begin{enumerate}[(a)]
+\item We want to know the monthly withdrawals, $R$, that Sue should make to exhaust the present amount of $P= \$62,000$ in the future. We have\dots
+	\[
+	\begin{aligned}
+	\actA{60}{i}&= \dfrac{1 - (1 + i)^{-60}}{i}= \dfrac{0.34655489708185705}{0.0071168176}= 48.695206 \\[0.3cm]
+	\actAD{60}{i}&= (1 + i) \actA{60}{i}= (1.0071168176) 48.695206= 49.041761
+	\end{aligned}
+	\]
+But then\dots
+	\[
+	R= \dfrac{P}{\actAD{60}{i}}= \dfrac{\$62,000}{49.041761} \approx \$1,264.23
+	\] 
+So she should withdraw \$1,264.23 every three months. \pspace
+
+\item The only thing that changes if the withdrawals are made at the end of the month is that this is then a general ordinary annuity. But then\dots
+	\[
+	R= \dfrac{P}{\actA{60}{i}}= \dfrac{\$62,000}{48.695206} \approx \$1,\!273.23
+	\]
+So she should withdraw \$1,273.23 every three months. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Lon Moore is saving for a new riding lawn mower that comes complete with DVD player, Bluetooth, and a beer cozy. He places \$140 at the start of each month into an account that earns 1.08\% annual interest, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item How much will Lon have saved after 2~years?
+	\item If he had wanted to save \$5,600 at the end of the 2~years, how much should he have been depositing each month?	
+	\end{enumerate} \pspace
+
+\sol Because Lon will make regular, equal deposits, this is an annuity. Because the deposits of $R= \$140$ will be made at the start of each payment period, this is an annuity due. Finally, because the number of withdrawals per year, $\text{PY}= 12$, is equal to the number of compounds per year, $k= 12$, this is a simple annuity due. The nominal annual interest rate is $r= 0.0108$. Because this is a simple annuity, we know $i= \frac{r}{k}= \frac{0.0108}{12}= 0.0009$. \pspace
+
+\begin{enumerate}[(a)]
+\item We know that Lon will make a total of $\text{PM}= 12 \cdot 2= 24$~deposits. We want to know the future value, $F$, of Lon's deposits. We have\dots
+	\[
+	\begin{aligned}
+	\actS{24}{i}&= \dfrac{(1 + i)^{24} - 1}{i}= \dfrac{0.02182504249288586}{0.0009}= 24.250047 \\[0.3cm]
+	\actSD{24}{i}&= (1 + i) \actS{24}{i}= (1.0009) 24.250047= 24.271872
+	\end{aligned}
+	\]
+But then\dots
+	\[
+	F= R \actSD{24}{i}= \$140(24.271872) \approx \$3,\!398.06
+	\]
+Then after 2~years, Lon will have saved \$3,398.06. \pspace
+
+\item We want to know how much Lon should have deposited, $R$, each month so that the future value of these savings would be $F= \$5,\!600$. But then\dots
+	\[
+	R= \dfrac{F}{\actSD{24}{i}}= \dfrac{\$5,\!600}{24.271872} \approx \$230.72
+	\]
+Therefore, Lon should have deposited \$230.72 each month. 
+\end{enumerate}
+
+
+\end{document}

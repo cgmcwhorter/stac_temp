@@ -5,6 +5,10 @@
 \setbool{hideans}{true} % Student: True; Instructor: False
 
 \usepackage{actuarialsymbol}	% Actuary Symbols
+\newcommand{\actS}[2]{s_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s
+\newcommand{\actSD}[2]{\ddot{s}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s dot
+\newcommand{\actA}[2]{a_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a
+\newcommand{\actAD}[2]{\ddot{a}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a dot
 
 % -------------------
 % Content
@@ -16,10 +20,10 @@
 % Problem 1
 \problem{10} For an annuity with a period of 15~years, quarterly payments, and a 8.91\% annual interest, compounded monthly, compute the following:
 	\begin{enumerate}[(a)]
-	\item $s_{\actuarialangle{\text{PM}\,}\, i}$
-	\item $a_{\actuarialangle{\text{PM}\,}\, i}$
-	\item $\ddot{s}_{\actuarialangle{\text{PM}\,}\, i}$
-	\item $\ddot{a}_{\actuarialangle{\text{PM}\,}\, i}$
+	\item $\actS{\text{PM}}{i}$
+	\item $\actA{\text{PM}}{i}$
+	\item $\actS{\text{PM}}{i}$
+	\item $\actAD{\text{PM}}{i}$
 	\end{enumerate}
 
 
@@ -42,7 +46,7 @@
 
 
 % Problem 3
-\problem{10} Sue Flay's parents saved money from their bistro to set up a small trust fund for when Sue turned 18. When Sue finally reached that milestone, the account had \$62,000. The money was transferred into an account that earns 2.84\% annual interest, compounded monthly. Sue wants to supplement her income using her trust fund. She plans on taking out equal amounts at the start of each month, every three months. Sue wants the trust fund to last 15~years. 
+\problem{10} Sue Flay's parents saved money from their bistro to set up a small trust fund for when Sue turned 18. When Sue finally reached that milestone, the account had \$62,000. The money was transferred into an account that earns 2.84\% annual interest, compounded monthly. Sue wants to supplement her income using her trust fund. She plans on taking out equal amounts at the start of the month, every three months. Sue wants the trust fund to last 15~years. 
 	\begin{enumerate}[(a)]
 	\item  What is the amount that Sue should withdraw?
 	\item If Sue instead withdraws the money at the end of each month, what is the amount she should withdraw? 

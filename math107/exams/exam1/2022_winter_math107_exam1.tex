@@ -12,6 +12,10 @@
 
 \setbool{hideans}{true} % Student: True; Instructor: False
 
+% Logical Circuits
+\usepackage{circuitikz}
+\usetikzlibrary{shapes.gates.logic.US,shapes.gates.logic.IEC}
+
 % -------------------
 % Content
 % -------------------
@@ -43,6 +47,29 @@
 % Question 3
 \newpage
 \question[10] Find the logical expression corresponding to the following circuit:
+	\[
+	\begin{tikzpicture}
+	\node (p) at (0,2) {\hspace{-0.5cm}$P$};
+	\node (q) at (0,0.94) {\hspace{-0.5cm}$Q$};
+	\node (r) at (0,0.091) {\hspace{-0.5cm}$R$};
+	
+	\node[not gate US, draw, line width= 0.03cm] at (1.75,2) (not1) {}; % Upper NOT
+	\node[or gate US, draw, line width= 0.03cm] at (1.75,0.5) (or1) {}; % Lower OR
+	\node[and gate US, draw, line width= 0.03cm] at (3.5,1.5) (and1) {}; % Middle AND
+	\node[or gate US, draw, line width= 0.03cm] at (5.2,1.25) (or2) {}; % Right OR
+	
+	\draw[line width= 0.03cm] (p) |- (not1.input); % P to NOT
+	\draw[line width= 0.03cm] (q) |- (or1.input 1); % Q to OR
+	\draw[line width= 0.03cm] (r) |- (or1.input 2); % R to OR
+	
+	\draw[line width= 0.03cm] (not1.output) -- ([xshift=0.5cm]not1.output) |- (and1.input 1); % NOT to AND
+	\draw[line width= 0.03cm] (or1.output) -- ([xshift=0.5cm]or1.output) |- (and1.input 2); % OR to AND
+	
+	\draw[line width= 0.03cm] (and1.output) -- ([xshift=0.38cm]and1.output) |- (or2.input 1); % AND to OR
+	\draw[line width= 0.03cm] (0.75,0.4) -- (0.75,-0.2) -- ([xshift=3.55cm]0.75,-0.2) |- (or2.input 2); % R to OR
+	\draw[line width= 0.03cm] (or2.output) -- ([xshift=0.5cm]or2.output); % OR tail
+	\end{tikzpicture}
+	\]
 
 
 
