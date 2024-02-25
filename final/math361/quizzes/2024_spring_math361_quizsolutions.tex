@@ -67,19 +67,44 @@ Clearly, $x$ and $-x$ are everywhere continuous (they are polynomials) and $\ds 
 \sol The statement is \textit{false}. Because only a finite number of bits are used to track the sign, exponent, and significand, the system can only store finitely many discrete values. In particular, fixing a number of bits, even in the interval containing all the representable floating point numbers, $[r_{\text{min}}, r_{\text{max}}]$, not every real number in this interval is representable. For floating point numbers, we can perform all the same basic arithmetic operations, i.e. addition, subtraction, multiplication, division, etc. However, these operations do not have the same properties as their real number counterparts due to rounding/truncation. For instance, addition of floating point numbers need not be associative: if $x, y, z \in \mathbb{F}$, we need not have\dots
 	\[
 	x + (y + z)= (x + y) + z
+	\] \pvspace{1.3cm}
+
+
+
+% Quiz 6
+\quizsol \textit{True/False}: The function $f(x)= \sqrt{1 - x^2} - 1$ has issues with conditioning and catastrophic cancellation for values $x \approx 0$. \pspace
+
+\sol The statement is \textit{false}. First, observe that for $x \approx 0$, we know that $x^2 \approx 0$. But then for $x \approx 0$, $1 - x^2 \approx 1 - 0= 1$. But then for $x \approx 0$, we know that $\sqrt{1 - x^2} \approx \sqrt{1}= 1$. [This requires a bit more justification, but one can easily make use of the differentiability or continuity of the square root function to justify this.] But then as written, one would be subtracting to `near' quantities for $x \approx 0$, which could result in catastrophic cancellation. To prevent this, we should rewrite the function $f(x)$ to avoid this:
+	\[
+	f(x)= \sqrt{1 - x^2} - 1= \big( \sqrt{1 - x^2} - 1 \big) \cdot \dfrac{\sqrt{1 - x^2} + 1}{\sqrt{1 - x^2} + 1}= \dfrac{-x^2}{\sqrt{1 - x^2} + 1}
 	\]
+We know the condition number to evaluate a (differentiable) function $f(x)$ at $x= x_0$ is approximately $\frac{x f'(x)}{f(x)}$. Here, we have $f(x)= \sqrt{1 - x^2} - 1$ and $f'(x)= -\frac{x}{\sqrt{1 - x^2}}$. But then\dots
+	\[
+	\dfrac{x f'(x)}{f(x)}= \dfrac{x \cdot -\frac{x}{\sqrt{1 - x^2}}}{\sqrt{1 - x^2} - 1}= \dfrac{\frac{-x^2}{\sqrt{1 - x^2}}}{\sqrt{1 - x^2} - 1}= \dfrac{-x^2}{(1 - x^2) - \sqrt{1 - x^2}}= \dfrac{x^2}{x^2 - 1 + \sqrt{1 - x^2}}
+	\]
+But we have\dots
+	\[
+	\lim_{x \to 0} \dfrac{x f'(x)}{f(x)}= \lim_{x \to 0} \dfrac{x^2}{x^2 - 1 + \sqrt{1 - x^2}}= 2
+	\]
+We can consider this condition number not `too large'---certainly, $\kappa < \infty$. Therefore, we would like consider the evaluation of $f(x)$ `near zero' as not having issues with conditioning. Therefore, while the quiz statement was correct on the issue of catastrophic cancellation, it was wrong about the issue of conditioning. \pvspace{1.3cm}
 
 
 
+% Quiz 7
+\quizsol \textit{True/False}: If $f(x)$ has a root on the interval $[a, b]$, then the bisection method will find this approximate this root to any desired accuracy. Furthermore, the actual error in the approximation is independent of the function. \pspace
+
+\sol The statement is \textit{false}. Simply because $f(x)$ has a root on $[a, b]$ \textit{does not} imply that the bisection method applies to this interval. The bisection method requires the intermediate value theorem. Therefore, if $f(a)$ and $f(b)$ do not have opposite signs, the bisection method cannot proceed. For instance, consider the function $f(x)= (x - 2)^2 - 1= x^2 - 4x + 3$ clearly has roots at $x= 1$ and $x= 3$. In particular, $f(x)$ has roots on the interval $[0, 4]$. However, $f(0)= 3 > 0$ and $f(4)= 3 > 0$. Therefore, the intermediate value theorem and bisection method do not apply to $f(x)$ on the interval $[0, 4]$. Furthermore, if $r$ is a root of $f(x)$ on the interval $[a, b]$, assuming that the bisection method applies to $f(x)$ on $[a, b]$, we cannot control the \textit{actual} error but the \textit{maximal} error. For the bisection method, we know that after $n$ iterations, the maximal error is $\frac{b_0 - a_0}{2^{n + 1}}$; that is, if our approximation to $r$ after $n$ iterations of the bisection method is $x^*$, then $|x^* - r| < \frac{b_0 - a_0}{2^{n + 1}}$. The statement of the quiz is then wrong in two aspects. First, the bisection will not necessarily find a root for $f(x)$ on any interval that contains a root for $f(x)$. Second, while the actual error will depend on the function, it is the maximal error, $\frac{b_0 - a_0}{2^{n + 1}}$, that we can control and is independent of the function. \pvspace{1.3cm}
 
 
 
+% Quiz 8
+\quizsol \textit{True/False}: If $f(x)$ has a root on $[a, b]$ for which the bisection method can be used, then the bisection method will converge to the root linearly while Newton's method will converge to the root quadratically. \pspace
 
-
-
-
-
-
+\sol The statement it \textit{false}. Suppose that $f(x)$ has a zero on $[a, b]$ and that the bisection method applies to $f(x)$ on $[a, b]$, i.e. $f(a)$ and $f(b)$ have opposite signs. We know that the bisection method will always produce approximations $x_n^*$ such that $x_n^* \to r$, where $r$ is some root of $f(x)$ on $[a, b]$. Furthermore, we know that the rate of this convergence is linear. However, the nature and rate of convergence for Newton's method depends on the nature of the function and starting position. For instance, Newton's method may not converge for some initial starting position. Furthermore, the rate of convergence for Newton's method need not always be quadratic. In the case of root with multiplicity greater than one, Newton's method converges linearly. To see that the bisection method will converge when Newton's method may not, consider the case of $f(x)= \sqrt[3]{x}$ on $[-1, 1]$. Clearly, the only root of $f(x)$ on $[-1, 1]$ is $x= 0$. We know that $f(-1)= -1 < 0$ and $f(1)= 1 > 0$ so that the bisection method applies to $f(x)$ on $[-1, 1]$. However, we have\dots
+	\[
+	x_k - \dfrac{f(x_k)}{f'(x_k)}= x - \dfrac{\sqrt[3]{x_k}}{\frac{1}{3} \frac{1}{\sqrt[3]{x^2}}}= x_k - 3x_k= -2x_k
+	\]
+But then beginning Newton's Method at $x_0= a \in [-1, 1] \setminus \{ 0 \}$, we can see that $x_k= (-2)^k a$. But then Newton's Method will diverge for any $x_0 \neq 0$. It may be possible that the bisection and Newton's method both converge linearly to the root. For instance, consider the function $g(x)= x^3$ on $[-1, 1]$. Clearly, the only root of $g(x)$ on $[-1, 1]$ is $x= 0$ and this root has multiplicity three. We know that $g(-1)= -1 < 0$ and $g(1)= 1 > 0$. Therefore, the bisection method applies to $g(x)$ on $[-1, 1]$ so that the bisection method converges linearly to zero on $[-1, 1]$. It is not very difficult to prove that Newton's method will converge for any $a \neq 0$. However, because the root has multiplicity greater than one, the rate of this convergence is only linear. 
 
 
 

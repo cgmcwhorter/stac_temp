@@ -41,25 +41,28 @@ From the $178(0.512)$ portion from the computation above, we can see that decrea
 	\[
 	P= \dfrac{F}{\left(1 + \frac{r}{k} \right)^{kt}}= \dfrac{\$5,\!000}{\left(1 + \frac{0.053}{12} \right)^{12 \cdot 6}}= \dfrac{\$5,\!000}{(1.00441667)^{72}}= \dfrac{\$5,\!000}{1.37341460}= \$3,\!640.56
 	\]
-The expression given in the quiz statement is computing the future value, $F$, resulting from investing \$5,000 at 5.3\% annual interest, compounded monthly for 6~years. \pvspace{1.3cm}
+The expression given in the quiz statement is computing the future value, $F$, resulting from investing \$5,000 at 5.3\% annual interest, compounded monthly for 6~years. \pvspace{1.1cm}
 
 
 
 % Quiz 5
 \quizsol \textit{True/False}: Rosa is taking out a loan. She will use this money to afford advertising to her comic strip business. A bank offers two different plans. The first has an effective interest rate of 8.6\%. The second has an effective interest rate of 8.7\%. Because the second has a higher interest rate, it is the better deal. \pspace
 
-\sol The statement is \textit{false}. To compare different interest models, one can use effective interest or doubling time. Rosa is taking out a loan. Therefore, she would want the lowest possible interest rate. Because $8.6\% < 8.7\%$, the first offer is the better deal because she is effectively charged less interest per year. The situation would be the opposite if this were instead an investment, where she would want the highest possible effective interest---making the second option the better deal. 
+\sol The statement is \textit{false}. To compare different interest models, one can use effective interest or doubling time. Rosa is taking out a loan. Therefore, she would want the lowest possible interest rate. Because $8.6\% < 8.7\%$, the first offer is the better deal because she is effectively charged less interest per year. The situation would be the opposite if this were instead an investment, where she would want the highest possible effective interest---making the second option the better deal. \pvspace{1.1cm}
 
 
 
+% Quiz 6
+\quizsol \textit{True/False}: Justin deposits \$31 at the start of every month into an account that earns 0.8\% annual interest, compounded monthly. This is an example of a simple ordinary annuity. \pspace
+
+\sol The statement is \textit{false}. Because Justin makes regular payments that earn interest, this is an annuity. The number of payments per year is equal to the number of interest compounds per year (both occur monthly, i.e. twelve times per year), this is a simple annuity. Because payments are made at the start of a period, this is an annuity due. Therefore, this is an example of a simple annuity due. The answer given confuses an ordinary annuity with an annuity due. \pvspace{1.1cm}
 
 
 
+% Quiz 7
+\quizsol \textit{True/False}: To find the amount you should withdraw at the start of each month from an account that earns 12\% interest, compounded monthly to deplete an account containing \$12,345 after 5~years, you compute $\frac{\$12,\!345}{\actS{60}{0.01}}$. \pspace
 
-
-
-
-
+\sol The statement is \textit{false}. Because we are making regular deposits that earn interest, this is an annuity. Because the number of deposits per year is equal to the number of interest compounds per year, this is a simple annuity. Because the deposits are made at the start of a period, this is an annuity due. Therefore, this is a simple annuity due. The present amount in the account, i.e. the principal, is $P= \$12,\!345$. The number of deposits we will make over 5~years is $\text{PM}= 12 \cdot 5= 60$. Because this is a simple annuity, we know $i= \frac{r}{k}= \frac{0.12}{12}= 0.01$. We want to know the payment amount, $R$, that will deplete the account after 5~years. For an annuity due, we have $P= R \actAD{\text{PM}}{i}$, so that $R= \frac{P}{\actAD{\text{PM}}{i}}$. But then the amount we should withdraw each month given by $R= \frac{\$12,\!345}{\actAD{60}{0.01}}$. The expression in the quiz clearly is based on an ordinary annuity (because of the lack of `dots') and not an annuity due. Furthermore, the expression given in the quiz has used $F= R \actS{\text{PM}}{i}$ to find $R$. However, we are given the present value in the account rather than a future value so that an `$a$' is required, not an `$s$.' 
 
 
 

@@ -146,3 +146,9 @@
 \newcommand{\pspace}{\par\vspace{\baselineskip}} % Par then linebreak
 \newcommand{\pvspace}[1]{\par\vspace{#1}} % Par then vpsace
 \newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup} % Unnumbered Footnote
+
+\usepackage{actuarialsymbol}	% Actuary Symbols
+\newcommand{\actS}[2]{s_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s
+\newcommand{\actSD}[2]{\ddot{s}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial s dot
+\newcommand{\actA}[2]{a_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a
+\newcommand{\actAD}[2]{\ddot{a}_{\actuarialangle{#1\,}{\,#2}}} % Actuarial a dot

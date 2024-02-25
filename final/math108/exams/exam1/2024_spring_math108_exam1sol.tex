@@ -1,0 +1,229 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% Package actuarialsymbol conflicts with exam class 'term'
+\DeclareRobustCommand{\lcroof}[1]{
+  \hbox{\vtop{\vbox{%
+      \hrule\kern 1pt\hbox{%
+        $\scriptstyle #1$%
+        \kern 1pt}}\kern1pt}%
+    \vrule\kern1pt}}
+\DeclareRobustCommand{\angle}[1]{
+  _{\lcroof{#1}}}
+
+\newcommand{\actS}[2]{s_{\lcroof{#1\,}{\,#2}}} % Actuarial s
+\newcommand{\actSD}[2]{\ddot{s}_{\lcroof{#1\,}{\,#2}}} % Actuarial s dot
+\newcommand{\actA}[2]{a_{\lcroof{#1\,} \,#2}} % Actuarial a
+\newcommand{\actAD}[2]{\ddot{a}_{\lcroof{#1\,}{\,#2}}} % Actuarial a dot
+
+
+
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 1}
+\newcommand{\term}{Spring --- 2024}
+\newcommand{\examdate}{02/19/2023}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+
+% -------------------
+% Questions
+% -------------------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[15] Buddy Wieser just sold the exclusive rights to his homemade mead for \$172,000. Wanting to make the most of this windfall, he places the money into an account that earns 5.30\% annual interest, compounded monthly. 
+	\begin{enumerate}[(a)]
+	\item How much will the account have after 7~years?
+	\item What is the nominal interest? 
+	\item What is the actual annual interest rate that his money earns?
+	\end{enumerate} \pspace
+
+\sol Because the money is simply sitting in the account earning discrete compounded interest with no payments or withdrawals, this is a discrete compounded interest problem. We know the principal amount in the account is $P= \$172,\!000$. The nominal interest is $r= 0.0530$ and this interest is compounded a total of $k= 12$ times per year. 
+
+\begin{enumerate}[(a)]
+\item We want to know how much will be in the account, i.e. the future value $F$, after a total of $t= 7$~years. But this is\dots
+	\[
+	\begin{aligned}
+	F&= P \left(1 + \dfrac{r}{k} \right)^{kt} \\[0.3cm]
+	&= \$172,\!000 \left(1 + \dfrac{0.0530}{12} \right)^{12 \cdot 7} \\[0.3cm]
+	&= \$172,\!000 (1.0044166666666667)^{84} \\[0.3cm]
+	&= \$172,\!000 (1.4479997375729072) \\[0.3cm]
+	&\approx \$249,\!055.95
+	\end{aligned}
+	\] \pspace
+
+\item The nominal interest is the advertised interest before compounding. But this is 5.30\%, i.e. $r_{\text{nom}}= 0.0530$. \pspace
+
+\item The actual interest that the money in the account earns per year is the effective interest. But this is\dots
+	\[
+	r_{\text{eff}}= \left(1 + \dfrac{r}{k} \right)^{kt} - 1= \left(1 + \dfrac{0.0530}{12} \right)^{12} - 1 \approx (1.004416667)^{12} - 1 \approx 1.05431 - 1= 0.05431
+	\]
+Therefore, the effective interest rate is 5.431\%. 
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[13] Eaton Wright is trying to understand the rising costs of his Chipotle burritos. He takes a look at the state of the US economy. As of January~2024, the current CPI in the US is 309.68---up from 308.74 in December~2023. 
+	\begin{enumerate}[(a)]
+	\item What was the percentage change in the US CPI from December~2023 to January~2024?
+	\item If the CPI continues to increase monthly from January~2024 at the rate found in (a), what percentage more would one anticipate goods will cost in January~2030? 
+	\item If Eaton's Chipotle order costs \$18.93 now, according to (b), what should he estimate his meal's cost to be in January~2030?
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The percentage change is\dots
+	\[
+	\dfrac{\text{New CPI} - \text{Old CPI}}{\text{Old CPI}}= \dfrac{309.68 - 308.74}{308.74}= \dfrac{0.94}{308.74}= 0.003044633
+	\]
+Therefore, the CPI increased by approximately 0.3045\% from December~2023 to January~2024. \pspace
+
+\item We want to know by what percentage the CPI would increase from January~2024 to January~2030---a total of 6~years. We know that each month the CPI increases by approximately 0.3045\% from our work in (a). There are a total of $6 \cdot 12= 72$~months from January~2024 to January~2030. Therefore, we apply a 0.3045\% increase a total of 72~times. But this is\dots
+	\[
+	(1 + \%_d)^n= (1 + 0.003044633)^{72}= (1.003044633)^{72} \approx 1.244683= 1 + 0.244683
+	\]
+We can recognize this as an approximately 24.47\% increase. Therefore, we would predict that goods will cost approximately 24.47\% more in January~2030 than they cost in January~2024. \pspace
+
+\item Eaton's Chipotle order should cost approximately 24.47\% more in January~2030 than in January~2024 from our work in (b). But then we predict that his order will cost approximately\dots
+	\[
+	\$18.93 (1 + 0.244683)= \$18.93(1.244683) \approx \$23.56
+	\]
+\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[15] Robert Burger runs a small restaurant with his wife and three children. He sells his burger of the day for \$5.95 each. Though each special burger is different, he estimates that on average each costs \$3.89 for him to make. He pays a total of \$3,947 in rent each month to operate the business. Find the minimum number of specials Bob needs to make and sell each month to turn a profit. \pspace
+
+\sol We know that he sells each special for \$5.95. Therefore, if he sells $q$ special burgers, then he will bring a total revenue of $R(q)= 5.95q$. Each special burger costs \$3.89 to make. Therefore, if he makes $q$ special burgers, then the variable cost (V.C.) will be $3.89q$. However, he still needs to pay the rent each month---the fixed cost (F.C.). Therefore, his total cost to make $q$ special burgers each month is $C(q)= \text{V.C.} + \text{F.C.}= 3.89q + 3947$. We know the breakeven point is the point where revenue is equal to costs. But then\dots
+	\[
+	\begin{gathered}
+	R(q)= C(q) \\[0.3cm]
+	5.95q= 3.89q + 3947 \\[0.3cm]
+	2.06q= 3947 \\[0.3cm]
+	q \approx 1916.02
+	\end{gathered}
+	\]
+Because he cannot sell 1,916.02 special burgers and selling more burgers will result in more revenue (note that $m_R > m_C$), the minimum number of burgers he must sell each month to turn a profit is 1,917~burgers.\footnote{If he is open for a total of 31~days a month for 12~hours a day, this results in him needing to sell an average of 61.8~special burgers each day or an average of 5.15~special burgers per hour every day that he is open.}
+
+
+
+% Question 4
+\newpage
+\question[15] Reid Enright is saving money from his job as a school teacher to travel to the Pacific Northwest to pursue his passion---hunting for Bigfoot. After work on the first of each month, he places \$338 into an account which earns 2.08\% annual interest, compounded quarterly. Once Reid retires in another 20~years, how much will he have saved for his adventure? \pspace
+
+\sol Because Reid will make regular, equal deposits, this is an annuity. Because the deposits will be made at the start of each payment period, this is an annuity due. Finally, because the number of deposits per year, $\text{PY}= 12$, is not equal to the number of compounds per year, $k= 4$, this is a general annuity due. Reid will make a total of $\text{PM}= 12 \cdot 20= 240$~payments over 20~years. The nominal annual interest rate is $r= 0.0208$. Because this is a general annuity, we must convert the interest:
+	\[
+	\hspace{-2cm} i= \left(1 + \dfrac{r}{k} \right)^{k/\text{PY}} - 1= \left(1 + \dfrac{0.0208}{4} \right)^{4/12} - 1= (1.0052)^{1/3} - 1= 1.0017303375384203 - 1= 0.0017303375384203 
+	\]
+We want to know much much Reid will saved, i.e. the future value $F$, after 20~years. We know that $F= R \, \actSD{n}{i}$. We know\dots
+	\[
+	\begin{aligned}
+	\actS{240}{i}&= \dfrac{(1 + i)^{240} - 1}{i}= \dfrac{0.5142528287807493}{i}= 297.197984417672 \\[0.3cm]
+	\actSD{240}{i}&= (1 + i) \, \actS{240}{i}= (1.0017303375384203) \, 297.197984417672= 297.71223724645273
+	\end{aligned}
+	\]
+But then\dots
+	\[
+	F= R \, \actSD{n}{i}= \$338 \, \actSD{240}{i}= \$338(297.71223724645273) \approx \$100,\!626.73
+	\]
+Therefore, Reid will have saved \$100,626.73.
+	
+
+
+% Question 5
+\newpage
+\question[12] Rose Budd\'e is recently retired and realizes that the last time she was truly happy was while she was living in a small estate called Sanadont in the Florida panhandle. Luckily, the home is currently on the market. Using her retirement savings, she needs just under an additional \$14,000 to purchase the home. Rose takes out a simple discount note for the money at 11.3\% annual interest for a period of 8~months. 
+	\begin{enumerate}[(a)]
+	\item How much does she receive from the bank?
+	\item What is the interest she will pay on this loan?
+	\item What does she owe the bank when the loan comes due in 8~months?
+	\end{enumerate} \pspace
+
+\sol This is a simple discount note. The maturity (loan request) is $M= \$14,\!000$. The simple annual interest rate is $r= 0.113$. The period of the loan is $t= \frac{8}{12}$~years. 
+
+\begin{enumerate}[(a)]
+\item The amount that Rose receives from the bank is the maturity minus the discount, i.e. the interest on the loan. The discount for the loan is\dots
+	\[
+	D= Mrt= \$14,\!000(0.113) \, \frac{8}{12} \approx \$1,\!054.67
+	\]
+Therefore, the proceeds for the loan, $P$, which is the amount Rose actually receives from the bank, is\dots
+	\[
+	P= M - D= \$14,\!000 - \$1,\!054.67= \$12,\!945.33
+	\] \pspace
+
+\item The interest Rose pays on the loan is the amount that the loan is `discounted' by, i.e. the discount. But from (a), we know that this is \$1,054.67. \pspace
+
+\item Rose only ever need pay back the amount she wants to borrow, i.e. the maturity $M= \$14,\!000$, and any interest on the loan, i.e. the discount $D= \$1,\!054.67$. However, in a simple discount note, the interest (discount) is paid upfront. Therefore, at the end of the 8~months, Rose only owes the maturity for the loan. So at the end of 8~months, Rose owes the bank \$14,000. 
+\end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[15] Nita Cash is the daughter of legendary singer Johnny Cash's father's, brother's, nephew's, cousin's, former roommate. She would like to open a museum to honor her close connection to the famous singer. She takes out a loan of \$280,000 at 5.65\% annual interest, compounded monthly for a period of 25~years, which will be repaid with equal, end of the month payments. 
+	\begin{enumerate}[(a)]
+	\item What are Nita's monthly payments?
+	\item How much interest does she pay in total?
+	\item How much does she pay on the loan in total?
+	\end{enumerate} \pspace
+
+\sol Because this is a loan with regular, equal payments, this is an amortization. Because the payments are made at the end of each month, this is an amortization based on an ordinary annuity. Because the number of payments per year, $\text{PY}= 12$, is equal to the number of compounds per year, $k= 12$, this is an amortization based on a simple ordinary annuity. The nominal interest rate is $r= 0.0565$. Because this is a simple annuity, we have $i= \frac{r}{k}= \frac{0.0565}{12}= 0.004708 \overline{3}$. Nina will make a total of $\text{PM}= 12 \cdot 25= 300$~payments. 
+
+\begin{enumerate}[(a)]
+\item We want to know Nita's monthly payments, $R$, having taken out an initial loan, i.e. a principal, of $P= \$280,\!000$. We know that $R= \dfrac{P}{\actA{\text{PM}}{i}}$. First, we have\dots
+	\[
+	\actA{300}{i}= \dfrac{1 - (1 + i)^{-300}}{i}= \dfrac{0.755657693292576}{i}= 160.49366937187455
+	\] 
+But then\dots
+	\[
+	R= \dfrac{P}{\actA{\text{PM}}{i}}= \dfrac{\$280,\!000}{\actA{300}{i}}= \dfrac{\$280,\!000}{160.49366937187455}= 1744.6170998260384 \approx \$1,\!744.62
+	\]
+Therefore, Nita's monthly payments will be \$1,744.62. \pspace
+
+\item Nina will make a total of $\text{PM}= 300$ equal payments of \$1,744.62. Therefore, she pays a total of $\$1,\!744.6171(300)= \$523,\!385.13$ on the loan. The only money Nina ever pay back is the amount she borrowed, \$280,000, and any interest on the loan. But then\dots
+	\[
+	I= \text{PM} \cdot R - P= \$523,\!385.13 - \$280,\!000= \$243,\!385.13
+	\] 
+Therefore, Nina pays a total of \$243,385.13 in interest. \pspace
+
+\item From (b), we know that Nina pays a total of \$523,385.13 on the loan in total. 
+\end{enumerate}
+
+
+
+% Question 7
+\newpage
+\question[15] Nye Tommy Gunne is saving to finance his indie film \textit{Home Together: Found in Staten Island}. He wants to save \$85,000 for the film by placing \$45,000 into an account that earns 4.09\% annual interest, compounded continuously. How long until he has saved enough for his film? \pspace
+
+\sol Because the money is simply sitting in the account earning interest compounded continuously with no withdrawals or deposits, this is a compound continuously interest problem. We know the initial amount placed in the account, i.e. the principal, is $P= \$45,\!000$. The amount that Nye wants to save, i.e. the future value, is $F= \$85,\!000$. The account earns $r= 0.0409$ annual interest, compounded continuously. We want to know how long, i.e. the time $t$, until Nye has saved for his film. But this is\dots
+	\[
+	t= \dfrac{\ln(F/P)}{r}= \dfrac{\ln(\$85,\!000/\$45,\!000)}{0.0409}= \dfrac{\ln(1.8888889)}{0.0409}= \dfrac{0.635988773}{0.0409}= 15.5498
+	\]
+Therefore, Nye will have saved enough for his film after approximately 15.55~years, i.e. after approximately 15~years, 6~months, and 18~days. 
+
+
+\end{questions}
+\end{document}

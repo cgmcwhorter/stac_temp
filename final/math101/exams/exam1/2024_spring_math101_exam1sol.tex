@@ -1,0 +1,312 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 101: Exam 1}
+\newcommand{\term}{Spring --- 2024}
+\newcommand{\examdate}{02/21/2024}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+\usepackage{cancel} % For Cancellation
+\DeclareMathOperator{\lcm}{lcm} % LCM
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+
+% -------------------
+% Questions
+% -------------------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] The prime factorization of $852$ is $2^2 \cdot 3 \cdot 71$. Freely making use of this fact, complete the following:
+	\begin{enumerate}[(a)]
+	\item Find the prime factorization of $954$.
+	\item Compute $\gcd(852, 954)$.
+	\item Compute $\lcm(852, 954)$. 
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\begin{tikzpicture}
+	\node at (0,0) (n) {954};
+	\node at (-1.5,-1) (a) {9};
+	\node at (1.5,-1) (b) {106};
+	\node at (-2,-2) (c) {3};
+	\node at (-1,-2) (d) {3};
+	\node at (1,-2) (e) {2};
+	\node at (2,-2) (f) {53};
+	
+	\draw[line width=0.03cm] (n) -- (a);
+	\draw[line width=0.03cm] (n) -- (b);
+	\draw[line width=0.03cm] (a) -- (c);
+	\draw[line width=0.03cm] (a) -- (d);
+	\draw[line width=0.03cm] (b) -- (e);
+	\draw[line width=0.03cm] (b) -- (f);
+	\end{tikzpicture}
+	\]
+Therefore, $954= 2 \cdot 3^2 \cdot 53$. \pspace
+
+\item We have\dots
+	\[
+	\gcd(852, 954)= \gcd(2^2 \cdot 3 \cdot 71, \, 2 \cdot 3^2 \cdot 53)= 2 \cdot 3= 6
+	\] \pspace
+
+\item We have\dots
+	\[
+	\lcm(852, 954)= \lcm(2^2 \cdot 3 \cdot 71, \, 2 \cdot 3^2 \cdot 53)= 2^2 \cdot 3^2 \cdot 53 \cdot 71= 135,\!468
+	\]
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[10] Showing all your work and simplifying as much as possible, compute the following:
+	\begin{enumerate}[(a)]
+	\item $\dfrac{2}{3} - \dfrac{8}{6} + \dfrac{12}{5}$ \par\vspace{0.3cm}
+	\item $\dfrac{\;\;\dfrac{20}{21}\;\;}{\;\;\dfrac{55}{18}\;\;}$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{2}{3} - \dfrac{8}{6} + \dfrac{12}{5}= \dfrac{20}{30} - \dfrac{40}{30} + \dfrac{72}{30}= \dfrac{20 - 40 + 72}{30}= \dfrac{52}{30}= \dfrac{26}{15}
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{\;\;\dfrac{20}{21}\;\;}{\;\;\dfrac{55}{18}\;\;}= \dfrac{20}{21} \cdot \dfrac{18}{55}= \dfrac{\cancel{20}^{\,4}}{\cancel{21}^{\,7}} \cdot \dfrac{\cancel{18}^{\,6}}{\cancel{55}^{\,11}}= \dfrac{4}{7} \cdot \dfrac{6}{11}= \dfrac{24}{77}
+	\]
+\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[10] Showing all your work, simplify the following as much as possible: 
+	\[
+	\dfrac{\big( x^3 y^{-3} \big)^3 x^2 y^0}{x^{-3} \big( y^2 \big)^4}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	\dfrac{\big( x^3 y^{-3} \big)^3 x^2 y^0}{x^{-3} \big( y^2 \big)^4} \\[0.3cm]
+	\dfrac{x^9 y^{-9} \cdot x^2 \cdot 1}{x^{-3} \cdot y^8} \\[0.3cm]
+	\dfrac{x^{11} y^{-9}}{x^{-3} y^8} \\[0.3cm]
+	\dfrac{x^{11} x^3}{y^9 y^8} \\[0.3cm]
+	\dfrac{x^{14}}{y^{17}}
+	\end{gathered}
+	\]
+
+
+
+% Question 4
+\newpage
+\question[10] Showing all your work, simplify the following as much as possible: 
+	\[
+	x^4 y^3 \, \sqrt[4]{\dfrac{x^4 y^{-9}}{x^2 y^3}}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	x^4 y^3 \, \sqrt[4]{\dfrac{x^4 y^{-9}}{x^2 y^3}} \\[0.3cm]
+	x^4 y^3 \, \sqrt[4]{\dfrac{x^4}{y^9 x^2 y^3}} \\[0.3cm]
+	x^4 y^3 \, \sqrt[4]{\dfrac{x^4}{x^2 y^{12}}} \\[0.3cm]
+	x^4 y^3 \, \sqrt[4]{\dfrac{x^2}{y^{12}}} \\[0.3cm]
+	x^4 y^3 \left( \dfrac{x^2}{y^{12}} \right)^{1/4} \\[0.3cm]
+	x^4 y^3 \cdot \dfrac{x^{2/4}}{y^{12/4}} \\[0.3cm]
+	x^4 y^3 \cdot \dfrac{x^{1/2}}{y^3} \\[0.3cm]
+	\dfrac{x^4 y^3 x^{1/2}}{y^3} \\[0.3cm]
+	x^{4 + \frac{1}{2}} \\[0.3cm]
+	x^{9/2} \\[0.3cm]
+	\sqrt{x^9}
+	\end{gathered}
+	\]
+
+
+
+% Question 5
+\newpage
+\question[10] Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item $(15 + 7i) - (14 - 8i)$
+	\item  $(3 + 9i)(13 - 2i)$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(15 + 7i) - (14 - 8i)= 15 + 7i - 14 + 8i= 1 + 15i
+	\] \pspace
+
+\item 
+	\[
+	\begin{gathered}
+	(3 + 9i)(13 - 2i) \\[0.3cm]
+	39 - 6i + 117i - 18i^2 \\[0.3cm]
+	39 + 117i - 18(-1) \\[0.3cm]
+	39 + 117i + 18 \\[0.3cm]
+	57 + 117i
+	\end{gathered}
+	\]
+\end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[10] Showing all your work, compute the following:
+	\begin{enumerate}[(a)]
+	\item 6\% of 984
+	\item 560 increased by 47\%
+	\item 0.22 decreased by 22\%
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\text{6\% of 984}= 984(0.06)= 59.04
+	\] \pspace
+
+\item 
+	\[
+	\text{560 increased by 57\%}= 560(1 + 0.57)= 560(1.57)= 879.2
+	\] \pspace
+
+\item 
+	\[
+	0.22(1 - 0.22)= 0.22(0.79)= 0.1738
+	\]
+\end{enumerate}
+
+
+
+% Question 7
+\newpage
+\question[10] Below are the grades for a student as well as the course grade components and weights. Noting that the last exam has not occurred, find the student's current course average. \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{lcc}
+	Grade Component & Component Value & Student's Grade \\ \hline
+	Quizzes & 15\% & 61\% \\
+	Homework & 25\% & 75\% \\
+	Exam 1 & 10\% & 80\% \\
+	Exam 2 & 20\% & 52\% \\
+	Exam 3 & 30\% & N/A \\
+	\end{tabular}
+	\end{table} \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	\text{Course Average}&= \dfrac{\sum \text{Weight} \cdot \text{Grade}}{\sum \text{Weight}} \\[0.3cm]
+	&= \dfrac{0.15(61) + 0.25(75) + 0.10(80) + 0.20(52)}{0.15 + 0.25 + 0.10 + 0.20} \\[0.3cm]
+	&= \dfrac{9.15 + 18.75 + 8 + 10.4}{0.15 + 0.25 + 0.10 + 0.20} \\[0.3cm]
+	&= \dfrac{46.3}{0.70} \\[0.3cm]
+	&\approx 66.14\%
+	\end{aligned}
+	\]
+
+
+
+% Question 8
+\newpage
+\question[10] Suppose your overall GPA last semester was 3.433 based on a total of 49~credits. If you expect to receive a GPA this semester of 2.765 based on 16~credits, what would your overall GPA be then? \pspace
+
+\sol 
+	\[
+	\begin{aligned}
+	\text{New GPA}&= \dfrac{\text{Old Credits} \cdot \text{Old GPA} + \text{New Credits} \cdot \text{Semester GPA}}{\text{Total Credits}} \\[0.3cm]
+	&= \dfrac{49(3.433) + 16(2.765)}{49 + 16} \\[0.3cm]
+	&= \dfrac{168.217 + 44.24}{65} \\[0.3cm]
+	&= \dfrac{212.457}{65} \\[0.3cm]
+	&\approx 3.269
+	\end{aligned}
+	\]
+
+
+
+% Question 9
+\newpage
+\question[10] You are converting the cost of land in a certain region in the US for a European buyer. If the land cost \$85,000 per acre, what is this in Euros per square kilometer? [\$1.08 = \texteuro 1; 1~acre = 43,560~sq. ft; 1~m$^2$ = 10.7638~ft$^2$] \pspace
+
+\sol \par
+	\begin{table}[ht]
+	\centering
+	\small
+	\begin{tabular}{c||c|c|c|c|c}
+	\$85,000 & \texteuro 1 & 1~acre & 10.7638~ft$^2$   & 1,000~m & 1,000~m \\ \hline
+	1~acre & \$1.08 & 43,560~ft$^2$ & 1~m$^2$           & 1~km      & 1~km
+	\end{tabular} $\approx$
+	\texteuro 19,447,909.24 per km$^2$
+	\end{table}
+
+
+
+% Question 10
+\newpage
+\question[10] Surveillance satellites have taken images of a newly constructed building. The arial view of the roof and its dimensions are shown below.
+	\[
+	\begin{tikzpicture}
+	\draw[line width=0.03cm] (0,2) -- (0,0) -- (4,0) -- (6,0) -- (4,2);
+	\draw[line width=0.03cm] (4,2) arc (0:180:2);
+	\draw[line width=0.03cm,dotted] (0,2) -- (4,2);
+	\node at (2,2.3) {\small 300~ft};
+	\node at (3,-0.3) {\small 450~ft};
+	\node at (5.6,1.25) {\small 212~ft};
+	
+	\draw[line width=0.03cm,dotted,red] (4,0) -- (4,2);
+	\node at (4.8,0.3) {\footnotesize 150 ft};
+	\end{tikzpicture}
+	\]
+	
+\begin{enumerate}[(a)]
+\item Assuming the `upper' portion of this region is a semicircle, find the area of the roof of this building.
+\item Assuming the outer walls are perfectly perpendicular with the ground from top to bottom and that the building is 77~ft tall, find the volume of the building. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Break the region using the red line shown. The region is then made up of a semicircle, rectangle, and triangle. Because the diameter of the semicircle is 300~ft (so that the radius is $r= \frac{300 \text{ ft}}{2}= 150 \text{ ft}$) and the length of the entire bottom side of the building is 450~ft, the bottom leg of the triangle is $450 \text{ ft} - 300 \text{ ft}= 150 \text{ ft}$. We need the height of the rectangle, $h$, which is the vertical leg of the right triangle. By the Pythagorean Theorem, we know that $a^2 + b^2= c^2$. But then $(150 \text{ ft})^2 + h^2= (212 \text{ ft})^2$. But then $22,\!500 \text{ ft}^2 + h^2= 44,\!944 \text{ ft}^2$. Therefore, $h^2= 22,\!444 \text{ ft}^2$ so that $h= \sqrt{22,\!444 \text{ ft}^2} \approx 149.813 \text{ ft}$. But then we have\dots
+	\[
+	\begin{aligned}
+	A&= \dfrac{1}{2} A_{\circ} + A_{\square} + A_{\triangle} \\[0.3cm]
+	&= \dfrac{1}{2} \cdot \pi r^2 + \ell h + \dfrac{1}{2} \, b h \\[0.3cm]
+	&= \dfrac{1}{2} \pi (150 \text{ ft})^2 + (150 \text{ ft}) 149.813 \text{ ft} + \dfrac{1}{2} \cdot (150 \text{ ft}) 149.813 \text{ ft} \\[0.3cm]
+	&\approx 35,\!342.91 \text{ ft}^2 + 22,\!471.95 \text{ ft}^2 + 11,\!235.97 \text{ ft}^2 \\[0.3cm]
+	&= 69,\!050.83 \text{ ft}^2
+	\end{aligned}
+	\]
+
+\item By Cavalieri's Principle, the volume of the building will be the area of a `slice' (for example, the area of the roof) times the height of the building. But then, the volume is\dots
+	\[
+	V= Ah= 69,\!050.83 \text{ ft}^2 \cdot 77 \text{ ft}= 5,\!316,\!913.91 \text{ ft}^3
+	\]
+\end{enumerate}
+
+
+\end{questions}
+\end{document}
