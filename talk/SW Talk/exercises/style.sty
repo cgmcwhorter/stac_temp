@@ -31,7 +31,7 @@
 % -------------------
 % Tikz
 % -------------------
-%\usepackage{tikz}
+\usepackage{tikz}
 %\usepackage{pgfplots}
 %\pgfplotsset{compat=newest}
 %\pgfplotsset{soldot/.style={color=black,only marks,mark=*},
@@ -132,3 +132,6 @@
 \newcommand{\citeprob}[2]{\noindent \textbf{Problem}~\cite[#1]{#2}: }
 \newcommand{\sol}{\noindent\textbf{Solution. }}
 
+% Counted Problem
+\newcounter{problem}
+\newcommand{\problem}{\stepcounter{problem}\noindent{\bfseries Problem \theproblem. }}
