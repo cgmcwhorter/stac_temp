@@ -83,7 +83,56 @@ From the $76(1.27628)$ portion from the computation above, we can see that incre
 % Quiz 8
 \quizsol \textit{True/False}: Suppose one picks up one end of a slinky, leaving the other end flat on a table, and pulls the end into the air without stretching the slinky greatly or tilting the end (so that it remains parallel to the table). Knowing the diameter of the slinky and the height one pulled it into the air is sufficient to compute the volume contained within the slinky. \pspace
 
-\sol The statement is \textit{true}. Recall that Cavalieri's Principle states that if two figures have the same height and cross sectional areas at every point along their height, they have the same volume. So long as we do not greatly stretch the slinky, once stretched, every cross section of the slinky will have the same area as cross section of the original slinky. Using Cavalieri's Principle, the stretched slinky will then have the same volume as a cylinder with the same diameter as the original slinky and as tall as the stretched slinky. If the diameter is $d$, then $r= \frac{d}{2}$. But then the volume is $V= A_{\text{base}} h= \pi r^2h= \pi \left( \frac{d}{2} \right)^2 h= \frac{\pi d^2 h}{4}$. 
+\sol The statement is \textit{true}. Recall that Cavalieri's Principle states that if two figures have the same height and cross sectional areas at every point along their height, they have the same volume. So long as we do not greatly stretch the slinky, once stretched, every cross section of the slinky will have the same area as cross section of the original slinky. Using Cavalieri's Principle, the stretched slinky will then have the same volume as a cylinder with the same diameter as the original slinky and as tall as the stretched slinky. If the diameter is $d$, then $r= \frac{d}{2}$. But then the volume is $V= A_{\text{base}} h= \pi r^2h= \pi \left( \frac{d}{2} \right)^2 h= \frac{\pi d^2 h}{4}$. \pvspace{1.3cm}
+
+
+
+% Quiz 9
+\quizsol \textit{True/False}: If a relation $f(x)$ has the property that $f(1)= f(3)$, then $f(x)$ cannot be a function. \pspace
+
+\sol The statement is \textit{false}. A function is a relation such that for a given input, there is only a single output associated to that input. The definition of being a function does not preclude two or more inputs having the same outputs. For instance, the function $f(x)= x^2$ has the property that $f(a)= f(-a)$ for all $a \in \mathbb{R}$, e.g. $4= 2^2= f(2)= f(-2)= (-2)^2= 4$. Furthermore, the function $g(x)= (x - 2)^2$ has the property that $f(1)= f(3)$ but is still a function. What matters is that given an input, one knows the (only) output associated to that input. However, there are relations that are not functions but have equal outputs at different inputs. For instance, the relation $f$ given by $\{ (0, 0), (0, 1), (1, 5), (3, 5) \}$ is not a function but not because $f(1)= f(3)$, but because $f(0)$ is not well defined. \pvspace{0.8cm}
+
+
+
+% Quiz 10
+\quizsol \textit{True/False}: If a relation $f(x)$ has the property that $f(1)= f(3)$, then $f(x)$ may or may not be a function but the inverse function, $f^{-1}(x)$, does not exist. \pspace
+
+\sol The statement is \textit{true}. From the previous quiz, we know that the fact $f(1)= f(3)$ has nothing to do with whether the relation is a function or not. However, the fact that $f(1)= f(3)$ does prevent $f$ from having an inverse function. Recall that an inverse function $f^{-1}$ is a function such that $f^{-1}(y)= x$ if and only if $f(x)= y$. Suppose that $r$ is the value of $f(1)$ and $f(3)$. Because $f(1)= r$, it must be that $f^{-1}(r)= 1$. But because $f(3)= r$, it must also be that $f^{-1}(r)= 3$. But then $f^{-1}(r)$ is not well defined---one cannot tell whether it should be 1 or 3. Alternatively, the inverse function (should it exist for a function) is defined by the fact that $(f \circ f^{-1})(x)= x$ and $(f^{-1} \circ f)(x)= x$. But then using the fact that $f(1)= f(3)$, we have\dots
+	\[
+	1= f^{-1} \big( f(1) \big)= f^{-1} \big( f(3) \big)= 3,
+	\]
+which is clearly impossible. Clearly, $f(1)= f(3)$ implies that $f^{-1}$ not exist. However, the preimage always exists. If $f(1)= r = f(3)$, we know that $f^{-1}(r)$ includes the values $1, 3$. \pvspace{0.8cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: If a relation $f(x)$ passes the vertical and horizontal line test, then not only does $f^{-1}(x)$ exist but $f(x)$ is a function of \textit{both} $x$ and $y$. \pspace
+
+\sol The statement is \textit{true}. If $f(x)$ passes the vertical line test, we know that $f(x)$ is a function (of $x$). Because $f(x)$ passes the horizontal line test, we know that $f^{-1}(x)$ exists. Now for $f(x)$ to be a function of $y$, we need there to be a unique $x$ associated to any given $y$. But then every horizontal line $y= y_0$ will intersect the graph of $f(x)$ at a unique point, say $(x_0, y_0)$, so that the unique $x$-value associated to $y_0$ is $x_0$. But this occurs precisely when $f(x)$ passes the horizontal line test, which we already know to be the case. Therefore, $f(x)$ can also be considered a function of $y$. In fact, considering $f(x)$ to be a function of $y$ is to precisely consider the function $f^{-1}(y)$. \pvspace{0.8cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: The point $(-1, -2)$ is on the graph of the curve given by $y^2= x^3 + x + 6$. \pspace
+
+\sol The statement is \textit{true}. A point is on the graph of a function (given explicitly or implicitly, as in the statement of the quiz) if and only if it satisfies the equation giving the curve. Observe\dots
+	\[
+	\begin{gathered}
+	y^2 = x^3 + x + 6 \\[0.1cm]
+	(-2)^2 \stackrel{?}{=} (-1)^3 + (-1) + 6 \\[0.1cm]
+	4 \stackrel{?}{=} -1 - 1 + 6 \\[0.1cm]
+	4 = 4 \\
+	\text{\cmark}
+	\end{gathered}
+	\]
+Therefore, $(-1, -2)$ is on the curve given by $y^2= x^3 + x + 6$. 
+
+
+
+
+
+
+
 
 
 

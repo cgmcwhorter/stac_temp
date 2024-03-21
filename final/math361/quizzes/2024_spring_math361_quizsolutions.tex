@@ -104,7 +104,82 @@ We can consider this condition number not `too large'---certainly, $\kappa < \in
 	\[
 	x_k - \dfrac{f(x_k)}{f'(x_k)}= x - \dfrac{\sqrt[3]{x_k}}{\frac{1}{3} \frac{1}{\sqrt[3]{x^2}}}= x_k - 3x_k= -2x_k
 	\]
-But then beginning Newton's Method at $x_0= a \in [-1, 1] \setminus \{ 0 \}$, we can see that $x_k= (-2)^k a$. But then Newton's Method will diverge for any $x_0 \neq 0$. It may be possible that the bisection and Newton's method both converge linearly to the root. For instance, consider the function $g(x)= x^3$ on $[-1, 1]$. Clearly, the only root of $g(x)$ on $[-1, 1]$ is $x= 0$ and this root has multiplicity three. We know that $g(-1)= -1 < 0$ and $g(1)= 1 > 0$. Therefore, the bisection method applies to $g(x)$ on $[-1, 1]$ so that the bisection method converges linearly to zero on $[-1, 1]$. It is not very difficult to prove that Newton's method will converge for any $a \neq 0$. However, because the root has multiplicity greater than one, the rate of this convergence is only linear. 
+But then beginning Newton's Method at $x_0= a \in [-1, 1] \setminus \{ 0 \}$, we can see that $x_k= (-2)^k a$. But then Newton's Method will diverge for any $x_0 \neq 0$. It may be possible that the bisection and Newton's method both converge linearly to the root. For instance, consider the function $g(x)= x^3$ on $[-1, 1]$. Clearly, the only root of $g(x)$ on $[-1, 1]$ is $x= 0$ and this root has multiplicity three. We know that $g(-1)= -1 < 0$ and $g(1)= 1 > 0$. Therefore, the bisection method applies to $g(x)$ on $[-1, 1]$ so that the bisection method converges linearly to zero on $[-1, 1]$. It is not very difficult to prove that Newton's method will converge for any $a \neq 0$. However, because the root has multiplicity greater than one, the rate of this convergence is only linear. \pvspace{1.3cm}
+
+
+
+% Quiz 9
+\quizsol \textit{True/False}: Using two initial starting values, $x_0$ and $x_1$, the secant method is given by\dots
+	\[
+	x_{n+1} = \dfrac{f(x_n) (x_n - x_{n-1})}{f(x_n) - f(x_{n-1})}
+	\]
+Moreover, the secant method is derived from Newton's method by replacing $f'(x_n)$ with the approximation $f'(x_n) \approx \frac{f(x_n) - f(x_{n-1})}{x_n - x_{n-1}}$. \pspace
+
+\sol The statement is \textit{true}. One disadvantage of Newton's method is that it (technically) requires that the function is differentiable---or at least at any $x_n$ involved in the iterations. This requires constant evaluations of $f'(x)$---which may be `expensive.' If $r$ is a solution to the equation $f(x) = 0$, i.e. a root of $f(x)$, then it should be that $f'(x_n) \approx \frac{f(x_n) - f(x_{n-1})}{x_n - x_{n-1}}$, if $x_{n-1}, x_n \approx r$. Using this fact in Newton's method, we have\dots
+	\[
+	x_{n+1} = x_n - \dfrac{f(x_n)}{f'(x_n)} \approx x_n - \dfrac{f(x_n)}{\frac{f(x_n) - f(x_{n-1})}{x_n - x_{n-1}}}= x_n - \dfrac{f(x_n) (x_n - x_{n-1})}{f(x_n) - f(x_{n-1})}
+	\]
+One should not combine the terms on the right to avoid catastrophic cancellation. When the method converges, it converges superlinearly---but not quadratic convergence as in Newton's method. The advantage of the secant method is that it does not require differentiability or evaluations of derivatives. \pvspace{1.3cm}
+
+
+
+% Quiz 10
+\quizsol \textit{True/False}: Let $p(x)$ be a real polynomial of degree $n$. If one iteratively approximates the $n$ roots of $p(x)$, say $\widehat{r}_1, \widehat{r}_2, \ldots, \widehat{r}_n$, using a root finding method and deflation, then $p(x) \approx a_n (x - r_1) (x - r_2) \cdots (x - r_n)$, where $a_n$ is the leading coefficient of $p(x)$. \pspace
+
+\sol The statement is \textit{false}. At each stage, one only approximates an approximation of a root for $p(x)$, say $\widehat{r}_i$. But then after deflation (division of $p(x)$ by $x - r_i$), one obtains a polynomial $\widehat{p}_i(x)$ such that $p(x) \approx (x - \widehat{r}_i) \widehat{p}_i(x)$. At each stage, the error in approximating $r_i$ `propagates' to error in $\widehat{p}_i(x)$. For instance, if $r_j$ is an \textit{exact} root of $p(x)$ and $\tilde{r}_j$ is the approximate root, we have $p(x) = (x - r_j) p_j(x)$ and $p(x) \approx (x - \tilde{r}_j) \widehat{p}_j(x)$. But it need not be that $p_j(x) \approx \widehat{p}_j(x)$. Indeed, the types of roots (rational, real, complex) for $p_j(x)$ need not be the same as $\widehat{p}_j(x)$. Especially for large $n$, this can result in a product of linear terms that does not approximate the polynomial $p(x)$ nor its values. One need take care at each stage of the evaluation and track errors `locally' and `globally', i.e. for the roots and the collection of coefficients, to be sure that the resulting product of linear terms consists of true approximate roots and replicates the values of $p(x)$. \pvspace{1.3cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: The method of linear regression can be applied to find the best fit model of the form $y= Ae^{ct}$ for a given dataset. \pspace
+
+\sol The statement is \textit{true}. So long as all the $y$-values in the dataset are positive, we have\dots
+	\[
+	\begin{gathered}
+	y= Ae^{ct} \\[0.3cm]
+	\ln y = \ln \left( A e^{ct} \right) \\[0.3cm]
+	\ln y = \ln \left( e^{ct} \right) + \ln(A) \\[0.3cm]
+	\ln y = ct + \ln(A)
+	\end{gathered}
+	\]
+Defining $Y= \ln y$, $b_1= c$, $X= t$, and $b_0= \ln(A)$, this equation is $Y= b_1 X + b_0$. But if the original data was (approximately) exponential, the transformed data is (approximately) linear. We can then use linear regression to approximate $b_1$ and $b_0$. But then $A= e^{b_0}$ and $c= b_1$ in the original model so that one can use the approximations to $b_0, b_1$ to find approximations to the best $A, c$ in the original model. \pvspace{1.3cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: If gradient descent converges, it converges to the global minimum. \pspace
+
+\sol The statement is \textit{false}. If gradient descent converges to the location of a minimum, the corresponding minimum need not be a global minimum but rather a local minimum. Recall that gradient descent begins with an initial value $\mathbf{x}_0$ and then creates subsequent approximations to the location of a minimum via $\mathbf{x}_{n+1}= \mathbf{x}_n - \alpha \nabla f(\mathbf{x}_n)$, where $\alpha$ is some scaling factor (or learning rate). For instance, consider the function $f(x)= x^4 + x^3 - 2x^2$. One can find the minima exactly, which occur at $m_1= \frac{-3 - \sqrt{73}}{8} \approx -1.443$ (where the output is $\approx -2.83342$) and $m_2= \frac{-3 + \sqrt{73}}{8} \approx 0.693$ (where the value is $\approx -0.397046$). Using $x_0= 1$ and $\alpha= 0.01$, $x_n \to m_2$, despite the output at $m_1$ being smaller. Worse yet, if gradient descent converges, it need not even converge to a minimum at all! It is simple to see that $f(x)= x^3$ has no minimum. But applying gradient descent with $x_0= 1/2$ and $\alpha= 0.01$, it is easy to see that $x_n \to 0$, despite the fact that $x= 0$ is a saddle point for $f(x)= x^3$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

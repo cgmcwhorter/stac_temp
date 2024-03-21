@@ -1,0 +1,310 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9929,        302]
+NotebookOptionsPosition[      8426,        266]
+NotebookOutlinePosition[      8821,        282]
+CellTagsIndexPosition[      8778,        279]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name: 
+Mathematica HW #1\
+\>", "Section",
+ CellChangeTimes->{{3.91972513504046*^9, 
+  3.919725139792527*^9}},ExpressionUUID->"545d6516-b578-4897-aaf8-\
+30b2a427b879"],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subsection",
+ CellChangeTimes->{{3.919725414012596*^9, 
+  3.9197254172700167`*^9}},ExpressionUUID->"7bc5eff2-3a9a-405a-ae04-\
+2097cc5cb1dc"],
+
+Cell[TextData[{
+ "Use Mathematica to find the exact and approximate values for the following:\
+\n\t(a) ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox["15", "7"], ")"}], "3"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0fc495db-d98d-40fc-86d8-c07c336f0024"],
+ "\n\t(b) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"e", 
+    SqrtBox[
+     SuperscriptBox["\[Pi]", "3"]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9ad7539a-c9fa-4647-a648-cca48c7ae184"],
+ "\n\t(c) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[InvisiblePrefixScriptBase]", "12"], 
+     SubscriptBox["C", "5"]}], "=", " ", 
+    RowBox[{"(", GridBox[{
+       {"12"},
+       {"5"}
+      }], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1c8ddc90-db14-4b73-80bd-cf23bc782054"],
+ "\n\t(d) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"15", "!"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0cde2de7-59d1-43f1-be9f-1808df072927"],
+ "\n\t(e) ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["\[ImaginaryI]", "6"], 
+    RowBox[{"sin", "(", 
+     FractionBox["\[Pi]", "4"], ")"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ab69c91c-4620-47e1-ba7f-f6090111b651"]
+}], "Text",
+ CellChangeTimes->{{3.919725572164301*^9, 3.919725692730616*^9}, {
+  3.919725734148962*^9, 3.9197257972089033`*^9}, {3.919725857625636*^9, 
+  3.9197259227646723`*^9}, {3.919726198099811*^9, 3.919726205084895*^9}, {
+  3.9197263634435797`*^9, 
+  3.919726431992299*^9}},ExpressionUUID->"65ad6c4c-792c-4164-bd15-\
+76d9b5f287fc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2.", "Subsection",
+ CellChangeTimes->{{3.9197251428442717`*^9, 3.919725145291358*^9}, {
+  3.919725411909713*^9, 
+  3.91972541198218*^9}},ExpressionUUID->"418d0fdc-b513-480b-a27f-\
+e7099da61815"],
+
+Cell[TextData[{
+ "Mathematica can compute all the operations you learned in your previous \
+Calculus courses - ",
+ StyleBox["if only you were using it then",
+  FontSlant->"Italic"],
+ "! Use Mathematica to compute the following: \n\t(a) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["\[Limit]", 
+     RowBox[{"x", "\[Rule]", " ", 
+      RowBox[{"-", "6"}]}]], " ", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["x", "2"], " ", "+", " ", 
+      RowBox[{"3", "x"}], " ", "-", " ", "18"}], 
+     RowBox[{
+      SuperscriptBox["x", "2"], " ", "+", " ", 
+      RowBox[{"5", "x"}], " ", "-", " ", "6"}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6f4ba0dc-c32e-4754-b57d-8cf3f0de0648"],
+ "\n\t(b) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["\[Limit]", 
+     RowBox[{"n", "\[Rule]", " ", "\[Infinity]"}]], " ", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"2", 
+       SuperscriptBox["n", "2"]}], " ", "-", " ", 
+      RowBox[{"35", "n"}], " ", "+", " ", "17"}], 
+     RowBox[{
+      RowBox[{"6", 
+       SuperscriptBox["n", "2"]}], " ", "+", " ", 
+      RowBox[{"19", "n"}], " ", "-", " ", "49"}]]}], TraditionalForm]],
+  ExpressionUUID->"2ff0adda-8fb1-4965-9ee1-542c84222964"],
+ "\n\t(c) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"n", "=", "1"}], "\[Infinity]"], 
+    FractionBox["1", 
+     SuperscriptBox["n", "2"]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "684350c4-9cac-4792-b107-b30208c15811"],
+ "\n\t(d) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["\[DifferentialD]", 
+     RowBox[{"\[DifferentialD]", "x"}]], 
+    RowBox[{"ln", "(", 
+     RowBox[{"x", " ", "cos", " ", "x"}], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c99b4d59-b86f-4bdb-bb3f-b641807f8245"],
+ "\n\t(e) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], 
+    RowBox[{
+     FractionBox["x", 
+      RowBox[{"x", " ", "+", " ", "1"}]], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7def3d08-0c05-4706-98f1-357347ece0bb"]
+}], "Text",
+ CellChangeTimes->{{3.9197251507631817`*^9, 3.919725197191711*^9}, {
+   3.919725263177849*^9, 3.919725395348716*^9}, {3.9197257037951937`*^9, 
+   3.919725708675008*^9}, {3.919726143934227*^9, 3.9197261605333767`*^9}, 
+   3.9197264546329317`*^9, {3.919726965092936*^9, 
+   3.9197269961686077`*^9}},ExpressionUUID->"fea7eb10-58ec-41e6-a827-\
+4056146ac353"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3.", "Subsection",
+ CellChangeTimes->{{3.919726462333404*^9, 
+  3.919726463501009*^9}},ExpressionUUID->"d188ea8c-d4f3-4863-a392-\
+c4f47a280aad"],
+
+Cell[TextData[{
+ "Let ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{"5", " ", "-", " ", 
+     RowBox[{"12", "x"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "afb356fc-f447-46f0-aae0-544fbc5e13c6"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", "x", ")"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"5", "x"}], " ", "+", " ", "11"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4f55db4c-f46a-4e0b-baf1-0b52c0d132f8"],
+ ".\n\t(a) Plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e400ea10-8506-44fc-a1e4-34d87d74fca1"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"g", "(", "x", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "37e433c8-1e88-446d-b2d6-48d4dd708770"],
+ " on the same axis in different colors, being sure to include their point of \
+intersection.\n\t(b) Use Mathematica\[CloseCurlyQuote]s \
+\[OpenCurlyQuote]Solve\[CloseCurlyQuote] function to find the exact point of \
+intersection of these two lines. \n\t(c) Use Mathematica\[CloseCurlyQuote]s \
+\[OpenCurlyQuote]NSolve\[CloseCurlyQuote] function to find the approximate \
+point of intersection between these two lines. Use (b) to confirm the \
+veracity of your answer."
+}], "Text",
+ CellChangeTimes->{{3.919726470524157*^9, 3.9197264818273363`*^9}, {
+  3.919726524897147*^9, 3.919726548822351*^9}, {3.919726579357747*^9, 
+  3.919726622472898*^9}, {3.9197266851033278`*^9, 3.919726802615077*^9}, {
+  3.9197268561186457`*^9, 3.919726857251217*^9}, {3.919726956174584*^9, 
+  3.919726957302494*^9}, {3.919727262971136*^9, 
+  3.919727281637537*^9}},ExpressionUUID->"12a20272-961a-4fc4-94a8-\
+9f80de3f52c6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4.", "Subsection",
+ CellChangeTimes->{{3.919727348567546*^9, 
+  3.9197273495057783`*^9}},ExpressionUUID->"0b1f5b4e-94cc-4561-9ea0-\
+e630997b0db1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "Factor"}], ",", " ", "expand", ",", " ", "together", ",", " ",
+   "apart"}]], "Input",ExpressionUUID->"0afd01a2-549d-4f60-b8c1-9c5f6092b126"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 5.", "Subsection",
+ CellChangeTimes->{{3.9197273530958347`*^9, 
+  3.919727354251473*^9}},ExpressionUUID->"5d4ad4e9-d081-4a2b-ab2b-\
+153c517da661"],
+
+Cell[BoxData[
+ RowBox[{"\n", "\n", "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "StreamPlot"}], "/", "VectorPlot"}], "/", 
+   "Gradient"}]}]], "Input",
+ CellChangeTimes->{{3.919295758622668*^9, 3.919295758624691*^9}, {
+   3.919726411672512*^9, 3.919726412584676*^9}, 3.919726459663208*^9, {
+   3.9197273175641603`*^9, 
+   3.9197273593426743`*^9}},ExpressionUUID->"33af5ec9-200c-466a-813f-\
+808643bc7ac4"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 816},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"14efabd6-348e-4788-94f1-39b71e526af7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 176, 6, 105, "Section",ExpressionUUID->"545d6516-b578-4897-aaf8-30b2a427b879"],
+Cell[CellGroupData[{
+Cell[781, 32, 160, 3, 54, "Subsection",ExpressionUUID->"7bc5eff2-3a9a-405a-ae04-2097cc5cb1dc"],
+Cell[944, 37, 1662, 52, 191, "Text",ExpressionUUID->"65ad6c4c-792c-4164-bd15-76d9b5f287fc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2643, 94, 208, 4, 54, "Subsection",ExpressionUUID->"418d0fdc-b513-480b-a27f-e7099da61815"],
+Cell[2854, 100, 2548, 74, 205, "Text",ExpressionUUID->"fea7eb10-58ec-41e6-a827-4056146ac353"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5439, 179, 158, 3, 54, "Subsection",ExpressionUUID->"d188ea8c-d4f3-4863-a392-c4f47a280aad"],
+Cell[5600, 184, 1811, 45, 127, "Text",ExpressionUUID->"12a20272-961a-4fc4-94a8-9f80de3f52c6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7448, 234, 160, 3, 54, "Subsection",ExpressionUUID->"0b1f5b4e-94cc-4561-9ea0-e630997b0db1"],
+Cell[7611, 239, 181, 3, 30, "Input",ExpressionUUID->"0afd01a2-549d-4f60-b8c1-9c5f6092b126"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7829, 247, 160, 3, 54, "Subsection",ExpressionUUID->"5d4ad4e9-d081-4a2b-ab2b-153c517da661"],
+Cell[7992, 252, 406, 10, 94, "Input",ExpressionUUID->"33af5ec9-200c-466a-813f-808643bc7ac4"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

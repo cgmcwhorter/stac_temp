@@ -1,0 +1,131 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{3: Due ????}{}{}
+
+% Problem 1
+\problem{10} bisection
+
+
+% Problem 2
+\problem{10} newton
+
+
+% Problem 3
+\problem{10} secantmethod
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} If $\phi \colon \mathbb{R} \to \mathbb{R}$ is a function, we say that $p$ is a fixed point for $\phi$ if $f(p)= p$.
+	\begin{enumerate}
+	\item[(a)] If $\phi(x)$ has a fixed point, explain why the graph of $\phi(x)$ must intersect the line $y= x$.
+	\item[(b)] Must all the fixed points for $\phi(x)$ lie along the line $y= x$? Explain why or why not. 
+	\item[(c)] Find all the fixed points for $\phi(x)= x^2 + 5x - 12$. 
+	\end{enumerate}
+One method of finding a root for a function $f(x)$ is known as fixed point iteration. In fixed point iteration, one begins with some initial value $x_0$ and defines a recursive sequence $\{ x_n \}$ via $x_{n+1} = f(x_n)$. Assuming this iterative process converges (it may not), one terminates the algorithm when $|x_{n+1} - x_n| < \epsilon$, where $\epsilon > 0$ is some constant. Suppose one wants to find a root of a function $F(x)$.
+	\begin{enumerate}[(a)]
+	\item[(d)] Show that if $F(x)$ is continuous and $\displaystyle \lim_{n \to \inty} x_n$ converges to a limit $x^*$, then $x^*$ is a fixed point for $fFx)$. 
+	\item[(e)] Show that if $r$ is a root of $F(x)$, then $r$ is a fixed point for $G(x):= x - F(x)$. [There are many functions $G$ with $r$ as a fixed point.]
+	\item[(f)] Show that if a function $G(x)$ has a fixed point $p$, then $H(x):= x - G(x)$ has a root at $p$. 
+	\end{enumerate}
+Let $f(x)$ be a differentiable function and define $g(x):= x - \frac{f(x)}{f'(x)}$. 
+	\begin{enumerate}
+	\item[(g)] Explain why Newton's method is a special example of fixed point iteration.
+	\item[(h)] Show that if fixed point iteration converges to a fixed point for $g(x)$, then this fixed point is a root for $f(x)$. 
+	\item[(i)] Approximate a root for the function 
+	Perform three steps of fixed point iteration 
+	\end{enumerate}
+
+	\item[(g)] Take $g(x) = x - \frac{f(x)}{f'(x)}$
+	
+	Show that Newton's method applied to a differentiable $f(x)$ is fixed point iteration for some function $g(x)$. Furthermore, show that if the fixed point iteration for your function $g(x)$ converges to a fixed point for $g$, then this fixed point is a root 
+	
+	Show that Newton's method is a type of fixed point iteration and that if Newton's method converges to a root for some function $f(x)$, it converges to a fixed point 
+	\end{enumerate}
+x^3+4x^2-10
+
+%Suppose that we want to find a root $r$ of some differentiable function $f(x)$; that is, we want to find a solution $r$ equation $f(x)= 0$, where $f(x)$ is a differentiable function. One approach we saw was Newton's method. This began with some initial value $x_0$ and then created recursive approximations to $r$ via $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$. \pspace
+%
+%If one appropriately generalizes the notion of differentiability, one can use this to solve simultaneous equations. First, one rewrites the system of equations to have the following form:
+%	\[
+%	\begin{cases}
+%	f_1(x_1, x_2, \ldots, x_n)= 0 \\
+%	f_2(x_1, x_2, \ldots, x_n)= 0 \\
+%	\hfill \vdots \hfill \\
+%	f_n(x_1, x_2, \ldots, x_n)= 0 \\
+%	\end{cases}
+%	\]
+%That is, one reduces the problem to find a common root for the equations. Let $\mathbf{f}$ be the function $\mathbf{f}(\mathbf{x})= \big(f_1(\mathbf{x}), f_2(\mathbf{x}), \ldots, f_n(\mathbf{x}) \big)$. One then defines the multivariable Newton's method to begin with some initial value $\mathbf{x}_0= (x_{1,0}, x_{2,0}, \ldots, x_{n,0})$ and create recursive approximations to the root via
+%	\[
+%	\mathbf{x}_{n+1} = \mathbf{x} - D\mathbf{f}(\mathbf{x}_n)^{-1} \, \mathbf{f}(\mathbf{x}_n)
+%	\]
+%where $D\mathbf{f}(\mathbf{x})^{-1}$ is the inverse (assuming it exists) of the Jacobian matrix
+%	\[
+%	D\mathbf{f}(x_1, x_2, \ldots, x_n)= 
+%	\begin{pmatrix}
+%	\dfrac{\partial f_1}{\partial x_1} & \dfrac{\partial f_1}{\partial x_2} & \cdots & \dfrac{\partial f_1}{\partial x_n} \\
+%	\dfrac{\partial f_2}{\partial x_1} & \dfrac{\partial f_2}{\partial x_2} & \cdots & \dfrac{\partial f_2}{\partial x_n} \\
+%	\vdots & \vdots & \ddots & \vdots \\
+%	\dfrac{\partial f_n}{\partial x_1} & \dfrac{\partial f_n}{\partial x_2} & \cdots & \dfrac{\partial f_n}{\partial x_n} 
+%	\end{pmatrix}
+%	\]
+%Consider the intersection of the circle $x^2 + y^2= 10$ and the hyperbola $x^2 - 4y^2= 4$, shown below.
+%	\begin{enumerate}[(a)]
+%	\item Perform two iterations of the multivariable Newton's method with $\mathbf{x}_0= (x, y)= (2, 3)$. 
+%	\item Find the exact solutions to this equation. 
+%	\end{enumerate}
+%	
+%	\[
+%	\fbox{
+%	\begin{tikzpicture}[scale=1,every node/.style={scale=0.5}]
+%	\begin{axis}[
+%	grid=both,
+%	axis lines=middle,
+%	ticklabel style={fill=blue!5!white},
+%	xmin= -4.5, xmax=4.5,
+%	ymin= -4.5, ymax=4.5,
+%	xtick={-4,-3,...,4},
+%	ytick={-4,-3,...,4},
+%	minor tick = {-5,-4.5,...,5},
+%	xlabel=\(x\),ylabel=\(y\),
+%	]
+%	\addplot[line width= 0.02cm,samples=100,domain= 0:6.4] ({sqrt(10)*cos(deg(x))}, {sqrt(10)*sin(deg(x))});
+%
+%	\addplot[line width= 0.02cm,samples=50,domain= -0.9:0] ({-(x^2 + 1)/(x^2 - 1)}, {2*x/(x^2 - 1)});
+%	\addplot[line width= 0.02cm,samples=50,domain= 0:0.9] ({-(x^2 + 1)/(x^2 - 1)}, {2*x/(x^2 - 1)});	
+%	\addplot[line width= 0.02cm,samples=50,domain= -0.9:0] ({(x^2 + 1)/(x^2 - 1)}, {2*x/(x^2 - 1)});
+%	\addplot[line width= 0.02cm,samples=50,domain= 0:0.9] ({(x^2 + 1)/(x^2 - 1)}, {2*x/(x^2 - 1)});
+%	\end{axis}
+%	\end{tikzpicture}
+%	}
+%	\]
+	
+
+
+\newpage {\itshape \hfill ( --- Problem 4 Continued --- ) \hfill} \newpage
+
+
+
+% Problem 5
+\problem{10} Watch 3Blue1Brown's video \href{https://www.youtube.com/watch?v=-RdOwhmqP5s}{From Newton’s method to Newton’s fractal (which Newton knew nothing about)} on YouTube and then being as detailed as possible, respond to the following:
+	\begin{enumerate}[(a)]
+	\item What application of finding roots for polynomials did the video discuss to motivate Newton's method?
+	\item How did the domain for the functions $P(z)$ the video considers differ from what we did in class?
+	\item What is the connection between Newton's method and fractals?
+	\item What was interesting or surprising to you in the video?
+	\end{enumerate}
+
+
+\end{document}

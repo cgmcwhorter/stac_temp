@@ -1,0 +1,83 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2126,         75]
+NotebookOptionsPosition[      1652,         58]
+NotebookOutlinePosition[      2047,         74]
+CellTagsIndexPosition[      2004,         71]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Name: 
+Mathematica HW #2\
+\>", "Section",
+ CellChangeTimes->{{3.919724600707872*^9, 3.919724616290107*^9}, {
+  3.9197251032279053`*^9, 
+  3.9197251034290533`*^9}},ExpressionUUID->"0a884628-c7b5-4b02-ab50-\
+fb9d3c54cfd5"],
+
+Cell[BoxData[{
+ RowBox[{"Mathematica", " ", "2"}], "\n", 
+ RowBox[{
+  RowBox[{"-", "CreateTable"}], " ", "Values", " ", "Plot", " ", 
+  RowBox[{"List", "/", "Discrete"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "Define"}], "&"}], " ", "Evaluation"}], "&"}], " ", "plot", 
+  " ", "Function"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "Find"}], " ", "value", " ", "function", " ", "less", " ", 
+   "than", " ", "specified"}], ",", 
+  RowBox[{"print", " ", "result"}]}], "\n", 
+ RowBox[{
+  RowBox[{"-", "recursive"}], " ", "sequence"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "Create"}], "/", "Access"}], " ", "Set", " ", "of", " ", 
+  "Points"}]}], "Input",
+ CellChangeTimes->{{3.919295747142154*^9, 
+  3.919295747144128*^9}},ExpressionUUID->"9f016c0c-cc23-40e5-a491-\
+a1379af629f7"]
+}, Open  ]]
+},
+WindowSize->{808, 816},
+WindowMargins->{{Automatic, 8}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"14efabd6-348e-4788-94f1-39b71e526af7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 230, 7, 105, "Section",ExpressionUUID->"0a884628-c7b5-4b02-ab50-fb9d3c54cfd5"],
+Cell[813, 31, 823, 24, 136, "Input",ExpressionUUID->"9f016c0c-cc23-40e5-a491-a1379af629f7"]
+}, Open  ]]
+}
+]
+*)
+

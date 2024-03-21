@@ -1,0 +1,521 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 100: Exam 3}
+\newcommand{\term}{Fall -- 2022}
+\newcommand{\examdate}{12/14/2022}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work.} 
+\scores
+%\bottomline
+\newpage
+
+% ---------
+% Questions
+% ---------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Mark the following statements as True (T) or False (F): \pspace
+
+\newcommand{\myTrue}{\hspace{0.505cm} \textit{T} \hspace{0.505cm}}
+\newcommand{\myFalse}{\hspace{0.505cm} \textit{F} \hspace{0.505cm}}
+
+\begin{enumerate}[(a)]
+\item \underline{\myTrue}: A notion of center is robust if it is resistant to outliers. \vfill
+\item \underline{\myFalse}: The mean of a dataset is always larger than its median. \vfill
+\item \underline{\myTrue}: The standard deviation of a dataset measures its `spread.' \vfill
+\item \underline{\myFalse}: The IQR measures the spread about the mean. \vfill
+\item \underline{\myFalse}: The $z$-score of a value measures how far it is from the mean. \vfill
+\item \underline{\myTrue}: The larger the magnitude of a $z$-score, the more `unusual' the corresponding value. \vfill
+\item \underline{\myFalse}: For any dataset, $P_{50}$ will always be the median. \vfill
+\item \underline{\myTrue}: The larger the value of $z_{x_0}$, the larger $P(X < x_0)$ will be. \vfill
+\item \underline{\myTrue}: By the Central Limit Theorem, if one takes a simple random sample from a distribution with mean $\mu$ and standard deviation $\sigma$, then the distribution of means of groups, $\overline{X}$, of size $n$ is given by $N(\mu, \sigma/\sqrt{n})$. \vfill
+\item \underline{\myTrue}: For fixed $p$, if $n$ is `large', $B(n, p) \approx N\big(np, \sqrt{np(1 - p)} \big)$. \vfill
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[10] Being as detailed and accurate as possible, answer the following:
+	\begin{enumerate}[(a)]
+	\item Define what it means for a measurement of center to be robust. \pvspace{1.45cm}
+	
+	A measurement of center is robust if it is resistant to outliers. \pvspace{1.45cm}
+	
+	\item Given a value $x$ from a normal distribution, what does $z_x$ measure? \pvspace{1.22cm}
+	
+	Because $z_x= \frac{x - \mu}{\sigma}$, $z_x$ measures the number of standard deviations $x$ is below or above the mean. \pvspace{1.22cm}
+	
+	\item For a finite collection of numbers, what is the IQR of the dataset and what does it measure? \pvspace{1.25cm}
+	
+	The IQR is $\text{IQR}= Q_3 - Q_1$, where $Q_1$ and $Q_3$ are the first and third quartiles. The IQR measures the interquartile range, i.e. the spread about the median. \pvspace{1.25cm}
+	
+	\item For a finite collection of numbers, what does the standard deviation measure and how is it defined? \pvspace{0.9cm}
+	
+	The standard deviation is $\sigma= \sqrt{\frac{1}{n - 1} \sum (x_i - \overline{x})^2}$, where $n$ is the number of data values, the $x_i$ are the data values, and $\overline{x}$ is the mean data value. The standard deviation measures the `spread' about the mean. \pvspace{0.9cm}
+	
+	\item What assumption is required for events in a binomial distribution? \pvspace{0.6cm}
+	
+	A count of the number of times an event occurs in a sequence of trials follows a binomial distribution if the following conditions are met:
+		\begin{enumerate}[1.]
+		\item The event either occurs or not.
+		\item The event has a fixed probability of occurring.
+		\item The trials are independent from each other. 
+		\item There are a fixed number of trials. 
+		\end{enumerate}
+	\end{enumerate} 
+
+
+
+% Question 3
+\newpage
+\question[10] Suppose that you have the following dataset:
+	\[
+	-2 \qquad 0 \qquad 1 \qquad 3 \qquad 8
+	\]
+Showing all your work, compute the mean and standard deviation for this dataset. \pspace
+
+\sol The mean is\dots
+	\[
+	\overline{x}= \dfrac{\sum x_i}{n}= \dfrac{-2 + 0 + 1 + 3 + 8}{5}= \dfrac{10}{5}= 2
+	\]
+We then compute the terms required to find the standard deviation: \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{rcr}
+	$x_i$ & $x_i - \overline{x}$ & $(x_i - \overline{x})^2$ \\ \hline
+	$-2$ & $-4$ & $16$ \\
+	$0$ & $-2$ & $4$ \\
+	$1$ & $-1$ & $1$ \\
+	$3$ & $\phantom{-}1$ & $1$ \\
+	$8$ & $\phantom{-}6$ & $36$ \\ \cline{3-3}
+		& & Total: $58$
+	\end{tabular}
+	\end{table} \par
+Therefore, the standard deviation is\dots
+	\[
+	\sigma= \sqrt{\dfrac{1}{n - 1} \sum (x_i - \overline{x})^2}= \sqrt{\dfrac{1}{4} \cdot 58}= \sqrt{14.5} \approx 3.80789
+	\]
+
+
+
+% Question 4
+\newpage
+\question[10] Suppose you have the following dataset:
+	\[
+	4 \qquad 13 \qquad 24 \qquad 30 \qquad 6 \qquad 10 \qquad 14 \qquad 1 \qquad 8 \qquad 3 \qquad 28
+	\]
+Showing all your work, compute the 5-number summary for this dataset. \pspace
+
+\sol First, we place the data in order:
+	\[
+	1 \qquad 3 \qquad 4 \qquad 6 \qquad 8 \qquad 10 \qquad 13 \qquad 14 \qquad 24 \qquad 28 \qquad 30
+	\]
+There are $n= 11$ numbers in the dataset. We know the 5-number summary consists of the min, $Q_1$, median, $Q_3$, and the max. We know $Q_1$ is the $25$th percentile, the median is the $50$th percentile, and $Q_3$ is the $75$th percentile. \pspace
+
+The $p$th percentile of a collection of $n$ numbers is the $(np_d)$th number in the dataset---rounding upwards and if this is an exact integer, taking the average of that number and the next in the dataset, where $p_d$ is the percentile written as a decimal. We have\dots
+	\[
+	\begin{aligned}
+	P_{25}&= 0.25 \cdot 11= 2.75 \squiggle 3\text{rd number} \\[0.3cm]
+	P_{50}&= 0.50 \cdot 11= 5.5 \squiggle 6\text{th number} \\[0.3cm]
+	P_{75}&= 0.75 \cdot 11= 8.25 \squiggle 9\text{th number}
+	\end{aligned}
+	\] 
+Therefore, $P_{25}= 4$, $P_{50}= 10$, and $P_{75}= 24$. Therefore, the 5-number summary is\dots \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccccc}
+	Min & $Q_1$ & Median & $Q_3$ & Max \\ \hline
+	$1$ & $4$ & $10$ & $24$ & $30$
+	\end{tabular}
+	\end{table} \pspace
+
+This aligns with the other way we saw of computing the 5-number summary. We find the median of the dataset. There are $11$ numbers, so the median is the $\frac{11}{2}= 5.5 \squiggle 6$th value in the dataset, which is $10$. To find $Q_1$, we find the median of the values below this median. There are $5$ such values. Therefore, this median is the $\frac{5}{2}= 2.5 \squiggle 3$rd value in the dataset, which is $4$. To find $Q_3$, we find the median of the values above the median. There are $5$ such values. Therefore, this median is the $\frac{5}{2}= 2.5 \squiggle 3$rd value above the median, which is $24$. This gives the same 5-number summary as the one given above. 
+
+
+
+% Question 5
+\newpage
+\question[10] Suppose you have the following dataset:
+	\[
+	4 \qquad 13 \qquad 24 \qquad 30 \qquad 6 \qquad 10 \qquad 14 \qquad 1 \qquad 8 \qquad 3 \qquad 28
+	\]
+Showing all your work, compute $P_{20}$ and $P_{60}$. \pspace
+
+\sol There are $n= 11$ numbers. First, we place the dataset in order:
+	\[
+	1 \qquad 3 \qquad 4 \qquad 6 \qquad 8 \qquad 10 \qquad 13 \qquad 14 \qquad 24 \qquad 28 \qquad 30
+	\]
+The $p$th percentile of a collection of $n$ numbers is the $(np_d)$th number in the dataset---rounding upwards and if this is an exact integer, taking the average of that number and the next in the dataset, where $p_d$ is the percentile written as a decimal. We have\dots
+	\[
+	\begin{aligned}
+	P_{20}&= 0.20 \cdot 11= 2.2 \squiggle 3\text{rd number} \\[0.3cm]
+	P_{60}&= 0.60 \cdot 11= 6.6 \squiggle 7\text{th number}
+	\end{aligned}
+	\] 
+Therefore, we have\dots
+	\[
+	\begin{aligned}
+	P_{20}&= 4 \\[0.3cm]
+	P_{60}&= 13
+	\end{aligned}
+	\]
+
+
+
+% Question 6
+\newpage
+\question[10] Suppose you have the following dataset:
+	\[
+	4 \qquad 13 \qquad 24 \qquad 30 \qquad 6 \qquad 10 \qquad 14 \qquad 1 \qquad 8 \qquad 3 \qquad 28
+	\]
+Give a box plot for this dataset. \pspace
+
+\sol A box plot is a visual representation of the 5-number summary. We then first need to find the 5-number summary---consisting of the min, $Q_1$, median, $Q_3$, and max for the data. Putting the data in order, we have\dots
+	\[
+	1 \qquad 3 \qquad 4 \qquad 6 \qquad 8 \qquad 10 \qquad 13 \qquad 14 \qquad24 \qquad 28 \qquad 30
+	\]
+There are $n= 11$ numbers in the dataset. We know the 5-number summary consists of the min, $Q_1$, median, $Q_3$, and the max. We know $Q_1$ is the $25$th percentile, the median is the $50$th percentile, and $Q_3$ is the $75$th percentile. \pspace
+
+The $p$th percentile of a collection of $n$ numbers is the $(np_d)$th number in the dataset---rounding upwards and if this is an exact integer, taking the average of that number and the next in the dataset, where $p_d$ is the percentile written as a decimal. We have\dots
+	\[
+	\begin{aligned}
+	P_{25}&= 0.25 \cdot 11= 2.75 \squiggle 3\text{rd number} \\[0.3cm]
+	P_{50}&= 0.50 \cdot 11= 5.5 \squiggle 6\text{th number} \\[0.3cm]
+	P_{75}&= 0.75 \cdot 11= 8.25 \squiggle 9\text{th number}
+	\end{aligned}
+	\] 
+Therefore, $P_{25}= 4$, $P_{50}= 10$, and $P_{75}= 24$. Therefore, the 5-number summary is\dots \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccccc}
+	Min & $Q_1$ & Median & $Q_3$ & Max \\ \hline
+	$1$ & $4$ & $10$ & $24$ & $30$
+	\end{tabular}
+	\end{table} 
+
+This aligns with the other way we saw of computing the 5-number summary. We find the median of the dataset. There are $11$ numbers, so the median is the $\frac{11}{2}= 5.5 \squiggle 6$th value in the dataset, which is $10$. To find $Q_1$, we find the median of the values below this median. There are $5$ such values. Therefore, this median is the $\frac{5}{2}= 2.5 \squiggle 3$rd value in the dataset, which is $4$. To find $Q_3$, we find the median of the values above the median. There are $5$ such values. Therefore, this median is the $\frac{5}{2}= 2.5 \squiggle 3$rd value above the median, which is $24$. This gives the same 5-number summary as the one given above. We can then construct a box plot of the data:
+	\begin{center}
+	\begin{tikzpicture}
+	% Number Line
+	\draw (0,0) -- (11,0); 			% Main Line
+	\draw (0,-0.15) -- (0,0.15); 	% Left Tick
+	\draw (11,-0.15) -- (11,0.15); 	% Right Tick
+	
+	% BoxPlot
+	\draw[line width=0.02cm] (0.22,0.5) -- (0.22,1.5); % Min
+	\draw[line width=0.02cm] (0.88,0.5) -- (0.88,1.5); % Q1
+	\draw[line width=0.02cm] (2.2,0.5) -- (2.2,1.5); % Median
+	\draw[line width=0.02cm] (5.28,0.5) -- (5.28,1.5); % Q3
+	\draw[line width=0.02cm] (6.6,0.5) -- (6.6,1.5); % Max
+	
+	\draw[line width=0.02cm] (0.88,1.5) -- (5.28,1.5); % Top Line
+	\draw[line width=0.02cm] (0.88,0.5) -- (5.28,0.5); % Bottom Line
+	\draw[line width=0.02cm] (0.22,1) -- (0.88,1); 	  % Left Line
+	\draw[line width=0.02cm] (5.28,1) -- (6.6,1); 	  % Right Line
+	
+	% Labels
+	\node at (0,-0.5) {\footnotesize $0$}; 		% 0
+	\node at (11,-0.5) {\footnotesize $50$}; 	% 50 
+	
+	\node at (0.22,-0.5) {\footnotesize $1$};	\draw (0.22,-0.25) -- (0.22,0.25); % 1
+	\node at (0.88,-0.5) {\footnotesize $4$};	\draw (0.88,-0.25) -- (0.88,0.25); % 4
+	\node at (2.2,-0.5) {\footnotesize $10$};	\draw (2.2,-0.25) -- (2.2,0.25); 	  % 10
+	\node at (5.28,-0.5) {\footnotesize $24$};	\draw (5.28,-0.25) -- (5.28,0.25); % 24
+	\node at (6.6,-0.5) {\footnotesize $30$};	\draw (6.6,-0.25) -- (6.6,0.25); 	  % 30
+	\end{tikzpicture}
+	\end{center}
+
+
+
+% Question 7
+\newpage
+\question[10] Below are four different normal distributions, labeled I -- IV:
+	\newcommand\gauss[2]{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}
+	\pgfplotsset{every tick label/.append style={font=\small}}
+	\[
+	\begin{tikzpicture}[scale=1]
+	\begin{axis}[
+	xmin= -10.5, xmax= 10.5,
+	ymin= 0, ymax = 1.1,
+	xtick= {-10,-8,...,10},
+	axis x line= middle,
+	axis y line= none,
+	]
+	% I 
+	\addplot[line width=0.03cm, samples=50, domain= 6:8] {\gauss{8}{0.5}} node[above,pos=1] {I};
+	\addplot[line width=0.03cm, samples=50, domain= 8:10] {\gauss{8}{0.5}};
+	% II
+	\addplot[line width=0.03cm, samples=50, domain= -6:-2] {\gauss{-2}{1}} node[above,pos=1] {II};
+	\addplot[line width=0.03cm, samples=50, domain= -2:2] {\gauss{-2}{1}};	
+	% III
+	\addplot[line width=0.03cm, samples=50, domain= -11:-5] {\gauss{-5}{3}} node[above,pos=1] {III};
+	\addplot[line width=0.03cm, samples=50, domain= -5:6] {\gauss{-5}{3}};
+	% IV 
+	\addplot[line width=0.03cm, samples=50, domain= -4:3] {\gauss{3}{2}} node[above,pos=1] {IV};
+	\addplot[line width=0.03cm, samples=50, domain= 3:10] {\gauss{3}{2}};
+	\end{axis}
+	\end{tikzpicture}
+	\]
+\begin{enumerate}[(a)]
+\item Arrange these normal distributions by the size of their means.
+\item Arrange these normal distributions by the size of their standard deviations. 
+\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item The mean of a normal distribution, $\mu$, is its `center' and is located at the vertical line of symmetry for the distribution. Examining the plot and finding the mean of each normal distribution, we have\dots \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{cccc}
+	I & II & III & IV \\ \hline
+	$8$ & $-2$ & $-5$ & $3$
+	\end{tabular}
+	\end{table} \par
+Placing these means in order yields\dots
+	\[
+	\mu_{\text{III}} < \mu_{\text{II}} < \mu_{\text{IV}} < \mu_{\text{I}}
+	\] \pspace
+
+\item The standard deviation of a normal distribution, $\sigma$, is the amount of `spread' of the dataset. The standard deviation is the distance from the mean of a normal distribution, i.e. its center, to where the curve switches from `bending downward' to `bending upward' (either on its left or its right). Examining the plot, we can estimate the standard deviation for each of the normal distributions:
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{cccc}
+	I & II & III & IV \\ \hline
+	$0.5$ & $1$ & $3$ & $2$
+	\end{tabular}
+	\end{table} \par
+Placing these standard deviations in order yields\dots
+	\[
+	\sigma_{\text{I}} < \sigma_{\text{II}} < \sigma_{\text{IV}} < \sigma_{\text{III}}
+	\]
+\end{enumerate}
+
+
+
+% Question 8
+\newpage
+\question[10] Dwight and Danny are salesmen at two different paper companies. Dwight earns $\$20\!,000$ a year in commissions while Danny earns $\$15\!,200$. Commissions at Dwight's company are normally distributed with mean $\$15,\!620$ and standard deviation $\$2,\!100$. Danny works at a company whose sales commissions have distribution $N(\$12350, \$1300)$. Relative to other workers at their companies, who is the better salesperson? Be sure to fully justify your answer. \pspace
+
+\sol Recall that the $z$-score can be used as a measure of `unusualness' for a normal distribution. If $z_x < 0$ is below the mean. If $z_x = 0$, then $x$ is equal to the mean. If $z_x > 0$, then $x$ is greater than the mean. The larger the magnitude of $z_x$, i.e. the larger the value of $|z_x|$, the more `unusual' the score. We have\dots
+	\[
+	\begin{aligned}
+	z_{\text{Dwight}}&= \dfrac{x - \mu}{\sigma}= \dfrac{\$20000 - \$15620}{\$2100}= \dfrac{\$4380}{\$2100} \approx 2.09 \\[0.3cm]
+	z_{\text{Danny}}&= \dfrac{x - \mu}{\sigma}= \dfrac{\$15200 - \$12350}{\$1300}= \dfrac{\$2850}{\$1300} \approx 2.19
+	\end{aligned}
+	\]
+Because both $z$-scores are positive, both men have above average pay at their companies---but of course this was easily observed. Because $z_{\text{Danny}} > z_{\text{Dwight}}$, Danny makes more relative to others at his company than Dwight does at his company. Using this as our basis for comparison, we declare Danny to be the better salesperson. 
+
+
+
+% Question 9
+\newpage
+\question[10] Suppose that professional YouTube channels earn a yearly salary that is approximately normally distributed with mean \$46,293 with standard deviation \$8,527. What is the minimum amount your `professional' YouTube channel have to earn to be in the top 6\% of YouTube channels? \pspace
+
+\sol Let $X$ denote this minimum necessary salary to be in the top 6\% of YouTube channels. This would mean $X$ is greater than 94\% of incomes for `professional' YouTube channels. But then we know that $z_X \squiggle 0.94$. We can examine a $z$-score table to find the closest $z$-value such that $z_X \squiggle 0.94$, which is $z_X \approx 1.555$. But then\dots
+	\[
+	\begin{gathered}
+	z_X= \dfrac{X - \mu}{\sigma} \\[0.3cm]
+	1.555= \dfrac{X - \$46,\!293}{\$8,\!527} \\[0.3cm]
+	X - \$46,\!293= \$13,\!259.49 \\[0.3cm]
+	X= \$59,\!552.49
+	\end{gathered}
+	\]
+Therefore, the least you could make and still be in the top 6\% of `professional' YouTube channel earnings is $\$59,\!552.49$. 
+
+
+
+% Question 10
+\newpage
+\question[10] Suppose that you have a normal distribution with mean 140.3 and standard deviation 16.4. Showing all your work, find the following:
+	\begin{enumerate}[(a)]
+	\item $P(X= 140.3$)
+	\item $P(X \leq 130)$
+	\item $P(X \geq 130)$
+	\item $P(X \leq 180)$
+	\item $P(130 \leq X \leq 180)$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item Because a normal distribution is a continuous distribution, we have\dots
+	\[
+	P(X= 140.3)= 0.
+	\] \pspace
+
+\item 
+	\[
+	z_{130}= \dfrac{130 - 140.3}{16.4}= \dfrac{-10.3}{16.4}= -0.63 \squiggle 0.2643
+	\]
+Therefore, $P(X \leq 130)= 0.2643$. \pspace
+
+\item Using (b), we have\dots
+	\[
+	P(X \geq 130)= 1 - P(X \leq 130)= 1 - 0.2643= 0.7357
+	\] \pspace
+
+\item 
+	\[
+	z_{180}= \dfrac{180 - 140.3}{16.4}= \dfrac{39.7}{16.4}= 2.42 \squiggle 0.9922 
+	\] 
+Therefore, $P(X \leq 180)= 0.9922$. \pspace
+
+\item Using (b) and (d), we have\dots
+	\[
+	P(130 \leq X \leq 180)= P(X \leq 180) - P(X \leq 130)= 0.9922 - 0.2643= 0.7279
+	\]
+\end{enumerate}
+
+
+
+% Question 11
+\newpage
+\question[10] Suppose you have a normal distribution with mean 140.3 and standard deviation 16.4. You take a simple random sample from this distribution of size 8 and take the sample mean, $\overline{X}$. Showing all your work, find the following:
+	\begin{enumerate}[(a)]
+	\item $P(\overline{X}= 140.3)$
+	\item $P(\overline{X} \leq 130)$
+	\item $P(\overline{X} \geq 130)$
+	\item $P(\overline{X} \leq 180)$
+	\item $P(130 \leq \overline{X} \leq 180)$
+	\end{enumerate} \pspace
+
+\sol Because you have a simple random sample and are drawing from a normal distribution (so the fact that the sample size of $n= 8$ not being `sufficiently large' does not matter), the Central Limit Theorem applies. Therefore, using the Central Limit Theorem, we know the distribution of sample means of sample size $8$ is $N(\mu, \sigma/\sqrt{n})= N(140.3, 16.4/\sqrt{8})= N(140.3, 5.798)$. 
+
+\begin{enumerate}[(a)]
+\item Because a normal distribution is a continuous distribution, we have\dots
+	\[
+	P(\overline{X}= 140.3)= 0.
+	\] \pspace
+
+\item 
+	\[
+	z_{130}= \dfrac{130 - 140.3}{5.798}= \dfrac{-10.3}{5.798}= -1.78 \squiggle 0.0375
+	\] 
+Therefore, $P(\overline{X} \leq 130)= 0.0375$. \pspace
+
+\item Using (b), we have\dots
+	\[
+	P(\overline{X} \geq 130)= 1 - 0.0375= 0.9625
+	\] \pspace
+
+\item 
+	\[
+	z_{180}= \dfrac{180 - 140.3}{5.798}= \dfrac{39.7}{5.798}= 6.85 \squiggle 1.
+	\]
+Therefore, $P(\overline{X} \leq 180)= 1.$. \pspace
+
+\item Using (b) and (d), we have\dots
+	\[
+	P(130 \leq \overline{X} \leq 180)= P(\overline{X} \leq 180) - P(\overline{X} \leq 130)= 1. - 0.0375= 0.9625
+	\]
+\end{enumerate}
+
+
+
+% Question 12
+\newpage
+\question[10] Suppose that only 20\% of professors at a college use TokTik. You take a simple random sample of 11 professors from this college.
+	\begin{enumerate}[(a)]
+	\item Find the probability that exactly 3 of the professors use TokTik.
+	\item Find the probability that at most 3 of the professors use TokTik.
+	\item Find the probability that less than 3 of the professors use TokTik.
+	\item Find the probability that at least 8 of the professors use TokTik.
+	\item Find the probability that at least 1 of the professors use TokTik.
+	\end{enumerate} \pspace
+
+\sol Each professor surveyed either uses TokTik or not. We assume that the probability that a professor uses TokTik is constant. We assume that the professors surveyed answer independently. Finally, there are a fixed number of professors surveyed. Therefore, the count $X$ of professors surveyed that use TokTik is given by a binomial distribution $B(n, p)= B(11, 0.20)$.
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	P(X= 3)= 0.2215
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P(X \leq 3)&= P(X= 0) + P(X= 1) + P(X= 2) + P(X = 3) \\[0.3cm]
+	&= 0.0859 + 0.2362 + 0.2953 + 0.2215 \\[0.3cm]
+	&= 0.8389
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P(X < 3)&= P(X= 0) + P(X= 1) + P(X= 2) \\[0.3cm]
+	&= 0.0859 + 0.2362 + 0.2953 \\[0.3cm]
+	&= 0.6174
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	\begin{aligned}
+	P(X \geq 8)&= P(X= 8) + P(X= 9) + P(X= 10) + P(X= 11) \\[0.3cm]
+	&= 0.0002 + 0. + 0. + 0. \\[0.3cm]
+	&= 0.0002
+	\end{aligned}
+	\] \pspace
+
+\item 
+	\[
+	P(X \geq 1)= 1 - P(X= 0)= 1 - 0.0859= 0.9141
+	\]
+\end{enumerate}
+
+
+
+% Question 13
+\newpage
+\question[10] In a large lecture class, there are 263 students. From historical academic records, it is estimated that 16\% of the students will fail the course. 
+	\begin{enumerate}[(a)]
+	\item Approximately how many students do you estimate will likely fail this course?
+	\item What is the probability that less than 30 students will fail this course?
+	\end{enumerate} \pspace
+
+\sol We have a fixed sample size of $n= 263$ students. Each sampled student will either pass or fail the course. We assume the probability that they fail the course is fixed at $p= 0.16$. Furthermore, we assume the sampled students are independent. Then the number of students that will fail the exam is given by a binomial distribution, $B(n, p)= B(263, 0.16)$, which has mean $np= 263(0.16)= 42.08$ and standard deviation $\sqrt{np(1 - p)}= \sqrt{263(0.16)(1 - 0.16)}= \sqrt{263(0.16)(0.84)}= \sqrt{35.3472}= 5.945$. However, the given binomial table does not have $n= 263$ nor $p= 0.16$. \pspace
+
+However, we shall assume the sample was a simple random sample and $np= 263(0.16)= $ and $n(1 - p)= 263(0.84)= $. Therefore, we can approximate this binomial distribution with the normal distribution $N(np, \sqrt{np(1 - p)})= N(42.08, 5.945)$.
+
+\begin{enumerate}[(a)]
+\item We would estimate the `average' number of students will fail the course, i.e. the mean. Either considering this as the binomial distribution $B(263, 0.16)$ or using the normal approximation $N(42.08, 5.945)$, we then estimate that approximately $42$ students will fail the course. \pspace
+
+\item Using the normal approximation, we have\dots
+	\[
+	z_{30}= \dfrac{30 - 42.08}{5.945}= \dfrac{-12.0835}{5.945}= -2.03 \squiggle 0.0212
+	\]
+But then $P(X < 30) \approx 0.0212$. 
+\end{enumerate}
+
+
+
+% Question 14
+\newpage
+\question[10] You are taking a history class. The professor states that the class average is approximately normally distributed with mean 72.6 with standard deviation 8.3. Suppose you take a simple random sample of 5 students from the course. What is the probably that the average of these five student's averages is less than 65? \pspace
+
+\sol The sample is a simple random sample of size $n= 5$. Because the underlying distribution is normal, the Central Limit Theorem applies. Therefore, the distribution of sample means of size $5$ is $N(\mu, \sigma/\sqrt{n})= N(72.6, 8.3/\sqrt{5})= N(72.6, 3.712)$. But then\dots
+	\[
+	z_{65}= \dfrac{65 - 72.6}{3.712}= \dfrac{-7.6}{3.712}= -2.05 \squiggle 0.0202
+	\]
+Therefore, $P(\overline{X} \leq 65)= 0.0202$. 
+
+
+\end{questions}
+\end{document}

@@ -40,7 +40,7 @@
 \item \underline{\hspace{1.5cm}}: The larger the magnitude of a $z$-score, the more `unusual' the corresponding value. \vfill
 \item \underline{\hspace{1.5cm}}: For any dataset, $P_{50}$ will always be the median. \vfill
 \item \underline{\hspace{1.5cm}}: The larger the value of $z_{x_0}$, the larger $P(X < x_0)$ will be. \vfill
-\item \underline{\hspace{1.5cm}}: By the Central Limit Theorem, if one samples from a distribution with mean $\mu$ and standard deviation $\sigma$, then the distribution of means of groups, $\overline{X}$, of size $n$ is given by $N(\mu, \sigma/\sqrt{n})$. \vfill
+\item \underline{\hspace{1.5cm}}: By the Central Limit Theorem, if one takes a simple random sample from a distribution with mean $\mu$ and standard deviation $\sigma$, then the distribution of means of groups, $\overline{X}$, of size $n$ is given by $N(\mu, \sigma/\sqrt{n})$. \vfill
 \item \underline{\hspace{1.5cm}}: For fixed $p$, if $n$ is `large', $B(n, p) \approx N\big(np, \sqrt{np(1 - p)} \big)$. \vfill
 \end{enumerate}
 
@@ -114,17 +114,17 @@ Give a box plot for this dataset.
 	axis y line= none,
 	]
 	% I 
-	\addplot[line width=0.03cm, samples=150, domain= -10:8] {\gauss{8}{0.5}} node[above,pos=1] {I};
-	\addplot[line width=0.03cm, samples=150, domain= 8:10] {\gauss{8}{0.5}};
+	\addplot[line width=0.03cm, samples=50, domain= 6:8] {\gauss{8}{0.5}} node[above,pos=1] {I};
+	\addplot[line width=0.03cm, samples=50, domain= 8:10] {\gauss{8}{0.5}};
 	% II
-	\addplot[line width=0.03cm, samples=150, domain= -10:-2] {\gauss{-2}{1}} node[above,pos=1] {II};
-	\addplot[line width=0.03cm, samples=150, domain= -2:10] {\gauss{-2}{1}};	
+	\addplot[line width=0.03cm, samples=50, domain= -6:-2] {\gauss{-2}{1}} node[above,pos=1] {II};
+	\addplot[line width=0.03cm, samples=50, domain= -2:2] {\gauss{-2}{1}};	
 	% III
-	\addplot[line width=0.03cm, samples=150, domain= -10:-5] {\gauss{-5}{3}} node[above,pos=1] {III};
-	\addplot[line width=0.03cm, samples=150, domain= -5:10] {\gauss{-5}{3}};
+	\addplot[line width=0.03cm, samples=50, domain= -11:-5] {\gauss{-5}{3}} node[above,pos=1] {III};
+	\addplot[line width=0.03cm, samples=50, domain= -5:6] {\gauss{-5}{3}};
 	% IV 
-	\addplot[line width=0.03cm, samples=150, domain= -10:3] {\gauss{3}{2}} node[above,pos=1] {IV};
-	\addplot[line width=0.03cm, samples=150, domain= 3:10] {\gauss{3}{2}};
+	\addplot[line width=0.03cm, samples=50, domain= -4:3] {\gauss{3}{2}} node[above,pos=1] {IV};
+	\addplot[line width=0.03cm, samples=50, domain= 3:10] {\gauss{3}{2}};
 	\end{axis}
 	\end{tikzpicture}
 	\]
@@ -137,13 +137,13 @@ Give a box plot for this dataset.
 
 % Question 8
 \newpage
-\question[10] Dwight and Danny are salesmen at two different paper companies. Dwight earns \$20,000 a year in commissions while Danny earns \$15,200. Commissions at Dwight's company are normally distributed with mean $\$15,\!620$ and standard deviation $\$2,\!100$. Danny works at a company whose sales commissions have distribution $N(\$12350, \$1300)$. Relative to other workers at their companies, who is the better salesman? Be sure to fully justify your answer. 
+\question[10] Dwight and Danny are salesmen at two different paper companies. Dwight earns $\$20\!,000$ a year in commissions while Danny earns $\$15\!,200$. Commissions at Dwight's company are normally distributed with mean $\$15,\!620$ and standard deviation $\$2,\!100$. Danny works at a company whose sales commissions have distribution $N(\$12350, \$1300)$. Relative to other workers at their companies, who is the better salesperson? Be sure to fully justify your answer. 
 
 
 
 % Question 9
 \newpage
-\question[10] Suppose that professional YouTube channels earn a yearly salary that is approximately normally distributed with mean \$46,293 with standard deviation \$8,527. What would your `professional' YouTube channel have to earn to be in the top 6\% of YouTube channels? 
+\question[10] Suppose that professional YouTube channels earn a yearly salary that is approximately normally distributed with mean \$46,293 with standard deviation \$8,527. What is the minimum amount your `professional' YouTube channel have to earn to be in the top 6\% of YouTube channels?
 
 
 
@@ -151,7 +151,7 @@ Give a box plot for this dataset.
 \newpage
 \question[10] Suppose that you have a normal distribution with mean 140.3 and standard deviation 16.4. Showing all your work, find the following:
 	\begin{enumerate}[(a)]
-	\item $P(X= 140.3$)
+	\item $P(X= 140.3)$
 	\item $P(X \leq 130)$
 	\item $P(X \geq 130)$
 	\item $P(X \leq 180)$
@@ -190,7 +190,7 @@ Give a box plot for this dataset.
 \newpage
 \question[10] In a large lecture class, there are 263 students. From historical academic records, it is estimated that 16\% of the students will fail the course. 
 	\begin{enumerate}[(a)]
-	\item How approximately how many students do you estimate will likely fail this course?
+	\item Approximately how many students do you estimate will likely fail this course?
 	\item What is the probability that less than 30 students will fail this course?
 	\end{enumerate}
 
@@ -198,7 +198,7 @@ Give a box plot for this dataset.
 
 % Question 14
 \newpage
-\question[10] You are taking a history class. The professor states that the class average is approximately normally distributed with mean 72.6 with standard deviation 8.3. Suppose you take a sample of 5 students from the course. What is the probably that the average of these five student's averages is less than 65?
+\question[10] You are taking a history class. The professor states that the class average is approximately normally distributed with mean 72.6 with standard deviation 8.3. Suppose you take a simple random sample of 5 students from the course. What is the probably that the average of these five student's averages is less than 65?
 
 
 \end{questions}

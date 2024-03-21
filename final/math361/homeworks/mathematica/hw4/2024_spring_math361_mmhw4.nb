@@ -1,0 +1,55 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1422,         47]
+NotebookOptionsPosition[      1075,         33]
+NotebookOutlinePosition[      1470,         49]
+CellTagsIndexPosition[      1427,         46]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"PolynomialLinearCurveDescent", " ", "Mathematica"}], "\n", 
+ RowBox[{
+  RowBox[{"-", "HornerForm"}], "/", "PolyDivisionQuotientRemainder"}], "\n", 
+ RowBox[{"-", "PolynomialDeflation"}], "\n", 
+ RowBox[{"-", "LinearRegressionDataSet"}], "\n", 
+ RowBox[{
+  RowBox[{"-", "General"}], " ", "Model", " ", "Fit"}], "\n", 
+ RowBox[{"-", "GradientDescent"}]}], "Input",
+ CellChangeTimes->{{3.919295724411799*^9, 
+  3.919295724414214*^9}},ExpressionUUID->"40d710f8-e2dc-45e1-bb1b-\
+ce82523e1687"]
+},
+WindowSize->{808, 816},
+WindowMargins->{{Automatic, 2}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"14efabd6-348e-4788-94f1-39b71e526af7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 513, 11, 136, "Input",ExpressionUUID->"40d710f8-e2dc-45e1-bb1b-ce82523e1687"]
+}
+]
+*)
+

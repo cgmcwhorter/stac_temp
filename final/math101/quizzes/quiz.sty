@@ -6,6 +6,7 @@
 	amssymb,			% Extended Symbols
 	etoolbox,			% Use Booleans
 	microtype,			% Improved Typography
+	pifont,			% Checkmark
 }
 %	amsthm,			% Theorem Environments
 %	caption,			% Remove 'Figure' Prefix
@@ -146,3 +147,5 @@
 \newcommand{\pspace}{\par\vspace{\baselineskip}} % Par then linebreak
 \newcommand{\pvspace}[1]{\par\vspace{#1}} % Par then vpsace
 \newcommand{\fn}[1]{\begingroup\let\thefootnote\relax\footnotetext{#1}\endgroup} % Unnumbered Footnote
+\newcommand{\cmark}{\ding{51}} 	% Uses pifont
+\newcommand{\xmark}{\ding{55}}	% Uses pifont

@@ -31,12 +31,20 @@
 
 \item We have\dots
 	\[
-	P(X \leq 3)= P(X= 3) + P(X= 2) + P(X= 1) + P(X= 0)= 0.2457 + 0.2680 + 0.1787 + 0.0550= 0.7474 
+	\begin{aligned}
+	P(X \leq 3)&= P(X= 3) + P(X= 2) + P(X= 1) + P(X= 0) \\[0.3cm]
+	&= 0.2457 + 0.2680 + 0.1787 + 0.0550 \\[0.3cm]
+	&= 0.7474 
+	\end{aligned}
 	\]
 
 \item We have\dots
 	\[
-	P(X < 3)= P(X= 2) + P(X= 1) + P(X= 0)= 0.2680 + 0.1787 + 0.0550= 0.5017 
+	\begin{aligned}
+	P(X < 3)&= P(X= 2) + P(X= 1) + P(X= 0) \\[0.3cm]
+	&= 0.2680 + 0.1787 + 0.0550 \\[0.3cm]
+	&= 0.5017 
+	\end{aligned}
 	\] 
 
 \item We have\dots
@@ -60,12 +68,12 @@
 	\item What is the probability that none of you are late?
 	\end{enumerate} \pspace
 
-\sol Because $p= 0.80$ is not `available' on the binomial chart, we rephrase the questions in-terms of the number of individuals on-time and its probability: $1 - 0.80= 0.20$. Therefore, noting that you and your friends makes a total of 7~people, we have binomial distribution $N(7, 0.20)$. 
+\sol Because $p= 0.80$ is `not available' on the binomial chart, we rephrase the questions in-terms of the number of individuals on-time and its probability: $1 - 0.80= 0.20$. Therefore, noting that you and your friends makes a total of 7~people, we have binomial distribution $N(7, 0.20)$. 
 
 \begin{enumerate}[(a)]
 \item If exactly four of you are late, then exactly 3 are on-time. Therefore, we have\dots
 	\[
-	P(4 \text{ late})= P(X= 2)= 0.1147
+	P(4 \text{ late})= P(X= 3)= 0.1147
 	\] \pspace
 
 \item If everyone is late, then no one is on-time. Therefore, we have\dots
@@ -75,12 +83,16 @@
 
 \item As this question is phrased in terms of being on-time, we have\dots
 	\[
-	P(X > 3)= 0.0287 + 0.0043 + 0.0004 + 0.0000= 0.0334
+	\begin{aligned}
+	P(X > 3)&= P(X= 4) + P(X= 5) + P(X= 6) + P(X= 7) \\[0.3cm]
+	&= 0.0287 + 0.0043 + 0.0004 + 0.0000 \\[0.3cm]
+	&= 0.0334
+	\end{aligned}
 	\] \pspace
 
 \item If none of you are late, then all of you are on-time. Therefore, we have\dots 
 	\[
-	P(X= 7) \approx 0.0000
+	P(X= 7) \approx 0.
 	\]
 [Note: The exact value is $P(X= 7)= (0.20)^7= 0.0000128$.]
 \end{enumerate}

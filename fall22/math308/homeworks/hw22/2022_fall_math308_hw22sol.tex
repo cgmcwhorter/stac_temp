@@ -1,0 +1,63 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{true} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\homework{22: Due 12/15}{The art of simplicity is a puzzle of complexity.}{Douglas Horton}
+
+% Problem 1
+\problem{10} Showing all your work and fully justifying your reasoning, answer the following:
+	\begin{enumerate}[(a)]
+	\item Show that $f(x)= x^5 + 3x^4 - x^2 + 6$ is $\Omega(x^5)$. Does this imply that $f(x)$ is $\Omega(x^4)$?
+	\item Show that $g(x)= x^4 - 3x^2 + 6x^2 - 8$ is $O(x^5)$. Does this imply that $g(x)$ is $O(x^6)$?
+	\item Show that $h(x)= x^3 - x + 7$ is $\Theta(x^3)$. For $n \neq 3$, can $h(x)$ be $\Theta(x^n)$? Explain. 
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Show that $\displaystyle \sum_{i= 0}^n (3i + 2)$ is $\Theta(n^2)$. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Define $f(x)= 2x + \log x$ and $h(x)= x^2 + 2^x + 5$. Show that $f(x)$ is $\Theta(x)$ and $h(x)$ is $\Theta(2^x)$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Assume that each addition, subtraction, multiplication, division, and \texttt{print} `costs' one flop while defining/redefining variables `cost' no flops. Suppose you have an algorithm, whose pseudocode is given below. \pspace
+
+\hspace{1cm} \texttt{for} i := 1 to n \par
+\hspace{1.5cm} \texttt{for} j := 1 to n \par
+\hspace{2cm} a := i\^{}3*j + i - 2 + n \par
+\hspace{2cm} \texttt{print}(a) \par
+\hspace{1.5cm} \texttt{next} j \par
+\hspace{1cm} \texttt{next} i \pspace
+
+\begin{enumerate}[(a)]
+\item Find the outputs for this algorithm for $n= 2$.
+\item  Find the total number of flops performing this algorithm. What is $\Theta$ for this algorithm? 
+\end{enumerate}
+
+
+\end{document}

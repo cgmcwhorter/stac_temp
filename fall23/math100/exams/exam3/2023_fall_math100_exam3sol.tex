@@ -40,10 +40,13 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item Categorical \pspace
+
+\item Categorical \pspace
+
+\item Quantitative \pspace
+
+\item Quantitative 
 \end{enumerate}
 
 
@@ -60,10 +63,13 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item Stratified \pspace
+
+\item Cluster \pspace
+
+\item Systematic \pspace
+
+\item Convenience 
 \end{enumerate}
 
 
@@ -80,10 +86,13 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item Ordinal \pspace
+
+\item Nominal \pspace
+
+\item Interval \pspace
+
+\item Ratio
 \end{enumerate}
 
 
@@ -102,12 +111,55 @@
 \item Sketch a box plot for this dataset. 
 \end{enumerate} \pspace
 
-\sol 
+\sol Observe that the data has already been placed in ascending order. 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
-\item 
+\item The median for this dataset will be the $\frac{13}{2} = 6.5 \squiggle 7$th value in this dataset. Therefore, the median is $24$. \pspace
+
+\item The five-number summary for a dataset consists of the min, $Q_1$, median, $Q_3$, and max. Recall that $Q_1$ is the $25$th percentile and $Q_3$ is the $75$th percentile. Therefore, $Q_1$ is the $0.25 \cdot 13= 3.25 \squiggle 4$th value in the dataset, which is $21$, and $Q_3$ is the $0.75 \cdot 13= 9.75 \squiggle 10$th value in the dataset, which is $27$. Therefore, the five-number summary is\dots
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccccc}
+	Min & $Q_1$ & Median & $Q_3$ & Max \\ \hline 
+	$1$ & $21$ & $24$ & $27$ & $39$
+	\end{tabular}
+	\end{table} \par
+
+\item We have\dots
+	\[
+	\text{I.Q.R.} = Q_3 - Q_1 = 27 - 21 = 6
+	\] \pspace
+
+\item \phantom{.} \par
+	\begin{center}
+	\begin{tikzpicture}
+	% Number Line
+	\draw (0,0) -- (11,0); 			% Main Line
+	\draw (0,-0.15) -- (0,0.15); 	% Left Tick
+	\draw (11,-0.15) -- (11,0.15); 	% Right Tick
+	
+	% BoxPlot
+	\draw[line width=0.02cm] (0.22,0.5) -- (0.22,1.5); % Min
+	\draw[line width=0.02cm] (4.62,0.5) -- (4.62,1.5); % Q1
+	\draw[line width=0.02cm] (5.28,0.5) -- (5.28,1.5); % Median
+	\draw[line width=0.02cm] (5.94,0.5) -- (5.94,1.5); % Q3
+	\draw[line width=0.02cm] (8.58,0.5) -- (8.58,1.5); % Max
+	
+	\draw[line width=0.02cm] (4.62,1.5) -- (5.94,1.5); % Top Line
+	\draw[line width=0.02cm] (4.62,0.5) -- (5.94,0.5); % Bottom Line
+	\draw[line width=0.02cm] (0.22,1) -- (4.62,1); 	  % Left Line
+	\draw[line width=0.02cm] (5.94,1) -- (8.58,1); 	  % Right Line
+	
+	% Labels
+	\node at (0,-0.5) {\footnotesize $0$}; 		% 0
+	\node at (11,-0.5) {\footnotesize $50$}; 	% 50 
+	
+	\node at (0.22,-0.5) {\footnotesize $1$};	\draw (0.22,-0.25) -- (0.22,0.25); % 1
+	\node at (4.62,-0.5) {\footnotesize $21$};	\draw (4.62,-0.25) -- (4.62,0.25); % 21
+	\node at (5.28,-0.5) {\footnotesize $24$};	\draw (5.28,-0.25) -- (5.28,0.25); % 24
+	\node at (5.94,-0.5) {\footnotesize $27$};	\draw (5.94,-0.25) -- (5.94,0.25); % 27
+	\node at (8.58,-0.5) {\footnotesize $39$};	\draw (8.58,-0.25) -- (8.58,0.25); % 39
+	\end{tikzpicture}
+	\end{center}
 \end{enumerate}
 
 
@@ -127,9 +179,29 @@
 
 \sol 
 \begin{enumerate}[(a)]
-\item 
-\item 
-\item 
+\item The mean is\dots
+	\[
+	\overline{x} = \dfrac{\sum x_i}{n} = \dfrac{1 + 6 + 6 + 12}{4} = \dfrac{25}{4} = 6.25
+	\] \pspace
+
+\item We compute all the individual terms to compute the standard deviation: \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccr}
+	$x_i$ & $x_i - \overline{x}$ & $(x_i - \overline{x})^2$ \\ \hline
+	$1$ & $-5.25$ & $27.5625$ \\
+	$6$ & $-0.25$ & $0.0625$ \\
+	$6$ & $-0.25$ & $0.0625$ \\
+	$12$ & $\phantom{-}5.75$ & $33.0625$ \\ \cline{3-3}
+		& 			& Total: $60.75$
+	\end{tabular}
+	\end{table} \par
+But then the standard deviation is\dots
+	\[
+	\sigma = \sqrt{ \dfrac{1}{n - 1} \sum (x_i - \overline{x})^2} = \sqrt{ \dfrac{1}{3} \cdot 60.72} = \sqrt{20.25} = 4.5
+	\] \pspace
+ 
+\item The median is always a more robust measure of center than the mean as it is resistant to outliers whereas the mean is not resistant to outliers. The median of this dataset is clearly 6. 
 \end{enumerate}
 
 
@@ -146,17 +218,44 @@
 \sol 
 \begin{enumerate}[(a)]
 \item 
-\item 
-\item 
+	\[
+	z_{40}= \dfrac{40 - 42.1}{8.6}= \dfrac{-2.1}{8.6}= -0.24 \squiggle 0.4052
+	\]
+Therefore, $P(x \leq 40) = 0.4052$. \pspace
+
+\item We have\dots
+	\[
+	P(x \geq 40) = 1 - P(x \leq 40) = 1 - 0.4052 = 0.5948
+	\] \pspace
+
+\item If a man walked the minimal number of miles to be in the top 1\% of men that will walk for you, then this man has walked more miles than 99\% of the men have walked for you. But then if $x$ were this minimal number of miles, we know that $z_x \squiggle 0.99$. Examining a $z$-score chart, it is clear that $z_x \approx 2.33$. But then\dots
+	\[
+	\begin{gathered}
+	z_x = \dfrac{x - \mu}{\sigma} \\[0.3cm]
+	2.33 = \dfrac{x - 42.1}{8.6} \\[0.3cm]
+	20.038 = x - 42.1 \\[0.3cm]
+	x = 62.038
+	\end{gathered}
+	\]
+Therefore, a man needs to walk at least 62.038~miles to be in the top 1\% of men that would walk for you. 
 \end{enumerate}
 
 
 
 % Question 7
 \newpage
-\question[10] Scientists have put their top minds on the problem of what the average `rizz' rating is for current celebrities. Participants were asked to rate the `rizz' of various Hollywoo stars and celebrities\footnote{What do they know? Do they know things? Let's find out.} on a scale of 0 to 100. The study examined 37~individuals and found an average `rizz' rating of 72.4. Find a 98\% confidence interval for the average `rizz' rating of Hollywoo stars and celebrities. \pspace
+\question[10] Scientists have put their top minds on the problem of what the average `rizz' rating is for current celebrities. Participants were asked to rate the `rizz' of various Hollywoo stars and celebrities\footnote{What do they know? Do they know things? Let's find out.} on a scale of 0 to 100. The study examined 37~individuals and found an average `rizz' rating of 72.4. The standard deviation for `rizz' ratings for the population was known to be 13.9. Find a 98\% confidence interval for the average `rizz' rating of Hollywoo stars and celebrities. \pspace
 
-\sol 
+\sol We assume that the sample was a simple random sample. The study examined $n= 37 > 30$ individuals. Therefore, this sample is `sufficiently large' for the Central Limit Theorem to apply. If the confidence interval contains 98\% of the values, there are 2\% of values outside of this interval. Because the normal distribution is symmetric, this leaves 1\% of values above/below the confidence interval.  But then the upper value in this confidence interval is greater than 98\% + 1\%= 99\% of values in the distribution. If $x$ were this upper value, then $z_x \squiggle 0.99$. Examining a $z$-score chart, we have $z_x \approx 2.33$. But then the confidence interval is given by\dots
+	\[
+	\begin{gathered}
+	\overline{x} \quad \pm \quad z^* \, \dfrac{\sigma}{\sqrt{n}} \\[0.3cm]
+	72.4 \quad \pm \quad 2.33 \cdot \dfrac{13.9}{\sqrt{37}} \\[0.3cm]
+	72.4 \quad \pm \quad 2.33 \cdot 2.28515 \\[0.3cm]
+	72.4 \quad \pm \quad 5.32
+	\end{gathered}
+	\]
+Therefore, the confidence interval is $(67.08, 77.72)$, i.e. ``there is a 98\% chance that the average `rizz' rating for Hollywoo stars and celebrities is between 67.08\% and 77.72\%.''\footnote{Strictly speaking, a 98\% chance that this interval contains the true mean.} 
 
 
 
@@ -186,9 +285,21 @@
 \sol 
 \begin{enumerate}[(a)]
 \item 
+	\[
+	P(\text{35 -- 50 or } \textit{Muppet Christmas Carol}) = \dfrac{135 + 138 - 39}{458} = \dfrac{234}{458} \approx 0.5109
+	\] \pspace
+
 \item 
+	\[
+	P(\text{22 -- 35 and } \textit{Elf}) = \dfrac{18}{458} \approx 0.0393
+	\] \pspace
+
 \item 
-\item 
+	\[
+	P(\textit{A Christmas Story} \;|\; 51+)= \dfrac{50}{132} \approx 0.3788
+	\] \pspace
+
+\item Yes, there were no people that preferred \textit{Gremlins} and were 18 -- 21. But then these events cannot be independent because they are disjoint. [Disjoint events are \textit{never} independent.]
 \end{enumerate}
 
 

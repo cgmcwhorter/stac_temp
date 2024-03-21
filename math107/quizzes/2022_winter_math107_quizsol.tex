@@ -1,7 +1,6 @@
 \documentclass[11pt,letterpaper]{article}
 \usepackage[lmargin=1in,rmargin=1in,bmargin=1in,tmargin=1in]{geometry}
-\usepackage{style/quiz}
-\usepackage{style/commands}
+\usepackage{quiz}
 
 % -------------------
 % Content
@@ -12,7 +11,7 @@
 % Quiz 1
 \quizsol \textit{True/False}: If $P$ is the statement, ``$1 < 0$,'' and $Q$ is the statement, ``$1 + 1= 3$,'' then $P \to Q$ is false. \pspace
 
-\sol The statement is \textit{false}. We define statements $P \colon 1 < 0$ and $Q \colon 1 + 1= 3$. We need to determine the truth value for $P \to Q$. Obviously, $1 \not< 0$, so $P$ is false. Furthermore, $1 + 1 \neq 3$, so that $Q$ is also false. So we know $P \equiv F_0$ and $Q \equiv F_0$. Therefore, $P \to Q$ is equivalent to $F_0 \to F_0$. Recall the truth table for $A \to B$:
+\sol The statement is \textit{false}. We define statements $P \colon 1 < 0$ and $Q \colon 1 + 1= 3$. We need to determine the truth value for $P \to Q$. Obviously, $1 \not< 0$, so $P$ is false. Furthermore, $1 + 1 \neq 3$, so that $Q$ is also false. So we know $P \equiv F_0$ and $Q \equiv F_0$. Therefore, $P \to Q$ is equivalent to $F_0 \to F_0$. Recall the truth table for $A \to B$: \par
 	\begin{table}[h]
 	\centering
 	\begin{tabular}{c|c||c}
@@ -22,39 +21,99 @@
 	$F$ & $T$ & $T$ \\
 	$F$ & $F$ & $T$
 	\end{tabular}
-	\end{table}
-But then $P \to Q \equiv F_0 \to F_0$ is true. In fact, $A \to B$ is \textit{always} true if $A$ is false. Therefore, $P \to Q$ is true so that the statement of the quiz is false. \pvspace{1.3cm}
+	\end{table} \par
+But then $P \to Q \equiv F_0 \to F_0$ is true. In fact, $A \to B$ is \textit{always} true if $A$ is false. Therefore, $P \to Q$ is true, so that the statement of the quiz is false. \pvspace{1.3cm}
 
 
 
 % Quiz 2
-\quizsol \textit{True/False}: The circuit for $(P \wedge \neg Q) \vee \neg P$ is\dots
-	\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images/qcircuit}
-	\end{figure}
+\quizsol \textit{True/False}: The circuit for $\neg P \vee (P \wedge \neg Q)$ is\dots
+	\[
+	\begin{tikzpicture}
+	\node (p) at (0,2) {\hspace{-0.5cm}$P$}; 	% P
+	\node (q) at (-2,0) {\hspace{-0.5cm}$Q$}; 	% Q
+	
+	\node[not gate US, draw, line width= 0.03cm] at (-1,0) (not1) {}; 	% Lower NOT
+	\node[not gate US, draw, line width= 0.03cm] at (1.8,2) (not2) {}; 	% Upper NOT
+	\node[and gate US, draw, line width= 0.03cm] at (2,0.75) (and1) {}; 	% AND Gate
+	\node[or gate US, draw, line width= 0.03cm] at (3.5,1.5) (or1) {}; 	% OR Gate
+	
+	\draw[line width= 0.03cm] (q) |- (not1) -- (1,0) |- (and1.input 2); 	% Q to NOT to AND
+	\draw[line width= 0.03cm] (p) |- (not2);					% P to NOT
+	\draw[line width= 0.03cm] (1,2) |- (and1.input 1); 			% P to AND
+	\draw[line width= 0.03cm] (not2.output) -- ([xshift=0.5cm]not2.output) |- (or1.input 1);		% NOT to OR
+	\draw[line width= 0.03cm] (and1.output) -- ([xshift=0.37cm]and1.output) |- (or1.input 2);	% AND to OR
+	\draw[line width= 0.03cm] (or1.output) -- ([xshift=0.5cm]or1.output);					% OR output
+	\end{tikzpicture}
+	\] \pspace
 
-
-\sol The statement is \textit{true}. Following order of operations in $(P \wedge \neg Q) \vee \neg P$, we first compute $\neg Q$. As a circuit, we can represent $\neg Q$ as\dots
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.25\textwidth]{images/negq}
-	\end{figure}
+\sol The statement is \textit{true}. Following order of operations in $\neg P \vee (P \wedge \neg Q)$, we first compute $\neg Q$. As a circuit, we can represent $\neg Q$ as\dots
+	\[
+	\begin{tikzpicture}
+	\node (q) at (-2,0) {\hspace{-0.5cm}$Q$}; 	% Q	
+	\node at (0,0.25) {$\neg Q$};			% ~Q
+	\node[not gate US, draw, line width= 0.03cm] at (-1,0) (not1) {}; 	% Lower NOT
+	\draw[line width= 0.03cm] (q) |- (not1) -- (0.5,0); 				% Q to NOT to AND
+	\end{tikzpicture}
+	\]
 We then `$\wedge$' (`and') this with $P$, which as a circuit is\dots
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.3\textwidth]{images/negqand}
-	\end{figure}
+	\[
+	\begin{tikzpicture}
+	\node (p) at (0,2) {\hspace{-0.5cm}$P$}; 	% P
+	\node (q) at (-2,0) {\hspace{-0.5cm}$Q$}; 	% Q
+	\node at (0,0.25) {$\neg Q$};			% ~Q
+	\node at (3,0.4) {$P \wedge \neg Q$};	% P \wedge ~Q
+	
+	\node[not gate US, draw, line width= 0.03cm] at (-1,0) (not1) {}; 	% Lower NOT
+	\node[and gate US, draw, line width= 0.03cm] at (2,0.75) (and1) {}; 	% AND Gate
+	
+	\draw[line width= 0.03cm] (q) |- (not1) -- (1,0) |- (and1.input 2); 		% Q to NOT to AND
+	\draw[line width= 0.03cm] (0,2) -- (1,2) |- (and1.input 1); 			% P to AND
+	\draw[line width= 0.03cm] (and1.output) -- (3,0.75); 				% AND Output
+	\end{tikzpicture}
+	\]
 We then compute $\neg P$, which placing this in the circuit above, is\dots
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.3\textwidth]{images/negqandnegp}
-	\end{figure}
+	\[
+	\begin{tikzpicture}
+	\node (p) at (0,2) {\hspace{-0.5cm}$P$}; 	% P
+	\node (q) at (-2,0) {\hspace{-0.5cm}$Q$}; 	% Q
+	\node at (0,0.25) {$\neg Q$};			% ~Q
+	\node at (2.7,2.3) {$\neg P$};			% ~P
+	\node at (3,0.4) {$P \wedge \neg Q$};	% P \wedge ~Q
+	
+	\node[not gate US, draw, line width= 0.03cm] at (-1,0) (not1) {}; 	% Lower NOT
+	\node[not gate US, draw, line width= 0.03cm] at (1.8,2) (not2) {}; 	% Upper NOT
+	\node[and gate US, draw, line width= 0.03cm] at (2,0.75) (and1) {}; 	% AND Gate
+	
+	\draw[line width= 0.03cm] (q) |- (not1) -- (1,0) |- (and1.input 2); 		% Q to NOT to AND
+	\draw[line width= 0.03cm] (p) |- (not2) -- (3,2);					% P to NOT
+	\draw[line width= 0.03cm] (1,2) |- (and1.input 1); 				% P to AND
+	\draw[line width= 0.03cm] (and1.output) -- (3,0.75); 				% AND Output
+	\end{tikzpicture}
+	\]
 We then `$\vee$' (`or') these outputs together, which yields\dots
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images/qcircuit}
-	\end{figure}
+	\[
+	\begin{tikzpicture}
+	\node (p) at (0,2) {\hspace{-0.5cm}$P$}; 	% P
+	\node (q) at (-2,0) {\hspace{-0.5cm}$Q$}; 	% Q
+	\node at (0,0.25) {$\neg Q$};			% ~Q
+	\node at (2.7,2.3) {$\neg P$};			% ~P
+	\node at (3,0.4) {$P \wedge \neg Q$};	% P \wedge ~Q
+	\node at (5.5,1.85) {$\neg P \vee (P \wedge \neg Q)$}; % (P \wedge ~Q) \vee ~P
+	
+	\node[not gate US, draw, line width= 0.03cm] at (-1,0) (not1) {}; 	% Lower NOT
+	\node[not gate US, draw, line width= 0.03cm] at (1.8,2) (not2) {}; 	% Upper NOT
+	\node[and gate US, draw, line width= 0.03cm] at (2,0.75) (and1) {}; 	% AND Gate
+	\node[or gate US, draw, line width= 0.03cm] at (3.5,1.5) (or1) {}; 	% OR Gate
+	
+	\draw[line width= 0.03cm] (q) |- (not1) -- (1,0) |- (and1.input 2); 	% Q to NOT to AND
+	\draw[line width= 0.03cm] (p) |- (not2);					% P to NOT
+	\draw[line width= 0.03cm] (1,2) |- (and1.input 1); 			% P to AND
+	\draw[line width= 0.03cm] (not2.output) -- ([xshift=0.5cm]not2.output) |- (or1.input 1);		% NOT to OR
+	\draw[line width= 0.03cm] (and1.output) -- ([xshift=0.37cm]and1.output) |- (or1.input 2);	% AND to OR
+	\draw[line width= 0.03cm] (or1.output) -- ([xshift=0.5cm]or1.output);					% OR output
+	\end{tikzpicture}
+	\]
 This is precisely the circuit given in the statement of the quiz. \pvspace{1.3cm}
 
 
@@ -62,7 +121,7 @@ This is precisely the circuit given in the statement of the quiz. \pvspace{1.3cm
 % Quiz 3
 \quizsol \textit{True/False}: XXXXVI is 46 in Roman numerals. \pspace
 
-\sol The statement is \textit{false}. Recall that only certain symbols may be repeated sequentially in Roman numerals. For instance, $L$ and $D$ may \textit{not} be repeated sequentially. Furthermore, the repeatable sequentially symbols $I$, $X$, and $C$ may not be sequentially repeated more three times. In the quiz statement, $X$ is repeated sequentially four times. Therefore, this is not a valid Roman numeral. Clearly, the quiz statement of $X\!X\!X\!X\!V\!I$ is attempting to represent $X + X + X + X + V + I= 10 + 10 + 10 + 10 + 5 + 1= 46$. Because we cannot repeat $X$ four times in a row, rather than add up to $46$, we should count down to 46. Starting at 50, i.e. $L$, we need to subtract 10, which is $X$. Because we need to subtract this from $L$, we place it before $L$; that is, 40 is represented in Romain numerals by $X\!L$. We then add 6 to this resulting 40 to reach 46. We know 6 in Roman numerals is $V\!I$. Therefore, 46 in Roman numerals is $X\!LV\!I$. The statement of the quiz is then false. \pvspace{1.3cm}
+\sol The statement is \textit{false}. Recall that only certain symbols may be repeated sequentially in Roman numerals. For instance, $L$ and $D$ may \textit{not} be repeated sequentially. Furthermore, the repeatable sequential symbols $I$, $X$, and $C$ may not be repeated sequentially more three times. In the quiz statement, $X$ is repeated sequentially four times. Therefore, this is not a valid Roman numeral. Clearly, the quiz statement of $X\!X\!X\!X\!V\!I$ is attempting to represent $X + X + X + X + V + I= 10 + 10 + 10 + 10 + 5 + 1= 46$. Because we cannot repeat $X$ four times in a row, rather than add up to $46$, we should count down to $46$. Starting at $50$, i.e. $L$, we need to subtract $10$, which is $X$. Because we need to subtract this from $L$, we place it before $L$; that is, $40$ is represented in Romain numerals by $X\!L$. We then add $6$ to this resulting $40$ to reach $46$. We know $6$ in Roman numerals is $V\!I$. Therefore, $46$ in Roman numerals is $X\!LV\!I$. \pvspace{1.3cm}
 
 
 
@@ -71,21 +130,21 @@ This is precisely the circuit given in the statement of the quiz. \pvspace{1.3cm
 	\[
 	\begin{tikzpicture}[scale=0.7]
 	% First Pile
-	\draw[rounded corners,fill=black] (0,0) rectangle (1,0.3);
-	\draw[rounded corners,fill=black] (0,0.5) rectangle (1,0.8);
+	\node[draw,fill=black,rounded rectangle] at (0,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (0,0.6) {....};
 	% Second Pile
-	\draw[rounded corners,fill=black] (1.5,0) rectangle (2.5,0.3);
+	\node[draw,fill=black,rounded rectangle] at (1.5,0) {....};
 	% Third Pile
-	\draw[rounded corners,fill=black] (3,0) rectangle (4,0.3);
-	\draw[rounded corners,fill=black] (3,0.5) rectangle (4,0.8);
-	\draw[rounded corners,fill=black] (3,1) rectangle (4,1.3);	
+	\node[draw,fill=black,rounded rectangle] at (3,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (3,0.6) {....};
+	\node[draw,fill=black,rounded rectangle] at (3,1.2) {....};
 	% Fourth Pile
-	\draw[rounded corners,fill=black] (4.5,0) rectangle (5.5,0.3);
-	\draw[rounded corners,fill=black] (4.5,0.5) rectangle (5.5,0.8);	
+	\node[draw,fill=black,rounded rectangle] at (4.5,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (4.5,0.6) {....};
 	% Fifth Pile
-	\draw[rounded corners,fill=black] (6,0) rectangle (7,0.3);
-	\draw[rounded corners,fill=black] (6,0.5) rectangle (7,0.8);
-	\draw[rounded corners,fill=black] (6,1) rectangle (7,1.3);	
+	\node[draw,fill=black,rounded rectangle] at (6,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (6,0.6) {....};
+	\node[draw,fill=black,rounded rectangle] at (6,1.2) {....};
 	\end{tikzpicture}
 	\]
 
@@ -93,55 +152,62 @@ This is precisely the circuit given in the statement of the quiz. \pvspace{1.3cm
 	\[
 	\begin{tikzpicture}[scale=0.7]
 	% First Pile
-	\draw[rounded corners,fill=black] (0,0) rectangle (1,0.3);
-	\draw[rounded corners,fill=black] (0,0.5) rectangle (1,0.8);
-	\node at (0.5,-0.5) {$2$};
+	\node[draw,fill=black,rounded rectangle] at (0,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (0,0.6) {....};
+	\node at (0,-0.75) {$2$};
 	% Second Pile
-	\draw[rounded corners,fill=black] (1.5,0) rectangle (2.5,0.3);
-	\node at (2,-0.5) {$1$};
+	\node[draw,fill=black,rounded rectangle] at (1.5,0) {....};
+	\node at (1.5,-0.75) {$1$};
 	% Third Pile
-	\draw[rounded corners,fill=black] (3,0) rectangle (4,0.3);
-	\draw[rounded corners,fill=black] (3,0.5) rectangle (4,0.8);
-	\draw[rounded corners,fill=black] (3,1) rectangle (4,1.3);	
-	\node at (3.5,-0.5) {$3$};
+	\node[draw,fill=black,rounded rectangle] at (3,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (3,0.6) {....};
+	\node[draw,fill=black,rounded rectangle] at (3,1.2) {....};
+	\node at (3,-0.75) {$3$};
 	% Fourth Pile
-	\draw[rounded corners,fill=black] (4.5,0) rectangle (5.5,0.3);
-	\draw[rounded corners,fill=black] (4.5,0.5) rectangle (5.5,0.8);	
-	\node at (5,-0.5) {$2$};
+	\node[draw,fill=black,rounded rectangle] at (4.5,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (4.5,0.6) {....};
+	\node at (4.5,-0.75) {$2$};
 	% Fifth Pile
-	\draw[rounded corners,fill=black] (6,0) rectangle (7,0.3);
-	\draw[rounded corners,fill=black] (6,0.5) rectangle (7,0.8);
-	\draw[rounded corners,fill=black] (6,1) rectangle (7,1.3);	
-	\node at (6.5,-0.5) {$3$};
+	\node[draw,fill=black,rounded rectangle] at (6,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (6,0.6) {....};
+	\node[draw,fill=black,rounded rectangle] at (6,1.2) {....};
+	\node at (6,-0.75) {$3$};
 	\end{tikzpicture}
 	\]
 We the number of chips in each heap in binary:
 	\[
 	\begin{tikzpicture}[scale=0.7]
 	% First Pile
-	\draw[rounded corners,fill=black] (0,0) rectangle (1,0.3);
-	\draw[rounded corners,fill=black] (0,0.5) rectangle (1,0.8);
-	\node at (0.5,-0.5) {$10$};
+	\node[draw,fill=black,rounded rectangle] at (0,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (0,0.6) {....};
+	\node at (0,-0.75) {$10$};
 	% Second Pile
-	\draw[rounded corners,fill=black] (1.5,0) rectangle (2.5,0.3);
-	\node at (2,-0.5) {$1$};
+	\node[draw,fill=black,rounded rectangle] at (1.5,0) {....};
+	\node at (1.5,-0.75) {$1$};
 	% Third Pile
-	\draw[rounded corners,fill=black] (3,0) rectangle (4,0.3);
-	\draw[rounded corners,fill=black] (3,0.5) rectangle (4,0.8);
-	\draw[rounded corners,fill=black] (3,1) rectangle (4,1.3);	
-	\node at (3.5,-0.5) {$101$};
+	\node[draw,fill=black,rounded rectangle] at (3,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (3,0.6) {....};
+	\node[draw,fill=black,rounded rectangle] at (3,1.2) {....};
+	\node at (3,-0.75) {$101$};
 	% Fourth Pile
-	\draw[rounded corners,fill=black] (4.5,0) rectangle (5.5,0.3);
-	\draw[rounded corners,fill=black] (4.5,0.5) rectangle (5.5,0.8);	
-	\node at (5,-0.5) {$10$};
+	\node[draw,fill=black,rounded rectangle] at (4.5,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (4.5,0.6) {....};
+	\node at (4.5,-0.75) {$10$};
 	% Fifth Pile
-	\draw[rounded corners,fill=black] (6,0) rectangle (7,0.3);
-	\draw[rounded corners,fill=black] (6,0.5) rectangle (7,0.8);
-	\draw[rounded corners,fill=black] (6,1) rectangle (7,1.3);	
-	\node at (6.5,-0.5) {$101$};
+	\node[draw,fill=black,rounded rectangle] at (6,0) {....};
+	\node[draw,fill=black,rounded rectangle] at (6,0.6) {....};
+	\node[draw,fill=black,rounded rectangle] at (6,1.2) {....};
+	\node at (6,-0.75) {$101$};
 	\end{tikzpicture}
 	\]
-We can then find the NIM sum:
+
+
+
+\newpage
+
+
+
+We can then find the NIM sum: \par
 	\begin{table}[h]
 	\centering
 	\begin{tabular}{rrr}
@@ -152,27 +218,35 @@ We can then find the NIM sum:
 	1 & 0 & 1 \\ \hline
 	0 & 0 & 1
 	\end{tabular}
-	\end{table}
-Because the NIM sum is not 0, we know that this is an $N$-position. Therefore, the current player, i.e. the \textit{\underline{N}}ext to move, is the winner---assuming perfect play. Furthermore, we can determine the winning move from the NIM sum. The next player needs to make the NIM sum zero. Observe that one winning move would be to remove the heap of one as then the NIM sum would be zero. One could also remove one chip from either heap of three---resulting in a total of three heaps of size two. These are the only winning moves. Alternatively, one can recall that in traditional NIM, one can ignore matching heaps. We have matching heaps of size two and three. Ignoring these, we only have a heap of size one. It is then clear that the NIM sum is not zero and this NIM game is equivalent to a game with a single heap of size one. It is also then obvious that a winning move is to remove the heap of size one. Finally, recall also that in traditional NIM, one can ignore chips (in any heap) in matching pairs of size 1, 2, 4, 8, \dots. Observe that we can find two matching pairs of chips of size two and two matching chips of size one. This would leave only one remaining chip. This again forces this to be an $N$-position with a winning move to be to remove the heap of size one. In any case, assuming perfect play, the first player wins the given NIM game. \pvspace{1.3cm}
+	\end{table} \par
+Because the NIM sum is not 0, we know that this is an $N$-position. Therefore, the current player, i.e. the \textit{\underline{N}}ext to move, is the winner---assuming perfect play. Furthermore, we can determine the winning move from the NIM sum. The next player needs to make the NIM sum zero. Observe that one winning move would be to remove the heap of one as then the NIM sum would be zero. One could also remove one chip from either heap of three---resulting in a total of three heaps of size two. These are the only winning moves. \pspace
+
+Alternatively, one can recall that in traditional NIM, one can ignore matching heaps. We have matching heaps of size two and three. Ignoring these, we only have a heap of size one. It is then clear that the NIM sum is not zero and this NIM game is equivalent to a game with a single heap of size one. It is also then obvious that a winning move is to remove the heap of size one. \pspace
+
+Finally, recall also that in traditional NIM, one can ignore chips (in any heap) in matching pairs of size 1, 2, 4, 8, \dots. Observe that we can find two matching pairs of chips of size two and two matching chips of size one. This would leave only one remaining chip. This again forces this to be an $N$-position with a winning move to be to remove the heap of size one. In any case, assuming perfect play, the first player wins the given NIM game. \pvspace{1.3cm}
 
 
 
 % Quiz 5
 \quizsol \textit{True/False}: If you take out a simple discount note for 6~months for \$1,400 and receive \$1,156, the interest you pay is \$244. \pspace
 
-\sol The statement is \textit{true}. The interest paid is the discount on the note. The amount you receive from the loan is the loan amount minus this discount. The loan was for \$1,400 and you received \$1,1156. Therefore, you paid $\$1400 - \$1156= \$244$ in interest. We can also compute this directly. We know that the discount (interest) paid on a loan is given by $D= Mrt$, where $D$ is the discount, $M$ is the maturity (the loan amount), $r$ is the yearly interest rate, and $t$ is the loan length (in years). The amount you receive, $L$, is the maturity minus the discount, i.e. $L= M - D= M - Mrt= M( 1 - rt)$. We know that $M= \$1400$, $L= \$1156$, and $t= \frac{6}{12}= 0.50$. Therefore, we have\dots
+\sol The statement is \textit{true}. The interest paid is the discount on the note. The amount you receive from the loan is the loan amount minus this discount. The loan was for \$1,400 and you received \$1,156. Therefore, you paid $\$1,\!400 - \$1,\!156= \$244$ in interest. We can also compute this directly. We know that the discount (interest) paid on a loan is given by $D= Mrt$, where $D$ is the discount, $M$ is the maturity (the loan amount), $r$ is the yearly interest rate, and $t$ is the loan length (in years). The amount you receive, $L$, is the maturity minus the discount, i.e. $L= M - D= M - Mrt= M( 1 - rt)$. We know that $M= \$1,\!400$, $L= \$1,\!156$, and $t= \frac{6}{12}= 0.50$. Therefore, we have\dots
 	\[
-	\begin{aligned}
-	L&= M(1 - rt) \\
-	\$1156&= \$1400 (1 - 0.50r) \\
-	\dfrac{\$1156}{\$1400}&= \dfrac{\$1400 (1 - 0.50r)}{\$1400} \\
-	0.825714&= 1 - 0.50 r \\
-	-0.174286&= -0.50 r \\
-	\dfrac{-0.174286}{-0.50}&= \dfrac{-0.50 r}{-0.50} \\
-	r&= 0.348572
-	\end{aligned}
+	\begin{gathered}
+	L= M(1 - rt) \\[0.3cm]
+	\$1,\!156= \$1,\!400 (1 - 0.50r) \\[0.3cm]
+	\dfrac{\$1,\!156}{\$1,\!400}= \dfrac{\$1,\!400 (1 - 0.50r)}{\$1,\!400} \\[0.3cm]
+	0.825714= 1 - 0.50 r \\[0.3cm]
+	\end{gathered}
 	\]
-But then we have $D= Mrt= \$1400 \cdot 0.348572 \cdot 0.50 \approx \$244$, as given in the quiz statement. \pvspace{1.3cm}
+	\[
+	\begin{gathered}
+	-0.174286= -0.50 r \\[0.3cm]
+	\dfrac{-0.174286}{-0.50}= \dfrac{-0.50 r}{-0.50} \\[0.3cm]
+	r= 0.348572
+	\end{gathered}
+	\]
+But then we have $D= Mrt= \$1,\!400 \cdot 0.348572 \cdot 0.50 \approx \$244$, as given in the quiz statement. \pvspace{1.3cm}
 
 
 
@@ -181,15 +255,9 @@ But then we have $D= Mrt= \$1400 \cdot 0.348572 \cdot 0.50 \approx \$244$, as gi
 
 \sol The statement is \textit{false}. We know that if a principal, $P$, is invested at an annual interest rate, $r$, compounded $k$ times per year, is invested for $t$ years that the amount, $F$, it will be worth is given by $F= P \left(1 + \frac{r}{k} \right)^{kt}$. We know that $P= \$8000$ and $r= 0.05$. Because the interest is compounded quarterly, i.e. every fourth of a year, the interest is compounded four times per year, i.e. $k= 4$. Finally, we know $t= 6$. Therefore, we would have\dots
 	\[
-	\begin{aligned}
-	F&= P \left(1 + \frac{r}{k} \right)^{kt} \\
-	&= \$8000 \left(1 + \frac{0.05}{4} \right)^{4 \cdot 6} \\
-	&= \$8000 (1.0125)^{24} \\
-	&\approx \$8000 (1.34735105) \\
-	&\approx10778.81	
-	\end{aligned}
+	F= P \left(1 + \frac{r}{k} \right)^{kt}= \$8,\!000 \left(1 + \frac{0.05}{4} \right)^{4 \cdot 6}= \$8,\!000 (1.0125)^{24} \approx \$8,\!000 (1.34735105) \approx \$10,\!778.81	
 	\]
-Observe that the expression in the statement of the quiz, i.e. $8000 \left(1 + \frac{0.50}{4} \right)^6$, an interest rate of $0.50$ is used rather than a rate of $0.05$. Furthermore, the exponent is 6, the number of years, rather than $24= 4 \cdot 6$, the number of compounds. If one computes the expression given in the quiz, an amount of \$16,218.29 is obtained. Therefore, the quiz statement is \textit{false}. \pvspace{1.3cm}
+Observe that the expression in the statement of the quiz, i.e. $8000 \left(1 + \frac{0.50}{4} \right)^6$, an interest rate of $0.50$ is used rather than a rate of $0.05$. Furthermore, the exponent is 6, the number of years, rather than $24= 4 \cdot 6$, the number of compounds. If one computes the expression given in the quiz, an amount of \$16,218.29 is obtained. Therefore, the quiz statement is \textit{false}. \pvspace{1.1cm}
 
 
 
@@ -200,7 +268,7 @@ Observe that the expression in the statement of the quiz, i.e. $8000 \left(1 + \
 	\[
 	\vec{u} \cdot \vec{v}= \langle 1, 0, -3 \rangle \cdot \langle 2, 5, 1 \rangle= 1(2) + 0(5) + (-3)1= 2 + 0 - 3= -1
 	\]
-Furthermore, because $\vec{u} \cdot \vec{v} \neq 0$, we know that the given vectors are not perpendicular. Finally, because $\vec{u} \cdot \vec{v} < 0$, we know that vectors point in `opposite' directions, i.e. that the angle between them is greater than $90^\circ$. \pvspace{1.0cm}
+Furthermore, because $\vec{u} \cdot \vec{v} \neq 0$, we know that the given vectors are not perpendicular. Finally, because $\vec{u} \cdot \vec{v} < 0$, we know that vectors point in `opposite' directions, i.e. that the angle between them is between $90^\circ$ and $270^\circ$. \pvspace{1.1cm}
 
 
 
@@ -224,14 +292,14 @@ Furthermore, because $\vec{u} \cdot \vec{v} \neq 0$, we know that the given vect
 	BA&= \begin{pmatrix} 0 & 2 \\ 3 & 1 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}= \begin{pmatrix} 0(1) + 2(0) & 0(1) + 2(2) \\ 3(1) + 1(0) & 3(1) + 1(2) \end{pmatrix}= \begin{pmatrix} 0 + 0 & 0 + 4 \\ 3 + 0 & 3 + 2 \end{pmatrix}= \begin{pmatrix} 0 & 4 \\ 3 & 5 \end{pmatrix}
 	\end{aligned}
 	\] 
-But then we see that $AB \neq BA$. While there may be specific matrices $A, B$ where $AB= BA$, it is not generally true that $AB= BA$ for matrices. \pvspace{1.1cm}
+But then we see that $AB \neq BA$. While there may be specific matrices $A, B$ where $AB= BA$, it is not generally true that $AB= BA$ for matrices. \pvspace{0.8cm}
 
 
 
 % Quiz 10
 \quizsol \textit{True/False}: If $A= \begin{pmatrix} 2 & -6 \\ 1 & -3 \end{pmatrix}$, then $A^{-1}$ exists. \pspace
 
-\sol The statement if \textit{false}. We know that for square matrices $M$, $M^{-1}$ exists if and only if $\det M \neq 0$. Recall that for two-by-two matrices $M$, say $M= \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, that $\det M= ad - bc$. But then we have\dots
+\sol The statement if \textit{false}. We know that for square matrices $M$, $M^{-1}$ exists if and only if $\det M \neq 0$. Recall that for a $2 \times 2$ matrix $M= \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ that $\det M= ad - bc$. But then we have\dots
 	\[
 	\det A= \det \begin{pmatrix} 2 & -6 \\ 1 & -3 \end{pmatrix}= 2(-3) - (-6)1= -6 - (-6)= 0
 	\]
@@ -244,21 +312,21 @@ But because $\det A= 0$, we know that $A^{-1}$ does not exist. \pvspace{1.3cm}
 
 \sol The statement if \textit{false}. We know that the given inequality represents a line because this is a two-variable, linear inequality. We first find the corresponding line. Solving for $y$, recalling that if we multiply or divide both sides of the inequality by a negative number we need reverse the `direction' of the inequality, we find\dots
 	\[
-	\begin{aligned}
-	2x - 3y &\leq 10 \\
-	-3y&\leq -2x + 10 \\
-	\dfrac{-3y}{-3}&\geq \dfrac{-2x}{-3} + \dfrac{10}{-3} \\
-	y&\geq \frac{2}{3}\, x - \frac{10}{3}
-	\end{aligned}
+	\begin{gathered}
+	2x - 3y \leq 10 \\[0.3cm]
+	-3y \leq -2x + 10 \\[0.3cm]
+	\dfrac{-3y}{-3} \geq \dfrac{-2x}{-3} + \dfrac{10}{-3} \\[0.3cm]
+	y \geq \frac{2}{3}\, x - \frac{10}{3}
+	\end{gathered}
 	\]
-Therefore, the line corresponding to the inequality $2x - 3y \leq 10$ is $y= \frac{2}{3}\,x - \frac{10}{3}$. We know that given a point $(x, y)$ in the plane, if $y= \frac{2}{3}\,x - \frac{10}{3}$, we are on the line. From the inequality above, we want $y$ to be at least as large as $\frac{2}{3}\,x - \frac{10}{3}$. So $y$ need `move up.' Therefore, we shade above the line $y= \frac{2}{3}\,x - \frac{10}{3}$. But then we shade above the line corresponding to $2x - 3y \leq 10$. \pvspace{1.3cm} 
+Therefore, the line corresponding to the inequality $2x - 3y \leq 10$ is $y= \frac{2}{3}\,x - \frac{10}{3}$. We know that given a point $(x, y)$ in the plane, if $y= \frac{2}{3}\,x - \frac{10}{3}$, we are on the line. From the inequality above, we want $y$ to be at least as large as $\frac{2}{3}\,x - \frac{10}{3}$. So $y$ needs `move up' from the line to be greater than $\frac{2}{3}\, x - \frac{10}{3}$. Therefore, we shade above the line $y= \frac{2}{3}\,x - \frac{10}{3}$. But then we shade above the line corresponding to $2x - 3y \leq 10$. \pvspace{0.8cm} 
 
 
 
 % Quiz 12
 \quizsol \textit{True/False}: Any graph with more than one edge is a multigraph. \pspace
 
-\sol The statement is \textit{false}. A multigraph is a graph with multiple edges (or loops). However, this does \textit{not} mean that the graph has more than one edge. This means that the graph has two vertices with more than one edge connecting them. For instance, the graph $G$ on the left below is a multigraph, whereas the graph $H$ on the right below is \textit{not} a multigraph. 
+\sol The statement is \textit{false}. A multigraph is a graph with multiple edges or loops. However, this does \textit{not} mean that the graph has more than one edge. This means that the graph has two vertices with more than one edge connecting them. For instance, the graph $G$ on the left below is a multigraph, whereas the graph $H$ on the right below is \textit{not} a multigraph. 
 	\[
 	\begin{tikzpicture}
 	\draw[line width=0.03cm] (0,0) -- (1,0) -- (2,1) -- (3,0) -- (1,0);
@@ -284,14 +352,14 @@ Therefore, the line corresponding to the inequality $2x - 3y \leq 10$ is $y= \fr
 	
 	\node at (1,-0.5) {$H$};
 	\end{tikzpicture}
-	\] \pvspace{1.3cm}
+	\] \pvspace{0.8cm}
 
 
 
 % Quiz 13
 \quizsol \textit{True/False}: An Euler circuit cannot have a repeated vertex. \pspace
 
-\sol The statement is \textit{false}. It is important to recall the definitions and differences between Euler and Hamiltonian circuits. Because each are circuits, they must begin and end at the same vertex. However, an Euler circuit visits every edge in the graph without repeating an edge. Vertices may be repeated for an Euler circuit. \textbf{E}uler circuits are about \textbf{E}dges. Hamiltonian circuits visit every vertex without repeating a vertex. So Euler circuits can repeat vertices but not edges. Hamiltonian circuits can repeat edges but not vertices. [Repeating an edge would always result in a repeated vertex.] \pvspace{1.3cm}
+\sol The statement is \textit{false}. It is important to recall the definitions and differences between Euler and Hamiltonian circuits. Both are circuits, which are walks that contain at least one edge, never repeat an edge, and start and stop at the same vertex, i.e. they are a closed walk. An Euler circuit is a circuit which visits every edge in the graph without repeating an edge. Vertices may be repeated for an Euler circuit. \textbf{E}uler circuits are about \textbf{E}dges. A Hamiltonian circuit is a circuit which visits every vertex without repeating a vertex. So Euler circuits can repeat vertices but not edges while a Hamiltonian circuit cannot repeat vertices or edges (because it needs to be a circuit). [Repeating an edge would always result in a repeated vertex.] \pvspace{0.8cm}
 
 
 
@@ -302,7 +370,7 @@ Therefore, the line corresponding to the inequality $2x - 3y \leq 10$ is $y= \fr
 	\]
 then there are 16~walks from vertex two to itself. \pspace
 
-\sol The statement is \textit{false}. Recall that the adjacency matrix $A$ is the the number of edges between pairs of vertices. That is, the matrix $A= (a_{ij})$ is the matrix where $a_{ij}$ is the number of edges from vertex $v_i$ to vertex $v_j$. Powers of the adjacency matrix gives different information about the graph. Suppose $A$ is the adjacency matrix of a graph and $P= A^n$ is the $n$th power of the adjacency matrix. If $P= (p_{ij})$, then $p_{ij}$ is the number of distinct walks of length $n$ from the vertex $v_i$ to the vertex $v_j$ in the graph. Because $A$ is adjacency matrix of the graph, we know the entries of $A^5$ give the number of walks of length five between specified vertices. If we want the number of walks of length five from $v_2$ to $v_2$, we want the entry $p_{2,2}$ of the matrix $P= A^5$. This is the entry in the second row and second column. While this is indeed 16, this is the number of walks of length five, specifically. The statement of the quiz is false because one must specific the length of the walk. There may be many more walks (of any length) from $v_2$ to $v_2$. There may be no such walks for specific lengths, e.g. there may be walks of length four from $v_2$ to $v_2$ but no walks of length three. \pvspace{1.3cm}
+\sol The statement is \textit{false}. Recall that the adjacency matrix $A$ is the number of edges between pairs of vertices. That is, the matrix $A= (a_{ij})$ is the matrix where $a_{ij}$ is the number of edges from vertex $v_i$ to vertex $v_j$. Powers of the adjacency matrix gives information about the number of walks of specified length in the graph. Suppose $A$ is the adjacency matrix of a graph and $P= A^n$ is the $n$th power of the adjacency matrix. If $P= (p_{ij})$, then $p_{ij}$ is the number of distinct walks of length $n$ from the vertex $v_i$ to the vertex $v_j$ in the graph. Because $A$ is adjacency matrix of the graph, we know the entries of $A^5$ give the number of walks of length five between specified vertices. If we want the number of walks of length five from $v_2$ to $v_2$, we want the entry $p_{2,2}$ of the matrix $P= A^5$. This is the entry in the second row and second column. While this is indeed 16, this is the number of walks of \textit{length five}. The statement of the quiz is false because one must specific the length of the walk. There may be many more walks (of various lengths) from $v_2$ to $v_2$. There may even be no walks for specific lengths, e.g. there may be walks of length four from $v_2$ to $v_2$ but no walks of length three. \pvspace{1.3cm}
 
 
 
@@ -313,14 +381,10 @@ then there are 16~walks from vertex two to itself. \pspace
 
 
 
-\newpage
-
-
-
 % Quiz 16
 \quizsol \textit{True/False}: If $A$ has probability $0.40$ and $B$ has probability $0.50$, then $A$ and $B$ has probability $0.40 \cdot 0.50= 0.20$. \pspace
 
-\sol The statement is \textit{false}. To compute $P(A \text{ and } B)$, you cannot simply multiply $P(A)$ and $P(B)$ unless you know that the events $A, B$ are independent. That is, generally $P(A \text{ and } B) \neq P(A) \cdot P(B)$. This is because once $A$ or $B$ occurs, the probability of $B$ or $A$, respectively, occurring may change. For instance, suppose that $A$ is the event that you receive an `A' on an exam and $B$ is the event you receive a `$B$' on an exam. Because $P(A)= 0.40$ and $P(B)= 0.50$, there is a 40\% chance you receive an `A' on the exam and a 50\% you receive a `B' on the exam. Now $P(A) \cdot P(B)= 0.40 \cdot 0.50= 0.20$ but we know $P(A \text{ and } B)= 0$ because you cannot receive \textit{both} a `A' and `B' on the exam simultaneously---you receive one or the other or neither. Generally, we know that $P(A \text{ and } B)= P(A) \cdot P(B \;|\; A)$, where $P(B \;|\; A)$ is the conditional probability that $B$ occurs, assuming that $A$ occurs. We can resolve this issue above because we know you cannot receive a `B' if you receive an `A'. Therefore, $P(A \text{ and } B)= P(A) \cdot P(B \;|\; A)= 0.40 \cdot 0= 0$, as expected. \pvspace{1.3cm}
+\sol The statement is \textit{false}. To compute $P(A \text{ and } B)$, you cannot simply multiply $P(A)$ and $P(B)$ unless you know that the events $A, B$ are independent. That is, generally $P(A \text{ and } B) \neq P(A) \cdot P(B)$. This is because once $A$ or $B$ occurs, the probability of $B$ or $A$, respectively, occurring may change. For instance, suppose that $A$ is the event that you receive an `A' on an exam and $B$ is the event you receive a `B' on an exam. Because $P(A)= 0.40$ and $P(B)= 0.50$, there is a 40\% chance you receive an `A' on the exam and a 50\% you receive a `B' on the exam. Now $P(A) \cdot P(B)= 0.40 \cdot 0.50= 0.20$ but we know $P(A \text{ and } B)= 0$ because you cannot receive \textit{both} a `A' and `B' on the exam simultaneously---you receive one or the other or neither. Generally, we know that $P(A \text{ and } B)= P(A) \cdot P(B \;|\; A)$, where $P(B \;|\; A)$ is the conditional probability that $B$ occurs, assuming that $A$ occurs. We can resolve this issue above because we know you cannot receive a `B' if you receive an `A'. Therefore, $P(A \text{ and } B)= P(A) \cdot P(B \;|\; A)= 0.40 \cdot 0= 0$, as expected. \pvspace{1.3cm}
 
 
 
@@ -332,9 +396,9 @@ then there are 16~walks from vertex two to itself. \pspace
 
 
 % Quiz 18
-\quizsol \textit{True/False}: Suppose $x$ is a random value from a normal distribution. Then the larger $|z_x|$ is the more `unusual' the value of $x$ is. \pspace
+\quizsol \textit{True/False}: Suppose $X$ is a random value from a normal distribution. Then the larger $|z_X|$ is the more `unusual' the value of $X$ is. \pspace
 
-\sol The statement is \textit{true}. We know that $z_x$ measures the number of standard deviations $x$ is above/below the mean. We know also that the further $x$ is from the mean in a normal distribution, the more `unusual' $x$ is. But then the more positive or more negative $z_x$ is, i.e. the larger the value of $|z_x|$, the more `unusual' $x$ is. Recall that $z_x= \frac{x - \mu}{\sigma}$, where $\mu$ is the mean and $\sigma$ is the standard deviation. We know that $x - \mu$ is the distance from $x$ to $\mu$. If $x - \mu < 0$, then $x < \mu$; if $x - \mu > 0$, then $x > \mu$, and if $x - \mu= 0$, then $x= \mu$. But then $\frac{x - \mu}{\sigma}$ is the number of standard deviations $x$ is from $\mu$. We know that if $z_x < 0$, then $x$ is below the mean; if $z_x > 0$, then $x$ is above the mean, and if $z_x= 0$, then $x= \mu$. \pvspace{1.3cm}
+\sol The statement is \textit{true}. We know that $z_X$ measures the number of standard deviations $x$ is above/below the mean. We know also that the further $X$ is from the mean in a normal distribution, the more `unusual' $X$ is. But then the more positive or more negative $z_X$ is, i.e. the larger the value of $|z_X|$, the more `unusual' $X$ is. Recall that $z_X= \frac{X - \mu}{\sigma}$, where $\mu$ is the mean and $\sigma$ is the standard deviation. We know that $X - \mu$ is the distance from $X$ to $\mu$. If $X - \mu < 0$, then $X < \mu$; if $X - \mu > 0$, then $X > \mu$, and if $X - \mu= 0$, then $X = \mu$. But then $\frac{X - \mu}{\sigma}$ is the number of standard deviations $X$ is from $\mu$. We know that if $z_X < 0$, then $X$ is below the mean; if $z_X > 0$, then $X$ is above the mean, and if $z_X = 0$, then $X = \mu$. \pvspace{1.3cm}
 
 
 
@@ -355,12 +419,42 @@ For instance, the number of heads obtained when flipping a coin ten times is a b
 % Quiz 20
 \quizsol \textit{True/False}: Under certain conditions, the normal distribution can be used to approximate probabilities for the binomial distribution. \pspace
 
-\sol The statement is \textit{true}. For instance, plotting the probability of obtaining $k= 1, 2, 3, \ldots, 40$ heads if one flips a coin 40 times, we obtain the following plot: \par
-	\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.4\textwidth]{images/binomplot.png}
-	\end{figure} \par
-We know that this process is binomial. Observe that this distribution is approximately normal. In fact, this will generally be the case for binomial distributions with `sufficiently large' $n$---that the distribution is approximately normal. This (non-obviously) follows from the Central Limit Theorem. If you have a binomial distribution $B(n, p)$ and $n$ is `sufficiently large' (for instance, $np \geq 10$ and $n(1 - p) \geq 10$), then we know that $B(n, p) \approx N \left(np, \sqrt{np(1 - p)} \right)$. That is, the binomial distribution is approximately a normal distribution with mean $\mu= np$ and standard deviation $\sigma= \sqrt{np(1 - p)}$.  
+\sol The statement is \textit{true}. For instance, consider the case where one flips a coin 40~times. On average, we expect to see 20~heads and there to be a `very low' change of seeing more than 30~heads or less than 10~heads. We compute and plot the probability of obtaining $k= 1, 2, 3, \ldots, 40$ heads: \par
+	\[
+	\fbox{
+	\begin{tikzpicture}[
+	declare function={binom(\k,\n,\p)=\n!/(\k!*(\n-\k)!)*\p^\k*(1-\p)^(\n-\k);},
+	scale=1.2,every node/.style={scale=0.5}
+	]
+	\begin{axis}[
+	grid=both,
+	axis lines=middle,
+	ticklabel style={fill=blue!5!white},
+	xmin= -1, xmax= 40.5,
+	ymin= -0.005, ymax=0.135,
+	xtick={0,5,...,39},
+	ytick={-0.01,0,0.01,...,0.13},
+	minor x tick num= {5},
+%	xlabel=\(x\),ylabel=\(y\),
+	yticklabel style= {
+		/pgf/number format/fixed,
+		/pgf/number format/precision=2,
+		/pgf/number format/zerofill
+	},
+	scaled y ticks= false
+	]
+	\pgfplotsinvokeforeach {0,1,...,40} {
+		\draw[line width=0.03cm,dotted,thin] (#1,0) -- (#1,{binom(#1,40,0.5)});
+		\draw[draw=none,fill=black] (#1,{binom(#1,40,0.5)}) circle[radius=0.04cm];
+}
+
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\]
+We know that this process is binomial. Observe that this distribution is approximately normal with mean 20---as expected. Furthermore, the chances of observing more than 30~heads or less than 10~heads is very small---as expected. It is generally the case that the binomial distribution is approximately normally distributed whenever $n$ is `sufficiently large' $n$. \pspace
+
+This (non-obviously) follows from the Central Limit Theorem. If you have a binomial distribution $B(n, p)$ and $n$ is `sufficiently large' (for instance, $np \geq 10$ and $n(1 - p) \geq 10$), then we know that $B(n, p) \approx N \left(np, \sqrt{np(1 - p)} \right)$. That is, the binomial distribution is approximately a normal distribution with mean $\mu= np$ and standard deviation $\sigma= \sqrt{np(1 - p)}$. In this case, we have $n= 40$ and $p= 0.50$, so that the normal approximation to the binomial distribution gives $B(40, 0.50) \approx N\big( 40 \cdot 0.50, \sqrt{40 \cdot 0.50 (1 - 0.50)} \big)= N(20, \sqrt{10} ) \approx N(20, 3.162)$, which is approximately the distribution we see above. 
 
 
 \end{document}

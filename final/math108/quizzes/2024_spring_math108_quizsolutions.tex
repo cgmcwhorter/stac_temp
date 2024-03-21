@@ -66,6 +66,52 @@ The expression given in the quiz statement is computing the future value, $F$, r
 
 
 
+% Quiz 8
+\quizsol \textit{True/False}: Suppose the probability that a driver is in an accident is 9\% and the probability that a driver is under the influence is 0.4\%. It is not necessarily true that the probability a driver is under the influence and in an accident is $0.09 \cdot 0.004= 0.00036$, i.e. 0.036\%. \pspace
+
+\sol The statement is \textit{true}. Recall that if $A, B$ are events, it is \textit{not} necessarily the case that $P(A \text{ and } B)= P(A) \cdot P(B)$. This will be true if and only if $A$ and $B$ are independent events. Recall that, colloquially, recall that two events $A, B$ are independent if and only if the occurrence (or nonoccurrence) of one does not change the probability of the other event occurring or not. For instance, coin clips are independent---getting a heads or tails on one flip has no influence on the next. However, failing one particular class is not independent from passing/failing another class. For instance, if one fails one class, one may be more likely to fail others (perhaps from feeling defeated or less worthy or perhaps they failed one class due to medical reasons that will affect grades in their other courses) or perhaps less likely to fail other classes (failing one allows the student to ignore one class to put more time into others or their failing one class makes them focus on others). In this case, knowing a driver is (likely) under the influence makes them more likely to be in an accident. Therefore, these events are not independent so the probability of them both occurring is not the product of their probabilities. Generally, if $A$ and $B$ are events, then $P(A \text{ and } B)= P(A) P(B \;|\; A)$ or $P(A \text{ and } B)= P(B) P(A \;|\; B)$. \pvspace{1.3cm}
+
+
+
+% Quiz 9
+\quizsol \textit{True/False}: If 15\% of individuals plan to purchase a new home in the next decade and 25\% plan to purchase a new car, then 40\% of the population will purchase a new home or car in the next decade. \pspace
+
+\sol The statement is \textit{false}. Recall that if $A, B$ are events, $A$ and $B$ are said to be disjoint if they cannot occur at the same time. For finite probability spaces, this is equivalent to $P(A \text{ and } B)= 0$. We know that $P(A \text{ or } B)= P(A) + P(B)$ if $A, B$ are disjoint. [For finite probability spaces, this is an if and only if.] Generally, we know that for any events $A, B$, we have $P(A \text{ or } B)= P(A) + P(B) - P(A \text{ and } B)$; that is, $P(A \text{ and } B)$ removes any overestimate in $P(A \text{ or } B)$ by removing any `overlap of $A$ and $B$. Generally, we know that $P(A \text{ or } B) \leq P(A) + P(B)$. For instance, when rolling an ordinary six-sided die, rolling a one and rolling an even number are disjoint events. We clearly have $P(1 \text{ or even})= P(1) + P(\text{even})= \frac{1}{6} + \frac{3}{6}= \frac{4}{6}= \frac{2}{3}$. However, rolling a 1, 2, or 3 and rolling an even are non-disjoint. Hence, $P(1, 2, 3 \text{ or even}) \neq P(1, 2, 3) + P(\text{even})= \frac{3}{6} + \frac{3}{6}= 1$ but rather $P(1, 2, 3 \text{ or even})= \frac{3 + 2}{6}= \frac{5}{6}$ or $P(1, 2, 3 \text{ or even})= P(1, 2, 3) + P(\text{even}) - P(1, 2, 3 \text{ and even})= P(1, 2, 3) + P(\text{even}) - P(2)= \frac{3}{6} + \frac{3}{6} - \frac{1}{6}= \frac{5}{6}$. There will certainly be individuals that will purchase a new car and new house in the next decade. Therefore, these events are not disjoint. Therefore, all one can say is that \textit{at most} $15\% + 25\%= 40\%$ of individuals will purchase a new house or new car in the next decade. \pvspace{1.3cm}
+
+
+
+% Quiz 10
+\quizsol \textit{True/False}: If a game has a positive expected payout, then you will make money playing the game one-hundred times. \pspace
+
+\sol The statement is \textit{false}. Recall that if $X$ is a random variable, $EX$, the expected value (or mean) of $X$ computes the long-term average; that is, if one performs a trial $n$ times with results $X_1, X_2, \ldots, X_n$ and computes the sample average $\frac{X_1 + X_2 + \cdots + X_n}{n}$, this average will approach $EX$ as the number of trials tends to infinity. So the expected value is the `long term' average of the outcomes. This says nothing of what will happen in any single or even finite collection of outcomes. For instance, suppose a game involves flipping a coin. If one flips a heads, they win \$10. If one flips tails, they lose \$5. The expected payout is $EX= \sum x P(X= x)= \frac{1}{2} \cdot \$10 + \frac{1}{2} \cdot -\$5= \frac{10}{2} + \frac{-5}{2}= \frac{5}{2}= \$2.50$. But one cannot know whether they will win or lose on the next flip. It may even be that they lose money on the next 100 flips---though this is unlikely. All one knows is that `in the long run' (without knowing when that will be) one's average win value will be \$2.50 per game. \pvspace{1.3cm}
+
+
+
+% Quiz 11
+\quizsol \textit{True/False}: Compared with $N(57.6, 4.1)$, along a number line, the distribution $N(34.9, 6.2)$ is located to the left and is more `spread out.' \pspace
+
+\sol The statement is \textit{true}. We know a normal distribution is denoted $N(\mu, \sigma)$, where $\mu$ is the mean and $\sigma$ is the standard deviation. [Recall that $\mu$ is the mean of a distribution and $\sigma$ is the standard deviation and measures `spread.'] Let $N(\mu_1, \sigma_1)= N(57.6, 4.1)$ and $N(\mu_2, \sigma_2)= N(34.9, 6.2)$. Because $\mu_2 < \mu_1$, we know that the mean for the second distribution is less than the first, i.e. it is located more to the left on a number line. Because $\sigma_1 < \sigma_2$, the standard deviation of the second distribution is larger than the first, i.e. the second distribution is more `spread out' than the first distribution. \pvspace{1.3cm}
+
+
+
+% Quiz 12
+\quizsol \textit{True/False}: Let $x, y$ be random samples drawn from a normal distribution. If $z_x= -3.87$ and $z_y= 1.15$, then $y > x$ but $x$ is the more `unusual' value. \pspace
+
+\sol The statement is \textit{true}. Recall that $z_x= \frac{x - \mu}{\sigma}$. The difference $x - \mu$ tells you the distance from $x$ to $\mu$. Thus, $\frac{x - \mu}{\sigma}$ tells you the number of standard deviations $x$ is from $\mu$. If $z_x < 0$, then $x < \mu$; if $z_x= 0$, then $x= \mu$; if $z_x > 0$, then $x > \mu$. For a normal distribution, we know the further $x$ is from the mean, the more `unusual' the value is, i.e. the less probable values at least extreme as $x$ are. Now because $|z_x|= 3.87 > 1.15= |z_y|$, $x$ is more standard deviations from $\mu$ than $y$, i.e. $x$ is more `unusual' than $y$. Because $z_x < 0$ and $z_y> 0$, $x$ is less than $\mu$ and $y$ is greater than $\mu$. \pvspace{1.3cm}
+
+
+
+
+
+%Let $x, y$ be random samples drawn from a normal distribution. If $z_x= -3.87$ and $z_y= 1.15$, then $y > x$ but $x$ is the more `unusual' value.
+
+
+
+
+
+
+
+
 
 
 
