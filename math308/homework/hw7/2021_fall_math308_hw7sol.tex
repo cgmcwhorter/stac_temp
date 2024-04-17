@@ -1,0 +1,135 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{Solutions ---- Caleb McWhorter}
+
+% Problem 1
+\problem{20} Consider the following `proof' by induction: \pspace
+
+\begin{prop}
+All groups of horses have the same color.
+\end{prop}
+
+\pf Let $n$ be number of horses in the group. If $n= 1$, then the group consists of a single horse. Clearly, every horse in this group has the same color. Now assume the result is true for $n= 1, 2, \ldots, k$. Now consider a group of horses of size $n= k + 1$. Number the horses in any way. Consider the horses numbered $1, 2, \ldots, k$. By the induction hypothesis, these $k$ horses have the same color. Now consider the horses numbered $2, 3, \ldots, k + 1$.  Again by the induction hypothesis, these $k$ horses have the same color. It only remains to show that horse one and horse $k + 1$ have the same color. Choose any horse numbered inclusively from 2 to $k$. Both horse one and horse $k + 1$ have the same color as this horse. Therefore, horse one and horse $k + 1$ have the same color. Therefore by induction, all groups of horses have the same color. \qed \pspace
+
+Explain the flaw in this `proof.' [Hint: Consider the `$\ldots$' part of the argument and see where this may break down.] \pspace
+
+\sol For an induction proof to be valid, the proof of the `induction step' should work for any substitution of variables considered for which the proof should work. For instance, if one is proving a statement is true for $k= 5, 6, 7, 8, \ldots$, then the proof of the `induction step' should be valid for any specific value of $k$. In the proof, we created two groups of horses, horses $1, 2, \ldots, k$ and horses $2, 3, \ldots, k + 1$, that were within their respective groups were all the same color. To prove that they all were the same color, we selected some `middle horse', i.e. a horse from $2, 3, \ldots, k$, to show that the colors for each group were the same. \pspace
+
+Consider the proof in the case of $k= 1$, i.e. $n= 2$ total horses. The two groups of horses consist of just horse 1 and horse 2, respectively. By the induction hypothesis, these have the same color. [Of course, this follows from common sense as a group of a single horse all have the same color.] We then need to select a horse numbered between horse 1 and horse 2 to compare the colors of the group and show they are the same. But there is no such horse! The proof breaks down here because we cannot find such a horse. For $n > 2$, there is always such a horse and the proof follows. But the induction step fails for $n = 2$, i.e. $k= 1$. However, if one could proof this step separately, the rest of the proof would function and the result would follow. So if one could proof that every group of two horses had the same color, then indeed all horses would have the same color. However, it is obviously untrue that every group of two horses has the same color. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{20} We took the \textit{Well Ordering Property of $\mathbb{N}$} in class as an axiom and then proved weak/strong induction. Show that the \textit{Well Ordering Property of $\mathbb{N}$} is logically equivalent to induction by proving that taking induction (weak or strong) as an axiom that then the \textit{Well Ordering Property of $\mathbb{N}$} follows, i.e. prove that if the Principle of Induction is true, that the \textit{Well Ordering Property of $\mathbb{N}$} is true. \pspace
+
+\sol We need to assume that the Principle of Mathematical Induction is true, i.e. take it as an axiom, and prove that the Well Ordering Property of $\mathbb{N}$ is true. First, let us recall the Well Ordering Property of $\mathbb{N}$: \pspace
+
+{\itshape Well Order Property of $\mathbb{N}$.} Every nonempty subset of $\mathbb{N}$ contains a least element. \pspace
+
+{\itshape Proof.} Assume that the Principle of Induction is true. Let $S$ be a nonempty subset of $\mathbb{N}$. We prove the statement using induction on $|S|$. Consider the case where $|S|= 1$, i.e. $S= \{ s_1 \}$. Clearly, $S$ has a least element and it is $s_1$. Now assume the result is true for $|S|= 1, 2, 3, \ldots, k$. Let $S$ be a set with $|S|= k + 1$. Choose any element from $S$, say $s$, and consider the set $\widetilde{S}:= S \setminus \{ s \}$. We know $|\widetilde{S}|= k$. By the induction hypothesis, $\widetilde{S}$ has a least element, say $s_t$. Let $s_{\text{min}}= \min \{ s, s_t \}$ so that $s_{\text{min}} \leq s$ and $s_{\text{min}} \leq s_t$. But then every element of $S$ is at least the value of $s_{\text{min}}$. Therefore, $s_{\text{min}}$ is a least element for $S$. Therefore, by the Principle of Induction, every nonempty set of $\mathbb{N}$ contains a least element. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{20} We proved in class that $\displaystyle \sum_{i=1}^n i= \dfrac{n(n + 1)}{2}$. Prove this equality ``\`a la Gauss'' by writing the sum out forwards and backwards. \pspace
+
+\sol Suppose we wanted to add the integers from $1$ to $n$ and call this sum $S$, i.e. $S= 1 + 2 + \cdots + n$. We can write this sum forward and backwards: \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccccccccccccc}
+	$1$ & $+$ & $2$ & $+$ & $3$ & $+$ & $\cdots$ & $+$ & $(n - 2)$ & $+$ & $(n - 1)$ & $+$ & $n$ \\
+	$n$ & $+$ & $(n - 1)$ & $+$ & $(n - 1)$ & $+$ & $\cdots$ & $+$ & $3$ & $+$ & $2$ & $+$ & $1$
+	\end{tabular}
+	\end{table} \par
+We can then add these two sums: \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{ccccccccccccccc}
+	 & & $1$ & $+$ & $2$ & $+$ & $3$ & $+$ & $\cdots$ & $+$ & $(n - 2)$ & $+$ & $(n - 1)$ & $+$ & $n$ \\
+	$+$ & & $n$ & $+$ & $(n - 1)$ & $+$ & $(n - 1)$ & $+$ & $\cdots$ & $+$ & $3$ & $+$ & $2$ & $+$ & $1$ \\ \cline{3-15}
+	& & $(n + 1)$ & $+$ & $(n + 1)$ & $+$ & $(n + 1)$ & $+$ & $\cdots$ & $+$ & $(n + 1)$ & $+$ & $(n + 1)$ & $+$ & $(n + 1)$
+	\end{tabular}
+	\end{table} \par
+This is a sum $n + 1$ with itself a total of $n$ times. But then the sum is $n(n + 1)$. Each row was the sum we wanted, $S$, which we have added to itself. But then the sum must also be $S + S= 2S$. Therefore, we have\dots
+	\[
+	\begin{gathered}
+	2S= n(n + 1) \\[0.3cm]
+	S= \dfrac{n(n + 1)}{2} \\[0.3cm]
+	1 + 2 + \cdots + (n - 1) + n= \dfrac{n(n + 1)}{2} \\[0.3cm]
+	\sum_{i=1}^n i = \dfrac{n(n + 1)}{2}
+	\end{gathered}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{20} A famous riddle, though there are many versions, goes as follows: a tyrant rules over an island and keeps all citizens captive in an island prison. All 1,000~citizens have lived there since their birth. However, the island has a peculiar rule---any citizen may approach a guard at night and ask to leave. If they have blue eyes, they are released. If they do not have blue eyes, they are executed at dawn. Strangely enough, all citizens on the island do have blue eyes. 
+
+However, the tyrant has made certain that there are no reflective surfaces in the prison and no citizen is allowed to discuss eye color. However, the citizens can see each other. No citizen would dare approach the guard and ask to leave without being certain that they would not be executed. 
+
+One day, a visitor is allowed in the kingdom. The visitor is allowed a single statement to the citizens of the island. However, you may not communicate any citizen's eye color directly or the entire population will be executed. But having been imprisoned with little to do their entire lives, you know the citizens are excellent at logical deductions. 
+
+What statement can you make that will ensure that every citizen on the island will go free? Explain. \pspace
+
+\sol Each citizen knows there are people that could leave the island---if only there were brave enough to approach the guard---because they have blue eyes. In fact, everyone they see has blue eyes. They just do not know whether or not they themselves have blue eyes---though they might suspect it. What you can say to free all the citizens is, \pspace
+
+\hfill {\itshape ``I see at least one individual with blue eyes.''} \hfill \phantom{.} \pspace
+
+One day 1,000, all the citizens will ask to be released and leave the island. Why? After all, this is not new information to the citizens. They each see at least one individual with blue eyes and always have. Let's see this in the simplest case where saying this does not reveal new information about one's eye color---the case with two citizens: Alice and Bob. In this case, each sees at least one person with blue eyes---the other person. But they do not know whether they themselves have blue eyes. After your statement, neither asks to leave because they assume the person with blue eyes you saw was the other person. But the next morning (on day two), they see each other both still there and gain new information. Alice realizes that if Bob had looked at her and not seen a blue-eyed person, he would have known the statement you gave referred to himself. Bob would have then asked to leave the island on the first day and would now be gone. Alice then realizes Bob looked at her and saw a blue-eyed person, so that she has blue eyes. Bob sees Alice the next morning and makes a similar conclusion about himself. They then both ask to leave on day two. \pspace
+
+Now imagine there were three citizens: Alice, Bob, and Tod. After your statement, each looks at the others and sees two people with blue eyes. But they do not know whether the others are also seeing two blue eyed people. They each assume your statement must have been about one of the other two and do not know their own eye color. After the next morning (on day two), they still do not know whether or not they have blue eyes. For instance, Alice knows that if she did not have blue eyes, Bob and Tod were waiting to see what the other would do because they each can see that the other has blue eyes---but do not know their own eye color. Thus, from the logic above, they will ask to leave the second day because they saw each other present on the first day. But when she sees them both on the third day, she realizes they were also watching her to determine her actions as well. This means she must have blue eyes. Bob and Tod go through a similar logical deduction and arrive at similar conclusions. Thus, they all determine they have blue eyes and leave on day three. \pspace
+
+One proves the general result inductively. The result here is that given $n$ citizens, one cannot determine ones eye color using $k < n$ days of observation but that on day $n$, each citizen will be able to deduce their own eye color and leave. From our thorough logic above, we know that this is true for $n= 2$ and $n= 3$ citizens on the island. Suppose the result is true for $n= k$ citizens---that on day $k$ they will all determine they have blue eyes and leave the island. We need to show the result is true for $n= k + 1$ citizens. Single out one of the citizens, say Tina. Tina sees everyone else on the island---all $k$ citizens--- and knows they all have blue eyes but does not know her own eye color. After $k + 1$ days of observations, Tina is still there having assumed that each of the previous days, each of the citizens had spent each of the previous days keeping track of some other citizen waiting to see what they would do because they clearly had blue eyes. This would have taken at most $k$ days to do because, ignoring oneself, there are only $k$ other citizens. But the fact that they had not left on any of the previous days informs Tina that they must have also been keeping track of Tina, which means she must have blue eyes. Each of the other citizens arrives at the same logical deduction. Therefore, they all ask to leave on day $k + 1$. The result then follows by induction. Of course, one could achieve the same result with less days spent for the citizens on the island. If there are $n$ citizens, one can state, ``At least $n - 1$ of you have blue eyes.'' This will also allow the citizens to deduce their own eye color by the second day and leave. 
+
+\vfill
+
+{\itshape Remark.} There is \textit{a lot} of subtly here. For instance, why did they not all leave before your statement? Your statement was simply that, ``At least one of you has blue eyes.'' But each citizen can see the blue eyes of at least one other citizen and already know that to be a fact. The new information is not in your statement exactly but rather in that it was told to everyone at the same time---so that common knowledge has been established. Each person now knows there is at least one blue eyed person, that everyone knows everyone knows there is at least one blue eyed person, that everyone is now keeping track of this data, and that everyone knows that everyone knows that everyone is keeping track of this data. The only thing a citizen does not know is whether or not they are a blue eyed person being tracked by others. After sufficiently many nights have passed, they know the fact that the other citizens are still there must force them to have a person to have been tracked by others given the number of nights that have passed. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{20} Prove that for integers $n, m \geq 1$, $(m + 1)^n > mn$. \pspace
+
+\sol We prove this by double induction. We need to show that the result is true for all $n, m \geq 1$. Clearly, the result is true for $n= m= 1$ as $(m + 1)^n= (1 + 1)^1= 2$ and $mn= 1(1)= 1$ and $2 > 1$. We first show that, fixing any $m$, the result is true for all $n$. Fix $m \geq 1$, say $m_0$. We need to show that $(m_0 + 1)^n > m_0 n$ for all $n$. We prove this by induction. Consider the base case when $n= 1$. We have $(m_0 + 1)^1= m_0 + 1$ and $m_0n= m_0(1)= m_0$. Clearly, $m_0 + 1 > m_0$ so that $(m_0 + 1)^n > m_0n$. Now assume the result is true for $n= 1, 2, 3, \ldots, k$. We need to prove that $(m_0 + 1)^{k+1} > m_0(k + 1)$. From the induction hypothesis, we know that $(m_0 + 1)^k > m_0k$. Now $m_0 \geq 1$ and $k \geq 1$ so that $\frac{1}{k} \leq 1 \leq m_0$, i.e. $m_0 \geq \frac{1}{k}$. This implies that $m_0 + 1 \geq \frac{1}{k} + 1$. But then\dots
+	\[
+	(m_0 + 1)^{k+1}= (m_0 + 1)^k (m_0 + 1) > m_0k (m_0 + 1) \geq m_0k \left( \frac{1}{k} + 1 \right)= m_0 + m_0k= m_0(k+1)
+	\]
+But then $(m_0 + 1)^{k+1} > m_0(k+1)$, as desired. Therefore by induction, fixing $m_0 \geq 1$, we know $(m_0 + 1)^n > m_0n$ for all $n \geq 1$. \pspace
+
+We now need to show that, fixing any $n$, the result is true for all $m$. We prove this by induction. Fix $n \geq 1$, say $n_0$. Consider the base case when $m= 1$. We have $(m + 1)^n= (1 + 1)^{n_0}= 2^{n_0}$ and $mn= 1(n_0)= n_0$. But as $2^k > k$ for all $k \geq 1$,\footnote{This well known inequality itself can be proven with induction. For $k= 1$, we have $2^k= 2^1= 2 > 1= k$. Now assume the result is true for $k= 1, 2, \ldots, k$. We need to show that $2^{k+1} > k + 1$. From the induction hypothesis, we know $2^k > k$. We also know $k \geq 1$. But then $2^{k+1}= 2^k \cdot 2 > k \cdot 2= 2k = k + k \geq k + 1$. Therefore, by induction, we know that $2^k > k$ for all $k \geq 1$.} we know that $2^{n_0} > n_0$ so that $(m + 1)^{n_0} > mn_0$. Now assume the result is true for $m= 1, 2, 3, \ldots, k$. We need to show that $\big( (k + 1) + 1)^{n_0} > (k + 1)n_0$. We make use of the Binomial Theorem: $(x + y)^n= \sum_{i=0}^n \binom{n}{i} x^{n-i} y^i$. We know that $\binom{n}{i} > n$ for $i= 1, 2, \ldots, n - 1$.\footnote{We know $\binom{n}{i}$ is the number of ways of selecting $i$ objects from $n$ objects, where repetition is not allowed and order is unimportant. Clearly, if one has to choose at least one object---but not all the objects---there are at least $n$ total choices: one can choose at least one object from the collection of $n$ objects to include or not include in the final selection in advance, implying there are at least $n$ total selection possibilities. This shows that $\binom{n}{i} > n$.} We know that $k \geq 1$ so that $(k + 1)^a \geq 0$ for all $a \geq 0$. By the induction hypothesis, $(k + 1)^{n_0} > kn_0$. But then\dots
+	\[
+	\begin{aligned}
+	\big( (k + 1) + 1)^{n_0}&= \sum_{i=0}^{n_0} \binom{n_0}{i} (k + 1)^{n_0 - i} 1^i \\
+	&= \sum_{i=0}^{n_0} \binom{n_0}{i} (k + 1)^{n_0 - i} \\
+	&= \binom{n_0}{0} (k + 1)^{n_0 - 0} + \binom{n_0}{1} (k + 1)^{n_0 - 1} + \cdots + \binom{n_0}{n_0 - 1} (k + 1)^{n_0 - (n_0 - 1)} + \binom{n_0}{n_0} (k + 1)^{n_0 - n_0} \\
+	&= (k + 1)^{n_0} + \binom{n_0}{1} (k + 1)^{n_0 - 1} + \cdots + \binom{n_0}{n_0 - 1} (k + 1) + 1 \\
+	&> kn_0 + n_0 \cdot (k + 1)^{n_0 - 1} + \cdots + n_0 \cdot (k + 1) + 1 \\
+	&\geq 0 + 0 + \cdots + 0 + n_0(k+ 1) + 0 + 0 = (k + 1)n_0
+	\end{aligned}
+	\]
+But then $\big( (k + 1) + 1 \big)^{n_0} > (k + 1)n_0$, as desired. Therefore by induction, fixing $n_0 \geq 1$, we know that $(m + 1)^{n_0} > mn_0$ for all $m \geq 1$. Therefore by double induction, $(m + 1)^n > mn$ for all $n, m \geq 1$. 
+
+
+\end{document}

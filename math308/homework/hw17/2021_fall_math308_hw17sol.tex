@@ -1,0 +1,142 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{Solutions --- Caleb McWhorter}
+
+% Problem 1
+\problem{10} The Unicode family of character encodings uses a binary string of $n$ bits to represent characters. Suppose that it is necessary to encode at least 100,000 distinct characters. What is the smallest possible value of $n$ that will suffice? \pspace
+
+\sol Because the string is a binary string, each bit can only contain a 0 or 1. Given $n$-bits, there are then two choices for each bit---namely 0 or 1. But then there are $2 \cdot 2 \cdot \cdots \cdot 2= 2^n$ total choices for the $n$-bits. Therefore, a system using $n$-bits can encode $2^n$ total Unicode family characters. We need $2^n \geq 100,\!000$. Using trial-and-error, we find\dots
+	\[
+	\begin{aligned}
+	2^{14}&= 16,\!384 \\
+	2^{15}&= 32,\!768 \\
+	2^{16}&= 65,\!536 \\
+	2^{17}&= 131,\!072
+	\end{aligned}
+	\]
+Therefore, the minimum number of bits required is $n= 17$. Alternatively, using the fact that $\log_n(x)$ is an increasing function for all $n$, we have\dots
+	\[
+	\begin{gathered}
+	2^n \geq 100,\!000 \\
+	\log_2(2^n) \geq \log_2(100,\!000) \\
+	n \geq \log_2(100,\!000) \approx 16.6096
+	\end{gathered}
+	\]
+Of course, because $n$ is an integer, this implies the smallest such $n$ is $n= 17$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} A ice cream shop offers 13 different toppings. If a customer orders their favorite flavor of ice cream, how many possible combinations of toppings can they choose between none and three different toppings? \pspace
+
+\sol The only options are to choose an ice cream with none, one, two, or three toppings. Note that one cannot repeat a topping. For instance, if one were to choose chocolate, whipped cream, and chocolate, this is the same as simply choosing chocolate and whipped cream (albeit just with more chocolate). Moreover, the order of the toppings chosen does not matter. For instance, choosing M\&Ms then nuts results in the same topping selection as nuts then M\&Ms. The total number of ways of choosing at most three toppings must then be the sum of the number of ways of choosing none, one, two, or three toppings. We count these cases separately. \pspace
+
+{\itshape No Toppings:} There is only 1 way of choosing no toppings---choosing no toppings. \pspace
+
+{\itshape 1 Topping:} We must choose $k= 1$ topping from a total of $n= 13$ with no repetition and the order of selection unimportant. The total number of ways of doing this is $\binom{n}{k}= \binom{13}{1}= 13$. \pspace
+
+{\itshape 2 Topping:} We must choose $k= 2$ topping from a total of $n= 13$ with no repetition and the order of selection unimportant. The total number of ways of doing this is\dots
+	\[
+	\binom{n}{k}= \binom{13}{2}= \dfrac{13!}{2! \, 11!}= \dfrac{13 \cdot 12 \cdot 11!}{2! \cdot 11!}= \dfrac{13 \cdot 12}{2}= 13 \cdot 6= 78
+	\]  \pspace
+
+{\itshape 3 Topping:} We must choose $k= 3$ topping from a total of $n= 13$ with no repetition and the order of selection unimportant. The total number of ways of doing this is\dots
+	\[
+	\binom{n}{k}= \binom{13}{3}= \dfrac{13!}{3! \, 10!}= \dfrac{13 \cdot 12 \cdot 11 \cdot 10!}{6 \cdot 10!}= \dfrac{13 \cdot 12 \cdot 11}{6}= 13 \cdot 2 \cdot 11= 286
+	\]  \pspace
+Therefore, the total number of possible combinations of toppings can they choose between none and three different toppings is\dots
+	\[
+	1 + 13 + 78 + 286= 378
+	\] \pspace
+
+Alternatively, the observations above show that we need to compute the number of ways of choosing $k= 0, 1, 2, 3$ toppings from $n= 13$ flavors. But then the total number of possible combinations of toppings can they choose between none and three different toppings is\dots
+	\[
+	\sum_{k= 0}^3 \binom{13}{k}= \binom{13}{0} + \binom{13}{1} + \binom{13}{2} + \binom{13}{3}= 378
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} How many nonnegative integer solutions are there to the equation $x_1 + x_2 + x_3 + x_4 + x_5= 50$? What if the nonnegative restriction was removed? \pspace
+
+\sol Each solution is a quintuplet of the form $(x_1, x_2, x_3, x_4, x_5)$, where each of the $x_i$ are nonnegative. Imagine each component of the quintuplet as a coin slot and we need to distribute 50 identical coins to these slots---without the requirement that we place a coin in any slot.\footnote{If one does not want a metaphor, instead imagine the 50 as fifty 1s that one needs to `distribute' to the `slots' $x_1, x_2, x_3, x_4, x_5$.} Clearly, we can (and must) repeat a selection of a coin slot. Furthermore, because the coins are identical, the order of the selection of a slot for each coin does not matter. Each selection of coin allotment gives a quintuplet (given by the number of coins put in each slot) that sums to 50, i.e. a solution to the system. Given a quintuplet $(x_1, x_2, x_3, x_4, x_5)$ that is a solution to the equation, choosing to place $x_1$ coins in the first slot, $x_2$ coins in the second slot, and so forth gives a possible choice of coin distribution. \pspace
+
+Therefore, we need only count the number of ways of choosing one of the five slots for each of the fifty coins. We know the number of ways of choosing $n$ objects from $r$ types where order does not matter and repetition is allowed is given by $\binom{n + r - 1}{n}= \binom{n + r - 1}{r - 1}$. Here, we are choosing to place $n= 50$ coins into $r= 5$ slots. Therefore, the number of ways of doing this is\dots
+	\[
+	\binom{50 + 5 - 1}{50}= \binom{54}{50}= \dfrac{54!}{50! \, 4!}= \dfrac{54 \cdot 53 \cdot 52 \cdot 51 \cdot 50!}{50! \, 4!}= \dfrac{54 \cdot 53 \cdot 52 \cdot 51}{4!}= \dfrac{7,\!590,\!024}{24}= 316,\!251
+	\]
+Therefore, the number of nonnegative solutions to $x_1 + x_2 + x_3 + x_4 + x_5= 50$ is $316,\!251$. \pspace
+
+If the $x_i$ are not nonnegative, there are infinitely many solutions. For instance, let $k$ be a positive integer and choose $x_1= 50 + k$, $x_2= -k$, and $x_3= x_4= x_5= 0$. Clearly, $x_2 < 0$ and \dots
+	\[
+	x_1 + x_2 + x_3 + x_4 + x_5= (50 + k) - k + 0 + 0 + 0= 50 + k - k= 50
+	\]
+In fact, one can choose $x_1, x_2, x_3, x_4$ to be \textit{any} integers and let $x_5= 50 - (x_1 + x_2 + x_3 + x_4)= 50 - x_1 - x_2 - x_3 - x_4$. Then\dots
+	\[
+	x_1 + x_2 + x_3 + x_4 + x_5= x_1 + x_2 + x_3 + x_4 + (50 - x_1 - x_2 - x_3 - x_4)= 50
+	\]
+If $x_1 + x_2 + x_3 + x_4 > 50$, then $x_5 < 0$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} How many 4-element subsets of $\{ 1, 2, 3, \ldots, 9, 10 \}$ are there? Generalize this to the number of $k$-element subsets of $\{ 1, 2, \ldots, n \}$. You need not prove your generalization. \pspace
+
+\sol Let us choose a sample $4$-element subset. For instance, choosing $9$, $1$, $5$, and $6$ gives the $4$-element subset $\{ 9, 1, 5, 6 \}= \{ 1, 5, 6, 9 \}$. Because the order of elements in a set does not matter, the order of the selection does not matter. One cannot repeat a selection from $1, 2, \ldots, 10$ for then one would not have chosen a $4$-element subset. For instance, choosing $4$, $8$, $3$, and $8$ gives the subset $\{ 4, 8, 3, 8 \}= \{ 3, 4, 8, 8 \}= \{ 3, 4, 8 \}$ because repetition in sets does not matter. But then we have only chosen a $3$-element subset. Therefore, the number of ways of choosing a $4$-element subset from $1, 2, \ldots, 10$ is the number of ways of choosing four numbers from $1, 2, \ldots, 10$, where repetition is not allowed and order does not matter. We know the number of ways of choosing $k$ objects from $n$ total objects (with $n \geq k$) with no repetition allowed and order unimportant is $\binom{n}{k}$. Therefore, the number of $4$-element subsets is\dots
+	\[
+	\binom{10}{4}= \dfrac{10!}{4! 6!}= \dfrac{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6!}{4! 6!}= \dfrac{10 \cdot 9 \cdot 8 \cdot 7}{4!}= \dfrac{5040}{24}= 210
+	\] \pspace
+
+Generalizing from above, the number of subsets of size $k$ from a collection of $n$-elements ($n \geq k$) should be given by $\binom{n}{k}$. Indeed, this is the case. Furthermore, this gives us the total number of subsets of a collection of $n$-distinct elements is\dots
+	\[
+	\binom{n}{0} + \binom{n}{1} + \cdots + \binom{n}{n-1} + \binom{n}{n}= \sum_{k= 0}^n \binom{n}{k}= 2^n
+	\]
+The last equality is a well-known identity. Of course, one can prove this other ways and we knew the number of subsets of a set with $n$-distinct elements is $2^n$. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Suppose you have 100~people in an organization. You need to form an oversight committee consisting of 7 people that has a designated president and vice president. How many different committees can be formed? \pspace 
+
+\sol One need form the committee of 7 people and then designate a president and vice president. The order one selects the people for the committee does not matter---it will be the same committee either way. For instance, choosing Alice, Bob, and Rajesh results in the same committee of three as choosing Bob, Rajesh, and then Alice. Furthermore, one cannot repeat a choice as then the committee would not have the required number of people on it. Therefore, the number of ways of forming the committee is\dots
+	\[
+	\hspace{-1.5cm} \binom{100}{7}= \dfrac{100!}{7! \, 93!}= \dfrac{100 \cdot 99 \cdot 98 \cdot 97 \cdot 96 \cdot 95 \cdot 94 \cdot 93!}{7! \, 93\!}= \dfrac{100 \cdot 99 \cdot 98 \cdot 97 \cdot 96 \cdot 95 \cdot 94}{7!}= \dfrac{80678106432000}{5040}= 16,\!007,\!560,\!800
+	\]
+One then needs to select a president and vice president. We assume a person cannot hold both positions. There are a total of 7 people to choose for the position of president. This leaves $7 - 1= 6$ people from which to choose the vice president. Therefore, there are $7 \cdot 6= 42$ ways of choosing a president and vice president. Using the multiplication principle, the number of ways of selecting from 100~people a committee of 7~people with a designated president and vice president is\dots
+	\[
+	\binom{100}{7} \cdot (7 \cdot 6)= 16,\!007,\!560,\!800 \cdot 42= 672,\!317,\!553,\!600
+	\] \pspace
+
+Alternatively, we first choose a president and vice president for our future committee. There are 100 people from which to choose a president. This leaves $100 - 1= 99$ choices from which to choose a vice president. This gives a total of $100 \cdot 99= 9,\!900$ ways to choose a president and vice president. One must then form the rest of the committee. There are $7 - 2= 5$ positions to fill by choosing from the $100 - 2= 98$ remaining individuals. The number of ways of forming the rest of the committee is then\dots
+	\[
+	\binom{98}{5}= \dfrac{98!}{5! \, 93!}= \dfrac{98 \cdot 97 \cdot 96 \cdot 95 \cdot 94 \cdot 93!}{5! \, 93!}= \dfrac{98 \cdot 97 \cdot 96 \cdot 95 \cdot 94}{5!}= \dfrac{8,\!149,\!303,\!680}{120}= 67,\!910,\!864
+	\]
+Using the multiplication principle, the number of ways of selecting from 100~people a committee of 7~people with a designated president and vice president is\dots
+	\[
+	(100 \cdot 99) \cdot \binom{98}{5}= 9,\!900 \cdot 67,\!910,\!864= 672,\!317,\!553,\!600
+	\] 
+
+
+\end{document}

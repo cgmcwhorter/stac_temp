@@ -1,0 +1,258 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{Solutions --- Caleb McWhorter}
+
+% Problem 1
+\problem{10} Show that the following sets have the same cardinality by finding a bijection between them (you need not prove that your function is bijective): 
+        \begin{enumerate}[(a)]
+        \item $A= (-2, 2)$, $B= (5, 6)$
+        \item $A= \{ 0, 1 \} \times \mathbb{N}$, $B= \mathbb{N}$
+        \item $A= [0, 1]$, $B= (0, 1)$
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item All finite length intervals have a bijection between them. This can by accomplished by `shifting and scaling.' We create a bijection which `shifts' intervals and a bijection which `scales' them. \pspace
+
+First, we create a bijection which `shifts' intervals. Let $r > 0$. Observe that $(0, r)$ and $(a, a + r)$ both have length $r$---the first `beginning at $0$' and the second `beginning at $a$.' There is a simple bijection $S_a: (0, r) \to (a + r)$ given by $S_a(x)= x + a$. If $x \in (0, r)$, then $0 < x < r$ so that $a < x + a < r + a$. This proves $\text{im } S_a \subseteq (a, a + r)$. To see that $S_a$ is injective, suppose that $x, y \in (0, r)$ and $S_a(x)= S_a(y)$. Then $x + a= S_a(x)= S_a(y)= y + a$ so that $x + a= y + a$. Therefore, $x= y$ so that $S_a$ is injective. To see that $S_a$ is surjective, let $y \in (a, a + r)$ and define $x= y - r$. Because $a < y < a + r$, we know $0 < y - a < r$, i.e. $0 < x < r$. But $S_a(x)= x + a= (y - a) + a= y$. Therefore, $S_a$ is surjective. Because $S_a$ is injective and surjective, $S_a$ is a bijection. The inverse of $S$ is $S_{-a}: (a, a + r) \to (0, r)$ given by $S_{-a}(y)= y - a$. [Observe $(S_a \circ S_{-a})(x)= S_a \big( S_{-a}(x) \big)= S_a(x - a)= (x - a) + a= x$ and $(S_{-a} \circ S_a)(x)= S_{-a} \big( S_a(x) \big)= S_{-a}(x + a)= (x + a) - a= x$.] \pspace
+
+Now we create a bijection which `scales' intervals. Let $a, b > 0$. Observe that the interval $(0, a)$ has length $a$ and the interval $(0, b)$ has length $b$. There is a simple bijection $L_{b/a}: (0, a) \to (0, b)$ given by $L_{b/a}(x)= \frac{bx}{a}$. Because $x \in (0, a)$, we know that $0 < x < a$. As $a, b > 0$, we then know $0= \frac{b}{a} \cdot 0 < \frac{bx}{a} < \frac{b}{a} \cdot a= b$ so that $\text{im } L_{b/a} \subseteq (0, b)$. To see that $L_{b/a}$ is injective, suppose that $x, y \in (0, a)$ and $L_{b/a}(x)= L_{b/a}(y)$. But then $\frac{bx}{a}= L_{b/a}(x)= L_{b/a}(y)= \frac{by}{a}$ so that $\frac{bx}{a}= \frac{by}{a}$. This implies that $x= y$ so that $L_{b/a}$ is injective. To see that $L_{b/a}$ is surjective, suppose that $y \in (0, b)$ and define $x:= \frac{ay}{b}$. Because $0 < y < b$, we know that $0 < \frac{y}{b} < 1$. As $a > 0$, this then implies $0 < \frac{ay}{b} < a$. But then $L_{b/a}(x)= L_{b/a}(\frac{ay}{b})= \frac{b \cdot ay/b}{a}= y$. Therefore, $L_{b/a}$ is surjective. Because $L_{b/a}$ is injective and surjective, $L_{b/a}$ is a bijection. The inverse of $L_{b/a}$ is $L_{a/b} (0, b) \to (0, a)$ given by $L_{a/b}(x)= \frac{ax}{b}$. [Observe $(L_{b/a} \circ L_{a/b})(x)= L_{b/a} \big( L_{a/b}(x) \big)= L_{b/a}(\frac{ax}{b})= \frac{b \cdot ax/b}{a}= x$ and $(L_{a/b} \circ L_{b/a})(x)= L_{a/b} \big( L_{b/a}(x) \big)= L_{a/b}(\frac{bx}{a})= \frac{a \cdot bx/a}{b}= x$.] \pspace
+
+Given intervals $(a, b)$ and $(c, d)$, we can shift $(a, b)$ to `begin at $0$', scale it to have the same length as $(c, d)$ (still `beginning at $0$'), and then shift this interval to `begin at $c$.' Using the `shifting' and `scaling' bijections above, we will end up with a bijection because the result will be a composition of bijections (which is always a bijection). Define $T: (a, b) \to (c, d)$ via $S_c \circ L_{(d-c)/(b-a)} \circ S_{-a}$. But then We know $S_{-a} \big( (a, b) \big)= (0, b - a)$, $L_{(d-c)/(b-a)} \big( (0, b - a) \big)= (0, d - c)$, and $S_c \big( (0, d - c) \big)= (c, d)$. But then $T: (a, b) \to (c, d)$. Finally, $T$ is a bijection because it is the composition of bijections. We can give $T$ explicitly:
+	\[
+	T(x)= \dfrac{d - c}{b - a}\, (x - a) + c
+	\]
+As an alternative to all the work we did above, we could have simply written this linear map to begin with. We know that non-constant linear functions $\mathbb{R} \to \mathbb{R}$ are bijections. Clearly, $T(x)$ is linear. Observe $T(a)= c$ and $T(b)= d$. Using the Intermediate Value Theorem (though this can be avoided), one can show then that $T: (a, b) \to (c, d)$ is a bijection. Therefore, a bijection from $A= (-2, 2)$ to $B= (5, 6)$ can be given by\dots
+	\[
+	T(x)= \dfrac{1}{4} \, (x + 2) + 5
+	\] \pspace
+
+\item We know every positive integer is either even or odd. We can map the elements of the form $(0, n)$ to the even integers and map the elements of the form $(1, n)$ to the odd integers. Let $f: \{ 0, 1 \} \times \mathbb{N}$ be given by $f(r, n)= 2n - r$, where $r \in \{ 0, 1 \}$ and $n \in \mathbb{N}$. We know that $2n + r \in \mathbb{Z}$ because $n, r \in \mathbb{Z}$. Observe $n \in \mathbb{N}$, $2n \geq 2$ so that $2n - 1 \geq 1$. But then $2n - r \geq 2n - 1 \geq 1$. Therefore, $2n - r \in \mathbb{N}$. We need to show that $f$ is a bijection. We first show that $f$ is injective. Let $(r, n), (s, m) \in \{ 0, 1 \} \times \mathbb{N}$ and $f(r, n)= f(s, m)$. We need to show $(r, n)= (s, m)$. We know $2n + r= f(r, n)= f(s, m)= 2m + s$, so that $2n - r= 2m - s$. But this implies $2n - 2m= r - s$, i.e. $2(n - m)= r - s$. Because $2(n - m)$ is even, it must be that $r - s$ is even. We can easily create a table of the possible values of $r - s$: \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|rr}
+	$r \setminus s$ & $0$ & $1$ \\ \hline
+	$0$ & $0$ & $-1$ \\
+	$1$ & $1$ & $0$
+	\end{tabular}
+	\end{table} \par
+Because $r- s$ is even, it must be that $r - s= 0$, i.e. $r= s$. But because $r - s= 0$ and $2(n - m)= r - s$, we know $2(n - m)= 0$. This implies that $n - m= 0$ so that $n= m$. But then $(r, n)= (s, m)$. This shows that $f$ is injective. Now we need to show that $f$ is surjective. Let $N \in \mathbb{N}$. We need to show there exists $(r, n) \in \{ 0, 1 \} \times \mathbb{N}$ such that $f(r, n)= N$. Because $N \in \mathbb{N}$, $N$ is either even or odd. We consider both cases:
+	\begin{enumerate}[(i)]
+	\item {\itshape $N$ even}: Because $N$ is even, there exists $k \in \mathbb{N}$ such that $N= 2k$. [We know $k > 0$ because $2k= N > 0$.] Now take $n= k$ and $r= 0$. Then $f(r, n)= 2n + r= 2k + 0= 2k= N$. 
+	\item {\itshape $N$ odd}: Because $N$ is odd, there exists $k \in \mathbb{N} \cup \{ 0 \}$ such that $N= 2k + 1$. [We know $k \in \mathbb{N} \cup \{ 0 \}$ because $N= 2k + 1 \geq 1$, i.e. $2k \geq 0$ so that $k \geq 0$.] Take $n= k$ and $r= 1$. Then $f(r, n)= 2n + r= 2k + 1= N$. 
+	\end{enumerate}
+We see in either case, there exists $(r, n) \in \{ 0, 1 \} \times \mathbb{N}$ such that $f(r, n)= N$. Therefore, $f$ is surjective. Because $f$ is both injective and surjective, $f$ is bijective. One can verify the inverse to $f$, $f^{-1}: \mathbb{N} \to \{ 0, 1 \} \times \mathbb{N}$ is given by\dots
+	\[
+	f^{-1}(n)= 
+	\begin{cases}
+	(0, k), & n \text{ even}, n= 2k \text{ for some } k \in \mathbb{Z} \\
+	(1, k), & n \text{ odd}, n= 2k + 1 \text{ for some } k \in \mathbb{Z}
+	\end{cases}
+	\]
+We can give $f^{-1}$ more explicitly via $f^{-1}(n)= (\ceil*{\frac{n}{2}} - \floor*{\frac{n}{2}}, \floor*{\frac{n}{2}})$, as one can check.  
+
+\item Conceptually, we want to take the function $[0, 1] \to (0, 1)$ via $x \mapsto x$. Of course, this works for the values $x \in (0, 1)$ but $0, 1 \notin (0, 1)$. We need to `make room' for $0, 1$ in $(0, 1)$, which we can do because $[0, 1]$ has at least countably infinite number of values. So we could take a function which maps $0$ to $\frac{1}{2}$. But we wanted $\frac{1}{2}$ to map to itself. If we allowed this, our function would not be injective. So we now need to `make room' for $\frac{1}{2}$. So we could map $\frac{1}{2}$ to $\frac{1}{4}$, which introduces the same problem and solve in the same way. We can continue with this process `indefinitely.' Observe that we are doing is creating a sequence of distinct values in $(0, 1)$ to continue to `make room' for a previous value by taking it to be some value we will define further in the sequence (the very next term in the process described above). The values in the remainder of the interval (the ones not found in our sequence) can be left fixed. We now make this idea precise---being sure to `make room' for both $0$ and $1$.\footnote{We know that whatever function $f$ we create that it must be discontinuous on $[0, 1]$. There are many ways of seeing this. For instance, if $f$ were continuous, then $f^{-1} \big( (0, 1) \big)$ would be open. But because $f: [0, 1] \to (0, 1)$, we know $f^{-1} \big( (0, 1) \big)= [0, 1]$. But this implies that $[0, 1]$ is open, which is impossible. Alternatively, if $f$ were continuous, then $f \big( [0, 1] \big)$ would be compact because $[0, 1]$ is compact. Because $f$ is a bijection, $f \big( [0, 1] \big)= (0, 1)$. This would imply that $(0, 1)$ is compact, which it is not. In fact, a bijection $f: [0, 1] \to (0, 1)$ must be at least countably infinitely many points at which $f$ is discontinuous. One can also use the Schr\"oder-Cantor-Bernstein Theorem to construct a bijection $[0, 1] \to (0, 1)$ by finding injections from each set to the other. Indeed, such injections are easy to find, e.g. $f: [0, 1] \to (0, 1)$ and $g: (0, 1) \to [0, 1]$ given by $f(x)= \frac{x + 2}{4}$ and $g(x)= x$.} \pspace
+
+Let $\{ a_n \}_{i= 0}^\infty \subseteq (0, 1)$ be a sequence with distinct values, i.e. $a_i \neq a_j$ if $i \neq j$. We define a function $f: [0, 1] \to (0, 1)$ as follows:
+	\[
+	f(x)= 
+	\begin{cases}
+	a_0, & x= 0 \\
+	a_1, & x= 1 \\
+	a_{n + 2}, & x= a_n \text{ for some } n \in \mathbb{Z}_{\geq 0} \\
+	x, & \text{otherwise}
+	\end{cases}
+	\]
+We need to show that $f$ is a bijection. We first show that $f$ is surjective. Let $y \in (0, 1)$. We need to show that there exists $x \in [0, 1]$ such that $f(x)= y$. Now either $y \in \{ a_n \}$ or $y \notin \{ a_n \}$. We consider both cases:
+	\begin{enumerate}[(i)]
+	\item $y \in \{ a_n \}$: If $y \in \{ a_n \}$, then there exists $N \in \mathbb{Z}_{\geq 0}$ such that $y= a_N$. There are then three cases:
+		\begin{enumerate}
+		\item[(ia)] $y= a_0$: Let $x= 0$. Observe that $f(0)= a_0= y$. 
+		\item[(ib)] $y= a_1$: Let $x= 1$. Observe that $f(1)= a_1= y$. 
+		\item[(ic)] $y= a_N$, where $N \geq 2$: Because $N \geq 2$, we know $N - 2 \geq 0$. Let $x= a_{N - 2}$. Observe that $f(x)= a_{(N - 2) + 2}= a_N= y$.
+		\end{enumerate}
+	
+	\item $y \notin \{ a_n \}$: Let $x= y \in (0, 1)$. Because $y \notin \{ a_n \}$, observe $f(x)= y$. 
+	\end{enumerate}
+Therefore for all $y \in (0, 1)$, there exists $x \in [0, 1]$ such that $f(x)= y$. This shows that $f$ is surjective. We now need to show that $f$ is injective. Let $x, y \in [0, 1]$ be such that $f(x)= f(y)$. We need to show that $x= y$. Because the value of $f$ is determined by its input in four cases, we consider each of the four cases:
+	\begin{enumerate}[(i)]
+	\item $x= 0$: If $x= 0$, then $f(x)= a_0$. But then $f(x)= f(y)= a_0$. But observe by definition, $f(w)= a_0$ if and only if $w= 0$. But then $y= 0$ so that $x= y$. 
+	\item $x= 1$: If $x= 1$, then $f(x)= a_1$. But then $f(x)= f(y)= a_1$. But observe by definition, $f(w)= a_1$ if and only if $w= 1$. But then $y= 1$ so that $x= y$.
+	\item $x= a_N$ for some $N \in \mathbb{Z}_{\geq 0}$: If $x= a_N$ for some $N \in \mathbb{Z}_{\geq 0}$, then $f(x)= a_{N + 2}$. But then $f(x)= f(y)= a_{N + 2}$. Observe that $f(w) \in \{ a_n \}$ if and only if $w \in \{ a_n \}$. Therefore because $f(y)= a_{N + 2} \in \{ a_n \}$, it must be that $y \in \{ a_n \}$. Therefore, there exists $M \in \mathbb{Z}_{\geq 0}$ such that $y= a_M$. But then $f(y)= f(a_M)= a_{M+ 2}$. Thus, $a_{N+ 2}= f(x)= f(y)= a_{M + 2}$ so that $a_{N + 2}= a_{M + 2}$. Because the sequence $\{ a_n \}$ has distinct values, it must be that $N + 2= M + 2$, which implies $N= M$. But then $x= a_N= a_M= y$, which implies $x= y$. 
+	\item $x \neq 0$, $x \neq 1$, and $x \neq a_n$ for all $n \in \mathbb{Z}_{\geq 0}$: Because $x \neq 0$, $x \neq 1$, and $x \neq a_n$ for all $n \in \mathbb{Z}_{\geq 0}$, we know that $f(x)= x$. But then $f(x)= f(y)= x \notin \{ a_n \}$. Observe that $f(w) \notin \{ a_n \}$ if and only if $w \notin \{ a_n \}$. [Note that $0, 1 \notin \{ a_n \}$ because $\{ a_n \} \subseteq (0, 1)$.] But then because $f(y) \notin \{ a_n \}$, we know that $y \notin \{ a_n \}$, which also implies $y \neq 0$ and $y \neq 1$. Therefore, $f(y)= y$. But then $x= f(x)= f(y)= y$, so that $x= y$.
+	\end{enumerate}
+Observe that if $f(x)= f(y)$, then $x= y$. Therefore, $f$ is injective. Because $f: [0, 1] \to (0, 1)$ is both injective and surjective, we know $f$ is bijective. \pspace
+
+A more concrete example of $f$ is to take $\{ a_n \}$ to be the sequence $\{ \frac{1}{2^{n +1}} \}_{n \geq 0}$. [This is the one we described in our `conceptual' construction of the function.] Observe that $\{ \frac{1}{2^{n + 1}} \} \subseteq (0, 1)$ because $0 < \frac{1}{2^{n + 1}} < 1$ for all $n \in \mathbb{Z}_{\geq 0}$. The values of $\{ \frac{1}{2^{n + 1}} \}$ are distinct because $\frac{1}{2^{n + 1}} \neq \frac{1}{2^{m + 1}}$ if and only if $n= m$. But then\dots
+	\[
+	f(x)= 
+	\begin{cases}
+	\frac{1}{2}, & x= 0 \\
+	\frac{1}{4}, & x= 1 \\
+	\frac{1}{2^{n+2}}, & x= a_n \text{ for some } n \in \mathbb{Z}_{\geq 0} \\
+	x, & \text{otherwise}
+	\end{cases}
+	\]
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Show that $\mathbb{N}$ and $\mathbb{N} \times \mathbb{N}$ have the same cardinality using the Schr\"oder-Cantor-Bernstein Theorem. \pspace
+
+\sol The Schr\"oder-Cantor-Bernstein Theorem states that if $f: A \to B$ and $g: B \to A$ are injections, there exists a bijection $h: A \to B$; thus, if there exists injections $f: A \to B$ and $g: B \to A$, then $A$ and $B$ have the same cardinality. So to show that $\mathbb{N}$ and $\mathbb{N} \times \mathbb{N}$ have the same cardinality using Schr\"oder-Cantor-Bernstein Theorem, we need to find injections $f: \mathbb{N} \to \mathbb{N} \times \mathbb{N}$ and $g: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$.  \pspace
+
+{\itshape Injection $f: \mathbb{N} \to \mathbb{N} \times \mathbb{N}$:} Let $f: \mathbb{N} \to \mathbb{N} \times \mathbb{N}$ be given by $f(n)= (n, n)$. Clearly, $(n, n) \in \mathbb{N} \times \mathbb{N}$. To see that $f$ is injective, suppose that $f(n)= f(m)$. But then $(n, n)= f(n)= f(m)= (m, m)$ so that $(n, n)= (m, m)$. This implies that $n= m$ so that $f$ is injective. \pspace
+
+{\itshape Injection $g: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$:} Let $g: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$ be given by $g(n, m)= 2^n 3^m$. First, observe that $g(n, m)= 2^n 3^m \in \mathbb{N}$ because $n, m \geq 1 \geq 0$. We need to show that $g$ is injective. Let $(n, m), (p, q) \in \mathbb{N} \times \mathbb{N}$ with $g(n, m)= g(p, q)$. Observe that $g(n, m), g(p, q) \in \mathbb{N}$ and $g(n, m) \geq 2^1 3^1= 6$. Therefore, $g(n, m)$ and $g(p, q)$ can be expressed uniquely (up to sign and order of factors) as a product of prime numbers. We know $g(n, m)= 2^n 3^m$ has $n$ factors of $2$ and $m$ factors of $3$. Furthermore, we know that $g(p, q)= 2^p 3^q$ has $p$ factors of $2$ and $q$ factors of $3$. Because $g(n, m)= g(p, q)$, by the uniqueness of prime factorizations, $g(n, m)$ and $g(p, q)$ have the same number of factors of $2$ and $3$. But then $n= p$ and $m= q$, so that $(n, m)= (p, q)$. This shows that $g$ is injective. \pspace
+
+Because $\mathbb{N}$ is countable and there is a bijection $\phi: \mathbb{N} \to \mathbb{N} \times \mathbb{N}$, it must be that $\mathbb{N} \times \mathbb{N}$ is also countable. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} We discussed in class that if $S$ is a set, then the cardinality of $\mathcal{P}(S)$ is strictly larger than the cardinality of $S$. Therefore, there is no largest cardinality because we can always construct sets with larger cardinality by using power sets. We shall now prove these facts. 
+        \begin{enumerate}[(a)]
+        \item If $S$ is a finite set, explain why we already know that $|\mathcal{P}(S)| > |S|$. 
+        \item Show that $|S| \leq |\mathcal{P}(S)|$ by finding an injection $f: S \to \mathcal{P}(S)$. 
+        \item Show that $|S| \neq |\mathcal{P}(S)|$ by showing that there is no bijection $\phi: S \to \mathcal{P}(S)$.\footnote{From (b), there is clearly an injection. So what we shall prove is there never a surjection $A \to \mathcal{P}(S)$.} [Hint: Show there is no such surjection by considering the set $A:= \{ s \in S \colon s \notin \phi(s) \} \subseteq S$.]
+        \item Explain how the previous parts imply that there can be no `set of all sets.'        
+        \end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We discussed in class if $S$ is a set with $|S|= n \geq 0$, then $|\mathcal{P}(S)|= 2^n$. But $|S|= n < 2^n= |\mathcal{P}(S)|$ for $n \geq 0$. \pspace
+
+\item We know every singleton set consisting of an element of $S$ is a subset of $S$. But then to each element of $S$, we can uniquely associate this element to its singleton set in $\mathcal{P}(S)$. Let $f: S \to \mathcal{P}(S)$ be given by $s \mapsto \{ s \}$. Clearly, $\{ s \} \in \mathcal{P}(S)$. We need to show that $f$ is an injection. Suppose that $f(s)= f(t)$ for some $s, t \in S$. We need to show that $s= t$. We have $\{ s \}= f(s)= f(t)= \{ t \}$. But then $\{ s \}= \{ t \}$. This clearly implies that $s= t$. Therefore, $f$ is injective.\footnote{An observant reader would suggest that this proof has a flaw if $S= \varnothing$. However, the definition of $f: S \to \mathcal{P}(S)$ is only that for any $s \in S$, $f(s)= \{ s \}$. But there are no $s \in S= \varnothing$, so this definition is then never invoked. What about injectivity!? Recall the definition of injectivity for a function $g: A \to B$: $(\forall x, y \in A)( f(x)= f(y) \to x= y)$. But if $S= \varnothing$, then $f: S \to \mathcal{P}(S)$ is injective because there are no $x, y \in S= \varnothing$, i.e. the statement is vacuously true. In fact, if $B$ is a set, then all functions $g: \varnothing \to B$ are injective. However, a function $g: \varnothing \to B$ is only surjective if $B= \varnothing$. Hence, $g: \varnothing \to B$ is a bijection if and only if $B= \varnothing$.} \pspace
+
+\item It suffices to prove there is no surjection $\phi: S \to \mathcal{P}(S)$ because any bijection must be both injective and surjective. Suppose that $\phi: S \to \mathcal{P}(S)$ is a surjective function. Let $A= \{ s \in S \colon s \notin \phi(s) \}$. Clearly, $A \subseteq S$ (even if $A$ is empty). Therefore, $A \in \mathcal{P}(S)$. Because $\phi$ is surjective, there exists $s \in S$ such that $\phi(s)= A$. There are only two possibilities: $s \in A$ or $s \notin A$. We consider both cases:
+	\begin{enumerate}[(i)]
+	\item $s \in A$: If $s \in A$, then by the definition of $A$, we know that $s \notin \phi(s)$. But this contradicts the fact that $s \in A= \phi(s)$.
+	
+	\item $s \notin A$: If $s \notin A$, then by the definition of $A$, we know that $s \in A$ because $s \notin \phi(s)= A$. 
+	\end{enumerate}
+But then there is no $s \in S$ such that $\phi(s)= A$. This contradicts the fact that $\phi$ is surjective. Therefore, there is no surjection $\phi: S \to \mathcal{P}(S)$. This shows there can be no bijection $\phi: S \to \mathcal{P}(S)$. \pspace
+
+\item Suppose $S$ is a set of all sets. Then $\mathcal{P}(S)$ exists and is a set. But every element of $\mathcal{P}(S)$ is a set. Because $S$ is the set of all sets, it must be that $\mathcal{P}(S) \subseteq S$. Using the argument from (b), this implies that $|\mathcal{P}(S)| \leq |S|$. We also know from (b) that $|S| \leq |\mathcal{P}(S)|$. But then $|S|= |\mathcal{P}(S)|$, which contradicts (c). Therefore, there can be no set of all sets. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Determine if the following sets are countable or uncountable (give a brief explanation; however, a formal proof is not necessary):
+\begin{enumerate}[(a)]
+\item $A= \{ \log n \colon n \in \mathbb{N} \}$.
+\item $B=$ set of perfect squares. 
+\item $C= \{ (m, n) \in \mathbb{N} \times \mathbb{N} \colon 2 \leq m \leq n^2 \}$.
+\item $D=$ set of all irrational numbers. 
+\item $E=$ set of linear functions $f: \mathbb{R} \to \mathbb{R}$.
+\item $F=$ set of all finite binary strings. 
+\item $G=$ set of {\itshape all} binary strings. 
+\item $H=$ set of all functions $f: \{ 0 , 1 \} \to \mathbb{N}$. 
+\item $I=$ set of all functions $f: \mathbb{N} \to \{ 0, 1 \}$. 
+\item $J=$ set of all possible dictionary `words.' 
+\item $K=$ set of all subsets of $\mathbb{N}$.
+\end{enumerate} \pspace
+
+\sol
+\begin{enumerate}[(a)]
+\item The set $A$ is \textit{countable}. For each $n \in \mathbb{N}$, there is a one-to-one correspondence between the values $n$ and $\log n$, e.g. $15$ corresponds to $\log(15)$ and $\log(107)$ corresponds to $107$. One can verify that the map $f: \mathbb{N} \to \{ \log n \colon n \in \mathbb{N} \}$ given by $f(n)= \log n$ is a bijection. 
+
+\item The set $B$ is \textit{countable}. We know any subset of a countable set is countable. The set of perfect squares is a subset of $\mathbb{N}$, which is countable. In fact, we know the set of perfect squares is $P:= \{ n^2 \colon n \in \mathbb{Z}_{\geq 0} \}$. One can verify that the map $f: \mathbb{N} \to P$ given by $f(n)= (n - 1)^2$ is a bijection. 
+
+\item The set $C$ is \textit{countable}. Fix $n \in \mathbb{N}$. Let $C_n= \{ (m, n) \in \mathbb{N} \times \mathbb{N} \colon 2 \leq m \leq n^2 \}$. There are finitely many integers $m$ with $2 \leq m \leq n^2$. But then $C_n$ is finite. In particular, $C_n$ is countable. But $C= \bigcup_{n \in \mathbb{N}} C_n$. Therefore, $C$ is a countable union of countable sets, which we know to be countable. [One can give a more explicit description of $C$ and a bijection $f: \mathbb{N} \to C$, but this is rather involved.]
+
+\item The set $D$ is \textit{uncountable}. We discussed this in class. Alternatively, we know that $\mathbb{R}$ is uncountable and $\mathbb{Q}$ is countable. Let $\mathbb{I}$ denote the set of irrational numbers. We know that every real number is rational or irrational. But then $\mathbb{R}= \mathbb{Q} \cup \mathbb{I}$. If $\mathbb{I}$ were countable, then $\mathbb{R}$ would be a countable union of countable sets---which is countable. This contradicts the fact that $\mathbb{R}$ is uncountable. Therefore, it must be that $\mathbb{I}$ is uncountable. 
+
+\item The set $E$ is \textit{uncountable}. We know that a linear function $\ell: \mathbb{R} \to \mathbb{R}$ has the form $\ell(x)= mx + b$, where $m, b \in \mathbb{R}$. In particular, there is a distinct linear function $\ell(x)= b$ for each $b \in \mathbb{R}$. Because $\mathbb{R}$ is uncountable, there are uncountably many choices for $b$. Hence, the collection of all linear functions contains the uncountably many linear functions $\ell(x)= b$. We know a set with an uncountable subset is uncountable. This shows that the collection of linear functions is uncountable. 
+
+\item The set $F$ is \textit{countable}. Let $F_n$ denote the set of binary strings with length $n$. We know that $F_0$ is empty (there are no binary strings with length $0$---other than perhaps $\varnothing$, in which case $F_0= \{ \varnothing \}$ rather than $F_0= \{ \}$, which will not affect the result). We know that $F_1= \{ 0, 1 \}$. We know also that $F_2= \{ 00, 01, 10, 11 \}$. Continuing, one can see that the cardinality of the set of binary strings with length $n \geq 0$ is finite. [For $n \geq 1$, it is $2^n$---each position in the string has two choices for value, either $0$ or $1$). But then $F= \bigcup_{n \geq 0} F_n$ is a countable union of countable sets, which is countable. 
+
+\item The set $G$ is \textit{uncountable}. Consider each string as the digits of the real number $0.a_1a_2a_3a_4\ldots$. This gives one the `feeling' that this set should be uncountable. If one expresses the real numbers in base-$2$, then this set is the set of possible decimal parts for real numbers. We know the set of numbers in $[0, 1]$ is uncountable. We can make this precise using a Cantor argument: suppose the set $G$ were countable. Then there is a bijection $f: \mathbb{N} \to G$. We denote $g \in G$ via $a_1, a_2, a_3, \ldots, a_n, \ldots$. [If $g \in G$, where $g= a_1, a_2, \ldots, a_N$ is a finite binary sequence, extend it to an infinite one by setting $a_n= 0$ for $n > N$.] We list out the values for $f$ below, where $a_{i,j}$ denotes the $j$th term of the sequence for $f(i)$: \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{cc}
+	$f(n)$ & Binary Sequence \\ \hline
+	$f(1)$ & $a_{1,1}, a_{1,2}, a_{1,3}, a_{1,4}, \ldots$ \\
+	$f(2)$ & $a_{1,1}, a_{1,2}, a_{1,3}, a_{1,4}, \ldots$ \\
+	$f(3)$ & $a_{1,1}, a_{1,2}, a_{1,3}, a_{1,4}, \ldots$ \\
+	$\vdots$ & $\vdots$ \\
+	$f(N)$ & $a_{N,1}, a_{N,2}, a_{N,3}, a_{N,4}, \ldots$ \\
+	$\vdots$ & $\vdots$
+	\end{tabular}
+	\end{table} \par
+Suppose the two binary values are $p, q$. Let $S= \{ s_n \}$ be the sequence given by $s_i= p$ if $a_{i,i} \neq p$ and $q$ otherwise. We claim that $f$ cannot be surjective because there exists no $N \in \mathbb{N}$ with $f(N)= S$. Observe that the $N$th term of $f(N)$ is different than $s_{N,N}$. Therefore, $f(N)$ and $S$ are different binary sequences. But then $f: \mathbb{N} \to G$ cannot be surjective. This contradicts the fact that $f$ is a bijection, i.e. that $G$ is countable. Therefore, $G$ is uncountable. 
+
+\item The set $H$ is \textit{countable}. To specify a function from $f: \{ 0, 1 \} \to \mathbb{N}$, one need only specify $f(0)$ and $f(1)$. Let $(a, b)$ denote the values of $f(0)$ and $f(1)$, i.e. $f(0)= a \in \mathbb{N}$ and $f(1)= b \in \mathbb{N}$. Moreover, given a pair $(a, b) \in \mathbb{N} \times \mathbb{N}$, one can define a function $f: \{ 0, 1 \} \to \mathbb{N}$ via $f(0)= a$ and $f(1)= b$. But then the set of possible functions $f: \{ 0, 1 \} \to \mathbb{N}$ is in clear bijection with the set $\{ (a, b) \colon a, b \in \mathbb{N} \}= \mathbb{N} \times \mathbb{N}$. But the set $\mathbb{N} \times \mathbb{N}$ is the finite product of countable sets, which is countable. Alternatively, we know from Problem~2 that $\mathbb{N} \times \mathbb{N}$ is countable because it is in bijection with $\mathbb{N}$, which is countable. In either case, we know that $H$ is countable. 
+
+\item The set $I$ is \textit{uncountable}. Each function $f: \mathbb{N} \to \{ 0, 1 \}$ gives a (countably) infinite binary string via $f(1)f(2)f(3)\cdots$ (because $f(n) \in \{ 0, 1 \}$ for all $n \in \mathbb{N}$), where the product is concatenation. Furthermore, each (countably) infinite binary string $a_1a_2a_3\cdots$ gives a function $F: \mathbb{N} \to \{ 0, 1 \}$ via $f(1):= a_1$, $f(2):= a_2$, \dots. But then the set of functions $f: \mathbb{N} \to \{ 0, 1 \}$ is in clear bijection with the set of (countably) infinite binary strings. The set of binary strings is uncountable by (g). The set of binary strings is the union of finite binary strings and infinite binary strings. From (f), we know the set of finite binary strings is countable. If the set of infinite binary strings were countable, then the set of binary strings would be countable as it would be the union of countable sets. Therefore, it must be the set of (countably) infinite binary strings is uncountable. Therefore, $I$ is uncountable. 
+
+\item The set $J$ is \textit{countable}. We know any word in any dictionary must have length at least one and be finite. Any alphabet system should contain finitely many symbols, say $L$. Let $W_n$ denote the set of all possible words of length $n$. But then $W_1$ is finite (consisting of every possible symbol in the alphabet, i.e. $|W_1|= L$). We know also that $W_2$ is finite (consisting of every possible combination of two symbols in the alphabet, i.e. $|W_2|= L^2$). Furthermore, continuing in this fashion, we know that $W_n$ is finite (consisting of every possible combination of $n$ symbols in the alphabet, i.e. $|W_n|= L^n$---because each letter could be any letter in the alphabet). Clearly, the set of all possible dictionary `words' is the union of all possible words of any finite length. But then $J= \bigcup_{n \geq 1} W_n$. But then $J$ is the countable union of countable sets. Therefore, $J$ is countable. 
+
+\item The set $K$ is \textit{uncountable}. We know from Problem~3 that the power set of a given set has cardinality strictly larger than the given set. We know that $\mathbb{N}$ is countable. But then the set of all subsets of $\mathbb{N}$ is $\mathcal{P}(\mathbb{N})$, which cannot be countable by Problem~3. Therefore, it must be that $\mathcal{P}(\mathbb{N})$ is uncountable. Alternatively in Problem~3, we proved there is an injection $A \to \mathcal{P}(A)$. However, we proved in Problem~3 that there is no surjection $A \to \mathcal{P}(A)$. But then there can be no bijection $\mathbb{N} \to \mathcal{P}(A)$. Finally, one can use a Cantor argument: suppose $\mathcal{P}(\mathbb{N})$ were countable, i.e. there were a bijection $f: \mathbb{N} \to \mathbb{P}(\mathbb{N})$. Consider the table below whose $n$th row consider an element $n \in \mathbb{N}$ and whose $m$th column consider the subset of $\mathbb{N}$ given by $f(m)$. \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|cccccc}
+	$n \setminus f(m)$ & $f(1)$ & $f(2)$ & $f(3)$ & $\cdots$ & $f(N)$ & $\cdots$ \\ \hline
+	$1$ & $A_{1,1}$ & $A_{1,2}$ & $A_{1,3}$ & $\cdots$ & $A_{1,N}$ & $\cdots$ \\
+	$2$ & $A_{2,1}$ & $A_{2,2}$ & $A_{2,3}$ & $\cdots$ & $A_{2,N}$ & $\cdots$ \\
+	$3$ & $A_{3,1}$ & $A_{3,2}$ & $A_{3,3}$ & $\cdots$ & $A_{3,N}$ & $\cdots$ \\
+	$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ & $\vdots$ & $\cdots$ \\
+	$N$ & $A_{N,1}$ & $A_{N,2}$ & $A_{N,3}$ & $\cdots$ & $A_{N,N}$ & $\cdots$ \\
+	$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ 
+	\end{tabular}
+	\end{table} \par
+Each entry $A_{i,j}$ is either a `Yes' or `No' depending on whether $i \in f(j)$. We construct a set $S \subseteq \mathbb{N}$ as follows: $S= \{ n \colon n \in \mathbb{N}, n \notin f(n) \}$. Clearly, $S \subseteq \mathbb{N}$, i.e. $S \in \mathcal{P}(\mathbb{N})$. We know that $S$ cannot be empty because $\varnothing \subseteq \mathbb{N}$, i.e. $\varnothing \in \mathcal{P}(\mathbb{N})$, so that by the surjectivity of $f$ there exists $n_0 \in \mathbb{N}$ such that $f(n_0)= \varnothing$. But then $n_0 \notin f(n_0)= \varnothing$, which proves that $n_0 \in S$. Because $f$ is surjective and $S \in \mathcal{P}(\mathbb{N})$, there exists $N$ such that $f(N)= S$. But if $N \in f(N)$, then $N \notin S$ so that $f(N) \neq S$. On the other hand, if $N \notin f(N)$, then $N \in S$ so that $f(N) \neq S$. But then $f(N) \neq S$, a contradiction. Therefore, there exists no $N \in \mathbb{N}$ such that $f(N)= S$. Therefore, $f$ is not surjective, which implies that there is no bijection $f: \mathbb{N} \to \mathcal{P}(\mathbb{N})$. Therefore, it must be that $\mathcal{P}(\mathbb{N})$ is uncountable. 
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Mimic Cantor's proof that the set $\mathbb{R}$ is uncountable to prove that the set of all real numbers without a 7 in their decimal expansion is uncountable. \pspace
+
+\sol In fact, Cantor's argument works with essentially no modification! It suffices to prove the set of real numbers between $0$ and $1$ with no $7$ in their decimal expansion is uncountable.\footnote{As always, we require that the decimal expansion of any such number not to eventually be all $9$'s, i.e. if $d_i$ is the $i$th digit of such a number, there should not exists $N \in \mathbb{N}$ such that $d_i= 9$ for all $i \geq N$. This forces each such number to have a unique decimal expansion.} [Because if this is uncountable, then the set of all real numbers without a $7$ in their decimal expansion contains a subset which is uncountable. Thus, the set of real numbers without a $7$ in their decimal expansion would be uncountable.] \pspace
+
+Let $A$ denote the set of real numbers between $0$ and $1$ without a $7$ in their decimal expansion. Suppose that $A$ were countable, i.e. there exists a bijection $f: \mathbb{N} \to A$. Denote by $a_n \in A$ the element $f(n)$ and by $a_{i,j}$ the $j$th decimal digit of $a_i$. \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{cc}
+	$f(n)$ & $a_n$ \\ \hline
+	$f(1)$ & $0. \, a_{1,1} \, a_{1,2} \, a_{1,3} \, a_{1,4} \cdots$ \\
+	$f(2)$ & $0. \, a_{1,1} \, a_{1,2} \, a_{1,3} \, a_{1,4} \cdots$ \\
+	$f(3)$ & $0. \, a_{1,1} \, a_{1,2} \, a_{1,3} \, a_{1,4} \cdots$ \\
+	$\vdots$ & $\vdots$ \\
+	$f(N)$ & $0. \, a_{N,1} \, a_{N,2} \, a_{N,3} \, a_{N,4} \cdots$ \\
+	$\vdots$ & $\vdots$
+	\end{tabular}
+	\end{table} \par
+We create a real number between $0$ and $1$ with no $7$ in its decimal expansion. Let $s$ be the number between $0$ and $1$ with its $i$th decimal digit $1$ if $a_{i,i}= 0$ and $0$ if $a_{i,i} \neq 0$. Because the tenths place of $s$ is at least $0$ and at most $1$, we know $0 \leq s \leq 0.2$. We claim there exists no $N \in \mathbb{N}$ such that $f(N)= s$. But observe that if the $N$th decimal digit of $f(N)$ is $0$, the $N$th decimal digit of $s$ is $1$, and if the $N$th decimal digit of $f(N)$ is not $0$, the $N$th decimal digit of $s$ is $0$. But then $f(N)$ and $s$ differ in the $N$th decimal digit. But this implies $|f(N) - s| \geq 10^{-N}$ so that $|f(N) - s| \neq 0$, i.e. $f(N) \neq s$. This contradicts the fact that $f(N)= s$. Therefore, $f$ cannot be surjective. But then there exists no bijection $f: \mathbb{N} \to A$. This proves that $A$ is not countable. 
+
+
+\end{document}

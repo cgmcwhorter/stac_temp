@@ -1,0 +1,150 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{Solutions --- Caleb McWhorter}
+
+% Problem 1
+\problem{10} Prove that the product of two even integers is even and that the product of an even integer with an odd integer is even. \pspace
+
+\sol Let $n, m$ be even integers. But then because $n, m$ are even, there exist integers $k_n, k_m$ such that $n= 2k_n$ and $m= 2k_m$. But then\dots
+	\[
+	nm= (2k_n)(2k_m)= 4k_n k_m= 2(2k_n k_m)
+	\]
+Now $k:= 2k_n k_m$ is an integer because $k_n, k_m$ are integers. But then $nm= 2k$. Therefore, $nm$ is even. \pspace
+
+Now let $n$ be an even integer and $m$ be an odd integer. Because $n$ is even, there exists an integer $k_n$ such that $n= 2k_n$. Because $m$ is odd, there exists an integer $k_m$ such that $m= 2k_m + 1$. But then\dots
+	\[
+	nm= (2k_n)(2k_m + 1)= 4k_n k_m + 2k_n= 2(2k_n k_m + k_n)
+	\]
+Now $k:= 2k_n k_m + k_n$ is an integer because $k_n, k_m$ are integers. Therefore, $nm= 2k$ is even. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} Prove that if the square of an integer is even, then the integer is even. Use this to prove that if $n^2 + 1$ is a prime greater than 5, then the digit in the 1's place of $n$ is 0, 4, or 6. \pspace
+
+\sol Let $n$ be an integer such that its square is even. Because $n^2$ is even, we know there exists an integer $k$ such that $n^2= 2k$. Clearly, $2$ divides $2k$. Therefore, $2$ divides $n^2= 2k$. By Euclid's Lemma, if a prime $p$ divides $ab$, then $p$ divides $a$ or $p$ divides $b$. We know that $2$ divides $n^2= n \cdot n$. But then by Euclid's Lemma, $2$ divides $n$. Therefore, there exists an integer $j$ such that $n= 2j$. Therefore, $n$ is even. \pspace
+
+Now suppose that $n^2 + 1$ is a prime greater than $5$. All primes greater than $2$ are odd (otherwise, they would be divisible by $2$ and hence not prime). Therefore, $n^2 + 1$ is odd. But then there exists an integer $s$ such that $n^2 + 1= 2s + 1$. This implies $n^2= 2s$, so that $n^2$ is even. By the work above, this implies that $n$ is even. Because $n$ is even, the digit in its 1's place must be 0, 2, 4, 6, or 8. It only remains to show that the digit in the 1's place cannot be 2 or 8.
+
+Now use the division algorithm to write $n= 10q + r$, where $q, r$ are integers and $0 \leq r \leq 9$. Clearly, $r$ is the 1's digit of $n$. We prove that $r \neq 2, 8$ by contrapositive; that is, we prove that if the 1's digit of $n$ is $2$ or $8$, then $n^2 + 1$ cannot be a prime greater than $5$. Observe that\dots
+	\[
+	\begin{aligned}
+	\hspace{-1cm} r= 2 &\colon n^2 + 1= (10q + r)^2 + 1= (10q + 2)^2 + 1= (100q^2 + 40q + 4) + 1= 100q^2 + 40q + 5= 5(20q^2 + 8q + 1) \\
+	\hspace{-1cm} r= 8 &\colon n^2 + 1= (10q + r)^2 + 1= (10q + 8)^2 + 1= (100q^2 + 160q + 64) + 1= 100q^2 + 160q + 65= 5(20q^2 + 32q + 13)
+	\end{aligned}
+	\]
+In the case $r= 2$, we know that $n^2 + 1= 5(20q^2 + 8q + 1)$ is divisible by $5$ and since $n^2 + 1 > 5$, this implies that $n^2 + 1$ is not prime. In the case $r= 8$, $n^2 + 1= 5(20q^2 + 32q + 13)$ is divisibly by $5$ and since $n^2 + 1 > 5$, this implies that $n^2 + 1$ is not prime. Therefore, if $n^2 + 1$ is a prime greater than $5$, the 1's digit of $n$ cannot be $2$ or $8$. Putting this together with the information above, we know that if $n^2 + 1$ is a prime greater $5$ that the 1's digit of $n$ must be $0$, $4$, or $6$. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Use the division algorithm to write $180= 7q + r$, where $q, r \in \mathbb{Z}$ and $0 \leq r < 7$. \pspace
+
+\sol Recall that the Division Algorithm states that for $a, b \in \mathbb{Z}$ with $a \neq 0$, there are unique $q, r \in \mathbb{Z}$ with $0 \leq r < |a|$ such that $b= qa + r$. If $q$ is known, we can take $r= b - qa$. Recall that we can find $q$ via\dots
+	\[
+	q= 
+	\begin{cases}
+	\floor*{\dfrac{b}{a}}, & a > 0 \\
+	\\
+	\ceil*{\dfrac{b}{a}}, & a < 0
+	\end{cases}
+	\]
+Observe that in our case$b= 180$ and $a= 7$. Because $a= 7 > 0$, we have\dots
+	\[
+	q= \floor*{\dfrac{180}{7}}= \floor{25.7143}= 25
+	\]
+But then $r= 180 - 25(7)= 180 - 175= 5$. Therefore, we have\dots
+	\[
+	180= 7(25) + 5
+	\]
+That is, $180= 7q + r$ where $q= 25$ and $r= 5$. 
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Use the division algorithm to prove that the 1's digit of a perfect square is never 2, 3, 7, or 8. \pspace
+
+\sol Suppose that $N$ is a perfect square. Because $N$ is a perfect square, there exists an integer $k$ such that $N= k^2$. Using the division algorithm, we can write $k= 10q + r$, where $q, r$ are integers and $0 \leq r < 10$. But then\dots
+	\[
+	N= k^2= (10q + r)^2= 100q^2 + 20qr + r^2= 10(10q^2 + 2qr) + r^2
+	\]
+Clearly, the 1's digit of $N$ is then $r^2$, i.e. itself a perfect square. We can examine the 1's digit of the squares of $r$ for $r= 0, 1, \ldots, 9$:
+	\[
+	\begin{aligned}
+	r= 0 &\colon 0^2= 0 &\qquad r= 5 &\colon 5^2= 25 \\
+	r= 1 &\colon 1^2= 1 &\qquad r= 6 &\colon 6^2= 36 \\
+	r= 2 &\colon 2^2= 4 &\qquad r= 7 &\colon 7^2= 49 \\
+	r= 3 &\colon 3^2= 9 &\qquad r= 8 &\colon 8^2= 64 \\
+	r= 4 &\colon 4^2= 16 &\qquad r= 9 &\colon 9^2= 81
+	\end{aligned}
+	\]
+Examining the possibilities above, we see the 1's digit of $r^2$ must be one of $0, 1, 4, 5, 6, 9$. Therefore, the 1's digit of $r^2$ cannot be $2, 3, 7, 8$. But then the 1's digit of $N$ cannot be $2, 3, 7, 8$. 
+
+
+
+\newpage
+ 
+ 
+ 
+
+% Problem 5
+\problem{10} Prove or disprove: Let $x, a, b \in \mathbb{Z}$. If $x$ does not divide $a$ and $x$ does not divide $b$, then $x$ does not divide $ab$. \pspace
+
+\sol The statement is \textit{false}. For instance, let $x= 6$, $a= 2$, and $b= 3$. Clearly, $x= 6$ does not divide $a= 2$ or $b= 3$. However, $ab= 2(3)= 6$ and $x= 6$ does divide $ab= 6$. \pspace
+
+The statement that if $x$ does not divide $a$ and $x$ does not divide $b$, then $x$ does not divide $ab$ is the contrapositive of the statement if $x$ divides $ab$, then $x$ divides $a$ or $x$ divides $b$. We know this statement is true when $x$ is a prime. By Euclid's Lemma, if $x$ is a prime dividing $ab$, then $x$ must divide $a$ or $x$ must divide $b$. Clearly, this need not hold when $x$ is composite. However, there are examples when this does hold for composite integers. For instance, let $x= 4$, $a= 12$, and $b= 8$. Then $ab= 12(8)= 96$ and $x= 4$ divides $ab= 96$. Now $x= 4$ divides $a= 12$ and $x= 4$ divides $b= 8$. 
+
+
+
+\newpage
+
+
+
+% Problem 6
+\problem{10} Prove that if $n$ is composite, then $n$ has a prime factor $p$ with $p \leq \sqrt{n}$. Use this to show that $1321$ is prime. \pspace
+
+\sol Suppose that $n= ab$, where $a, b$ are integers. Without loss of generality, assume that $a \leq b$. But then\dots
+	\[
+	n= ab \geq a \cdot a= a^2
+	\]
+But then $a \leq \sqrt{n}$. But if $n$ is composite, let $p$ be the smallest prime factor of $n$. Because $p$ is a divisor of $n$, we can write $n= pb$ for some integer $b$. We need to show that $p \leq b$. \pspace
+
+Any divisor of $b$ must also divide $n= pb$. Let $p_b$ denote the smallest prime divisor of $b$ and write $b= qp_b$ for some integer $q$. Clearly, $p_b \geq p$; otherwise, this would contradict the fact that $p$ is the smallest prime dividing $n$. But then $b= qp_b \geq qp \geq p$, as desired. From the work above, we know that $p \leq \sqrt{n}$. Therefore, if $n$ is composite, it has a prime factor $p$ with $p \leq \sqrt{n}$. \pspace
+
+Now consider the fact where $n= 1321$. We have $\sqrt{1321} \approx 36.3456$. Therefore, if $n$ is composite then $n$ has a prime divisor less than 36.3. The only primes less than 36 are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, and 31. However, we have\dots
+	\[
+	\begin{aligned}
+	&\dfrac{1321}{2} \approx 660.5 &\qquad &\dfrac{1321}{17} \approx 77.7 \\
+	&\dfrac{1321}{3} \approx 440.3 &\qquad &\dfrac{1321}{19} \approx 69.5 \\
+	&\dfrac{1321}{5} \approx 264.2 &\qquad &\dfrac{1321}{23} \approx 57.4 \\
+	&\dfrac{1321}{7} \approx 188.7 &\qquad &\dfrac{1321}{29} \approx 45.6 \\
+	&\dfrac{1321}{11} \approx 120.1 &\qquad &\dfrac{1321}{31} \approx 42.6 \\
+	&\dfrac{1321}{13} \approx 101.6
+	\end{aligned}
+	\]
+Therefore, no prime less than 36 divides 1321. Therefore, 1321 cannot be composite. This implies that 1321 is prime. 
+
+
+\end{document}

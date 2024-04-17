@@ -2,6 +2,12 @@
 \usepackage[lmargin=1in,rmargin=1in,bmargin=1in,tmargin=1in]{geometry}
 \usepackage{quiz}
 
+\DeclareMathOperator{\disc}{disc}	% Discriminant
+
+\usepackage{pifont}				% Use Check/X mark
+\newcommand{\cmark}{\ding{51}}	% Checkmark
+\newcommand{\xmark}{\ding{55}}	% X-mark
+
 % -------------------
 % Content
 % -------------------
@@ -152,15 +158,136 @@ Of course, $x^{-3}= \frac{1}{x^3}$. \pvspace{1.3cm}
 % Quiz 11
 \quizsol \textit{True/False}: If $a, b$ are constants, then $f(x)= x^3 + ax + b$ is a polynomial and it is possible for $f(x)$ to have four zeros. \pspace
 
-\sol The statement is \textit{false}. Recall the Fundamental Theorem of Algebra states that a polynomial of degree $n$ has at most $n$ zeros (and exactly $n$ zeros if only allows complex numbers and counts with multiplicity). The degree of $f(x)$ is three. Therefore, it is not possible for $f(x)$ to have four zeros. 
+\sol The statement is \textit{false}. Recall the Fundamental Theorem of Algebra states that a nonconstant polynomial of degree $n$ has at most $n$ zeros (and exactly $n$ zeros if only allows complex numbers and counts with multiplicity). The degree of $f(x)$ is three. Therefore, it is not possible for $f(x)$ to have four zeros. \pvspace{1.3cm}
 
 
-%Factoring $16x^4 - 1$ as completely as possible (using rational numbers) results in the factorization $(4x^2 - 1)(4x^2 + 1)$.
+
+% Quiz 12
+\quizsol \textit{True/False}: Factoring $16x^4 - 1$ as completely as possible (using rational numbers) results in the factorization $(4x^2 - 1)(4x^2 + 1)$. \pspace
+
+\sol The statement is \textit{false}. Recall the factorization of the difference of perfect squares: $a^2 - b^2= (a - b)(a + b)$. Observe that $1^2= 1$, $(4x^2)^2= 16x^4$, and $(2x)^2= 4x^2$ are perfect squares. But then\dots
+	\[
+	16x^4 - 1= (4x^2 - 1)(4x^2 + 1)= (2x - 1)(2x + 1)(4x^2 + 1)
+	\]
+The error in the statement of the quiz is failing to recognize that the given factorization can be further factorized by recognizing $4x^2 - 1$ as a difference of perfect squares. \pvspace{1.1cm}
 
 
-%Let $f(x)$ be a quadratic function. The function $f(x)$ will factor `nicely' if and only if $\text{disc } f(x)$ is a perfect square. 
 
-%The polynomial $2x^2 - 16x + 22$ has roots $4 \pm \sqrt{5}$. Therefore, it factors as $\big(x - (4 - \sqrt{5}) \big) \big(x - (4 + \sqrt{5}) \big)$. 
+% Quiz 13
+\quizsol \textit{True/False}: Let $f(x)$ be a quadratic function. The function $f(x)$ will factor `nicely' if and only if $\text{disc } f(x)$ is a perfect square. \pspace
+
+\sol The statement is \textit{true}. Let $f(x)= ax^2 + bx + c$ be a quadratic function. The discriminant of $f(x)$ is $\disc f= b^2 - 4ac$. The function $f(x)$ will factor `nicely' if and only if $\disc f$ is a perfect square. For instance, $x^2 + 5x + 6= (x + 2)(x + 3)$ factors `nicely' and $\disc(x^2 + 5x + 6)= 5^2 - 4(1)6= 25 - 24= 1= 1^2$ is a perfect square, while $x^2 - 2= (x - \sqrt{2})(x + \sqrt{2})$ does not factor `nicely' and $\disc(x^2 - 2)= 0^2 - 4(1)(-2)= 0 + 8= 8$ is not a perfect square. \pvspace{1.1cm}
+
+
+
+% Quiz 14
+\quizsol \textit{True/False}: The polynomial $2x^2 - 16x + 22$ has roots $4 \pm \sqrt{5}$. Therefore, it factors as $\big(x - (4 - \sqrt{5}) \big) \big(x - (4 + \sqrt{5}) \big)$. \pspace
+
+\sol The statement is \textit{false}. Recall that if the quadratic function $f(x)= ax^2 + bx + c$ has roots $r_1, r_2$, then $f(x)$ factors as $a(x - r_1)(x - r_2)$. Here we have roots $4 - \sqrt{5}$ and $4 + \sqrt{5}$ along with $a= 2$. But then\dots
+	\[
+	2x^2 - 16x + 22= 2 \big(x - (4 - \sqrt{5}) \big) \big(x - (4 + \sqrt{5}) \big)
+	\]
+The statement in the square has forgotten the $a$-value in this factorization. We can also see that the quiz statement is false because expanding $\big(x - (4 - \sqrt{5}) \big) \big(x - (4 + \sqrt{5}) \big)$, the $x^2$-term is clearly $x^2$ and not $2x^2$. We can also expand the given factorization directly to see that the factorization is not valid:
+	\[
+	\begin{gathered}
+	\big(x - (4 - \sqrt{5}) \big) \big(x - (4 + \sqrt{5}) \big) \\
+	x^2 - (4 + \sqrt{5}) x - (4 - \sqrt{5}) x + (4 - \sqrt{5}) (4 + \sqrt{5}) \\
+	x^2 - 4x - \sqrt{5} \, x - 4x + \sqrt{5} \, x + 16 + 4 \sqrt{5} - 4 \sqrt{5} - 5 \\
+	x^2 - 8x + 11
+	\end{gathered}
+	\]
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: Because the only factors of $1$ are $\pm 1$ and none of those add to $-4$, the polynomial $4x^2 - 4x + 1$ does not factor. \pspace
+
+\sol The statement is \textit{false}. If we wish to factor a \textit{monic} quadratic polynomial $x^2 + bx + c$, i.e. a polynomial with leading coefficient $a= 1$, we look for factors of $c$ that add to $b$. However, if the quadratic polynomial is not monic, i.e. $a \neq 1$, we look for factors of $ac$ that add to $b$ and use factor-by-grouping. In this case, we see factors of $ac= 4(1)= 4$ that to $-4$. Because $ac= 4 > 0$, the factors must have the same sign. Observe that $(-2)(-2)= 4$ and $-2 + (-2)= -4$. Therefore, we have\dots
+	\[
+	4x^2 - 4x + 1= 4x^2 - 2x - 2x + 1= 2x(2x - 1) - (2x - 1)= (2x - 1)(2x - 1)= (2x - 1)^2
+	\] 
+The statement of the quiz has used the factorization technique for a \textit{monic} quadratic rather than a non-monic quadratic. \pvspace{1.3cm}
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: $\log_4(2)= 2$ \pspace 
+
+\sol The statement is \textit{false}. Recall that $\log_b(y)= x$ if and only if $b^x= y$. That is, $\log_b(y)$ is the power one needs to raise $b$ to in order to obtain $y$. If $\log_4(2)= 2$, then $4^2= 2$, which is clearly not the case. However, $4^{1/2}= \sqrt{4}= 2$, so that $\log_4(2)= \log_4 \big( 4^{1/2} \big)= \frac{1}{2}$. Observe that generally, we have $\log_b(b^x)= x$. \pvspace{1.3cm}
+
+
+
+% Quiz 17
+\quizsol \textit{True/False}: For any base $b > 0$, $\log_b(1 + 2 + 3)= \log_b(1) + \log_b(2) + \log_b(3)$. \pspace
+
+\sol The statement is \textit{true}. Recall that $\log_b(xy)= \log_b(x) + \log_b(y)$ and that $\log_b(1)= 0$. But then\dots
+	\[
+	\log_b(1 + 2 + 3)= \log_b(6)= \log_b(2 \cdot 3)= \log_b 2 + \log_b 3= 0 + \log_b(2) + \log_b(3)= \log_b(1) + \log_b(2) + \log_b(3)
+	\] \pvspace{1.3cm}
+
+
+
+% Quiz 18
+\quizsol \textit{True/False}: The solution to $2^{2x} + 1= 11$ is $x= \frac{\ln(10)}{\ln 4}$. \pspace
+
+\sol The statement is \textit{true}. We can solve this directly, making use of the property $\log_b(a^x)= x \log_b(a)$:
+	\[
+	\begin{gathered}
+	2^{2x} + 1= 11 \\[0.1cm]
+	2^{2x}= 10 \\[0.1cm]
+	\ln(2^{2x})= \ln(10) \\[0.1cm]
+	2x \ln(2)= \ln(10) \\[0.1cm]
+	x= \dfrac{\ln(10)}{2 \ln(2)} \\[0.1cm]
+	\end{gathered}
+	\]
+	\[
+	\begin{gathered}
+	x= \dfrac{\ln(10)}{\ln(2^2)} \\[0.1cm]
+	x= \dfrac{\ln(10)}{\ln(4)}
+	\end{gathered}
+	\]
+Alternatively, we can solve this more `naturally' using base-$2$, where we use the fact $\log_b(b^x)= x$: 
+	\[
+	\begin{gathered}
+	2^{2x} + 1= 11 \\[0.1cm]
+	2^{2x}= 10 \\[0.1cm]
+	\log_2(2^{2x})= \log_2(10) \\[0.1cm]
+	2x= \log_2(10) \\[0.1cm]
+	x= \dfrac{\log_2(10)}{2}
+	\end{gathered}
+	\]
+To see that this is equivalent to the given solution, we use change of base, i.e. $\log_b(x)= \frac{\log_c(x)}{\log_c(b)}$:
+	\[
+	\dfrac{\log_2(10)}{2}= \dfrac{\frac{\log_e(10)}{\log_e(2)}}{2}= \dfrac{\log_e(10)}{2 \log_e(2)}= \dfrac{\ln(10)}{2 \ln(2)}= \dfrac{\ln(10)}{\ln(2^2)}= \dfrac{\ln(10)}{\ln(4)}
+	\]
+Alternatively, we can check the given solution (assuming there is only one solution, which we can see graphically), making use of the fact that $\log_b(b)= 1$ and change of base $\log_b(x)= \frac{\log_c(x)}{\log_c(b)}$: 
+	\[
+	\begin{gathered}
+	2^{2x} + 1= 11 \\[0.1cm]
+	2^{2 \cdot \frac{\ln(10)}{\ln(4)}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{2 \cdot \frac{\ln(10)}{\ln(2^2)}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{2 \cdot \frac{\ln(10)}{2 \ln(2)}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{\frac{\ln(10)}{\ln(2)}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{\frac{\log_2(10)/\log_2(e)}{\log_2(2)/\log_2(e)}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{\frac{\log_2(10)}{\log_2(2)}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{\frac{\log_2(10)}{1}} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	2^{\log_2(10)} + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	10 + 1 \stackrel{?}{=} 11 \\[0.1cm]
+	11= 11 \\[0.1cm]
+	\text{\cmark}
+	\end{gathered}
+	\]
+
+
+
+
+
+
+
+
+
+
+
 
 
 

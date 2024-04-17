@@ -1,0 +1,150 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{Solutions --- Caleb McWhorter}
+
+% Problem 1
+\problem{10} There are 37 small sized cars, 122 medium sized cars, and 48 large sized cars available for sale at a car dealership. If a buyer will purchase one of the cars in the lot, how many possible selections does the customer have? How many possible selections does the customer have if they will purchase two cars? Phrase your answer in the language of combinatorics. \pspace
+
+\sol Let $S$ be the set of small sized cars, $M$ be the set of medium sized cars, $L$ be the set of large size cars, and $C$ be the set of single cars from which one can choose. We want to know $|C|$. We know that $|S|= 37$, $|M|= 122$, and $|L|= 48$. We know that $S \cap M= \varnothing$, $S \cap L= \varnothing$, and $M \cap L= \varnothing$ because no car is more than one of these types.  We know $C= S \cup M \cup L$. By the Generalized Addition Principle, we know\dots
+	\[
+	|C|= |S| + |M| + |L|= 37 + 122 + 48= 207
+	\] \pspace
+
+We now need to find the number of possible selections a customer can make if they will purchase two cars. Let $XY$ the set of possible choices of a car of type $X$ and then a car of type $Y$. Observe that if one makes a choice of type $XX$, after making the first selection of car, the number of cars of type $X$ has from which one can choose from decreases by one. If one purchases two cars, one can select any of three types for each car---even repeating a choice. One makes a choice of a car of type $X$ and $Y$ `simultaneously' (in order to select two cars). We can count the number of ways of making a choice of two specific types using the Multiplication Principle because we can break the process of selecting two cars into choosing each car individually and the choices are independent from each other (we denote by $X'$ the set of cars of type $X$ after a car has been removed from this set: 
+	\[
+	\begin{aligned}
+	\hspace{-1.2cm} |SS|&= |S| \cdot |S'|= 37 \cdot 36= 1332 & |MS|&= |M| \cdot |S|= 122 \cdot 37= 4514 & |LS|= |L| \cdot |S|= 48 \cdot 37= 1776 \\
+	\hspace{-1.2cm} |SM|&= |S| \cdot |M|= 37 \cdot 122= 4514 & |MM|&= |M| \cdot |M'|= 122 \cdot 121= 14762 & |LM|= |L| \cdot |M|= 48 \cdot 122= 5856 \\
+	\hspace{-1.2cm} |SL|&= |S| \cdot |L|= 37 \cdot 48= 1776 & |ML|&= |M| \cdot |L|= 122 \cdot 48= 5856 & |LL|= |L| \cdot |L'|= 48 \cdot 47= 2256 
+	\end{aligned}
+	\]
+Of course, the number of actual choices is smaller than this. For instance, imagine choosing a small car and then a medium car for purchase. You show them to a friend. They cannot tell if you purchased the small and then the medium or the medium and the small---it's the same collection either way. Therefore, adding the above numbers, i.e. attempting to apply the Generalized Addition Principle, would result in an overcount (because the sets are not disjoint). One can either add \textit{distinct} types of choices, e.g. SM and ML are distinct choices whereas LS and SL are not, or `apply the Generalized Addition Principle' and divide by $2$ to account for the overcount. We do the latter. Let $CC$ denote the set of distinct possible choices of two cars to purchase. We have\dots
+	\[
+	\begin{aligned}
+	|CC|&= \frac{1}{2} (|SS| + |SM| + |SL| + |MS| + |MM| + |ML| + |LS| + |LM| + |LL| ) \\
+	&= \frac{1}{2} (1332 + 4514 + 1776 + 4514 + 14762 + 5856 + 1776 + 5856 + 2256) \\
+	&= \dfrac{42642}{2} \\
+	&= 21,\!321
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10} A sandwich shop offers 5 varieties of bread, 6 varieties of meat, and 16 different toppings. A customer will order a sandwich consisting of a bread and meat (one of each), possibly including toppings. How many possible sandwich orders are possible? How many possible sandwich orders are possible if the customer wishes to order two distinct sandwiches? Phrase your answer in the language of combinatorics. \pspace
+
+\sol Recall that the Generalized Multiplication Principle states that if a `task' can be broken down into $k$-independent steps and the $i$th step has $n_i$ ways of being `performed', then the number of ways of performing the `task' is $n_1 \cdot n_2 \cdot \cdots \cdot n_k= \prod_{i=1}^k n_i$. To choose a sandwich, one chooses a bread, a meat, and a topping (possibly none). Let $B$ denote the set of choices of bread, $M$ denote the set of choices of meat, and $T$ denote the set of choices of topping. We know that $|B|= 5$, $|M|= 6$, and $|T|= 16$ because there are five choices of bread, six choices of meat, and sixteen toppings, respectively. \pspace
+
+Because the choices are independent from each other, by the Generalized Multiplication Principle, we know the number of choices of sandwich is the number of ways of choosing a bread times the number of ways of choosing the meat times the number of ways of choosing a topping (possibly none). Let $B_c$ denote the number of ways to choose a bread, $M_c$ denote the number of choices of meat, and $T_c$ denote the number of choices of topping. Using this notation, the Generalized Multiplication Principle states that the number of choices of sandwich is $B_c \cdot M_c \cdot T_c$. Clearly, $B_c= 5$ and $M_c= 6$ because there are only fives choices and six choices of a single bread and meat, respectively. \pspace
+
+However, there are many ways to select the toppings. One can choose no toppings, a single topping, or multiple combinations of many of the toppings. We know the order of the selection for the toppings does not matter, e.g. ordering a sandwich with pickles and lettuce has the same toppings as a sandwich with lettuce and pickles. Furthermore, we need not count repetition, e.g. ordering pickles twice (a double helping) is still a sandwich with pickles. We know the number of ways of selecting $k$ things from a collection of $n$ objects where order does not matter and repetition is not allowed is $\binom{n}{k}$. We have $16$ toppings, which implies that $n= 16$. We need to find the number of ways of order $k= 0$ (none) toppings, $k= 1$ (a single) toppings, $k= 2$ (two) toppings, \dots, $k= 16$ toppings. One cannot order two different amount of toppings---you order the number you order. Therefore, by the Generalized Addition Principle, the number of ways of selecting the toppings is\dots
+	\[
+	\binom{16}{0} + \binom{16}{1} + \binom{16}{2} + \cdots + \binom{16}{15} + \binom{16}{16}= \sum_{k=0}^{16} \binom{16}{k}= 2^{16}
+	\]
+where we have used the identity $\sum_{k=0}^n \binom{n}{k}= 2^n$. Alternatively, one can go through the list of toppings and decide whether or not to include the topping (two choice) for each topping. Because these choices are independent from each other, by the Generalized Multiplication Principle, there are then $\underbrace{2 \cdot 2 \cdot \cdots \cdots 2}_{16 \text{ times}}= 2^{16}$ total combinations of toppings. But then\dots
+	\[
+	\text{Total Sandwich Combinations}= B_c \cdot M_c \cdot T_c= 5 \cdot 6 \cdot 2^{16}= 1,\!966,\!080
+	\]
+To order two distinct sandwiches, we can break this process down into independent steps of ordering a sandwich and then ordering second a different sandwich. This will allow us to use the Generalized Multiplication Principle. We then only need to count the number of ways of ordering a sandwich and then ordering a second different sandwich. We know the number of ways of ordering a single sandwich from above. The second sandwich can be any of the possible choices \textit{except} for the one sandwich just ordered. However, if we simply multiply these we `emphasize' the order of the choices, which does not matter, e.g. ordering a ham and then turkey sandwich is a possibility (they are distinct) but this would be the same sandwich pair as ordering a turkey and then ham sandwich. So we will need to cut the number of choices using the multiplication principle in half. Therefore, we have\dots
+	\[
+	\text{Number Two Distinct Sandwich Orders}= \frac{1}{2} \cdot 1,\!966,\!080 \cdot (1,\!966,\!080 - 1)= 1,\!932,\!734,\!300,\!160
+	\]
+Alternatively, we need to select two sandwiches from the 1,966,080 total possible single sandwich orders in a way such that order does not matter (it would be the same overall sandwich order) and repetition is not allowed (so that the sandwiches are distinct) is\dots
+	\[
+	\text{Number Two Distinct Sandwich Orders}= \binom{1966080}{2}= 1,\!932,\!734,\!300,\!160
+	\]
+Alternatively, noting the choices are independent from each other, you can count the number of ways of ordering \textit{any} two sandwiches (in a specified order). By the Generalized Multiplication Principles, this would be\dots
+	\[
+	1,\!966,\!080 \cdot 1,\!966,\!080= 3,\!865,\!470,\!566,\!400
+	\]
+Of course, this counts the order of the selection as mattering---which it does not. Therefore, the number of distinct orders of two (not necessarily distinct) sandwiches would be $\frac{3865470566400}{2}= 1,\!932,\!735,\!283,\!200$. But one does not want to include orders where the sandwiches were the same. Once one chooses the first sandwich, the second one must be the same as the first. Therefore, the number of ways of ordering two of the same sandwich is $\frac{1}{2} (1966080 \cdot 1)= \frac{1}{2} (1 \cdot 1966080)= 983,\!040$.\footnote{Again, the order of the selection of sandwiches does not matter so long as they are the same. So ordering a ham sandwich and then a ham sandwich is the same as ordering a ham sandwich and then a ham sandwich\dots okay, not a helpful way of saying these. Let us pretend the ham used is labeled. Ordering a ham1 sandwich and then a ham2 sandwich is the same as ordering a ham2 sandwich and then a ham1 sandwich because in the end, you have two ham sandwiches---noting we do not want our ham numbered.} Therefore, the number of possible orders of two distinct sandwiches is\dots
+	\[
+	1,\!932,\!735,\!283,\!200 - 983,\!040= 1,\!932,\!734,\!300,\!160
+	\]
+
+{\itshape Remark.} If you could order a sandwich in a single second, it would take you approximately 22~days, 18~hours, and 8~minutes to order every possible \textit{single} sandwich and approximately 122,492~years to order every combination of \textit{two distinct} sandwiches. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Local US telephone numbers contain 7 digits and cannot start with 0, 1, or the digits 555. How many US telephone numbers are possible? How many numbers are possible if the local number is to be proceeded by 3 digits (an area code) that cannot begin with a 0? Phrase your answer in the language of combinatorics. \pspace
+
+\sol We can break down the process of selecting a possible telephone number into a sequential process of choosing each digit. Let $D_i$ denote the number of ways of selecting the $i$th digit, e.g. $D_3$ is the number of ways of selecting the third digit. Note that we \textit{cannot} simply use the Generalized Multiplication Principle because the choices are not independent from each other. For instance, if one chooses the first two digits to be $5$, the third digit cannot be $5$ because then the telephone number would begin with $555$. In this case, there are only $9$ possibilities for the third digit. However, if one choice the first digit to be $1$ and the second digit to be $9$, the third digit could be any of the $10$~possible digits. \pspace
+
+Instead, we shall first count the number of possible (not necessarily valid) telephone numbers that do not begin with a $0$ or $1$. In this case, we know $D_1= 8$ (because one can choose any digit $1$ to $9$ but not $0$ or $1$) and $D_i= 10$ for $k= 2, 3, \ldots, 7$ (because one can choose any digit $0$ to $9$). Observe that in this case, because we can break down the process of choosing a phone number into an independent process of choosing the digits of the number, the Generalized Multiplication Principle states that the number of such telephone numbers (again, not necessarily valid) is\dots
+	\[
+	D_1 \cdot D_2 \cdot D_3 \cdot \cdots \cdot D_7= 8 \cdot \underbrace{10 \cdot 10 \cdot \cdots \cdot 10}_{6 \text{ times}}= 8 \cdot 10^6= 8,\!000,\!000
+	\]
+But of course, these are not all valid telephone numbers. This includes the telephone numbers that begin with $555$. But these are the only non-valid telephone numbers included (as we have already made sure the number does not begin with $0$ or $1$). We can simply count the number of telephone numbers that begin with $555$ using the Generalized Multiplication Principle. In this case, $D_1= D_2= D_3= 1$ (because there is only one option---choosing a $5$) and $D_i= 10$ for $i= 4, 5, 6, 7$. Then the number of telephone numbers beginning with $555$ is $D_1 \cdot D_2 \cdot \cdots \cdot D_7= 1 \cdot 1 \cdot 1 \cdot 10 \cdot 10 \cdot 10 \cdot 10= 1^3 \cdot 10^4= 1{0,}000$. Therefore, the number of valid $7$ digit telephone numbers is\dots
+	\[
+	\# \text{ Valid Local Telephone Numbers}= 8,\!000,\!000 - 10,\!000= 7,\!990,\!000
+	\]
+
+If we want to compute the number of valid US telephone numbers, we need to include an area code as well as a valid local telephone number. We can break the process of choosing a valid US telephone number into choosing an area code and then choosing a valid local telephone number. By the Generalized Multiplication Principle, the number of valid US telephone numbers is then $A \cdot L$, where $A$ is the number of possible area codes and $L$ is the number of valid local telephone numbers. From the work above, we know that $L= 7,\!990,\!000$. We need to compute $A$. But we can again describe the process of choosing a valid area code as the process of choosing each digit. We know that $D_1= 9$ (because the first digit cannot be zero) and $D_2= D_3= 10$ (because these can be any digit from $0$ to $9$). But then by the Generalized Multiplication Principle, $A= D_1 \cdot D_2 \cdot D_3= 9 \cdot 10 \cdot 10= 9 \cdot 10^2= 900$. Therefore, we have\dots
+	\[
+	\# \text{ valid US telephone numbers}= A \cdot L= 900 \cdot 7,\!990,\!000= 7,\!191,\!000,\!000
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} How many integers from 1 to 10,000 are divisible by 7, 11, or 13? Phrase your answer in the language of combinatorics. \pspace
+
+\sol Recall the Principle of Inclusion/Exclusion: if $A_1, A_2, \ldots, A_n$ are finite sets, then\dots
+	\[
+	\left| \bigcup_{i=1}^n A_i \right|= \sum_{i=1}^n |A_i| - \sum_{1 \leq i < j \leq n} |A_i \cap A_j| + \sum_{1 \leq i < j < k \leq n} |A_i \cap A_j \cap A_k| - \cdots _ (-1)^{n+1} |A_1 \cap \cdots \cap A_n|
+	\]
+For two sets $A, B$, this is $|A \cup B|= |A| + |B| - |A \cap B|$. Note that if $A, B$ are disjoint finite sets, this implies that $|A \cup B|= |A| + |B| - |A \cap B|= |A| + |B| - |\varnothing|= |A| + |B| - 0= |A| + |B|$. For three sets, $A, B, C$, this is $|A \cup B \cup C|= |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$. Note that for $n, m \geq 1$, the number of positive multiples of $m$ less than $n$ is $\floor*{\frac{n - 1}{m}}$. \pspace
+
+Let $S$ denote the set of integers from 1 to 10,000 are divisible by 7, 11, or 13. Furthermore, let $A$ denote the set of integers from 1 to 10,000 divisible by 7, $B$ denote the set of integers from 1 to 10,000 divisible by 11, and $C$ denote the set of integers from 1 to 10,000 divisible by 13. Let $p, q$ be distinct primes. If an integer $N$ is divisible by $pq$, it is divisible by $p$ and $q$. Alternatively, suppose that $N$ is divisible by $p$ and divisible by $q$. Because $N$ is divisible by $p$, we know $N= pk$ for some $k \in \mathbb{Z}$. Because $q$ divides $N$, it must divide $pk$. Because $q$ is prime and $q$ does not divide $p$, it must be that $q$ divides $k$. But then there exists $k' \in \mathbb{Z}$ such that $N= pk= pqk'$. But then $pq$ divides $N$. Therefore, $N$ is divisible by $p$ and $q$ if and only if it is divisible by $pq$. This shows that $A \cap B$ is the set of integers from 1 to 10,000 divisible by $7 \cdot 11= 77$, $A \cap C$ is the set of integers from 1 to 10,000 divisible by $7 \cdot 13= 91$, and $B \cap C$ is the set of integers from 1 to 10,000 divisible by $11 \cdot 13= 143$. One can prove a similar result for divisibility by three primes: if $p, q, r$ are distinct primes, then $N$ is divisible by $p, q, r$ if and only if it is divisible by $pqr$. But then $A \cap B \cap C$ is the set of integers from 1 to 10,000 divisible by $7 \cdot 11 \cdot 13= 1001$. We have\dots
+	\[
+	\begin{aligned}
+	|A|&= \floor*{\dfrac{10000}{7}}= 1428 \quad& |A \cap B|&= \floor*{\dfrac{10000}{77}}= 129 \quad& |A \cap B \cap C|&=  \floor*{\dfrac{10000}{1001}}= 9 \\
+	|B|&= \floor*{\dfrac{10000}{11}}= 909 & |A \cap C|&= \floor*{\dfrac{10000}{91}}= 109 \\
+	|C|&= \floor*{\dfrac{10000}{13}}= 769 & |B \cap C|&= \floor*{\dfrac{10000}{143}}= 69 \\
+	\end{aligned}
+	\]
+By the Principle of Inclusion/Exclusion, we have\dots
+	\[
+	\begin{aligned}
+	|S|&= |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C| \\
+	&= 1428 + 909 + 769 - 129 - 109 - 69 + 9 \\
+	&= 2,\!808
+	\end{aligned}
+	\]
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} Prove that given any four integers that either one of the integers is divisible by 4 or that two of the numbers have a difference divisible by 4. Phrase your answer in the language of combinatorics. \pspace
+
+\sol Recall the Pigeonhole Principle: if $n$ `objects are assigned to $m < n$ possible values, then at least two of the objects are assigned to the same value. Now the only possible remainders for an integer divided by $4$ are $0, 1, 2, 3$, i.e. the possible values of the integer modulo $4$. We know that an integer is divisible by $4$ if and only if its remainder upon division by $4$ is $0$, i.e. its values modulo $4$ is $0$. Suppose one has four integers (not necessarily distinct). If one of the integers has value $0$ modulo $4$, it is divisible by $4$, and we are done. So suppose this is not the case. But then we have four integers and only three remaining possible values they can have modulo $4$. By the Pigeonhole Principle, two of the integers have the same value modulo $4$. But then their difference have value $0$ modulo $4$, which implies that their difference is divisible by $4$. Therefore, given any four integers, either one of them is divisible by $4$ or two of them have a difference divisible by $4$. 
+
+
+\end{document}

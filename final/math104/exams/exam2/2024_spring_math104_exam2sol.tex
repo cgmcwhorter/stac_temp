@@ -1,0 +1,355 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 104: Exam 2}
+\newcommand{\term}{Spring --- 2024}
+\newcommand{\examdate}{04/02/2024}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{false} % Student: True; Instructor: False
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+
+% -------------------
+% Questions
+% -------------------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Let $f(x)$ be the function given by $f(x)= x^2 - 3x + 5$. 
+	\begin{enumerate}[(a)]
+	\item Find the average rate of change of $f(x)$ on $[-1, 2]$. 
+	\item Find the average rate of change of $f(x)$ on $[2, 5]$.
+	\item Use (a) and (b) to explain why $f(x)$ cannot be linear. 
+	\end{enumerate} \pspace
+
+\sol Recall that the average rate of change for a function $f(x)$ on defined an interval $[a, b]$ is given by\dots
+	\[
+	\text{AvgR.O.C.}_{[a,b]}(f)= \dfrac{f(b) - f(a)}{b - a}
+	\]
+Finally, observe that we have\dots
+	\[
+	\begin{aligned}
+	f(-1)&= (-1)^2 - 3(-1) + 5= 1 + 3 + 5= 9 \\ 
+	f(2)&= 2^2 - 3(2) + 5= 4 - 6 + 5= 3 \\
+	f(5)&= 5^2 - 3(5) + 5= 25 - 15 + 5= 15
+	\end{aligned}
+	\]
+
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\text{AvgR.O.C.}_{[-1, 2]}(f)= \dfrac{f(2) - f(-1)}{2 - (-1)}= \dfrac{3 - 9}{2 + 1}= \dfrac{-6}{3}= -2
+	\] \pspace
+
+\item We have\dots
+	\[
+	\text{AvgR.O.C.}_{[2, 5]}(f)= \dfrac{f(5) - f(2)}{5 - 2}= \dfrac{15 - 3}{5 - 2}= \dfrac{12}{3}= 4
+	\] \pspace
+ 
+\item The average rate of change for a linear function is always the same over every interval $[a, b]$ (and is equal to its slope). We see from (a) and (b) that the average rate of change for $f(x)$ changed from $[-1, 2]$ to $[2, 5]$. Therefore, $f(x)$ cannot be linear. 
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[10] Showing all your work, compute the following and express your answer in scientific notation:
+	\begin{enumerate}[(a)]
+	\item $(4.4 \cdot 10^0) \cdot (7.2 \cdot 10^6)$
+	\item $\dfrac{8.1 \cdot 10^8}{1.7 \cdot 10^5}$
+	\item $\dfrac{(5.6 \cdot 10^3) \cdot (9.4 \cdot 10^{-2})}{3.2 \cdot 10^{-4}}$
+	\end{enumerate} \pspace
+
+\sol Recall a number is in scientific notation if it is of the form $M \cdot 10^k$, where $1 \leq M < 10$ and $k$ is an integer. \pspace
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	(4.4 \cdot 10^0) \cdot (7.2 \cdot 10^6)= (4.4 \cdot 7.2) \cdot (10^0 \cdot 10^6)= 31.68 \cdot 10^6= 3.168 \cdot 10^7
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{8.1 \cdot 10^8}{1.7 \cdot 10^5}= \left( \dfrac{8.1}{1.7} \right) \cdot \left( \dfrac{10^8}{10^5} \right) \approx 4.7647 \cdot 10^3
+	\] \pspace
+
+\item 
+	\[
+	\hspace{-1.5cm} \dfrac{(5.6 \cdot 10^3) \cdot (9.4 \cdot 10^{-2})}{3.2 \cdot 10^{-4}}= \left( \dfrac{5.6 \cdot 9.4}{3.2} \right) \cdot \left( \dfrac{10^3 \cdot 10^{-2}}{10^{-4}} \right)= \left( \dfrac{52.64}{3.2} \right) \cdot \left( \dfrac{10^1}{10^{-4}} \right)= 16.45 \cdot 10^5= 1.645 \cdot 10^6
+	\]
+\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[10] Showing all your work and expressing your answer without using negative powers, simplify the following as much as possible:
+	\begin{enumerate}[(a)]
+	\item $xy(xy^3)^0 (x^5y^2)^4$
+	\item $\dfrac{x y^5}{x^{10} y^{-4}}$
+	\end{enumerate} \pspace
+
+\sol Recall that $x^a x^b= x^{a+b}$, $(x^a)^b= x^{ab}$, $\frac{x^a}{x^b}= x^{a-b}$, $x^{-1}= \frac{1}{x}$, and $x^0= 1$ (if $x \neq 0$). \pspace
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	xy(xy^3)^0 (x^5y^2)^4= xy(1)(x^5y^2)^4= xy(x^{20} y^8)= x^{21} y^9
+	\] \pspace
+
+\item 
+	\[
+	\dfrac{x y^5}{x^{10} y^{-4}}= x^{1-10} y^{5-(-4)}= x^{-9} y^9= \dfrac{y^9}{x^9}
+	\]
+\end{enumerate}
+
+
+
+% Question 4
+\newpage
+\question[10] Showing all your work and expressing your answer in the form $x^a y^b$, simplify the following as much as possible:
+	\begin{enumerate}[(a)]
+	\item $\dfrac{(xy^4)^{1/2}}{x}$
+	\item $x \, \sqrt[3]{\dfrac{y^6}{x^{-4}}}$
+	\end{enumerate} \pspace
+
+\sol Recall that $x^a x^b= x^{a+b}$, $(x^a)^b= x^{ab}$, $\frac{x^a}{x^b}= x^{a-b}$, $x^{-1}= \frac{1}{x}$, and $x^0= 1$ (if $x \neq 0$). Finally, recall also that $\sqrt[m]{x^n}= x^{n/m}$ and $\sqrt{x}= x^{1/2}$. \pspace
+
+\begin{enumerate}[(a)]
+\item 
+	\[
+	\dfrac{(xy^4)^{1/2}}{x}= \dfrac{x^{1/2} y^2}{x}= x^{\frac{1}{2} - 1} y^2= x^{-1/2} y^2
+	\] \pspace
+
+\item 
+	\[
+	x \, \sqrt[3]{\dfrac{y^6}{x^{-4}}}= x \left( \dfrac{y^6}{x^{-4}} \right)^{1/3}= x \cdot \dfrac{y^2}{x^{-4/3}}= x^{1 - (-\frac{4}{3})} y^2= x^{\frac{3}{3} + \frac{4}{3}} y^2= x^{7/3} y^2
+	\]
+\end{enumerate}
+
+
+
+% Question 5
+\newpage
+\question[10] Showing all your work, complete the following:
+	\begin{enumerate}[(a)]
+	\item Factor out the GCF for the following: $30x^5 y^3 - 12x^2 y^2 + 18xy^7$
+	\item Expand the following: $(2x - 3)^2$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	30x^5 y^3 - 12x^2 y^2 + 18xy^7= 6xy^2 (5x^4y - 2x + 3y^5)
+	\] \pspace
+
+\item 
+	\[
+	(2x - 3)^2= (2x - 3)(2x - 3)= 4x^2 - 6x - 6x + 9= 4x^2 - 12x + 9
+	\]
+\end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[10] Showing all your work, factor the following as much as possible:
+	\begin{enumerate}[(a)]
+	\item $x^2 + 15x + 54$
+	\item $6x^2 + 11x - 10$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item We find factors of $54$ that add to $15$. Because $54 > 0$, the factors must have the same signs. 
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 6} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot 54$ & $55$ \\
+	$-1 \cdot -54$ & $-55$ \\
+	$2 \cdot 27$ & $29$ \\
+	$-2 \cdot -27$ & $-29$ \\
+	$3 \cdot 18$ & $21$ \\
+	$-3 \cdot -18$ & $-21$ \\ \hline
+	\multicolumn{1}{|r}{$6 \cdot 9$} & \multicolumn{1}{r|}{$15$} \\ \hline
+	$-6 \cdot -9$ & $-15$ 
+	\end{tabular}
+	\end{table}
+But then we have\dots
+	\[
+	x^2 + 15x + 54= (x + 6)(x + 9)
+	\] \pspace
+
+\item We find factors of $6 \cdot -10= -60$ that add to $11$. Because $-60 < 0$, the factors must have opposite signs. 
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 6} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot -60$ & $-59$ \\
+	$-1 \cdot 60$ & $59$ \\
+	$2 \cdot -30$ & $-28$ \\
+	$-2 \cdot 30$ & $28$ \\
+	$3 \cdot -20$ & $-17$ \\
+	$-3 \cdot 20$ & $17$ \\
+	$4 \cdot -15$ & $-11$ \\ \hline
+	\multicolumn{1}{|r}{$-4 \cdot 15$} & \multicolumn{1}{r|}{$11$} \\ \hline
+	$5 \cdot -12$ & $-7$ \\
+	$-5 \cdot 12$ & $7$ \\
+	$6 \cdot -10$ & $-4$ \\
+	$-6 \cdot 10$ & $4$ 
+	\end{tabular}
+	\end{table}
+But then we have\dots
+	\[
+	6x^2 + 11x - 10= 6x^2 - 4x + 15x - 10= 2x(3x - 2) + 5(3x - 2)= (3x - 2)(2x + 5)
+	\] 
+\end{enumerate}
+
+
+
+% Question 7
+\newpage
+\question[10] Consider the polynomial $f(x)= x^2 - 4x + 1$.
+	\begin{enumerate}[(a)]
+	\item Use the discriminant of $f(x)$ to explain why $f(x)$ does not factor `nicely.' 
+	\item Expand $(x - 2 - \sqrt{3})(x - 2 + \sqrt{3})$ and simplify to show that $f(x)$ does factor. 
+	\end{enumerate} \pspace
+
+\sol The standard form of a quadratic function is $ax^2 + bx + c$. For $f(x)$, we have $a= 1$, $b= -4$, and $c= 1$. \pspace
+
+\begin{enumerate}[(a)]
+\item We have\dots
+	\[
+	\text{disc}(f)= b^2 - 4ac= (-4)^2 - 4(1)1= 16 - 4= 12
+	\]
+Because $\text{disc}(f)= 12$ is not a perfect square, $f(x)$ does not factor `nicely.' \pspace
+
+\item 
+	\[
+	\begin{gathered}
+	(x - 2 - \sqrt{3})(x - 2 + \sqrt{3}) \\[0.3cm]
+	(x^2 - 2x + \sqrt{3}\, x) + (-2x + 4 - 2\sqrt{3}) + (-\sqrt{3}\, x + 2 \sqrt{3} - 3) \\[0.3cm]
+	x^2 + (-2x + \sqrt{3}\, x - 2x - \sqrt{3}\, x) + (4 - 2\sqrt{3} + 2 \sqrt{3} - 3) \\[0.3cm]
+	x^2 - 4x + 1
+	\end{gathered}
+	\]
+\end{enumerate}
+
+
+
+% Question 8
+\newpage
+\question[10] Showing all your work, solve the following:
+	\[
+	\dfrac{x}{x - 1}= \dfrac{3x}{x + 4}
+	\] \pspace
+
+\sol 
+	\[
+	\begin{gathered}
+	\dfrac{x}{x - 1}= \dfrac{3x}{x + 4} \\[0.3cm]
+	x(x + 4)= 3x(x - 1) \\[0.3cm]
+	x^2 + 4x= 3x^2 - 3x \\[0.3cm]
+	0= 2x^2- 7x \\[0.3cm]
+	0= x(2x - 7)
+	\end{gathered}
+	\] \pspace
+But then either $x= 0$ or $2x - 7= 0$, which implies $x= \frac{7}{2}$. 
+
+
+
+% Question 9
+\newpage
+\question[10] Showing all your work, factor the following as much as possible:
+	\begin{enumerate}[(a)]
+	\item $-2x^3 - 4x^2 + 96x$
+	\item $1 - 81x^4$
+	\end{enumerate} \pspace
+
+\sol 
+\begin{enumerate}[(a)]
+\item 
+	\[
+	-2x^3 - 4x^2 + 96x= -2x(x^2 + 2x - 48)
+	\] 
+Now we need to see if $x^2 + 2x - 48$ factors. We find factors of $-48$ that add to $2$. Because $-48 < 0$, the factors must have the opposite signs. 
+	\begin{table}[!ht]
+	\centering
+	\underline{\bfseries 6} \pvspace{0.2cm}
+	\begin{tabular}{rr}
+	$1 \cdot -48$ & $-47$ \\
+	$-1 \cdot 48$ & $47$ \\
+	$2 \cdot -24$ & $-22$ \\
+	$-2 \cdot 24$ & $22$ \\
+	$3 \cdot -16$ & $-13$ \\
+	$-3 \cdot 16$ & $13$ \\
+	$4 \cdot -12$ & $-8$ \\
+	$-4 \cdot 12$ & $8$ \\
+	$6 \cdot -8$ & $-2$ \\ \hline
+	\multicolumn{1}{|r}{$-6 \cdot 8$} & \multicolumn{1}{r|}{$2$} \\ \hline
+	\end{tabular}
+	\end{table}
+But then we have $x^2 + 2x - 48= (x - 6)(x + 8)$. Therefore, 
+	\[
+	-2x^3 - 4x^2 + 96x= -2x(x^2 + 2x - 48)= -2x(x - 6)(x + 8)
+	\]
+
+\item Recall the factorization of the difference of perfect squares: $a^2 - b^2= (a + b)(a - b)$. But then\dots
+	\[
+	1 - 81x^4= (1 + 9x^2)(1 - 9x^2)= (1 + 9x^2)(1 + 3x)(1 - 3x)
+	\]
+\end{enumerate}
+
+
+
+% Question 10
+\newpage
+\question[10] Let $f(x)= 90x^2 - 2291x + 13860$. Showing all your work, complete the following:
+	\begin{enumerate}[(a)]
+	\item Use the quadratic formula to find the roots of $f(x)$.
+	\item Use (a) to factor $f(x)$. 
+	\end{enumerate} \pspace
+
+\sol \sol The standard form of a quadratic function is $ax^2 + bx + c$. For $f(x)$, we have $a= 90$, $b= -2291$, and $c= 13860$. \pspace
+
+\begin{enumerate}[(a)]
+\item Using the quadratic formula, the solutions to $f(x)= 0$ are\dots
+	\[
+	\begin{aligned}
+	x&= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+	&= \dfrac{-(-2291) \pm \sqrt{(-2291)^2 - 4(90)13860}}{2(90)} \\
+	&= \dfrac{2291 \pm \sqrt{5248681 - 4989600}}{180} \\
+	&= \dfrac{2291 \pm \sqrt{259081}}{180} \\
+	&= \dfrac{2291 \pm 509}{180}
+	\end{aligned}
+	\]
+Therefore, the roots are $x= \frac{2291 - 509}{180}= \frac{1782}{180}= \frac{99}{10}$ and $x= \frac{2291 + 509}{180}= \frac{2800}{180}= \frac{140}{9}$. \pspace
+
+\item Recall that if a quadratic $ax^2 + bx + c$ has roots $r_1$ and $r_2$, then $f(x)$ factors as $a(x - r_1)(x - r_2)$. But then\dots
+	\[
+	f(x)= 90 \left(x - \dfrac{99}{10} \right) \left(x - \dfrac{140}{9} \right)= 10 \left(x - \dfrac{99}{10} \right) \cdot 9 \left(x - \dfrac{140}{9} \right)= (10x - 99)(9x - 140)
+	\]
+\end{enumerate}
+
+
+\end{questions}
+\end{document}

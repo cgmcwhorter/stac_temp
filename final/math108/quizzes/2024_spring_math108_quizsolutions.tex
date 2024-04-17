@@ -101,14 +101,72 @@ The expression given in the quiz statement is computing the future value, $F$, r
 
 
 
+% Quiz 13
+\quizsol \textit{True/False}: The number of exams a student will pass or fail throughout their undergraduate studies clearly meets all the criterion to be a binomial distribution. \pspace
+
+\sol The statement is \textit{false}. Recall that a count of an event, $X$, follows a binomial distribution if\dots
+	\begin{itemize}
+	\item Each observation either observes the event or not.
+	\item Probability of observing the event, $p$, is fixed. 
+	\item There are a fixed number of observations, $n$.
+	\item Each observation is independent. 
+	\end{itemize}
+If these criteria are met, then the probability of a count $X$ is given by the binomial distribution, i.e. $X \sim B(n, p)$. It is true that given an exam, a student either passes or fails the examination (assuming a pass-fail system). However, the probability of a student failing an exam is not likely fixed---depending on the student, class, semester, and exam (topics). Furthermore, students at the college likely take a different number of exams, so that $n$ is not likely fixed. Moreover, it is unlikely that the observations are independent as a student failing (or not) any particular exam likely affects whether or not they will fail (or not) a future exam. For instance, a student failing an exam may show they find the course material difficult, which will likely not change, so that they may be more likely to fail future exams. On the other hand, if a student fails an exam, they might be more likely to study harder to improve their grade, which would make their failing a future exam less likely. In any case, exam failures are not likely independent from each other. Therefore, it is not likely that the number of exams a student fails during their undergraduate career is given by a binomial distribution. \pvspace{1.3cm}
 
 
-%Let $x, y$ be random samples drawn from a normal distribution. If $z_x= -3.87$ and $z_y= 1.15$, then $y > x$ but $x$ is the more `unusual' value.
+
+% Quiz 14
+\quizsol \textit{True/False}: Suppose the probability that a person fails to make their mortgage payment is 6\% and follows a binomial distribution. The probability that out of 26 people that 5 make their mortgage is equal to the probability that 21 fail to make their mortgage payment. \pspace
+
+\sol The statement is \textit{true}. If $5$ out of $26$ people make their mortgage payment, then $21$ people fail to make their mortgage payment. Moreover, if $21$ out of $26$ people fail to make their mortgage payment, then $5$ people make their mortgage payment. Therefore, $5$ out of $26$ people make their mortgage payment if and only if $21$ out of $26$ people fail to make their mortgage payment. Because the events must occur at the same time, they must occur with equal probability. \pvspace{1.3cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: The larger the level of confidence for a confidence interval, the smaller the interval will be. \pspace
+
+\sol The statement is \textit{false}. If we wanted to be 100\% accurate, we could create a confidence interval of $(-\infty, \infty)$, which is the largest possible confidence interval. If we wanted to have a very small confidence `interval' but be not at all (0\%) confident in the interval, we could guess a single value. From these extreme examples, it would seem that the larger the confidence level, the larger the confidence interval. We can see this directly from the construction of the confidence interval: $\overline{x} \pm z^* \, \frac{\sigma}{\sqrt{n}}$. The larger the confidence level, the further from the mean one has to `travel' to capture that percentage of values, i.e. the greater the number of standard deviations required. But this increases the value of $z^*$, which in turn increases the size of the confidence interval because this increases the value of $z^* \, \frac{\sigma}{\sqrt{n}}$. \pvspace{1.3cm}
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: If one has a linear regression with $r= -0.80$, then the variables are negatively correlated and the correlation is `good enough' to be used. \pspace
+
+\sol The statement is \textit{false}. Recall that the slope of a linear regression has the same sign as $r$. Because $r < 0$, we know that the slope of the linear regression is negative. This means that the model says that the variables are negatively correlated. We know the closer the value of $r$ is to $1$ or $-1$, the `better' the model; that is, the further $r$ is from $0$, the `better' the model. Furthermore, $r^2$ is the coefficient of determination and gives the `percent' linearity. [Specifically, it gives the variation in the data explained by the linear model.] We know $r= 1$ or $r= -1$ if and only if the data is perfectly linear, i.e. $r^2= 1$ if and only if the data is perfectly linear. While there is no `bright line' between a `good' and `bad' model, the closer $r^2$ is to $1$ the `better' the model. We draw a fine line to create an obvious standard. [In `real life', this bright line depends on the field, usage, etc.] We say that a model is `good enough' if and only if $r^2 \geq 0.65$. But $r^2= (-0.80)^2= 0.64 < 0.65$. Therefore, this model is not `good enough.' \pvspace{1.3cm}
+
+
+
+% Quiz 17
+\quizsol \textit{True/False}: Suppose the matrix below is the RREF of an augmented matrix for a linear system of equations,
+	\[
+	\begin{pmatrix}
+	1 & 0 & 0 & 0 & 0 & 1 \\
+	0 & 1 & 0 & 0 & 0 & 2 \\
+	0 & 0 & 1 & 0 & 0 & 3 \\
+	0 & 0 & 0 & 1 & 0 & 4 \\
+	0 & 0 & 0 & 0 & 1 & 5 
+	\end{pmatrix}
+	\]
+then there is a unique solution to this system, namely $(x_1, x_2, x_3, x_4, x_5)= (1, 2, 3, 4, 5)$. \pspace
+
+\sol The statement is \textit{true}. For each equation in the original system, there is a row in the augmented matrix. Because this augmented matrix has five rows, there were five equations in the original system. Each column in the augmented matrix corresponds to the coefficient of a variable in the original system, except for the last column which corresponds to the constant vector with which we augmented the coefficient matrix. Because the augmented matrix has six columns, there were $6 - 1= 5$ variables in the original system, which we call $x_1, \ldots, x_5$. The first row of this RREF augmented matrix then corresponds to $1x_1 + 0x_2 + 0x_3 + 0x_4 + 0x_5= 1$, i.e. $x_1= 1$. Similarly, using the other rows, we find $x_2= 2$, $x_3= 3$, $x_4= 4$, and $x_5= 5$. Therefore, there is a unique solution, namely $(x_1, x_2, x_3, x_4, x_5)= (1, 2, 3, 4, 5)$. 
 
 
 
 
-%The number of exams a student will pass or fail throughout their undergraduate studies clearly meets all the criterion to be a binomial distribution. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

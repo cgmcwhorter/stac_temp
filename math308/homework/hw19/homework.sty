@@ -201,31 +201,31 @@
 
 \newcommand{\graphOne}{%
 	\begin{tikzpicture}[scale=1.3]
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (b) {\footnotesize$v_2$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (3.5, 2)   (c) {\footnotesize$v_3$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (5, 0)   (d) {\footnotesize$v_4$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (7, 0)   (e) {\footnotesize$v_5$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (3.5, 0.75)   (f) {\footnotesize$v_6$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0) (a) {\footnotesize$v_1$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0) (b) {\footnotesize$v_2$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (3.5, 2) (c) {\footnotesize$v_3$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (5, 0) (d) {\footnotesize$v_4$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (7, 0) (e) {\footnotesize$v_5$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (3.5, 0.75) (f) {\footnotesize$v_6$};
 	
 	\path[line width=0.03cm] (a) edge node[below] {\footnotesize$e_2$} (b);
 	\path[line width=0.03cm] (a) edge node[above] {\footnotesize$e_1$} (c);
 	\path[line width=0.03cm,bend left=10] (b) edge node[left] {\footnotesize$e_3$} (c);
 	\path[line width=0.03cm,bend right=10] (b) edge node[right] {\footnotesize$e_4$} (c);
 	\path[line width=0.03cm] (b) edge node[below] {\footnotesize$e_5$} (d);
-	\path[line width=0.03cm] (c) edge node[left] {\footnotesize$e_6$} (d);
-	\path[line width=0.03cm] (c) edge node[right] {\footnotesize$e_7$} (e);
+	\path[line width=0.03cm] (c) edge node[right] {\footnotesize$e_6$} (d);
+	\path[line width=0.03cm] (c) edge node[above] {\footnotesize$e_7$} (e);
 	\path[line width=0.03cm] (d) edge node[below] {\footnotesize$e_8$} (e);
 	\end{tikzpicture}
 }
 \newcommand{\graphTwo}{%
 	\begin{tikzpicture}[scale=1.3]
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (-2, 0)  (a) {\footnotesize$v_1$};	
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (b) {\footnotesize$v_2$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (c) {\footnotesize$v_3$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (-1, 1)   (d) {\footnotesize$v_4$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1)   (e) {\footnotesize$v_5$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 2)   (f) {\footnotesize$v_6$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (-2, 0) (a) {\footnotesize$v_1$};	
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0) (b) {\footnotesize$v_2$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0) (c) {\footnotesize$v_3$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (-1, 1) (d) {\footnotesize$v_4$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1) (e) {\footnotesize$v_5$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 2) (f) {\footnotesize$v_6$};
 
 
 	
@@ -241,11 +241,11 @@
 }
 \newcommand{\graphThree}{%
 	\begin{tikzpicture}[scale=1.3]
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 0)   (a) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 3)   (b) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1)   (c) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-0.7, 2)   (d) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0.7, 2)   (e) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 0) (a) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 3) (b) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1) (c) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-0.7, 2) (d) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0.7, 2) (e) {.};
 	
 	\path[line width=0.03cm,bend right=45,looseness=2.2] (a) edge node[below] {} (b);
 	\path[line width=0.03cm,bend left=45,looseness=2.2] (a) edge node[below] {} (b);
@@ -257,11 +257,11 @@
 }
 \newcommand{\graphFour}{%
 	\begin{tikzpicture}[scale=1.3]
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-1.5, 0)   (a) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (1.5, 0)   (b) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1.5)   (c) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 0.5)   (d) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 2.75)   (e) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-1.5, 0) (a) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (1.5, 0) (b) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1.5) (c) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 0.5) (d) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 2.75) (e) {.};
 	
 	\path[line width=0.03cm] (a) edge node[below] {} (b);
 	\path[line width=0.03cm] (a) edge node[below] {} (c);
@@ -273,11 +273,11 @@
 }
 \newcommand{\graphFive}{%
 	\begin{tikzpicture}[scale=1.3]
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-1, 0)   (a) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (1, 0)   (b) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1)   (c) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 2)   (d) {.};
-	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 3)   (e) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (-1, 0) (a) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (1, 0) (b) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 1) (c) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 2) (d) {.};
+	\node[draw,inner sep=0.5pt,minimum size=1pt,line width=0.03cm,circle,fill=black] at (0, 3) (e) {.};
 	
 	\path[line width=0.03cm] (a) edge node[below] {} (b);
 	\path[line width=0.03cm] (a) edge node[below] {} (c);
@@ -313,9 +313,9 @@
 }
 \newcommand{\graphSeven}{%
 	\begin{tikzpicture}[scale=1.3]
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1)   (c) {\footnotesize$v_3$};
-	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (b) {\footnotesize$v_2$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0) (a) {\footnotesize$v_1$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1) (c) {\footnotesize$v_3$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0) (b) {\footnotesize$v_2$};
 	
 	\path[line width=0.03cm,bend left=20] (a) edge node[below] {} (c);
 	\path[line width=0.03cm,bend right=20] (a) edge node[below] {} (c);

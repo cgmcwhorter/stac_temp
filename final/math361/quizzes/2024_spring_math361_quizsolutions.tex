@@ -152,15 +152,20 @@ Defining $Y= \ln y$, $b_1= c$, $X= t$, and $b_0= \ln(A)$, this equation is $Y= b
 \sol The statement is \textit{false}. If gradient descent converges to the location of a minimum, the corresponding minimum need not be a global minimum but rather a local minimum. Recall that gradient descent begins with an initial value $\mathbf{x}_0$ and then creates subsequent approximations to the location of a minimum via $\mathbf{x}_{n+1}= \mathbf{x}_n - \alpha \nabla f(\mathbf{x}_n)$, where $\alpha$ is some scaling factor (or learning rate). For instance, consider the function $f(x)= x^4 + x^3 - 2x^2$. One can find the minima exactly, which occur at $m_1= \frac{-3 - \sqrt{73}}{8} \approx -1.443$ (where the output is $\approx -2.83342$) and $m_2= \frac{-3 + \sqrt{73}}{8} \approx 0.693$ (where the value is $\approx -0.397046$). Using $x_0= 1$ and $\alpha= 0.01$, $x_n \to m_2$, despite the output at $m_1$ being smaller. Worse yet, if gradient descent converges, it need not even converge to a minimum at all! It is simple to see that $f(x)= x^3$ has no minimum. But applying gradient descent with $x_0= 1/2$ and $\alpha= 0.01$, it is easy to see that $x_n \to 0$, despite the fact that $x= 0$ is a saddle point for $f(x)= x^3$. 
 
 
+% Quiz 13
+\quizsol \textit{True/False}: Suppose you have a collection of data points $\{ (x_i, y_i) \}_{i=1}^n$, where the $x_i$ are all distinct. Suppose $\mathcal{L}(x)$ and $N(x)$ are the Lagrange and Newton polynomials interpolating this collection of data. It must be that $\mathcal{L}(x) \equiv N(x)$.
 
-%Suppose you have a collection of data points $\{ (x_i, y_i) \}_{i=1}^n$, where the $x_i$ are all distinct. Suppose $\mathcal{L}(x)$ and $N(x)$ are the Lagrange and Newton polynomials interpolating this collection of data. It must be that $\mathcal{L}(x) \equiv N(x)$.
+% Quiz 14
+\quizsol \textit{True/False}: Let $f(x)$ be a continuous functions. Let $\{ (x_i, y_i) \}_{i=1}^n$ be a collection of distinct points on the graph of $f(x)$. The larger the number of points used, the better the approximation for $f(x)$ the interpolating polynomial through these points will be. 
+
+% Quiz 15
+\quizsol \textit{True/False}: To minimize $\max _{x \in [a, b]} |(x - x_1)(x - x_2) \cdots (x - x_n)|$, one chooses the $x_i$ to be equally spaced on the interval $[a, b]$. 
 
 
 
 
 
 
-Let $f(x)$ be a continuous functions. Let $\{ (x_i, y_i) \}_{i=1}^n$ be a collection of distinct points on the graph of $f(x)$. The larger the number of points used, the better the approximation for $f(x)$ the interpolating polynomial through these points will be. 
 
 
 

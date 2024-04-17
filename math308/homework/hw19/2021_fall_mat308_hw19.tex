@@ -49,12 +49,12 @@
 \item Give the adjacency matrix of the graph.
 \item Is the graph simple?
 \item Are there any isolated vertices?
-\item Compute the in and out degree of each vertex. 
+\item Compute the in- and out-degree of each vertex. 
 \item Compute the degree of the graph.
-\item Are the vertices $v_1$ and $v_6$ connected? What about the vertices $v_6$ and $v_1$? 
+\item Is the vertex $v_1$ connected to $v_6$? Is the vertex $v_6$ connected to $v_1$?
 \item Does the graph have an Eulerian circuit? Find one or explain why none exists.  
 \item Does the graph have an Hamiltonian circuit? Find one or explain why none exists.  
-\end{enumerate} \pspace
+\end{enumerate}
 
 
 
@@ -106,7 +106,11 @@
 
 
 % Problem 5
-\problem{10} Given an undirected graph $G$, the \textit{degree sequence} of $G$ is a monotonic non-increasing sequence of the vertex degrees of $G$. For each of the following degree sequences for a simple graph $G$, either give an example of a graph $G$ with the given degree sequence or prove that one cannot exist.
+\problem{10} Let $G$ be an undirected graph. The \textit{degree sequence} of $G$ is a monotonic non-increasing sequence of the degrees for vertices of $G$. For instance, consider the graph from Problem~i: 
+	\[
+	\graphOne
+	\]
+This graph has degree sequence $(5, 4, 3, 2, 2, 0)$. For each of the monotonic non-increasing sequences below, determine whether they are the degree sequence for some simple graph $G$. If there is such a simple graph $G$, give an example. If no such simple graph is possible, explain why. 
 	\begin{enumerate}[(a)]
 	\item $(4, 3, 2, 2, 2)$
 	\item $(2, 2, 2, 0)$
@@ -139,7 +143,7 @@
 
 
 % Problem 7
-\problem{10} Prove that in a tree, $T$, every distinct pair of vertices $u$ and $v$ has a unique path connecting them. \pspace
+\problem{10} Prove that in a tree, $T$, every pair of vertices $u$ and $v$ has a unique path connecting them. \pspace
 
 
 
@@ -170,28 +174,10 @@
 % Problem 9
 \problem{10} Define the following matrices:
 	\[
-	A= 
-	\begin{pmatrix}
-	1 & 0 & -2 \\
-	3 & 1 & 5 
-	\end{pmatrix}, \quad
-	B= 
-	\begin{pmatrix}
-	3 & 1 & -1 \\
-	0 & -2 & 4
-	\end{pmatrix}, \quad
-	C=
-	\begin{pmatrix}
-	1 & -1 \\
-	0 & 3 \\
-	-2 & 1
-	\end{pmatrix}, \quad
-	v= 
-	\begin{pmatrix}
-	3 \\
-	0 \\
-	-1
-	\end{pmatrix}
+	A= \begin{pmatrix} 1 & 0 & -2 \\ 3 & 1 & 5 \end{pmatrix}, \quad
+	B= \begin{pmatrix} 3 & 1 & -1 \\	0 & -2 & 4 \end{pmatrix}, \quad
+	C= \begin{pmatrix} 1 & -1 \\ 0 & 3 \\ -2 & 1 \end{pmatrix}, \quad
+	v= \begin{pmatrix} 3 \\ 0 \\-1\end{pmatrix}
 	\]
 For each of the following operations, either compute the given expression or explain why it is undefined. 
 

@@ -1,0 +1,141 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{homework}
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\homework{Solutions --- Caleb McWhorter}
+
+% Problem 1
+\problem{20} Prove $\displaystyle \sum_{i=1}^n i^3= \left( \dfrac{n(n + 1)}{2} \right)^2$. \pspace
+
+\sol We prove this with induction. The base case is $n= 1$. We have\dots
+	\[
+	\begin{gathered}
+	\sum_{i=1}^n i^3= \sum_{i=1}^1 i^3= 1^3= 1 \\[0.3cm]
+	\left( \dfrac{n(n + 1)}{2} \right)^2 \bigg|_{n=1}= \left( \dfrac{1(1 + 1)}{2} \right)^2= \left( \dfrac{2}{2} \right)^2= 1^2= 1
+	\end{gathered}
+	\]
+Therefore, the result is clearly true if $n= 1$. Now assume the result is true for $n= k$. We need to show the result is true for $n= k + 1$; that is, we want to prove $\displaystyle \sum_{i=1}^{k+1} i^3= \left( \dfrac{(k + 1) \big( (k + 1) + 1 \big)}{2} \right)^2$. By assumption, we know that $\displaystyle \sum_{i=1}^k i^3= \left( \dfrac{k(k + 1)}{2} \right)^2$. But then\dots
+	\[
+	\begin{aligned}
+	\sum_{i=1}^{k+1} i^3&= (k + 1)^3 + \sum_{i=1}^k i^3 \\
+	&= (k + 1)^3 + \left( \dfrac{k(k + 1)}{2} \right)^2 \\
+	&= (k + 1)^3 + \dfrac{k^2 (k + 1)^2}{4} \\
+	&= (k + 1)^2 \left( (k + 1) + \dfrac{k^2}{4} \right) \\
+	&= (k + 1)^2 \left( \dfrac{4k + 4}{4} + \dfrac{k^2}{4} \right) \\
+	&= (k + 1)^2 \left( \dfrac{k^2 + 4k + 4}{4} \right) \\
+	&= (k + 1)^2 \left( \dfrac{(k + 2)^2}{4} \right) \\
+	&= \left( \dfrac{(k + 1)(k + 2)}{2} \right)^2 \\
+	&= \left( \dfrac{(k + 1) \big( (k + 1) + 1 \big)}{2} \right)^2 
+	\end{aligned}
+	\]
+Therefore by induction, $\displaystyle \sum_{i=1}^n i^3= \left( \dfrac{n(n + 1)}{2} \right)^2$. 
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{20} Let $\{ a_n \}_{n \in \mathbb{N}}$ be the sequence with $a_1= 1$, $a_2= 8$, and $a_n= a_{n-1} + 2a_{n-2}$ for $n \geq 3$. Prove that $a_n= 3 \cdot 2^{n-1} + 2(-1)^n$ for all $n \in \mathbb{N}$. \pspace
+
+\sol We prove this by induction. We test the base case of $n= 1, 2$:
+	\[
+	\begin{aligned}
+	n= 1&\colon 3 \cdot 2^{1-1} + 2(-1)^1= 3 \cdot 1 + 2(-1)= 3 - 2= 1= a_1 \\
+	n= 2&\colon 3 \cdot 2^{2-1} + 2(-1)^2= 3 \cdot 2 + 2(1)= 6 + 2= 8= a_2
+	\end{aligned}
+	\]
+Now we assume the result is true for $n= 1, 2, \ldots, k$. We need to prove the result is true for $n= k + 1$; that is, we need to prove $a_{k+1}= 3 \cdot 2^{(k+1) - 1} + 2(-1)^{k+1}= 3 \cdot 2^k + 2(-1)^{k+1}$. By the inductive hypothesis, we know that $a_k= 3 \cdot 2^{k-1} + 2(-1)^k$ and $a_{k-1}= 3 \cdot 2^{(k-1)-1} + 2(-1)^{k-1}= 3 \cdot 2^{k-2} + 2(-1)^{k-1}$. Observe\dots
+	\[
+	\begin{aligned}
+	a_{k+1}&:= a_{(k+1)-1} + 2a_{(k+1)-2} \\
+	&= a_k + 2a_{k-1} \\
+	&= \big( 3 \cdot 2^{k-1} + 2(-1)^k \big) + 2 \big( 3 \cdot 2^{k-2} + 2(-1)^{k-1} \big) \\
+	&= \big( 3 \cdot 2^{k-1} + 2(-1)^k \big) + \big( 3 \cdot 2^{k-1} + 2^2(-1)^{k-1} \big) \\
+	&= 3 \cdot 2^{k-1} + 2(-1)^k + 3 \cdot 2^{k-1} + 2^2(-1)^{k-1} \\
+	&= \big( 3 \cdot 2^{k-1} + 3 \cdot 2^{k-1} \big) + \big( 2(-1)^k + 2^2(-1)^{k-1} \big) \\
+	&= 2 \cdot (3 \cdot 2^{k-1}) + 2(-1)^k \big(1 + 2(-1)^1 \big) \\
+	&= 3 \cdot 2^k + 2(-1)^{k+1}
+	\end{aligned}
+	\]
+Therefore by induction, $a_n= 3 \cdot 2^{n-1} + 2(-1)^n$. 
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{20} Prove that for $n \geq 4$, $n^3 < 3^n$. \pspace
+
+\sol We prove this by induction. The base case is $n= 5$:
+	\[
+	\begin{aligned}
+	n^3= 5^3= 125 \\
+	3^n= 3^5= 243
+	\end{aligned}
+	\]
+Therefore, $n^3 < 3^n$ when $n= 5$. Now assume the result is true for $n= 5, 6, \ldots, k$. We need to prove the result is true for $n= k+1$; that is, we need to prove $(k + 1)^3 < 3^{k+1}$. From the induction hypothesis, we know that $k^3 < 3^k$. Because $k \geq 5$, we know that $\frac{k}{4} \geq \frac{5}{4} > 1$. Observe that\dots
+	\[
+	(k + 1)^3 < \left(k + \dfrac{k}{4} \right)^3= \left( \dfrac{5k}{4} \right)^3= \dfrac{5^3}{4^3} \, k^3 = \dfrac{125}{64} \, k^3 < \dfrac{128}{64} \, k^3 = 2k^3 < 2 (3^k) < 3(3^k)= 3^{k+1}
+	\]
+Therefore, the result follows by induction.\footnote{Alternatively, for the inductive step, we could observe that\dots $(k + 1)^3= k^3 + 3k^2 + 3k + 1 < 3^k + (3k^2 + 3k + 1)$. If one can prove $3k^2 + 3k + 1 < 2(3^k)$ for $k \geq 4$, then $(k + 1)^3 < 3^k + 2(3^k)= 3(3^k)= 3^{k+1}$ and the result would follow. This itself can be proven by induction, which is left as a similar exercise.}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{20} Recall that an integer $m$ is divisible by 3 if $m= 3q$ for some $q \in \mathbb{Z}$. Prove that $7^n - 4^n$ is divisible by 3 for all $n \in \mathbb{Z}_{\geq 0}$. \pspace
+
+\sol We prove this by induction on $n$. For $n= 0$, we have $7^n - 4^n= 7^0 - 4^0= 1 - 1= 0$. Clearly, $0$ is divisible by $3$ because $0= 3(0)$. Now assume the result is true for $n= k$. We need to prove the result is true for $n= k + 1$; that is, we need to prove that $7^{k+1} - 4^{k+1}$ is divisible by $3$. From the induction hypothesis, we know that $7^k - 4^k$ is divisible by $3$, i.e. there exists $q_0 \in \mathbb{Z}$ such that $7^k - 4^k= 3q_0$. Observe\dots
+	\[
+	\begin{aligned}
+	7^{k+1} - 4^{k + 1}&= 7 \cdot 7^k - 4 \cdot 4^k \\[0.3cm]
+	&= (4 + 3) \cdot 7^k - 4 \cdot 4^k \\[0.3cm]
+	&= 4 \cdot 7^k + 3 \cdot 7^k - 4 \cdot 4^k \\[0.3cm]
+	&= 4 \cdot 7^k - 4 \cdot 4^k + 3 \cdot 7^k \\[0.3cm]
+	&= 4 \left( 7^k - 4^k \right) + 3 \cdot 7^k \\[0.3cm]
+	&= 4 (3q_0) + 3 \cdot 7^k \\[0.3cm]
+	&= 3(4q_0 + 7^k)
+	\end{aligned}
+	\]
+Letting $q:= 4q_0 + 7^k$, which is an integer, we see that $7^{k+1} - 4^{k+1}= 3q$. Therefore, $7^{k+1} - 4^{k+1}$ is divisible by $3$. Then by induction, we know that $7^n - 4^n$ is divisible by $3$ for all $n \in \mathbb{Z}_{\geq 0}$. 
+
+\vfill 
+
+{\itshape Remark.} If we had seen modular arithmetic, this is simple: we know an integer is divisible by $3$ if and only if it is zero modulo $3$. We know that $7= 3(2) + 1 \equiv 1 \bmod 3$ and $4= 3(1) + 1 \equiv 1 \bmod 3$. But then $7^n - 4^n \equiv 1^n - 1^n= 1 - 1= 0 \bmod 3$. Therefore, $7^n - 4^n$ is divisible by $3$ for all $n \in \mathbb{Z}_{\geq 0}$. 
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{20} Prove that $\mathbb{Z}= \{ 3x + 2y \colon x, y \in \mathbb{Z} \}$. \pspace
+
+\sol Let $S= \{ 3x + 2y \colon x, y \in \mathbb{Z} \}$. We know that $S \subseteq \mathbb{Z}$ because $S$ only contains integers. We only need to show that $\mathbb{Z} \subseteq S$. Taking $x= y= 0$, we know that $3(0) + 2(0)= 0 \in S$. Furthermore, taking $x= 1$ and $y= -1$, observe that $3(1) + 2(-1)= 1 \in S$. We prove that each positive integer is in $S$. Let $n$ be a positive integer. We know that $1 \in S$. Now assume that $n= 1, 2, \ldots, k$ is an element of $S$. We need to prove that $n= k + 1$ is an element of $S$. By the inductive hypothesis, we know there exists $x_0, y_0$ such that $3x_0 + 2y_0= k$. But $x_0 + 1, y_0 - 1 \in \mathbb{Z}$ and\dots
+	\[
+	3(x_0 + 1) + 2(y_0 - 1)= 3x_0 + 3 + 2y_0 - 2= (3x_0 + 2y_0) + (3 - 2)= k + 1
+	\]
+This shows that taking $x= x_0 + 1$ and $y= y_0 - 1$, we know $k + 1$ is an element of $S$. Therefore by induction, every positive integer is an element of $S$. \pspace
+
+Similarly, we can prove that every negative integer is an element of $S$ using induction. Let $n$ be a negative integer. We know that $n= -1$ is an element of $S$ because choosing $x= -1$ and $y= 1$, we have $3(-1) + 2(1)= -3 + 2= -1$ is an element of $S$. Now assume that $n= -1, -2, \ldots, -k$ is an element of $S$. We need to prove that $n= -k - 1$ is an element of $S$. By the inductive hypothesis, we know there exists $x_0, y_0$ such that $3x_0 + 2y_0= -k$. But $x_0 - 1, y_0 + 1 \in \mathbb{Z}$ and\dots
+	\[
+	3(x_0 - 1) + 2(y_0 + 1)= 3x_0 - 3 + 2y_0 + 2= (3x_0 + 2y_0) + (-3 + 2)= -k - 1
+	\]
+This shows that taking $x= x_0 - 1$ and $y= y_0 + 1$, we know $-k - 1$ is an element of $S$. Therefore by induction, every negative integer is an element of $S$. \pspace
+
+But then we know that $\mathbb{Z} \subseteq S$. Therefore, $\mathbb{Z}= S$. 
+
+
+\end{document}

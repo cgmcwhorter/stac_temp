@@ -1,0 +1,139 @@
+\documentclass[12pt,letterpaper]{exam}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/exams}
+
+% -------------------
+% Course & Exam Information
+% -------------------
+\newcommand{\course}{MAT 108: Exam 2}
+\newcommand{\term}{Spring --- 2024}
+\newcommand{\examdate}{04/01/2023}
+\newcommand{\timelimit}{85 Minutes}
+
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+\examtitle
+\instructions{Write your name on the appropriate line on the exam cover sheet. This exam contains \numpages\ pages (including this cover page) and \numquestions\ questions. Check that you have every page of the exam. Answer the questions in the spaces provided on the question sheets. Be sure to answer every part of each question and show all your work. If you run out of room for an answer, continue on the back of the page --- being sure to indicate the problem number.} 
+\scores
+\bottomline
+\newpage
+
+
+% -------------------
+% Questions
+% -------------------
+\begin{questions}
+
+% Question 1
+\newpage
+\question[10] Let $A$, $B$, and $C$ be events from a probability space whose probabilities are given below.
+	\[
+	\begin{aligned}
+	P(A)&= 0.55 \\
+	P(B)&= 0.43 \\
+	P(C)&= 0.30
+	\end{aligned}
+	\]
+
+\begin{enumerate}[(a)]
+\item Can we say that $P(A \text{ or } B)= 0.55 + 0.43= 0.98$? Explain. 
+\item Can we say that $P(A \text{ and } B)= 0.55 \cdot 0.43= 0.2365$? Explain. 
+\item Assume that $B$ and $C$ are independent. Find $P(B \text{ or } C)$. 
+\item Assume that $B$ and $C$ are disjoint. Find $P(B \text{ and } C)$
+\end{enumerate}
+
+
+
+% Question 2
+\newpage
+\question[15] Statisticians are examining American's satisfaction with the candidates they can vote for in an upcoming election. Each individual surveyed was asked, ``I am satisfied with the options for candidates that I can vote for in the upcoming election.'' An individual could answer `Strongly Disagree', `Disagree', `Neutral', `Agree', or `Strongly Agree.' The gender of each individual was recorded (male, female, or other/refused to disclose). The results are given below. \par
+	\begin{table}[ht]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|c||c|} \hline 
+	& Strongly Disagree & Disagree & Neutral & Agree & Strongly Agree & Total \\ \hline \hline
+	Male & $15$ & $22$ & $9$ & $4$ & $16$ & $66$ \\ \hline
+	Female & $14$ & $26$ & $10$ & $8$ & $11$ & $69$ \\ \hline
+	Other/Non-Disclosure & $9$ & $9$ & $4$ & $6$ & $2$ & $30$ \\ \hline \hline
+	Total & $38$ & $57$ & $23$ & $18$ & $29$ & $165$ \\ \hline
+	\end{tabular}
+	\end{table}
+
+\begin{enumerate}[(a)]
+\item What percentage of individuals surveyed were not satisfied (strongly disagree or disagree) with the options for candidates in the election? 
+\item What percentage of individuals surveyed were female?
+\item What percentage of individuals surveyed were neutral or were recorded as either `other gender' or refused to disclose their gender?
+\item What percentage of males surveyed strongly agreed with the statement?
+\item What percentage of individuals surveyed were females that were neutral about the statement?
+\end{enumerate}
+
+
+
+% Question 3
+\newpage
+\question[15] A recent study of cholesterol levels for adults in South Korea was determined to be approximately normally distributed with mean 200~mg/dL and standard deviation 50~mg/dL. Based on the results of this survey, answer the following:
+        \begin{enumerate}[(a)]
+        \item What percentage of adults in South Korea have cholesterol levels less than 136~mg/dL?
+        \item What percentage of adults in South Korea have cholesterol levels greater than 232~mg/dL?
+        \item What percentage of adults in South Korea have cholesterol levels between 136~mg/dL and 232~mg/dL?
+        \item What is the highest cholesterol level an adult in South Korea can have to be in lowest 20\% of cholesterol levels?
+        \end{enumerate}
+
+
+
+% Question 4
+\newpage
+\question[15] Recent TokTik surveys suggest that 15\% of individuals `have the rizz.' An independent, simple random sample of nine individuals was taken. 
+        \begin{enumerate}[(a)]
+        \item Explain why the count of individuals `having the rizz' in this survey follows a binomial distribution. 
+        \item What is the probability that exactly three individuals surveyed `had the rizz'?
+        \item What is the probability that at most five but more than two individuals surveyed `had the rizz' ?
+        \item What is the probability that at least one individual surveyed `had the rizz.'?
+        \end{enumerate}
+
+
+
+% Question 5
+\newpage
+\question[15] As part of their Clery Act obligations, a university takes a survey of their students to determine their use of illicit substances. The college recorded each student only as male or female and 64\% of individuals surveyed were male. Of the males surveyed, 42\% indicated they had tried an illicit substance on campus, whereas only 23\% of females surveyed answered similarly. 
+        \begin{enumerate}[(a)]
+        \item What percentage of students surveyed indicated they had used an illicit substance?
+        \item What percentage of students surveyed were female or had not tried an illicit substance?
+        \item What percentage of students that had tried an illicit substance were male?
+        \end{enumerate}
+
+
+
+% Question 6
+\newpage
+\question[10] A store gets an average of 570~potential customers each day. Past sales records indicate that 17\% of potential customers entering the store each day do not make a purchase. For potential customers that do make a purchase, records indicate that 29\% spend at least \$1 but less than \$100, 33\% spend at least \$100 but less than \$300, and the rest spend at least \$300. What is the smallest average revenue the store should expect to make each day?
+
+
+
+% Question 7
+\newpage
+\question[10] An online retailer sells both PS5 and XBox One. They are examining video game console preferences to determine how many of each console to stock. They survey 120~individuals about which video game console they own. Of the 120 individuals surveyed, 54 stated they owned either a PS5 or an XBox One. Furthermore, 27 stated they only owned a PS5, while 19 stated they only owned an XBox One. 
+        \begin{enumerate}[(a)]
+        \item What percentage of individuals surveyed owned both a PS5 and an XBox One?
+        \item What percentage of individuals surveyed owned neither a PS5 nor an XBox One?
+        \item What percentage of individuals surveyed owned an XBox One, if they owned a PS5?
+        \end{enumerate}
+
+
+
+% Question 8
+\newpage
+\question[10] Economists are studying the effects of inflation on households in the United States. In particular, they examine the change in costs for common household goods. The researchers focus on the city of Chicago. They take a simple random sample of 45~stores in the city and find an average cost of \$2.79 for a gallon of milk. 
+\begin{enumerate}[(a)]
+\item Explain why the Central Limit Theorem can be used in this situation to examine the distribution of average cost of milk. 
+\item Based on the results of this survey, find an 80\% confidence interval for the cost of a gallon of milk in Chicago. [Assume the standard deviation for the cost of a gallon of milk in Chicago is \$0.35.]
+\end{enumerate}
+
+
+\end{questions}
+\end{document}

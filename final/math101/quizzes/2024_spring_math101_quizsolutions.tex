@@ -129,13 +129,81 @@ Therefore, $(-1, -2)$ is on the curve given by $y^2= x^3 + x + 6$.
 
 
 
-%Let $f(x)$ and $g(x)$ be linear functions. If the slope of $f(x)$ is not equal to the slope of $g(x)$, then $f(x)$ is not parallel to $g(x)$. Furthermore, the lines are perpendicular. 
+% Quiz 13
+\quizsol \textit{True/False}: Let $f(x)$ and $g(x)$ be linear functions. If the slope of $f(x)$ is not equal to the slope of $g(x)$, then $f(x)$ is not parallel to $g(x)$. Furthermore, the lines are perpendicular. \pspace
 
+\sol The statement is \textit{false}. Lines which are not parallel must intersect (by definition). But this intersection need not happen perpendicularly. For instance, consider the linear functions $f(x)= x$ and $g(x)= 2x$. The slope of $f(x)$ is $m_f= 1$ and the slope of $g(x)$ is $m_g= 2$. Because $m_f \neq m_g$, we know the lines are not parallel. [Clearly, they intersect at $(0, 0)$.] However, we can see from plotting these lines that this intersection should not occur perpendicularly. Recall that if $f, g$ have well defined slopes and are perpendicular, then $m_f= -\frac{1}{m_g}$. But $m_f= 1 \neq -\frac{1}{2}= -\frac{1}{m_g}$. Therefore, the lines are not perpendicular. \pvspace{1.3cm}
 
 
 
 % Quiz 14
-\quizsol \textit{True/False}: Every linear function has an inverse. 
+\quizsol \textit{True/False}: Every linear function has an inverse. \pspace
+
+\sol The statement is \textit{false}. Consider the linear function $\ell(x)= 5$. We know that $\ell(1)= 5$ and $\ell(-6)= 5$. But then the inverse cannot be well defined at $5$, i.e. $\ell^{-1}(5)$ cannot be well defined. Therefore, $\ell^{-1}$ does not exist. [Although, certainly the preimage always exists.] Observe that $\ell(x)= 5$ is a constant linear function, i.e. a linear function with slope $0$. We can see this from their graphs---every horizontal line (constant linear function) fails the horizontal line test. It is true that all \textit{nonconstant} linear functions have an inverse. \pvspace{1.5cm}
+
+
+
+% Quiz 15
+\quizsol \textit{True/False}: For any function $f(x)$, if $f^{-1}(x)$ exists, then $f(x)$ passes both the vertical and horizontal line test. Furthermore, $(f \circ f^{-1})(x)= x$. \pspace
+
+\sol The statement is \textit{true}. We know that a relation $f(x)$ is a function if and only if it passes the vertical line test. Furthermore, we know that a function $f(x)$ has an inverse $f^{-1}(x)$ if and only if it passes the horizontal line test. Because $f(x)$ is a function, we know that the graph of $f(x)$ passes the vertical line test. Because $f^{-1}(x)$ exists, we know that it passes the horizontal line test. Finally, we know the inverse of a function $f(x)$ is a function such that $(f \circ f^{-1})(x)= x$ and $(f^{-1} \circ f)(x)= x$. \pvspace{1.5cm}
+
+
+
+% Quiz 16
+\quizsol \textit{True/False}: If $f(x)= 5(x + 6)^2 - 7$, then this is a quadratic function that opens upwards and has vertex $(6, -7)$. \pspace
+
+\sol The statement is \textit{false}. Recall that the vertex form of a quadratic function $f(x)= ax^2 + bx + c$ is $f(x)= a(x - P)^2 + Q$, where $(P, Q)$ is the vertex of the function. We have $f(x)= 5(x + 6)^2 - 7= 5 \big(x - (-6) \big)^2 + (-7)$. Because $a= 5 > 9$, we know that the quadratic function opens upwards, i.e. is concave up or convex. However, we can see that the vertex is $(-6, -7)$, not $(6, -7)$. Note that the $x$-coordinate of the vertex makes the $a(x - P)^2$ term zero. \pvspace{1.5cm}
+
+
+
+
+
+\newpage
+
+
+
+
+
+% Quiz 17
+\quizsol \textit{True/False}: The quadratic formula, $x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, solves any quadratic equation $ax^2 + bx + c= 0$. \pspace
+
+\sol The statement is \textit{true}. Suppose we want the solutions to a quadratic equation $ax^2 + bx + c= 0$. Observe by completing the square and using the fact that $a \neq 0$, we have\dots
+	\[
+	\begin{gathered}
+	ax^2 + bx + c= 0 \\
+	a \left(x^2 + \dfrac{b}{a}\, x + \dfrac{c}{a} \right)= 0 \\
+	a \left(x^2 + \dfrac{b}{a}\, x + \dfrac{b^2}{4a^2} - \dfrac{b^2}{4a^2} + \dfrac{c}{a} \right)= 0 \\
+	a \left( \bigg( x^2 + \dfrac{b}{a}\, x + \dfrac{b^2}{4a^2} \bigg) + \bigg( -\dfrac{b^2}{4a^2} + \dfrac{c}{a} \bigg) \right)= 0 \\
+	a \left( \bigg(x + \dfrac{b}{2a} \bigg)^2 + \bigg( \dfrac{4ac - b^2}{4a^2} \bigg) \right)= 0 \\
+	\left( x + \dfrac{b}{2a} \right)^2 + \left( \dfrac{4ac - b^2}{4a^2} \right)= 0 \\
+	\left( x + \dfrac{b}{2a} \right)^2 = - \dfrac{4ac - b^2}{4a^2} \\
+	\left( x + \dfrac{b}{2a} \right)^2 = \dfrac{b^2 - 4ac}{4a^2} \\
+	x + \dfrac{b}{2a}= \pm \dfrac{\sqrt{b^2 - 4ac}}{\sqrt{4a^2}} \\
+	x= -\dfrac{b}{2a} \pm \dfrac{\sqrt{b^2 - 4ac}}{2a} \\
+	x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+	\end{gathered}
+	\]
+This solves any quadratic equation. But this is exactly the quadratic formula. 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
