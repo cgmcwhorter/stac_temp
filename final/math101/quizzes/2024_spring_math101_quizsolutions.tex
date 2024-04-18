@@ -2,6 +2,8 @@
 \usepackage[lmargin=1in,rmargin=1in,bmargin=1in,tmargin=1in]{geometry}
 \usepackage{quiz}
 
+\DeclareMathOperator{\disc}{disc}	% Discriminant
+
 % -------------------
 % Content
 % -------------------
@@ -184,9 +186,14 @@ Therefore, $(-1, -2)$ is on the curve given by $y^2= x^3 + x + 6$.
 	x= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 	\end{gathered}
 	\]
-This solves any quadratic equation. But this is exactly the quadratic formula. 
+This solves any quadratic equation. But this is exactly the quadratic formula. \pvspace{1.3cm}
 	
 
+
+% Quiz 18
+\quizsol \textit{True/False}: Let $f(x)= (2x - 1)^2$. Because $\disc f= 0^2 - 4(2)(-1)= 8 > 0$, the equation $f(x)= 0$ has two distinct solutions. Furthermore, because $\disc f= 8$ is not a perfect square, the solutions are not `nice.' \pspace
+
+\sol The statement is \textit{false}. If $f(x)= 0$, then $(2x - 1)^2= 0$. This implies that $2x - 1= 0$, so that $x= \frac{1}{2}$. Clearly, there is a unique, `nice' solution. Observe that $f(x)= (2x - 1)^2= (2x - 1)(2x - 1)= 4x^2 - 4x + 1$. This means that $a= 4$, $b= -4$, and $c= 1$. But then $\disc f= b^2 - 4ac= (-4)^2 - 4(4)1= 16 - 16= 0$. Because $\disc f= 0$, we know the quadratic equation $f(x)= 0$ has a distinct, real, `nice' solution, which we saw was $x= \frac{1}{2}$. It is true that if $\disc f > 0$, there are two distinct, real solutions and if $\disc f < 0$ there are two distinct, complex solutions. Furthermore, the solutions to $f(x)= 0$ are `nice' if and only if $|\disc f|$ is a perfect square. 
 
 
 

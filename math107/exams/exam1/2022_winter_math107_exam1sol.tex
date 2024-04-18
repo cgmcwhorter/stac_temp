@@ -91,7 +91,7 @@ Because the bolded columns have the same logical outputs for the same logical in
 	\node[and gate US, draw, line width= 0.03cm] at (3.5,1.5) (and1) {}; % Middle AND
 	\node[or gate US, draw, line width= 0.03cm] at (5.2,1.25) (or2) {}; % Right OR
 	
-	\draw[line width= 0.03cm] (p) |- (not1.input); % P to NOT
+	\draw[line width= 0.03cm] (not1.input) |- (p); % P to NOT
 	\draw[line width= 0.03cm] (q) |- (or1.input 1); % Q to OR
 	\draw[line width= 0.03cm] (r) |- (or1.input 2); % R to OR
 	
@@ -116,7 +116,7 @@ Because the bolded columns have the same logical outputs for the same logical in
 	\node[and gate US, draw, line width= 0.03cm] at (3.5,1.5) (and1) {}; % Middle AND
 	\node[or gate US, draw, line width= 0.03cm] at (5.2,1.25) (or2) {}; % Right OR
 	
-	\draw[line width= 0.03cm] (p) |- (not1.input); % P to NOT
+	\draw[line width= 0.03cm] (not1.input) |- (p); % P to NOT
 	\draw[line width= 0.03cm] (q) |- (or1.input 1); % Q to OR
 	\draw[line width= 0.03cm] (r) |- (or1.input 2); % R to OR
 	
@@ -158,7 +158,7 @@ Therefore, the logical expression corresponding to the given circuit is\dots
 	\end{tabular}
 	\end{table} \pspace
 
-\sol We look each row and `$\wedge$' each input (possibly negating the input so that it is $1$): \par
+\sol For each row where we want the output of that row to be $1$, we `$\wedge$' all the inputs $P$ or $\neg P$, $Q$ or $\neg Q$, and $R$ or $\neg R$ (whichever makes each input $1$ in that row). \par
 	\begin{table}[h]
 	\centering
 	\begin{tabular}{c|c|c|c lc}
@@ -173,7 +173,7 @@ Therefore, the logical expression corresponding to the given circuit is\dots
 	$0$ & $0$ & $0$ & $1$ & $\longerleftarrow$ & $\neg P \wedge \neg Q \wedge \neg R$
 	\end{tabular}
 	\end{table} \par
-We then `$\vee$' these expressions together to create a logical expression corresponding to the circuit whose on/off table given:
+We then `$\vee$' these expressions together to create a logical expression corresponding to the circuit whose on/off table is given:
 	\[
 	\big(P \wedge Q \wedge R \big) \vee \big(\neg P \wedge Q \wedge \neg R \big) \vee \big(\neg P \wedge \neg Q \wedge \neg R \big)
 	\]

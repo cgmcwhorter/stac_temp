@@ -176,7 +176,7 @@ We could also have computed the degree of the graph using the Handshake Theorem.
 	\end{pmatrix}
 	\] \pspace
 
-\sol The adjacency matrix is $A= (a_{ij})$, where $a_{ij}$ is the number of edges from vertex $i$ to vertex $j$. For an undirected graph, the adjacency matrix must be symmetric, i.e. $A= A^T$. Therefore, if an adjacency matrix is not symmetric, then the graph must be directed. However, a directed graph may or may not have a symmetric adjacency matrix. The adjacency matrix above is symmetric. Therefore, the graph may or may not be directed. There are many possible answers (but `only one' possible undirected graph). For instance, drawing the unique undirected graph associated to this adjacency matrix, we have\dots
+\sol The adjacency matrix is $A= (a_{ij})$, where $a_{ij}$ is the number of edges from vertex $i$ to vertex $j$. For an undirected graph, the adjacency matrix must be symmetric, i.e. $A= A^T$. Therefore, if an adjacency matrix is not symmetric, then the graph must be directed. However, a directed graph may or may not have a symmetric adjacency matrix. The adjacency matrix above is symmetric. Therefore, the graph may or may not be directed. There are many possible answers (but `only one' possible undirected graph). For instance, drawing the unique (up to isomorphism) undirected graph associated to this adjacency matrix, we have\dots
 	\[
 	\begin{tikzpicture}[scale=1.3]
 	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
@@ -400,13 +400,39 @@ Of course, the statement of this theorem merely states when there exists a graph
 
 
 % Problem 6
-\problem{10} Prove that every nontrivial simple graph has two vertices of the same degree. [Hint: Pigeonhole Principle] \pspace
+\problem{10} Prove that every simple graph with $n \geq 2$ vertices has at least two distinct vertices of the same degree. [Hint: Pigeonhole Principle] \pspace
 
-\sol Let $G$ be a simple (undirected) graph with $n$ vertices, i.e. $|V(G)|= n$. If $n= 1$, then $G$ only has one vertex. Regardless of whether $G$ is simple or not, if $G$ has only one vertex, then every vertex of $G$ has the same degree---there's only one degree! Assume then that $n \geq 2$. Because $G$ is simple, it has no loops or multiple edges between vertices. We first show that if $v \in V(G)$, then $\deg v < n$. Suppose that $v \in V(G)$ with $\deg v \geq n$, i.e. $v$ is incident to $n$ or more edges. Because $G$ is simple, there cannot be a loop at $v$. But then these $\deg v \geq n$ edges incident to $v$ connect $v$ to one of the other $|V(G)| - 1= n - 1$ vertices. But then the $\deg v \geq n$ edges each connect $v$ to one of $n - 1$ possible vertices. By the Pigeonhole Principle, there must vertex $w \in V(G)$ such that there are at least two edges connecting $w$ to $v$. But then $G$ has multiple edges, contradicting the fact that $G$ is simple. \pspace
+\sol Let $G$ be a simple, finite (undirected) graph with $n$ vertices, i.e. $|V(G)|= n$. Note that if $n= 1$, then $G$ only has one vertex. Regardless of whether $G$ is simple or not, if $G$ has only one vertex, then every vertex of $G$ has the same degree---there's only one degree! \pspace
+
+Assume then that $n \geq 2$. Because $G$ is simple, it has no loops or multiple edges between vertices. We first show that if $v \in V(G)$, then $\deg v < n$. Suppose that $v \in V(G)$ with $\deg v \geq n$, i.e. $v$ is incident to $n$ or more edges. Because $G$ is simple, there cannot be a loop at $v$. But then these $\deg v \geq n$ edges incident to $v$ connect $v$ to one of the other $|V(G)| - 1= n - 1$ vertices. But then the $\deg v \geq n$ edges each connect $v$ to one of $n - 1$ possible vertices. By the Pigeonhole Principle, there must vertex $w \in V(G)$ such that there are at least two edges connecting $w$ to $v$. But then $G$ has multiple edges, contradicting the fact that $G$ is simple. \pspace
 
 Therefore, if $v \in V(G)$, then $\deg v \in \{ 0, 1, 2, \ldots, n - 1 \}$ for all $v \in V(G)$---a total of $(n - 1) - 0 + 1= n$ possible values for $\deg v$. However, a simple graph cannot have a vertex of both degree $0$ and of degree $n - 1$. By the reasoning above, if $G$ had a vertex of degree $n - 1$, then this vertex is connected to every other vertex. But then $\deg v \geq 1$ for all $v \in V(G)$ so that there is no vertex in $G$ with degree $0$. Conversely, if there is a vertex of degree $0$, there cannot be a vertex of degree $n - 1$ because (by the reasoning above) this vertex of degree $n - 1$ would then be connected to the degree $0$ vertex, contradicting the fact that it has degree $0$. \pspace
 
-Therefore, the possible degrees for vertices in $G$ are either $\{ 0, 1, \ldots, n - 2 \}$ or $\{ 1, 2, \ldots, n - 1 \}$. In either case, there are a total of $n - 1$ possible values for the degree of $v \in V(G)$. But then there are only $n - 1$ possible values for the degrees of the $|V(G)|= n$ vertices of $G$. By the Pigeonhole Principle, there must be two vertices that have the same degree.
+Therefore, the possible degrees for vertices in $G$ are either $\{ 0, 1, \ldots, n - 2 \}$ or $\{ 1, 2, \ldots, n - 1 \}$. In either case, there are a total of $n - 1$ possible values for the degree of $v \in V(G)$. But then there are only $n - 1$ possible values for the degrees of the $|V(G)|= n$ vertices of $G$. By the Pigeonhole Principle, there must be two vertices that have the same degree. \pspace
+
+\noindent {\itshape Remark.} What if the graph is not simple? If $G$ is not simple, then $G$ either has loops or multiple edges. If a graph has loops, then there may not be two distinct vertices with the same degree. An example of this is the graph below:
+	\[
+	\begin{tikzpicture}[scale=1]
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 0)   (b) {\footnotesize$v_2$};
+
+	\path[line width=0.03cm] (a) edge (b);
+	\path[line width=0.03cm,out=-45,in=45,looseness=10,->] (b) edge (b);
+	\end{tikzpicture}
+	\]
+Clearly, $\deg v_1= 1$ and $\deg v_2= 3$. Furthermore, if $G$ has multiple edges, then there may not be two distinct vertices with the same degree. An example of this is the graph below: 
+	\[
+	\begin{tikzpicture}[scale=1]
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (0, 0)   (a) {\footnotesize$v_1$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (1, 1)   (b) {\footnotesize$v_2$};
+	\node[draw,inner sep=1pt,minimum size=2pt,line width=0.03cm,circle] at (2, 0)   (c) {\footnotesize$v_3$};
+
+	\path[line width=0.03cm] (a) edge (b);
+	\path[line width=0.03cm,bend left=15] (b) edge (c);
+	\path[line width=0.03cm,bend right=15] (b) edge (c);
+	\end{tikzpicture}
+	\]
+Clearly, $\deg v_1= 1$, $\deg v_2= 3$, and $\deg v_3= 2$. 
 
 
 
@@ -419,7 +445,25 @@ Therefore, the possible degrees for vertices in $G$ are either $\{ 0, 1, \ldots,
 
 \sol In fact, a graph $T$ is a tree if and only if there is a unique path between every distinct pair of vertices $u, v$. We prove this stronger statement. \pspace
 
-{\itshape If $T$ is a tree, then there is a unique path between every pair of distinct vertices $u, v$:} Assume that $T$ is a tree, i.e. a connected circuit-free graph. We want to show there is a unique path for every pair of vertices $u$ and $v$. Because $T$ is connected, there exists a path between $u$ and $v$. We need only show that this path is unique. Suppose there were two distinct paths from $u$ to $v$: $u e_1 w_1 e_2 w_2 \cdots e_n w_n v$ and $u e_1' w_1' e_2' w_2' \cdots e_n' w_n' v$. 
+{\itshape If $T$ is a tree, then there is a unique walk between every pair of distinct vertices $u, v$:} Assume that $T$ is a tree, i.e. a connected circuit-free graph. We want to show every pair of vertices $u$ and $v$ has a unique walk connecting them. Because $T$ is connected, there exists a path between $u$ and $v$. We need only show that this path is unique. \pspace
+
+
+
+We prove there is a unique path between vertices of $T$ by contradiction. 
+
+Suppose that $u e_1 w_1 e_2 w_2 \cdots e_n w_n v$ and $u e_1' w_1' e_2' w_2' \cdots e_m' w_m' v$ were two distinct walks from $u$ to $v$. 
+
+We shall use these two paths to construct a circuit in $T$, contradicting the fact that $T$ is circuit-free.\footnote{One might think we can simply use $u e_1 w_1 e_2 w_2 \cdots e_n w_n v w_m' e_m' w_{m-1}' e_{m-1}' \cdots w_1' e_1' u$. However, while this is a closed walk from $u$ to $u$, there may be repeated edges, i.e. there may exist $i, j$ such that $w_i= w_j$, $w_i'= w_j'$, or $w_i= w_j'$. If this occurs, then this walk is not a circuit.}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -439,9 +483,11 @@ Therefore, the possible degrees for vertices in $G$ are either $\{ 0, 1, \ldots,
 \newpage
 
 
-{\itshape If every pair of distinct vertices has a unique edge connected them, then the graph is a tree:} Recall that a tree is a connected, circuit-free graph. Suppose a graph $G$ has a unique path between every pair of distinct vertices. Because there exists a path between every pair of vertices, $G$ is clearly connected. We need only show that $G$ is circuit free. Suppose that $G$ had a circuit. If this circuit contains only one vertex, then it must contain a loop (because the circuit contains at least one edge and only one vertex). But then there are two paths connecting $v$ to itself---the loop and the `empty path' $v$. But then $G$ does not have a unique path between every pair of vertices, a contradiction. \pspace
+{\itshape If every pair of vertices $u$ and $v$ has a unique path connecting them, then the graph is a tree:} Suppose that $G$ is a graph such that every pair of vertices has a unique path connecting them. To prove that $G$ is a tree, we need to show that $G$ is connected and circuit-free. Because there is a path---in fact a unique path---between $u$ and $v$ for all $u, v \in V(G)$, we know that $G$ is connected. Now we only need to show that $G$ is circuit-free. \pspace
 
-So suppose that $G$ contains a circuit that contains more than one vertex, say $v e_1 v_2 e_2 v_3 e_3 \cdots e_{i-1} \allowbreak v_i e_i \cdots e_{n-2} v_{n-1} e_{n-1} v$ is a circuit, where $v$ and $v_i$ are distinct vertices. Because this walk is a circuit, the edges are distinct, i.e. $e_i \neq e_j$ for $i \neq j$. Observe $v e_1 v_2 e_2 v_3 e_3 \cdots e_{i-1} v_i$ and $v e_{n-1} v_{n-1} e_{n-2} \cdots e_i v_i$ are walks from $v$ to $v_i$. These walks must be distinct because the first contains $e_1$, the second contains $e_i$, and $e_1 \neq e_i$ (because $1 \neq i$). This contradicts the fact that there is a unique path between every pair of vertices. But then $G$ cannot contain any circuits. This shows that $G$ is connected and circuit-free. Therefore, $G$ is a tree. 
+Suppose that $G$ contained a circuit, say $v e_1 v_2 e_2 v_3 e_3 \cdots e_{n-1} v_n e_n v$. Because this walk is a circuit, the walk contains at least one edge, i.e. $n \geq 1$, and the walk contains no repeated edges, i.e. the edges are distinct so that $e_i= e_j$ if and only if $i= j$. Suppose that $n > 1$, i.e. the walk contains more than one edge. Let $j \in \{ 2, 3, \ldots, n \}$ (which is nonempty because $n \geq 2$) and consider the walks $W_1: v e_1 v_2 e_2 v_3 e_3 \cdots e_{j-1} v_j$ and $W_2: v e_{n-1} v_{n-1} e_{n-2} \cdots e_j v_j$. Both $W_1, W_2$ are walks from $v$ to $v_j$.\footnote{$W_1$ can be considered the `forward' walk from $v$ to $v_j$ while $W_2$ can be considered the `backward' walk from $v$ to $v_j$.} We know that $j \neq 1$ because $j \in \{ 2, 3, \ldots, n \}$. But then $e_j \neq e_1$ because $j \neq 1$. Therefore, $W_1$ and $W_2$ are distinct walks from $v$ to $v_j$ because $W_1$ contains the edge $e_1$, $W_2$ contains the edge $e_j$, and $e_1 \neq e_j$. This contradicts the fact that there is a unique walk between vertices of $G$. Therefore, no such $j$ can exist. But then it must be that $\{ 2, 3, \ldots, n \}$ is empty, which implies that $n= 1$. Therefore, the circuit $v e_1 v_2 e_2 v_3 e_3 \cdots e_{n-1} v_n e_n v$ is the circuit $v e_1 v$, i.e. $e_1$ is a loop at $v$. But then $v$ and $ve_1v$ are both distinct walks from $v$ to $v$, contradicting the fact that there is a unique walk between vertices of $G$. Therefore, $G$ cannot contain a circuit. \pspace
+
+Because $G$ is connected and circuit-free, $G$ is a tree. 
 
 
 
