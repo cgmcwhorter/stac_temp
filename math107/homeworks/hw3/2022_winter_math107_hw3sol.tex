@@ -1,0 +1,89 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{../style/homework}
+\usepackage{../style/commands}
+\setbool{quotetype}{false} % True: Side; False: Under
+\setbool{hideans}{true} % Student: True; Instructor: False
+
+
+\usepackage{hieroglf} 		% Egyptian, e.g. \textpmhg{\Hone 234567}
+\usepackage{romannum}		% Roman Numerals, e.g. \romannum{10}, \Romannum{10}
+\usepackage{babyloniannum}	% Babylonian, requires font install, e.g. \babyloniannum{47}
+\usepackage{mathabx} 		% Mayan, e.g. \mayadigit{17}, \maya{2013}
+	\newcommand\mathbfont{\usefont{U}{mathb}{m}{n}}	% formaya package
+
+% MUST COMPILE IN XeLaTeX
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+\pagenumbering{arabic}	% Override romannum package
+
+\homework{3: Due 01/05}{Civilization advances by extending the number of important operations which we can perform without thinking of them.}{Alfred North Whitehead}
+
+% Problem 1
+\problem{10} Convert the following numbers to our traditional base-10 number system:
+	\begin{enumerate}[(a)]
+	\item $\Large \textpmhg{655} \overset{\textpmhg{3}}{\scriptsize\textpmhg{3}} \overset{\textpmhg{3}}{\scriptsize\textpmhg{3}} \,\phantom{}^{\textpmhg{\Hone \Hone \Hone}}$
+	\item $\Romannum{2342}$
+	\item $\huge \babyloniannum{35}$
+	\item $\maya{40}$ { \hspace{-1.069cm} \color{white} $\bigg|$ } { \hspace{-0.615cm} \color{white} $\bigg|$ } { \hspace{-0.055cm} \color{white} $\bigg|$ }  { \hspace{-0.61cm} \color{white} $\bigg|$ }
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 2
+\problem{10}  Convert the following:
+	\begin{enumerate}[(a)]
+	\item 1756 to Egyptian 
+	\item 444 to Roman 
+	\item 24 to Babylonian 
+	\item 16 to Mayan
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 3
+\problem{10} Showing all your work, convert the following to base-10:
+	\begin{enumerate}[(a)]
+	\item $201_3$
+	\item $6005_7$
+	\item $\texttt{abc}4_{16}$
+	\item $101011_2$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 4
+\problem{10} Showing all your work, express the following numbers into the indicated base, $b$:
+	\begin{enumerate}[(a)]
+	\item $76$, $b= 3$
+	\item $123$, $b= 9$
+	\item $12$, $b= 2$
+	\item $954$, $b= 16$
+	\end{enumerate}
+
+
+
+\newpage
+
+
+
+% Problem 5
+\problem{10} If you express the number 145,601 in base 16, how many digits would it have?
+
+
+\end{document}
